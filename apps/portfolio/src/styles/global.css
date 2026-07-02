@@ -53,6 +53,18 @@ html.lenis, html.lenis body { height: auto; }
   .wrap { width: 100%; max-width: 1080px; margin-inline: auto; padding-inline: 1.5rem; }
   @media (min-width: 768px) { .wrap { padding-inline: 2rem; } }
 
+  /* large-desktop scale-up: on big monitors, grow the root font (all rem-based
+     type + spacing scales with it) and widen the containers proportionally,
+     instead of leaving a centered column in a sea of empty canvas */
+  @media (min-width: 1800px) {
+    html { font-size: 17.5px; }
+    .wrap { max-width: 1280px; }
+  }
+  @media (min-width: 2300px) {
+    html { font-size: 19px; }
+    .wrap { max-width: 1440px; }
+  }
+
   /* the ONE repeating motif: numbered section kicker */
   .kicker { font-family: var(--font-mono); font-size: 13.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-muted); }
   .kicker .num { color: var(--color-cobalt-deep); margin-right: .5rem; }
@@ -210,6 +222,7 @@ html.lenis, html.lenis body { height: auto; }
 
   /* ── statement-wall hero (Direction 1): one left edge · one big scale jump · type leads ── */
   .hero-wall { width: 100%; max-width: min(1480px, 94vw); margin-inline: auto; padding-inline: clamp(1.5rem, 4vw, 3rem); }
+  @media (min-width: 1800px) { .hero-wall { max-width: min(1720px, 92vw); } }
   .hero-spec { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: .35rem 1.5rem; font-family: var(--font-mono); font-size: 13.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-muted); }
   .hero-spec .hl { color: var(--color-cobalt-deep); }
   .hero-h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(2.6rem, 9vw, 7.5rem); line-height: .94; letter-spacing: -0.025em; }

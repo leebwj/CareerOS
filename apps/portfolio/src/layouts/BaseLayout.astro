@@ -7,7 +7,7 @@ interface Props {
 }
 
 const {
-  title = "Brian Wonjun Lee — Designer & Engineer",
+  title = "Brian Wonjun Lee",
   description = "Brian Lee blends creativity with technology to craft immersive, interactive experiences — graphics, 3D, and product design. CS + Design at Penn, interning at Aleph Lab (YC).",
 } = Astro.props;
 
@@ -30,13 +30,23 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
       try { if (localStorage.getItem("bl-mode") === "light") document.documentElement.setAttribute("data-mode", "light"); } catch (e) {}
     </script>
 
-    <!-- type: Mona Sans (display + body) + Geist Mono (labels) -->
+    <!-- type: Mona Sans (display + body) + Geist Mono (labels).
+         Loaded non-blocking (media="print" → "all" on load) so first paint
+         never waits on the font CSS; display=swap handles the glyph swap. -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Mona+Sans:wght@400;600;700&family=Geist+Mono:wght@400;500;700&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Mona+Sans:wght@400;600;700&family=Geist+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
 
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />

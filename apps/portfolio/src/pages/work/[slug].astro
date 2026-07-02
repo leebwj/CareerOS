@@ -34,7 +34,7 @@ const linkList = [
 ].filter(Boolean) as { label: string; href: string }[];
 ---
 
-<BaseLayout title={`${p.title} — Brian Lee`}>
+<BaseLayout title={`${p.title} · Brian Wonjun Lee`}>
   <header class="cs-nav">
     <div class="wrap cs-nav__row">
       <a href={backHref} class="cs-back nav-link" data-cursor="Back">← {backLabel}</a>
@@ -300,6 +300,13 @@ const linkList = [
   .cs-switch__yr { font-family: var(--font-mono); font-size: 10px; color: var(--color-faint); white-space: nowrap; }
 
   .cs-content { min-width: 0; max-width: 760px; }
+  /* large-desktop scale-up (pairs with the global root-font bump): widen the
+     px-based reading column + meta rail so big monitors aren't mostly void */
+  @media (min-width: 1800px) {
+    .cs-layout { grid-template-columns: 300px 1fr; }
+    .cs-content { max-width: 920px; }
+  }
+  @media (min-width: 2300px) { .cs-content { max-width: 1020px; } }
   .cs-featured { margin: 0 0 3rem; }
   .cs-featured :where(img) { width: 100%; height: auto; border-radius: 14px; box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--color-cobalt) 16%, transparent); display: block; }
   .cs-embed { position: relative; aspect-ratio: 16 / 9; border-radius: 14px; overflow: hidden; box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--color-cobalt) 20%, transparent); background: var(--color-card); }

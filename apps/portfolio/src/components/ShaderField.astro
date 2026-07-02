@@ -66,6 +66,14 @@ const { variant, mode = 0 } = Astro.props;
 </style>
 
 <script>
+  // Defer the WebGL setup (context + shader compile + link) off the critical
+  // path: yield one idle tick (capped at 300ms) so first paint + interactivity
+  // land first. The canvas fades in anyway, so the deferral is imperceptible.
+  await new Promise<void>((resolve) => {
+    const ric = (window as any).requestIdleCallback as ((cb: () => void, o?: { timeout: number }) => void) | undefined;
+    ric ? ric(() => resolve(), { timeout: 300 }) : setTimeout(resolve, 1);
+  });
+
   const canvas = document.querySelector(".vp-canvas") as HTMLCanvasElement | null;
   const wrap = canvas?.closest(".vp") as HTMLElement | null;
   if (canvas && wrap) {
