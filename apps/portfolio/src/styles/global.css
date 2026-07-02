@@ -26,7 +26,10 @@
 }
 
 @layer base {
-  html { scroll-behavior: smooth; -webkit-tap-highlight-color: transparent; } /* kill the squared grey tap-flash on mobile */
+  html { scroll-behavior: smooth; }
+  /* kill the squared tap-flash on touch: must be on EVERY element — some
+     engines don't propagate it from html to the tapped anchor itself */
+  *, *::before, *::after { -webkit-tap-highlight-color: transparent; }
   body {
     background-color: var(--color-canvas);
     color: var(--color-ink);
