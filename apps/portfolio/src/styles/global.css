@@ -62,10 +62,15 @@ html.lenis, html.lenis body { height: auto; }
   @media (min-width: 1800px) {
     html { font-size: 18px; }
     .wrap { max-width: 1340px; }
+    /* shader pills use fixed px, so give them their own monitor-tier bump */
+    .shader-pick button { font-size: 14px; padding: 8px 15px; }
+    .shader-pick > span { font-size: 12.5px; }
   }
   @media (min-width: 2300px) {
     html { font-size: 20px; }
     .wrap { max-width: 1580px; }
+    .shader-pick button { font-size: 15.5px; padding: 9px 17px; }
+    .shader-pick > span { font-size: 13.5px; }
   }
 
   /* the ONE repeating motif: numbered section kicker */
