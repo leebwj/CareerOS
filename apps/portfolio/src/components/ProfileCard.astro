@@ -183,6 +183,18 @@ const exp = [
     .pcard__rotator { transform: none; }
     .pcard__glare { opacity: 0 !important; }
   }
+
+  /* PHONES (must stay LAST — cascade): iPhone Safari drops child
+     mix-blend-mode while the tilt transform animates (GPU layer promotion),
+     which made the foil pattern vanish on touch — iPads survive it.
+     Composite the foil/glare normally there with tuned opacity; the holo
+     gradients themselves still render (their internal background-blend-modes
+     are unaffected). */
+  @media (pointer: coarse) and (max-width: 767px) {
+    .pcard__foil { mix-blend-mode: normal; opacity: calc(0.07 + var(--o) * 0.16); filter: brightness(calc((var(--pfc) * 0.15) + 0.85)) contrast(1.12) saturate(1.05); }
+    .pcard__foil::after { mix-blend-mode: normal; opacity: calc((0.08 * var(--o)) + var(--o) * var(--pfc) * 0.12); }
+    .pcard__glare { mix-blend-mode: normal; opacity: calc((0.04 * var(--o)) + var(--o) * var(--pfc) * 0.2); }
+  }
 </style>
 
 <script>
