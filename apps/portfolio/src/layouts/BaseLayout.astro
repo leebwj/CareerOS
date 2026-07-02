@@ -156,9 +156,13 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
             const zoom = hoverEl.classList.contains("cs-zoomable");
             // generous caps so big-screen layouts still snap (images grew past
             // the old 1000px gate after the large-desktop scale-up); the height
-            // gate keeps huge vertical blocks (full cards/sections) label-only
-            const maxW = zoom ? 1800 : 900, maxH = zoom ? 1800 : 460;
-            if (r.width && r.width < maxW && r.height < maxH) {
+            // gate keeps huge vertical blocks (full cards/sections) label-only.
+            // zoom maxH 2400 covers even full-page screenshots (e.g. 1100x2034)
+            const maxW = zoom ? 1800 : 900, maxH = zoom ? 2400 : 460;
+            // release the wrap once the target slides under the sticky header,
+            // so the ring never draws on top of the nav (header targets exempt)
+            const hdr = hoverEl.closest("header") ? -1 : (document.querySelector("header")?.getBoundingClientRect().bottom ?? 0);
+            if (r.width && r.width < maxW && r.height < maxH && r.top >= hdr) {
               tx = r.left + r.width / 2; ty = r.top + r.height / 2; ease = 0.24;
               const pw = r.width + 18, ph = r.height + 18;   // a little roomier
               ring.style.width = pw + "px"; ring.style.height = ph + "px";
