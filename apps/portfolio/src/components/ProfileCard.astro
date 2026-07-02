@@ -191,13 +191,25 @@ const exp = [
      pseudo-dodge; the holo gradients themselves still render (their internal
      background-blend-modes are unaffected). Desktop keeps true color-dodge. */
   @media (pointer: coarse) {
-    /* texture-forward: gentle contrast keeps the metallic pattern readable;
-       desaturation mutes the loud rainbow gradients (the pattern is near-
-       greyscale so it survives); the ::after rainbow layer is dialed to a
-       whisper. Closest stable match to the desktop look on real devices. */
-    .pcard__foil { mix-blend-mode: normal; opacity: calc(0.05 + var(--o) * 0.10); filter: brightness(calc((var(--pfc) * 0.12) + 1.0)) contrast(1.15) saturate(0.8); }
-    .pcard__foil::after { mix-blend-mode: normal; opacity: calc((0.04 * var(--o)) + var(--o) * var(--pfc) * 0.06); }
-    .pcard__glare { mix-blend-mode: normal; opacity: calc((0.04 * var(--o)) + var(--o) * var(--pfc) * 0.2); }
+    /* ZERO fragile features: mobile Safari drops mix-blend-mode, and during
+       tilt animation background-blend-mode/filters glitch too. So on touch
+       the foil is rebuilt as plain alpha compositing: the metallic texture +
+       a soft pointer-following tint. Nothing left for iOS to drop — identical
+       at rest and mid-interaction. Desktop keeps the full dodge stack. */
+    .pcard__foil {
+      mix-blend-mode: normal;
+      filter: none;
+      background-image:
+        url("/textures/vmaxbg.jpg"),
+        radial-gradient(farthest-corner circle at var(--px) var(--py),
+          hsla(189, 76%, 77%, 0.14) 0%, hsla(271, 55%, 69%, 0.10) 45%, transparent 80%);
+      background-blend-mode: normal;
+      background-size: cover, 200% 200%;
+      background-position: center, var(--bx) var(--by);
+      opacity: calc(0.07 + var(--o) * 0.09);
+    }
+    .pcard__foil::after { display: none; }
+    .pcard__glare { mix-blend-mode: normal; opacity: calc((0.04 * var(--o)) + var(--o) * var(--pfc) * 0.18); }
   }
 </style>
 
