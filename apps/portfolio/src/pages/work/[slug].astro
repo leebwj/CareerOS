@@ -24,7 +24,6 @@ const idx = sorted.findIndex((x) => x.slug === p.slug);
 const prev = sorted[(idx - 1 + sorted.length) % sorted.length];
 const next = sorted[(idx + 1) % sorted.length];
 
-const yt = (id: string) => `https://www.youtube.com/embed/${id}?rel=0`;
 const linkList = [
   p.links.live && { label: p.type === "experience" ? "Visit website" : "View live", href: p.links.live },
   p.links.video && { label: "Watch", href: p.links.video },
@@ -108,7 +107,16 @@ const linkList = [
         {p.featured && (
           <figure class="cs-featured reveal">
             {p.featured.type === "video" && p.featured.embed && (
-              <div class="cs-embed"><iframe src={yt(p.featured.embed)} title={p.featured.alt} loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+              <div class="cs-embed">
+                {/* facade: thumbnail + play button only — the real ~1MB YouTube
+                    player boots on click (with autoplay), so the page stays light */}
+                <button type="button" class="yt-facade" data-yt={p.featured.embed} data-yt-title={p.featured.alt || p.title} data-cursor="Play" data-cursor-keep aria-label={`Play video: ${p.featured.alt || p.title}`}>
+                  <img src={`https://i.ytimg.com/vi/${p.featured.embed}/maxresdefault.jpg`} alt={p.featured.alt || p.title} loading="eager" decoding="async" fetchpriority="high" />
+                  <span class="yt-facade__btn" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5-11-6.5Z"/></svg>
+                  </span>
+                </button>
+              </div>
             )}
             {p.featured.type === "embed" && p.featured.embed && (
               <div class="cs-embed cs-embed--site"><iframe src={p.featured.embed} title={p.featured.alt} loading="lazy"></iframe></div>
@@ -243,11 +251,27 @@ const linkList = [
       };
       document.addEventListener("click", (e) => {
         const img = e.target.closest(".cs-content img");
-        if (img) open(bestSrc(img), img.alt);
+        if (img && !img.closest(".yt-facade")) open(bestSrc(img), img.alt); // facade thumbs play video, not zoom
       });
       lb.addEventListener("click", close);
       addEventListener("keydown", (e) => { if (e.key === "Escape" && lb.classList.contains("open")) close(); });
     })();
+  </script>
+
+  <!-- YouTube facade → boot the real player (with autoplay) only on click -->
+  <script is:inline>
+    document.addEventListener("click", (e) => {
+      const f = e.target.closest(".yt-facade");
+      if (!f) return;
+      const id = f.getAttribute("data-yt");
+      if (!id) return;
+      const ifr = document.createElement("iframe");
+      ifr.src = `https://www.youtube-nocookie.com/embed/${id}?rel=0&autoplay=1`;
+      ifr.title = f.getAttribute("data-yt-title") || "Video";
+      ifr.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+      ifr.allowFullscreen = true;
+      f.replaceWith(ifr);
+    });
   </script>
 </BaseLayout>
 
@@ -312,6 +336,13 @@ const linkList = [
   .cs-embed { position: relative; aspect-ratio: 16 / 9; border-radius: 14px; overflow: hidden; box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--color-cobalt) 20%, transparent); background: var(--color-card); }
   .cs-embed--site { aspect-ratio: 16 / 10; }
   .cs-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  /* YouTube facade: thumbnail + on-brand play button; the player boots on click */
+  .yt-facade { position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; border: 0; background: var(--color-card); cursor: pointer; display: block; }
+  .yt-facade img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .5s cubic-bezier(.22, 1, .36, 1), opacity .3s ease; }
+  .yt-facade:hover img { transform: scale(1.025); }
+  .yt-facade__btn { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: grid; place-items: center; width: 74px; height: 74px; border-radius: 999px; color: var(--color-on-accent); background: color-mix(in oklab, var(--color-cobalt) 92%, transparent); box-shadow: 0 10px 34px -8px rgba(0, 0, 0, .6); transition: transform .25s cubic-bezier(.22, 1, .36, 1), background-color .2s ease; }
+  .yt-facade__btn svg { margin-left: 3px; }
+  .yt-facade:hover .yt-facade__btn { transform: translate(-50%, -50%) scale(1.08); background: var(--color-cobalt); }
 
   .cs-block { margin-top: clamp(2.5rem, 5vw, 3.5rem); }
   .cs-block:first-child { margin-top: 0; }
