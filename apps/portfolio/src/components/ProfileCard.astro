@@ -60,10 +60,12 @@ const exp = [
   /* large-desktop scale-up: keep the card proportional to the grown layout */
   @media (min-width: 1800px) { .pcard { max-width: 380px; } }
   @media (min-width: 2300px) { .pcard { max-width: 430px; } }
-  /* touch devices: dragging the card to tilt kept selecting text / popping
-     callouts — disable selection on the card only, and only on touch */
+  /* touch devices: the card fully owns the touch (à la bran.organic's 3D
+     object) — dragging anywhere on it tilts in every direction and never
+     scrolls the page; scroll from the space around it. Selection/callouts
+     disabled so the drag stays clean. */
   @media (pointer: coarse) {
-    .pcard { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+    .pcard { touch-action: none; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
   }
   .pcard__rotator {
     position: relative; width: 100%; border-radius: 16px;
@@ -233,6 +235,13 @@ const exp = [
     card.addEventListener("pointerleave", onLeave);
     card.addEventListener("pointercancel", onLeave);
     card.addEventListener("pointerup", onLeave); // touch: reset when finger lifts (no pointerleave fires)
+    // touch: react from the very first contact + keep tracking even if the
+    // finger drifts past the card's edge (pointer capture)
+    card.addEventListener("pointerdown", (e) => {
+      if (e.pointerType === "mouse") return;
+      try { card.setPointerCapture(e.pointerId); } catch {}
+      onMove(e);
+    });
     paint();
   });
 </script>
