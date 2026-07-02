@@ -187,50 +187,6 @@ const exp = [
 </style>
 
 <script>
-  // Safari (iPhone/iPad) intermittently loses mix-blend-mode compositing on
-  // the foil: after back/forward-cache restores, after fresh re-navigations
-  // (~50% of the time), and around the moment the card's WebGL canvas boots
-  // and gets promoted to its own layer. Rebuilding the blend layers (detach →
-  // reflow → reattach) restores compositing; it's cheap and idempotent, so we
-  // fire it on every arrival, again shortly after, and when the card first
-  // scrolls into view (canvas boot time).
-  const rebuildFoil = () => {
-    // 1) reattach the blend layers themselves
-    document.querySelectorAll<HTMLElement>(".pcard__foil, .pcard__glare").forEach((el) => {
-      const parent = el.parentNode!;
-      const next = el.nextSibling;
-      parent.removeChild(el);
-      void document.body.offsetHeight; // force reflow between detach/attach
-      parent.insertBefore(el, next);
-    });
-    // 2) nudge the rotator's stacking context — the blend is resolved at THIS
-    //    layer, and on cached (instant) re-navigations Safari sometimes builds
-    //    it wrong; toggling isolation forces the compositor to rebuild it
-    document.querySelectorAll<HTMLElement>(".pcard__rotator").forEach((r) => {
-      r.style.isolation = "isolate";
-      void r.offsetHeight;
-      requestAnimationFrame(() => { r.style.isolation = ""; });
-    });
-  };
-  addEventListener("pageshow", () => {
-    rebuildFoil();
-    setTimeout(rebuildFoil, 400);
-    setTimeout(rebuildFoil, 1200);
-  });
-  const firstCard = document.querySelector(".pcard");
-  if (firstCard) {
-    const io = new IntersectionObserver((entries, obs) => {
-      if (entries.some((en) => en.isIntersecting)) {
-        setTimeout(rebuildFoil, 150); // just after the card shader's canvas layer appears
-        setTimeout(rebuildFoil, 600); // once more after it settles
-        obs.disconnect();
-      }
-    }, { threshold: 0.05 });
-    io.observe(firstCard);
-    // 3) heal at the instant of interaction — the moment that matters most
-    firstCard.addEventListener("pointerdown", rebuildFoil, { passive: true });
-  }
-
   const clamp = (v: number, mn = 0, mx = 100) => Math.min(Math.max(v, mn), mx);
   const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
   document.querySelectorAll<HTMLElement>(".pcard").forEach((card) => {
