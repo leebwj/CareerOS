@@ -1,0 +1,21 @@
+# dependencies
+node_modules/
+
+# build output / generated
+dist/
+.astro/
+.output/
+
+# deploy
+.vercel/
+
+# env
+.env
+.env.*
+!.env.example
+
+# os / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

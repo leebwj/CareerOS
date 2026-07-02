@@ -1,0 +1,230 @@
+---
+// "Trading card" for Brian's info — Simey-style holo interaction (pointer-tracked 3D tilt +
+// glare + a pointer-driven iridescent holo foil over a live GLSL shader "screen").
+import CardShader from "./CardShader.astro";
+const exp = [
+  { name: "Aleph Lab", href: "/work/aleph-lab", logo: "/logos/aleph.png" },
+  { name: "BitMango", href: "/work/bitmango", logo: "/logos/bitmango.png" },
+  { name: "Puzzle1 Studio", href: "/work/bitmango", logo: "/logos/puzzle1.png" },
+  { name: "IT-Farm", href: "/work/it-farm", logo: "/logos/itfarm.png" },
+  { name: "Penn Spark", href: "/work/penn-spark", logo: "/logos/pennspark.png" },
+];
+---
+
+<div class="pcard" data-holo>
+  <div class="pcard__rotator">
+    <div class="pcard__face">
+      <header class="pcard__head">
+        <span class="pcard__name">Brian Lee<span class="pcard__dot">.</span></span>
+        <span class="pcard__lvl">DSGN · ENG</span>
+      </header>
+
+      <div class="pcard__art">
+        <CardShader />
+        <span class="pcard__brand" aria-hidden="true"><b>B</b><i>.</i></span>
+      </div>
+
+      <dl class="pcard__stats">
+        <div><dt>Focus</dt><dd>Graphics <span class="dim">+</span> Product</dd></div>
+        <div><dt>Study</dt><dd>CS&nbsp;+&nbsp;Design, Penn <span class="dim">’27</span></dd></div>
+        <div><dt>Based</dt><dd>Philadelphia, PA</dd></div>
+      </dl>
+
+      <div class="pcard__exp">
+        <p class="pcard__label">Experience</p>
+        <ul>
+          {exp.map((e) => (
+            <li>
+              <a href={e.href} data-cursor="View">
+                <img src={e.logo} alt="" width="18" height="18" loading="lazy" />
+                <span>{e.name}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <div class="pcard__foil" aria-hidden="true"></div>
+    <div class="pcard__glare" aria-hidden="true"></div>
+  </div>
+</div>
+
+<style>
+  .pcard {
+    --rx: 0deg; --ry: 0deg; --px: 50%; --py: 50%; --pfc: 0; --bx: 50%; --by: 50%; --o: 0;
+    width: 100%; max-width: 330px; margin-inline: auto;
+    perspective: 1100px; isolation: isolate;
+    touch-action: pan-y; /* keep vertical scroll; horizontal drag tilts the card on touch */
+  }
+  .pcard__rotator {
+    position: relative; width: 100%; border-radius: 16px;
+    transform-style: preserve-3d;
+    transform: rotateY(var(--rx)) rotateX(var(--ry));
+    transition: box-shadow .4s ease;
+    box-shadow: 0 14px 34px -16px rgba(0, 0, 0, .55),
+      0 0 0 1px color-mix(in oklab, var(--color-cobalt) 30%, var(--color-line)),
+      inset 0 1px 0 hsl(210 60% 82% / .08);
+  }
+  .pcard.interacting .pcard__rotator {
+    box-shadow: 0 1px 0 hsl(222 80% 72% / .16),
+      0 22px 50px -16px color-mix(in oklab, var(--color-cobalt) 45%, transparent),
+      0 0 0 1px color-mix(in oklab, var(--color-cobalt) 44%, var(--color-line));
+  }
+
+  /* deep navy-cobalt surface (not neutral black) so the card carries the identity colour */
+  .pcard__face {
+    position: relative; z-index: 1; border-radius: inherit; overflow: hidden;
+    background:
+      radial-gradient(130% 90% at 50% -8%, color-mix(in oklab, var(--color-cobalt) 32%, var(--color-card)), transparent 58%),
+      linear-gradient(178deg, color-mix(in oklab, var(--color-canvas) 78%, var(--color-cobalt)) 0%, color-mix(in oklab, var(--color-canvas) 90%, var(--color-cobalt)) 100%);
+    display: flex; flex-direction: column; gap: .9rem; padding: 1rem 1.05rem 1.1rem;
+    transform: translateZ(0);
+  }
+  .pcard__head { display: flex; align-items: baseline; justify-content: space-between; gap: .75rem; }
+  .pcard__name { font-family: var(--font-display); font-weight: 700; font-size: 1.18rem; letter-spacing: -0.035em; color: var(--color-ink); }
+  .pcard__dot { color: var(--color-cobalt-deep); }
+  .pcard__lvl { font-family: var(--font-mono); font-size: 10px; letter-spacing: .12em; color: var(--color-cobalt-deep); }
+
+  /* art panel — a live shader "screen" (always dark) with the B. mark + holo foil over it */
+  .pcard__art {
+    position: relative; height: 134px; border-radius: 10px; overflow: hidden; isolation: isolate;
+    display: grid; place-items: center; background: #0b0e16;
+    box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--color-cobalt) 30%, transparent);
+  }
+  .pcard__brand { position: relative; z-index: 1; font-family: var(--font-display); font-weight: 700; font-size: 3.9rem; line-height: 1; letter-spacing: -0.04em; color: #f3f5fa; display: inline-flex; align-items: flex-end; text-shadow: 0 2px 16px rgba(0, 0, 0, .55); }
+  .pcard__brand i { color: #8ea6ff; font-style: normal; }
+
+  /* holo foil — faithful port of the repo's V-MAX style: big slow diagonal gradient + the metallic
+     vmaxbg texture + a pointer radial, stacked with difference/luminosity/soft-light. Subtle gradient, pronounced texture. */
+  .pcard__foil {
+    position: absolute; inset: 0; z-index: 2; border-radius: inherit; pointer-events: none; overflow: hidden;
+    --space: 6%; --angle: 133deg;
+    opacity: calc(0.155 + var(--o) * 0.75);
+    background-image:
+      url("/textures/vmaxbg.jpg"),
+      repeating-linear-gradient(-33deg,
+        hsl(2, 70%, 47%) calc(var(--space) * 1), hsl(228, 60%, 64%) calc(var(--space) * 2), hsl(176, 55%, 39%) calc(var(--space) * 3),
+        hsl(123, 68%, 35%) calc(var(--space) * 4), hsl(283, 75%, 57%) calc(var(--space) * 5), hsl(2, 70%, 47%) calc(var(--space) * 6)),
+      repeating-linear-gradient(var(--angle),
+        hsla(227, 53%, 12%, 0.5) 0%, hsl(180, 10%, 50%) 2.5%, hsl(83, 50%, 35%) 5%, hsl(180, 10%, 50%) 7.5%, hsla(227, 53%, 12%, 0.5) 10%, hsla(227, 53%, 12%, 0.5) 15%),
+      radial-gradient(farthest-corner circle at var(--px) var(--py),
+        hsla(189, 76%, 77%, 0.6) 0%, hsla(147, 59%, 77%, 0.6) 25%, hsla(271, 55%, 69%, 0.6) 50%, hsla(355, 56%, 72%, 0.6) 75%);
+    background-blend-mode: difference, luminosity, soft-light;
+    background-size: cover, 1300% 1300%, 600% 600%, 200% 200%;
+    background-position: center, var(--bx) var(--by), var(--bx) var(--by), var(--bx) var(--by);
+    filter: brightness(calc((var(--pfc) * 0.37) + 0.44)) contrast(1.77) saturate(.97);
+    mix-blend-mode: color-dodge;
+  }
+  .pcard__foil::after {
+    content: ""; position: absolute; inset: 0; border-radius: inherit;
+    background-image:
+      repeating-linear-gradient(0deg, hsl(2, 100%, 73%) calc(var(--space) * 1), hsl(53, 100%, 69%) calc(var(--space) * 2), hsl(93, 100%, 69%) calc(var(--space) * 3), hsl(176, 100%, 76%) calc(var(--space) * 4), hsl(228, 100%, 74%) calc(var(--space) * 5), hsl(283, 100%, 73%) calc(var(--space) * 6), hsl(2, 100%, 73%) calc(var(--space) * 7)),
+      repeating-linear-gradient(var(--angle), #0e152e 0%, hsl(180, 10%, 60%) 3.8%, hsl(180, 29%, 66%) 4.5%, hsl(180, 10%, 60%) 5.2%, #0e152e 10%, #0e152e 12%);
+    background-blend-mode: hue, hard-light;
+    background-size: 200% 700%, 300% 100%;
+    background-position: 0% var(--by), var(--bx) var(--by);
+    mix-blend-mode: lighten;
+    opacity: calc((0.3 * var(--o)) + var(--o) * var(--pfc) * 0.5);
+    filter: saturate(1.5);
+  }
+
+  /* stats (the "table") */
+  .pcard__stats { display: grid; gap: 0; }
+  .pcard__stats > div { display: grid; grid-template-columns: 46px 1fr; gap: .8rem; align-items: baseline; padding: .5rem 0; border-top: 1px solid color-mix(in oklab, var(--color-cobalt) 16%, var(--color-line)); }
+  .pcard__stats > div:first-child { border-top: 0; padding-top: 0; }
+  .pcard__stats dt { font-family: var(--font-mono); font-size: 10px; letter-spacing: .06em; text-transform: uppercase; color: var(--color-cobalt-deep); }
+  .pcard__stats dd { font-size: .88rem; color: var(--color-ink); }
+  .pcard__stats .dim { color: var(--color-muted); }
+
+  /* experience */
+  .pcard__label { font-family: var(--font-mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--color-cobalt-deep); margin-bottom: .25rem; }
+  .pcard__exp ul { display: grid; }
+  .pcard__exp li { border-top: 1px solid color-mix(in oklab, var(--color-cobalt) 16%, var(--color-line)); }
+  .pcard__exp a { display: flex; align-items: center; gap: .55rem; padding: .42rem 0; font-size: .86rem; color: var(--color-ink); transition: color .2s ease, transform .25s cubic-bezier(.22, 1, .36, 1); }
+  .pcard__exp img { width: 18px; height: 18px; border-radius: 4px; object-fit: cover; flex-shrink: 0; }
+  .pcard__exp span { flex: 1; }
+  .pcard__exp a::after { content: "→"; font-family: var(--font-mono); font-size: .98rem; font-weight: 700; line-height: 1; color: var(--color-cobalt-deep); opacity: .55; transition: opacity .2s ease, transform .2s ease; }
+  .pcard__exp a:hover { color: var(--color-cobalt-deep); transform: translate(2px, -1px); }
+  .pcard__exp a:hover::after { opacity: 1; transform: translateX(3px); }
+
+  /* glare — soft natural sheen (soft-light) that follows the pointer; gentle falloff, not a hard spotlight */
+  .pcard__glare {
+    position: absolute; inset: 0; z-index: 3; border-radius: inherit; pointer-events: none;
+    transform: translateZ(1.4px); mix-blend-mode: soft-light;
+    background-image: radial-gradient(farthest-corner circle at var(--px) var(--py),
+      hsla(0, 0%, 100%, 0.55) 0%, hsla(0, 0%, 100%, 0.1) 30%, hsla(220, 35%, 8%, 0.28) 78%);
+    opacity: calc((0.12 * var(--o)) + var(--o) * var(--pfc) * 0.55);
+  }
+
+  /* light (Paper) mode: a soft whitish-blue card (not white) */
+  :global(html[data-mode="light"]) .pcard__face {
+    background:
+      radial-gradient(120% 80% at 50% -10%, color-mix(in oklab, var(--color-cobalt) 12%, var(--color-card)), transparent 55%),
+      var(--color-card);
+  }
+  :global(html[data-mode="light"]) .pcard__rotator {
+    box-shadow: 0 14px 30px -18px rgba(40, 60, 110, .3),
+      0 0 0 1px color-mix(in oklab, var(--color-cobalt) 30%, var(--color-line));
+  }
+  :global(html[data-mode="light"]) .pcard__glare { opacity: calc(var(--o) * 0.24); mix-blend-mode: overlay; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .pcard__rotator { transform: none; }
+    .pcard__glare { opacity: 0 !important; }
+  }
+</style>
+
+<script>
+  const clamp = (v: number, mn = 0, mx = 100) => Math.min(Math.max(v, mn), mx);
+  const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const fine = matchMedia("(hover: hover) and (pointer: fine)").matches;
+  document.querySelectorAll<HTMLElement>(".pcard").forEach((card) => {
+    if (reduced) return; // holo works on touch too — drag on the card to tilt (vertical scroll preserved via touch-action)
+    void fine;
+    const cur: Record<string, number> = { rx: 0, ry: 0, px: 50, py: 50, bx: 50, by: 50, o: 0 };
+    const tgt = { ...cur };
+    const vel: Record<string, number> = { rx: 0, ry: 0, px: 0, py: 0, bx: 0, by: 0, o: 0 };
+    let raf: number | null = null;
+    const paint = () => {
+      const pfc = clamp(Math.hypot(cur.px - 50, cur.py - 50) / 50, 0, 1);
+      const s = card.style;
+      s.setProperty("--px", cur.px + "%"); s.setProperty("--py", cur.py + "%");
+      s.setProperty("--pfc", String(pfc));
+      s.setProperty("--bx", cur.bx + "%"); s.setProperty("--by", cur.by + "%");
+      s.setProperty("--rx", cur.rx + "deg"); s.setProperty("--ry", cur.ry + "deg");
+      s.setProperty("--o", String(cur.o));
+    };
+    const loop = () => {
+      // light spring (velocity + damping) → responsive with a little overshoot, between flat lerp and a full bouncy spring
+      const stiff = 0.13, damp = 0.76; let moving = false;
+      for (const k in cur) {
+        const d = tgt[k] - cur[k];
+        vel[k] = vel[k] * damp + d * stiff;
+        if (Math.abs(d) > 0.01 || Math.abs(vel[k]) > 0.01) { cur[k] += vel[k]; moving = true; }
+        else { cur[k] = tgt[k]; vel[k] = 0; }
+      }
+      paint(); raf = moving ? requestAnimationFrame(loop) : null;
+    };
+    const kick = () => { if (raf === null) raf = requestAnimationFrame(loop); };
+    const onMove = (ev: PointerEvent) => {
+      const r = card.getBoundingClientRect();
+      const px = clamp((100 / r.width) * (ev.clientX - r.left));
+      const py = clamp((100 / r.height) * (ev.clientY - r.top));
+      const cx = px - 50, cy = py - 50;
+      tgt.px = px; tgt.py = py;
+      tgt.bx = 50 + cx * 0.26; tgt.by = 50 + cy * 0.34;
+      tgt.rx = -(cx / 4.5); tgt.ry = cy / 4.5; tgt.o = 1;
+      card.classList.add("interacting"); kick();
+    };
+    const onLeave = () => {
+      Object.assign(tgt, { rx: 0, ry: 0, px: 50, py: 50, bx: 50, by: 50, o: 0 });
+      card.classList.remove("interacting"); kick();
+    };
+    card.addEventListener("pointermove", onMove);
+    card.addEventListener("pointerleave", onLeave);
+    card.addEventListener("pointercancel", onLeave);
+    card.addEventListener("pointerup", onLeave); // touch: reset when finger lifts (no pointerleave fires)
+    paint();
+  });
+</script>

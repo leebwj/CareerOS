@@ -1,0 +1,363 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Brian Wonjun Lee — Designer & Engineer",
+  description = "Brian Lee blends creativity with technology to craft immersive, interactive experiences — graphics, 3D, and product design. CS + Design at Penn, interning at Aleph Lab (YC).",
+} = Astro.props;
+
+const ogImage = new URL("/og.png", Astro.site).href;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+---
+
+<!doctype html>
+<html lang="en" data-thumb="bw">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#0b0c0e" />
+    <!-- apply saved light/dark mode before first paint (no flash) -->
+    <script is:inline>
+      try { if (localStorage.getItem("bl-mode") === "light") document.documentElement.setAttribute("data-mode", "light"); } catch (e) {}
+    </script>
+
+    <!-- type: Mona Sans (display + body) + Geist Mono (labels) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mona+Sans:wght@400;600;700&family=Geist+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <link rel="canonical" href={canonical} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+  </head>
+  <body>
+
+    <!-- scroll progress bar (all pages) -->
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+    <!-- custom cursor -->
+    <div class="cursor-ring" aria-hidden="true"><span class="cursor-label"></span></div>
+
+    <slot />
+
+    <footer class="site-footer">
+      <div class="wrap site-footer__row">
+        <span>© 2026 Brian Lee</span>
+        <span>Philadelphia, PA</span>
+        <span>Built with Astro</span>
+      </div>
+    </footer>
+
+
+    <!-- smooth scroll (Lenis) + scroll-velocity skew on .velocity-type — skipped under reduced-motion -->
+    <script>
+      import Lenis from "lenis";
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        const lenis = new Lenis({ lerp: 0.1 });
+        const raf = (t: number) => {
+          lenis.raf(t);
+          requestAnimationFrame(raf);
+        };
+        requestAnimationFrame(raf);
+
+        // scroll velocity → clamped skew var, decays back to 0 when scrolling stops
+        const root = document.documentElement;
+        let decay: ReturnType<typeof setTimeout>;
+        lenis.on("scroll", (e: any) => {
+          const v = e && typeof e.velocity === "number" ? e.velocity : 0;
+          const s = Math.max(-6, Math.min(6, v * 0.4));
+          root.style.setProperty("--vskew", s.toFixed(2) + "deg");
+          clearTimeout(decay);
+          decay = setTimeout(() => root.style.setProperty("--vskew", "0deg"), 90);
+        });
+      }
+    </script>
+
+    <!-- scroll reveal: fade-up once, only when motion is allowed -->
+    <script is:inline>
+      (() => {
+        const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        const els = document.querySelectorAll(".reveal");
+        if (reduce || !("IntersectionObserver" in window)) {
+          els.forEach((e) => e.classList.add("is-in"));
+          return;
+        }
+        const io = new IntersectionObserver(
+          (entries) => {
+            for (const en of entries) {
+              if (en.isIntersecting) {
+                en.target.classList.add("is-in");
+                io.unobserve(en.target);
+              }
+            }
+          },
+          { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+        );
+        els.forEach((e) => io.observe(e));
+      })();
+    </script>
+
+    <!-- custom cursor: dot tracks 1:1, ring eases behind + morphs to a label on intent -->
+    <script is:inline>
+      (() => {
+        const fine = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+        const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (!fine || reduce) return;
+
+        const ring = document.querySelector(".cursor-ring");
+        const label = ring && ring.querySelector(".cursor-label");
+        if (!ring || !label) return;
+        document.documentElement.classList.add("cursor-on");
+
+        let mx = innerWidth / 2, my = innerHeight / 2, rx = mx, ry = my, hoverEl = null, hoverKeep = false;
+        addEventListener("pointermove", (e) => {
+          mx = e.clientX; my = e.clientY;
+        }, { passive: true });
+
+        const clearSnap = () => { ring.style.width = ""; ring.style.height = ""; ring.style.margin = ""; ring.style.borderRadius = ""; };
+
+        const tick = () => {
+          let tx = mx, ty = my, ease = 0.18;
+          // the ring eases onto + wraps the hovered target
+          const wrap = hoverEl;
+          if (wrap) {
+            const r = hoverEl.getBoundingClientRect();
+            const zoom = hoverEl.classList.contains("cs-zoomable");
+            const maxW = zoom ? 1000 : 600, maxH = zoom ? 1600 : 460;
+            if (r.width && r.width < maxW && r.height < maxH) {
+              tx = r.left + r.width / 2; ty = r.top + r.height / 2; ease = 0.24;
+              const pw = r.width + 18, ph = r.height + 18;   // a little roomier
+              ring.style.width = pw + "px"; ring.style.height = ph + "px";
+              ring.style.margin = `${-ph / 2}px 0 0 ${-pw / 2}px`;
+              ring.style.borderRadius = ((parseFloat(getComputedStyle(hoverEl).borderRadius) || 10) + 8) + "px";
+            } else { clearSnap(); }
+          } else if (ring.style.width) { clearSnap(); }
+          rx += (tx - rx) * ease; ry += (ty - ry) * ease;
+          ring.style.transform = `translate(${rx}px, ${ry}px)`;
+          requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+
+        // keep the action label only when the target has no text of its own ([data-cursor-keep], e.g. thumbnails)
+        const setQuiet = () => {
+          ring.classList.toggle("quiet", ring.classList.contains("is-label") && !hoverKeep);
+        };
+        addEventListener("pointerover", (e) => {
+          const t = e.target.closest("[data-cursor]");
+          if (t) {
+            label.textContent = t.getAttribute("data-cursor");
+            ring.classList.add("is-label");
+            hoverEl = t; hoverKeep = t.hasAttribute("data-cursor-keep");
+            setQuiet();
+            return;
+          }
+          const link = e.target.closest("a, button");
+          if (link) { ring.classList.add("is-hover"); ring.classList.remove("quiet"); hoverEl = link; hoverKeep = false; }
+        });
+        addEventListener("pointerout", (e) => {
+          const t = e.target.closest("[data-cursor]");
+          if (t && !(e.relatedTarget && t.contains(e.relatedTarget))) {
+            ring.classList.remove("is-label", "quiet");
+            if (hoverEl === t) { hoverEl = null; hoverKeep = false; }
+            clearSnap();
+          }
+          const link = e.target.closest("a, button");
+          if (link && !(e.relatedTarget && link.contains(e.relatedTarget))) {
+            ring.classList.remove("is-hover");
+            if (hoverEl === link) hoverEl = null;
+            clearSnap();
+          }
+        });
+
+        // magnetic pull: [data-magnetic] elements ease toward the cursor while hovered
+        document.querySelectorAll("[data-magnetic]").forEach((el) => {
+          const k = parseFloat(el.getAttribute("data-magnetic")) || 0.3;
+          el.addEventListener("pointermove", (e) => {
+            const r = el.getBoundingClientRect();
+            const x = e.clientX - (r.left + r.width / 2);
+            const y = e.clientY - (r.top + r.height / 2);
+            el.style.transform = `translate(${(x * k).toFixed(1)}px, ${(y * k).toFixed(1)}px)`;
+          });
+          el.addEventListener("pointerleave", () => { el.style.transform = ""; });
+        });
+      })();
+    </script>
+
+    <!-- kinetic type: split .kinetic headlines into letters that lift + light toward the cursor -->
+    <script is:inline>
+      (() => {
+        const targets = document.querySelectorAll(".kinetic .line-i, .kinetic-line");
+        if (!targets.length) return;
+
+        // split into per-letter spans (keeps spaces as text so words still wrap)
+        const chars = [];
+        targets.forEach((el) => {
+          const text = (el.textContent || "").replace(/\s+/g, " ").trim();
+          el.textContent = "";
+          const words = text.split(" ");
+          words.forEach((word, wi) => {
+            const wspan = document.createElement("span");
+            wspan.className = "kw";   // keeps each word unbreakable (no mid-word line wraps)
+            for (const c of word) {
+              const s = document.createElement("span");
+              s.className = "ch";
+              s.textContent = c;
+              wspan.appendChild(s);
+              chars.push(s);
+            }
+            el.appendChild(wspan);
+            if (wi < words.length - 1) el.appendChild(document.createTextNode(" "));
+          });
+        });
+
+        const fine = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+        const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (!fine || reduce) return; // static (but still split) on touch / reduced-motion
+
+        const R = 95;
+        let mx = 0, my = 0, raf = null;
+        // cache page-space letter centers — avoids ~200 getBoundingClientRect
+        // calls per frame while the cursor moves (the old approach forced
+        // constant layout reads; this is pure math per frame instead)
+        let centers = null;
+        const measure = () => {
+          const sx = scrollX, sy = scrollY;
+          centers = chars.map((c) => {
+            const r = c.getBoundingClientRect();
+            return [r.left + r.width / 2 + sx, r.top + r.height / 2 + sy];
+          });
+        };
+        const update = () => {
+          raf = null;
+          if (!centers) measure();
+          const px = mx + scrollX, py = my + scrollY;
+          for (let i = 0; i < chars.length; i++) {
+            const d = Math.hypot(px - centers[i][0], py - centers[i][1]);
+            chars[i].style.setProperty("--w", Math.max(0, 1 - d / R).toFixed(3));
+          }
+        };
+        addEventListener("pointermove", (e) => {
+          mx = e.clientX; my = e.clientY;
+          if (!raf) raf = requestAnimationFrame(update);
+        }, { passive: true });
+        // re-measure when positions can actually change (not per frame)
+        addEventListener("resize", () => { centers = null; }, { passive: true });
+        if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { centers = null; });
+        setTimeout(() => { centers = null; }, 1800); // after entrance animations settle
+      })();
+    </script>
+
+    <!-- light/dark mode toggle (nav sun/moon) -->
+    <script is:inline>
+      (() => {
+        const root = document.documentElement;
+        const btn = document.getElementById("mode-toggle");
+        const meta = document.querySelector('meta[name="theme-color"]');
+        const apply = (mode, save) => {
+          if (mode === "light") root.setAttribute("data-mode", "light"); else root.removeAttribute("data-mode");
+          if (meta) meta.setAttribute("content", mode === "light" ? "#f4f5fb" : "#0c0c10");
+          if (save) { try { localStorage.setItem("bl-mode", mode); } catch (e) {} }
+          dispatchEvent(new Event("themechange"));
+        };
+        let cur = "dark";
+        try { cur = localStorage.getItem("bl-mode") || "dark"; } catch (e) {}
+        apply(cur, false);
+        if (btn) btn.addEventListener("click", () => {
+          const next = root.getAttribute("data-mode") === "light" ? "dark" : "light";
+          const run = () => apply(next, true);
+          if (document.startViewTransition) document.startViewTransition(run); else run();
+        });
+      })();
+    </script>
+
+    <!-- open the hero line-masks once the entrance is done (so magnetic buttons aren't clipped) -->
+    <script is:inline>
+      (() => {
+        const hero = document.querySelector(".hero");
+        if (!hero) return;
+        const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        setTimeout(() => hero.classList.add("lines-open"), reduce ? 0 : 1800);
+      })();
+    </script>
+
+    <!-- nav scroll-spy: highlight the section currently in view -->
+    <script is:inline>
+      (() => {
+        const links = new Map();
+        document.querySelectorAll(".nav-link[href^='#']").forEach((a) => {
+          const id = a.getAttribute("href").slice(1);
+          if (id) links.set(id, a);
+        });
+        if (!links.size || !("IntersectionObserver" in window)) return;
+        const sections = [...links.keys()].map((id) => document.getElementById(id)).filter(Boolean);
+        let current = null;
+        const io = new IntersectionObserver((entries) => {
+          for (const e of entries) {
+            if (e.isIntersecting && e.target.id !== current) {
+              current = e.target.id;
+              links.forEach((a, key) => a.classList.toggle("is-active", key === current));
+            }
+          }
+        }, { rootMargin: "-45% 0px -50% 0px", threshold: 0 });
+        sections.forEach((s) => io.observe(s));
+      })();
+    </script>
+
+    <!-- scroll progress -->
+    <script is:inline>
+      (() => {
+        const bar = document.querySelector(".scroll-progress span");
+        if (!bar) return;
+        const onScroll = () => {
+          const h = document.documentElement;
+          const max = h.scrollHeight - h.clientHeight;
+          bar.style.transform = "scaleX(" + (max > 0 ? h.scrollTop / max : 0) + ")";
+        };
+        addEventListener("scroll", onScroll, { passive: true });
+        addEventListener("resize", onScroll, { passive: true });
+        onScroll();
+      })();
+    </script>
+
+    <!-- copy email to clipboard with inline + cursor feedback -->
+    <script is:inline>
+      document.addEventListener("click", (e) => {
+        const el = e.target.closest(".copy-email");
+        if (!el || !navigator.clipboard) return;
+        e.preventDefault();
+        const email = el.getAttribute("data-email") || el.textContent.trim();
+        navigator.clipboard.writeText(email).then(() => {
+          if (!el.dataset.orig) el.dataset.orig = el.textContent;
+          el.textContent = "Copied to clipboard ✓";
+          el.classList.add("is-copied");
+          clearTimeout(el._copyT);
+          el._copyT = setTimeout(() => {
+            el.textContent = el.dataset.orig;
+            el.classList.remove("is-copied");
+          }, 1700);
+        }).catch(() => {});
+      });
+    </script>
+  </body>
+</html>

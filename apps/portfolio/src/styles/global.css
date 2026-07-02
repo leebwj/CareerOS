@@ -1,0 +1,270 @@
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────────────────────────
+   CareerOS portfolio — Direction A.
+   Warm paper · one accent · 2 fonts + mono · one motif (numbered
+   sections) · whitespace rhythm. Purposeful motion: smooth scroll,
+   a magnetic cursor, and one live shader. Thumbnails unified by a
+   cobalt duotone wash.
+   ───────────────────────────────────────────────────────────── */
+@theme {
+  /* Slate Blue — cool near-black ground + a muted greyish-blue accent (the default).
+     The switcher offers Periwinkle, Indigo + other 2026 systems; nav sun/moon toggles light mode. */
+  --color-canvas: #0b0c0e;       /* cool near-black ground (not pure #000) */
+  --color-card: #15171a;         /* raised surface */
+  --color-ink: #f4f5f7;          /* off-white text */
+  --color-muted: #828c99;
+  --color-faint: #545c66;
+  --color-line: #23262b;         /* hairlines */
+  --color-cobalt: #6f88cf;       /* Deep Cobalt Indigo — the locked dark accent */
+  --color-cobalt-deep: #9aafe2;  /* lighter cobalt-indigo — accent text / links on dark */
+  --color-on-accent: #0a0d12;    /* dark text that sits ON the accent fill */
+
+  --font-display: "Mona Sans", ui-sans-serif, sans-serif;          /* headlines — Mona Sans (switchable) */
+  --font-sans: "Mona Sans", ui-sans-serif, system-ui, sans-serif;  /* body */
+  --font-mono: "Geist Mono", ui-monospace, monospace;              /* labels / HUD */
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3 { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.045em; line-height: 1.06; }
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: color-mix(in oklab, var(--color-cobalt) 22%, transparent); }
+  :focus-visible { outline: 2px solid var(--color-cobalt); outline-offset: 3px; border-radius: 3px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  /* hide native cursor only once the custom cursor is live */
+  html.cursor-on, html.cursor-on a, html.cursor-on button, html.cursor-on [data-shader] { cursor: none; }
+}
+
+/* lenis smooth scroll */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: clip; }
+
+@layer components {
+  .wrap { width: 100%; max-width: 1080px; margin-inline: auto; padding-inline: 1.5rem; }
+  @media (min-width: 768px) { .wrap { padding-inline: 2rem; } }
+
+  /* the ONE repeating motif: numbered section kicker */
+  .kicker { font-family: var(--font-mono); font-size: 13.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-muted); }
+  .kicker .num { color: var(--color-cobalt-deep); margin-right: .5rem; }
+
+  /* pill buttons */
+  .btn { display: inline-flex; align-items: center; gap: .5rem; font-weight: 500; font-size: .95rem; line-height: 1; padding: .8rem 1.3rem; border-radius: 100px; transition: background-color .25s ease, color .25s ease, border-color .25s ease; }
+  .btn-primary { background: var(--color-ink); color: var(--color-canvas); }
+  .btn-primary:hover { background: var(--color-cobalt); color: var(--color-on-accent); }
+  .btn-ghost { border: 1px solid var(--color-line); color: var(--color-ink); }
+  .btn-ghost:hover { border-color: var(--color-ink); }
+
+  .nav-link { position: relative; color: var(--color-muted); transition: color .2s ease; }
+  .nav-link:hover { color: var(--color-ink); }
+
+  /* light/dark mode toggle (nav) — shows the icon for the mode you'll switch TO */
+  .mode-toggle { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 999px; border: 1px solid var(--color-line); color: var(--color-muted); background: transparent; cursor: pointer; transition: color .2s ease, border-color .2s ease; }
+  .mode-toggle:hover { color: var(--color-ink); border-color: var(--color-ink); }
+
+  .scroll-progress { position: fixed; top: 0; left: 0; right: 0; height: 2px; z-index: 60; pointer-events: none; }
+  .scroll-progress span { display: block; height: 100%; transform-origin: 0 50%; transform: scaleX(0); background: linear-gradient(90deg, var(--color-cobalt), var(--color-cobalt-deep)); will-change: transform; }
+
+  .site-footer { border-top: 1px solid var(--color-line); padding: 1.5rem 0; }
+  .site-footer__row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem; font-family: var(--font-mono); font-size: 12px; color: var(--color-muted); }
+
+  .nav-burger { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 8px; border: 1px solid var(--color-line); color: var(--color-muted); background: transparent; cursor: pointer; transition: color .2s ease, border-color .2s ease; }
+  .nav-burger:hover, .nav-burger.is-open { color: var(--color-ink); border-color: var(--color-ink); }
+  .nav-menu { border-top: 1px solid var(--color-line); background: color-mix(in oklab, var(--color-canvas) 97%, transparent); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); padding: .35rem 1.5rem 1rem; }
+  .nav-menu__link { display: block; padding: .9rem .2rem; font-size: 1.05rem; color: var(--color-ink); border-bottom: 1px solid var(--color-line); transition: color .2s ease; }
+  .nav-menu__link:last-child { border-bottom: 0; }
+  .nav-menu__link:hover { color: var(--color-cobalt-deep); }
+  .mode-toggle .ico { grid-area: 1 / 1; }
+  .mode-toggle .ico-moon { display: none; }
+  html[data-mode="light"] .mode-toggle .ico-sun { display: none; }
+  html[data-mode="light"] .mode-toggle .ico-moon { display: block; }
+  /* scroll-spy active state */
+  .nav-link.is-active { color: var(--color-ink); }
+  .nav-link.is-active::after { content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 2px; border-radius: 2px; background: var(--color-cobalt); }
+
+  /* tags — single source of truth so every chip aligns identically */
+  .tag { display: inline-flex; align-items: center; height: 28px; padding: 0 .8rem; font-family: var(--font-mono); font-size: 12.5px; line-height: 1; white-space: nowrap; color: var(--color-muted); border: 1px solid var(--color-line); border-radius: 100px; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: .5rem; }
+
+  /* filter chips */
+  .chip { display: inline-flex; align-items: center; height: 34px; padding: 0 .9rem; font-family: var(--font-mono); font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: var(--color-muted); border: 1px solid var(--color-line); border-radius: 100px; cursor: pointer; transition: color .2s ease, border-color .2s ease, background-color .2s ease; }
+  .chip:hover { color: var(--color-ink); border-color: var(--color-ink); }
+  .chip[aria-pressed="true"] { background: var(--color-cobalt); color: var(--color-on-accent); border-color: var(--color-cobalt); }
+
+  /* ── project cards: one matted frame, duotone unifies every image ── */
+  .proj-media { position: relative; aspect-ratio: 4 / 3; border-radius: 14px; background: var(--color-card); overflow: hidden; isolation: isolate; container-type: inline-size; box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--color-cobalt) 14%, transparent); transition: box-shadow .4s ease; }
+  /* DEFAULT = a designed cover (no screenshot); screenshot treatments toggle in via [data-thumb] */
+  .proj-media :where(img) { width: 100%; height: 100%; object-fit: cover; display: none; transition: filter .6s ease, transform .6s cubic-bezier(.22, 1, .36, 1); }
+  html[data-thumb] .proj-media:has(img) :where(img) { display: block; }
+  html[data-thumb] .proj-media .proj-cover { display: none; }
+  html[data-thumb] .proj-media .proj-cover-live { display: grid; }   /* screenshot modes: no-image card shows the text cover */
+  /* faint grain + scrim — applies in every mode */
+  .proj-media::after { content: ""; position: absolute; inset: 0; z-index: 3; pointer-events: none; background: linear-gradient(to top, color-mix(in oklab, var(--color-canvas) 78%, transparent) 0%, transparent 42%), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E"); background-size: cover, 160px 160px; opacity: .4; mix-blend-mode: overlay; transition: opacity .55s ease; }
+  .proj:hover .proj-media { box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--color-cobalt) 30%, transparent); }
+  .proj:hover .proj-media :where(img) { transform: scale(1.04); }
+  .proj:hover .proj-media::after { opacity: .22; }
+
+  /* ── designed project cover (the default thumbnail): blueprint grid + glow + corner ticks + ghost index + glyph ── */
+  .proj-cover { position: absolute; inset: 0; overflow: hidden; color: var(--color-cobalt); background: linear-gradient(color-mix(in oklab, var(--color-line) 70%, transparent) 1px, transparent 1px) 0 0 / 22px 22px, linear-gradient(90deg, color-mix(in oklab, var(--color-line) 70%, transparent) 1px, transparent 1px) 0 0 / 22px 22px, var(--color-card); }
+  .pc-glow { position: absolute; inset: 0; background: radial-gradient(120% 130% at var(--gx, 30%) var(--gy, 30%), color-mix(in oklab, var(--color-cobalt) 24%, transparent), transparent 68%); }
+  .proj-cover::before { content: ""; position: absolute; inset: 12px; z-index: 2; pointer-events: none; color: color-mix(in oklab, var(--color-cobalt) 50%, transparent); background: linear-gradient(currentColor 0 0) left top/14px 1.5px no-repeat, linear-gradient(currentColor 0 0) left top/1.5px 14px no-repeat, linear-gradient(currentColor 0 0) right top/14px 1.5px no-repeat, linear-gradient(currentColor 0 0) right top/1.5px 14px no-repeat, linear-gradient(currentColor 0 0) left bottom/14px 1.5px no-repeat, linear-gradient(currentColor 0 0) left bottom/1.5px 14px no-repeat, linear-gradient(currentColor 0 0) right bottom/14px 1.5px no-repeat, linear-gradient(currentColor 0 0) right bottom/1.5px 14px no-repeat; transition: color .4s ease; }
+  .pc-idx { position: absolute; top: -0.14em; right: 0.08em; z-index: 0; font-family: var(--font-mono); font-weight: 700; font-size: clamp(4rem, 30cqw, 9rem); line-height: 1; letter-spacing: -0.04em; color: color-mix(in oklab, var(--color-cobalt) 14%, transparent); }
+  .pc-motif { position: absolute; inset: 0; z-index: 1; display: grid; place-items: center; color: var(--color-cobalt-deep); transition: transform .6s cubic-bezier(.22, 1, .36, 1); }
+  .pc-motif svg { width: 46%; height: auto; }
+  .proj:hover .proj-cover::before { color: var(--color-cobalt); }
+  .proj:hover .pc-motif { transform: scale(1.05); }
+  /* text-in-middle cover for projects with no screenshot (the previous default; matches the B&W set). Hidden in "Cover" mode. */
+  .proj-cover-live { position: absolute; inset: 0; display: none; place-items: center; text-align: center; padding: 1.3rem; background: radial-gradient(125% 130% at 30% 20%, color-mix(in oklab, var(--color-card) 84%, var(--color-cobalt)), var(--color-card) 78%); color: var(--color-ink); font-family: var(--font-display); font-weight: 700; font-size: clamp(1.5rem, 7cqw, 2.2rem); letter-spacing: -0.035em; line-height: 1.1; }
+  .proj-cover-live::after { content: ""; position: absolute; inset: 0; pointer-events: none; box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--color-cobalt) 22%, transparent); }
+
+  /* ── screenshot treatments (toggle in via [data-thumb]; only when a real screenshot exists) ── */
+  /* "bw" = refined B&W where blacks lean into the accent → colour on hover */
+  html[data-thumb="bw"] .proj-media :where(img) { filter: grayscale(1) contrast(1.06) brightness(.97); }
+  html[data-thumb="bw"] .proj-media:has(img)::before { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(to top, var(--color-cobalt) 0%, color-mix(in oklab, var(--color-cobalt) 55%, transparent) 58%, color-mix(in oklab, var(--color-cobalt) 30%, transparent) 100%); mix-blend-mode: color; opacity: .2; transition: opacity .55s ease; }
+  html[data-thumb="bw"] .proj:hover .proj-media :where(img) { filter: none; }
+  html[data-thumb="bw"] .proj:hover .proj-media:has(img)::before { opacity: 0; }
+  .proj-cats { position: absolute; top: .85rem; left: .85rem; z-index: 4; display: flex; flex-wrap: wrap; gap: .35rem; max-width: calc(100% - 1.7rem); }
+  .proj-cat { display: inline-flex; align-items: center; height: 22px; padding: 0 .6rem; font-family: var(--font-mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; color: var(--color-cobalt-deep); background: color-mix(in oklab, var(--color-canvas) 84%, transparent); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); border: 1px solid var(--color-line); border-radius: 100px; }
+  .proj-head { margin-top: 1rem; display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+  .proj-title { font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; letter-spacing: -0.035em; line-height: 1.2; }
+  .proj:hover .proj-title { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; text-decoration-color: var(--color-cobalt); }
+  .proj-no { font-family: var(--font-mono); font-size: 12.5px; color: var(--color-muted); white-space: nowrap; }
+  .proj-blurb { margin-top: .6rem; color: var(--color-muted); font-size: .94rem; line-height: 1.55; }
+
+
+  .load-more { padding: .6rem 1.5rem; font-family: var(--font-mono); font-size: 12px; letter-spacing: .05em; }
+
+  /* ── about: two columns + a spec rail so the copy doesn't float in whitespace ── */
+  .about-grid { display: grid; gap: 2.5rem; }
+  @media (min-width: 768px) { .about-grid { grid-template-columns: 1.55fr 1fr; gap: 3.75rem; align-items: center; } .about-card { margin-top: 1rem; } }
+  .about-statement { max-width: 28ch; font-family: var(--font-display); font-weight: 700; font-size: clamp(1.5rem, 3.2vw, 2.25rem); line-height: 1.18; letter-spacing: -0.03em; text-wrap: balance; }
+  .about-body { margin-top: 1.5rem; max-width: 58ch; color: var(--color-muted); line-height: 1.65; text-wrap: pretty; }
+  .about-side { display: grid; gap: 2rem; align-content: start; }
+  .about-side__label { font-family: var(--font-mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--color-faint); margin-bottom: .35rem; }
+  /* aligned spec table: fixed label column + left-aligned values */
+  .about-facts .fact { display: grid; grid-template-columns: 52px 1fr; gap: 1rem; align-items: baseline; padding: .62rem 0; border-top: 1px solid var(--color-line); }
+  .about-facts .fact:first-child { border-top: 0; padding-top: 0; }
+  .about-facts dt { font-family: var(--font-mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--color-faint); white-space: nowrap; }
+  .about-facts dd { font-size: .95rem; color: var(--color-ink); }
+  .about-facts dd .dim { color: var(--color-muted); }
+  /* experience rows: small brand logo + company + external arrow */
+  .about-exp__list li { border-top: 1px solid var(--color-line); }
+  .about-exp__list a { display: flex; align-items: center; gap: .65rem; padding: .58rem 0; font-size: .96rem; color: var(--color-ink); transition: color .2s ease; }
+  .about-exp__list img { width: 20px; height: 20px; border-radius: 5px; object-fit: cover; flex-shrink: 0; }
+  .about-exp__list .co { flex: 1; }
+  .about-exp__list a::after { content: "↗"; font-family: var(--font-mono); font-size: .78rem; color: var(--color-faint); opacity: .4; transition: opacity .2s ease, color .2s ease; }
+  .about-exp__list a:hover { color: var(--color-cobalt-deep); }
+  .about-exp__list a:hover::after { opacity: 1; color: var(--color-cobalt-deep); }
+
+  /* ── live shader hero ── */
+  .shader-hero { position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: 16px; overflow: hidden; border: 1px solid var(--color-line); background: var(--color-card); --mx: -500px; --my: -500px; }
+  .shader-canvas, .shader-orig { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .shader-canvas { display: block; }
+  .shader-orig { object-fit: cover; pointer-events: none; -webkit-mask-image: radial-gradient(circle 130px at var(--mx) var(--my), #000 52%, transparent 100%); mask-image: radial-gradient(circle 130px at var(--mx) var(--my), #000 52%, transparent 100%); -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; }
+  .shader-hero.no-webgl .shader-canvas { display: none; }
+  .shader-hero.no-webgl .shader-orig { -webkit-mask-image: none; mask-image: none; }
+  .shader-cap { position: absolute; inset: auto 0 0 0; display: flex; justify-content: space-between; gap: 1rem; padding: .85rem 1rem; font-family: var(--font-mono); font-size: 11px; color: color-mix(in oklab, #fff 88%, transparent); background: linear-gradient(transparent, color-mix(in oklab, #000 55%, transparent)); pointer-events: none; }
+  .shader-cap-hint { color: color-mix(in oklab, var(--color-cobalt) 50%, #fff); }
+
+  /* scroll reveal — fade-up once; --d staggers grouped items */
+  .reveal { opacity: 0; transform: translateY(14px); transition: opacity .7s cubic-bezier(.22, 1, .36, 1), transform .7s cubic-bezier(.22, 1, .36, 1); transition-delay: var(--d, 0s); }
+  .reveal.is-in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1 !important; transform: none !important; transition: none !important; } }
+
+  /* hero entrance — each .line clips an element that rises in (the "render-in") */
+  .hero.reveal { opacity: 1; transform: none; transition: none; }
+  .hero .line { display: block; overflow: hidden; padding-bottom: .12em; }
+  /* after the entrance finishes, stop clipping so magnetic buttons aren't cut off when they move */
+  .hero.lines-open .line { overflow: visible; }
+  .hero .line > * { display: block; transform: translateY(118%); opacity: 0; transition: transform 1s cubic-bezier(.16, 1, .3, 1) var(--d, 0s), opacity .8s ease var(--d, 0s); }
+  .hero.is-in .line > * { transform: none; opacity: 1; }
+  @media (prefers-reduced-motion: reduce) { .hero .line > * { transform: none !important; opacity: 1 !important; transition: none !important; } }
+
+  /* magnetic interactive elements — elastic pull toward the cursor (set via JS) */
+  [data-magnetic] { transition: transform .35s cubic-bezier(.22, 1, .36, 1), background-color .25s ease, color .25s ease, border-color .25s ease; will-change: transform; }
+
+  /* ── custom cursor: dot tracks 1:1, ring eases behind, morphs to a label on intent ── */
+  .cursor-ring { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; display: none; }
+  html.cursor-on .cursor-ring { display: grid; place-items: center; }
+  /* The white ring uses mix-blend difference so it inverts against any background. */
+  .cursor-ring { width: 34px; height: 34px; margin: -17px 0 0 -17px; border: 1.5px solid #fff; border-radius: 50%; mix-blend-mode: difference; transition: width .3s cubic-bezier(.22, 1, .36, 1), height .3s cubic-bezier(.22, 1, .36, 1), margin .3s cubic-bezier(.22, 1, .36, 1), border-radius .3s cubic-bezier(.22, 1, .36, 1), background-color .3s ease, border-color .3s ease; }
+  /* hover: the ring wraps the target (JS sets the size); the white+difference border stays
+     adaptive so it's visible on ANY background — including the same-colour accent block */
+  .cursor-ring.is-hover { background: transparent; }
+  .cursor-label { font-family: var(--font-mono); font-weight: 700; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; opacity: 0; transform: scale(.55); transition: opacity .2s ease, transform .28s cubic-bezier(.22, 1, .36, 1); }
+  /* labelled target: bordered wrap + accent label over the image */
+  .cursor-ring.is-label { mix-blend-mode: normal; background: transparent; border-color: var(--color-cobalt); }
+  .cursor-ring.is-label .cursor-label { opacity: 1; transform: none; color: var(--color-cobalt); text-shadow: 0 1px 4px rgba(0, 0, 0, .55); }
+  /* text targets (no keep) → wrap stays adaptive white+difference so it never disappears on the accent block; label hidden */
+  .cursor-ring.quiet { mix-blend-mode: difference; border-color: #fff; }
+  .cursor-ring.quiet .cursor-label { opacity: 0; }
+
+  /* ── statement-wall hero (Direction 1): one left edge · one big scale jump · type leads ── */
+  .hero-wall { width: 100%; max-width: min(1480px, 94vw); margin-inline: auto; padding-inline: clamp(1.5rem, 4vw, 3rem); }
+  .hero-spec { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: .35rem 1.5rem; font-family: var(--font-mono); font-size: 13.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-muted); }
+  .hero-spec .hl { color: var(--color-cobalt-deep); }
+  .hero-h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(2.6rem, 9vw, 7.5rem); line-height: .94; letter-spacing: -0.025em; }
+  .hero-band { width: 100%; max-width: min(1480px, 94vw); margin-inline: auto; margin-top: clamp(2.5rem, 6vw, 4.5rem); padding-inline: clamp(1.5rem, 4vw, 3rem); }
+
+  /* ── full-bleed shader hero: the live field IS the page surface (not a strip) ── */
+  .hero { position: relative; overflow: hidden; }
+  .hero-wall { position: relative; z-index: 1; }
+  .hero-shade { position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background:
+      linear-gradient(100deg, var(--color-canvas) 0%, color-mix(in oklab, var(--color-canvas) 85%, transparent) 36%, color-mix(in oklab, var(--color-canvas) 28%, transparent) 64%, transparent 90%),
+      linear-gradient(to top, var(--color-canvas) 2%, transparent 34%); }
+  /* shader mode switcher (Field / Flow / Dots) */
+  .shader-pick { position: absolute; z-index: 2; right: clamp(1.25rem, 4vw, 3rem); bottom: clamp(1.1rem, 3vw, 2rem); display: flex; align-items: center; gap: 6px; font-family: var(--font-mono); }
+  .shader-pick > span { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--color-faint); margin-right: 2px; }
+  .shader-pick button { font-family: var(--font-mono); font-size: 12.5px; line-height: 1; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--color-line); background: color-mix(in oklab, var(--color-card) 45%, transparent); color: var(--color-muted); cursor: pointer; -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); transition: color .2s ease, border-color .2s ease, background-color .2s ease; }
+  .shader-pick button:hover { color: var(--color-ink); border-color: var(--color-ink); }
+  .shader-pick button[aria-pressed="true"] { color: var(--color-on-accent); background: var(--color-cobalt); border-color: var(--color-cobalt); }
+  @media (max-width: 700px) { .shader-pick { left: calc(3vw + clamp(1.5rem, 4vw, 3rem)); right: auto; } .shader-pick > span { display: none; } }
+
+  /* the accent line of the headline carries the highlight colour statically */
+  .hero-h1 .accent-line { color: var(--color-cobalt-deep); }
+
+  /* ── kinetic type: each letter lifts + lights toward the cursor (hyperlunatic-style wave).
+     Applied to the hero headline (.kinetic .line-i) AND select section headings (.kinetic-line). ── */
+  /* words are wrapped in .kw so a line never breaks mid-word (fixes "und/erneath") */
+  .kinetic .kw, .kinetic-line .kw { white-space: nowrap; }
+  .kinetic .ch, .kinetic-line .ch { display: inline-block; transform: translateY(calc(var(--w, 0) * -0.08em)) scale(calc(1 + var(--w, 0) * 0.04)); color: color-mix(in oklab, currentColor, var(--color-cobalt) calc(var(--w, 0) * 55%)); transition: transform .4s cubic-bezier(.165, .84, .44, 1), color .35s ease; will-change: transform; }
+  @media (prefers-reduced-motion: reduce) { .kinetic .ch, .kinetic-line .ch { transform: none !important; color: inherit !important; transition: none !important; } }
+
+  /* ── scroll-velocity skew on big headings (driven by Lenis velocity → --vskew) ── */
+  .velocity-type { transform: skewY(var(--vskew, 0deg)); transition: transform .3s ease-out; transform-origin: left center; will-change: transform; }
+  @media (prefers-reduced-motion: reduce) { .velocity-type { transform: none !important; } }
+
+  /* ── contact CTA: the one full accent block per page (carries the identity colour) ── */
+  .cta-block { background: var(--color-cobalt); color: var(--color-on-accent); border-radius: 22px; padding: clamp(2rem, 4.5vw, 3.2rem); }
+  .cta-link { color: var(--color-on-accent); opacity: .82; transition: opacity .2s ease; }
+  .cta-link:hover { opacity: 1; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1.5px; }
+  .cta-grid { display: grid; gap: 2rem; }
+  @media (min-width: 768px) { .cta-grid { grid-template-columns: 1.5fr 1fr; gap: 3rem; align-items: center; } }
+  .cta-links { display: flex; flex-direction: column; gap: .7rem; font-family: var(--font-mono); font-size: .95rem; }
+  .copy-email { transition: color .2s ease; }
+  .copy-email.is-copied { color: var(--color-cobalt-deep); }
+  @media (min-width: 768px) { .cta-links { align-items: flex-end; text-align: right; } }
+}
+
+/* LIGHT MODE — warm "Paper" twin, toggled via the nav sun/moon → [data-mode="light"]. */
+html[data-mode="light"] {
+  /* warm "Paper" light mode (Brian's pick) — toned-down cream ground, warm ink, deep-cobalt accent */
+  --color-canvas: #ece7dc; --color-card: #f5f0e7; --color-ink: #1a1714; --color-muted: #6f675c;
+  --color-faint: #a89f90; --color-line: #ddd6c8;
+  --color-cobalt: #4c6fa5;       /* the "Paper" blue — a muted steel-blue on cream (Brian's pick) */
+  --color-cobalt-deep: #3a577f;  /* deeper — accent text on paper */
+  --color-on-accent: #f5f0e7;
+}
+
+
+/* dev-only design switcher (palette / type / cursor / thumb) — remove once locked */

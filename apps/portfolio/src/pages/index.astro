@@ -1,0 +1,298 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ShaderField from "../components/ShaderField.astro";
+import ProjectCover from "../components/ProjectCover.astro";
+import ProfileCard from "../components/ProfileCard.astro";
+import { Image } from "astro:assets";
+import { projectsOnly as projects, filters, catLabels } from "../data/projects";
+
+const capabilities = [
+  "Graphics & shaders",
+  "Engine & systems programming",
+  "Game development",
+  "Product & UX design",
+  "Full-stack web",
+  "Data systems",
+];
+---
+
+<BaseLayout>
+  <!-- ───────────── Nav ───────────── -->
+  <header
+    class="sticky top-0 z-40 border-b border-line"
+    style="background: color-mix(in oklab, var(--color-canvas) 82%, transparent); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);"
+  >
+    <div class="wrap flex h-16 items-center justify-between">
+      <a href="#top" class="font-display text-lg font-bold tracking-tight">
+        Brian&nbsp;Lee<span class="text-cobalt">.</span>
+      </a>
+      <div class="flex items-center gap-4 sm:gap-6 text-sm">
+        <a href="#work" class="nav-link hidden sm:inline">Work</a>
+        <a href="#about" class="nav-link hidden sm:inline">About</a>
+        <a href="#contact" class="nav-link hidden sm:inline">Contact</a>
+        <a href="/Brian_Lee_Resume.pdf" class="btn btn-ghost !px-4 !py-2 text-xs hidden sm:inline-flex" data-magnetic="0.35">Résumé</a>
+        <button id="mode-toggle" class="mode-toggle" type="button" aria-label="Toggle light and dark mode" data-cursor="Theme">
+          <svg class="ico ico-sun" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5 5l1.7 1.7M17.3 17.3 19 19M19 5l-1.7 1.7M6.7 17.3 5 19" stroke-linecap="round"/></svg>
+          <svg class="ico ico-moon" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" stroke-linejoin="round" stroke-linecap="round"/></svg>
+        </button>
+        <button id="nav-burger" class="nav-burger sm:hidden" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu" data-cursor="Menu">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav id="nav-menu" class="nav-menu sm:hidden" hidden aria-label="Mobile navigation">
+      <a href="#work" class="nav-menu__link">Work</a>
+      <a href="#about" class="nav-menu__link">About</a>
+      <a href="#contact" class="nav-menu__link">Contact</a>
+      <a href="/Brian_Lee_Resume.pdf" class="nav-menu__link">Résumé ↓</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- ───────────── Hero (Statement Wall · full-bleed shader) ───────────── -->
+    <section class="hero reveal relative flex min-h-[82vh] md:min-h-[88vh] items-start md:items-center overflow-hidden pb-16 md:pb-20 pt-12 md:pt-28">
+      <ShaderField variant="bleed" />
+      <div class="hero-shade"></div>
+      <div class="hero-wall w-full">
+        <div class="line"><div class="hero-spec" style="--d:.05s">
+          <span>Brian Wonjun Lee</span>
+          <span><span class="hl">Designer &amp; Engineer</span> · Philadelphia, PA</span>
+        </div></div>
+        <h1 class="kinetic hero-h1 mt-7 md:mt-9">
+          <span class="line"><span class="line-i" style="--d:.14s">I build immersive</span></span>
+          <span class="line"><span class="line-i" style="--d:.22s">experiences, and the</span></span>
+          <span class="line"><span class="line-i accent-line" style="--d:.30s">engines under them.</span></span>
+        </h1>
+        <div class="line"><p class="mt-7 max-w-[52ch] text-lg leading-relaxed text-muted" style="--d:.46s">
+          I'm a designer and engineer drawn to the space where the two
+          meet, where graphics, interactive 3D, and product
+          design come together into things that feel as considered as
+          they're built. Currently studying CS&nbsp;+&nbsp;Design at the
+          University of Pennsylvania.
+        </p></div>
+        <div class="line"><div class="mt-8 flex flex-wrap items-center gap-x-3 gap-y-4" style="--d:.56s">
+          <a href="#work" class="btn btn-primary" data-magnetic="0.4">See work</a>
+          <a href="#contact" class="btn btn-ghost" data-magnetic="0.4">Get in touch</a>
+        </div></div>
+      </div>
+      <div class="shader-pick">
+        <span>shader</span>
+        <button type="button" data-shader-mode="0" aria-pressed="true">Field</button>
+        <button type="button" data-shader-mode="1" aria-pressed="false">Flow</button>
+        <button type="button" data-shader-mode="2" aria-pressed="false">Dots</button>
+      </div>
+    </section>
+
+    <!-- ───────────── Work ───────────── -->
+    <section id="work" class="wrap border-t border-line py-20 md:py-28">
+      <div class="reveal">
+        <p class="kicker"><span class="num">(01)</span>Selected Work</p>
+        <h2 class="velocity-type kinetic-line mt-5 text-[clamp(1.9rem,4vw,3rem)] font-bold">Things I've built.</h2>
+      </div>
+
+      <div class="reveal mt-9 flex flex-wrap gap-2.5" id="filters">
+        {
+          filters.map((f) => (
+            <button
+              type="button"
+              class="chip"
+              data-filter={f.id}
+              aria-pressed={f.id === "all" ? "true" : "false"}
+            >
+              {f.label}
+            </button>
+          ))
+        }
+      </div>
+
+      <div class="mt-12 grid gap-x-8 gap-y-14 sm:grid-cols-2" id="grid">
+        {
+          projects.map((p, i) => (
+            <article class="reveal" data-categories={p.cats.join(" ")} style={`--d:${(i % 2) * 0.08}s`}>
+              <a href={`/work/${p.slug}`} class="proj">
+                <div class="proj-media" data-cursor="View" data-cursor-keep>
+                  <div class="proj-cats">{p.cats.map((c) => <span class="proj-cat">{catLabels[c]}</span>)}</div>
+                  <ProjectCover motif={p.motif} seed={i} />
+                  {p.img
+                    ? <Image src={p.img} alt={p.alt} width={1000} />
+                    : <div class="proj-cover-live">{p.title}</div>}
+                </div>
+                <div class="proj-head">
+                  <h3 class="proj-title">{p.title}</h3>
+                  <span class="proj-no">{p.date}</span>
+                </div>
+                <p class="proj-blurb">{p.blurb}</p>
+                <ul class="tag-row mt-4">
+                  {p.tech.map((t) => (
+                    <li class="tag">{t}</li>
+                  ))}
+                </ul>
+              </a>
+            </article>
+          ))
+        }
+      </div>
+
+      <div class="reveal mt-14 flex flex-wrap items-center justify-center gap-3">
+        <button id="load-more" type="button" class="chip load-more" hidden aria-controls="grid" data-cursor="More" data-magnetic="0.2">Show more</button>
+        <button id="load-less" type="button" class="chip load-more" hidden aria-controls="grid" data-cursor="Less" data-magnetic="0.2">Show less</button>
+        <p id="grid-status" class="sr-only" aria-live="polite"></p>
+      </div>
+
+    </section>
+
+    <!-- ───────────── About ───────────── -->
+    <section id="about" class="wrap border-t border-line py-20 md:py-28">
+      <p class="kicker reveal"><span class="num">(02)</span>About</p>
+      <div class="about-grid reveal mt-7">
+        <div>
+          <p class="about-statement velocity-type kinetic-line">
+            I work across design and engineering — systems, graphics, and the
+            product that ties them together.
+          </p>
+          <p class="about-body">
+            I'm a designer and engineer studying CS&nbsp;+&nbsp;Design at Penn,
+            with a deliberately broad base. I've maintained 50+ live Unity mobile
+            games and fixed 100+ QA bugs at a game studio, wrangled million-row
+            datasets in SQL, written a voxel engine from scratch in C++/OpenGL,
+            shaded a cinematic short in Unreal, and led a 15-person team rebuilding
+            a product end-to-end. I move easily between systems engineering,
+            graphics, and the design and UX work that makes them usable, and I
+            care most about doing each with real depth.
+          </p>
+          <ul class="tag-row mt-8">
+            {capabilities.map((c) => <li class="tag">{c}</li>)}
+          </ul>
+        </div>
+        <div id="experience" class="about-card reveal scroll-mt-24"><ProfileCard /></div>
+      </div>
+    </section>
+
+    <!-- ───────────── Contact / footer ───────────── -->
+    <footer id="contact" class="wrap border-t border-line py-20 md:py-28">
+      <p class="kicker reveal"><span class="num">(03)</span>Contact</p>
+      <div class="cta-block reveal mt-6">
+        <div class="cta-grid">
+          <div>
+            <h2 class="velocity-type text-[clamp(2rem,5vw,3.4rem)] font-bold leading-[1.05]">
+              Let's work together.
+            </h2>
+            <p class="mt-4 max-w-[42ch] text-lg leading-relaxed" style="opacity:.85">
+              I'm open to new opportunities across design and engineering, and
+              always happy to talk graphics, games, or product.
+            </p>
+          </div>
+          <div class="cta-links">
+            <a href="mailto:leebwj@sas.upenn.edu" class="cta-link copy-email" data-email="leebwj@sas.upenn.edu">leebwj@sas.upenn.edu</a>
+            <a href="https://www.linkedin.com/in/brian-lee-0b706b225/" target="_blank" rel="noopener" data-cursor="LinkedIn" class="cta-link">LinkedIn ↗</a>
+            <a href="https://github.com/leebwj" target="_blank" rel="noopener" data-cursor="GitHub" class="cta-link">GitHub ↗</a>
+            <a href="https://brianleeportfolio.cargo.site/" target="_blank" rel="noopener" data-cursor="Art" class="cta-link">Art ↗</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- shader mode switch: dispatch to ShaderField (it crossfades) -->
+  <script is:inline>
+    (() => {
+      const pick = document.querySelector(".shader-pick");
+      if (!pick) return;
+      const btns = pick.querySelectorAll("[data-shader-mode]");
+      btns.forEach((b) =>
+        b.addEventListener("click", () => {
+          const m = parseInt(b.getAttribute("data-shader-mode")) || 0;
+          btns.forEach((x) => x.setAttribute("aria-pressed", x === b ? "true" : "false"));
+          dispatchEvent(new CustomEvent("shadermode", { detail: m }));
+        })
+      );
+    })();
+  </script>
+
+  <!-- work filter: pure class toggle, no framework -->
+  <script is:inline>
+    (() => {
+      const cards = [...document.querySelectorAll("#grid [data-categories]")];
+      const chips = [...document.querySelectorAll("#filters [data-filter]")];
+      const moreBtn = document.querySelector("#load-more");
+      const lessBtn = document.querySelector("#load-less");
+      const status = document.querySelector("#grid-status");
+      const STEP = 6;
+      let activeFilter = "all";
+      let limit = STEP;
+      let first = true;
+
+      const matches = (card) => {
+        const cats = (card.getAttribute("data-categories") || "").split(" ");
+        return activeFilter === "all" || cats.includes(activeFilter);
+      };
+
+      const apply = () => {
+        let shown = 0,
+          total = 0;
+        cards.forEach((card) => {
+          const isMatch = matches(card);
+          if (isMatch) total++;
+          const visible = isMatch && shown < limit;
+          card.toggleAttribute("hidden", !visible);
+          if (visible) {
+            shown++;
+            if (!first) card.classList.add("is-in"); // interaction → show immediately
+          }
+        });
+        if (moreBtn) {
+          const rest = total - shown;
+          moreBtn.toggleAttribute("hidden", rest <= 0);
+          moreBtn.textContent = `Show more (${rest})`;
+        }
+        if (lessBtn) lessBtn.toggleAttribute("hidden", shown <= STEP);
+        if (status) status.textContent = `Showing ${shown} of ${total} projects`;
+      };
+
+      chips.forEach((chip) => {
+        chip.addEventListener("click", () => {
+          activeFilter = chip.getAttribute("data-filter");
+          chips.forEach((c) => c.setAttribute("aria-pressed", String(c === chip)));
+          limit = STEP; // reset the cap on every filter change
+          apply();
+        });
+      });
+
+      if (moreBtn) {
+        moreBtn.addEventListener("click", () => {
+          const firstNew = cards.find((c) => c.hasAttribute("hidden") && matches(c));
+          limit += STEP;
+          apply();
+          const link = firstNew && firstNew.querySelector("a");
+          if (link) link.focus({ preventScroll: true }); // land keyboard users on new content
+        });
+      }
+
+      if (lessBtn) {
+        lessBtn.addEventListener("click", () => {
+          limit = STEP;
+          apply();
+          document.getElementById("work")?.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      }
+
+      apply();
+      first = false;
+    })();
+  </script>
+  <!-- mobile nav menu -->
+  <script is:inline>
+    (() => {
+      const burger = document.getElementById("nav-burger");
+      const menu = document.getElementById("nav-menu");
+      if (!burger || !menu) return;
+      const setOpen = (open) => {
+        menu.toggleAttribute("hidden", !open);
+        burger.setAttribute("aria-expanded", String(open));
+        burger.classList.toggle("is-open", open);
+      };
+      burger.addEventListener("click", () => setOpen(menu.hasAttribute("hidden")));
+      menu.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setOpen(false)));
+    })();
+  </script>
+</BaseLayout>

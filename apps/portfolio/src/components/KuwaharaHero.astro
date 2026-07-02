@@ -1,0 +1,136 @@
+---
+import { getImage } from "astro:assets";
+import passengerImg from "../assets/work/passenger.png";
+
+// optimized source for the WebGL texture (kept modest for fast decode)
+const hero = await getImage({ src: passengerImg, width: 1280, format: "webp" });
+---
+
+<figure class="shader-hero reveal" data-shader>
+  <canvas class="shader-canvas" data-src={hero.src} aria-hidden="true"></canvas>
+  <img
+    class="shader-orig"
+    src={hero.src}
+    alt="Passenger — a canyon rendered in Unreal Engine 5"
+    draggable="false"
+  />
+  <figcaption class="shader-cap">
+    <span>Passenger — real-time anisotropic Kuwahara shader</span>
+    <span class="shader-cap-hint">move cursor to compare ↹</span>
+  </figcaption>
+</figure>
+
+<script>
+  const fig = document.querySelector<HTMLElement>("[data-shader]");
+  if (fig) {
+    const canvas = fig.querySelector<HTMLCanvasElement>(".shader-canvas")!;
+    const src = canvas.dataset.src!;
+
+    // lens follows the pointer (CSS mask reveals the untouched source)
+    fig.addEventListener("pointermove", (e) => {
+      const r = fig.getBoundingClientRect();
+      fig.style.setProperty("--mx", `${e.clientX - r.left}px`);
+      fig.style.setProperty("--my", `${e.clientY - r.top}px`);
+    });
+    const hide = () => {
+      fig.style.setProperty("--mx", "-500px");
+      fig.style.setProperty("--my", "-500px");
+    };
+    fig.addEventListener("pointerleave", hide);
+    hide();
+
+    const img = new Image();
+    img.crossOrigin = "anonymous";
+    img.onload = () => {
+      try {
+        renderKuwahara(canvas, img);
+      } catch {
+        fig.classList.add("no-webgl");
+      }
+    };
+    img.onerror = () => fig.classList.add("no-webgl");
+    img.src = src;
+  }
+
+  function compile(gl: WebGLRenderingContext, type: number, src: string) {
+    const s = gl.createShader(type)!;
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    if (!gl.getShaderParameter(s, gl.COMPILE_STATUS))
+      throw new Error(gl.getShaderInfoLog(s) || "shader");
+    return s;
+  }
+
+  function renderKuwahara(canvas: HTMLCanvasElement, img: HTMLImageElement) {
+    const maxW = 1280;
+    const scale = Math.min(1, maxW / img.naturalWidth);
+    const W = Math.round(img.naturalWidth * scale);
+    const H = Math.round(img.naturalHeight * scale);
+    canvas.width = W;
+    canvas.height = H;
+
+    const gl = (canvas.getContext("webgl") ||
+      canvas.getContext("experimental-webgl")) as WebGLRenderingContext | null;
+    if (!gl) throw new Error("no webgl");
+
+    const vs = `attribute vec2 a;varying vec2 uv;void main(){uv=a*0.5+0.5;gl_Position=vec4(a,0.0,1.0);}`;
+    const fs = `precision highp float;
+      uniform sampler2D t; uniform vec2 px; varying vec2 uv;
+      const int R = 4; const float N = 25.0;
+      void main(){
+        vec3 m0=vec3(0.),m1=vec3(0.),m2=vec3(0.),m3=vec3(0.);
+        vec3 s0=vec3(0.),s1=vec3(0.),s2=vec3(0.),s3=vec3(0.);
+        for(int j=-R;j<=R;j++){
+          for(int i=-R;i<=R;i++){
+            vec3 c = texture2D(t, uv + vec2(float(i),float(j))*px).rgb;
+            vec3 cc = c*c;
+            if(i<=0 && j<=0){ m0+=c; s0+=cc; }
+            if(i>=0 && j<=0){ m1+=c; s1+=cc; }
+            if(i<=0 && j>=0){ m2+=c; s2+=cc; }
+            if(i>=0 && j>=0){ m3+=c; s3+=cc; }
+          }
+        }
+        m0/=N; m1/=N; m2/=N; m3/=N;
+        vec3 v0=s0/N-m0*m0, v1=s1/N-m1*m1, v2=s2/N-m2*m2, v3=s3/N-m3*m3;
+        float a0=v0.r+v0.g+v0.b, a1=v1.r+v1.g+v1.b, a2=v2.r+v2.g+v2.b, a3=v3.r+v3.g+v3.b;
+        vec3 res=m0; float mv=a0;
+        if(a1<mv){ mv=a1; res=m1; }
+        if(a2<mv){ mv=a2; res=m2; }
+        if(a3<mv){ res=m3; }
+        gl_FragColor = vec4(res, 1.0);
+      }`;
+
+    const prog = gl.createProgram()!;
+    gl.attachShader(prog, compile(gl, gl.VERTEX_SHADER, vs));
+    gl.attachShader(prog, compile(gl, gl.FRAGMENT_SHADER, fs));
+    gl.linkProgram(prog);
+    if (!gl.getProgramParameter(prog, gl.LINK_STATUS))
+      throw new Error(gl.getProgramInfoLog(prog) || "link");
+    gl.useProgram(prog);
+
+    const buf = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+    gl.bufferData(
+      gl.ARRAY_BUFFER,
+      new Float32Array([-1, -1, 1, -1, -1, 1, -1, 1, 1, -1, 1, 1]),
+      gl.STATIC_DRAW
+    );
+    const al = gl.getAttribLocation(prog, "a");
+    gl.enableVertexAttribArray(al);
+    gl.vertexAttribPointer(al, 2, gl.FLOAT, false, 0, 0);
+
+    const tex = gl.createTexture();
+    gl.bindTexture(gl.TEXTURE_2D, tex);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+    gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, img);
+
+    gl.uniform1i(gl.getUniformLocation(prog, "t"), 0);
+    gl.uniform2f(gl.getUniformLocation(prog, "px"), 1 / W, 1 / H);
+    gl.viewport(0, 0, W, H);
+    gl.drawArrays(gl.TRIANGLES, 0, 6);
+  }
+</script>

@@ -1,0 +1,61 @@
+---
+// Designed project cover — a bespoke "blueprint motif" graphic per project (no screenshot).
+// Cohesive set (shared frame + grid + accent), distinct per project (motif + glow seed).
+const { motif = "grid", seed = 0 } = Astro.props;
+const idx = String(seed + 1).padStart(2, "0");
+const glow = [[30, 30], [70, 32], [50, 24], [32, 68], [70, 66], [50, 80]][seed % 6];
+---
+
+<div class="proj-cover">
+  <span class="pc-glow" style={`--gx:${glow[0]}%;--gy:${glow[1]}%`}></span>
+  <span class="pc-idx" aria-hidden="true">{idx}</span>
+  <span class="pc-motif">
+    {motif === "waves" && (
+      <svg viewBox="0 0 120 90" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+        <path d="M6 32 C 26 14 46 50 66 32 S 100 14 114 32" />
+        <path d="M6 48 C 26 30 46 66 66 48 S 100 30 114 48" opacity="0.62" />
+        <path d="M6 64 C 26 46 46 82 66 64 S 100 46 114 64" opacity="0.36" />
+      </svg>
+    )}
+    {motif === "voxel" && (
+      <svg viewBox="0 0 120 90" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round">
+        <path d="M60 18 L86 33 L86 63 L60 78 L34 63 L34 33 Z" />
+        <path d="M60 18 L60 48 M60 48 L86 33 M60 48 L34 33" />
+        <path d="M34 33 L60 48 L86 33" opacity="0.5" />
+      </svg>
+    )}
+    {motif === "orbit" && (
+      <svg viewBox="0 0 120 90" fill="none" stroke="currentColor" stroke-width="2.4">
+        <circle cx="60" cy="45" r="15" />
+        <ellipse cx="60" cy="45" rx="46" ry="16" opacity="0.6" />
+        <ellipse cx="60" cy="45" rx="46" ry="16" transform="rotate(58 60 45)" opacity="0.4" />
+        <circle cx="106" cy="45" r="3.4" fill="currentColor" stroke="none" />
+      </svg>
+    )}
+    {motif === "grid" && (
+      <svg viewBox="0 0 120 90" fill="none" stroke="currentColor" stroke-width="2.4">
+        <rect x="20" y="20" width="42" height="26" rx="3" />
+        <rect x="68" y="20" width="34" height="50" rx="3" opacity="0.7" />
+        <rect x="20" y="52" width="42" height="18" rx="3" opacity="0.5" />
+      </svg>
+    )}
+    {motif === "path" && (
+      <svg viewBox="0 0 120 90" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+        <path d="M22 66 L50 30 L74 56 L100 26" opacity="0.55" />
+        <circle cx="22" cy="66" r="5.5" fill="var(--color-card)" />
+        <circle cx="50" cy="30" r="5.5" fill="var(--color-card)" />
+        <circle cx="74" cy="56" r="5.5" fill="var(--color-card)" />
+        <circle cx="100" cy="26" r="5.5" fill="var(--color-card)" />
+      </svg>
+    )}
+    {motif === "road" && (
+      <svg viewBox="0 0 120 90" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+        <line x1="18" y1="26" x2="102" y2="26" opacity="0.4" />
+        <path d="M28 84 L55 26" />
+        <path d="M92 84 L65 26" />
+        <path d="M50 84 L58 26" opacity="0.5" />
+        <path d="M70 84 L62 26" opacity="0.5" />
+      </svg>
+    )}
+  </span>
+</div>
