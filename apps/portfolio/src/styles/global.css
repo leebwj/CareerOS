@@ -300,8 +300,22 @@ html[data-mode="light"] {
      is vertically centered (slightly high of true center) over the field —
      text stays left-aligned, that's the site's voice. */
   .hero { min-height: calc(100svh - 4rem - 1px); align-items: center; padding-top: 0; padding-bottom: 4.5rem; }
-  .hero-h1 { font-size: clamp(2.05rem, 8.4vw, 2.6rem); line-height: 1.02; }
+  /* the header already says "Brian Lee." — drop the name from the kicker so
+     it reads as ONE clean line (role · city) instead of two wrapped ones */
+  .hero-spec > span:first-child { display: none; }
   .hero-spec { font-size: 11px; letter-spacing: .08em; }
-  .hero-wall p { font-size: 1rem; line-height: 1.62; max-width: 40ch; margin-top: 1.5rem; }
+  .hero-h1 { font-size: clamp(2.05rem, 8.4vw, 2.6rem); line-height: 1.02; margin-top: 1.1rem; }
+  .hero-wall p { font-size: 1rem; line-height: 1.62; max-width: 40ch; margin-top: 1.4rem; }
+  /* CTAs: two equal thumb-friendly pills instead of ragged inline widths */
+  .hero-wall .btn { flex: 1 1 0; justify-content: center; }
   .shader-pick { display: none; } /* mode switcher is a desktop toy — hide on phones */
+}
+/* small phones (SE-class): a notch smaller so the headline keeps its 3-line flow */
+@media (max-width: 379px) {
+  .hero-h1 { font-size: clamp(1.85rem, 8vw, 2.05rem); }
+}
+/* tablets (portrait iPad band): trim the display size just enough that
+   "experiences, and the" holds one line; desktop ≥1024 untouched */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero-h1 { font-size: clamp(3rem, 8vw, 4.6rem); }
 }

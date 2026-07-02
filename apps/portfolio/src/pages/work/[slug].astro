@@ -211,7 +211,9 @@ const linkList = [
   </main>
 
   <div class="cs-lightbox" aria-hidden="true" data-cursor="Close">
-    <button class="cs-lightbox__close" type="button" aria-label="Close (Esc)">✕</button>
+    <button class="cs-lightbox__close" type="button" aria-label="Close (Esc)">
+      <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5.5 5.5l13 13M18.5 5.5l-13 13"/></svg>
+    </button>
     <img alt="" />
   </div>
 
@@ -314,7 +316,7 @@ const linkList = [
 
   .cs-block { margin-top: clamp(2.5rem, 5vw, 3.5rem); }
   .cs-block:first-child { margin-top: 0; }
-  .cs-block__label { font-family: var(--font-mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--color-cobalt-deep); margin-bottom: 1rem; }
+  .cs-block__label { font-family: var(--font-mono); font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--color-cobalt-deep); margin-bottom: 1rem; }
   .cs-block__heading { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.35rem, 3vw, 1.9rem); letter-spacing: -0.03em; line-height: 1.15; margin-bottom: 1rem; text-wrap: pretty; }
   .cs-prose p { color: var(--color-muted); line-height: 1.7; margin-top: 1rem; max-width: 74ch; }
   .cs-prose p:first-child { margin-top: 0; }
@@ -374,6 +376,7 @@ const linkList = [
   .cs-lightbox.open { display: grid; animation: cs-lb-in .22s ease; }
   @keyframes cs-lb-in { from { opacity: 0; } to { opacity: 1; } }
   .cs-lightbox img { max-width: 97vw; max-height: 94vh; width: auto; height: auto; border-radius: 10px; box-shadow: 0 40px 90px -24px rgba(0, 0, 0, .85); }
-  .cs-lightbox__close { position: fixed; top: 1rem; right: 1.2rem; width: 42px; height: 42px; display: grid; place-items: center; border-radius: 50%; border: 1px solid color-mix(in oklab, #fff 22%, transparent); background: color-mix(in oklab, #000 45%, transparent); color: #fff; font-size: 1.05rem; cursor: pointer; transition: background-color .2s ease; }
+  .cs-lightbox__close { position: fixed; top: 1rem; right: 1.2rem; width: 42px; height: 42px; display: grid; place-items: center; padding: 0; line-height: 0; border-radius: 50%; border: 1px solid color-mix(in oklab, #fff 22%, transparent); background: color-mix(in oklab, #000 45%, transparent); color: #fff; cursor: pointer; transition: background-color .2s ease; }
+  .cs-lightbox__close svg { display: block; }
   .cs-lightbox__close:hover { background: color-mix(in oklab, var(--color-cobalt) 45%, #000); }
 </style>
