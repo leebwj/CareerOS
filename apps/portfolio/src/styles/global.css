@@ -330,3 +330,11 @@ html[data-mode="light"] {
 @media (pointer: coarse) and (min-width: 768px) {
   .hero { padding-top: 5rem; padding-bottom: 5rem; }
 }
+
+/* touch devices: mobile Safari fires :focus-visible on TAPS (desktop only
+   does keyboard), which flashed the squared cobalt focus ring around tapped
+   thumbnails/images. Touch users don't keyboard-navigate — suppress there;
+   desktop keyboard focus rings are untouched. */
+@media (pointer: coarse) {
+  :focus-visible { outline: none; }
+}
