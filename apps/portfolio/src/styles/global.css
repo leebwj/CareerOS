@@ -245,7 +245,6 @@ html.lenis, html.lenis body { height: auto; }
   .shader-pick button { font-family: var(--font-mono); font-size: 12.5px; line-height: 1; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--color-line); background: color-mix(in oklab, var(--color-card) 45%, transparent); color: var(--color-muted); cursor: pointer; -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); transition: color .2s ease, border-color .2s ease, background-color .2s ease; }
   .shader-pick button:hover { color: var(--color-ink); border-color: var(--color-ink); }
   .shader-pick button[aria-pressed="true"] { color: var(--color-on-accent); background: var(--color-cobalt); border-color: var(--color-cobalt); }
-  @media (max-width: 700px) { .shader-pick { left: calc(3vw + clamp(1.5rem, 4vw, 3rem)); right: auto; } .shader-pick > span { display: none; } }
 
   /* the accent line of the headline carries the highlight colour statically */
   .hero-h1 .accent-line { color: var(--color-cobalt-deep); }
@@ -297,10 +296,12 @@ html[data-mode="light"] {
    readable lede, pills tucked at the bottom. ── */
 @media (max-width: 767px) {
   /* one clean first screen: full small-viewport height minus the sticky
-     header (h-16 + 1px border), so the shader pills sit right at the fold */
-  .hero { min-height: calc(100svh - 4rem - 1px); }
-  .hero-h1 { font-size: clamp(2.05rem, 8.4vw, 2.6rem); line-height: 1.0; }
+     header (h-16 + 1px border). With the shader pills hidden, the statement
+     is vertically centered (slightly high of true center) over the field —
+     text stays left-aligned, that's the site's voice. */
+  .hero { min-height: calc(100svh - 4rem - 1px); align-items: center; padding-top: 0; padding-bottom: 4.5rem; }
+  .hero-h1 { font-size: clamp(2.05rem, 8.4vw, 2.6rem); line-height: 1.02; }
   .hero-spec { font-size: 11px; letter-spacing: .08em; }
-  .hero-wall p { font-size: .95rem; line-height: 1.6; max-width: 42ch; margin-top: 1.4rem; }
+  .hero-wall p { font-size: 1rem; line-height: 1.62; max-width: 40ch; margin-top: 1.5rem; }
   .shader-pick { display: none; } /* mode switcher is a desktop toy — hide on phones */
 }

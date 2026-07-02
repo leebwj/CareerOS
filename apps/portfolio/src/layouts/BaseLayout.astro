@@ -91,16 +91,20 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
         };
         requestAnimationFrame(raf);
 
-        // scroll velocity → clamped skew var, decays back to 0 when scrolling stops
-        const root = document.documentElement;
-        let decay: ReturnType<typeof setTimeout>;
-        lenis.on("scroll", (e: any) => {
-          const v = e && typeof e.velocity === "number" ? e.velocity : 0;
-          const s = Math.max(-6, Math.min(6, v * 0.4));
-          root.style.setProperty("--vskew", s.toFixed(2) + "deg");
-          clearTimeout(decay);
-          decay = setTimeout(() => root.style.setProperty("--vskew", "0deg"), 90);
-        });
+        // scroll velocity → clamped skew var, decays back to 0 when scrolling
+        // stops. Desktop-only: touch scrolling emits spiky velocities that made
+        // the statement lines tick/judder on phones — mobile scrolls it static.
+        if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+          const root = document.documentElement;
+          let decay: ReturnType<typeof setTimeout>;
+          lenis.on("scroll", (e: any) => {
+            const v = e && typeof e.velocity === "number" ? e.velocity : 0;
+            const s = Math.max(-6, Math.min(6, v * 0.4));
+            root.style.setProperty("--vskew", s.toFixed(2) + "deg");
+            clearTimeout(decay);
+            decay = setTimeout(() => root.style.setProperty("--vskew", "0deg"), 90);
+          });
+        }
       }
     </script>
 
