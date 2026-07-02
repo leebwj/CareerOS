@@ -159,10 +159,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
             // gate keeps huge vertical blocks (full cards/sections) label-only.
             // zoom maxH 2400 covers even full-page screenshots (e.g. 1100x2034)
             const maxW = zoom ? 1800 : 900, maxH = zoom ? 2400 : 460;
-            // release the wrap once the target slides under the sticky header,
-            // so the ring never draws on top of the nav (header targets exempt)
-            const hdr = hoverEl.closest("header") ? -1 : (document.querySelector("header")?.getBoundingClientRect().bottom ?? 0);
-            if (r.width && r.width < maxW && r.height < maxH && r.top >= hdr) {
+            if (r.width && r.width < maxW && r.height < maxH) {
               tx = r.left + r.width / 2; ty = r.top + r.height / 2; ease = 0.24;
               const pw = r.width + 18, ph = r.height + 18;   // a little roomier
               ring.style.width = pw + "px"; ring.style.height = ph + "px";
@@ -181,6 +178,9 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
           ring.classList.toggle("quiet", ring.classList.contains("is-label") && !hoverKeep);
         };
         addEventListener("pointerover", (e) => {
+          // ring sits UNDER the sticky header (z 39 vs 40) so a wrapped box slides
+          // behind the nav; lift it above only while actually over header controls
+          ring.classList.toggle("over-nav", !!(e.target.closest && e.target.closest("header")));
           const t = e.target.closest("[data-cursor]");
           if (t) {
             label.textContent = t.getAttribute("data-cursor");

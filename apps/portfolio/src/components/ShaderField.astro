@@ -236,15 +236,22 @@ const { variant, mode = 0 } = Astro.props;
 
         // target + smoothed mouse (full-bleed listens on window so the field reacts page-wide)
         let tmx = 0.5, tmy = 0.55, mx = 0.5, my = 0.55, idle = true;
-        if (fine) {
-          (bleed ? window : wrap).addEventListener("pointermove", (e) => {
-            const r = wrap.getBoundingClientRect();
-            tmx = (e.clientX - r.left) / Math.max(r.width, 1);
-            tmy = 1 - (e.clientY - r.top) / Math.max(r.height, 1);
-            idle = false;
-          }, { passive: true });
-          if (!bleed) wrap.addEventListener("pointerleave", () => { idle = true; });
+        const setTarget = (e: PointerEvent) => {
+          const r = wrap.getBoundingClientRect();
+          tmx = (e.clientX - r.left) / Math.max(r.width, 1);
+          tmy = 1 - (e.clientY - r.top) / Math.max(r.height, 1);
+          idle = false;
+        };
+        // fine pointers: field follows the cursor. Touch: it follows the finger
+        // while touching (pointermove fires during the drag), then resumes the
+        // idle drift on lift — all passive, so scrolling is never blocked.
+        (bleed ? window : wrap).addEventListener("pointermove", setTarget, { passive: true });
+        if (!fine) {
+          (bleed ? window : wrap).addEventListener("pointerdown", setTarget, { passive: true });
+          addEventListener("pointerup", () => { idle = true; }, { passive: true });
+          addEventListener("pointercancel", () => { idle = true; }, { passive: true });
         }
+        if (!bleed) wrap.addEventListener("pointerleave", () => { if (!fine) return; idle = true; });
 
         // mode + crossfade state
         const initMode = parseInt(wrap.getAttribute("data-mode") || "0", 10) || 0;

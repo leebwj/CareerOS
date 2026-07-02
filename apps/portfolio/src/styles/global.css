@@ -26,7 +26,7 @@
 }
 
 @layer base {
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; -webkit-tap-highlight-color: transparent; } /* kill the squared grey tap-flash on mobile */
   body {
     background-color: var(--color-canvas);
     color: var(--color-ink);
@@ -205,7 +205,11 @@ html.lenis, html.lenis body { height: auto; }
   [data-magnetic] { transition: transform .35s cubic-bezier(.22, 1, .36, 1), background-color .25s ease, color .25s ease, border-color .25s ease; will-change: transform; }
 
   /* ── custom cursor: dot tracks 1:1, ring eases behind, morphs to a label on intent ── */
-  .cursor-ring { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; display: none; }
+  /* z 39 = one below the sticky header (40): a wrapped ring slides smoothly
+     BEHIND the nav instead of drawing over it; .over-nav lifts it while
+     hovering header controls so their snap stays visible */
+  .cursor-ring { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 39; display: none; }
+  .cursor-ring.over-nav { z-index: 41; }
   html.cursor-on .cursor-ring { display: grid; place-items: center; }
   /* The white ring uses mix-blend difference so it inverts against any background. */
   .cursor-ring { width: 34px; height: 34px; margin: -17px 0 0 -17px; border: 1.5px solid #fff; border-radius: 50%; mix-blend-mode: difference; transition: width .3s cubic-bezier(.22, 1, .36, 1), height .3s cubic-bezier(.22, 1, .36, 1), margin .3s cubic-bezier(.22, 1, .36, 1), border-radius .3s cubic-bezier(.22, 1, .36, 1), background-color .3s ease, border-color .3s ease; }
@@ -286,4 +290,17 @@ html[data-mode="light"] {
    work grid goes three-up on large desktops (pairs with the root-font scale-up) */
 @media (min-width: 1800px) {
   #grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* ── mobile-only hero fit (≤767px; desktop untouched). Unlayered so it wins
+   over Tailwind utility classes. One clean screen: tighter display type,
+   readable lede, pills tucked at the bottom. ── */
+@media (max-width: 767px) {
+  /* one clean first screen: full small-viewport height minus the sticky
+     header (h-16 + 1px border), so the shader pills sit right at the fold */
+  .hero { min-height: calc(100svh - 4rem - 1px); }
+  .hero-h1 { font-size: clamp(2.05rem, 8.4vw, 2.6rem); line-height: 1.0; }
+  .hero-spec { font-size: 11px; letter-spacing: .08em; }
+  .hero-wall p { font-size: .95rem; line-height: 1.6; max-width: 42ch; margin-top: 1.4rem; }
+  .shader-pick { bottom: 1.1rem; }
 }

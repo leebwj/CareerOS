@@ -60,6 +60,11 @@ const exp = [
   /* large-desktop scale-up: keep the card proportional to the grown layout */
   @media (min-width: 1800px) { .pcard { max-width: 380px; } }
   @media (min-width: 2300px) { .pcard { max-width: 430px; } }
+  /* touch devices: dragging the card to tilt kept selecting text / popping
+     callouts — disable selection on the card only, and only on touch */
+  @media (pointer: coarse) {
+    .pcard { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+  }
   .pcard__rotator {
     position: relative; width: 100%; border-radius: 16px;
     transform-style: preserve-3d;
