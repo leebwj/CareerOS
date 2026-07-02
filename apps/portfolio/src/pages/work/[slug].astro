@@ -119,7 +119,7 @@ const linkList = [
         )}
 
         {p.blocks.map((b) => (
-          <section class="cs-block reveal">
+          <section class:list={["cs-block", "reveal", "label" in b && b.label === "Note" && "cs-block--note"]}>
             {"label" in b && b.label && <p class="cs-block__label">{b.label}</p>}
             {b.type === "prose" && (
               <div class="cs-prose">
@@ -317,6 +317,12 @@ const linkList = [
   .cs-block { margin-top: clamp(2.5rem, 5vw, 3.5rem); }
   .cs-block:first-child { margin-top: 0; }
   .cs-block__label { font-family: var(--font-mono); font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--color-cobalt-deep); margin-bottom: 1rem; }
+  /* "Note" asides: the blue-box family at whisper volume — a cobalt-washed
+     card for personal asides (private repo, NDA, on-request notes), visually
+     related to the CTA box but clearly not shouting */
+  .cs-block--note { background: color-mix(in oklab, var(--color-cobalt) 9%, transparent); border: 1px solid color-mix(in oklab, var(--color-cobalt) 26%, transparent); border-radius: 14px; padding: 1.15rem 1.35rem 1.25rem; }
+  .cs-block--note .cs-block__label { margin-bottom: .55rem; }
+  .cs-block--note .cs-prose p { color: color-mix(in oklab, var(--color-ink) 82%, var(--color-cobalt)); }
   .cs-block__heading { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.35rem, 3vw, 1.9rem); letter-spacing: -0.03em; line-height: 1.15; margin-bottom: 1rem; text-wrap: pretty; }
   .cs-prose p { color: var(--color-muted); font-size: 1.0625rem; line-height: 1.7; margin-top: 1rem; max-width: 70ch; }
   /* large monitors: let text run the full column like the photos + headings —

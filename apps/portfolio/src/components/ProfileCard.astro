@@ -71,6 +71,7 @@ const exp = [
     position: relative; width: 100%; border-radius: 16px;
     transform-style: preserve-3d;
     transform: rotateY(var(--rx)) rotateX(var(--ry));
+    will-change: transform; /* keep the tilt on its own GPU layer (phones re-rasterized per frame without it) */
     transition: box-shadow .4s ease;
     box-shadow: 0 14px 34px -16px rgba(0, 0, 0, .55),
       0 0 0 1px color-mix(in oklab, var(--color-cobalt) 30%, var(--color-line)),
