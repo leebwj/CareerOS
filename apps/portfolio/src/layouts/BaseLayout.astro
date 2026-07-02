@@ -234,12 +234,16 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
         // split into per-letter spans (keeps spaces as text so words still wrap)
         const chars = [];
         targets.forEach((el) => {
+          // words listed in data-accent-words get the cobalt accent (word-level
+          // highlighting survives the split, unlike inline markup)
+          const accents = (el.getAttribute("data-accent-words") || "").toLowerCase().split(/\s+/).filter(Boolean);
           const text = (el.textContent || "").replace(/\s+/g, " ").trim();
           el.textContent = "";
           const words = text.split(" ");
           words.forEach((word, wi) => {
             const wspan = document.createElement("span");
             wspan.className = "kw";   // keeps each word unbreakable (no mid-word line wraps)
+            if (accents.includes(word.toLowerCase().replace(/[^a-z0-9]/g, ""))) wspan.classList.add("kw-accent");
             for (const c of word) {
               const s = document.createElement("span");
               s.className = "ch";

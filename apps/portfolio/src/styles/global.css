@@ -62,15 +62,10 @@ html.lenis, html.lenis body { height: auto; }
   @media (min-width: 1800px) {
     html { font-size: 18px; }
     .wrap { max-width: 1340px; }
-    /* shader pills use fixed px, so give them their own monitor-tier bump */
-    .shader-pick button { font-size: 14px; padding: 8px 15px; }
-    .shader-pick > span { font-size: 12.5px; }
   }
   @media (min-width: 2300px) {
     html { font-size: 20px; }
     .wrap { max-width: 1580px; }
-    .shader-pick button { font-size: 15.5px; padding: 9px 17px; }
-    .shader-pick > span { font-size: 13.5px; }
   }
 
   /* the ONE repeating motif: numbered section kicker */
@@ -253,9 +248,19 @@ html.lenis, html.lenis body { height: auto; }
   .shader-pick button { font-family: var(--font-mono); font-size: 12.5px; line-height: 1; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--color-line); background: color-mix(in oklab, var(--color-card) 45%, transparent); color: var(--color-muted); cursor: pointer; -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); transition: color .2s ease, border-color .2s ease, background-color .2s ease; }
   .shader-pick button:hover { color: var(--color-ink); border-color: var(--color-ink); }
   .shader-pick button[aria-pressed="true"] { color: var(--color-on-accent); background: var(--color-cobalt); border-color: var(--color-cobalt); }
+  /* monitor tiers: pills are fixed-px so they need their own bump (placed
+     after the base rules so the cascade actually applies them) */
+  @media (min-width: 1800px) {
+    .shader-pick button { font-size: 14px; padding: 8px 15px; }
+    .shader-pick > span { font-size: 12.5px; }
+  }
+  @media (min-width: 2300px) {
+    .shader-pick button { font-size: 15.5px; padding: 9px 17px; }
+    .shader-pick > span { font-size: 13.5px; }
+  }
 
   /* the accent line of the headline carries the highlight colour statically */
-  .hero-h1 .accent-line { color: var(--color-cobalt-deep); }
+  .kinetic .kw-accent, .kinetic-line .kw-accent { color: var(--color-cobalt-deep); }
 
   /* ── kinetic type: each letter lifts + lights toward the cursor (hyperlunatic-style wave).
      Applied to the hero headline (.kinetic .line-i) AND select section headings (.kinetic-line). ── */
