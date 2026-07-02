@@ -184,36 +184,24 @@ const exp = [
     .pcard__glare { opacity: 0 !important; }
   }
 
-  /* ALL TOUCH DEVICES (must stay LAST — cascade): mobile Safari (iPhone AND
-     iPad, per real-device testing) drops child mix-blend-mode while the tilt
-     transform animates (GPU layer promotion), which made the foil pattern
-     vanish on touch. Composite the foil/glare normally there with a tuned
-     pseudo-dodge; the holo gradients themselves still render (their internal
-     background-blend-modes are unaffected). Desktop keeps true color-dodge. */
-  @media (pointer: coarse) {
-    /* ZERO fragile features: mobile Safari drops mix-blend-mode, and during
-       tilt animation background-blend-mode/filters glitch too. So on touch
-       the foil is rebuilt as plain alpha compositing: the metallic texture +
-       a soft pointer-following tint. Nothing left for iOS to drop — identical
-       at rest and mid-interaction. Desktop keeps the full dodge stack. */
-    .pcard__foil {
-      mix-blend-mode: normal;
-      filter: none;
-      background-image:
-        url("/textures/vmaxbg.jpg"),
-        radial-gradient(farthest-corner circle at var(--px) var(--py),
-          hsla(189, 76%, 77%, 0.14) 0%, hsla(271, 55%, 69%, 0.10) 45%, transparent 80%);
-      background-blend-mode: normal;
-      background-size: cover, 200% 200%;
-      background-position: center, var(--bx) var(--by);
-      opacity: calc(0.07 + var(--o) * 0.09);
-    }
-    .pcard__foil::after { display: none; }
-    .pcard__glare { mix-blend-mode: normal; opacity: calc((0.04 * var(--o)) + var(--o) * var(--pfc) * 0.18); }
-  }
 </style>
 
 <script>
+  // Safari (iPhone/iPad) loses mix-blend-mode compositing when the page is
+  // restored from the back-forward cache — the holo foil looked "broken" only
+  // after navigating away and coming back. Force the blend layers to rebuild
+  // on restore by detaching and reattaching them.
+  addEventListener("pageshow", (e) => {
+    if (!(e as PageTransitionEvent).persisted) return;
+    document.querySelectorAll<HTMLElement>(".pcard__foil, .pcard__glare").forEach((el) => {
+      const parent = el.parentNode!;
+      const next = el.nextSibling;
+      parent.removeChild(el);
+      void document.body.offsetHeight; // force reflow between detach/attach
+      parent.insertBefore(el, next);
+    });
+  });
+
   const clamp = (v: number, mn = 0, mx = 100) => Math.min(Math.max(v, mn), mx);
   const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
   document.querySelectorAll<HTMLElement>(".pcard").forEach((card) => {
