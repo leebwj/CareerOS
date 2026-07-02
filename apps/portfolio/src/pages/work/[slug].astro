@@ -323,15 +323,17 @@ const linkList = [
      the ch-cap left a big empty gutter right of the prose (after the base rule
      so it wins the cascade) */
   @media (min-width: 1800px) { .cs-prose p { max-width: none; } }
-  /* body-copy size tiers: laptop (1024–1799) keeps the 17px sweet spot;
-     phones/tablets and big monitors sit one notch smaller (1rem tracks the
-     root scale, so ≥1800 reads 18px instead of 19+, mobile reads 16px) */
-  @media (max-width: 1023px) { .cs-prose p, .cs-list li { font-size: 1rem; } }
-  @media (min-width: 1800px) { .cs-prose p, .cs-list li { font-size: 1rem; } }
   .cs-prose p:first-child { margin-top: 0; }
   .cs-list { display: grid; gap: .55rem; margin-top: .5rem; }
   .cs-list li { position: relative; padding-left: 1.3rem; color: var(--color-muted); font-size: 1.0625rem; line-height: 1.6; }
   .cs-list li::before { content: "▸"; position: absolute; left: 0; color: var(--color-cobalt-deep); }
+  /* body-copy size tiers — MUST come after BOTH base rules above so the
+     cascade applies them to prose and bullets identically. Laptop
+     (1024–1799) keeps the 17px sweet spot; phones/tablets and big monitors
+     sit one notch smaller (1rem tracks the root scale: 16px mobile,
+     18px @1920, 20px on ultrawides). */
+  @media (max-width: 1023px) { .cs-prose p, .cs-list li { font-size: 1rem; } }
+  @media (min-width: 1800px) { .cs-prose p, .cs-list li { font-size: 1rem; } }
 
   .cs-quote { margin: 0; padding-left: 1.3rem; border-left: 2px solid var(--color-cobalt); }
   .cs-quote p { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.25rem, 2.6vw, 1.6rem); line-height: 1.3; letter-spacing: -0.02em; text-wrap: pretty; }

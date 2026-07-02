@@ -337,4 +337,11 @@ html[data-mode="light"] {
    desktop keyboard focus rings are untouched. */
 @media (pointer: coarse) {
   :focus-visible { outline: none; }
+  /* mobile GPU quirk: when the tapped thumbnail's filter/scale transition
+     promotes the image to its own layer, WebKit momentarily DROPS the
+     parent's overflow+border-radius clip → the image flashes as a square.
+     Belt and braces: hardware clip-path on the frame AND rounded corners on
+     the image itself, so nothing square can ever paint. */
+  .proj-media { clip-path: inset(0 round 14px); }
+  .proj-media :where(img) { border-radius: 14px; }
 }
