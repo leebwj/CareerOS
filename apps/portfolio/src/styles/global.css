@@ -145,7 +145,7 @@ html.lenis, html.lenis body { height: auto; }
   html[data-thumb="bw"] .proj:hover .proj-media :where(img) { filter: none; }
   html[data-thumb="bw"] .proj:hover .proj-media:has(img)::before { opacity: 0; }
   .proj-cats { position: absolute; top: .85rem; left: .85rem; z-index: 4; display: flex; flex-wrap: wrap; gap: .35rem; max-width: calc(100% - 1.7rem); }
-  .proj-cat { display: inline-flex; align-items: center; height: 26px; padding: 0 .75rem; font-family: var(--font-mono); font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; color: var(--color-cobalt-deep); background: color-mix(in oklab, var(--color-canvas) 84%, transparent); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); border: 1px solid var(--color-line); border-radius: 100px; }
+  .proj-cat { display: inline-flex; align-items: center; height: 24px; padding: 0 .7rem; font-family: var(--font-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; color: var(--color-cobalt-deep); background: color-mix(in oklab, var(--color-canvas) 84%, transparent); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); border: 1px solid var(--color-line); border-radius: 100px; }
   .proj-head { margin-top: 1rem; display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
   .proj-title { font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; letter-spacing: -0.035em; line-height: 1.2; }
   .proj:hover .proj-title { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; text-decoration-color: var(--color-cobalt); }
@@ -319,4 +319,11 @@ html[data-mode="light"] {
    "experiences, and the" holds one line; desktop ≥1024 untouched */
 @media (min-width: 768px) and (max-width: 1023px) {
   .hero-h1 { font-size: clamp(3rem, 8vw, 4.6rem); }
+}
+/* tablets + landscape handhelds (TOUCH devices ≥768px — desktops have fine
+   pointers and are untouched at any width): equalize the hero's vertical
+   padding so the statement centers with equal space above and below,
+   same as phones. Covers iPad mini → iPad Pro 13" and landscape phones. */
+@media (pointer: coarse) and (min-width: 768px) {
+  .hero { padding-top: 5rem; padding-bottom: 5rem; }
 }
