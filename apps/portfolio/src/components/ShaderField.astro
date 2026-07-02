@@ -218,8 +218,14 @@ const { variant, mode = 0 } = Astro.props;
         addEventListener("themechange", setColors);
 
         const resize = () => {
-          const dpr = Math.min(devicePixelRatio || 1, bleed ? 1.25 : 1.75);
+          let dpr = Math.min(devicePixelRatio || 1, bleed ? 1.25 : 1.75);
           const r = wrap.getBoundingClientRect();
+          // cap the total render area: a soft background field doesn't need
+          // more than ~2.2MP, and on large monitors an uncapped canvas
+          // (2560×1440 × dpr² ≈ 5MP+/frame) is what makes scrolling feel heavy
+          const cap = bleed ? 2200000 : 1400000;
+          const area = r.width * r.height * dpr * dpr;
+          if (area > cap) dpr *= Math.sqrt(cap / area);
           canvas.width = Math.max(1, Math.round(r.width * dpr));
           canvas.height = Math.max(1, Math.round(r.height * dpr));
           gl.viewport(0, 0, canvas.width, canvas.height);

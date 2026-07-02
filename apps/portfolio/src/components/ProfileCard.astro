@@ -57,6 +57,9 @@ const exp = [
     perspective: 1100px; isolation: isolate;
     touch-action: pan-y; /* keep vertical scroll; horizontal drag tilts the card on touch */
   }
+  /* large-desktop scale-up: keep the card proportional to the grown layout */
+  @media (min-width: 1800px) { .pcard { max-width: 380px; } }
+  @media (min-width: 2300px) { .pcard { max-width: 430px; } }
   .pcard__rotator {
     position: relative; width: 100%; border-radius: 16px;
     transform-style: preserve-3d;

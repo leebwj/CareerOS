@@ -303,10 +303,10 @@ const linkList = [
   /* large-desktop scale-up (pairs with the global root-font bump): widen the
      px-based reading column + meta rail so big monitors aren't mostly void */
   @media (min-width: 1800px) {
-    .cs-layout { grid-template-columns: 300px 1fr; }
-    .cs-content { max-width: 920px; }
+    .cs-layout { grid-template-columns: 320px 1fr; }
+    .cs-content { max-width: 960px; }
   }
-  @media (min-width: 2300px) { .cs-content { max-width: 1020px; } }
+  @media (min-width: 2300px) { .cs-content { max-width: 1120px; } }
   .cs-featured { margin: 0 0 3rem; }
   .cs-featured :where(img) { width: 100%; height: auto; border-radius: 14px; box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--color-cobalt) 16%, transparent); display: block; }
   .cs-embed { position: relative; aspect-ratio: 16 / 9; border-radius: 14px; overflow: hidden; box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--color-cobalt) 20%, transparent); background: var(--color-card); }

@@ -1,16 +1,38 @@
 # CareerOS
 
-A personal monorepo for my career tooling. Module #1 is my portfolio; more will join over time.
+My personal career platform, built as a monorepo. Each module is a tool I actually use — starting with my portfolio.
 
-## `apps/portfolio`
+**Live → [leebrian.dev](https://leebrian.dev)**
 
-A motion-forward portfolio built with **Astro + Tailwind**, featuring hand-written WebGL shaders, a custom cursor, and detailed case studies across graphics, engineering, and design work. Deployed to **[leebrian.dev](https://leebrian.dev)**.
+## Modules
+
+| Module | Status | What it is |
+|---|---|---|
+| [`apps/portfolio`](apps/portfolio) | **Live** | My portfolio — case studies across graphics, engineering, and design |
+| `apps/role-grabber` | Planned | An agent that finds open roles (including the non-obvious ones) and feeds a tracking sheet |
+| `apps/resume` | Planned | Résumé generation from the same shared project data |
+
+## The portfolio
+
+An intentionally motion-forward site, built from scratch:
+
+- **Astro 5 + Tailwind 4**, fully static — no framework runtime on the page
+- **Hand-written WebGL shaders** (GLSL) as a full-bleed, cursor-reactive hero with three switchable modes — DPR- and pixel-area-capped so it stays smooth on any screen
+- **Custom interaction system** — a morphing snap cursor, cursor-tracked kinetic type, magnetic buttons, a pointer-tilted holo trading card, smooth scroll
+- **Performance-minded** — non-blocking fonts, idle-deferred shader compile, hover prefetch, responsive images, reduced-motion support throughout
+
+### Run it
 
 ```bash
 cd apps/portfolio
 npm install
 npm run dev      # → http://localhost:4321
-npm run build    # static output
+npm run build    # static output in dist/
 ```
 
-— Brian Lee · [leebrian.dev](https://leebrian.dev)
+Deployed on Vercel; every push to `main` ships automatically.
+
+---
+
+**Brian Wonjun Lee** — designer & engineer, CS + Design @ UPenn
+[leebrian.dev](https://leebrian.dev) · [GitHub](https://github.com/leebwj) · [LinkedIn](https://www.linkedin.com/in/brian-lee-0b706b225/)
