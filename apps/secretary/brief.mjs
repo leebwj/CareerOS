@@ -91,7 +91,7 @@ export function composeBrief(todayISO = new Date().toISOString().slice(0, 10)) {
   L.push(`## 📊 The board`);
   L.push(`- ${fresh.length} roles posted in the last day · 🆕 ${newCount} new since the last refresh`);
   if (appliedWeek) L.push(`- You've applied to ${appliedWeek} role${appliedWeek > 1 ? "s" : ""} this week — keep the streak.`);
-  L.push(`- Full board: https://leebrian.dev/tracker`, "");
+  L.push(`- [Open the full board →](https://leebrian.dev/tracker)`, "");
 
   L.push(`_Composed by your CareerOS secretary._`);
 

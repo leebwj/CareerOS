@@ -34,6 +34,8 @@ if (wantMail && !brief.empty && existsSync(configPath)) {
         .replace(/^## (.*)$/gm, '<h3 style="margin:18px 0 6px;color:#3a5bbf">$1</h3>')
         .replace(/\[apply\]\((.*?)\)/g, '<a href="$1" style="color:#3a5bbf">apply →</a>')
         .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" style="color:#3a5bbf">$1</a>')
+        // safety net: linkify any bare URL not already inside an href="…"
+        .replace(/(?<!["(>])(https?:\/\/[^\s<)"]+)/g, '<a href="$1" style="color:#3a5bbf">$1</a>')
         .replace(/\*\*(.*?)\*\*/g, "<b>$1</b>")
         .replace(/^- (.*)$/gm, '<div style="margin:3px 0">• $1</div>')
         .replace(/_(.*?)_/g, '<span style="color:#828c99">$1</span>')
