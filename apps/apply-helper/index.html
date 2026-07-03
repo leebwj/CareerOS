@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>CareerOS · Apply Helper</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mona+Sans:wght@500;600;700;800&family=Geist+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --canvas:#0b0c0e; --card:#15171a; --card2:#1a1d21; --ink:#f4f5f7; --muted:#828c99;
+    --faint:#545c66; --line:#23262b; --cobalt:#6f88cf; --cobalt-deep:#9aafe2; --green:#7fbf8e;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--canvas); color:var(--ink); font-family:"Mona Sans",sans-serif; font-size:15px; }
+  .mono { font-family:"Geist Mono",monospace; }
+  a { color:var(--cobalt-deep); text-decoration:none; } a:hover { text-decoration:underline; }
+
+  header { position:sticky; top:0; z-index:10; background:rgba(11,12,14,.94); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); }
+  .hrow { max-width:1080px; margin:0 auto; padding:14px 20px; display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+  .brand { font-weight:800; font-size:17px; letter-spacing:-.02em; }
+  .brand span { color:var(--cobalt-deep); }
+  .meta { font-family:"Geist Mono",monospace; font-size:11.5px; color:var(--faint); text-transform:uppercase; letter-spacing:.14em; }
+  .spacer { flex:1; }
+  .tabs { display:flex; gap:6px; }
+  .tab { font-family:"Geist Mono",monospace; font-size:12px; letter-spacing:.08em; text-transform:uppercase; padding:7px 13px; border-radius:999px; border:1px solid var(--line); color:var(--muted); background:transparent; cursor:pointer; }
+  .tab:hover { color:var(--ink); border-color:var(--faint); }
+  .tab.on { background:var(--cobalt); border-color:var(--cobalt); color:#0b0c0e; font-weight:700; }
+
+  .controls { max-width:1080px; margin:0 auto; padding:12px 20px 4px; display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+  input[type=search], select { background:var(--card); border:1px solid var(--line); color:var(--ink); border-radius:10px; padding:8px 12px; font-family:"Mona Sans",sans-serif; font-size:14px; outline:none; }
+  input[type=search] { width:280px; }
+  input:focus, select:focus { border-color:var(--cobalt); }
+  .util { margin-left:auto; display:flex; gap:8px; }
+  .util button { background:none; border:1px solid var(--line); color:var(--faint); border-radius:8px; padding:6px 10px; font-family:"Geist Mono",monospace; font-size:11px; cursor:pointer; }
+  .util button:hover { color:var(--ink); border-color:var(--faint); }
+
+  main { max-width:1080px; margin:0 auto; padding:14px 20px 90px; }
+  .cat { font-family:"Geist Mono",monospace; font-size:11.5px; color:var(--cobalt-deep); text-transform:uppercase; letter-spacing:.16em; margin:24px 0 10px; display:flex; align-items:center; gap:10px; }
+  .cat::after { content:""; flex:1; height:1px; background:var(--line); }
+
+  .qa { border:1px solid var(--line); border-radius:14px; background:var(--card); margin-bottom:10px; overflow:hidden; }
+  .qa__q { padding:13px 16px; display:flex; align-items:center; gap:12px; cursor:pointer; }
+  .qa__q:hover { background:var(--card2); }
+  .qa__qt { font-weight:700; font-size:15px; flex:1; }
+  .qa__meta { font-family:"Geist Mono",monospace; font-size:11px; color:var(--faint); }
+  .qa__body { display:none; padding:0 16px 14px; }
+  .qa.open .qa__body { display:block; }
+  .qa textarea { width:100%; min-height:120px; background:var(--card2); border:1px solid var(--line); border-radius:10px; color:var(--ink); padding:11px 13px; font-family:"Mona Sans",sans-serif; font-size:14px; line-height:1.55; resize:vertical; outline:none; }
+  .qa textarea:focus { border-color:var(--cobalt); }
+  .qa textarea.tip { color:var(--muted); font-style:italic; }
+  .qa__row { display:flex; align-items:center; gap:8px; margin-top:9px; }
+  .btn { border:1px solid var(--line); background:transparent; color:var(--muted); border-radius:9px; padding:7px 13px; font-size:13px; font-weight:600; cursor:pointer; font-family:"Mona Sans",sans-serif; }
+  .btn:hover { color:var(--ink); border-color:var(--faint); }
+  .btn.primary { background:var(--cobalt); border-color:var(--cobalt); color:#0b0c0e; }
+  .btn.primary:hover { background:var(--cobalt-deep); }
+  .btn.copied { background:rgba(127,191,142,.15); border-color:rgba(127,191,142,.45); color:var(--green); }
+  .count { font-family:"Geist Mono",monospace; font-size:11px; color:var(--faint); margin-left:auto; }
+  .pill { font-family:"Geist Mono",monospace; font-size:10px; letter-spacing:.06em; text-transform:uppercase; padding:2px 7px; border-radius:999px; border:1px solid var(--line); color:var(--faint); }
+  .pill.edited { color:var(--green); border-color:rgba(127,191,142,.4); }
+
+  /* draft mode */
+  .draft { max-width:760px; }
+  .draft h2 { font-size:20px; margin-bottom:6px; letter-spacing:-.01em; }
+  .draft p.sub { color:var(--muted); font-size:14px; margin-bottom:18px; line-height:1.55; }
+  .draft label { display:block; font-family:"Geist Mono",monospace; font-size:11.5px; text-transform:uppercase; letter-spacing:.12em; color:var(--faint); margin:16px 0 6px; }
+  .draft textarea, .draft input[type=text] { width:100%; background:var(--card); border:1px solid var(--line); border-radius:10px; color:var(--ink); padding:11px 13px; font-family:"Mona Sans",sans-serif; font-size:14px; line-height:1.55; outline:none; }
+  .draft textarea:focus, .draft input:focus { border-color:var(--cobalt); }
+  .draft .out { margin-top:16px; background:var(--card2); border:1px solid var(--line); border-radius:10px; padding:13px; font-size:13px; color:var(--muted); white-space:pre-wrap; max-height:300px; overflow:auto; display:none; }
+  .note { font-size:12.5px; color:var(--faint); margin-top:8px; line-height:1.5; }
+  .empty { text-align:center; color:var(--faint); padding:50px 0; }
+</style>
+</head>
+<body>
+<header>
+  <div class="hrow">
+    <div class="brand">CareerOS <span>Apply Helper</span><span style="color:var(--cobalt-deep)">.</span></div>
+    <div class="meta" id="meta"></div>
+    <div class="spacer"></div>
+    <nav class="tabs">
+      <button class="tab on" data-v="bank">Answer bank</button>
+      <button class="tab" data-v="draft">Draft new</button>
+    </nav>
+  </div>
+</header>
+
+<div class="controls" id="bankControls">
+  <input type="search" id="q" placeholder="Search questions…">
+  <select id="cat"><option value="">All categories</option></select>
+  <div class="util">
+    <button id="reset">Reset seeds</button>
+    <button id="exp">Export</button>
+    <button id="imp">Import</button>
+  </div>
+</div>
+
+<main id="main"></main>
+
+<script>
+(() => {
+  const LS = "careeros-answers-v1";
+  const esc = (s) => String(s ?? "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+
+  // ── your background (feeds the "Draft new" prompt; edit freely) ──
+  const PROFILE = `Brian Wonjun Lee — CS & Design double major at UPenn (Benjamin Franklin Scholars, expected May 2027). US-Korean dual citizen, authorized to work in the US with no sponsorship needed.
+Currently SWE Intern at Aleph Lab (a Y Combinator startup): built a push-notification retention engine (Supabase, Deno, FCM) with an A/B holdout framework; a typed game-AI integration SDK (zod, JSON Schema, 128+ tests); shipped 15+ PRs across React Native, Next.js, Deno incl. a security fix.
+Past: SWE Intern at BitMango (50+ live Unity mobile titles, 100+ QA bugs fixed in C#); Database Intern at IT-Farm (SQL, 1M+ entities, clients incl. Samsung/SK/LG); Project Lead & Product Designer at Penn Spark (led 15+ designers/devs); Military Interpreter, ROK Army (English-Korean).
+Projects: Mini Minecraft (C++/OpenGL voxel engine — 7 biomes, PCF shadows, SSR); Passenger (Unreal 5 real-time short, 2 custom HLSL shaders); Path@Penn & Wikipedia UX redesigns (Figma, user research, usability testing).
+Identity: a designer who builds what he designs — from C++/OpenGL rendering to Figma-to-production React. Seeking a US tech/design role; especially drawn to graphics/game/technical-art, product design, and general SWE at big tech, design-forward companies, and game studios.`;
+
+  // ── seed answers (editable; grounded in real facts, [brackets] = personalize) ──
+  const SEED = [
+    { c:"About you", q:"Tell me about yourself", a:"I'm a Computer Science and Design double major at Penn who builds across the whole stack — from C++/OpenGL rendering engines to Figma-to-production React. Right now I'm a software engineering intern at Aleph Lab, a Y Combinator startup, where I built a push-notification retention engine and a typed game-AI integration SDK. What ties my work together is real-time, interactive experiences — a voxel engine, an Unreal short film, product redesigns. I'm looking for a role at that intersection of engineering and design." },
+    { c:"About you", q:"Why do you want to work here?", a:"[Company] stands out to me because [specific product / mission / team you admire — name something concrete you've used or read about]. I'm drawn to [the problem they solve / their craft bar / their design-engineering culture], and it lines up with my own work in [relevant area — e.g. real-time graphics / product design / full-stack]. I'd bring [the specific thing you'd contribute]." },
+    { c:"About you", q:"Why this role?", a:"This role is a strong fit because it sits exactly where my strengths are — [name the 2–3 core responsibilities from the JD]. At Aleph Lab and on my own projects I've already done [the closest analog], and I'm excited to go deeper on [the part of the role that stretches you]." },
+    { c:"About you", q:"Greatest strength", a:"I build what I design and design what I build — I can take something from a Figma prototype to shipped, performant code without a handoff in between. At Aleph Lab I did exactly that, wiring a Figma-to-React-Native pipeline. That end-to-end ownership means I catch issues early and move fast." },
+    { c:"About you", q:"Greatest weakness", a:"I used to over-polish — spending too long perfecting a prototype before getting feedback. I've been deliberately shipping earlier and letting real usage guide the next iteration; on my Penn Spark work I now put rough versions in front of users within days instead of weeks, and the work is better for it." },
+    { c:"About you", q:"Where do you see yourself in 5 years?", a:"Deep enough in [graphics engineering / product design / full-stack] to own hard problems end-to-end, at a company where design and engineering aren't separate teams. I want to keep building interactive experiences and the systems under them — and mentor others doing the same." },
+
+    { c:"Logistics", q:"Are you authorized to work in the US?", a:"Yes. I'm a US–Korean dual citizen and authorized to work in the United States with no restrictions." },
+    { c:"Logistics", q:"Do you require sponsorship, now or in the future?", a:"No — I'm a US citizen and do not require visa sponsorship now or in the future." },
+    { c:"Logistics", q:"When are you available to start?", a:"[e.g. Available for Summer 2026 (May–Aug); open to part-time during the school year.] Flexible around your ideal start date." },
+    { c:"Logistics", q:"Salary expectations", a:"I'm flexible and would defer to your standard [intern / new-grad] range for the role and location. My priority is the work and the team; I'm confident we can find a number that works. [Optional: research the market range for the role/city and give a range.]" },
+    { c:"Logistics", q:"Are you willing to relocate?", a:"Yes — I'm open to relocating anywhere in the US for the right role, and I'm comfortable with in-office, hybrid, or remote." },
+    { c:"Logistics", q:"How did you hear about us?", a:"[Personalize — via your careers page / a specific person / a project or talk of yours I follow. Avoid a generic 'job board' answer where you can.]" },
+
+    { c:"Behavioral (STAR)", q:"Tell me about a project you're proud of", a:"I built a voxel game engine from scratch in C++ and OpenGL — 7 procedurally generated biomes, a full render pipeline with PCF soft shadows, screen-space reflections, and a day-night cycle. The hard part was [pick one: keeping chunk generation off the main thread / getting the noise-based terrain to blend cleanly]. I'm proud of it because it's real systems work with visible, interactive results, and I can explain every layer of the pipeline." },
+    { c:"Behavioral (STAR)", q:"A time you faced a challenge or failure", a:"Situation: [at Aleph / on a project], [the problem — e.g. a data-consistency bug showing different streak counts across mobile, web, and the database]. Task: I had to trace it end to end. Action: I [what you did — reproduced it, isolated the layer, fixed the root cause]. Result: [outcome — it shipped, no regressions]. What I took from it: [the lesson]." },
+    { c:"Behavioral (STAR)", q:"Tell me about a time you led", a:"At Penn Spark I led a cross-functional team of 15+ designers and developers to ship a client-facing product. I [set the direction / ran the critiques / unblocked people]. The challenge was [alignment across design and eng]; I handled it by [how]. We shipped [what], and [the result]." },
+    { c:"Behavioral (STAR)", q:"Working on a team", a:"On Mini Minecraft I worked in a team of 3 on a C++/OpenGL engine. We split the pipeline [terrain / rendering / systems]; I owned [your part]. When our pieces had to integrate we [how you coordinated — shared interfaces, reviews]. It shipped as a working engine, and I learned [lesson about interfaces / communication]." },
+    { c:"Behavioral (STAR)", q:"A conflict with a teammate", a:"[Situation — a real disagreement, e.g. on a design direction or a technical approach]. Rather than push, I [asked what they were optimizing for / built a quick prototype of both]. We [how it resolved — data settled it / found a middle path]. I've learned disagreements usually come from different goals, not bad ones." },
+    { c:"Behavioral (STAR)", q:"A time you showed initiative", a:"[e.g. At Aleph, I noticed 4 edge functions were unauthenticated and closed the vector before it was flagged.] Nobody asked me to — I saw the gap and fixed it, then documented it so the team knew." },
+
+    { c:"Technical & Design", q:"Why both design and engineering?", a:"Because the best interactive products come from not separating them. When I design, I know what's cheap or expensive to build; when I build, I care how it feels. At Aleph I wired a Figma-to-React-Native pipeline precisely so design and code weren't two silos. The hybrid isn't a compromise — it's the whole point of my work." },
+    { c:"Technical & Design", q:"Favorite technology / tool and why", a:"[e.g. Real-time graphics — OpenGL/GLSL and Unreal/HLSL — because you get an immediate visual feedback loop: change a shader, see it. Or React + TypeScript for how fast it lets me go from idea to interactive.] It fits how I work: tight loops, visible results." },
+    { c:"Technical & Design", q:"Walk me through your design process", a:"I start with the problem and real users — for Path@Penn I ran walkthroughs, interviews, and a heuristic audit before touching Figma. Then lo-fi wireframes, usability testing (even n=4 catches most issues), and hi-fi only once the flow is validated. I lean on my engineering side to keep prototypes realistic about what ships." },
+
+    { c:"Diversity / EEO (voluntary)", q:"What does diversity mean to you?", a:"[Voluntary — answer only if you want to. Personalize: e.g. as someone who's worked across the US and Korea and in both design and engineering teams, I've seen how different backgrounds and disciplines catch what a homogeneous group misses.]" },
+  ];
+
+  const save = () => localStorage.setItem(LS, JSON.stringify(state));
+  function seed() {
+    state.answers = {}; state.order = [];
+    SEED.forEach((s, i) => { const id = "q" + i; state.answers[id] = { ...s, edited:false }; state.order.push(id); });
+    save();
+  }
+  let state = { answers: {}, order: [] };
+  try { state = { answers:{}, order:[], ...JSON.parse(localStorage.getItem(LS) || "{}") } } catch {}
+  if (!state.order.length) seed();
+
+  let view = "bank";
+  document.querySelectorAll(".tab").forEach(t => t.onclick = () => {
+    view = t.dataset.v;
+    document.querySelectorAll(".tab").forEach(x => x.classList.toggle("on", x === t));
+    document.getElementById("bankControls").style.display = view === "bank" ? "flex" : "none";
+    render();
+  });
+
+  function render() { view === "bank" ? renderBank() : renderDraft(); }
+
+  function renderBank() {
+    const q = document.getElementById("q").value.toLowerCase();
+    const catF = document.getElementById("cat").value;
+    const cats = [...new Set(state.order.map(id => state.answers[id].c))];
+    const sel = document.getElementById("cat");
+    if (sel.options.length <= 1) sel.innerHTML = '<option value="">All categories</option>' + cats.map(c => `<option>${esc(c)}</option>`).join("");
+    const editedN = state.order.filter(id => state.answers[id].edited).length;
+    document.getElementById("meta").textContent = `${state.order.length} questions · ${editedN} personalized`;
+
+    let html = "";
+    for (const c of cats) {
+      if (catF && c !== catF) continue;
+      const ids = state.order.filter(id => state.answers[id].c === c && (!q || (state.answers[id].q + state.answers[id].a).toLowerCase().includes(q)));
+      if (!ids.length) continue;
+      html += `<div class="cat">${esc(c)}</div>`;
+      for (const id of ids) {
+        const a = state.answers[id];
+        html += `<div class="qa" data-id="${id}">
+          <div class="qa__q"><span class="qa__qt">${esc(a.q)}</span>${a.edited ? '<span class="pill edited">yours</span>' : '<span class="pill">draft</span>'}<span class="qa__meta">${a.a.length} ch</span></div>
+          <div class="qa__body">
+            <textarea data-id="${id}">${esc(a.a)}</textarea>
+            <div class="qa__row">
+              <button class="btn primary copy" data-id="${id}">Copy</button>
+              <button class="btn savebtn" data-id="${id}">Save edits</button>
+              <span class="count" data-id="${id}">${a.a.length} characters</span>
+            </div>
+          </div>
+        </div>`;
+      }
+    }
+    document.getElementById("main").innerHTML = html || `<div class="empty">No matches.</div>`;
+    wireBank();
+  }
+
+  function wireBank() {
+    document.querySelectorAll(".qa__q").forEach(el => el.onclick = () => el.closest(".qa").classList.toggle("open"));
+    document.querySelectorAll(".qa textarea").forEach(t => {
+      t.onclick = (e) => e.stopPropagation();
+      t.oninput = () => {
+        const cnt = document.querySelector(`.count[data-id="${t.dataset.id}"]`);
+        if (cnt) cnt.textContent = t.value.length + " characters";
+      };
+    });
+    document.querySelectorAll(".copy").forEach(b => b.onclick = (e) => {
+      e.stopPropagation();
+      const t = document.querySelector(`textarea[data-id="${b.dataset.id}"]`);
+      navigator.clipboard.writeText(t.value);
+      b.textContent = "Copied ✓"; b.classList.add("copied");
+      setTimeout(() => { b.textContent = "Copy"; b.classList.remove("copied"); }, 1400);
+    });
+    document.querySelectorAll(".savebtn").forEach(b => b.onclick = (e) => {
+      e.stopPropagation();
+      const t = document.querySelector(`textarea[data-id="${b.dataset.id}"]`);
+      state.answers[b.dataset.id].a = t.value;
+      state.answers[b.dataset.id].edited = true;
+      save(); render();
+    });
+  }
+
+  function renderDraft() {
+    document.getElementById("meta").textContent = "draft a new answer";
+    document.getElementById("main").innerHTML = `<div class="draft">
+      <h2>Draft an answer for a new question</h2>
+      <p class="sub">For a question not in your bank. This builds a ready-to-paste prompt from your background — drop it into <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a> and you'll get a tailored, honest answer in your voice. (No API key, nothing leaves your machine until you paste it.)</p>
+      <label>The application question</label>
+      <textarea id="dq" placeholder="e.g. Describe a time you had to learn a new technology quickly."></textarea>
+      <label>Any context (optional) — company, role, word limit, tone</label>
+      <input type="text" id="dctx" placeholder="e.g. Riot Games, graphics intern, 150 words max">
+      <div class="qa__row" style="margin-top:14px">
+        <button class="btn primary" id="genprompt">Build Claude prompt</button>
+        <button class="btn" id="copyprompt" style="display:none">Copy prompt</button>
+      </div>
+      <div class="out" id="dout"></div>
+      <p class="note">Why not answer here directly? A good answer must be true to <em>your</em> experience — so you review it before it's yours. Paste the result back into your bank once you like it.</p>
+    </div>`;
+    document.getElementById("genprompt").onclick = () => {
+      const dq = document.getElementById("dq").value.trim();
+      const ctx = document.getElementById("dctx").value.trim();
+      if (!dq) { document.getElementById("dq").focus(); return; }
+      const prompt = `You are helping me answer a job-application question. Write a first-person answer in my voice — confident but honest, specific, no clichés or filler, no invented facts (use only what's below; leave a [bracket] if you'd need a detail I didn't give). ${ctx ? "Context: " + ctx + ". " : ""}Keep it tight.\n\nMY BACKGROUND:\n${PROFILE}\n\nTHE QUESTION:\n${dq}\n\nWrite the answer:`;
+      const out = document.getElementById("dout");
+      out.textContent = prompt; out.style.display = "block";
+      const cp = document.getElementById("copyprompt");
+      cp.style.display = "inline-block";
+      cp.onclick = () => { navigator.clipboard.writeText(prompt); cp.textContent = "Copied ✓"; setTimeout(() => cp.textContent = "Copy prompt", 1400); };
+    };
+  }
+
+  // controls
+  document.getElementById("q").addEventListener("input", render);
+  document.getElementById("cat").addEventListener("change", render);
+  document.getElementById("reset").onclick = () => { if (confirm("Reset all answers to the starting seeds? Your edits will be lost.")) { seed(); render(); } };
+  document.getElementById("exp").onclick = () => {
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([JSON.stringify(state, null, 1)], { type:"application/json" }));
+    a.download = "careeros-answers-backup.json"; a.click();
+  };
+  document.getElementById("imp").onclick = () => {
+    const inp = document.createElement("input"); inp.type = "file"; inp.accept = ".json";
+    inp.onchange = () => inp.files[0].text().then(t => { state = { answers:{}, order:[], ...JSON.parse(t) }; save(); render(); });
+    inp.click();
+  };
+
+  render();
+})();
+</script>
+</body>
+</html>
