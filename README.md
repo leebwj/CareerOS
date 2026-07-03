@@ -9,9 +9,10 @@ My personal career platform, built as a monorepo. Each module is a tool I actual
 | Module | Status | What it is |
 |---|---|---|
 | [`apps/portfolio`](apps/portfolio) | **Live** | My portfolio — case studies across graphics, engineering, and design |
-| [`apps/role-grabber`](apps/role-grabber) | **Live** | Daily role aggregation → [ROLES.md](apps/role-grabber/ROLES.md) sheet with 🆕 badges + 🎯 target-company board |
-| [`apps/tracker`](apps/tracker) | **V1 live** | Single-file application dashboard over the daily data — Inbox / Starred / Tracker views, local-first |
+| [`apps/role-grabber`](apps/role-grabber) | **Live** | Twice-daily role aggregation (aggregators + direct ATS boards) → [ROLES.md](apps/role-grabber/ROLES.md); fit tiers, 🔥 hot / 🆕 new / 🎯 target, term + level |
+| [`apps/tracker`](apps/tracker) | **V1 live** | Single-file application dashboard over the daily data — Inbox / Starred / Tracker, Hot filter, follow-up reminders, local-first |
 | [`apps/resume`](apps/resume) | **V1 live** | Résumé-as-code — both variants render to ATS-clean docx/PDF from one data file (content stays private) |
+| [`apps/secretary`](apps/secretary) | **V1 brain** | Morning-brief agent — composes what-to-do-today from the feed, emails it; desktop-character face planned |
 
 ## The portfolio
 

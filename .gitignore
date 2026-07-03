@@ -27,3 +27,8 @@ Thumbs.db
 # resume content (personal: phone etc.) — generator is public, data is not
 apps/resume/resume-data.mjs
 apps/resume/out/
+
+# secretary secrets (Gmail app password etc.)
+apps/secretary/config.mjs
+apps/secretary/out/
+apps/secretary/data/
