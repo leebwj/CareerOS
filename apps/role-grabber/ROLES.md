@@ -1,6 +1,6 @@
 # 📋 Open Roles — auto-updated daily
 
-_Last updated: 2026-07-03 02:42 UTC · 2681 active US roles total · showing roles posted in the last 30 days (1272) · full data: [`data/roles.csv`](data/roles.csv)_
+_Last updated: 2026-07-03 02:44 UTC · 2681 active US roles total · showing roles posted in the last 30 days (1272) · full data: [`data/roles.csv`](data/roles.csv)_
 
 | Category | Active total |
 |---|---|
