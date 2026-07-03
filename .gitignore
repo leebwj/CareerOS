@@ -35,3 +35,6 @@ apps/secretary/data/
 
 # electron app deps
 apps/desktop-pet/node_modules/
+
+# generated task file (machine-specific paths)
+apps/secretary/careeros-secretary-task.xml

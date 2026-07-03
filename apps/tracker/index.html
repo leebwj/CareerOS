@@ -97,7 +97,8 @@
 <div class="controls">
   <input type="search" id="q" placeholder="Search company or role…">
   <select id="cat"><option value="">All categories</option></select>
-  <select id="lvl"><option value="">All levels</option><option value="intern">Intern</option><option value="new-grad">New grad</option></select>
+  <select id="lvl"><option value="">All levels</option><option value="intern">Intern</option><option value="new-grad">New grad</option><option value="full-time">Full-time</option></select>
+  <select id="term"><option value="">All terms</option></select>
   <button class="chip hot" id="fHot">🔥 Hot</button>
   <button class="chip" id="fNew">🆕 New</button>
   <button class="chip" id="fTgt">🎯 Targets</button>
@@ -192,6 +193,7 @@
     const q = document.getElementById("q").value.toLowerCase();
     const cat = document.getElementById("cat").value;
     const lvl = document.getElementById("lvl").value;
+    const term = document.getElementById("term").value;
     document.getElementById("fHot").classList.toggle("on", fHot);
     document.getElementById("fNew").classList.toggle("on", fNew);
     document.getElementById("fTgt").classList.toggle("on", fTgt);
@@ -205,6 +207,7 @@
       if (q && !(r.company + " " + r.title).toLowerCase().includes(q)) return false;
       if (cat && r.category !== cat) return false;
       if (lvl && r.level !== lvl) return false;
+      if (term && !(r.term || "").split(" / ").includes(term)) return false;
       if (fHot && !r.hot) return false;
       if (fNew && !r.isNew) return false;
       if (fTgt && !TARGETS.test(r.company)) return false;
@@ -280,7 +283,7 @@
   }
 
   // controls
-  ["q", "cat", "lvl"].forEach((id) => document.getElementById(id).addEventListener("input", render));
+  ["q", "cat", "lvl", "term"].forEach((id) => document.getElementById(id).addEventListener("input", render));
   document.getElementById("fHot").onclick = () => { fHot = !fHot; render(); };
   document.getElementById("fNew").onclick = () => { fNew = !fNew; render(); };
   document.getElementById("fTgt").onclick = () => { fTgt = !fTgt; render(); };
@@ -304,6 +307,11 @@
       roles = data;
       const cats = [...new Set(roles.map((r) => r.category))].sort();
       document.getElementById("cat").innerHTML += cats.map((c) => `<option>${esc(c)}</option>`).join("");
+      // terms, chronological (year then season); compound terms split apart
+      const SEASON = { Spring: 0, Summer: 1, Fall: 2, Winter: 3 };
+      const terms = [...new Set(roles.flatMap((r) => (r.term || "").split(" / ")).filter(Boolean))]
+        .sort((a, b) => { const [sa, ya] = a.split(" "), [sb, yb] = b.split(" "); return (+ya - +yb) || (SEASON[sa] - SEASON[sb]); });
+      document.getElementById("term").innerHTML += terms.map((t) => `<option>${esc(t)}</option>`).join("");
       const newest = roles.reduce((m, r) => (r.posted > m ? r.posted : m), "");
       document.getElementById("meta").textContent = `${roles.length} roles · data ${newest}`;
       render();
