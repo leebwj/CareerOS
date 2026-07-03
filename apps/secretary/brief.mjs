@@ -20,7 +20,7 @@ const FEED_LOCAL = join(ROOT, "..", "role-grabber", "data", "roles.json");
 // optional: tracker state exported to this path enables the follow-up section
 const TRACKER = join(ROOT, "data", "tracker-export.json");
 
-const TARGETS = /\b(google|deepmind|meta|apple|amazon|microsoft|figma|notion|stripe|vercel|linear|anthropic|openai|riot games|epic games|roblox|naughty dog|nvidia|unity|valve|blizzard|nintendo|tiktok|bytedance|adobe|airbnb|netflix|ramp|retool|perplexity|scale ai|cursor|databricks|datadog|duolingo|palantir|supabase|replit|cohere|elevenlabs)\b/i;
+// "target" is computed by the grabber (relevant role at a desirable company) → r.target
 
 const readJSON = (p, fallback) => {
   try { return JSON.parse(readFileSync(p, "utf8")); } catch { return fallback; }
@@ -50,7 +50,7 @@ export async function composeBrief(todayISO = new Date().toISOString().slice(0, 
   const fresh = roles.filter((r) => r.posted >= yesterdayISO);
   const newCount = roles.filter((r) => r.isNew).length;
   const topTargets = roles
-    .filter((r) => TARGETS.test(r.company) && r.posted >= yesterdayISO && !r.hot)
+    .filter((r) => r.target && r.posted >= yesterdayISO && !r.hot)
     .sort((a, b) => b.fit - a.fit)
     .slice(0, 5);
 

@@ -199,7 +199,26 @@ async function fromLever(company, site) {
 // ── deterministic fit scoring (title tier + skills + recency + target + level)
 // Tiers not fake-precision percentages — the #1 complaint about commercial
 // match scores is inflated exactness.
-const TARGETS = /\b(google|deepmind|meta|apple|amazon|microsoft|figma|notion|stripe|vercel|linear|anthropic|openai|riot games|epic games|roblox|naughty dog|nvidia|unity|valve|blizzard|nintendo|tiktok|bytedance|adobe|airbnb|netflix|ramp|retool|perplexity|scale ai|cursor|databricks|datadog|duolingo|palantir|supabase|replit|cohere|elevenlabs)\b/i;
+// target companies — the "dream" list across Brian's scope: big tech, design-
+// forward product cos, AI labs, game studios, and graphics/VFX/animation houses.
+const TARGETS = new RegExp("\\b(" + [
+  // big tech
+  "google", "deepmind", "meta", "apple", "amazon", "microsoft", "nvidia", "netflix", "adobe", "tiktok", "bytedance", "qualcomm",
+  // design-forward / product
+  "figma", "notion", "stripe", "vercel", "linear", "airbnb", "retool", "ramp", "spotify", "pinterest", "canva", "framer", "webflow", "dropbox", "coinbase", "robinhood", "discord", "reddit", "snapchat", "twitch", "uber", "lyft", "doordash", "instacart", "duolingo", "databricks", "datadog", "palantir", "squarespace",
+  // AI labs
+  "anthropic", "openai", "perplexity", "cursor", "cohere", "elevenlabs", "scale ai", "mistral", "hugging face", "runway", "midjourney", "character.ai", "together ai", "supabase", "replit",
+  // game studios
+  "electronic arts", "ea sports", "ubisoft", "activision", "blizzard", "take-two", "rockstar", "2k games", "bungie", "insomniac", "naughty dog", "santa monica studio", "sony interactive", "playstation", "bethesda", "zenimax", "respawn", "id software", "sucker punch", "343 industries", "sledgehammer", "riot games", "epic games", "roblox", "valve", "nintendo", "tencent", "square enix", "capcom", "bandai namco", "supercell", "zynga", "scopely", "hoyoverse", "mihoyo", "netease", "niantic", "magic leap",
+  // graphics / VFX / animation / 3D
+  "pixar", "dreamworks", "industrial light", "lucasfilm", "weta", "autodesk", "sidefx", "framestore", "dneg", "walt disney", "disney animation", "sony pictures imageworks", "unity",
+].join("|") + ")\\b", "i");
+
+// role types Brian is targeting (product design · SWE · TA · game · graphics · data)
+const RELEVANT_RX = /\b(product design|ux|ui|interaction design|visual design|design engineer|ux engineer|software engineer|swe|full[- ]?stack|front[- ]?end|back[- ]?end|founding engineer|web develop|developer|engineer|graphics|render(ing)?|technical artist|shader|game|gameplay|3d|unreal|unity|creative technolog)\b/i;
+// …but NOT these — sales/marketing/support/ops roles that merely contain
+// "engineer"/"developer" (e.g. "Sales Engineer", "Salesforce Developer").
+const IRRELEVANT_RX = /\b(sales|marketing|solutions engineer|pre[- ]?sales|salesforce|account executive|\baccount\b|recruit|revenue|finance|accountant|legal|counsel|paralegal|\bgrc\b|compliance|customer success|support engineer|partnerships|go[- ]to[- ]market|\bgtm\b|talent)\b/i;
 const TITLE_TIER = [
   [1.0, /\b(graphics|render(ing)?|technical artist|shader|game|gameplay|engine|3d|unreal|unity|creative technolog|design engineer|ux engineer)\b/i],
   [0.7, /\b(product design|ux|ui|interaction design|visual design|software engineer|swe|full[- ]?stack|front[- ]?end|founding engineer|web develop)\b/i],
@@ -279,8 +298,12 @@ for (const r of collected) {
   r.isNew = prevKeys.size > 0 && !prevKeys.has(key);
   r.firstSeen = prevFirstSeen[key] || r.posted || today;
   r.fit = Math.round(fitScore(r) * 1000) / 1000;
+  // a "target" is a RELEVANT role (Brian's fields) AT a desirable company —
+  // so a revenue analyst at a target company is NOT flagged, but a technical
+  // artist at EA is. One flag, shared by the sheet, tracker, and email.
+  r.target = TARGETS.test(r.company) && RELEVANT_RX.test(r.title) && !IRRELEVANT_RX.test(r.title) && !SENIOR_RX.test(r.title);
   const freshDays = (Date.now() - new Date(r.posted || "2000-01-01").getTime()) / 864e5;
-  r.hot = freshDays <= 2 && r.level !== "full-time" && (TARGETS.test(r.company) || r.fit >= 0.6);
+  r.hot = freshDays <= 2 && r.level !== "full-time" && (r.target || r.fit >= 0.6);
   const age = (Date.now() - new Date(r.posted || today).getTime()) / 864e5;
   if (age > GHOST_DAYS && r.source !== "greenhouse" && r.source !== "ashby" && r.source !== "lever") r.ghost = true;
   roles.push(r);
@@ -309,7 +332,7 @@ const counts = Object.fromEntries(ORDER.map((c) => [c, roles.filter((r) => r.cat
 const LEVEL_ORDER = { intern: 0, "new-grad": 1, "full-time": 2 };
 const byFit = (a, b) => (LEVEL_ORDER[a.level] ?? 3) - (LEVEL_ORDER[b.level] ?? 3) || b.fit - a.fit || (b.posted || "").localeCompare(a.posted || "");
 
-const targetRows = recent.filter((r) => TARGETS.test(r.company)).sort(byFit);
+const targetRows = recent.filter((r) => r.target).sort(byFit);
 const freshRows = recent.filter((r) => r.posted >= freshCut).sort(byFit).slice(0, 120);
 const newCount = roles.filter((r) => r.isNew).length;
 

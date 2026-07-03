@@ -114,7 +114,7 @@
 <script>
 (() => {
   const DATA_URL = "https://raw.githubusercontent.com/leebwj/CareerOS/main/apps/role-grabber/data/roles.json";
-  const TARGETS = /\b(google|deepmind|meta|apple|amazon|microsoft|figma|notion|stripe|vercel|linear|anthropic|openai|riot games|epic games|roblox|naughty dog|nvidia|unity|valve|blizzard|nintendo|tiktok|bytedance|adobe|airbnb|netflix|ramp|retool|perplexity|scale ai)\b/i;
+  // "target" is computed by the grabber (relevant role at a desirable company) → r.target
   const LS = "careeros-tracker-v1";
   const STAGES = ["Applied", "OA / Screen", "Interview", "Offer", "Rejected", "Ghosted"];
 
@@ -163,7 +163,7 @@
   }
 
   function rowHTML(r, k, st) {
-    const isNew = r.isNew, isTgt = TARGETS.test(r.company), isHot = r.hot;
+    const isNew = r.isNew, isTgt = r.target, isHot = r.hot;
     const s = st || {};
     const stageSel = `<select class="st-select" data-k="${esc(k)}">` +
       `<option value="">— stage —</option>` +
@@ -219,7 +219,7 @@
       else if (term && !(r.term || "").split(" / ").includes(term)) return false;
       if (fHot && !r.hot) return false;
       if (fNew && !r.isNew) return false;
-      if (fTgt && !TARGETS.test(r.company)) return false;
+      if (fTgt && !r.target) return false;
       return true;
     });
 

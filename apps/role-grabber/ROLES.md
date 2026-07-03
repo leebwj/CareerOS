@@ -1,46 +1,46 @@
 # 📋 Open Roles — auto-updated twice daily
 
-_Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last run) · sources: Simplify + jobright + 22 company boards direct · ⭐ strong fit ◐ good fit · dashboard: [leebrian.dev/tracker](https://leebrian.dev/tracker) · full data: [`data/roles.csv`](data/roles.csv)_
+_Last updated: 2026-07-03 17:25 UTC · 4227 active US roles (🆕 0 since last run) · sources: Simplify + jobright + 22 company boards direct · ⭐ strong fit ◐ good fit · dashboard: [leebrian.dev/tracker](https://leebrian.dev/tracker) · full data: [`data/roles.csv`](data/roles.csv)_
 
 | Category | Active total |
 |---|---|
 | Graphics / Game / 3D | 21 |
-| Design / UX | 92 |
-| Software Engineering | 1307 |
+| Design / UX | 89 |
+| Software Engineering | 1301 |
 | Data / AI / ML | 1163 |
 | Product | 59 |
 | Quant | 127 |
-| Hardware | 538 |
-| Other | 931 |
+| Hardware | 537 |
+| Other | 930 |
 
 ## 🔥 Fresh — posted in the last 48h (120)
 
 | Posted | Company | Role | Location | Level · Term | Apply |
 |---|---|---|---|---|---|
+| 🔥⭐ 2026-07-02 | EA SPORTS | Technical Artist Intern - FALL 2026 | Austin, TX | intern | [link](https://jobright.ai/jobs/info/6a35e1c1649fdf16292fa9d6?utm_campaign=1049&utm_source=git) |
 | 🔥⭐ 2026-07-02 | Apple | Hardware System Design Engineer - Apple Vision Pro | San Jose, CA | intern | [link](https://jobs.apple.com/en-us/details/200666594) |
 | 🔥⭐ 2026-07-03 | TikTok | UX Researcher Intern (GMPT) - 2026 Summer (BS/MS） | Seattle, WA | intern | [link](https://jobright.ai/jobs/info/6a30d126524fd5657fe12453?utm_campaign=1049&utm_source=git) |
 | 🔥⭐ 2026-07-02 | TikTok | Frontend Software Engineer Project Intern - Global CRM | San Jose, CA | intern | [link](https://lifeattiktok.com/search/7654431844394322229) |
 | 🔥⭐ 2026-07-02 | Palantir | Forward Deployed Software Engineer Intern - Intel | Washington, DC | intern | [link](https://jobs.lever.co/palantir/9e40d77f-b07c-437b-98e7-def9b0184d89/apply) |
 | ⭐ 2026-07-01 | Palantir | Forward Deployed Software Engineer, Internship - Intel | Washington, D.C. | intern | [link](https://jobs.lever.co/palantir/9e40d77f-b07c-437b-98e7-def9b0184d89) |
-| 🔥⭐ 2026-07-02 | EA SPORTS | Technical Artist Intern - FALL 2026 | Austin, TX | intern | [link](https://jobright.ai/jobs/info/6a35e1c1649fdf16292fa9d6?utm_campaign=1049&utm_source=git) |
 | ⭐ 2026-07-01 | Corgan | Brand + Graphics Internship / Fall 2026 | Dallas, TX, US | intern | [link](https://jobright.ai/jobs/info/6a4594ad48d2f00f2a86e085?utm_campaign=1049&utm_source=git) |
 | 🔥⭐ 2026-07-03 | Tesla | Energy Engineering Intern - Software Engineer Diagnostics - Energy Engineering | Palo Alto, CA | intern | [link](https://www.tesla.com/careers/search/job/275805) |
 | 🔥⭐ 2026-07-02 | Fidelity Investments | Software Engineer | Westlake, TX | intern | [link](https://fmr.wd1.myworkdayjobs.com/fidelitycareers/job/Westlake-TX/Leap-Software-Engineer_2132114) |
 | 🔥⭐ 2026-07-02 | Traackr | Software Engineer Intern - Internal Tooling | NYC | intern | [link](https://jobs.lever.co/traackr/9d884d26-018c-45b2-8cfb-f17d29d4e688/apply) |
-| 🔥◐ 2026-07-03 | TikTok | Copyright Solution Product Manager Intern - Tiktok-Music | San Jose, CA | intern | [link](https://lifeattiktok.com/search/7657541997725288757) |
-| 🔥◐ 2026-07-03 | TikTok | Product Manager Intern - TikTok Product Content Ecosystem | San Jose, CA | intern | [link](https://lifeattiktok.com/search/7657778928769534213) |
-| 🔥◐ 2026-07-03 | ByteDance | Research Scientist Intern - AI Infrastructure | Seattle, WA | intern | [link](https://jobs.bytedance.com/en/position/7553916190126524680/detail) |
-| 🔥◐ 2026-07-03 | ByteDance | Research Scientist Intern - AI Infrastructure | San Jose, CA | intern | [link](https://jobs.bytedance.com/en/position/7553917136512076050/detail) |
+| ◐ 2026-07-03 | TikTok | Copyright Solution Product Manager Intern - Tiktok-Music | San Jose, CA | intern | [link](https://lifeattiktok.com/search/7657541997725288757) |
+| ◐ 2026-07-03 | TikTok | Product Manager Intern - TikTok Product Content Ecosystem | San Jose, CA | intern | [link](https://lifeattiktok.com/search/7657778928769534213) |
+| ◐ 2026-07-03 | ByteDance | Research Scientist Intern - AI Infrastructure | Seattle, WA | intern | [link](https://jobs.bytedance.com/en/position/7553916190126524680/detail) |
+| ◐ 2026-07-03 | ByteDance | Research Scientist Intern - AI Infrastructure | San Jose, CA | intern | [link](https://jobs.bytedance.com/en/position/7553917136512076050/detail) |
 | ◐ 2026-07-01 | Optiver | Software Engineer Intern | Chicago, IL | intern | [link](https://www.optiver.com/join-us/jobs/8604760002/?gh_jid=8604760002) |
 | ◐ 2026-07-01 | Optiver | Software Engineer Intern | Austin, TX | intern | [link](https://www.optiver.com/join-us/jobs/8401052002/?gh_jid=8401052002) |
 | ◐ 2026-07-01 | Tesla | Software Engineer Intern - Distributed Systems Software Engineer - Energy Engineering | Palo Alto, CA | intern | [link](https://www.tesla.com/careers/search/job/275558) |
 | ◐ 2026-07-01 | Palo Alto Networks | Software Engineer Intern | Palo Alto, CA | intern | [link](https://paloaltonetworks.wd5.myworkdayjobs.com/panwexternalcareers/job/Office---USA---CA---Headquarters/Intern---Software-Engineer--Bachelor-s-_JR-010190) |
 | ◐ 2026-07-01 | IMC Trading | Software Engineer Intern | Chicago, IL | intern | [link](https://job-boards.eu.greenhouse.io/imc/jobs/4823924101) |
 | ◐ 2026-07-01 | NOX METALS | Software Engineer Intern | Detroit, MI | intern | [link](https://jobs.ashbyhq.com/nox-metals/6edc2dff-7c4b-44b8-abba-32d5953b8c5f/application) |
-| 🔥◐ 2026-07-02 | NVIDIA | PhD Research Intern - System Software and I/O Architecture | Urbana, IL | intern | [link](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/PhD-Research-Intern--System-Software-and-I-O-Architecture---Fall-2026_JR2019667) |
+| ◐ 2026-07-02 | NVIDIA | PhD Research Intern - System Software and I/O Architecture | Urbana, IL | intern | [link](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/PhD-Research-Intern--System-Software-and-I-O-Architecture---Fall-2026_JR2019667) |
 | 🔥◐ 2026-07-02 | NVIDIA | Java Engineer Intern | Santa Clara, CA | intern | [link](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Java-Engineering-Intern---Fall-2026_JR2019769) |
-| 🔥◐ 2026-07-02 | NVIDIA | Applied Research Intern - NLP | Santa Clara, CA | intern | [link](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Applied-Research-Intern--NLP---Fall-2026_JR2010488) |
-| 🔥◐ 2026-07-02 | TikTok | Product Solutions and Operations Project Intern - Commerce Ads | San Jose, CA | intern | [link](https://lifeattiktok.com/search/7657640284071954741) |
+| ◐ 2026-07-02 | NVIDIA | Applied Research Intern - NLP | Santa Clara, CA | intern | [link](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Applied-Research-Intern--NLP---Fall-2026_JR2010488) |
+| ◐ 2026-07-02 | TikTok | Product Solutions and Operations Project Intern - Commerce Ads | San Jose, CA | intern | [link](https://lifeattiktok.com/search/7657640284071954741) |
 |  2026-07-03 | Saronic | Enterprise Technology Intern - AI and Automation | Austin, TX | intern | [link](https://jobs.ashbyhq.com/saronic/c95c2e3a-4c67-47b0-a03d-0e0317ac11a3/application) |
 |  2026-07-03 | Zoox | Student Worker - AI Validation and Benchmarking Engineer | San Mateo, CA | intern | [link](https://jobs.lever.co/zoox/6d8b31d2-6391-44b7-bf9f-93360172fae8/apply) |
 |  2026-07-03 | Travelers | Data Science Leadership Development Program Intern - Dsldp | Hartford, CT | intern | [link](https://travelers.wd5.myworkdayjobs.com/External/job/CT---Hartford/Data-Science-Leadership-Development-Program--DSLDP--Intern_R-51337) |
@@ -138,10 +138,11 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 |  2026-07-01 | The Wonderful Company | Summer Internship Intern - Business Systems Analyst | Bakersfield, CA | intern | [link](https://jobs.smartrecruiters.com/TheWonderfulCompany/744000135343439) |
 |  2026-07-01 | Seven Research | Deep Learning Researcher Intern | NYC | intern | [link](https://job-boards.greenhouse.io/sevenresearch/jobs/4895007008) |
 
-## 🎯 Target companies (523 recent)
+## 🎯 Target companies (193 recent)
 
 | Posted | Company | Role | Location | Level · Term | Apply |
 |---|---|---|---|---|---|
+| 🔥⭐ 2026-07-02 | EA SPORTS | Technical Artist Intern - FALL 2026 | Austin, TX | intern | [link](https://jobright.ai/jobs/info/6a35e1c1649fdf16292fa9d6?utm_campaign=1049&utm_source=git) |
 | 🔥⭐ 2026-07-02 | Apple | Hardware System Design Engineer - Apple Vision Pro | San Jose, CA | intern | [link](https://jobs.apple.com/en-us/details/200666594) |
 | 🔥⭐ 2026-07-03 | TikTok | UX Researcher Intern (GMPT) - 2026 Summer (BS/MS） | Seattle, WA | intern | [link](https://jobright.ai/jobs/info/6a30d126524fd5657fe12453?utm_campaign=1049&utm_source=git) |
 | 🔥⭐ 2026-07-02 | TikTok | Frontend Software Engineer Project Intern - Global CRM | San Jose, CA | intern | [link](https://lifeattiktok.com/search/7654431844394322229) |
@@ -169,50 +170,24 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 | ⭐ 2026-06-15 | TikTok | Software Engineer/Mobile Engineer Intern - Monetization Technology - Ads Core Demonstration | San Jose, CA | intern | [link](https://lifeattiktok.com/search/7532444719809628424) |
 | ⭐ 2026-06-15 | TikTok | Software Engineer Intern - Monetization Technology - Ads Creative | San Jose, CA | intern | [link](https://lifeattiktok.com/search/7532460740410738952) |
 | ⭐ 2026-06-15 | TikTok | Software Engineer Intern - Capital Platform | San Jose, CA | intern | [link](https://lifeattiktok.com/search/7534536157456058632) |
-| 🔥◐ 2026-07-03 | TikTok | Copyright Solution Product Manager Intern - Tiktok-Music | San Jose, CA | intern | [link](https://lifeattiktok.com/search/7657541997725288757) |
-| 🔥◐ 2026-07-03 | TikTok | Product Manager Intern - TikTok Product Content Ecosystem | San Jose, CA | intern | [link](https://lifeattiktok.com/search/7657778928769534213) |
-| 🔥◐ 2026-07-03 | ByteDance | Research Scientist Intern - AI Infrastructure | Seattle, WA | intern | [link](https://jobs.bytedance.com/en/position/7553916190126524680/detail) |
-| 🔥◐ 2026-07-03 | ByteDance | Research Scientist Intern - AI Infrastructure | San Jose, CA | intern | [link](https://jobs.bytedance.com/en/position/7553917136512076050/detail) |
 | ◐ 2026-06-09 | TikTok | AI Software Engineer Intern - Transaction Platform | San Jose, CA | intern | [link](https://lifeattiktok.com/search/7646621925436131637) |
-| 🔥◐ 2026-07-02 | NVIDIA | PhD Research Intern - System Software and I/O Architecture | Urbana, IL | intern | [link](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/PhD-Research-Intern--System-Software-and-I-O-Architecture---Fall-2026_JR2019667) |
 | 🔥◐ 2026-07-02 | NVIDIA | Java Engineer Intern | Santa Clara, CA | intern | [link](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Java-Engineering-Intern---Fall-2026_JR2019769) |
-| 🔥◐ 2026-07-02 | NVIDIA | Applied Research Intern - NLP | Santa Clara, CA | intern | [link](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Applied-Research-Intern--NLP---Fall-2026_JR2010488) |
 | ◐ 2026-06-04 | ByteDance | Software Engineer Intern - Developer Infrastructure | San Jose, CA | intern | [link](https://jobs.bytedance.com/en/position/7595707875767699765/detail) |
 | ◐ 2026-06-03 | ByteDance | Software Engineer Intern - Applied Machine Learning-Enterprise | San Jose, CA | intern | [link](https://jobs.bytedance.com/en/position/7533045355162044690/detail) |
-| ◐ 2026-06-23 | Netflix | AI/ML Scientist Intern - AIMS AI Foundations | Los Gatos, CA | intern | [link](https://explore.jobs.netflix.net/careers/job/790316547536) |
-| ◐ 2026-06-16 | Meta | Research Scientist Intern - State Estimation for Dexterous Manipulation | Redmond, WA | intern | [link](https://www.metacareers.com/jobs/2774289902955470) |
-| 🔥◐ 2026-07-02 | TikTok | Product Solutions and Operations Project Intern - Commerce Ads | San Jose, CA | intern | [link](https://lifeattiktok.com/search/7657640284071954741) |
-| ◐ 2026-06-15 | TikTok | Data Scientist Intern | Seattle, WA | intern | [link](https://lifeattiktok.com/search/7532238337198622983) |
-| ◐ 2026-06-15 | TikTok | Data Analyst Intern - TikTok Shop AMS Data Science | Seattle, WA | intern | [link](https://lifeattiktok.com/search/7532267134924867847) |
-| ◐ 2026-06-15 | TikTok | Research Scientist Intern - Trust and Safety | San Jose, CA | intern | [link](https://lifeattiktok.com/search/7527582397938223367) |
-| ◐ 2026-06-15 | TikTok | Machine Learning Scientist Intern - Tiktok-Content Ecology-LLM application | San Jose, CA | intern | [link](https://lifeattiktok.com/search/7532390182411405586) |
-| ◐ 2026-06-15 | TikTok | Research Scientist Intern - Trust and Safety - CV/NLP/Multimodal LLM | Seattle, WA | intern | [link](https://lifeattiktok.com/search/7527585101065652498) |
-| ◐ 2026-06-15 | TikTok | Data Scientist Intern - TikTok Shop User Product DS | Seattle, WA | intern | [link](https://lifeattiktok.com/search/7532254890627696903) |
 | ◐ 2026-06-15 | TikTok | Machine Learning Engineer Intern | San Jose, CA | intern | [link](https://lifeattiktok.com/search/7534855949620119815) |
 | ◐ 2026-06-15 | TikTok | Machine Learning Engineer Intern - Tiktok-Recommendation | San Jose, CA | intern | [link](https://lifeattiktok.com/search/7527065936093858055) |
 | ◐ 2026-06-15 | TikTok | Machine Learning Engineer Intern - Trust and Safety - CV/NLP/Multimodal LLM | San Jose, CA | intern | [link](https://lifeattiktok.com/search/7527589557336869138) |
 | ◐ 2026-06-15 | TikTok | Machine Learning Engineer Intern - Global E-Commerce Content Recommendation | Seattle, WA | intern | [link](https://lifeattiktok.com/search/7527077153591675154) |
-|  2026-06-06 | Scale AI | AI Builder Intern | San Francisco, CA; New York, NY | intern | [link](https://job-boards.greenhouse.io/scaleai/jobs/4703343005) |
-|  2026-06-06 | Scale AI | AI Builder Intern | SF | intern | [link](https://job-boards.greenhouse.io/scaleai/jobs/4703343005) |
-|  2026-06-04 | ByteDance | Research Intern - Seed | San Jose, CA | intern | [link](https://jobs.bytedance.com/en/position/7529661012351420690/detail) |
 |  2026-06-03 | ByteDance | Software Development Engineer Intern - Network Automation | San Jose, CA | intern | [link](https://jobs.bytedance.com/en/position/7537152240618195208/detail) |
 |  2026-06-03 | ByteDance | Software Development Engineer Intern - Network Automation | Seattle, WA | intern | [link](https://jobs.bytedance.com/en/position/7537152632018012424/detail) |
 |  2026-06-03 | ByteDance | Machine Learning Engineer Intern - E-commerce Governance Algorithms | Seattle, WA | intern | [link](https://jobs.bytedance.com/en/position/7535168003103033618/detail) |
-|  2026-06-03 | ByteDance | Applied Research Intern - AI Safety Security - Global Tech Research Program | San Jose, CA | intern | [link](https://jobs.bytedance.com/en/position/7645070235035044101/detail) |
-|  2026-06-03 | ByteDance | Research Intern - SDN Traffic Intelligence & Control | Seattle, WA | intern | [link](https://jobs.bytedance.com/en/position/7537161874254776583/detail) |
-|  2026-06-03 | ByteDance | Research Intern - SDN Traffic Intelligence & Control | San Jose, CA | intern | [link](https://jobs.bytedance.com/en/position/7537161497627281682/detail) |
 |  2026-06-03 | ByteDance | Machine Learning Engineer Intern - E-Commerce Knowledge Graph - Computer Vision/Multimodal/Natural Language Processing | Seattle, WA | intern | [link](https://jobs.bytedance.com/en/position/7543005612200970503/detail) |
 |  2026-06-03 | ByteDance | Network Software Development Engineer Intern - Network Switch | San Jose, CA | intern | [link](https://jobs.bytedance.com/en/position/7537117266451171592/detail) |
 |  2026-06-03 | ByteDance | Machine Learning Engineer Intern - Global E-commerce Risk Control | Seattle, WA | intern | [link](https://jobs.bytedance.com/en/position/7535953226975054098/detail) |
-|  2026-06-03 | ByteDance | Research Scientist Intern - Applied Machine Learning-Enterprise | San Jose, CA | intern | [link](https://jobs.bytedance.com/en/position/7539697151993268488/detail) |
 |  2026-06-03 | ByteDance | Graduate Software Development Engineer | San Jose, CA | intern | [link](https://jobs.bytedance.com/en/position/7509266973236152583/detail) |
-|  2026-06-04 | ByteDance | Student Researcher - LLM Post Training - Agent & Reinforcement Learning | San Jose, CA | intern | [link](https://jobs.bytedance.com/en/position/7532653875506989320/detail) |
-|  2026-06-04 | ByteDance | Student Researcher - Seed Vision - Long-Range Video Generation | San Jose, CA | intern | [link](https://jobs.bytedance.com/en/position/7533027329703282951/detail) |
-|  2026-06-04 | ByteDance | Student Researcher - Multiple Teams | San Jose, CA | intern | [link](https://jobs.bytedance.com/en/position/7377527065203607834/detail) |
-|  2026-06-03 | ByteDance | Student Researcher Intern | San Jose, CA | intern | [link](https://jobs.bytedance.com/en/position/7538943251756910856/detail) |
-|  2026-06-03 | ByteDance | Payment Partnership Project Intern - Global Payment | San Jose, CA | intern | [link](https://jobs.bytedance.com/en/position/7642450978503641397/detail) |
 | 🔥⭐ 2026-07-02 | Apple | Graphics Software Content Engineer | Orlando, FL | new-grad | [link](https://jobs.apple.com/en-us/details/200669452) |
 | 🔥⭐ 2026-07-02 | Apple | Software Engineer-Systems | Cupertino, CA | new-grad | [link](https://jobs.apple.com/en-us/details/200669153) |
+| ⭐ 2026-07-01 | The Walt Disney Company | Product Software Engineer 1 | Glendale, CA | new-grad | [link](https://disney.wd5.myworkdayjobs.com/disneycareerdc/job/Glendale-CA-USA/Product-Software-Engineer-I_10151599-2) |
 | ⭐ 2026-06-29 | Palantir | Forward Deployed Software Engineer, New Grad - Commercial | Chicago, IL | new-grad | [link](https://jobs.lever.co/palantir/e500bcf3-19d8-4d3c-b340-4d76e4a55b40) |
 | ⭐ 2026-06-29 | Palantir | Forward Deployed Software Engineer New Grad - Commercial | Chicago, IL | new-grad | [link](https://jobs.lever.co/palantir/e500bcf3-19d8-4d3c-b340-4d76e4a55b40/apply) |
 | ⭐ 2026-06-29 | Palantir | Software Engineer New Grad - Production Infrastructure | Washington, DC | new-grad | [link](https://jobs.lever.co/palantir/15844944-fb69-4b57-9531-e988650b20c6/apply) |
@@ -221,6 +196,7 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 | ⭐ 2026-06-29 | Microsoft | Software Engineer 2 | Redmond, WA | new-grad | [link](https://apply.careers.microsoft.com/careers/job/1970393556917742) |
 | ⭐ 2026-06-29 | Palantir | Software Engineer New Grad - Defense | Palo Alto, CA | new-grad | [link](https://jobs.lever.co/palantir/f362d7aa-360d-4059-ab38-f482742693b3/apply) |
 | ⭐ 2026-06-29 | Palantir | Forward Deployed Software Engineer New Grad - Commercial | NYC | new-grad | [link](https://jobs.lever.co/palantir/2e6b0ac8-83e9-4be5-a3aa-cf319f751728/apply) |
+| ⭐ 2026-06-26 | Twitch | Software Engineer - Memberships | Seattle, WA | new-grad | [link](https://job-boards.greenhouse.io/twitch/jobs/8605153002) |
 | ⭐ 2026-06-16 | Palantir | Forward Deployed Software Engineer New Grad | NYC | new-grad | [link](https://jobs.lever.co/palantir/d1ac83d0-e923-42a5-8e6d-58dd0cab25ca/apply) |
 | ⭐ 2026-06-16 | Palantir | Forward Deployed Software Engineer New Grad | Washington, DC | new-grad | [link](https://jobs.lever.co/palantir/cbe90327-3e6e-451c-a54c-1d3cbcef5aeb/apply) |
 | ◐ 2026-06-15 | Palantir | Forward Deployed Software Engineer, New Grad - Intel, US Government | Washington, D.C. | new-grad | [link](https://jobs.lever.co/palantir/fbca0358-083a-4222-bdbb-3bd729b48382) |
@@ -235,52 +211,24 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 | 🔥◐ 2026-07-02 | Apple | Custom Timing and Verification CAD Engineer | Austin, TX | new-grad | [link](https://jobs.apple.com/en-us/details/200669990) |
 | 🔥◐ 2026-07-02 | Apple | Darwin Runtime Engineer - Core OS | Cupertino, CA | new-grad | [link](https://jobs.apple.com/en-us/details/200668853) |
 | ◐ 2026-06-03 | ByteDance | Graduate Software Engineer - Cloud Native Infrastructure | San Jose, CA | new-grad | [link](https://jobs.bytedance.com/en/position/7538951609075271943/detail) |
-| ◐ 2026-06-30 | Roblox | Senior Machine Learning Engineer - Systems - Embodied AI/Npcs | San Mateo, CA | new-grad | [link](https://careers.roblox.com/jobs/8027587?gh_jid=8027587) |
 | ◐ 2026-06-29 | Amazon | Data Engineer Data Science Focus - Ads Science Analysis & Tech - Asat | Palo Alto, CA | new-grad | [link](https://amazon.jobs/en/jobs/10461781/data-engineer-data-science-focus-ads-science-analysis-tech-asat) |
 | ◐ 2026-06-26 | Palantir | Privacy & Civil Liberties Engineer New Grad | NYC | new-grad | [link](https://jobs.lever.co/palantir/95e0d2b0-437a-4096-a5c6-0f247f426c90/apply) |
 | ◐ 2026-06-25 | Palantir | Privacy & Civil Liberties Engineer - New Grad | New York, NY | new-grad | [link](https://jobs.lever.co/palantir/95e0d2b0-437a-4096-a5c6-0f247f426c90) |
-| ◐ 2026-06-23 | Microsoft | AI Engineer 2 & Senior AI Engineer - Getting Customers Ready for AI | Redmond, WA | new-grad | [link](https://apply.careers.microsoft.com/careers/job/1970393556899615) |
-| ◐ 2026-06-20 | Adobe | Product Manager - Acrobat Sign | SF | new-grad | [link](https://adobe.wd5.myworkdayjobs.com/external_experienced/job/San-Jose/Product-Manager---Acrobat-Sign_R167587) |
-| 🔥 2026-07-03 | Microsoft | Threat Context Analyst | United States | new-grad | [link](https://apply.careers.microsoft.com/careers/job/1970393556868626) |
-|  2026-06-18 | Amazon | Data Scientist 1 - SCOT-Inbound - Planning Optimization | NYC | new-grad | [link](https://amazon.jobs/en/jobs/10451969/data-scientist-i-scot-inbound-planning-optimization) |
 |  2026-06-18 | Adobe | Software Development Engineer 2 | San Jose, CA | new-grad | [link](https://adobe.wd5.myworkdayjobs.com/external_experienced/job/San-Jose/Software-Development-Engineer-2_R169364-1) |
-|  2026-06-16 | Netflix | Research Scientist 4 - Machine Learning and Inference Research - Large Language Model Post-Training | LA | new-grad | [link](https://explore.jobs.netflix.net/careers/job/790311856514) |
-|  2026-06-15 | TikTok | CV/NLP/Multimodal LLM Research Scientist Graduate - Trust and Safety | Seattle, WA | new-grad | [link](https://lifeattiktok.com/search/7517106896071903496) |
-|  2026-06-15 | TikTok | Graduate Research Scientist - Multiple Teams | San Jose, CA | new-grad | [link](https://lifeattiktok.com/search/7517105710544161032) |
 |  2026-06-15 | TikTok | CV/NLP/Multimodal Large Language Model Engineer Graduate - TikTok Trust and Safety - BS/MS | San Jose, CA | new-grad | [link](https://lifeattiktok.com/search/7517099008936397064) |
-|  2026-06-15 | TikTok | Graduate Research Scientist - Tiktok Recommendation | San Jose, CA | new-grad | [link](https://lifeattiktok.com/search/7532216894792222994) |
-|  2026-06-15 | TikTok | General Hire – Research Scientist Graduate - TikTok Recommendation | San Jose, CA | new-grad | [link](https://lifeattiktok.com/search/7516697804673190151) |
-|  2026-06-15 | TikTok | Graduate Research Scientist - Tiktok Recommendation-Agentic AI | San Jose, CA | new-grad | [link](https://lifeattiktok.com/search/7523144222812408071) |
-|  2026-06-15 | TikTok | Data Scientist - TikTok Live | San Jose, CA | new-grad | [link](https://lifeattiktok.com/search/7389873473475479817) |
-|  2026-06-15 | TikTok | Graduate Research Scientist - Trust and Safety | San Jose, CA | new-grad | [link](https://lifeattiktok.com/search/7530772847212644616) |
 |  2026-06-15 | TikTok | Machine Learning Engineer Graduate - TikTok Recommendation | San Jose, CA | new-grad | [link](https://lifeattiktok.com/search/7518139910798215442) |
 |  2026-06-15 | TikTok | CV/NLP/Multimodal Large Language Models Machine Learning Engineer Graduate - Tiktok-Trust and Safety | Seattle, WA | new-grad | [link](https://lifeattiktok.com/search/7517107684337748242) |
-|  2026-06-15 | TikTok | Research Scientist in Generative AI - Intelligent Creation | San Jose, CA | new-grad | [link](https://lifeattiktok.com/search/7517442299329300754) |
-|  2026-07-01 | Notion | Technical Recruiter, Early Career | San Francisco, California | new-grad | [link](https://jobs.ashbyhq.com/notion/e3e0c9e9-4c9a-4390-b713-27d465bce2f1) |
 |  2026-06-12 | Meta | Data Engineer – University Grad - Product Analytics | Menlo Park, CA | new-grad | [link](https://www.metacareers.com/jobs/1468691051611430) |
-|  2026-06-09 | ByteDance | Graduate Research Scientist - Distributed NoSQL Database Systems | San Jose, CA | new-grad | [link](https://jobs.bytedance.com/en/position/7520746681299011858/detail) |
-|  2026-06-04 | ByteDance | Research Scientist in Multimodal Interaction and World Model | San Jose, CA | new-grad | [link](https://jobs.bytedance.com/en/position/7623543401908848949/detail) |
-|  2026-06-04 | ByteDance | Research Scientist in Multimodal Interaction and World Model – Graduates - Seed | San Jose, CA | new-grad | [link](https://jobs.bytedance.com/en/position/7623545710681016581/detail) |
-|  2026-06-04 | ByteDance | Research Scientist Vision Foundation Model - Seed | San Jose, CA | new-grad | [link](https://jobs.bytedance.com/en/position/7623540885834107189/detail) |
 |  2026-06-04 | ByteDance | AI Vision Research Engineer Graduate - PhD | San Jose, CA | new-grad | [link](https://jobs.bytedance.com/en/position/7534943709490989319/detail) |
-|  2026-06-04 | ByteDance | Graduate Research Scientist - Multimodal Interaction and World Model - PhD | San Jose, CA | new-grad | [link](https://jobs.bytedance.com/en/position/7488465961747220744/detail) |
 |  2026-06-03 | ByteDance | Graduate Machine Learning Engineer | San Jose, CA | new-grad | [link](https://jobs.bytedance.com/en/position/7515571512419338514/detail) |
 |  2026-06-03 | ByteDance | Graduate AIOps Engineer - Data Center Networking | San Jose, CA | new-grad | [link](https://jobs.bytedance.com/en/position/7538114876280817927/detail) |
-|  2026-06-03 | ByteDance | Machine Learning Graduate - E-Commerce Governance - BS/MS | Seattle, WA | new-grad | [link](https://jobs.bytedance.com/en/position/7538929248565381383/detail) |
 |  2026-06-03 | ByteDance | RDMA Network Software Development Engineer Graduate - High Speed Network | Seattle, WA | new-grad | [link](https://jobs.bytedance.com/en/position/7509266973013690631/detail) |
 |  2026-06-03 | ByteDance | Graduate Machine Learning Engineer - E-Commerce Governance - PhD | San Jose, CA | new-grad | [link](https://jobs.bytedance.com/en/position/7527426391449864466/detail) |
 |  2026-06-03 | ByteDance | Graduate Machine Learning Engineer - E-Commerce Governance-CV/NLP/Multimodal/LLM | Seattle, WA | new-grad | [link](https://jobs.bytedance.com/en/position/7515582521393318151/detail) |
 |  2026-06-03 | ByteDance | Graduate Machine Learning Engineer - E-Commerce Governance - PhD | Seattle, WA | new-grad | [link](https://jobs.bytedance.com/en/position/7527430521355143431/detail) |
-|  2026-06-03 | ByteDance | Graduate Research Scientist - Applied Machine Learning - ML System | San Jose, CA | new-grad | [link](https://jobs.bytedance.com/en/position/7540109673547581703/detail) |
 |  2026-06-03 | ByteDance | AI/LLM Network Software Development Engineer Graduate - High Speed Network | San Jose, CA | new-grad | [link](https://jobs.bytedance.com/en/position/7509262740803930376/detail) |
 |  2026-06-03 | ByteDance | Software Development Engineer Graduate - SDN Traffic Intelligence & Control | Seattle, WA | new-grad | [link](https://jobs.bytedance.com/en/position/7509262736619571474/detail) |
 |  2026-06-03 | ByteDance | AI/LLM Network Software Development Engineer Graduate - High Speed Network - PhD | Seattle, WA | new-grad | [link](https://jobs.bytedance.com/en/position/7509248845324273938/detail) |
-|  2026-06-25 | Figma | Early Career Recruiter | San Francisco, CA • New York, NY • United States | new-grad | [link](https://boards.greenhouse.io/figma/jobs/6099199004?gh_jid=6099199004) |
-|  2026-06-23 | OpenAI | Technical Community Lead, Campus Leaders | San Francisco | new-grad | [link](https://jobs.ashbyhq.com/openai/eb58b9cb-4a87-4d58-863b-5516ed1fbcae) |
-|  2026-06-22 | Amazon | Catalog Specialist | Bellevue, WA | new-grad | [link](https://amazon.jobs/en/jobs/10449772/catalog-specialist-rcx) |
-|  2026-06-16 | Palantir | Deployment Strategist New Grad - Intel - US Government | Washington, DC | new-grad | [link](https://jobs.lever.co/palantir/5d8286d6-992a-404b-94af-99c173d40299/apply) |
-|  2026-06-15 | Palantir | Deployment Strategist, New Grad - Intel, US Government | Washington, D.C. | new-grad | [link](https://jobs.lever.co/palantir/5d8286d6-992a-404b-94af-99c173d40299) |
-|  2026-06-05 | Notion | People Strategy & Operations, Early Career | San Francisco, California | new-grad | [link](https://jobs.ashbyhq.com/notion/83c8907b-e05e-401a-a5de-9ebe0b1a800f) |
 | ⭐ 2026-06-26 | Riot Games | Software Engineer, Game UI - League of Legends | Los Angeles, USA | full-time | [link](https://www.riotgames.com/en/work-with-us/job/8025007?gh_jid=8025007) |
 | ⭐ 2026-06-23 | Epic Games | Gameplay Designer | Cary,North Carolina,United States | full-time | [link](https://epicgames.com/careers/jobs/6098768004?gh_jid=6098768004) |
 | ⭐ 2026-06-23 | Palantir | Web Design Engineer | New York, NY | full-time | [link](https://jobs.lever.co/palantir/a3eaa0ef-3378-495f-8308-edbd9a93d26c) |
@@ -290,7 +238,6 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 | ⭐ 2026-06-10 | Epic Games | Gameplay Programmer | Cary,North Carolina,United States | full-time | [link](https://epicgames.com/careers/jobs/6001690004?gh_jid=6001690004) |
 | ⭐ 2026-06-10 | Epic Games | Lead Gameplay Programmer | Cary,North Carolina,United States | full-time | [link](https://epicgames.com/careers/jobs/6006101004?gh_jid=6006101004) |
 | ⭐ 2026-06-29 | Ramp | Software Engineer, Developer API | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/42527ca9-03b9-499e-a5c4-18e4245af138) |
-| ⭐ 2026-06-29 | OpenAI | Founding Full Stack Software Engineer, Legal | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/fcb0ed1a-9329-4e8f-8aab-92bb626d8141) |
 | ⭐ 2026-06-28 | Cursor | Software Engineer, Storage | San Francisco | full-time | [link](https://jobs.ashbyhq.com/cursor/299ce422-0281-4282-aadd-bc22553be0b5) |
 | ⭐ 2026-06-28 | Cursor | Software Engineer, Services Platform | San Francisco | full-time | [link](https://jobs.ashbyhq.com/cursor/6eef7144-f2cc-48a8-b065-01f04e4c70ff) |
 | ◐ 2026-06-26 | Figma | Software Engineer, Traffic | San Francisco, CA • New York, NY • United States | full-time | [link](https://boards.greenhouse.io/figma/jobs/6102379004?gh_jid=6102379004) |
@@ -306,8 +253,8 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 | ◐ 2026-06-20 | Vercel | Software Engineer, eve | Hybrid - San Francisco, New York City | full-time | [link](https://job-boards.greenhouse.io/vercel/jobs/6098390004) |
 | ◐ 2026-06-19 | Cohere | Software Engineer, Adoption | London | full-time | [link](https://jobs.ashbyhq.com/cohere/732c05f5-a9ec-43a3-9ae4-3ec7f7630fff) |
 | ◐ 2026-06-17 | OpenAI | Full Stack Software Engineer, Agent Enablement | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/2d7f1028-ce9b-49c7-acc8-782714ca1cf4) |
-| ◐ 2026-06-16 | Cohere | Software Engineer, North for Finance | Europe | full-time | [link](https://jobs.ashbyhq.com/cohere/f722247c-291b-44ee-af67-5159b8d5d9b9) |
 | ◐ 2026-06-15 | Stripe | Full-Stack Engineer | San Francisco | full-time | [link](https://stripe.com/jobs/search?gh_jid=8003382) |
+| ◐ 2026-06-15 | Stripe | Software Engineer | New York, NY | full-time | [link](https://stripe.com/jobs/search?gh_jid=8009143) |
 | ◐ 2026-06-15 | Cohere | Software Engineer, Agents & Automations | London | full-time | [link](https://jobs.ashbyhq.com/cohere/4a3c3eb2-ae2e-4a86-a677-7bdecbc7d76e) |
 | ◐ 2026-06-15 | OpenAI | Full Stack Software Engineer, ChatGPT Finances | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/39e06ef9-5e62-425d-81e2-e8690188011f) |
 | ◐ 2026-06-12 | Replit | Product Engineer, Product Platform (Frontend) | Foster City, CA | full-time | [link](https://jobs.ashbyhq.com/replit/657a90d2-23cc-4c86-b9ed-a21900efee0d) |
@@ -319,20 +266,20 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 | ◐ 2026-06-11 | Palantir | Software Engineer - Core Interfaces | New York, NY | full-time | [link](https://jobs.lever.co/palantir/3b4ae28e-c4f2-4654-83b4-64366bfe72fa) |
 | ◐ 2026-06-11 | Palantir | Software Engineer - Defense Applications | New York, NY | full-time | [link](https://jobs.lever.co/palantir/c288bb43-3c63-4557-bd96-600ef0d1b7a6) |
 | ◐ 2026-06-10 | OpenAI | Software Engineer, API Multicloud | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/4070d52e-0263-4cd5-9107-052b4ecc1209) |
-| ◐ 2026-07-03 | Anthropic | Research Engineer, Life Sciences | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5265365008) |
-| ◐ 2026-07-03 | Stripe | AI Engineer | Chicago | full-time | [link](https://stripe.com/jobs/search?gh_jid=8044460) |
 | ◐ 2026-06-09 | Roblox |  Software Engineer, Storage | San Mateo, CA, United States | full-time | [link](https://careers.roblox.com/jobs/7991654?gh_jid=7991654) |
 | ◐ 2026-06-09 | Notion | Software Engineer, Security | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/def3f337-5593-491c-b34d-e0b53f2a5cac) |
 | ◐ 2026-06-09 | OpenAI | Full Stack Software Engineer, ChatGPT ImageGen | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/6b47238e-025a-4350-b270-2f3564002fcc) |
 | ◐ 2026-06-09 | OpenAI | Software Engineer, Internal Applications - Enterprise | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/db053b0e-c1a5-4b7a-bcb6-6e766629e7b1) |
 | ◐ 2026-06-09 | OpenAI | Backend Software Engineer, ChatGPT ImageGen | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/e7a4ee23-138a-4004-916e-72a452e7d115) |
+| ◐ 2026-07-03 | Stripe | AI Engineer | Chicago | full-time | [link](https://stripe.com/jobs/search?gh_jid=8044460) |
+| ◐ 2026-07-03 | Anthropic | Research Engineer, Life Sciences | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5265365008) |
 | ◐ 2026-06-08 | Stripe | Software Engineer | Seattle  | full-time | [link](https://stripe.com/jobs/search?gh_jid=7991636) |
-| ◐ 2026-06-08 | Ramp | Software Engineer, Onboarding | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/f1b3ca8d-d55f-4159-9a3b-f69ad0d981bc) |
 | ◐ 2026-06-08 | OpenAI | Systems Software Engineer, Security, First Party Hardware | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/1c48f39f-60ea-4636-87ed-8b4b4f5243e5) |
 | ◐ 2026-06-08 | OpenAI | Software Engineer, Scaled Abuse | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/3c67f712-697d-48d8-b05c-01be896e61da) |
+| ◐ 2026-06-08 | Ramp | Software Engineer, Onboarding | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/f1b3ca8d-d55f-4159-9a3b-f69ad0d981bc) |
 | ◐ 2026-06-06 | OpenAI | Software Engineer, Cloud Agents | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/f6278b60-dd42-4aa8-a3cd-c105f75ae8ae) |
-| ◐ 2026-07-02 | Stripe | Technical Operations Engineer, Payments  | South San Francisco  | full-time | [link](https://stripe.com/jobs/search?gh_jid=8029252) |
 | ◐ 2026-06-05 | OpenAI | Robotics Software Engineer | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/fabfc6c5-57b5-49ba-aae9-e7dd5d7030ca) |
+| ◐ 2026-07-02 | Stripe | Technical Operations Engineer, Payments  | South San Francisco  | full-time | [link](https://stripe.com/jobs/search?gh_jid=8029252) |
 | ◐ 2026-06-04 | OpenAI | Full Stack Software Engineer, Cybersecurity Products | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/88654e7f-4e23-4e75-8e54-18c10d09b093) |
 | ◐ 2026-06-03 | OpenAI | Full Stack Software Engineer, Codex Cloud Apps | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/130a5389-83e1-493f-9205-542d3ff53afb) |
 | ◐ 2026-06-03 | OpenAI | Host Systems Software Engineer | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/87e5f8c3-3337-480a-9db2-e4cef5db909b) |
@@ -340,331 +287,54 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 | ◐ 2026-06-03 | Palantir | Software Engineer - Hosted Model Infrastructure | Washington, D.C. | full-time | [link](https://jobs.lever.co/palantir/7a9600be-cdcb-4311-bb5c-65b6939b5956) |
 | ◐ 2026-06-03 | Palantir | Software Engineer - Hosted Model Infrastructure | Palo Alto, CA | full-time | [link](https://jobs.lever.co/palantir/e9aecd15-c7e9-4803-9928-fc0b67e70f5b) |
 | ◐ 2026-07-01 | Anthropic | [P] Data Engineer, Safeguards | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5240422008) |
-| ◐ 2026-07-01 | Notion | AI Chat Support Lead | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/c45b0b2a-0634-4cda-8b9b-ea6427093915) |
 | ◐ 2026-06-30 | Anthropic | Research Engineer, Computer Use | San Francisco, CA / New York City, NY / Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5285246008) |
-| ◐ 2026-06-30 | Anthropic | Salesforce Developer, Partnerships | San Francisco, CA / New York City, NY / Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5287327008) |
-| ◐ 2026-06-30 | Datadog | Product Strategy and Corporate Development Lead, AI | New York, New York, USA | full-time | [link](https://careers.datadoghq.com/detail/8011158/?gh_jid=8011158) |
-| ◐ 2026-06-29 | Scale AI | Solutions Engineer – Robotics & Autonomous Driving | San Francisco, CA; New York, NY | full-time | [link](https://job-boards.greenhouse.io/scaleai/jobs/4710382005) |
 |  2026-06-27 | Cursor | Community Engineer | San Francisco | full-time | [link](https://jobs.ashbyhq.com/cursor/0d7426d6-37fb-443d-b5e6-2a94a1375888) |
 |  2026-06-26 | Supabase | Postgres Deployment Engineer (Nix) | Remote | full-time | [link](https://jobs.ashbyhq.com/supabase/48950725-e0d9-4025-92d9-f75e1b60ce45) |
-|  2026-06-26 | OpenAI | Agent Post-Training, Computer Use Research | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/34c2ed3f-840f-4a68-9a00-0a0606660abf) |
-|  2026-06-26 | OpenAI | Agent Post-Training, Artifacts Research | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/6897d024-88c1-43ed-adb8-5d2fc5eec984) |
-|  2026-06-26 | OpenAI | Agent Post-Training, Frontier Evals and Environments Research | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/9d72171e-2630-4347-83a1-263178644282) |
-|  2026-06-26 | OpenAI | Agent Post-Training, Connectors Research | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/ab9adae3-54b5-457e-9938-77d3278d91a5) |
-|  2026-06-26 | OpenAI | Agent Post-Training, Context Research | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/df3edefb-6a8b-4ef6-b183-b3f96051783e) |
-|  2026-06-26 | Palantir | Embedded Legal Engineer | Palo Alto, CA | full-time | [link](https://jobs.lever.co/palantir/2d2f0ed7-134a-4f24-af89-cfb8583d796a) |
-|  2026-06-26 | Palantir | Embedded Legal Engineer | New York, NY | full-time | [link](https://jobs.lever.co/palantir/471ccceb-3614-4c28-a1af-b1235c081173) |
-|  2026-06-26 | Palantir | Embedded Legal Engineer | Washington, D.C. | full-time | [link](https://jobs.lever.co/palantir/84335d8e-f91c-4741-b4c6-7649f3ac948d) |
 |  2026-06-25 | Vercel | Product Security Engineer | Remote - United States | full-time | [link](https://job-boards.greenhouse.io/vercel/jobs/6102343004) |
 |  2026-06-25 | Vercel | Security Engineer, Cloud | Remote - United States | full-time | [link](https://job-boards.greenhouse.io/vercel/jobs/6102335004) |
 |  2026-06-25 | OpenAI | Research Engineer/Research Scientist - Personal AGI, North Stars | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/171ebca6-de53-4d6e-a312-30332f353957) |
-|  2026-06-25 | OpenAI | Agent Post-Training Research | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/4acc3515-887f-4bc9-8c2a-00f36ae480c3) |
 |  2026-06-25 | OpenAI | Research Engineer / Research Scientist -Personal AGI, Proactivity  | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/e57d196b-4fa0-4463-bd33-d8189f0d3541) |
-|  2026-06-24 | Anthropic | Research Engineer, Rule of Law | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5278065008) |
 |  2026-06-24 | Roblox | Developer Engagement Representative - ANZ (Australia / New Zealand)  (Part-Time Contract) | Remote | full-time | [link](https://careers.roblox.com/jobs/8020695?gh_jid=8020695) |
 |  2026-06-24 | Roblox | Developer Engagement Representative - Vietnam (Part-Time Contract) | Remote | full-time | [link](https://careers.roblox.com/jobs/8020621?gh_jid=8020621) |
-|  2026-06-24 | Cursor | GTM Systems Support and Agentic Engineer | Remote | full-time | [link](https://jobs.ashbyhq.com/cursor/3e35f887-04cb-45c7-9f49-63c9addf1c74) |
-|  2026-06-24 | Cursor | Data Analyst, User Operations | Remote | full-time | [link](https://jobs.ashbyhq.com/cursor/c43bdded-80a1-4705-a0ec-8217d771528c) |
-|  2026-06-23 | Riot Games | Systems Engineer (Esports) | Los Angeles, USA | full-time | [link](https://www.riotgames.com/en/work-with-us/job/8011835?gh_jid=8011835) |
+|  2026-06-24 | Anthropic | Research Engineer, Rule of Law | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5278065008) |
 |  2026-06-23 | Stripe | Machine Learning Engineer, Payment Intelligence | Seattle | full-time | [link](https://stripe.com/jobs/search?gh_jid=7983456) |
-|  2026-06-23 | Datadog | Enterprise Sales Engineer - Rockies | Colorado, USA, Remote | full-time | [link](https://careers.datadoghq.com/detail/7857714/?gh_jid=7857714) |
 |  2026-06-23 | Cursor | AI Adoption Engineer | Remote | full-time | [link](https://jobs.ashbyhq.com/cursor/ecc15f50-5d5b-4f79-a14c-e424b0c1bec6) |
-|  2026-06-23 | Ramp | AI Solutions Strategist | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/cbdf2857-1675-4b68-8cb5-2f92a20faa75) |
+|  2026-06-23 | Riot Games | Systems Engineer (Esports) | Los Angeles, USA | full-time | [link](https://www.riotgames.com/en/work-with-us/job/8011835?gh_jid=8011835) |
 |  2026-06-23 | OpenAI | AI Deployment Engineer | New York City | full-time | [link](https://jobs.ashbyhq.com/openai/6bacc51d-6580-4089-93ca-7df3bce4b635) |
-|  2026-06-23 | OpenAI | Visual Storytelling & AI Innovation Lead, Office of the CFO | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/93b40497-91c8-412a-94fc-00fe6f1af413) |
 |  2026-06-23 | OpenAI | AI Deployment Engineer, Cyber | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/b46ffd99-f9f2-440c-ac13-448eb7911ad6) |
 |  2026-06-23 | OpenAI | Data Center Physical Security Systems Engineer | Remote - US | full-time | [link](https://jobs.ashbyhq.com/openai/f69f75f5-439f-4044-8ae1-8fd810e0402d) |
 |  2026-06-23 | OpenAI | AI Deployment Engineer, Messenger Integrations | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/f827e381-91a0-40b7-8ae9-b56540642a74) |
 |  2026-06-22 | Figma | Open Source Developer | San Francisco, CA • New York, NY • United States | full-time | [link](https://boards.greenhouse.io/figma/jobs/5980571004?gh_jid=5980571004) |
 |  2026-06-22 | Figma | Support Content Engineer | San Francisco, CA • New York, NY • United States | full-time | [link](https://boards.greenhouse.io/figma/jobs/6037719004?gh_jid=6037719004) |
-|  2026-06-22 | OpenAI | Data Scientist, Identity | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/1f9c3666-82c8-45a7-8d4b-633a265ce996) |
 |  2026-06-20 | OpenAI | Hardware Operations Engineer | Remote - US | full-time | [link](https://jobs.ashbyhq.com/openai/b9a4a809-a965-4dbe-aeef-6ce1593903dd) |
-|  2026-06-19 | Anthropic | Research Engineer, Domain Scaling | San Francisco, CA / New York City, NY / Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5271380008) |
 |  2026-06-19 | Supabase | Site Reliability Engineer | Remote | full-time | [link](https://jobs.ashbyhq.com/supabase/ed6cedb1-b9bf-4609-ac5c-c75c33b31bf3) |
-|  2026-06-18 | Stripe | Product Lead, Data Products | New York City, San Francisco  | full-time | [link](https://stripe.com/jobs/search?gh_jid=8014786) |
+|  2026-06-19 | Anthropic | Research Engineer, Domain Scaling | San Francisco, CA / New York City, NY / Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5271380008) |
 |  2026-06-18 | Supabase | Anti Abuse Engineer  | Remote | full-time | [link](https://jobs.ashbyhq.com/supabase/c59d03d5-60c4-43ce-9556-04acab8d87cb) |
 |  2026-06-18 | Supabase | Security Operations Engineer  | Remote | full-time | [link](https://jobs.ashbyhq.com/supabase/0bcf21fd-e24e-4a0b-b393-ca4eb25896ce) |
-|  2026-06-18 | Notion | User Researcher, AI Evaluations | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/0e9114bd-4603-4bdf-a86f-a7a4f390fae8) |
+|  2026-06-18 | Anthropic | Platform Security Engineer, OpenBMC | San Francisco, CA / New York City, NY / Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5271346008) |
 |  2026-06-17 | OpenAI | Android Engineer, Growth | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/57bbaedc-30c1-4f1d-b194-e32a6adf874c) |
 |  2026-06-17 | OpenAI | Data Engineer, Scaling Analytics | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/c59e2e83-59a6-45bc-82cd-665c6a8a5761) |
 |  2026-06-16 | OpenAI | System Power Engineer, Consumer Devices | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/3124e8f0-e9e7-4c8b-8541-13cbbc5d1f4a) |
 |  2026-06-16 | OpenAI | Advanced Packaging Reliability Engineer | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/6d545b2c-5697-4f38-affc-aaa309f5bb26) |
 |  2026-06-16 | OpenAI | Lead Safety Engineer, Robotics | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/809d22a7-bb04-446f-a409-da323a6c327e) |
-|  2026-06-16 | OpenAI | Enterprise Application Data Architect, GTM Systems | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/a057c19d-83db-4bb2-a86f-07caa422d770) |
-|  2026-07-02 | Vercel | GRC Analyst | Remote - United States | full-time | [link](https://job-boards.greenhouse.io/vercel/jobs/6102654004) |
-|  2026-07-02 | Stripe | GTM Recruiter, AMER (Fixed Term) | Chicago, US-Remote | full-time | [link](https://stripe.com/jobs/search?gh_jid=7942216) |
-|  2026-07-02 | ElevenLabs | Accounts Payable Specialist | United Kingdom | full-time | [link](https://jobs.ashbyhq.com/elevenlabs/e7b83599-1b70-4830-85da-7132b99a3b57) |
-|  2026-07-02 | ElevenLabs | Writer and Editor | United Kingdom | full-time | [link](https://jobs.ashbyhq.com/elevenlabs/ea45b306-c62d-4aba-98ba-ee2e62adf91a) |
-|  2026-07-02 | Notion | Product Designer | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/d177d052-ef57-4900-acf2-d58e9eded620) |
-|  2026-06-15 | Anthropic | People Research Scientist, Recruiting | New York City, NY / Seattle, WA; San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5257763008) |
 |  2026-06-15 | Stripe | Growth Engineer | New York, NY | full-time | [link](https://stripe.com/jobs/search?gh_jid=8008880) |
-|  2026-06-15 | Datadog | Federal Support Engineer 3 | Denver, Colorado, USA | full-time | [link](https://careers.datadoghq.com/detail/7997846/?gh_jid=7997846) |
-|  2026-06-15 | Datadog | Technical Support Engineer 2, Premier - Denver | Denver, Colorado, USA | full-time | [link](https://careers.datadoghq.com/detail/7997872/?gh_jid=7997872) |
 |  2026-06-15 | OpenAI | System Performance Engineer, Consumer Devices | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/3fe77c71-1f20-45b5-8291-62f0d2104989) |
-|  2026-06-15 | OpenAI | People Research Data Scientist, AI Fairness & Bias | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/cadb7c24-2aea-4b98-a793-65ae9388b5d6) |
-|  2026-06-15 | OpenAI | Salesforce Ads Systems Engineer | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/da45caa7-461d-478f-a862-82120dd80e19) |
-|  2026-07-01 | Figma | People Operations Coordinator | San Francisco, CA | full-time | [link](https://boards.greenhouse.io/figma/jobs/6104568004?gh_jid=6104568004) |
-|  2026-07-01 | Anthropic | Strategic Account Executive, Asset & Wealth Management - FSI | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5203506008) |
-|  2026-07-01 | Anthropic | Strategic Account Executive, Healthcare | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5288441008) |
-|  2026-07-01 | Anthropic | Strategic Account Executive, Insurance - FSI | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5288247008) |
-|  2026-07-01 | Anthropic | Strategic Account Executive, Investment Banking & Capital Markets - FSI | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5288245008) |
-|  2026-07-01 | Anthropic | Strategic Account Executive, Life Sciences | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5288446008) |
-|  2026-07-01 | Anthropic | Strategic Account Executive, Retail & Commercial Banking - FSI | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5288241008) |
-|  2026-07-01 | Perplexity | Creator & Influencer Marketing Lead | Los Angeles | full-time | [link](https://jobs.ashbyhq.com/perplexity/457d84e7-6a36-4499-ae61-db92a2c404b9) |
-|  2026-07-01 | Databricks | Named Core Account Executive - CMEG | Remote - New York | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8610866002) |
-|  2026-07-01 | Cursor | Enterprise Accout Executive Job Template | Remote | full-time | [link](https://jobs.ashbyhq.com/cursor/39edee3f-2d87-43b0-9189-8fac18dbebff) |
-|  2026-07-01 | Cursor | RVP, Healthcare West | Remote | full-time | [link](https://jobs.ashbyhq.com/cursor/61d5c4d4-726e-44fa-b943-6b64ab761a64) |
-|  2026-07-01 | Cursor | RVP, Healthcare East | Remote | full-time | [link](https://jobs.ashbyhq.com/cursor/702bf199-7721-4381-abd5-0f8dcde7f9a6) |
-|  2026-07-01 | ElevenLabs | IT Engineering Lead | United States | full-time | [link](https://jobs.ashbyhq.com/elevenlabs/3a75a63b-5f28-4688-9963-d9607e21ae67) |
-|  2026-07-01 | Ramp | Employee Lifecycle Analyst | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/1c8e2b03-fcb3-4949-9113-07812f138eb6) |
-|  2026-07-01 | Ramp | Procurement Product Activation Specialist | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/f0e3a8bb-5f86-4ce1-b345-80d8912f9ddc) |
-|  2026-07-01 | Notion | Revenue Transformation Analyst | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/892ed5b8-a654-49ac-a55b-fabea1b236c1) |
-|  2026-07-01 | Notion | The Notion Sales Agent Build Challenge [SDR/BDR] | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/e84f6113-2118-4698-a22a-d1701669ce4f) |
-|  2026-07-01 | OpenAI | Strategic Delivery Lead, Cyber | Washington, DC | full-time | [link](https://jobs.ashbyhq.com/openai/84dd8e5f-d4ca-46e0-986c-22432b4d3d3f) |
-|  2026-06-12 | Figma | Data Scientist, Finance | San Francisco, CA • New York, NY • United States | full-time | [link](https://boards.greenhouse.io/figma/jobs/6013304004?gh_jid=6013304004) |
-|  2026-06-12 | Anthropic | IT Systems Engineer, Client Platform Engineer | Boston, MA; New York City, NY; Remote-Friendly (Travel-Required) /  Washington, DC | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5255853008) |
-|  2026-06-12 | Replit | GTM AI Operations Lead, Demand Generation | Foster City, CA | full-time | [link](https://jobs.ashbyhq.com/replit/455c1feb-7157-48d5-b2a6-57606ed1a6cd) |
-|  2026-06-12 | Replit | GTM AI Operations Lead, Sales | Foster City, CA | full-time | [link](https://jobs.ashbyhq.com/replit/76e6a8a1-c542-46c0-a94f-050c61be196a) |
 |  2026-06-12 | OpenAI | Mechanical Engineer, Sensing | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/61e8051b-6510-448d-b4b1-b9836518462e) |
 |  2026-06-12 | OpenAI | Mechanical Engineer, Soft Goods Design | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/85a69221-4a75-48f1-9ebe-872234f9e1cd) |
 |  2026-06-12 | OpenAI | AI Deployment Engineer | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/fbefd5d2-affe-47e1-9e87-d2b5de317b40) |
-|  2026-06-30 | Anthropic | Business System Analyst Lead, Opportunity Acceleration | San Francisco, CA / New York City, NY / Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5287240008) |
-|  2026-06-30 | Anthropic | Internal Content Producer  | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5147352008) |
-|  2026-06-30 | Stripe | Account Executive, Product Sales (Billing) | US-NYC | full-time | [link](https://stripe.com/jobs/search?gh_jid=7984339) |
-|  2026-06-30 | Stripe | Executive Engagement Lead, Office of the CRO | NYC, SF, SEA, CHI, Remote | full-time | [link](https://stripe.com/jobs/search?gh_jid=8027651) |
-|  2026-06-30 | Cursor | Strategic Account Executive, Federal Sales — DoW | Remote | full-time | [link](https://jobs.ashbyhq.com/cursor/27a7ac90-fe2a-4352-ad56-3548a64c9b64) |
-|  2026-06-30 | Cursor | GTM Finance - Marketing | San Francisco | full-time | [link](https://jobs.ashbyhq.com/cursor/ccf69bf0-69d9-4365-96a5-2c8cf4eb08b0) |
-|  2026-06-30 | Replit | Sales Leader | Foster City, CA | full-time | [link](https://jobs.ashbyhq.com/replit/3701351d-c64c-4992-971a-b3dfbd712570) |
-|  2026-06-30 | Cohere | HR Business Partner | Toronto | full-time | [link](https://jobs.ashbyhq.com/cohere/c1543c10-4c71-4bb9-a570-215a31e9e7fc) |
-|  2026-06-11 | Figma | Data Scientist, Marketing | San Francisco, CA • New York, NY • United States | full-time | [link](https://boards.greenhouse.io/figma/jobs/6013303004?gh_jid=6013303004) |
+|  2026-06-12 | Anthropic | IT Systems Engineer, Client Platform Engineer | Boston, MA; New York City, NY; Remote-Friendly (Travel-Required) /  Washington, DC | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5255853008) |
 |  2026-06-11 | Anthropic | Research Engineer, Code RL (Reinforcement Learning) | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5254364008) |
-|  2026-06-11 | OpenAI | Applied Data Science & Insights Leader - GTM Intelligence Solutions and Technical Success | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/93f558c1-c944-4ddc-b102-addc9446de3d) |
 |  2026-06-10 | Scale AI | IT Systems Engineer | Washington, DC | full-time | [link](https://job-boards.greenhouse.io/scaleai/jobs/4704551005) |
-|  2026-06-10 | Anthropic | Data Center Strategic Sourcing Lead | Remote-Friendly, United States | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5253145008) |
 |  2026-06-10 | Roblox | Developer Engagement Representative - Thailand (Part-Time Contract) | Remote | full-time | [link](https://careers.roblox.com/jobs/7992558?gh_jid=7992558) |
-|  2026-06-10 | Databricks | Strategy & Execution AI Specialist | Mountain View, California | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8582459002) |
 |  2026-06-10 | Notion | Security Engineer, Detection and Response | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/c0fcf37b-e00f-4aae-a2e0-b008f9939a7e) |
-|  2026-06-09 | Datadog | FP&A Analyst - Data Insights | New York, New York, USA | full-time | [link](https://careers.datadoghq.com/detail/7964916/?gh_jid=7964916) |
-|  2026-06-09 | OpenAI | AI Support Engineer - San Francisco (Weekend Shift) | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/99f823a1-66ec-44bd-ba30-d3645aa49d74) |
 |  2026-06-09 | OpenAI | Android Engineer, ChatGPT ImageGen | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/b15442c5-8e3c-4370-9abf-4b9c63f56de0) |
-|  2026-06-29 | Roblox | Talent Sourcing Partner (Short Term) | San Mateo, CA, United States | full-time | [link](https://careers.roblox.com/jobs/8031751?gh_jid=8031751) |
-|  2026-06-29 | Stripe | Account Executive - Enterprise, Growth | US-San Francisco, US-California | full-time | [link](https://stripe.com/jobs/search?gh_jid=7997146) |
-|  2026-06-29 | Databricks | Enterprise Account Executive - Financial Services | New York City, New York | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8610931002) |
-|  2026-06-29 | Databricks | Enterprise Account Executive - Financial Services | Boston, Massachusetts; New Jersey; New York City, New York | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8610933002) |
-|  2026-06-29 | Databricks | Real Estate Strategic Planning Lead | Mountain View, California; San Francisco, California | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8603402002) |
-|  2026-06-29 | Replit | Recruiting Coordinator | Foster City, CA | full-time | [link](https://jobs.ashbyhq.com/replit/08aa6e3d-a5df-4751-bc35-4876e671ce8f) |
-|  2026-06-29 | ElevenLabs | Forward Deployed Creative | United States | full-time | [link](https://jobs.ashbyhq.com/elevenlabs/1f668ed5-49e9-4726-881f-7818733103b1) |
-|  2026-06-29 | Notion | Lead, IT Audit and Technology Risk | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/855748b0-4452-4331-bdec-d2aa0dbc782f) |
-|  2026-06-29 | OpenAI | Researcher, Alignment CoT Monitorability | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/82492010-ea96-449d-9949-b726b1a22616) |
-|  2026-06-29 | OpenAI | Executive Business Partner, B2B Ads Solutions | New York City | full-time | [link](https://jobs.ashbyhq.com/openai/b39d9542-e886-49e0-82dc-984141667f57) |
-|  2026-06-29 | OpenAI | Solutions Architect, Digital Natives | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/e827d138-22de-49f0-9de5-60f3e3ce07a0) |
-|  2026-06-08 | Stripe | Solutions Architect, AI | US-San Francisco | full-time | [link](https://stripe.com/jobs/search?gh_jid=7975723) |
 |  2026-06-08 | Notion | Security Engineer, Corporate Security | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/477768e1-37af-49bc-a4de-6564e0a4ec54) |
-|  2026-06-07 | Replit | Support Engineer II (NYC) | NYC (SoHo) | full-time | [link](https://jobs.ashbyhq.com/replit/6e6f744b-76bf-4910-99b7-0ced590a6873) |
-|  2026-06-07 | Replit | Support Engineer I (NYC) | NYC (SoHo) | full-time | [link](https://jobs.ashbyhq.com/replit/764fddd2-f81e-4c1f-9ab4-81ae086d4086) |
-|  2026-06-05 | Figma | Marketing Engineer | San Francisco, CA • New York, NY • United States | full-time | [link](https://boards.greenhouse.io/figma/jobs/6013495004?gh_jid=6013495004) |
 |  2026-06-05 | Roblox | Developer Engagement Representative - Malaysia  (Part-Time Contract) | Remote | full-time | [link](https://careers.roblox.com/jobs/7978940?gh_jid=7978940) |
 |  2026-06-05 | Stripe | Mobile Security Engineer | New York, New York  | full-time | [link](https://stripe.com/jobs/search?gh_jid=7982720) |
 |  2026-06-05 | OpenAI | Analytics Engineer, Safety Systems | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/23662a5c-43c3-4754-a6e0-30f8cbf6d681) |
 |  2026-06-05 | OpenAI | Firmware Engineer, Robotics | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/3f99bfef-5b1a-48ea-aed0-2dbd57b12722) |
-|  2026-06-05 | OpenAI | Technical Sourcer, Research | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/fdf2201f-e2ad-4b4a-9da4-776f64b4fa62) |
 |  2026-06-04 | Datadog | Security Engineer 2 - Cyber Threat Intelligence | New York, New York, USA | full-time | [link](https://careers.datadoghq.com/detail/7982345/?gh_jid=7982345) |
-|  2026-06-03 | Cursor | Data Scientist, GTM | San Francisco | full-time | [link](https://jobs.ashbyhq.com/cursor/7bc441a4-9bb6-45cb-a9e0-5ae1b9c7ac5b) |
 |  2026-06-03 | ElevenLabs | Developer Community Growth | San Francisco | full-time | [link](https://jobs.ashbyhq.com/elevenlabs/db88ce4f-44a0-425c-88c4-1951c467c627) |
-|  2026-06-03 | Ramp | Data Scientist | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/e577622f-6657-4e53-8941-b3a774b04448) |
-|  2026-06-26 | Epic Games | Animation Systems Programmer | Larkspur,California,United States | full-time | [link](https://epicgames.com/careers/jobs/6103058004?gh_jid=6103058004) |
-|  2026-06-26 | Stripe | Account Executive, Funded Startups - Expansion | San Francisco | full-time | [link](https://stripe.com/jobs/search?gh_jid=8024368) |
-|  2026-06-26 | Stripe | Counsel, Leasing & Operational Professional Services | Chicago, Atlanta, US Remote | full-time | [link](https://stripe.com/jobs/search?gh_jid=8010009) |
-|  2026-06-26 | Datadog | Deal Desk Analyst - Boston (Portuguese or Spanish Speaking) | Boston, Massachusetts, USA | full-time | [link](https://careers.datadoghq.com/detail/8029969/?gh_jid=8029969) |
-|  2026-06-26 | Databricks | Global Regional Systems Integrator Leader | United States | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8603398002) |
-|  2026-06-26 | Notion | Revenue Accountant | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/39c352a7-3f90-4704-b2ff-92df50b4ca02) |
-|  2026-06-26 | OpenAI | Enterprise 3P Field Events Lead | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/06a8c9e8-7ec8-455e-9193-ad46611c4d03) |
-|  2026-06-26 | OpenAI | Device Safety & Risk Operations Specialist, User Safety & Risk Operations | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/24f3c017-d844-4df1-bc52-71f95b6e731d) |
-|  2026-06-26 | OpenAI | Agent Post-Training, Personality | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/3302ceaf-f6ca-4803-9846-7fff7ad48a0d) |
-|  2026-06-26 | OpenAI | Model Designer | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/91e1c582-cceb-4e98-bc5a-caf2def45a0d) |
-|  2026-06-26 | OpenAI | Economist | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/9ac67097-139b-4e3c-8c13-e9a6be26cf1b) |
-|  2026-06-26 | OpenAI | Agent Post-Training, API & Power Users | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/bb90d497-06ef-4bb9-878a-e797a19cd834) |
-|  2026-06-25 | Anthropic | G&A Compensation Partner  | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5278987008) |
-|  2026-06-25 | Anthropic | Immigration Specialist, M&A | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5277850008) |
-|  2026-06-25 | Databricks | Delivery Solutions Architect | Southwest - United States | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8609622002) |
-|  2026-06-25 | Databricks | Delivery Solutions Architect | Central - United States | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8609617002) |
-|  2026-06-25 | Replit | Administrative Assistant | Foster City, CA | full-time | [link](https://jobs.ashbyhq.com/replit/32fa018b-35df-480c-9090-00d0f37d7fe5) |
-|  2026-06-25 | Ramp | Solutions Consultant / Enterprise  | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/29b679a8-9990-48c1-b91e-001c566ced27) |
-|  2026-06-25 | OpenAI | Deal Desk Lead, Cloud Marketplaces & Partnerships — AWS Focus | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/30d32d0b-26ba-4ce4-a164-d8d00a3ef1a1) |
-|  2026-06-25 | OpenAI | Pricing Strategist | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/3ab0541b-160b-49c0-8609-574db6358332) |
-|  2026-06-25 | OpenAI | Partner Experience Lead | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/7fa3be6b-b4fa-483c-b845-57092101e38e) |
-|  2026-06-25 | OpenAI | Partner Incentive Design & Execution Lead | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/8b626ca6-4359-4895-9546-99f9c89db6f8) |
-|  2026-06-25 | OpenAI | Safety Transparency Editor, Safety Systems | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/a6a421a5-0d3d-4f2f-9767-7c25b6e7d2fc) |
-|  2026-06-25 | OpenAI | GTM Strategy & Operations, Enterprise | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/b1d548dd-6f54-4afa-8ab1-f5fe193a413d) |
-|  2026-06-25 | OpenAI | GTM Strategy & Operations, Digital Native | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/e884c269-ec1a-4d12-9fcd-8f63f8100c2f) |
-|  2026-06-24 | Figma | People Partner, Product & Design | San Francisco, CA • New York, NY • United States | full-time | [link](https://boards.greenhouse.io/figma/jobs/6100107004?gh_jid=6100107004) |
-|  2026-06-24 | Figma | Workforce Management Analyst | San Francisco, CA • New York, NY • United States | full-time | [link](https://boards.greenhouse.io/figma/jobs/6099183004?gh_jid=6099183004) |
-|  2026-06-24 | Scale AI | Deployment Strategist  | Washington, DC | full-time | [link](https://job-boards.greenhouse.io/scaleai/jobs/4709157005) |
-|  2026-06-24 | Anthropic | Commercial Counsel, SPARC | New York City, NY; San Francisco, CA; Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5275765008) |
-|  2026-06-24 | Anthropic | Copy Lead, Claude | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5258583008) |
-|  2026-06-24 | Roblox | Litigation Paralegal | San Mateo, CA, United States | full-time | [link](https://careers.roblox.com/jobs/8027420?gh_jid=8027420) |
-|  2026-06-24 | Stripe | Product Sales Enablement Business Partner | US-San Francisco | full-time | [link](https://stripe.com/jobs/search?gh_jid=7994063) |
-|  2026-06-24 | Datadog | Datadog for Startups - Forward Deployed Engineering Lead | New York, New York, USA | full-time | [link](https://careers.datadoghq.com/detail/8003181/?gh_jid=8003181) |
-|  2026-06-24 | Databricks | Solutions Architect - Financial Services (Asset and Wealth Management) | Central - United States; Chicago, Illinois; Massachusetts; New York; North Carolina; Northeast - United States; Washington, D.C. | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8605158002) |
-|  2026-06-24 | Supabase | Commercial FinOps Lead  | Remote | full-time | [link](https://jobs.ashbyhq.com/supabase/d2707c73-fe36-4f23-b53a-dde88d7f1132) |
-|  2026-06-24 | Cursor | GTM, Emerging Products | San Francisco | full-time | [link](https://jobs.ashbyhq.com/cursor/b0d8ff6c-d37f-4dbc-b6c0-4fa84c38e224) |
-|  2026-06-24 | Notion | Business Recruiter | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/60fb9e2e-ad8c-4269-9f51-d78ad4c96654) |
-|  2026-06-24 | OpenAI | Deal Lead, Special Situations (Semiconductors) | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/875b6559-55f0-4cea-ad62-0063d0cb0b73) |
-|  2026-06-24 | OpenAI | Prototyping Lab Technician, Robotics | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/9ba938cb-f0c3-4e01-a8ea-1019a8175201) |
-|  2026-06-23 | Duolingo | Product Marketing Lead | New York, NY | full-time | [link](https://careers.duolingo.com/jobs/8604113002?gh_jid=8604113002) |
-|  2026-06-23 | Anthropic | People Legal Counsel | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5275497008) |
-|  2026-06-23 | Anthropic | Strategic Deals Lead, Compute, Networking & Memory | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5205723008) |
-|  2026-06-23 | Datadog | Partner Solutions Architect (GSI) - AMER West | Denver, Colorado, USA; San Francisco, California, USA | full-time | [link](https://careers.datadoghq.com/detail/8010455/?gh_jid=8010455) |
-|  2026-06-23 | Datadog | Partner Solutions Architect (GSI) - AMER West | California, USA, Remote; Illinois, USA, Remote; Texas, USA, Remote; Washington, USA, Remote | full-time | [link](https://careers.datadoghq.com/detail/8015631/?gh_jid=8015631) |
-|  2026-06-23 | Databricks | Solutions Architect - Casino / iGaming  | United States | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8595123002) |
-|  2026-06-23 | Supabase | Brand Designer | Remote | full-time | [link](https://jobs.ashbyhq.com/supabase/4a85c92b-1d0d-43ee-8dbc-0e45a58be208) |
-|  2026-06-23 | Cursor | Strategic Partnerships & Growth Lead — DoW / COCOM & SOF | Remote | full-time | [link](https://jobs.ashbyhq.com/cursor/b16b81a8-a707-441d-b60e-db302274f887) |
-|  2026-06-23 | OpenAI | Marketing Scientist | New York City | full-time | [link](https://jobs.ashbyhq.com/openai/93c7f80e-9fe5-47d0-8163-c4589785e862) |
-|  2026-06-23 | OpenAI | Strategic Finance, Partnerships | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/b09b4216-426d-443c-9b87-23570fd9a694) |
-|  2026-06-22 | Duolingo | Executive Assistant to the CEO | New York, NY | full-time | [link](https://careers.duolingo.com/jobs/8602852002?gh_jid=8602852002) |
-|  2026-06-22 | Duolingo | Executive Assistant to the CEO | Pittsburgh, PA | full-time | [link](https://careers.duolingo.com/jobs/8602840002?gh_jid=8602840002) |
-|  2026-06-22 | Riot Games | VFX Artist II - Unpublished R&D Product | Los Angeles, USA | full-time | [link](https://www.riotgames.com/en/work-with-us/job/7984194?gh_jid=7984194) |
-|  2026-06-22 | OpenAI | Strategic Sales Development Representative - SF (Portuguese speaking) | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/08c536fc-1d2a-4ca3-99dd-6f6030286b0c) |
-|  2026-06-22 | OpenAI | Trust & Safety Operations Analyst, Ads | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/26e8c199-7dcb-4144-b263-f35220421a6d) |
-|  2026-06-22 | OpenAI | Enterprise Field Marketer | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/78fb6f21-e1cd-4963-8614-45cbfcfc92ae) |
-|  2026-06-19 | Perplexity | Recruiting Coordinator  | San Francisco | full-time | [link](https://jobs.ashbyhq.com/perplexity/ed4fb057-3f06-419a-8bb2-9c98f370d477) |
-|  2026-06-18 | Anthropic | Platform Security Engineering - OpenBMC | San Francisco, CA / New York City, NY / Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5271346008) |
-|  2026-06-18 | Stripe | Account Executive, Funded Startups - Expansion | Chicago | full-time | [link](https://stripe.com/jobs/search?gh_jid=8017336) |
-|  2026-06-18 | Datadog | Customer Success Associate - Spanish Speaking (Boston) | Boston, Massachusetts, USA | full-time | [link](https://careers.datadoghq.com/detail/8015717/?gh_jid=8015717) |
-|  2026-06-18 | Databricks | Delivery Solutions Architect - Communications, Media, Entertainment & Games | United States | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8598012002) |
-|  2026-06-18 | Databricks | Geo Core Account Executive | Northeast - United States | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8598730002) |
-|  2026-06-18 | Cursor | Strategic Partnerships & Growth Lead — DoW / Army | Remote | full-time | [link](https://jobs.ashbyhq.com/cursor/0d4431c8-78e7-4a41-9407-ed5dbf60d1f2) |
-|  2026-06-18 | Ramp | Virtual Events Associate | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/77578727-0710-43dd-a294-ac3cbb6b52a7) |
-|  2026-06-18 | Notion | Rapid User Researcher | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/f3faba46-776a-4938-8c9b-5aebb495aa39) |
-|  2026-06-18 | OpenAI | Strategic Partnerships Lead, Education | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/05bea751-62ab-43d9-a5bb-77f385920af0) |
-|  2026-06-18 | OpenAI | Administrative Business Partner | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/9dfe4c27-84c0-4150-9ebe-8d4f12a95404) |
-|  2026-06-18 | OpenAI | Business Operations Partner, Transportation Program | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/a4787fb2-94d7-4b8e-b82c-093663e4ee85) |
-|  2026-06-18 | Palantir | Administrative Business Partner - ShipOS | Washington, D.C. | full-time | [link](https://jobs.lever.co/palantir/a237973c-cb29-41fe-9c80-416e6f42e087) |
-|  2026-06-18 | Palantir | Administrative Business Partner - ShipOS | New York, NY | full-time | [link](https://jobs.lever.co/palantir/a5f93bb6-4f13-4451-80a4-f63090830269) |
-|  2026-06-17 | Scale AI | Strategic Capture Lead, Homeland Security & Federal Law Enforcement | Washington, DC | full-time | [link](https://job-boards.greenhouse.io/scaleai/jobs/4706127005) |
-|  2026-06-17 | Datadog | Partner Solutions Architect (GSI) - AMER East | Boston, Massachusetts, USA; New York, New York, USA | full-time | [link](https://careers.datadoghq.com/detail/8003977/?gh_jid=8003977) |
-|  2026-06-17 | Ramp | Partner Development Representative / Advisory and Services | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/390f4cd0-e0e4-451c-ae28-e6b19861dda9) |
-|  2026-06-17 | Ramp | Sales Enablement / SDR | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/504e34ff-dbd9-49a7-8f68-327092672164) |
-|  2026-06-17 | Notion | International Payroll Analyst | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/d2760449-5e2d-4403-be84-fa286a9bafa1) |
-|  2026-06-17 | OpenAI | Corporate Business Development Lead | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/c4ecfceb-6e04-44ef-baa9-47e681eee750) |
-|  2026-06-17 | OpenAI | US Payroll Operations  | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/d2fb8994-a717-4ef0-b474-a0d8727ea3a4) |
-|  2026-06-17 | OpenAI | Credit and Collections Lead | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/da3bed10-dfa7-4e44-bb16-414dd56cc16b) |
-|  2026-06-17 | OpenAI | Threat Modeler, Preparedness | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/f735a48e-c3c2-4387-abf7-7b39452e1ec5) |
-|  2026-06-16 | Vercel | Partner Operations Lead | Hybrid - San Francisco, New York City, Austin | full-time | [link](https://job-boards.greenhouse.io/vercel/jobs/6087001004) |
-|  2026-06-16 | Datadog | Deal Desk Analyst - NYC | New York, New York, USA | full-time | [link](https://careers.datadoghq.com/detail/7993638/?gh_jid=7993638) |
-|  2026-06-16 | Cursor | HRBP, GTM | New York | full-time | [link](https://jobs.ashbyhq.com/cursor/736ebf73-beb1-417f-87a3-a74176399ba6) |
-|  2026-06-16 | Cursor | Technical Sourcer | San Francisco | full-time | [link](https://jobs.ashbyhq.com/cursor/7deec098-b1cc-4258-8828-db94c0d43319) |
-|  2026-06-16 | Cursor | HRBP, Core Business | San Francisco | full-time | [link](https://jobs.ashbyhq.com/cursor/9978ffe7-8dac-4f44-9f3f-43cfd033d39c) |
-|  2026-06-16 | Cursor | Contract GTM Recruiter | San Francisco | full-time | [link](https://jobs.ashbyhq.com/cursor/d90eb6d1-b1cd-44cd-8115-16e466286c9f) |
-|  2026-06-16 | Cursor | People Operations Coordinator | San Francisco | full-time | [link](https://jobs.ashbyhq.com/cursor/db8e4abb-aa17-44cb-8d72-156f0d400641) |
-|  2026-06-16 | Cursor | Technical Recruiter | San Francisco | full-time | [link](https://jobs.ashbyhq.com/cursor/eabcff15-deb2-4e5c-a17d-8c36eb7f6c1d) |
-|  2026-06-16 | Ramp |  Account Executive / Mid-Market | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/f7c4de3c-1d64-42e9-8111-f38e265327d8) |
-|  2026-06-16 | Notion | CX Knowledge Architect | New York, New York | full-time | [link](https://jobs.ashbyhq.com/notion/4c7683fa-fe37-44d9-aa3f-2f57a37c11f8) |
-|  2026-06-16 | OpenAI | Lead Industrial Designer, Robotics | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/04a780c7-f672-43d1-9e73-37ce17b82403) |
-|  2026-06-16 | OpenAI | Business Development Lead - Cyber | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/cb846094-f44b-4afb-a5e1-f031ad8ca278) |
-|  2026-06-15 | Anthropic | Platform Hardware Security | San Francisco, CA / New York City, NY / Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5257689008) |
-|  2026-06-15 | Stripe | Internal Audit Lead, Stablecoins & Digital Assets | San Francisco, Seattle, New York City | full-time | [link](https://stripe.com/jobs/search?gh_jid=7997826) |
-|  2026-06-15 | Datadog | Deal Desk Analyst - US West | Denver, Colorado, USA | full-time | [link](https://careers.datadoghq.com/detail/8003080/?gh_jid=8003080) |
-|  2026-06-15 | Databricks |  Lakebase Sales Specialist-MFG | Remote - Georgia; Remote - Texas; San Francisco, California | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8569506002) |
-|  2026-06-15 | Cursor | Strategic Account Executive, Federal Systems Integrators | Remote | full-time | [link](https://jobs.ashbyhq.com/cursor/89949cac-643b-4354-8bd3-744f6cde732b) |
-|  2026-06-15 | Replit | Technical Sourcer | Foster City, CA | full-time | [link](https://jobs.ashbyhq.com/replit/73831fe4-c4d5-4e27-91b4-f7f83a99cb73) |
-|  2026-06-15 | Notion | Customer Experience Strategy & Operations Lead | New York, New York | full-time | [link](https://jobs.ashbyhq.com/notion/8bb5da67-0b4d-4894-83eb-56d31e9bc662) |
-|  2026-06-15 | OpenAI | Order Management & Billing Lead, Cloud Marketplaces & Partnerships - AWS | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/1d03b4ee-8cec-47a1-b9e2-8ce9c5650943) |
-|  2026-06-15 | OpenAI | Customer Education, Content & Systems Operations Lead | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/2250b09d-f6fb-4ebc-9d27-dfd34d2ccbec) |
-|  2026-06-15 | OpenAI | Biosafety Red Teaming Specialist | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/811eaa16-7a8e-48e6-8cfd-194330f1341d) |
-|  2026-06-15 | OpenAI | TLM, Embedded Experiences | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/967d3ad7-bd2c-40e3-ba1f-f1140a116999) |
-|  2026-06-15 | OpenAI | Lead, Incidents & Escalations, User Operations | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/b0729478-f363-498e-a088-b659c40d4580) |
-|  2026-06-13 | Stripe | Payments Performance Strategist, Card Authorization | San Francisco, CA; Seattle, WA; Chicago, IL; New York, NY; Atlanta, GA; US-Remote | full-time | [link](https://stripe.com/jobs/search?gh_jid=8004054) |
-|  2026-06-12 | Epic Games | Modeling Outsource Artist | Cary,North Carolina,United States | full-time | [link](https://epicgames.com/careers/jobs/6020680004?gh_jid=6020680004) |
-|  2026-06-12 | Anthropic | Web Producer, CMS Publishing | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5257669008) |
-|  2026-06-12 | Stripe | Tax Technology Lead | San Francisco, Seattle, New York | full-time | [link](https://stripe.com/jobs/search?gh_jid=7905025) |
-|  2026-06-12 | Databricks | Cyber Security GTM Leader | Remote - California; Remote - New York | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8582312002) |
-|  2026-06-12 | Databricks | Specialist Solutions Architect - Google Cloud Platform & Infrastructure | United States | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8589834002) |
-|  2026-06-12 | Supabase | GTM Strategist | Remote | full-time | [link](https://jobs.ashbyhq.com/supabase/23a39e2b-333a-438c-b4e6-cf7cdde27e78) |
-|  2026-06-12 | Cohere | RevOps - Compensation & GTM Integration | New York | full-time | [link](https://jobs.ashbyhq.com/cohere/f3cf5d6a-5a93-41b5-8a00-160e120859ff) |
-|  2026-06-12 | Notion | Finance Business Partner, GTM | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/07021c98-7b93-4748-ae7c-b83b3daa7ecd) |
-|  2026-06-12 | OpenAI | Supply Chain Transformation Architect | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/5fe29d1d-684f-4fed-88de-eb644fe3485e) |
-|  2026-06-11 | Scale AI | Lead Counsel, Commercial | New York, NY | full-time | [link](https://job-boards.greenhouse.io/scaleai/jobs/4704553005) |
-|  2026-06-11 | Stripe | Account Executive, Enterprise Platforms, Hunter | New York, NY; San Francisco, CA; Seattle, WA; Los Angeles, CA; Denver, CO; Austin, TX; US-West Remote | full-time | [link](https://stripe.com/jobs/search?gh_jid=7961609) |
-|  2026-06-11 | Cursor | Executive Assistant, User Operations | San Francisco | full-time | [link](https://jobs.ashbyhq.com/cursor/0291653e-c192-4c87-b77e-5d1876748923) |
-|  2026-06-11 | Cursor | Field Marketing Specialist, East | New York | full-time | [link](https://jobs.ashbyhq.com/cursor/c7082fa6-09e0-455f-9fa5-ef4c221b1564) |
-|  2026-06-11 | Replit | GTM/G&A Sourcer | Foster City, CA | full-time | [link](https://jobs.ashbyhq.com/replit/806139fd-e262-49af-89f5-83f1efc43050) |
-|  2026-06-11 | Notion | People Analytics Lead - Recruiting | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/6597b600-7781-46e6-b70a-a9af4fb2b61b) |
-|  2026-06-11 | OpenAI | Agentic Risk Analyst | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/e4d0e517-4380-43f3-b5ee-1ce30a88539f) |
-|  2026-06-10 | Figma | Corporate Counsel | San Francisco, CA • New York, NY • United States | full-time | [link](https://boards.greenhouse.io/figma/jobs/6018708004?gh_jid=6018708004) |
-|  2026-06-10 | Stripe | Account Executive, Enterprise - Grower | US-New York, US-Chicago, US-Atlanta, US-San Francisco, US-Texas | full-time | [link](https://stripe.com/jobs/search?gh_jid=7997555) |
-|  2026-06-10 | Stripe | Account Executive, Enterprise - Hunter | US-San Francisco, US-Chicago, US-New York | full-time | [link](https://stripe.com/jobs/search?gh_jid=7994330) |
-|  2026-06-10 | Cursor | Account Executive, Commercial - San Francisco | San Francisco | full-time | [link](https://jobs.ashbyhq.com/cursor/9287df8c-4138-4d75-ae92-cc98d3963856) |
-|  2026-06-10 | Cursor | Strategic Account Executive, SLED | Remote | full-time | [link](https://jobs.ashbyhq.com/cursor/b33a1206-6cfa-4b89-8808-51eaa3933212) |
-|  2026-06-10 | ElevenLabs | Brand Marketing | San Francisco | full-time | [link](https://jobs.ashbyhq.com/elevenlabs/31b1c0e3-ca53-428d-8f15-2e3ffda491b8) |
-|  2026-06-10 | Notion | Lead, Internal Audit and SOX Compliance | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/c8be09c6-f664-473a-85cc-537a4d10025a) |
-|  2026-06-10 | OpenAI | Strategic Deals | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/8728beb4-1ad9-4140-b701-e7e12f6c9a4d) |
-|  2026-06-10 | OpenAI | Strategy & Operations Programs, Support | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/9747412d-a23d-48ba-bddd-ad1247c360f5) |
-|  2026-06-10 | OpenAI | Researcher, Agent Post-Training, Personality | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/9e35d438-22bc-40a5-b80f-286c8197f9d5) |
-|  2026-06-09 | Anthropic | Marketing Events Producer | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5251832008) |
-|  2026-06-09 | Anthropic | People Programs, M&A Lead | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5239794008) |
-|  2026-06-09 | Roblox | Global Mobility Lead | San Mateo, CA, United States | full-time | [link](https://careers.roblox.com/jobs/7944233?gh_jid=7944233) |
-|  2026-06-09 | Stripe | Account Executive - Enterprise, Grower | US-Remote, US-San Francisco, US-Chicago, US-New York, US-Seattle, US-Texas | full-time | [link](https://stripe.com/jobs/search?gh_jid=7993151) |
-|  2026-06-09 | Stripe | Partner Solutions Architect, Technology Partnerships | United States | full-time | [link](https://stripe.com/jobs/search?gh_jid=7964568) |
-|  2026-06-09 | Databricks | RVP, Retail | United States | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8582310002) |
-|  2026-06-09 | ElevenLabs | Account Executive - Productions - North America | United States | full-time | [link](https://jobs.ashbyhq.com/elevenlabs/ef819b07-d617-42c7-873f-798d1a7d4024) |
-|  2026-06-09 | OpenAI | Executive Business Partner, OpenAI for Government & Global Affairs | Washington, DC | full-time | [link](https://jobs.ashbyhq.com/openai/229a4b86-61ba-47f9-8372-1ff6fa8536b0) |
-|  2026-06-09 | Palantir | Operations Analyst - US Government Security | New York, NY | full-time | [link](https://jobs.lever.co/palantir/2df67493-ffb3-4b34-bf3b-88b6750c3ea7) |
-|  2026-06-08 | Figma | Compensation Partner (Engineering) | San Francisco, CA • New York, NY • United States | full-time | [link](https://boards.greenhouse.io/figma/jobs/6014642004?gh_jid=6014642004) |
-|  2026-06-08 | Anthropic | Security Controls Assurance Lead | San Francisco, CA / New York City, NY / Washington, DC | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5250063008) |
-|  2026-06-08 | Datadog | Executive Assistant I - NYC | New York, New York, USA | full-time | [link](https://careers.datadoghq.com/detail/7977091/?gh_jid=7977091) |
-|  2026-06-08 | Perplexity | Strategic Finance Lead - Infrastructure | San Francisco | full-time | [link](https://jobs.ashbyhq.com/perplexity/23e0e9a1-1c85-431f-b205-2de463499639) |
-|  2026-06-08 | Perplexity | Strategic Finance Lead - Core | San Francisco | full-time | [link](https://jobs.ashbyhq.com/perplexity/2e1ee70c-b070-4ccc-a2bf-8b394161bbde) |
-|  2026-06-08 | Perplexity | Commercial Account Executive | San Francisco | full-time | [link](https://jobs.ashbyhq.com/perplexity/e0e8188a-9c92-4795-82a5-7384f1b25bc7) |
-|  2026-06-08 | Databricks | Lakebase Sales Specialist-Manufacturing | Remote - California; Remote - Colorado; Remote - Texas; United States | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8569496002) |
-|  2026-06-08 | OpenAI | Abuse Investigator - Child Safety | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/19b9af1a-6a6e-42e3-824b-a9f3794fef2b) |
-|  2026-06-08 | OpenAI | Strategic Sourcing Lead, Technology (Ads and Consumer Verticals) | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/73637834-85d6-49a4-a0b7-86d6a1e1e856) |
-|  2026-06-08 | OpenAI | Client Partner, Ads Solutions | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/bf9d9e1c-7967-41a4-a7ae-0bf9b6a768c2) |
-|  2026-06-08 | OpenAI | Technical Deployment Lead, Semiconductors | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/ec9950cb-ccb5-4d2b-b49d-0f6a80b03460) |
-|  2026-06-05 | Figma | Designer Advocate | San Francisco, CA | full-time | [link](https://boards.greenhouse.io/figma/jobs/6014530004?gh_jid=6014530004) |
-|  2026-06-05 | Figma | Governance Risk and Compliance | San Francisco, CA • New York, NY • United States | full-time | [link](https://boards.greenhouse.io/figma/jobs/6015630004?gh_jid=6015630004) |
-|  2026-06-05 | Scale AI | Safety Coordinator / Lab Lead | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/scaleai/jobs/4702657005) |
-|  2026-06-05 | Scale AI | Technical Writer | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/scaleai/jobs/4702795005) |
-|  2026-06-05 | Anthropic | Commercial Counsel, Platform & Marketplace | San Francisco, CA / Seattle, WA / New York City, NY / Washington, DC | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5208289008) |
-|  2026-06-05 | Anthropic | Startup Partnerships Lead | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5235692008) |
-|  2026-06-05 | Stripe | Finance & Strategy Analyst | CHI, SEA, NYC, SF | full-time | [link](https://stripe.com/jobs/search?gh_jid=7985368) |
-|  2026-06-05 | Databricks | Enterprise Account Executive, Federal Financials | Remote - Washington D.C. | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8579388002) |
-|  2026-06-05 | Databricks | Strategic Enterprise Account Executive, State and Local | Sacramento, California; San Francisco, California | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8579392002) |
-|  2026-06-05 | Cursor | Strategic Account Executive, Healthcare | Remote | full-time | [link](https://jobs.ashbyhq.com/cursor/0ecf8ce6-a31a-410a-a49c-d73e76a94c49) |
-|  2026-06-05 | Cursor | Strategic Account Executive, Federal Sales — Civilian | Remote | full-time | [link](https://jobs.ashbyhq.com/cursor/b0ef8a4d-64b5-4dc8-aeba-aa9ac0f430fc) |
-|  2026-06-05 | Replit | Business Development Representative | Salt Lake City, UT | full-time | [link](https://jobs.ashbyhq.com/replit/1c40b253-c33c-49d0-a1e0-d3e49aedf54c) |
-|  2026-06-05 | Notion | Community Operations | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/73df7180-5e1d-49eb-af97-2f1703e40d95) |
-|  2026-06-05 | Notion | People Analytics & Operations (Rotational Program) | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/e4229ca4-8210-4282-98ed-2071478f72aa) |
-|  2026-06-05 | OpenAI | Associate General Counsel, Hardware IP | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/3c944352-a389-47d5-aef7-0b2ba6fd1564) |
-|  2026-06-05 | OpenAI | Inventory and Cost Accounting Lead | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/65b5caaf-4944-459d-a82b-927675ab6662) |
-|  2026-06-05 | OpenAI | Researcher, Agent Post-Training, API & Power-Users | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/a68045e3-1fa1-4dd1-8ef4-e87fac2416eb) |
-|  2026-06-05 | Palantir | Commercial Administrative Business Partner | Miami, FL | full-time | [link](https://jobs.lever.co/palantir/2c45b359-0d00-4c68-b13d-b9f405efb739) |
-|  2026-06-05 | Palantir | Commercial Administrative Business Partner | Washington, D.C. | full-time | [link](https://jobs.lever.co/palantir/98256288-e13a-4c3e-b6c3-1e3dd1083b9a) |
-|  2026-06-05 | Palantir | Commercial Administrative Business Partner | New York, NY | full-time | [link](https://jobs.lever.co/palantir/f163223b-db5d-4c6d-b73f-0a2eaf85583f) |
-|  2026-06-04 | Scale AI | Associate General Counsel, Product & IP | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/scaleai/jobs/4702785005) |
-|  2026-06-04 | Anthropic | Financial Reporting Accountant | San Francisco, CA / Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5248494008) |
-|  2026-06-04 | Roblox | Finance Business Partner, Trust & Safety (6319) | San Mateo, CA, United States | full-time | [link](https://careers.roblox.com/jobs/7977161?gh_jid=7977161) |
-|  2026-06-04 | Databricks | Lakebase Sales Specialist | United States | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8569410002) |
-|  2026-06-04 | Databricks | Named Core Account Executive | Chicago, Illinois; St. Louis, Missouri | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8577057002) |
-|  2026-06-04 | Ramp | Growth Creative Designer, Paid Advertising (Contract) | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/e9b80522-bda3-4fd0-915e-1e76d77b29b3) |
-|  2026-06-03 | Vercel | Product Strategy & Operations | Hybrid - San Francisco | full-time | [link](https://job-boards.greenhouse.io/vercel/jobs/6011651004) |
-|  2026-06-03 | Duolingo | Corporate Counsel | Pittsburgh, PA | full-time | [link](https://careers.duolingo.com/jobs/8576434002?gh_jid=8576434002) |
-|  2026-06-03 | Figma | Workplace Generalist | San Francisco, CA | full-time | [link](https://boards.greenhouse.io/figma/jobs/6011928004?gh_jid=6011928004) |
-|  2026-06-03 | Anthropic | Communications Lead, Infrastructure and Engineering | New York City, NY; San Francisco, CA; Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5239391008) |
-|  2026-06-03 | Anthropic | Communications Lead, Platform | New York City, NY; San Francisco, CA; Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5240487008) |
-|  2026-06-03 | Anthropic | Communications Specialist, Product | San Francisco, CA / New York City, NY / Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5239403008) |
-|  2026-06-03 | Anthropic | Recruiter, Mergers & Acquisitions  | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5239772008) |
-|  2026-06-03 | Stripe | Finance & Strategy Partner, Central Engineering | Remote US, SF, SEA, NYC, CHI | full-time | [link](https://stripe.com/jobs/search?gh_jid=7979885) |
-|  2026-06-03 | Stripe | Product Lead, Connect | San Francisco, New York City, Seattle, US Remote | full-time | [link](https://stripe.com/jobs/search?gh_jid=7819759) |
-|  2026-06-03 | Stripe | User Risk Strategist, Ecosystem Risk Strategy | US-Chicago; US-Atlanta; US-Remote | full-time | [link](https://stripe.com/jobs/search?gh_jid=7977981) |
-|  2026-06-03 | Perplexity | Member of Creative Studio (Motion Designer) | New York City | full-time | [link](https://jobs.ashbyhq.com/perplexity/39d520eb-6b81-4b61-8b23-5efcdac4cad9) |
-|  2026-06-03 | Perplexity | Member of Creative Studio (Producer, Brand & Creative) | New York City | full-time | [link](https://jobs.ashbyhq.com/perplexity/678d1162-e650-4d6d-9532-b287255c00fb) |
-|  2026-06-03 | Perplexity | Member of Creative Studio (Web Designer - Marketing & Landing Pages) | New York City | full-time | [link](https://jobs.ashbyhq.com/perplexity/7ae341c4-411e-468c-bc26-bbdd8e55d388) |
-|  2026-06-03 | Databricks | Lakebase Sales Specialist- Financial Services | United States | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8569479002) |
-|  2026-06-03 | ElevenLabs | People Operations | United States | full-time | [link](https://jobs.ashbyhq.com/elevenlabs/ca331e5d-19ee-4585-a97e-f1a6224949cb) |
-|  2026-06-03 | Ramp | Viral Creative Producer | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/c48fddbc-6063-4cae-8bfc-cf17642f11ae) |
-|  2026-06-03 | OpenAI | Counsel, Commercial | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/35f99494-1700-4b81-9363-aaead13ea477) |
-|  2026-06-03 | OpenAI | Executive Protection Operator | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/86de53a1-6699-42c3-8abc-4d6381496adc) |
 
 ## Graphics / Game / 3D (3 recent)
 
@@ -674,12 +344,12 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 | 🔥⭐ 2026-07-02 | Apple | Graphics Software Content Engineer | Orlando, FL | new-grad | [link](https://jobs.apple.com/en-us/details/200669452) |
 | ⭐ 2026-06-26 | Riot Games | Software Engineer, Game UI - League of Legends | Los Angeles, USA | full-time | [link](https://www.riotgames.com/en/work-with-us/job/8025007?gh_jid=8025007) |
 
-## Design / UX (89 recent)
+## Design / UX (86 recent)
 
 | Posted | Company | Role | Location | Level · Term | Apply |
 |---|---|---|---|---|---|
-| 🔥⭐ 2026-07-03 | TikTok | UX Researcher Intern (GMPT) - 2026 Summer (BS/MS） | Seattle, WA | intern | [link](https://jobright.ai/jobs/info/6a30d126524fd5657fe12453?utm_campaign=1049&utm_source=git) |
 | 🔥⭐ 2026-07-02 | EA SPORTS | Technical Artist Intern - FALL 2026 | Austin, TX | intern | [link](https://jobright.ai/jobs/info/6a35e1c1649fdf16292fa9d6?utm_campaign=1049&utm_source=git) |
+| 🔥⭐ 2026-07-03 | TikTok | UX Researcher Intern (GMPT) - 2026 Summer (BS/MS） | Seattle, WA | intern | [link](https://jobright.ai/jobs/info/6a30d126524fd5657fe12453?utm_campaign=1049&utm_source=git) |
 | ⭐ 2026-07-01 | Corgan | Brand + Graphics Internship / Fall 2026 | Dallas, TX, US | intern | [link](https://jobright.ai/jobs/info/6a4594ad48d2f00f2a86e085?utm_campaign=1049&utm_source=git) |
 | ⭐ 2026-06-30 | University of South Florida | IAE Graphics Design Internship - Fall 2026 | 4202 E Fowler Ave, Tampa, FL, 33620, US | intern | [link](https://jobright.ai/jobs/info/6a440cca57ffc2202940611f?utm_campaign=1049&utm_source=git) |
 | ⭐ 2026-06-29 | PD Instore | 3D Design Intern | Minneapolis, MN 55427 | intern | [link](https://jobright.ai/jobs/info/6a43312c501d340b4a82e358?utm_campaign=1049&utm_source=git) |
@@ -687,8 +357,6 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 | ⭐ 2026-06-27 | Parker Hannifin | Graphics Design Intern | Mineral Wells, TX | intern | [link](https://jobright.ai/jobs/info/6a0656f3320bff2205eabcba?utm_campaign=1049&utm_source=git) |
 | ⭐ 2026-06-26 | United States Hockey League (USHL) | Video/Photo & Graphics Internship | Kearney, NE | intern | [link](https://jobright.ai/jobs/info/6a3f204e882f121f56a3c9b9?utm_campaign=1049&utm_source=git) |
 | ◐ 2026-06-23 | Niural | Product Design Intern | New York City, NY | intern | [link](https://jobs.ashbyhq.com/niural/d20af572-03b9-4f2a-8476-53c34203b2bc) |
-|  2026-06-26 | Sleeper | User Research Intern | United States | intern | [link](https://jobright.ai/jobs/info/6a3ef81cce7cce40b34229fc?utm_campaign=1049&utm_source=git) |
-|  2026-06-26 | Sleeper | User Research Intern | Remote, New York City | intern | [link](https://jobright.ai/jobs/info/6a3ef819ce7cce40b34229fb?utm_campaign=1049&utm_source=git) |
 |  2026-07-03 | Franklin County Data Center (FCDC) | 2026 Fall Graphic Design Intern | Columbus, OH 43215, USA | intern | [link](https://jobright.ai/jobs/info/6a3425367f3fdd180d4c8feb?utm_campaign=1049&utm_source=git) |
 |  2026-07-03 | CCMC | Digital Marketing & Communications Fall Intern | Babcock Ranch, FL | intern | [link](https://jobright.ai/jobs/info/6a34be31f6b55d12c791ddfc?utm_campaign=1049&utm_source=git) |
 |  2026-07-03 | Austin Community College | Marketing Graphic Design Student Intern (Hourly) | Highland Campus, United States of America | intern | [link](https://jobright.ai/jobs/info/6a467f8c3dbab558e29a75bd?utm_campaign=1049&utm_source=git) |
@@ -766,9 +434,8 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 |  2026-06-27 | Guess?, LLC. | Graphic Design Intern - Brand Partnerships | Corporate - Los Angeles, CA | intern | [link](https://jobright.ai/jobs/info/6a3fe25b1afc66714d3c9443?utm_campaign=1049&utm_source=git) |
 |  2026-06-27 | Guess?, LLC. | Summer Intern - Graphic Design | Corporate - Los Angeles, CA | intern | [link](https://jobright.ai/jobs/info/6a3fe254d528ac2915f95e8d?utm_campaign=1049&utm_source=git) |
 |  2026-06-26 | Minnesota Historical Society | Intern - MNHS Press Design | St Paul, MN, US | intern | [link](https://jobright.ai/jobs/info/6a3e002178237a036d5e33cd?utm_campaign=1049&utm_source=git) |
-|  2026-06-26 | BHDP Architecture | Fall Architectural Intern / Charlotte | Charlotte, NC | intern | [link](https://jobright.ai/jobs/info/6a3f03dc882f121f56a3c56a?utm_campaign=1049&utm_source=git) |
 
-## Software Engineering (451 recent)
+## Software Engineering (452 recent)
 
 | Posted | Company | Role | Location | Level · Term | Apply |
 |---|---|---|---|---|---|
@@ -808,7 +475,7 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 | ◐ 2026-07-01 | Palo Alto Networks | Software Engineer Intern | Palo Alto, CA | intern | [link](https://paloaltonetworks.wd5.myworkdayjobs.com/panwexternalcareers/job/Office---USA---CA---Headquarters/Intern---Software-Engineer--Bachelor-s-_JR-010190) |
 | ◐ 2026-07-01 | IMC Trading | Software Engineer Intern | Chicago, IL | intern | [link](https://job-boards.eu.greenhouse.io/imc/jobs/4823924101) |
 | ◐ 2026-07-01 | NOX METALS | Software Engineer Intern | Detroit, MI | intern | [link](https://jobs.ashbyhq.com/nox-metals/6edc2dff-7c4b-44b8-abba-32d5953b8c5f/application) |
-| 🔥◐ 2026-07-02 | NVIDIA | PhD Research Intern - System Software and I/O Architecture | Urbana, IL | intern | [link](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/PhD-Research-Intern--System-Software-and-I-O-Architecture---Fall-2026_JR2019667) |
+| ◐ 2026-07-02 | NVIDIA | PhD Research Intern - System Software and I/O Architecture | Urbana, IL | intern | [link](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/PhD-Research-Intern--System-Software-and-I-O-Architecture---Fall-2026_JR2019667) |
 | 🔥◐ 2026-07-02 | NVIDIA | Java Engineer Intern | Santa Clara, CA | intern | [link](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Java-Engineering-Intern---Fall-2026_JR2019769) |
 | ◐ 2026-06-30 | Worcester Polytechnic Institute | Research Software Engineer | Worcester, MA | intern | [link](https://wpi.wd5.myworkdayjobs.com/WPI_External_Career_Site/job/Worcester/Temporary-Research-Software-Engineer_R0003515) |
 | ◐ 2026-06-04 | ByteDance | Software Engineer Intern - Developer Infrastructure | San Jose, CA | intern | [link](https://jobs.bytedance.com/en/position/7595707875767699765/detail) |
@@ -923,6 +590,7 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 |  2026-06-07 | Tesla | Software Engineering Intern - Software Engineering - Service Engineering | Palo Alto, CA | intern | [link](https://www.tesla.com/careers/search/job/266119) |
 |  2026-06-03 | Altom Transport | Software Development Intern | Markham, IL | intern | [link](https://apply.workable.com/altom-transport/j/8536165C7B/apply) |
 | 🔥⭐ 2026-07-02 | Apple | Software Engineer-Systems | Cupertino, CA | new-grad | [link](https://jobs.apple.com/en-us/details/200669153) |
+| ⭐ 2026-07-01 | The Walt Disney Company | Product Software Engineer 1 | Glendale, CA | new-grad | [link](https://disney.wd5.myworkdayjobs.com/disneycareerdc/job/Glendale-CA-USA/Product-Software-Engineer-I_10151599-2) |
 | ⭐ 2026-06-29 | Palantir | Forward Deployed Software Engineer, New Grad - Commercial | Chicago, IL | new-grad | [link](https://jobs.lever.co/palantir/e500bcf3-19d8-4d3c-b340-4d76e4a55b40) |
 | ⭐ 2026-06-29 | Palantir | Forward Deployed Software Engineer New Grad - Commercial | Chicago, IL | new-grad | [link](https://jobs.lever.co/palantir/e500bcf3-19d8-4d3c-b340-4d76e4a55b40/apply) |
 | ⭐ 2026-06-29 | Palantir | Software Engineer New Grad - Production Infrastructure | Washington, DC | new-grad | [link](https://jobs.lever.co/palantir/15844944-fb69-4b57-9531-e988650b20c6/apply) |
@@ -931,6 +599,7 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 | ⭐ 2026-06-29 | Microsoft | Software Engineer 2 | Redmond, WA | new-grad | [link](https://apply.careers.microsoft.com/careers/job/1970393556917742) |
 | ⭐ 2026-06-29 | Palantir | Software Engineer New Grad - Defense | Palo Alto, CA | new-grad | [link](https://jobs.lever.co/palantir/f362d7aa-360d-4059-ab38-f482742693b3/apply) |
 | ⭐ 2026-06-29 | Palantir | Forward Deployed Software Engineer New Grad - Commercial | NYC | new-grad | [link](https://jobs.lever.co/palantir/2e6b0ac8-83e9-4be5-a3aa-cf319f751728/apply) |
+| ⭐ 2026-06-26 | Twitch | Software Engineer - Memberships | Seattle, WA | new-grad | [link](https://job-boards.greenhouse.io/twitch/jobs/8605153002) |
 | ⭐ 2026-06-16 | Palantir | Forward Deployed Software Engineer New Grad | NYC | new-grad | [link](https://jobs.lever.co/palantir/d1ac83d0-e923-42a5-8e6d-58dd0cab25ca/apply) |
 | ⭐ 2026-06-16 | Palantir | Forward Deployed Software Engineer New Grad | Washington, DC | new-grad | [link](https://jobs.lever.co/palantir/cbe90327-3e6e-451c-a54c-1d3cbcef5aeb/apply) |
 | ◐ 2026-06-15 | Palantir | Forward Deployed Software Engineer, New Grad - Intel, US Government | Washington, D.C. | new-grad | [link](https://jobs.lever.co/palantir/fbca0358-083a-4222-bdbb-3bd729b48382) |
@@ -966,7 +635,6 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 | ◐ 2026-07-01 | Internet Brands | Associate AI Software Engineer | Newark, NJ | new-grad | [link](https://jobs.jobvite.com/internetbrands/job/oSkoAfwU?nl=1&nl=1&fr=false) |
 | ◐ 2026-07-01 | Beacon AI | Frontend Web App Engineer - Frontend/Web App | San Carlos, CA | new-grad | [link](https://jobs.ashbyhq.com/beaconai/e43ce94b-95a2-46af-a3e8-154d279eb840/application) |
 | ◐ 2026-07-01 | Peraton | Java Software Engineer | Remote in USA | new-grad | [link](https://careers-peraton.icims.com/jobs/168173/job?mobile=true&needsRedirect=false) |
-| ◐ 2026-07-01 | The Walt Disney Company | Product Software Engineer 1 | Glendale, CA | new-grad | [link](https://disney.wd5.myworkdayjobs.com/disneycareerdc/job/Glendale-CA-USA/Product-Software-Engineer-I_10151599-2) |
 | ◐ 2026-07-01 | Sierra Nevada Corporation | Software Engineer 1 | Lone Tree, CO | new-grad | [link](https://snc.wd1.myworkdayjobs.com/snc_external_career_site/job/Lone-Tree-CO/Software-Engineer-I_R0030195) |
 | ◐ 2026-07-01 | Optiver | Graduate Software Engineer | Austin, TX | new-grad | [link](https://www.optiver.com/join-us/jobs/8604899002/?gh_jid=8604899002) |
 | ◐ 2026-07-01 | Optiver | Graduate Software Engineer | Chicago, IL | new-grad | [link](https://www.optiver.com/join-us/jobs/8401042002/?gh_jid=8401042002) |
@@ -980,10 +648,10 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 | ◐ 2026-06-08 | Google | Software Engineer - Translation Mobile - Extended Reality | Seattle, WA | new-grad | [link](https://www.google.com/about/careers/applications/jobs/results/81260991748154054) |
 | 🔥◐ 2026-07-02 | NVIDIA | Compiler Engineer New Grad | Santa Clara, CA | new-grad | [link](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Compiler-Engineer---Smart-Network-Devices--New-College-Grad-2026_JR2020535) |
 | 🔥◐ 2026-07-02 | Apple | Darwin Runtime Engineer - Core OS | Cupertino, CA | new-grad | [link](https://jobs.apple.com/en-us/details/200668853) |
+| ◐ 2026-06-17 | WebFX | Junior Backend Software Engineer - Nutshell CRM - AWS & React Native | Ann Arbor, MI | new-grad | [link](https://jobs.lever.co/webfx/497bb548-b7d7-4aff-b87b-da9dcc8fbcc8/apply) |
 | ◐ 2026-06-30 | Adtran | Software Engineer 1 | Atlanta, GA | new-grad | [link](https://adtran.wd3.myworkdayjobs.com/adtran/job/Atlanta-GA/Software-Engineer-I_R005699) |
 | ◐ 2026-06-30 | Berkshire Hathaway Energy | Software Engineer | Las Vegas, NV | new-grad | [link](https://fa-essf-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/10005318) |
 | ◐ 2026-06-30 | Peraton | Software Engineer | Remote in USA | new-grad | [link](https://careers-peraton.icims.com/jobs/167274/job?mobile=true&needsRedirect=false) |
-| ◐ 2026-06-17 | WebFX | Junior Backend Software Engineer - Nutshell CRM - AWS & React Native | Ann Arbor, MI | new-grad | [link](https://jobs.lever.co/webfx/497bb548-b7d7-4aff-b87b-da9dcc8fbcc8/apply) |
 | ◐ 2026-06-03 | ByteDance | Graduate Software Engineer - Cloud Native Infrastructure | San Jose, CA | new-grad | [link](https://jobs.bytedance.com/en/position/7538951609075271943/detail) |
 | ◐ 2026-06-29 | Altamira Technologies | Junior Software Engineer | Augusta, GA | new-grad | [link](https://jobs.jobvite.com/altamiracorps/job/oPlpAfwT?nl=1&nl=1&fr=false) |
 | ◐ 2026-06-29 | Integration Innovation (i3) | Entry Level Software Engineer | Huntsville, AL | new-grad | [link](https://careers-i3-corps.icims.com/jobs/5175/job?mobile=true&needsRedirect=false) |
@@ -993,7 +661,6 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 | ◐ 2026-06-27 | Cox | Software Engineer 1 | Austin, TX | new-grad | [link](https://cox.wd1.myworkdayjobs.com/Cox_External_Career_Site_1/job/Atlanta-GA/Software-Engineer-I_R202679352) |
 | ◐ 2026-06-27 | KLA Corporation | Senior Software Engineer | Milpitas, CA | new-grad | [link](https://kla.wd1.myworkdayjobs.com/Search/job/Milpitas-CA/Sr-Software-Engineer_2638120) |
 | ◐ 2026-06-26 | United Launch Alliance | Flight Computer Emulation Software Engineer 1 | Centennial, CO | new-grad | [link](https://jobs.ulalaunch.com/job/Centennial-Flight-Computer-Emulation-Software-Engineer-1-CO-80112/1403799500/?ats=successfactors) |
-| ◐ 2026-06-26 | Twitch | Software Engineer - Memberships | Seattle, WA | new-grad | [link](https://job-boards.greenhouse.io/twitch/jobs/8605153002) |
 | ◐ 2026-06-26 | United Launch Alliance | Integrated Test Environment Software Engineer 1 | Centennial, CO | new-grad | [link](https://jobs.ulalaunch.com/job/Centennial-Integrated-Test-Environment-(ITE)-Software-Engineer-1-CO-80112/1403796400/?ats=successfactors) |
 | ◐ 2026-06-26 | Cylake | Software Engineer – University Grad | Sunnyvale, CA | new-grad | [link](https://jobs.ashbyhq.com/cylake-inc/1d1ac42e-299c-42af-bd7c-b8c5fb07f735/application) |
 | ◐ 2026-06-26 | NCR Voyix | Software Engineer 1 | Atlanta, GA | new-grad | [link](https://ncr.wd1.myworkdayjobs.com/ext_us/job/ATLANTA-GA-USA/SW-Engineer-I_R0157595) |
@@ -1045,12 +712,13 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 |  2026-06-10 | Symbotic | Software Engineer - Core Systems & Platform Services | Burlington, MA | new-grad | [link](https://symbotic.wd504.myworkdayjobs.com/Symbotic/job/USA-Wilmington--MA---HQ/Software-Engineer--Core-Systems---Platform-Services_R7327) |
 |  2026-06-10 | SpaceX | Software Engineer - Hardware-in-the-Loop - Starlink | Redmond, WA | new-grad | [link](https://boards.greenhouse.io/spacex/jobs/8583074002) |
 |  2026-06-10 | Amgen | Principal Software Engineer | Tampa, FL | new-grad | [link](https://amgen.wd1.myworkdayjobs.com/careers/job/US---Florida---Tampa/Principal-Software-Engineer_R-240843) |
+|  2026-06-09 | Robert Bosch Venture Capital | Rotational Development Program - Software Engineer - Power Solutions | Southfield, MI | new-grad | [link](https://jobs.smartrecruiters.com/BoschGroup/744000131227160) |
+|  2026-06-09 | L3Harris Technologies | Senior Software Engineer - Software Engineer - Cloud Web Development | Melbourne, FL | new-grad | [link](https://jobs.l3harris.com/job/Patrick-Air-Force-Base-Senior-Associate,-Software-Engineer-(Cloud-Web-Development)-FL-32925/1397915000/?ats=successfactors) |
 |  2026-07-03 | Flexport | Automation Engineer 1 | Atlanta, GA | new-grad | [link](https://boards.greenhouse.io/flexport/jobs/8015840) |
 |  2026-07-03 | Zscaler | Software Development Engineer | San Jose, CA | new-grad | [link](https://job-boards.greenhouse.io/zscaler/jobs/5177411007) |
 |  2026-07-03 | Sono Bello | Application Developer 2 | Bellevue, WA | new-grad | [link](https://job-boards.greenhouse.io/sonobello/jobs/5290870008) |
-|  2026-06-09 | Robert Bosch Venture Capital | Rotational Development Program - Software Engineer - Power Solutions | Southfield, MI | new-grad | [link](https://jobs.smartrecruiters.com/BoschGroup/744000131227160) |
-|  2026-06-09 | L3Harris Technologies | Senior Software Engineer - Software Engineer - Cloud Web Development | Melbourne, FL | new-grad | [link](https://jobs.l3harris.com/job/Patrick-Air-Force-Base-Senior-Associate,-Software-Engineer-(Cloud-Web-Development)-FL-32925/1397915000/?ats=successfactors) |
 |  2026-06-08 | QinetiQ | Associate Software Engineer | Franklin, MA | new-grad | [link](https://careers-qinetiqus.icims.com/jobs/12152/job?mobile=true&needsRedirect=false) |
+|  2026-06-05 | Bot Auto | Software Engineer - Operation Platforms | Houston, TX | new-grad | [link](https://job-boards.greenhouse.io/botauto/jobs/5248910008) |
 |  2026-07-02 | Genuine Parts Company | Motion Automation Intelligence-Application Engineer | Eden Prairie, MN | new-grad | [link](https://genpt.wd1.myworkdayjobs.com/Careers/job/Eden-Prairie-MN-USA/Motion-Ai--Senior-Application-Engineer_R25_0000033573) |
 |  2026-07-02 | Leidos | Junior Software Developer | Bethesda, MD | new-grad | [link](https://leidos.wd5.myworkdayjobs.com/External/job/Bethesda-MD/Jr-Software-Developer_R-00179871) |
 |  2026-07-02 | Sysco | Associate Web Developer - NET | Woodridge, IL | new-grad | [link](https://wd5.myworkdaysite.com/recruiting/sysco/syscocareers/job/Edward-Don--Company---Woodridge---IL/Associate-Web-Developer--Net-_R253464) |
@@ -1070,7 +738,6 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 |  2026-07-02 | Northrop Grumman | Autonomy Software Integration and Test Engineer | El Segundo, CA | new-grad | [link](https://ngc.wd1.myworkdayjobs.com/Northrop_Grumman_External_Site/job/United-States-California-El-Segundo/Autonomy-Software-Integration-and-Test_R10238191) |
 |  2026-07-02 | Vanguard | Entry Level Application Engineer | Charlotte, NC | new-grad | [link](https://vanguard.wd5.myworkdayjobs.com/en-US/contractors_restricted/job/Charlotte-NC/Entry-Level-Application-Engineer----2027-Start-Date_180112) |
 |  2026-07-02 | Teledyne | Product Engineer | Carson, CA | new-grad | [link](https://flir.wd1.myworkdayjobs.com/flircareers/job/US---Torrance-CA/Product-Engineer_REQ35210) |
-|  2026-06-05 | Bot Auto | Software Engineer - Operation Platforms | Houston, TX | new-grad | [link](https://job-boards.greenhouse.io/botauto/jobs/5248910008) |
 |  2026-06-04 | NexHealth | Software Engineer | Seattle, WA | new-grad | [link](https://www.nexhealth.com/careers/open-positions?gh_jid=6014570004) |
 |  2026-06-04 | Torc Robotics | Software Engineer - Mission Control | Ann Arbor, MI | new-grad | [link](https://job-boards.greenhouse.io/torcrobotics/jobs/8566427002) |
 |  2026-06-03 | SpaceX | Software Engineer - Components - Starshield | West Athens, CA | new-grad | [link](https://boards.greenhouse.io/spacex/jobs/8575987002) |
@@ -1080,12 +747,12 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 |  2026-06-03 | WGU | Software Engineer | Salt Lake City, UT | new-grad | [link](https://wgu.wd5.myworkdayjobs.com/en-US/External/job/Salt-Lake-City-UT/Software-Engineer--WIS-to-Domestic-_JR-025312) |
 |  2026-07-01 | Gentex Corporation | Machine Vision Development Engineer 1 | Holland, MI | new-grad | [link](https://gentex.wd5.myworkdayjobs.com/Gentex/job/Zeeland-MI/Machine-Vision-Development-Engineer-I_REQ026227) |
 |  2026-07-01 | Moder | Forward Deployed Engineer Fellow | Conshohocken, PA | new-grad | [link](https://archwellessentials.wd1.myworkdayjobs.com/modercareers/job/Conshohocken-PA/Forward-Deployed-Engineer-Fellowship_JR107103) |
+|  2026-06-17 | Buyers Edge Platform | Junior Developer - Python & Go | Remote in USA | new-grad | [link](https://job-boards.greenhouse.io/buyersedgeplatformrecruiting/jobs/4706922005) |
 |  2026-06-30 | The Nuclear Company | AI Engineer 1 - Product Engineering | Washington, DC | new-grad | [link](https://job-boards.greenhouse.io/thenuclearcompany/jobs/5285646008) |
 |  2026-06-30 | PacificSource | Backend Software Developer 1 | Springfield, OR | new-grad | [link](https://pacificsource.wd5.myworkdayjobs.com/pacificsource/job/Springfield-OR/Backend-Software-Developer-I_2026-676) |
 |  2026-06-30 | White Cap Supply Holdings | Application Engineer | American Fork, UT | new-grad | [link](https://whitecap.wd1.myworkdayjobs.com/careers/job/American-Fork_84003/Application-Engineer_WCJR-033948) |
 |  2026-06-30 | Charles Schwab | Associate Software Developer | Southlake, TX | new-grad | [link](https://career-schwab.icims.com/jobs/123543/job?mobile=true&needsRedirect=false) |
 |  2026-06-30 | Northern Trust | AI Engineer Associate | Chicago, IL | new-grad | [link](https://ntrs.wd1.myworkdayjobs.com/northerntrust/job/Chicago-IL/Associate-AI-Engineer_R156480) |
-|  2026-06-17 | Buyers Edge Platform | Junior Developer - Python & Go | Remote in USA | new-grad | [link](https://job-boards.greenhouse.io/buyersedgeplatformrecruiting/jobs/4706922005) |
 |  2026-06-03 | ByteDance | RDMA Network Software Development Engineer Graduate - High Speed Network | Seattle, WA | new-grad | [link](https://jobs.bytedance.com/en/position/7509266973013690631/detail) |
 |  2026-06-03 | ByteDance | Software Development Engineer Graduate - SDN Traffic Intelligence & Control | Seattle, WA | new-grad | [link](https://jobs.bytedance.com/en/position/7509262736619571474/detail) |
 |  2026-06-29 | The Nuclear Company | AI Engineer 1 - Platform Integration & AI/Data | Washington, DC | new-grad | [link](https://job-boards.greenhouse.io/thenuclearcompany/jobs/5285585008) |
@@ -1166,8 +833,8 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 |  2026-06-04 | Caesars Entertainment | Snack Bar Attendant | Las Vegas, NV | new-grad | [link](https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/84113) |
 |  2026-06-03 | UTHealth Houston | Clinical IS Analyst Associate - Epic | San Antonio, TX | new-grad | [link](https://fa-eomf-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1002/job/7053) |
 | ⭐ 2026-06-30 | Scale AI | Software Engineer, Identity | San Francisco, CA; New York, NY | full-time | [link](https://job-boards.greenhouse.io/scaleai/jobs/4710484005) |
-| ⭐ 2026-06-29 | Ramp | Software Engineer, Developer API | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/42527ca9-03b9-499e-a5c4-18e4245af138) |
 | ⭐ 2026-06-29 | OpenAI | Founding Full Stack Software Engineer, Legal | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/fcb0ed1a-9329-4e8f-8aab-92bb626d8141) |
+| ⭐ 2026-06-29 | Ramp | Software Engineer, Developer API | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/42527ca9-03b9-499e-a5c4-18e4245af138) |
 | ⭐ 2026-06-28 | Cursor | Software Engineer, Storage | San Francisco | full-time | [link](https://jobs.ashbyhq.com/cursor/299ce422-0281-4282-aadd-bc22553be0b5) |
 | ⭐ 2026-06-28 | Cursor | Software Engineer, Services Platform | San Francisco | full-time | [link](https://jobs.ashbyhq.com/cursor/6eef7144-f2cc-48a8-b065-01f04e4c70ff) |
 | ◐ 2026-06-26 | Figma | Software Engineer, Traffic | San Francisco, CA • New York, NY • United States | full-time | [link](https://boards.greenhouse.io/figma/jobs/6102379004?gh_jid=6102379004) |
@@ -1185,6 +852,7 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 | ◐ 2026-06-17 | OpenAI | Full Stack Software Engineer, Agent Enablement | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/2d7f1028-ce9b-49c7-acc8-782714ca1cf4) |
 | ◐ 2026-06-16 | Cohere | Software Engineer, North for Finance | Europe | full-time | [link](https://jobs.ashbyhq.com/cohere/f722247c-291b-44ee-af67-5159b8d5d9b9) |
 | ◐ 2026-06-15 | Stripe | Full-Stack Engineer | San Francisco | full-time | [link](https://stripe.com/jobs/search?gh_jid=8003382) |
+| ◐ 2026-06-15 | Stripe | Software Engineer | New York, NY | full-time | [link](https://stripe.com/jobs/search?gh_jid=8009143) |
 | ◐ 2026-06-15 | Cohere | Software Engineer, Agents & Automations | London | full-time | [link](https://jobs.ashbyhq.com/cohere/4a3c3eb2-ae2e-4a86-a677-7bdecbc7d76e) |
 | ◐ 2026-06-15 | OpenAI | Full Stack Software Engineer, ChatGPT Finances | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/39e06ef9-5e62-425d-81e2-e8690188011f) |
 | ◐ 2026-06-12 | Replit | Product Engineer, Product Platform (Frontend) | Foster City, CA | full-time | [link](https://jobs.ashbyhq.com/replit/657a90d2-23cc-4c86-b9ed-a21900efee0d) |
@@ -1201,9 +869,9 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 | ◐ 2026-06-09 | OpenAI | Software Engineer, Internal Applications - Enterprise | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/db053b0e-c1a5-4b7a-bcb6-6e766629e7b1) |
 | ◐ 2026-06-09 | OpenAI | Backend Software Engineer, ChatGPT ImageGen | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/e7a4ee23-138a-4004-916e-72a452e7d115) |
 | ◐ 2026-06-08 | Stripe | Software Engineer | Seattle  | full-time | [link](https://stripe.com/jobs/search?gh_jid=7991636) |
-| ◐ 2026-06-08 | Ramp | Software Engineer, Onboarding | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/f1b3ca8d-d55f-4159-9a3b-f69ad0d981bc) |
 | ◐ 2026-06-08 | OpenAI | Systems Software Engineer, Security, First Party Hardware | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/1c48f39f-60ea-4636-87ed-8b4b4f5243e5) |
 | ◐ 2026-06-08 | OpenAI | Software Engineer, Scaled Abuse | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/3c67f712-697d-48d8-b05c-01be896e61da) |
+| ◐ 2026-06-08 | Ramp | Software Engineer, Onboarding | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/f1b3ca8d-d55f-4159-9a3b-f69ad0d981bc) |
 | ◐ 2026-06-06 | OpenAI | Software Engineer, Cloud Agents | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/f6278b60-dd42-4aa8-a3cd-c105f75ae8ae) |
 | ◐ 2026-06-05 | OpenAI | Robotics Software Engineer | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/fabfc6c5-57b5-49ba-aae9-e7dd5d7030ca) |
 | ◐ 2026-06-04 | OpenAI | Full Stack Software Engineer, Cybersecurity Products | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/88654e7f-4e23-4e75-8e54-18c10d09b093) |
@@ -1212,11 +880,11 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 | ◐ 2026-06-03 | Palantir | Software Engineer - Hosted Model Infrastructure | New York, NY | full-time | [link](https://jobs.lever.co/palantir/4df4cca5-e361-498b-806d-05f21638c93a) |
 | ◐ 2026-06-03 | Palantir | Software Engineer - Hosted Model Infrastructure | Washington, D.C. | full-time | [link](https://jobs.lever.co/palantir/7a9600be-cdcb-4311-bb5c-65b6939b5956) |
 | ◐ 2026-06-03 | Palantir | Software Engineer - Hosted Model Infrastructure | Palo Alto, CA | full-time | [link](https://jobs.lever.co/palantir/e9aecd15-c7e9-4803-9928-fc0b67e70f5b) |
+|  2026-06-18 | Anthropic | Platform Security Engineer, OpenBMC | San Francisco, CA / New York City, NY / Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5271346008) |
 |  2026-06-17 | OpenAI | Android Engineer, Growth | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/57bbaedc-30c1-4f1d-b194-e32a6adf874c) |
 |  2026-06-12 | Anthropic | IT Systems Engineer, Client Platform Engineer | Boston, MA; New York City, NY; Remote-Friendly (Travel-Required) /  Washington, DC | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5255853008) |
 |  2026-06-09 | OpenAI | Android Engineer, ChatGPT ImageGen | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/b15442c5-8e3c-4370-9abf-4b9c63f56de0) |
 |  2026-06-05 | Stripe | Mobile Security Engineer | New York, New York  | full-time | [link](https://stripe.com/jobs/search?gh_jid=7982720) |
-|  2026-06-18 | Anthropic | Platform Security Engineering - OpenBMC | San Francisco, CA / New York City, NY / Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5271346008) |
 |  2026-06-15 | Anthropic | Platform Hardware Security | San Francisco, CA / New York City, NY / Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5257689008) |
 |  2026-06-12 | Databricks | Specialist Solutions Architect - Google Cloud Platform & Infrastructure | United States | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8589834002) |
 |  2026-06-08 | Perplexity | Strategic Finance Lead - Infrastructure | San Francisco | full-time | [link](https://jobs.ashbyhq.com/perplexity/23e0e9a1-1c85-431f-b205-2de463499639) |
@@ -1228,9 +896,9 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 
 | Posted | Company | Role | Location | Level · Term | Apply |
 |---|---|---|---|---|---|
-| 🔥◐ 2026-07-03 | ByteDance | Research Scientist Intern - AI Infrastructure | Seattle, WA | intern | [link](https://jobs.bytedance.com/en/position/7553916190126524680/detail) |
-| 🔥◐ 2026-07-03 | ByteDance | Research Scientist Intern - AI Infrastructure | San Jose, CA | intern | [link](https://jobs.bytedance.com/en/position/7553917136512076050/detail) |
-| 🔥◐ 2026-07-02 | NVIDIA | Applied Research Intern - NLP | Santa Clara, CA | intern | [link](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Applied-Research-Intern--NLP---Fall-2026_JR2010488) |
+| ◐ 2026-07-03 | ByteDance | Research Scientist Intern - AI Infrastructure | Seattle, WA | intern | [link](https://jobs.bytedance.com/en/position/7553916190126524680/detail) |
+| ◐ 2026-07-03 | ByteDance | Research Scientist Intern - AI Infrastructure | San Jose, CA | intern | [link](https://jobs.bytedance.com/en/position/7553917136512076050/detail) |
+| ◐ 2026-07-02 | NVIDIA | Applied Research Intern - NLP | Santa Clara, CA | intern | [link](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Applied-Research-Intern--NLP---Fall-2026_JR2010488) |
 | ◐ 2026-06-03 | ByteDance | Software Engineer Intern - Applied Machine Learning-Enterprise | San Jose, CA | intern | [link](https://jobs.bytedance.com/en/position/7533045355162044690/detail) |
 | ◐ 2026-06-23 | Netflix | AI/ML Scientist Intern - AIMS AI Foundations | Los Gatos, CA | intern | [link](https://explore.jobs.netflix.net/careers/job/790316547536) |
 | ◐ 2026-06-16 | Meta | Research Scientist Intern - State Estimation for Dexterous Manipulation | Redmond, WA | intern | [link](https://www.metacareers.com/jobs/2774289902955470) |
@@ -1338,6 +1006,7 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 |  2026-06-11 | Rivian and Volkswagen Group Technologies | Data Engineering Intern - AI & Analytics | Palo Alto, CA | intern | [link](https://jobs.ashbyhq.com/rivianvw.tech/3864f83a-7b29-4c96-b00e-436d60c0508a/application) |
 |  2026-06-11 | Lila Sciences | Data Extraction Co-op | Cambridge, MA | intern | [link](https://job-boards.greenhouse.io/lilasciences/jobs/4280811009) |
 |  2026-06-11 | Lila Sciences | Machine Learning for Digital Twins Co-op | Cambridge, MA | intern | [link](https://job-boards.greenhouse.io/lilasciences/jobs/4280809009) |
+|  2026-06-04 | Tencent | Multimedia Development Intern | Palo Alto, CA | intern | [link](https://tencent.wd1.myworkdayjobs.com/Tencent_Careers/job/US-California-Palo-Alto/Multimedia-development-intern_R107331) |
 |  2026-06-04 | ByteDance | Student Researcher - LLM Post Training - Agent & Reinforcement Learning | San Jose, CA | intern | [link](https://jobs.bytedance.com/en/position/7532653875506989320/detail) |
 |  2026-06-04 | ByteDance | Student Researcher - Seed Vision - Long-Range Video Generation | San Jose, CA | intern | [link](https://jobs.bytedance.com/en/position/7533027329703282951/detail) |
 |  2026-06-04 | ByteDance | Student Researcher - Multiple Teams | San Jose, CA | intern | [link](https://jobs.bytedance.com/en/position/7377527065203607834/detail) |
@@ -1392,7 +1061,6 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 |  2026-06-05 | CHEP | FP&A Business Intelligence Intern | London, UK | intern | [link](https://brambles.wd5.myworkdayjobs.com/en-US/Brambles_Careers/job/London-England-United-Kingdom/FP-A-Business-Intelligence-Intern_JR23946-1) |
 |  2026-06-05 | Sundt | Support Group Intern - Artificial Intelligence | Tempe, AZ | intern | [link](https://eewl.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/10300) |
 |  2026-06-05 | Lucid Motors | Finance Business Analytics Intern | Concord, NH | intern | [link](https://job-boards.greenhouse.io/lucidmotors/jobs/5136407007) |
-|  2026-06-04 | Tencent | Multimedia Development Intern | Palo Alto, CA | intern | [link](https://tencent.wd1.myworkdayjobs.com/Tencent_Careers/job/US-California-Palo-Alto/Multimedia-development-intern_R107331) |
 |  2026-06-04 | Susquehanna International Group (SIG) | Electricity + Natural Gas Analyst Intern | Ardmore, PA | intern | [link](https://careers-sig.icims.com/jobs/10945/job?mobile=true&needsRedirect=false) |
 |  2026-06-03 | Zipline | Perception Intern | Dallas, TX | intern | [link](https://www.zipline.com/careers?gh_jid=7761650003#open-roles) |
 | 🔥◐ 2026-07-02 | TikTok | Machine Learning Engineer Graduate - E-Commerce Supply Chain & Logistics | San Jose, CA | new-grad | [link](https://lifeattiktok.com/search/7515557805312297223) |
@@ -1400,7 +1068,7 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 | ◐ 2026-06-29 | Amazon | Data Engineer Data Science Focus - Ads Science Analysis & Tech - Asat | Palo Alto, CA | new-grad | [link](https://amazon.jobs/en/jobs/10461781/data-engineer-data-science-focus-ads-science-analysis-tech-asat) |
 | ◐ 2026-06-26 | Babel Street | Data Warehouse Software Engineer 1 | Cambridge, MA | new-grad | [link](https://job-boards.greenhouse.io/babelstreet/jobs/8030833) |
 | ◐ 2026-06-23 | Hatch IT | NLP/Linguistics Software Engineer | Cambridge, MA | new-grad | [link](https://jobs.lever.co/hatchit/a23a592b-edc0-498a-b90e-a521a706120e/apply) |
-| 🔥 2026-07-03 | Microsoft | Threat Context Analyst | United States | new-grad | [link](https://apply.careers.microsoft.com/careers/job/1970393556868626) |
+|  2026-07-03 | Microsoft | Threat Context Analyst | United States | new-grad | [link](https://apply.careers.microsoft.com/careers/job/1970393556868626) |
 |  2026-06-18 | Amazon | Data Scientist 1 - SCOT-Inbound - Planning Optimization | NYC | new-grad | [link](https://amazon.jobs/en/jobs/10451969/data-scientist-i-scot-inbound-planning-optimization) |
 |  2026-06-13 | Northrop Grumman | Software Engineer/Principal Software Engineer - Data Analyst | Escondido, CA | new-grad | [link](https://ngc.wd1.myworkdayjobs.com/Northrop_Grumman_External_Site/job/United-States-California-San-Diego/Software-Engineer-Principal-Software-Engineer---Data-Analyst_R10234157) |
 |  2026-06-16 | Netflix | Research Scientist 4 - Machine Learning and Inference Research - Large Language Model Post-Training | LA | new-grad | [link](https://explore.jobs.netflix.net/careers/job/790311856514) |
@@ -1704,12 +1372,12 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 |  2026-06-06 | CoStar Group | Bilingual French/English Associate Sales Comparable Researcher | Richmond, VA | new-grad | [link](https://costar.wd1.myworkdayjobs.com/en-US/CoStarCareers/job/US-VA-Richmond/Bilingual-French-English-Associate-Sales-Comparable-Researcher_R37248) |
 |  2026-06-04 | Metalcraft of Mayville | Engineering Support Technician | Fond du Lac, WI | new-grad | [link](https://careers-mtlcraft.icims.com/jobs/4649/job?mobile=true&needsRedirect=false) |
 |  2026-06-03 | Teamworks | Computer Vision Researcher | Remote in USA | new-grad | [link](https://jobs.ashbyhq.com/teamworks/7e11cc46-5f8b-4274-a754-8b74ea3a3769/application) |
-| ◐ 2026-07-03 | Anthropic | Research Engineer, Life Sciences | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5265365008) |
 | ◐ 2026-07-03 | Stripe | AI Engineer | Chicago | full-time | [link](https://stripe.com/jobs/search?gh_jid=8044460) |
-| ◐ 2026-07-01 | Anthropic | [P] Data Engineer, Safeguards | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5240422008) |
+| ◐ 2026-07-03 | Anthropic | Research Engineer, Life Sciences | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5265365008) |
 | ◐ 2026-07-01 | Notion | AI Chat Support Lead | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/c45b0b2a-0634-4cda-8b9b-ea6427093915) |
-| ◐ 2026-06-30 | Anthropic | Research Engineer, Computer Use | San Francisco, CA / New York City, NY / Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5285246008) |
+| ◐ 2026-07-01 | Anthropic | [P] Data Engineer, Safeguards | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5240422008) |
 | ◐ 2026-06-30 | Datadog | Product Strategy and Corporate Development Lead, AI | New York, New York, USA | full-time | [link](https://careers.datadoghq.com/detail/8011158/?gh_jid=8011158) |
+| ◐ 2026-06-30 | Anthropic | Research Engineer, Computer Use | San Francisco, CA / New York City, NY / Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5285246008) |
 |  2026-06-26 | OpenAI | Agent Post-Training, Computer Use Research | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/34c2ed3f-840f-4a68-9a00-0a0606660abf) |
 |  2026-06-26 | OpenAI | Agent Post-Training, Artifacts Research | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/6897d024-88c1-43ed-adb8-5d2fc5eec984) |
 |  2026-06-26 | OpenAI | Agent Post-Training, Frontier Evals and Environments Research | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/9d72171e-2630-4347-83a1-263178644282) |
@@ -1718,33 +1386,33 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 |  2026-06-25 | OpenAI | Research Engineer/Research Scientist - Personal AGI, North Stars | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/171ebca6-de53-4d6e-a312-30332f353957) |
 |  2026-06-25 | OpenAI | Agent Post-Training Research | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/4acc3515-887f-4bc9-8c2a-00f36ae480c3) |
 |  2026-06-25 | OpenAI | Research Engineer / Research Scientist -Personal AGI, Proactivity  | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/e57d196b-4fa0-4463-bd33-d8189f0d3541) |
-|  2026-06-24 | Anthropic | Research Engineer, Rule of Law | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5278065008) |
 |  2026-06-24 | Cursor | Data Analyst, User Operations | Remote | full-time | [link](https://jobs.ashbyhq.com/cursor/c43bdded-80a1-4705-a0ec-8217d771528c) |
+|  2026-06-24 | Anthropic | Research Engineer, Rule of Law | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5278065008) |
 |  2026-06-23 | Stripe | Machine Learning Engineer, Payment Intelligence | Seattle | full-time | [link](https://stripe.com/jobs/search?gh_jid=7983456) |
 |  2026-06-23 | Cursor | AI Adoption Engineer | Remote | full-time | [link](https://jobs.ashbyhq.com/cursor/ecc15f50-5d5b-4f79-a14c-e424b0c1bec6) |
-|  2026-06-23 | Ramp | AI Solutions Strategist | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/cbdf2857-1675-4b68-8cb5-2f92a20faa75) |
 |  2026-06-23 | OpenAI | AI Deployment Engineer | New York City | full-time | [link](https://jobs.ashbyhq.com/openai/6bacc51d-6580-4089-93ca-7df3bce4b635) |
 |  2026-06-23 | OpenAI | Visual Storytelling & AI Innovation Lead, Office of the CFO | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/93b40497-91c8-412a-94fc-00fe6f1af413) |
 |  2026-06-23 | OpenAI | AI Deployment Engineer, Cyber | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/b46ffd99-f9f2-440c-ac13-448eb7911ad6) |
 |  2026-06-23 | OpenAI | Data Center Physical Security Systems Engineer | Remote - US | full-time | [link](https://jobs.ashbyhq.com/openai/f69f75f5-439f-4044-8ae1-8fd810e0402d) |
 |  2026-06-23 | OpenAI | AI Deployment Engineer, Messenger Integrations | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/f827e381-91a0-40b7-8ae9-b56540642a74) |
+|  2026-06-23 | Ramp | AI Solutions Strategist | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/cbdf2857-1675-4b68-8cb5-2f92a20faa75) |
 |  2026-06-22 | OpenAI | Data Scientist, Identity | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/1f9c3666-82c8-45a7-8d4b-633a265ce996) |
 |  2026-06-19 | Anthropic | Research Engineer, Domain Scaling | San Francisco, CA / New York City, NY / Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5271380008) |
 |  2026-06-18 | Stripe | Product Lead, Data Products | New York City, San Francisco  | full-time | [link](https://stripe.com/jobs/search?gh_jid=8014786) |
 |  2026-06-18 | Notion | User Researcher, AI Evaluations | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/0e9114bd-4603-4bdf-a86f-a7a4f390fae8) |
 |  2026-06-17 | OpenAI | Data Engineer, Scaling Analytics | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/c59e2e83-59a6-45bc-82cd-665c6a8a5761) |
 |  2026-06-16 | OpenAI | Enterprise Application Data Architect, GTM Systems | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/a057c19d-83db-4bb2-a86f-07caa422d770) |
-|  2026-06-15 | Anthropic | People Research Scientist, Recruiting | New York City, NY / Seattle, WA; San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5257763008) |
 |  2026-06-15 | OpenAI | People Research Data Scientist, AI Fairness & Bias | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/cadb7c24-2aea-4b98-a793-65ae9388b5d6) |
+|  2026-06-15 | Anthropic | People Research Scientist, Recruiting | New York City, NY / Seattle, WA; San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5257763008) |
 |  2026-06-12 | Figma | Data Scientist, Finance | San Francisco, CA • New York, NY • United States | full-time | [link](https://boards.greenhouse.io/figma/jobs/6013304004?gh_jid=6013304004) |
 |  2026-06-12 | Replit | GTM AI Operations Lead, Demand Generation | Foster City, CA | full-time | [link](https://jobs.ashbyhq.com/replit/455c1feb-7157-48d5-b2a6-57606ed1a6cd) |
 |  2026-06-12 | Replit | GTM AI Operations Lead, Sales | Foster City, CA | full-time | [link](https://jobs.ashbyhq.com/replit/76e6a8a1-c542-46c0-a94f-050c61be196a) |
 |  2026-06-12 | OpenAI | AI Deployment Engineer | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/fbefd5d2-affe-47e1-9e87-d2b5de317b40) |
 |  2026-06-11 | Figma | Data Scientist, Marketing | San Francisco, CA • New York, NY • United States | full-time | [link](https://boards.greenhouse.io/figma/jobs/6013303004?gh_jid=6013303004) |
-|  2026-06-11 | Anthropic | Research Engineer, Code RL (Reinforcement Learning) | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5254364008) |
 |  2026-06-11 | OpenAI | Applied Data Science & Insights Leader - GTM Intelligence Solutions and Technical Success | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/93f558c1-c944-4ddc-b102-addc9446de3d) |
-|  2026-06-10 | Anthropic | Data Center Strategic Sourcing Lead | Remote-Friendly, United States | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5253145008) |
+|  2026-06-11 | Anthropic | Research Engineer, Code RL (Reinforcement Learning) | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5254364008) |
 |  2026-06-10 | Databricks | Strategy & Execution AI Specialist | Mountain View, California | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8582459002) |
+|  2026-06-10 | Anthropic | Data Center Strategic Sourcing Lead | Remote-Friendly, United States | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5253145008) |
 |  2026-06-09 | Datadog | FP&A Analyst - Data Insights | New York, New York, USA | full-time | [link](https://careers.datadoghq.com/detail/7964916/?gh_jid=7964916) |
 |  2026-06-09 | OpenAI | AI Support Engineer - San Francisco (Weekend Shift) | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/99f823a1-66ec-44bd-ba30-d3645aa49d74) |
 |  2026-06-08 | Stripe | Solutions Architect, AI | US-San Francisco | full-time | [link](https://stripe.com/jobs/search?gh_jid=7975723) |
@@ -1756,9 +1424,9 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 
 | Posted | Company | Role | Location | Level · Term | Apply |
 |---|---|---|---|---|---|
-| 🔥◐ 2026-07-03 | TikTok | Copyright Solution Product Manager Intern - Tiktok-Music | San Jose, CA | intern | [link](https://lifeattiktok.com/search/7657541997725288757) |
-| 🔥◐ 2026-07-03 | TikTok | Product Manager Intern - TikTok Product Content Ecosystem | San Jose, CA | intern | [link](https://lifeattiktok.com/search/7657778928769534213) |
-| 🔥◐ 2026-07-02 | TikTok | Product Solutions and Operations Project Intern - Commerce Ads | San Jose, CA | intern | [link](https://lifeattiktok.com/search/7657640284071954741) |
+| ◐ 2026-07-03 | TikTok | Copyright Solution Product Manager Intern - Tiktok-Music | San Jose, CA | intern | [link](https://lifeattiktok.com/search/7657541997725288757) |
+| ◐ 2026-07-03 | TikTok | Product Manager Intern - TikTok Product Content Ecosystem | San Jose, CA | intern | [link](https://lifeattiktok.com/search/7657778928769534213) |
+| ◐ 2026-07-02 | TikTok | Product Solutions and Operations Project Intern - Commerce Ads | San Jose, CA | intern | [link](https://lifeattiktok.com/search/7657640284071954741) |
 |  2026-06-29 | Rise8 | Skillbridge Intern - Product Manager | Remote in USA | intern | [link](https://job-boards.greenhouse.io/rise8/jobs/4359627007) |
 |  2026-07-03 | Travelers | Product Management Development Program Intern - Pricing Analyst | Hartford, CT | intern | [link](https://travelers.wd5.myworkdayjobs.com/External/job/CT---Hartford/Product-Management-Development-Program--PMDP--Pricing-Analyst---Summer-2027_R-51216) |
 |  2026-07-03 | Travelers | Product Management Development Program Intern | Hartford, CT | intern | [link](https://travelers.wd5.myworkdayjobs.com/External/job/CT---Hartford/Product-Management-Development-Program--PMDP--Internship---Summer-2027_R-51214) |
@@ -1932,6 +1600,8 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 | ◐ 2026-06-27 | Ford Motor Company | Embedded Software Engineer | Plantation, FL | new-grad | [link](https://efds.fa.em5.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/66197) |
 | ◐ 2026-06-26 | United Launch Alliance | Embedded Flight Software Engineer 1 | Centennial, CO | new-grad | [link](https://jobs.ulalaunch.com/job/Centennial-Embedded-Flight-Software-Engineer-1-CO-80112/1403799100/?ats=successfactors) |
 | ◐ 2026-06-24 | Schweitzer Engineering Laboratories | Associate Embedded Software Engineer | Moscow, ID | new-grad | [link](https://selinc.wd1.myworkdayjobs.com/SEL/job/Washington---Pullman/Associate-Software-Engineer_2026-21564) |
+|  2026-06-05 | Impulse Space | Embedded Software Engineer - Camera Systems | El Segundo, CA | new-grad | [link](https://impulsespace.pinpointhq.com/en/postings/53615b51-6458-4464-894d-f48d8b91711b?ats=pinpointhq) |
+|  2026-06-05 | Brunswick | Embedded Software Engineer | Oshkosh, WI | new-grad | [link](https://brunswick.wd1.myworkdayjobs.com/en-US/search/job/Oshkosh-WI/Embedded-Software-Engineer_JR-050448) |
 |  2026-07-02 | CACI | Computer Hardware Engineer 1 | Aberdeen, MD | new-grad | [link](https://caci.wd1.myworkdayjobs.com/external/job/Camp-Smith-HI-US/Computer-Hardware-Engineer-I_328438) |
 |  2026-07-02 | Northrop Grumman | Associate Engineer Technical Services | Canoga Park, LA | new-grad | [link](https://ngc.wd1.myworkdayjobs.com/Northrop_Grumman_External_Site/job/United-States-California-Woodland-Hills/XMLNAME-2026-Associate-Engineer-Technical-Services---Woodland-Hills-CA_R10238527) |
 |  2026-07-02 | Carrier Global | Associate Engineer | Fort Wayne, IN | new-grad | [link](https://carrier.wd5.myworkdayjobs.com/jobs/job/CAI19-UTEC-Huntington-111-East-Wayne-Street-Fort-Wayne-IN-46802-USA/Associate-Engineer_30208736) |
@@ -1943,8 +1613,6 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 |  2026-07-02 | Microchip Technology | Engineer 1 - Device - Technology Development | Colorado Springs, CO | new-grad | [link](https://wd5.myworkdaysite.com/recruiting/microchiphr/External/job/CO---Colorado-Springs---East-Cheyenne-Mountain-Blvd/Engineer-I---Device--Technology-Development-_R2732-26) |
 |  2026-07-02 | Apptronik | Firmware Engineer - Hands | Austin, TX | new-grad | [link](https://boards.greenhouse.io/apptronik/jobs/6107171004) |
 |  2026-07-02 | Danaher Corporation | Associate Field Service Engineer | Harrisburg, PA | new-grad | [link](https://danaher.wd1.myworkdayjobs.com/DanaherJobs/job/Harrisburg-Pennsylvania-United-States/Assoicate-Field-Service-Engineer---Harrisburg_R1313762) |
-|  2026-06-05 | Impulse Space | Embedded Software Engineer - Camera Systems | El Segundo, CA | new-grad | [link](https://impulsespace.pinpointhq.com/en/postings/53615b51-6458-4464-894d-f48d8b91711b?ats=pinpointhq) |
-|  2026-06-05 | Brunswick | Embedded Software Engineer | Oshkosh, WI | new-grad | [link](https://brunswick.wd1.myworkdayjobs.com/en-US/search/job/Oshkosh-WI/Embedded-Software-Engineer_JR-050448) |
 |  2026-07-01 | Edgehog Trading | Junior FPGA Developer | Chicago, IL | new-grad | [link](https://ats.rippling.com/edgehog-trading/jobs/10ba9bbf-9fbe-49ff-8f58-a88041de1438) |
 |  2026-07-01 | Western Digital | Advanced HDD Technology Designs and Integration - Hardware/Firmware Engineer | Irvine, CA | new-grad | [link](https://jobs.smartrecruiters.com/WesternDigital/744000135312480) |
 |  2026-07-01 | IMC Trading | Graduate Hardware Engineer | Chicago, IL | new-grad | [link](https://job-boards.eu.greenhouse.io/imc/jobs/4823805101) |
@@ -2011,6 +1679,7 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 |  2026-06-12 | KLA | Field Service Engineer Semiconductor Equipment | Chandler, AZ | new-grad | [link](https://kla.wd1.myworkdayjobs.com/search/job/Chandler-AZ/Field-Service-Engineer-Semi-conductor-Equipment_2637284-1) |
 |  2026-06-12 | Inversion Space | Autonomy Engineer 1 - Arc Vehicle | Culver City, CA | new-grad | [link](https://job-boards.greenhouse.io/inversionspace/jobs/4705511005) |
 |  2026-06-12 | Canon | Field Service Engineer 1 - Semiconductor | Irvine, CA | new-grad | [link](https://external-canoncareers.icims.com/jobs/34518/job?mobile=true&needsRedirect=false) |
+|  2026-06-05 | The Walt Disney Company | Camera Operations Coordinator 1 | Bristol, CT | new-grad | [link](https://disney.wd5.myworkdayjobs.com/disneycareer/job/Bristol-CT-USA/Remote-Camera-Operations-Coordinator-I_10151169-2) |
 |  2026-06-30 | EquipmentShare | Telematics Installer | Jefferson City, MO | new-grad | [link](https://www.equipmentshare.com/careers/openings/?gh_jid=8039619) |
 |  2026-06-30 | ADT | Residential Service Technician | Downers Grove, IL | new-grad | [link](https://fa-erqb-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/3021065) |
 |  2026-06-11 | Western Digital | Hardware Development Engineer - Wafer Optical Metrology | Fremont, CA | new-grad | [link](https://jobs.smartrecruiters.com/WesternDigital/744000129015575) |
@@ -2090,7 +1759,6 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 |  2026-06-07 | Tesla | Engineering Technician - Cell Qualification - Cell Engineering | Fremont, CA | new-grad | [link](https://www.tesla.com/careers/search/job/268802) |
 |  2026-06-07 | Tesla | Engineering Technician - Passive Safety | Austin, TX | new-grad | [link](https://www.tesla.com/careers/search/job/266230) |
 |  2026-06-07 | Tesla | Engineering Technician - Self-Driving | Fremont, CA | new-grad | [link](https://www.tesla.com/careers/search/job/270886) |
-|  2026-06-05 | The Walt Disney Company | Camera Operations Coordinator 1 | Bristol, CT | new-grad | [link](https://disney.wd5.myworkdayjobs.com/disneycareer/job/Bristol-CT-USA/Remote-Camera-Operations-Coordinator-I_10151169-2) |
 |  2026-06-04 | Lumotive | Hardware Engineering Technician | Redmond, WA | new-grad | [link](https://jobs.lever.co/lumotive/281b2f26-630b-45b7-b4e7-3edf295c1696/apply) |
 |  2026-06-04 | Magna | CMM Technician | Toledo, OH | new-grad | [link](https://wd3.myworkdaysite.com/recruiting/magna/Magna/job/Northwood-Ohio-US/CMM-Technician_R00246035) |
 
@@ -2113,7 +1781,7 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 | ◐ 2026-06-11 | Epic Games | Lead UI Engineer | Cary,North Carolina,United States | full-time | [link](https://epicgames.com/careers/jobs/6001702004?gh_jid=6001702004) |
 | ◐ 2026-07-02 | Stripe | Technical Operations Engineer, Payments  | South San Francisco  | full-time | [link](https://stripe.com/jobs/search?gh_jid=8029252) |
 | ◐ 2026-06-30 | Anthropic | Salesforce Developer, Partnerships | San Francisco, CA / New York City, NY / Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5287327008) |
-| ◐ 2026-06-29 | Scale AI | Solutions Engineer – Robotics & Autonomous Driving | San Francisco, CA; New York, NY | full-time | [link](https://job-boards.greenhouse.io/scaleai/jobs/4710382005) |
+|  2026-06-29 | Scale AI | Solutions Engineer – Robotics & Autonomous Driving | San Francisco, CA; New York, NY | full-time | [link](https://job-boards.greenhouse.io/scaleai/jobs/4710382005) |
 |  2026-06-27 | Cursor | Community Engineer | San Francisco | full-time | [link](https://jobs.ashbyhq.com/cursor/0d7426d6-37fb-443d-b5e6-2a94a1375888) |
 |  2026-06-26 | Supabase | Postgres Deployment Engineer (Nix) | Remote | full-time | [link](https://jobs.ashbyhq.com/supabase/48950725-e0d9-4025-92d9-f75e1b60ce45) |
 |  2026-06-26 | Palantir | Embedded Legal Engineer | Palo Alto, CA | full-time | [link](https://jobs.lever.co/palantir/2d2f0ed7-134a-4f24-af89-cfb8583d796a) |
@@ -2146,43 +1814,43 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 |  2026-06-15 | OpenAI | System Performance Engineer, Consumer Devices | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/3fe77c71-1f20-45b5-8291-62f0d2104989) |
 |  2026-06-15 | OpenAI | Salesforce Ads Systems Engineer | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/da45caa7-461d-478f-a862-82120dd80e19) |
 |  2026-07-01 | Figma | People Operations Coordinator | San Francisco, CA | full-time | [link](https://boards.greenhouse.io/figma/jobs/6104568004?gh_jid=6104568004) |
+|  2026-07-01 | Databricks | Named Core Account Executive - CMEG | Remote - New York | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8610866002) |
+|  2026-07-01 | ElevenLabs | IT Engineering Lead | United States | full-time | [link](https://jobs.ashbyhq.com/elevenlabs/3a75a63b-5f28-4688-9963-d9607e21ae67) |
+|  2026-07-01 | Cursor | Enterprise Accout Executive Job Template | Remote | full-time | [link](https://jobs.ashbyhq.com/cursor/39edee3f-2d87-43b0-9189-8fac18dbebff) |
+|  2026-07-01 | Cursor | RVP, Healthcare West | Remote | full-time | [link](https://jobs.ashbyhq.com/cursor/61d5c4d4-726e-44fa-b943-6b64ab761a64) |
+|  2026-07-01 | Cursor | RVP, Healthcare East | Remote | full-time | [link](https://jobs.ashbyhq.com/cursor/702bf199-7721-4381-abd5-0f8dcde7f9a6) |
+|  2026-07-01 | Perplexity | Creator & Influencer Marketing Lead | Los Angeles | full-time | [link](https://jobs.ashbyhq.com/perplexity/457d84e7-6a36-4499-ae61-db92a2c404b9) |
+|  2026-07-01 | Notion | Revenue Transformation Analyst | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/892ed5b8-a654-49ac-a55b-fabea1b236c1) |
+|  2026-07-01 | Notion | The Notion Sales Agent Build Challenge [SDR/BDR] | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/e84f6113-2118-4698-a22a-d1701669ce4f) |
+|  2026-07-01 | OpenAI | Strategic Delivery Lead, Cyber | Washington, DC | full-time | [link](https://jobs.ashbyhq.com/openai/84dd8e5f-d4ca-46e0-986c-22432b4d3d3f) |
+|  2026-07-01 | Ramp | Employee Lifecycle Analyst | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/1c8e2b03-fcb3-4949-9113-07812f138eb6) |
+|  2026-07-01 | Ramp | Procurement Product Activation Specialist | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/f0e3a8bb-5f86-4ce1-b345-80d8912f9ddc) |
 |  2026-07-01 | Anthropic | Strategic Account Executive, Asset & Wealth Management - FSI | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5203506008) |
 |  2026-07-01 | Anthropic | Strategic Account Executive, Healthcare | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5288441008) |
 |  2026-07-01 | Anthropic | Strategic Account Executive, Insurance - FSI | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5288247008) |
 |  2026-07-01 | Anthropic | Strategic Account Executive, Investment Banking & Capital Markets - FSI | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5288245008) |
 |  2026-07-01 | Anthropic | Strategic Account Executive, Life Sciences | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5288446008) |
 |  2026-07-01 | Anthropic | Strategic Account Executive, Retail & Commercial Banking - FSI | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5288241008) |
-|  2026-07-01 | Perplexity | Creator & Influencer Marketing Lead | Los Angeles | full-time | [link](https://jobs.ashbyhq.com/perplexity/457d84e7-6a36-4499-ae61-db92a2c404b9) |
-|  2026-07-01 | Databricks | Named Core Account Executive - CMEG | Remote - New York | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8610866002) |
-|  2026-07-01 | Cursor | Enterprise Accout Executive Job Template | Remote | full-time | [link](https://jobs.ashbyhq.com/cursor/39edee3f-2d87-43b0-9189-8fac18dbebff) |
-|  2026-07-01 | Cursor | RVP, Healthcare West | Remote | full-time | [link](https://jobs.ashbyhq.com/cursor/61d5c4d4-726e-44fa-b943-6b64ab761a64) |
-|  2026-07-01 | Cursor | RVP, Healthcare East | Remote | full-time | [link](https://jobs.ashbyhq.com/cursor/702bf199-7721-4381-abd5-0f8dcde7f9a6) |
-|  2026-07-01 | ElevenLabs | IT Engineering Lead | United States | full-time | [link](https://jobs.ashbyhq.com/elevenlabs/3a75a63b-5f28-4688-9963-d9607e21ae67) |
-|  2026-07-01 | Ramp | Employee Lifecycle Analyst | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/1c8e2b03-fcb3-4949-9113-07812f138eb6) |
-|  2026-07-01 | Ramp | Procurement Product Activation Specialist | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/f0e3a8bb-5f86-4ce1-b345-80d8912f9ddc) |
-|  2026-07-01 | Notion | Revenue Transformation Analyst | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/892ed5b8-a654-49ac-a55b-fabea1b236c1) |
-|  2026-07-01 | Notion | The Notion Sales Agent Build Challenge [SDR/BDR] | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/e84f6113-2118-4698-a22a-d1701669ce4f) |
-|  2026-07-01 | OpenAI | Strategic Delivery Lead, Cyber | Washington, DC | full-time | [link](https://jobs.ashbyhq.com/openai/84dd8e5f-d4ca-46e0-986c-22432b4d3d3f) |
 |  2026-06-12 | OpenAI | Mechanical Engineer, Sensing | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/61e8051b-6510-448d-b4b1-b9836518462e) |
 |  2026-06-12 | OpenAI | Mechanical Engineer, Soft Goods Design | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/85a69221-4a75-48f1-9ebe-872234f9e1cd) |
-|  2026-06-30 | Anthropic | Business System Analyst Lead, Opportunity Acceleration | San Francisco, CA / New York City, NY / Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5287240008) |
-|  2026-06-30 | Anthropic | Internal Content Producer  | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5147352008) |
 |  2026-06-30 | Stripe | Account Executive, Product Sales (Billing) | US-NYC | full-time | [link](https://stripe.com/jobs/search?gh_jid=7984339) |
 |  2026-06-30 | Stripe | Executive Engagement Lead, Office of the CRO | NYC, SF, SEA, CHI, Remote | full-time | [link](https://stripe.com/jobs/search?gh_jid=8027651) |
+|  2026-06-30 | Cohere | HR Business Partner | Toronto | full-time | [link](https://jobs.ashbyhq.com/cohere/c1543c10-4c71-4bb9-a570-215a31e9e7fc) |
 |  2026-06-30 | Cursor | Strategic Account Executive, Federal Sales — DoW | Remote | full-time | [link](https://jobs.ashbyhq.com/cursor/27a7ac90-fe2a-4352-ad56-3548a64c9b64) |
 |  2026-06-30 | Cursor | GTM Finance - Marketing | San Francisco | full-time | [link](https://jobs.ashbyhq.com/cursor/ccf69bf0-69d9-4365-96a5-2c8cf4eb08b0) |
 |  2026-06-30 | Replit | Sales Leader | Foster City, CA | full-time | [link](https://jobs.ashbyhq.com/replit/3701351d-c64c-4992-971a-b3dfbd712570) |
-|  2026-06-30 | Cohere | HR Business Partner | Toronto | full-time | [link](https://jobs.ashbyhq.com/cohere/c1543c10-4c71-4bb9-a570-215a31e9e7fc) |
+|  2026-06-30 | Anthropic | Business System Analyst Lead, Opportunity Acceleration | San Francisco, CA / New York City, NY / Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5287240008) |
+|  2026-06-30 | Anthropic | Internal Content Producer  | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5147352008) |
 |  2026-06-10 | Scale AI | IT Systems Engineer | Washington, DC | full-time | [link](https://job-boards.greenhouse.io/scaleai/jobs/4704551005) |
 |  2026-06-10 | Roblox | Developer Engagement Representative - Thailand (Part-Time Contract) | Remote | full-time | [link](https://careers.roblox.com/jobs/7992558?gh_jid=7992558) |
 |  2026-06-10 | Notion | Security Engineer, Detection and Response | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/c0fcf37b-e00f-4aae-a2e0-b008f9939a7e) |
 |  2026-06-29 | Roblox | Talent Sourcing Partner (Short Term) | San Mateo, CA, United States | full-time | [link](https://careers.roblox.com/jobs/8031751?gh_jid=8031751) |
 |  2026-06-29 | Stripe | Account Executive - Enterprise, Growth | US-San Francisco, US-California | full-time | [link](https://stripe.com/jobs/search?gh_jid=7997146) |
-|  2026-06-29 | Databricks | Enterprise Account Executive - Financial Services | New York City, New York | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8610931002) |
 |  2026-06-29 | Databricks | Enterprise Account Executive - Financial Services | Boston, Massachusetts; New Jersey; New York City, New York | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8610933002) |
+|  2026-06-29 | Databricks | Enterprise Account Executive - Financial Services | New York City, New York | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8610931002) |
 |  2026-06-29 | Databricks | Real Estate Strategic Planning Lead | Mountain View, California; San Francisco, California | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8603402002) |
-|  2026-06-29 | Replit | Recruiting Coordinator | Foster City, CA | full-time | [link](https://jobs.ashbyhq.com/replit/08aa6e3d-a5df-4751-bc35-4876e671ce8f) |
 |  2026-06-29 | ElevenLabs | Forward Deployed Creative | United States | full-time | [link](https://jobs.ashbyhq.com/elevenlabs/1f668ed5-49e9-4726-881f-7818733103b1) |
+|  2026-06-29 | Replit | Recruiting Coordinator | Foster City, CA | full-time | [link](https://jobs.ashbyhq.com/replit/08aa6e3d-a5df-4751-bc35-4876e671ce8f) |
 |  2026-06-29 | Notion | Lead, IT Audit and Technology Risk | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/855748b0-4452-4331-bdec-d2aa0dbc782f) |
 |  2026-06-29 | OpenAI | Researcher, Alignment CoT Monitorability | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/82492010-ea96-449d-9949-b726b1a22616) |
 |  2026-06-29 | OpenAI | Executive Business Partner, B2B Ads Solutions | New York City | full-time | [link](https://jobs.ashbyhq.com/openai/b39d9542-e886-49e0-82dc-984141667f57) |
@@ -2196,11 +1864,11 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 |  2026-06-05 | OpenAI | Firmware Engineer, Robotics | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/3f99bfef-5b1a-48ea-aed0-2dbd57b12722) |
 |  2026-06-04 | Datadog | Security Engineer 2 - Cyber Threat Intelligence | New York, New York, USA | full-time | [link](https://careers.datadoghq.com/detail/7982345/?gh_jid=7982345) |
 |  2026-06-03 | ElevenLabs | Developer Community Growth | San Francisco | full-time | [link](https://jobs.ashbyhq.com/elevenlabs/db88ce4f-44a0-425c-88c4-1951c467c627) |
-|  2026-06-26 | Epic Games | Animation Systems Programmer | Larkspur,California,United States | full-time | [link](https://epicgames.com/careers/jobs/6103058004?gh_jid=6103058004) |
 |  2026-06-26 | Stripe | Account Executive, Funded Startups - Expansion | San Francisco | full-time | [link](https://stripe.com/jobs/search?gh_jid=8024368) |
 |  2026-06-26 | Stripe | Counsel, Leasing & Operational Professional Services | Chicago, Atlanta, US Remote | full-time | [link](https://stripe.com/jobs/search?gh_jid=8010009) |
-|  2026-06-26 | Datadog | Deal Desk Analyst - Boston (Portuguese or Spanish Speaking) | Boston, Massachusetts, USA | full-time | [link](https://careers.datadoghq.com/detail/8029969/?gh_jid=8029969) |
 |  2026-06-26 | Databricks | Global Regional Systems Integrator Leader | United States | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8603398002) |
+|  2026-06-26 | Epic Games | Animation Systems Programmer | Larkspur,California,United States | full-time | [link](https://epicgames.com/careers/jobs/6103058004?gh_jid=6103058004) |
+|  2026-06-26 | Datadog | Deal Desk Analyst - Boston (Portuguese or Spanish Speaking) | Boston, Massachusetts, USA | full-time | [link](https://careers.datadoghq.com/detail/8029969/?gh_jid=8029969) |
 |  2026-06-26 | Notion | Revenue Accountant | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/39c352a7-3f90-4704-b2ff-92df50b4ca02) |
 |  2026-06-26 | OpenAI | Enterprise 3P Field Events Lead | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/06a8c9e8-7ec8-455e-9193-ad46611c4d03) |
 |  2026-06-26 | OpenAI | Device Safety & Risk Operations Specialist, User Safety & Risk Operations | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/24f3c017-d844-4df1-bc52-71f95b6e731d) |
@@ -2208,12 +1876,9 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 |  2026-06-26 | OpenAI | Model Designer | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/91e1c582-cceb-4e98-bc5a-caf2def45a0d) |
 |  2026-06-26 | OpenAI | Economist | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/9ac67097-139b-4e3c-8c13-e9a6be26cf1b) |
 |  2026-06-26 | OpenAI | Agent Post-Training, API & Power Users | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/bb90d497-06ef-4bb9-878a-e797a19cd834) |
-|  2026-06-25 | Anthropic | G&A Compensation Partner  | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5278987008) |
-|  2026-06-25 | Anthropic | Immigration Specialist, M&A | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5277850008) |
 |  2026-06-25 | Databricks | Delivery Solutions Architect | Southwest - United States | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8609622002) |
 |  2026-06-25 | Databricks | Delivery Solutions Architect | Central - United States | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8609617002) |
 |  2026-06-25 | Replit | Administrative Assistant | Foster City, CA | full-time | [link](https://jobs.ashbyhq.com/replit/32fa018b-35df-480c-9090-00d0f37d7fe5) |
-|  2026-06-25 | Ramp | Solutions Consultant / Enterprise  | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/29b679a8-9990-48c1-b91e-001c566ced27) |
 |  2026-06-25 | OpenAI | Deal Desk Lead, Cloud Marketplaces & Partnerships — AWS Focus | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/30d32d0b-26ba-4ce4-a164-d8d00a3ef1a1) |
 |  2026-06-25 | OpenAI | Pricing Strategist | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/3ab0541b-160b-49c0-8609-574db6358332) |
 |  2026-06-25 | OpenAI | Partner Experience Lead | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/7fa3be6b-b4fa-483c-b845-57092101e38e) |
@@ -2221,75 +1886,78 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 |  2026-06-25 | OpenAI | Safety Transparency Editor, Safety Systems | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/a6a421a5-0d3d-4f2f-9767-7c25b6e7d2fc) |
 |  2026-06-25 | OpenAI | GTM Strategy & Operations, Enterprise | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/b1d548dd-6f54-4afa-8ab1-f5fe193a413d) |
 |  2026-06-25 | OpenAI | GTM Strategy & Operations, Digital Native | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/e884c269-ec1a-4d12-9fcd-8f63f8100c2f) |
+|  2026-06-25 | Ramp | Solutions Consultant / Enterprise  | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/29b679a8-9990-48c1-b91e-001c566ced27) |
+|  2026-06-25 | Anthropic | G&A Compensation Partner  | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5278987008) |
+|  2026-06-25 | Anthropic | Immigration Specialist, M&A | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5277850008) |
 |  2026-06-24 | Figma | People Partner, Product & Design | San Francisco, CA • New York, NY • United States | full-time | [link](https://boards.greenhouse.io/figma/jobs/6100107004?gh_jid=6100107004) |
 |  2026-06-24 | Figma | Workforce Management Analyst | San Francisco, CA • New York, NY • United States | full-time | [link](https://boards.greenhouse.io/figma/jobs/6099183004?gh_jid=6099183004) |
 |  2026-06-24 | Scale AI | Deployment Strategist  | Washington, DC | full-time | [link](https://job-boards.greenhouse.io/scaleai/jobs/4709157005) |
-|  2026-06-24 | Anthropic | Commercial Counsel, SPARC | New York City, NY; San Francisco, CA; Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5275765008) |
-|  2026-06-24 | Anthropic | Copy Lead, Claude | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5258583008) |
 |  2026-06-24 | Roblox | Litigation Paralegal | San Mateo, CA, United States | full-time | [link](https://careers.roblox.com/jobs/8027420?gh_jid=8027420) |
 |  2026-06-24 | Stripe | Product Sales Enablement Business Partner | US-San Francisco | full-time | [link](https://stripe.com/jobs/search?gh_jid=7994063) |
-|  2026-06-24 | Datadog | Datadog for Startups - Forward Deployed Engineering Lead | New York, New York, USA | full-time | [link](https://careers.datadoghq.com/detail/8003181/?gh_jid=8003181) |
 |  2026-06-24 | Databricks | Solutions Architect - Financial Services (Asset and Wealth Management) | Central - United States; Chicago, Illinois; Massachusetts; New York; North Carolina; Northeast - United States; Washington, D.C. | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8605158002) |
 |  2026-06-24 | Supabase | Commercial FinOps Lead  | Remote | full-time | [link](https://jobs.ashbyhq.com/supabase/d2707c73-fe36-4f23-b53a-dde88d7f1132) |
 |  2026-06-24 | Cursor | GTM, Emerging Products | San Francisco | full-time | [link](https://jobs.ashbyhq.com/cursor/b0d8ff6c-d37f-4dbc-b6c0-4fa84c38e224) |
+|  2026-06-24 | Datadog | Datadog for Startups - Forward Deployed Engineering Lead | New York, New York, USA | full-time | [link](https://careers.datadoghq.com/detail/8003181/?gh_jid=8003181) |
 |  2026-06-24 | Notion | Business Recruiter | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/60fb9e2e-ad8c-4269-9f51-d78ad4c96654) |
 |  2026-06-24 | OpenAI | Deal Lead, Special Situations (Semiconductors) | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/875b6559-55f0-4cea-ad62-0063d0cb0b73) |
 |  2026-06-24 | OpenAI | Prototyping Lab Technician, Robotics | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/9ba938cb-f0c3-4e01-a8ea-1019a8175201) |
-|  2026-06-23 | Duolingo | Product Marketing Lead | New York, NY | full-time | [link](https://careers.duolingo.com/jobs/8604113002?gh_jid=8604113002) |
-|  2026-06-23 | Anthropic | People Legal Counsel | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5275497008) |
-|  2026-06-23 | Anthropic | Strategic Deals Lead, Compute, Networking & Memory | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5205723008) |
-|  2026-06-23 | Datadog | Partner Solutions Architect (GSI) - AMER West | Denver, Colorado, USA; San Francisco, California, USA | full-time | [link](https://careers.datadoghq.com/detail/8010455/?gh_jid=8010455) |
-|  2026-06-23 | Datadog | Partner Solutions Architect (GSI) - AMER West | California, USA, Remote; Illinois, USA, Remote; Texas, USA, Remote; Washington, USA, Remote | full-time | [link](https://careers.datadoghq.com/detail/8015631/?gh_jid=8015631) |
+|  2026-06-24 | Anthropic | Commercial Counsel, SPARC | New York City, NY; San Francisco, CA; Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5275765008) |
+|  2026-06-24 | Anthropic | Copy Lead, Claude | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5258583008) |
 |  2026-06-23 | Databricks | Solutions Architect - Casino / iGaming  | United States | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8595123002) |
 |  2026-06-23 | Supabase | Brand Designer | Remote | full-time | [link](https://jobs.ashbyhq.com/supabase/4a85c92b-1d0d-43ee-8dbc-0e45a58be208) |
 |  2026-06-23 | Cursor | Strategic Partnerships & Growth Lead — DoW / COCOM & SOF | Remote | full-time | [link](https://jobs.ashbyhq.com/cursor/b16b81a8-a707-441d-b60e-db302274f887) |
+|  2026-06-23 | Datadog | Partner Solutions Architect (GSI) - AMER West | Denver, Colorado, USA; San Francisco, California, USA | full-time | [link](https://careers.datadoghq.com/detail/8010455/?gh_jid=8010455) |
+|  2026-06-23 | Datadog | Partner Solutions Architect (GSI) - AMER West | California, USA, Remote; Illinois, USA, Remote; Texas, USA, Remote; Washington, USA, Remote | full-time | [link](https://careers.datadoghq.com/detail/8015631/?gh_jid=8015631) |
 |  2026-06-23 | OpenAI | Marketing Scientist | New York City | full-time | [link](https://jobs.ashbyhq.com/openai/93c7f80e-9fe5-47d0-8163-c4589785e862) |
 |  2026-06-23 | OpenAI | Strategic Finance, Partnerships | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/b09b4216-426d-443c-9b87-23570fd9a694) |
-|  2026-06-22 | Duolingo | Executive Assistant to the CEO | New York, NY | full-time | [link](https://careers.duolingo.com/jobs/8602852002?gh_jid=8602852002) |
-|  2026-06-22 | Duolingo | Executive Assistant to the CEO | Pittsburgh, PA | full-time | [link](https://careers.duolingo.com/jobs/8602840002?gh_jid=8602840002) |
+|  2026-06-23 | Duolingo | Product Marketing Lead | New York, NY | full-time | [link](https://careers.duolingo.com/jobs/8604113002?gh_jid=8604113002) |
+|  2026-06-23 | Anthropic | People Legal Counsel | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5275497008) |
+|  2026-06-23 | Anthropic | Strategic Deals Lead, Compute, Networking & Memory | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5205723008) |
 |  2026-06-22 | Riot Games | VFX Artist II - Unpublished R&D Product | Los Angeles, USA | full-time | [link](https://www.riotgames.com/en/work-with-us/job/7984194?gh_jid=7984194) |
 |  2026-06-22 | OpenAI | Strategic Sales Development Representative - SF (Portuguese speaking) | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/08c536fc-1d2a-4ca3-99dd-6f6030286b0c) |
 |  2026-06-22 | OpenAI | Trust & Safety Operations Analyst, Ads | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/26e8c199-7dcb-4144-b263-f35220421a6d) |
 |  2026-06-22 | OpenAI | Enterprise Field Marketer | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/78fb6f21-e1cd-4963-8614-45cbfcfc92ae) |
+|  2026-06-22 | Duolingo | Executive Assistant to the CEO | New York, NY | full-time | [link](https://careers.duolingo.com/jobs/8602852002?gh_jid=8602852002) |
+|  2026-06-22 | Duolingo | Executive Assistant to the CEO | Pittsburgh, PA | full-time | [link](https://careers.duolingo.com/jobs/8602840002?gh_jid=8602840002) |
 |  2026-06-19 | Perplexity | Recruiting Coordinator  | San Francisco | full-time | [link](https://jobs.ashbyhq.com/perplexity/ed4fb057-3f06-419a-8bb2-9c98f370d477) |
 |  2026-06-18 | Stripe | Account Executive, Funded Startups - Expansion | Chicago | full-time | [link](https://stripe.com/jobs/search?gh_jid=8017336) |
-|  2026-06-18 | Datadog | Customer Success Associate - Spanish Speaking (Boston) | Boston, Massachusetts, USA | full-time | [link](https://careers.datadoghq.com/detail/8015717/?gh_jid=8015717) |
 |  2026-06-18 | Databricks | Delivery Solutions Architect - Communications, Media, Entertainment & Games | United States | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8598012002) |
 |  2026-06-18 | Databricks | Geo Core Account Executive | Northeast - United States | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8598730002) |
 |  2026-06-18 | Cursor | Strategic Partnerships & Growth Lead — DoW / Army | Remote | full-time | [link](https://jobs.ashbyhq.com/cursor/0d4431c8-78e7-4a41-9407-ed5dbf60d1f2) |
-|  2026-06-18 | Ramp | Virtual Events Associate | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/77578727-0710-43dd-a294-ac3cbb6b52a7) |
+|  2026-06-18 | Datadog | Customer Success Associate - Spanish Speaking (Boston) | Boston, Massachusetts, USA | full-time | [link](https://careers.datadoghq.com/detail/8015717/?gh_jid=8015717) |
 |  2026-06-18 | Notion | Rapid User Researcher | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/f3faba46-776a-4938-8c9b-5aebb495aa39) |
 |  2026-06-18 | OpenAI | Strategic Partnerships Lead, Education | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/05bea751-62ab-43d9-a5bb-77f385920af0) |
 |  2026-06-18 | OpenAI | Administrative Business Partner | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/9dfe4c27-84c0-4150-9ebe-8d4f12a95404) |
 |  2026-06-18 | OpenAI | Business Operations Partner, Transportation Program | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/a4787fb2-94d7-4b8e-b82c-093663e4ee85) |
+|  2026-06-18 | Ramp | Virtual Events Associate | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/77578727-0710-43dd-a294-ac3cbb6b52a7) |
 |  2026-06-18 | Palantir | Administrative Business Partner - ShipOS | Washington, D.C. | full-time | [link](https://jobs.lever.co/palantir/a237973c-cb29-41fe-9c80-416e6f42e087) |
 |  2026-06-18 | Palantir | Administrative Business Partner - ShipOS | New York, NY | full-time | [link](https://jobs.lever.co/palantir/a5f93bb6-4f13-4451-80a4-f63090830269) |
 |  2026-06-17 | Scale AI | Strategic Capture Lead, Homeland Security & Federal Law Enforcement | Washington, DC | full-time | [link](https://job-boards.greenhouse.io/scaleai/jobs/4706127005) |
 |  2026-06-17 | Datadog | Partner Solutions Architect (GSI) - AMER East | Boston, Massachusetts, USA; New York, New York, USA | full-time | [link](https://careers.datadoghq.com/detail/8003977/?gh_jid=8003977) |
-|  2026-06-17 | Ramp | Partner Development Representative / Advisory and Services | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/390f4cd0-e0e4-451c-ae28-e6b19861dda9) |
-|  2026-06-17 | Ramp | Sales Enablement / SDR | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/504e34ff-dbd9-49a7-8f68-327092672164) |
 |  2026-06-17 | Notion | International Payroll Analyst | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/d2760449-5e2d-4403-be84-fa286a9bafa1) |
 |  2026-06-17 | OpenAI | Corporate Business Development Lead | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/c4ecfceb-6e04-44ef-baa9-47e681eee750) |
 |  2026-06-17 | OpenAI | US Payroll Operations  | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/d2fb8994-a717-4ef0-b474-a0d8727ea3a4) |
 |  2026-06-17 | OpenAI | Credit and Collections Lead | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/da3bed10-dfa7-4e44-bb16-414dd56cc16b) |
 |  2026-06-17 | OpenAI | Threat Modeler, Preparedness | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/f735a48e-c3c2-4387-abf7-7b39452e1ec5) |
+|  2026-06-17 | Ramp | Partner Development Representative / Advisory and Services | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/390f4cd0-e0e4-451c-ae28-e6b19861dda9) |
+|  2026-06-17 | Ramp | Sales Enablement / SDR | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/504e34ff-dbd9-49a7-8f68-327092672164) |
 |  2026-06-16 | Vercel | Partner Operations Lead | Hybrid - San Francisco, New York City, Austin | full-time | [link](https://job-boards.greenhouse.io/vercel/jobs/6087001004) |
-|  2026-06-16 | Datadog | Deal Desk Analyst - NYC | New York, New York, USA | full-time | [link](https://careers.datadoghq.com/detail/7993638/?gh_jid=7993638) |
 |  2026-06-16 | Cursor | HRBP, GTM | New York | full-time | [link](https://jobs.ashbyhq.com/cursor/736ebf73-beb1-417f-87a3-a74176399ba6) |
 |  2026-06-16 | Cursor | Technical Sourcer | San Francisco | full-time | [link](https://jobs.ashbyhq.com/cursor/7deec098-b1cc-4258-8828-db94c0d43319) |
 |  2026-06-16 | Cursor | HRBP, Core Business | San Francisco | full-time | [link](https://jobs.ashbyhq.com/cursor/9978ffe7-8dac-4f44-9f3f-43cfd033d39c) |
 |  2026-06-16 | Cursor | Contract GTM Recruiter | San Francisco | full-time | [link](https://jobs.ashbyhq.com/cursor/d90eb6d1-b1cd-44cd-8115-16e466286c9f) |
 |  2026-06-16 | Cursor | People Operations Coordinator | San Francisco | full-time | [link](https://jobs.ashbyhq.com/cursor/db8e4abb-aa17-44cb-8d72-156f0d400641) |
 |  2026-06-16 | Cursor | Technical Recruiter | San Francisco | full-time | [link](https://jobs.ashbyhq.com/cursor/eabcff15-deb2-4e5c-a17d-8c36eb7f6c1d) |
-|  2026-06-16 | Ramp |  Account Executive / Mid-Market | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/f7c4de3c-1d64-42e9-8111-f38e265327d8) |
+|  2026-06-16 | Datadog | Deal Desk Analyst - NYC | New York, New York, USA | full-time | [link](https://careers.datadoghq.com/detail/7993638/?gh_jid=7993638) |
 |  2026-06-16 | Notion | CX Knowledge Architect | New York, New York | full-time | [link](https://jobs.ashbyhq.com/notion/4c7683fa-fe37-44d9-aa3f-2f57a37c11f8) |
 |  2026-06-16 | OpenAI | Lead Industrial Designer, Robotics | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/04a780c7-f672-43d1-9e73-37ce17b82403) |
 |  2026-06-16 | OpenAI | Business Development Lead - Cyber | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/cb846094-f44b-4afb-a5e1-f031ad8ca278) |
+|  2026-06-16 | Ramp |  Account Executive / Mid-Market | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/f7c4de3c-1d64-42e9-8111-f38e265327d8) |
 |  2026-06-15 | Stripe | Internal Audit Lead, Stablecoins & Digital Assets | San Francisco, Seattle, New York City | full-time | [link](https://stripe.com/jobs/search?gh_jid=7997826) |
-|  2026-06-15 | Datadog | Deal Desk Analyst - US West | Denver, Colorado, USA | full-time | [link](https://careers.datadoghq.com/detail/8003080/?gh_jid=8003080) |
 |  2026-06-15 | Databricks |  Lakebase Sales Specialist-MFG | Remote - Georgia; Remote - Texas; San Francisco, California | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8569506002) |
 |  2026-06-15 | Cursor | Strategic Account Executive, Federal Systems Integrators | Remote | full-time | [link](https://jobs.ashbyhq.com/cursor/89949cac-643b-4354-8bd3-744f6cde732b) |
 |  2026-06-15 | Replit | Technical Sourcer | Foster City, CA | full-time | [link](https://jobs.ashbyhq.com/replit/73831fe4-c4d5-4e27-91b4-f7f83a99cb73) |
+|  2026-06-15 | Datadog | Deal Desk Analyst - US West | Denver, Colorado, USA | full-time | [link](https://careers.datadoghq.com/detail/8003080/?gh_jid=8003080) |
 |  2026-06-15 | Notion | Customer Experience Strategy & Operations Lead | New York, New York | full-time | [link](https://jobs.ashbyhq.com/notion/8bb5da67-0b4d-4894-83eb-56d31e9bc662) |
 |  2026-06-15 | OpenAI | Order Management & Billing Lead, Cloud Marketplaces & Partnerships - AWS | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/1d03b4ee-8cec-47a1-b9e2-8ce9c5650943) |
 |  2026-06-15 | OpenAI | Customer Education, Content & Systems Operations Lead | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/2250b09d-f6fb-4ebc-9d27-dfd34d2ccbec) |
@@ -2297,14 +1965,14 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 |  2026-06-15 | OpenAI | TLM, Embedded Experiences | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/967d3ad7-bd2c-40e3-ba1f-f1140a116999) |
 |  2026-06-15 | OpenAI | Lead, Incidents & Escalations, User Operations | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/b0729478-f363-498e-a088-b659c40d4580) |
 |  2026-06-13 | Stripe | Payments Performance Strategist, Card Authorization | San Francisco, CA; Seattle, WA; Chicago, IL; New York, NY; Atlanta, GA; US-Remote | full-time | [link](https://stripe.com/jobs/search?gh_jid=8004054) |
-|  2026-06-12 | Epic Games | Modeling Outsource Artist | Cary,North Carolina,United States | full-time | [link](https://epicgames.com/careers/jobs/6020680004?gh_jid=6020680004) |
-|  2026-06-12 | Anthropic | Web Producer, CMS Publishing | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5257669008) |
 |  2026-06-12 | Stripe | Tax Technology Lead | San Francisco, Seattle, New York | full-time | [link](https://stripe.com/jobs/search?gh_jid=7905025) |
 |  2026-06-12 | Databricks | Cyber Security GTM Leader | Remote - California; Remote - New York | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8582312002) |
 |  2026-06-12 | Supabase | GTM Strategist | Remote | full-time | [link](https://jobs.ashbyhq.com/supabase/23a39e2b-333a-438c-b4e6-cf7cdde27e78) |
 |  2026-06-12 | Cohere | RevOps - Compensation & GTM Integration | New York | full-time | [link](https://jobs.ashbyhq.com/cohere/f3cf5d6a-5a93-41b5-8a00-160e120859ff) |
+|  2026-06-12 | Epic Games | Modeling Outsource Artist | Cary,North Carolina,United States | full-time | [link](https://epicgames.com/careers/jobs/6020680004?gh_jid=6020680004) |
 |  2026-06-12 | Notion | Finance Business Partner, GTM | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/07021c98-7b93-4748-ae7c-b83b3daa7ecd) |
 |  2026-06-12 | OpenAI | Supply Chain Transformation Architect | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/5fe29d1d-684f-4fed-88de-eb644fe3485e) |
+|  2026-06-12 | Anthropic | Web Producer, CMS Publishing | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5257669008) |
 |  2026-06-11 | Scale AI | Lead Counsel, Commercial | New York, NY | full-time | [link](https://job-boards.greenhouse.io/scaleai/jobs/4704553005) |
 |  2026-06-11 | Stripe | Account Executive, Enterprise Platforms, Hunter | New York, NY; San Francisco, CA; Seattle, WA; Los Angeles, CA; Denver, CO; Austin, TX; US-West Remote | full-time | [link](https://stripe.com/jobs/search?gh_jid=7961609) |
 |  2026-06-11 | Cursor | Executive Assistant, User Operations | San Francisco | full-time | [link](https://jobs.ashbyhq.com/cursor/0291653e-c192-4c87-b77e-5d1876748923) |
@@ -2315,37 +1983,36 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 |  2026-06-10 | Figma | Corporate Counsel | San Francisco, CA • New York, NY • United States | full-time | [link](https://boards.greenhouse.io/figma/jobs/6018708004?gh_jid=6018708004) |
 |  2026-06-10 | Stripe | Account Executive, Enterprise - Grower | US-New York, US-Chicago, US-Atlanta, US-San Francisco, US-Texas | full-time | [link](https://stripe.com/jobs/search?gh_jid=7997555) |
 |  2026-06-10 | Stripe | Account Executive, Enterprise - Hunter | US-San Francisco, US-Chicago, US-New York | full-time | [link](https://stripe.com/jobs/search?gh_jid=7994330) |
+|  2026-06-10 | ElevenLabs | Brand Marketing | San Francisco | full-time | [link](https://jobs.ashbyhq.com/elevenlabs/31b1c0e3-ca53-428d-8f15-2e3ffda491b8) |
 |  2026-06-10 | Cursor | Account Executive, Commercial - San Francisco | San Francisco | full-time | [link](https://jobs.ashbyhq.com/cursor/9287df8c-4138-4d75-ae92-cc98d3963856) |
 |  2026-06-10 | Cursor | Strategic Account Executive, SLED | Remote | full-time | [link](https://jobs.ashbyhq.com/cursor/b33a1206-6cfa-4b89-8808-51eaa3933212) |
-|  2026-06-10 | ElevenLabs | Brand Marketing | San Francisco | full-time | [link](https://jobs.ashbyhq.com/elevenlabs/31b1c0e3-ca53-428d-8f15-2e3ffda491b8) |
 |  2026-06-10 | Notion | Lead, Internal Audit and SOX Compliance | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/c8be09c6-f664-473a-85cc-537a4d10025a) |
 |  2026-06-10 | OpenAI | Strategic Deals | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/8728beb4-1ad9-4140-b701-e7e12f6c9a4d) |
 |  2026-06-10 | OpenAI | Strategy & Operations Programs, Support | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/9747412d-a23d-48ba-bddd-ad1247c360f5) |
 |  2026-06-10 | OpenAI | Researcher, Agent Post-Training, Personality | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/9e35d438-22bc-40a5-b80f-286c8197f9d5) |
-|  2026-06-09 | Anthropic | Marketing Events Producer | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5251832008) |
-|  2026-06-09 | Anthropic | People Programs, M&A Lead | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5239794008) |
 |  2026-06-09 | Roblox | Global Mobility Lead | San Mateo, CA, United States | full-time | [link](https://careers.roblox.com/jobs/7944233?gh_jid=7944233) |
 |  2026-06-09 | Stripe | Account Executive - Enterprise, Grower | US-Remote, US-San Francisco, US-Chicago, US-New York, US-Seattle, US-Texas | full-time | [link](https://stripe.com/jobs/search?gh_jid=7993151) |
 |  2026-06-09 | Stripe | Partner Solutions Architect, Technology Partnerships | United States | full-time | [link](https://stripe.com/jobs/search?gh_jid=7964568) |
 |  2026-06-09 | Databricks | RVP, Retail | United States | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8582310002) |
 |  2026-06-09 | ElevenLabs | Account Executive - Productions - North America | United States | full-time | [link](https://jobs.ashbyhq.com/elevenlabs/ef819b07-d617-42c7-873f-798d1a7d4024) |
 |  2026-06-09 | OpenAI | Executive Business Partner, OpenAI for Government & Global Affairs | Washington, DC | full-time | [link](https://jobs.ashbyhq.com/openai/229a4b86-61ba-47f9-8372-1ff6fa8536b0) |
+|  2026-06-09 | Anthropic | Marketing Events Producer | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5251832008) |
+|  2026-06-09 | Anthropic | People Programs, M&A Lead | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5239794008) |
 |  2026-06-09 | Palantir | Operations Analyst - US Government Security | New York, NY | full-time | [link](https://jobs.lever.co/palantir/2df67493-ffb3-4b34-bf3b-88b6750c3ea7) |
 |  2026-06-08 | Figma | Compensation Partner (Engineering) | San Francisco, CA • New York, NY • United States | full-time | [link](https://boards.greenhouse.io/figma/jobs/6014642004?gh_jid=6014642004) |
-|  2026-06-08 | Anthropic | Security Controls Assurance Lead | San Francisco, CA / New York City, NY / Washington, DC | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5250063008) |
+|  2026-06-08 | Databricks | Lakebase Sales Specialist-Manufacturing | Remote - California; Remote - Colorado; Remote - Texas; United States | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8569496002) |
 |  2026-06-08 | Datadog | Executive Assistant I - NYC | New York, New York, USA | full-time | [link](https://careers.datadoghq.com/detail/7977091/?gh_jid=7977091) |
 |  2026-06-08 | Perplexity | Strategic Finance Lead - Core | San Francisco | full-time | [link](https://jobs.ashbyhq.com/perplexity/2e1ee70c-b070-4ccc-a2bf-8b394161bbde) |
 |  2026-06-08 | Perplexity | Commercial Account Executive | San Francisco | full-time | [link](https://jobs.ashbyhq.com/perplexity/e0e8188a-9c92-4795-82a5-7384f1b25bc7) |
-|  2026-06-08 | Databricks | Lakebase Sales Specialist-Manufacturing | Remote - California; Remote - Colorado; Remote - Texas; United States | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8569496002) |
 |  2026-06-08 | OpenAI | Abuse Investigator - Child Safety | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/19b9af1a-6a6e-42e3-824b-a9f3794fef2b) |
 |  2026-06-08 | OpenAI | Strategic Sourcing Lead, Technology (Ads and Consumer Verticals) | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/73637834-85d6-49a4-a0b7-86d6a1e1e856) |
 |  2026-06-08 | OpenAI | Client Partner, Ads Solutions | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/bf9d9e1c-7967-41a4-a7ae-0bf9b6a768c2) |
 |  2026-06-08 | OpenAI | Technical Deployment Lead, Semiconductors | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/ec9950cb-ccb5-4d2b-b49d-0f6a80b03460) |
+|  2026-06-08 | Anthropic | Security Controls Assurance Lead | San Francisco, CA / New York City, NY / Washington, DC | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5250063008) |
 |  2026-06-05 | Figma | Designer Advocate | San Francisco, CA | full-time | [link](https://boards.greenhouse.io/figma/jobs/6014530004?gh_jid=6014530004) |
 |  2026-06-05 | Figma | Governance Risk and Compliance | San Francisco, CA • New York, NY • United States | full-time | [link](https://boards.greenhouse.io/figma/jobs/6015630004?gh_jid=6015630004) |
 |  2026-06-05 | Scale AI | Safety Coordinator / Lab Lead | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/scaleai/jobs/4702657005) |
 |  2026-06-05 | Scale AI | Technical Writer | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/scaleai/jobs/4702795005) |
-|  2026-06-05 | Anthropic | Startup Partnerships Lead | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5235692008) |
 |  2026-06-05 | Stripe | Finance & Strategy Analyst | CHI, SEA, NYC, SF | full-time | [link](https://stripe.com/jobs/search?gh_jid=7985368) |
 |  2026-06-05 | Databricks | Enterprise Account Executive, Federal Financials | Remote - Washington D.C. | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8579388002) |
 |  2026-06-05 | Databricks | Strategic Enterprise Account Executive, State and Local | Sacramento, California; San Francisco, California | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8579392002) |
@@ -2357,28 +2024,29 @@ _Last updated: 2026-07-03 15:30 UTC · 4238 active US roles (🆕 0 since last r
 |  2026-06-05 | OpenAI | Associate General Counsel, Hardware IP | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/3c944352-a389-47d5-aef7-0b2ba6fd1564) |
 |  2026-06-05 | OpenAI | Inventory and Cost Accounting Lead | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/65b5caaf-4944-459d-a82b-927675ab6662) |
 |  2026-06-05 | OpenAI | Researcher, Agent Post-Training, API & Power-Users | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/a68045e3-1fa1-4dd1-8ef4-e87fac2416eb) |
+|  2026-06-05 | Anthropic | Startup Partnerships Lead | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5235692008) |
 |  2026-06-05 | Palantir | Commercial Administrative Business Partner | Miami, FL | full-time | [link](https://jobs.lever.co/palantir/2c45b359-0d00-4c68-b13d-b9f405efb739) |
 |  2026-06-05 | Palantir | Commercial Administrative Business Partner | Washington, D.C. | full-time | [link](https://jobs.lever.co/palantir/98256288-e13a-4c3e-b6c3-1e3dd1083b9a) |
 |  2026-06-05 | Palantir | Commercial Administrative Business Partner | New York, NY | full-time | [link](https://jobs.lever.co/palantir/f163223b-db5d-4c6d-b73f-0a2eaf85583f) |
 |  2026-06-04 | Scale AI | Associate General Counsel, Product & IP | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/scaleai/jobs/4702785005) |
-|  2026-06-04 | Anthropic | Financial Reporting Accountant | San Francisco, CA / Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5248494008) |
 |  2026-06-04 | Roblox | Finance Business Partner, Trust & Safety (6319) | San Mateo, CA, United States | full-time | [link](https://careers.roblox.com/jobs/7977161?gh_jid=7977161) |
 |  2026-06-04 | Databricks | Lakebase Sales Specialist | United States | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8569410002) |
 |  2026-06-04 | Databricks | Named Core Account Executive | Chicago, Illinois; St. Louis, Missouri | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8577057002) |
 |  2026-06-04 | Ramp | Growth Creative Designer, Paid Advertising (Contract) | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/e9b80522-bda3-4fd0-915e-1e76d77b29b3) |
+|  2026-06-04 | Anthropic | Financial Reporting Accountant | San Francisco, CA / Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5248494008) |
 |  2026-06-03 | Vercel | Product Strategy & Operations | Hybrid - San Francisco | full-time | [link](https://job-boards.greenhouse.io/vercel/jobs/6011651004) |
-|  2026-06-03 | Duolingo | Corporate Counsel | Pittsburgh, PA | full-time | [link](https://careers.duolingo.com/jobs/8576434002?gh_jid=8576434002) |
 |  2026-06-03 | Figma | Workplace Generalist | San Francisco, CA | full-time | [link](https://boards.greenhouse.io/figma/jobs/6011928004?gh_jid=6011928004) |
-|  2026-06-03 | Anthropic | Communications Specialist, Product | San Francisco, CA / New York City, NY / Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5239403008) |
-|  2026-06-03 | Anthropic | Recruiter, Mergers & Acquisitions  | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5239772008) |
 |  2026-06-03 | Stripe | Finance & Strategy Partner, Central Engineering | Remote US, SF, SEA, NYC, CHI | full-time | [link](https://stripe.com/jobs/search?gh_jid=7979885) |
 |  2026-06-03 | Stripe | Product Lead, Connect | San Francisco, New York City, Seattle, US Remote | full-time | [link](https://stripe.com/jobs/search?gh_jid=7819759) |
 |  2026-06-03 | Stripe | User Risk Strategist, Ecosystem Risk Strategy | US-Chicago; US-Atlanta; US-Remote | full-time | [link](https://stripe.com/jobs/search?gh_jid=7977981) |
+|  2026-06-03 | Databricks | Lakebase Sales Specialist- Financial Services | United States | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8569479002) |
+|  2026-06-03 | ElevenLabs | People Operations | United States | full-time | [link](https://jobs.ashbyhq.com/elevenlabs/ca331e5d-19ee-4585-a97e-f1a6224949cb) |
 |  2026-06-03 | Perplexity | Member of Creative Studio (Motion Designer) | New York City | full-time | [link](https://jobs.ashbyhq.com/perplexity/39d520eb-6b81-4b61-8b23-5efcdac4cad9) |
 |  2026-06-03 | Perplexity | Member of Creative Studio (Producer, Brand & Creative) | New York City | full-time | [link](https://jobs.ashbyhq.com/perplexity/678d1162-e650-4d6d-9532-b287255c00fb) |
 |  2026-06-03 | Perplexity | Member of Creative Studio (Web Designer - Marketing & Landing Pages) | New York City | full-time | [link](https://jobs.ashbyhq.com/perplexity/7ae341c4-411e-468c-bc26-bbdd8e55d388) |
-|  2026-06-03 | Databricks | Lakebase Sales Specialist- Financial Services | United States | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8569479002) |
-|  2026-06-03 | ElevenLabs | People Operations | United States | full-time | [link](https://jobs.ashbyhq.com/elevenlabs/ca331e5d-19ee-4585-a97e-f1a6224949cb) |
-|  2026-06-03 | Ramp | Viral Creative Producer | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/c48fddbc-6063-4cae-8bfc-cf17642f11ae) |
 |  2026-06-03 | OpenAI | Counsel, Commercial | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/35f99494-1700-4b81-9363-aaead13ea477) |
 |  2026-06-03 | OpenAI | Executive Protection Operator | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/86de53a1-6699-42c3-8abc-4d6381496adc) |
+|  2026-06-03 | Duolingo | Corporate Counsel | Pittsburgh, PA | full-time | [link](https://careers.duolingo.com/jobs/8576434002?gh_jid=8576434002) |
+|  2026-06-03 | Ramp | Viral Creative Producer | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/c48fddbc-6063-4cae-8bfc-cf17642f11ae) |
+|  2026-06-03 | Anthropic | Communications Specialist, Product | San Francisco, CA / New York City, NY / Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5239403008) |
+|  2026-06-03 | Anthropic | Recruiter, Mergers & Acquisitions  | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5239772008) |
