@@ -9,8 +9,9 @@ My personal career platform, built as a monorepo. Each module is a tool I actual
 | Module | Status | What it is |
 |---|---|---|
 | [`apps/portfolio`](apps/portfolio) | **Live** | My portfolio — case studies across graphics, engineering, and design |
-| [`apps/role-grabber`](apps/role-grabber) | **Lite live** | Daily-updated open-role sheet ([ROLES.md](apps/role-grabber/ROLES.md)); the full discovery agent comes next |
-| `apps/resume` | Planned | Résumé generation from the same shared project data |
+| [`apps/role-grabber`](apps/role-grabber) | **Live** | Daily role aggregation → [ROLES.md](apps/role-grabber/ROLES.md) sheet with 🆕 badges + 🎯 target-company board |
+| [`apps/tracker`](apps/tracker) | **V1 live** | Single-file application dashboard over the daily data — Inbox / Starred / Tracker views, local-first |
+| [`apps/resume`](apps/resume) | **V1 live** | Résumé-as-code — both variants render to ATS-clean docx/PDF from one data file (content stays private) |
 
 ## The portfolio
 
