@@ -13,7 +13,7 @@ import { fileURLToPath } from "node:url";
 import { pathToFileURL } from "node:url";
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
-const brief = composeBrief();
+const brief = await composeBrief();
 
 mkdirSync(join(ROOT, "out"), { recursive: true });
 if (brief.md) writeFileSync(join(ROOT, "out", "brief.md"), brief.md);

@@ -13,7 +13,10 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
-const FEED = join(ROOT, "..", "role-grabber", "data", "roles.json");
+// live feed (the bot's latest, refreshed 2×/day) — so a scheduled brief is
+// always current without needing a git pull; falls back to the local file offline
+const FEED_URL = "https://raw.githubusercontent.com/leebwj/CareerOS/main/apps/role-grabber/data/roles.json";
+const FEED_LOCAL = join(ROOT, "..", "role-grabber", "data", "roles.json");
 // optional: tracker state exported to this path enables the follow-up section
 const TRACKER = join(ROOT, "data", "tracker-export.json");
 
@@ -23,10 +26,19 @@ const readJSON = (p, fallback) => {
   try { return JSON.parse(readFileSync(p, "utf8")); } catch { return fallback; }
 };
 
+// fetch the live feed; fall back to the local file if offline
+async function readRoles() {
+  try {
+    const r = await fetch(FEED_URL, { headers: { "user-agent": "careeros-secretary" } });
+    if (r.ok) return await r.json();
+  } catch {}
+  return readJSON(FEED_LOCAL, []);
+}
+
 // `todayISO` is injected (Node's Date is fine here — this is a live script, not
 // a replay-sensitive workflow) so the brief can be generated for any date.
-export function composeBrief(todayISO = new Date().toISOString().slice(0, 10)) {
-  const roles = readJSON(FEED, []);
+export async function composeBrief(todayISO = new Date().toISOString().slice(0, 10)) {
+  const roles = await readRoles();
   if (!roles.length) return { text: "No roles feed found — run the role-grabber first.", empty: true };
 
   const yesterdayISO = new Date(new Date(todayISO + "T12:00:00").getTime() - 864e5).toISOString().slice(0, 10);
@@ -91,7 +103,8 @@ export function composeBrief(todayISO = new Date().toISOString().slice(0, 10)) {
   L.push(`## 📊 The board`);
   L.push(`- ${fresh.length} roles posted in the last day · 🆕 ${newCount} new since the last refresh`);
   if (appliedWeek) L.push(`- You've applied to ${appliedWeek} role${appliedWeek > 1 ? "s" : ""} this week — keep the streak.`);
-  L.push(`- [Open the full board →](https://leebrian.dev/tracker)`, "");
+  L.push(`- [Open the full board →](https://leebrian.dev/tracker)`);
+  L.push(`- [Answer bank & apply helper →](https://leebrian.dev/apply)`, "");
 
   L.push(`_Composed by your CareerOS secretary._`);
 
@@ -102,7 +115,7 @@ export function composeBrief(todayISO = new Date().toISOString().slice(0, 10)) {
 
 // standalone (robust on Windows: compare resolved paths, not file:// strings)
 if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
-  const brief = composeBrief();
+  const brief = await composeBrief();
   mkdirSync(join(ROOT, "out"), { recursive: true });
   if (brief.md) writeFileSync(join(ROOT, "out", "brief.md"), brief.md);
   console.log("\n" + brief.text + "\n");
