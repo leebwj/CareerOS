@@ -45,6 +45,8 @@ export async function composeBrief(todayISO = new Date().toISOString().slice(0, 
   const key = (r) => `${r.company}|${r.title}|${r.locations[0] || ""}`.toLowerCase().replace(/\s+/g, " ");
 
   const hot = roles.filter((r) => r.hot).sort((a, b) => b.fit - a.fit);
+  // internships are the priority — fresh, intern-level, best fit first
+  const internships = roles.filter((r) => r.level === "intern" && r.posted >= yesterdayISO).sort((a, b) => b.fit - a.fit);
   const fresh = roles.filter((r) => r.posted >= yesterdayISO);
   const newCount = roles.filter((r) => r.isNew).length;
   const topTargets = roles
@@ -73,8 +75,9 @@ export async function composeBrief(todayISO = new Date().toISOString().slice(0, 
 
   // the one-line headline: the single most important thing
   const headline =
-    followups.length ? `**${followups.length} follow-up${followups.length > 1 ? "s" : ""} due today** — send those first, then the hot roles.`
-    : hot.length ? `**${hot.length} hot role${hot.length > 1 ? "s" : ""} posted** — these get swamped within 48h, so apply today.`
+    followups.length ? `**${followups.length} follow-up${followups.length > 1 ? "s" : ""} due today** — send those first, then the internships below.`
+    : internships.length ? `**${internships.length} new internship${internships.length > 1 ? "s" : ""}** posted — your priority, apply today.`
+    : hot.length ? `**${hot.length} hot role${hot.length > 1 ? "s" : ""} posted** — apply today, they get swamped fast.`
     : `No urgent items — a good day to polish a case study or tailor a résumé.`;
   L.push(headline, "");
 
@@ -84,13 +87,22 @@ export async function composeBrief(todayISO = new Date().toISOString().slice(0, 
     L.push("");
   }
 
-  if (hot.length) {
-    L.push(`## 🔥 Hot — apply now (${hot.length})`);
-    for (const r of hot.slice(0, 8)) {
-      const tier = r.fit >= 0.6 ? "⭐ " : "";
-      L.push(`- ${tier}**${r.company}** — ${r.title.replace(/\|/g, "/")}${r.term ? ` · ${r.term}` : ""} · [apply](${r.url})`);
-    }
-    if (hot.length > 8) L.push(`- …and ${hot.length - 8} more in the tracker.`);
+  const roleRow = (r) => {
+    const tier = r.fit >= 0.6 ? "⭐ " : "";
+    L.push(`- ${tier}**${r.company}** — ${r.title.replace(/\|/g, "/")}${r.term ? ` · ${r.term}` : ""} · [apply](${r.url})`);
+  };
+
+  if (internships.length) {
+    L.push(`## 🎓 New internships — your priority (${internships.length})`);
+    internships.slice(0, 12).forEach(roleRow);
+    if (internships.length > 12) L.push(`- …and ${internships.length - 12} more — filter to interns in the tracker.`);
+    L.push("");
+  }
+
+  const otherHot = hot.filter((r) => r.level !== "intern");
+  if (otherHot.length) {
+    L.push(`## 🔥 Also hot — new-grad & beyond (${otherHot.length})`);
+    otherHot.slice(0, 6).forEach(roleRow);
     L.push("");
   }
 

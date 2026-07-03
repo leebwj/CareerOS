@@ -207,7 +207,8 @@
       if (q && !(r.company + " " + r.title).toLowerCase().includes(q)) return false;
       if (cat && r.category !== cat) return false;
       if (lvl && r.level !== lvl) return false;
-      if (term && !(r.term || "").split(" / ").includes(term)) return false;
+      if (term === "__none__") { if (r.term) return false; }
+      else if (term && !(r.term || "").split(" / ").includes(term)) return false;
       if (fHot && !r.hot) return false;
       if (fNew && !r.isNew) return false;
       if (fTgt && !TARGETS.test(r.company)) return false;
@@ -311,7 +312,7 @@
       const SEASON = { Spring: 0, Summer: 1, Fall: 2, Winter: 3 };
       const terms = [...new Set(roles.flatMap((r) => (r.term || "").split(" / ")).filter(Boolean))]
         .sort((a, b) => { const [sa, ya] = a.split(" "), [sb, yb] = b.split(" "); return (+ya - +yb) || (SEASON[sa] - SEASON[sb]); });
-      document.getElementById("term").innerHTML += terms.map((t) => `<option>${esc(t)}</option>`).join("");
+      document.getElementById("term").innerHTML += `<option value="__none__">No term listed</option>` + terms.map((t) => `<option>${esc(t)}</option>`).join("");
       const newest = roles.reduce((m, r) => (r.posted > m ? r.posted : m), "");
       document.getElementById("meta").textContent = `${roles.length} roles · data ${newest}`;
       render();
