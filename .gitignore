@@ -23,3 +23,7 @@ Thumbs.db
 # personal source docs (resume sources etc.) — never commit
 *.docx
 *.doc
+
+# resume content (personal: phone etc.) — generator is public, data is not
+apps/resume/resume-data.mjs
+apps/resume/out/

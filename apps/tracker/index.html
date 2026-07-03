@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>CareerOS · Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mona+Sans:wght@500;600;700;800&family=Geist+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --canvas:#0b0c0e; --card:#15171a; --card2:#1a1d21; --ink:#f4f5f7; --muted:#828c99;
+    --faint:#545c66; --line:#23262b; --cobalt:#6f88cf; --cobalt-deep:#9aafe2;
+    --green:#7fbf8e; --amber:#d9b36a; --red:#c97b7b;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--canvas); color:var(--ink); font-family:"Mona Sans",sans-serif; font-size:15px; }
+  .mono { font-family:"Geist Mono",monospace; }
+  a { color:var(--cobalt-deep); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+
+  header { position:sticky; top:0; z-index:10; background:rgba(11,12,14,.94); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); }
+  .hrow { max-width:1280px; margin:0 auto; padding:14px 20px; display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+  .brand { font-weight:800; font-size:17px; letter-spacing:-.02em; }
+  .brand span { color:var(--cobalt-deep); }
+  .meta { font-family:"Geist Mono",monospace; font-size:11.5px; color:var(--faint); text-transform:uppercase; letter-spacing:.14em; }
+  .spacer { flex:1; }
+
+  .tabs { display:flex; gap:6px; }
+  .tab { font-family:"Geist Mono",monospace; font-size:12px; letter-spacing:.08em; text-transform:uppercase; padding:7px 13px; border-radius:999px; border:1px solid var(--line); color:var(--muted); background:transparent; cursor:pointer; }
+  .tab:hover { color:var(--ink); border-color:var(--faint); }
+  .tab.on { background:var(--cobalt); border-color:var(--cobalt); color:#0b0c0e; font-weight:700; }
+  .tab .n { opacity:.75; }
+
+  .controls { max-width:1280px; margin:0 auto; padding:12px 20px 4px; display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+  input[type=search], select { background:var(--card); border:1px solid var(--line); color:var(--ink); border-radius:10px; padding:8px 12px; font-family:"Mona Sans",sans-serif; font-size:14px; outline:none; }
+  input[type=search] { width:260px; }
+  input[type=search]:focus, select:focus { border-color:var(--cobalt); }
+  .chip { font-family:"Geist Mono",monospace; font-size:11.5px; letter-spacing:.06em; padding:6px 11px; border-radius:999px; border:1px solid var(--line); color:var(--muted); background:transparent; cursor:pointer; }
+  .chip.on { border-color:var(--cobalt); color:var(--cobalt-deep); background:rgba(111,136,207,.12); }
+  .util { margin-left:auto; display:flex; gap:8px; }
+  .util button { background:none; border:1px solid var(--line); color:var(--faint); border-radius:8px; padding:6px 10px; font-family:"Geist Mono",monospace; font-size:11px; cursor:pointer; }
+  .util button:hover { color:var(--ink); border-color:var(--faint); }
+
+  main { max-width:1280px; margin:0 auto; padding:10px 20px 80px; }
+  .day { font-family:"Geist Mono",monospace; font-size:11.5px; color:var(--faint); text-transform:uppercase; letter-spacing:.16em; margin:22px 0 8px; display:flex; align-items:center; gap:10px; }
+  .day::after { content:""; flex:1; height:1px; background:var(--line); }
+
+  .row { display:grid; grid-template-columns: 1fr auto; gap:4px 16px; padding:12px 16px; border:1px solid var(--line); border-radius:14px; background:var(--card); margin-bottom:8px; align-items:center; }
+  .row:hover { border-color:#2e333a; }
+  .row.applied-row { opacity:.85; }
+  .r-main { min-width:0; }
+  .r-title { font-weight:700; font-size:15.5px; letter-spacing:-.01em; }
+  .r-title a { color:var(--ink); }
+  .r-title a:hover { color:var(--cobalt-deep); text-decoration:none; }
+  .r-sub { margin-top:3px; font-size:13px; color:var(--muted); display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+  .badge { font-family:"Geist Mono",monospace; font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; padding:2px 8px; border-radius:999px; border:1px solid var(--line); color:var(--faint); }
+  .badge.new { border-color:rgba(127,191,142,.5); color:var(--green); }
+  .badge.tgt { border-color:rgba(217,179,106,.5); color:var(--amber); }
+  .badge.cat { color:var(--cobalt-deep); border-color:rgba(111,136,207,.4); }
+  .r-actions { display:flex; gap:6px; align-items:center; }
+  .act { border:1px solid var(--line); background:transparent; color:var(--muted); border-radius:9px; padding:7px 12px; font-size:13px; cursor:pointer; font-family:"Mona Sans",sans-serif; font-weight:600; white-space:nowrap; }
+  .act:hover { color:var(--ink); border-color:var(--faint); }
+  .act.primary { background:var(--cobalt); border-color:var(--cobalt); color:#0b0c0e; }
+  .act.primary:hover { background:var(--cobalt-deep); color:#0b0c0e; }
+  .act.star.on { color:var(--amber); border-color:rgba(217,179,106,.5); }
+  .act.done { background:rgba(127,191,142,.15); border-color:rgba(127,191,142,.4); color:var(--green); }
+
+  .st-select { background:var(--card2); border:1px solid var(--line); color:var(--ink); border-radius:8px; padding:6px 8px; font-size:13px; }
+  .notes { width:100%; margin-top:8px; background:var(--card2); border:1px solid var(--line); border-radius:8px; color:var(--ink); padding:7px 10px; font-size:13px; font-family:"Mona Sans",sans-serif; display:none; }
+  .row.open .notes { display:block; }
+
+  .empty { text-align:center; color:var(--faint); padding:60px 0; font-size:14px; }
+  .loading { text-align:center; color:var(--faint); padding:80px 0; font-family:"Geist Mono",monospace; font-size:12px; letter-spacing:.2em; text-transform:uppercase; }
+  @media (max-width:720px) {
+    .row { grid-template-columns:1fr; }
+    .r-actions { justify-content:flex-end; }
+    input[type=search] { width:100%; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="hrow">
+    <div class="brand">CareerOS <span>Tracker</span><span style="color:var(--cobalt-deep)">.</span></div>
+    <div class="meta" id="meta">loading…</div>
+    <div class="spacer"></div>
+    <nav class="tabs" id="tabs"></nav>
+  </div>
+</header>
+
+<div class="controls">
+  <input type="search" id="q" placeholder="Search company or role…">
+  <select id="cat"><option value="">All categories</option></select>
+  <select id="lvl"><option value="">All levels</option><option value="intern">Intern</option><option value="new-grad">New grad</option></select>
+  <button class="chip" id="fNew">🆕 New</button>
+  <button class="chip" id="fTgt">🎯 Targets</button>
+  <div class="util">
+    <button id="exp">Export</button>
+    <button id="imp">Import</button>
+  </div>
+</div>
+
+<main id="list"><div class="loading">Fetching today's roles</div></main>
+
+<script>
+(() => {
+  const DATA_URL = "https://raw.githubusercontent.com/leebwj/CareerOS/main/apps/role-grabber/data/roles.json";
+  const TARGETS = /\b(google|deepmind|meta|apple|amazon|microsoft|figma|notion|stripe|vercel|linear|anthropic|openai|riot games|epic games|roblox|naughty dog|nvidia|unity|valve|blizzard|nintendo|tiktok|bytedance|adobe|airbnb|netflix|ramp|retool|perplexity|scale ai)\b/i;
+  const LS = "careeros-tracker-v1";
+  const STAGES = ["Applied", "OA / Screen", "Interview", "Offer", "Rejected", "Ghosted"];
+
+  let roles = [], state = { s: {}, hidden: {} }, view = "inbox", fNew = false, fTgt = false;
+  try { state = { s: {}, hidden: {}, ...JSON.parse(localStorage.getItem(LS) || "{}") } } catch {}
+  const save = () => localStorage.setItem(LS, JSON.stringify(state));
+  const key = (r) => (r.company + "|" + r.title + "|" + (r.locations[0] || "")).toLowerCase().replace(/\s+/g, " ");
+  const esc = (s) => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+
+  const TABS = [
+    ["inbox", "Inbox"], ["starred", "Starred"], ["applied", "Tracker"], ["hidden", "Hidden"],
+  ];
+
+  function counts() {
+    const applied = Object.keys(state.s).length;
+    const starred = roles.filter((r) => state.s[key(r)]?.star && !state.s[key(r)]?.st).length;
+    const hidden = Object.keys(state.hidden).length;
+    const inbox = roles.filter((r) => !state.s[key(r)]?.st && !state.hidden[key(r)]).length;
+    return { inbox, starred, applied: roles.filter((r) => state.s[key(r)]?.st).length + orphanCount(), hidden };
+  }
+  // applied roles that fell out of the feed (closed postings) still show in Tracker
+  function orphanCount() {
+    const live = new Set(roles.map(key));
+    return Object.entries(state.s).filter(([k, v]) => v.st && !live.has(k)).length;
+  }
+
+  function tabs() {
+    const c = counts();
+    document.getElementById("tabs").innerHTML = TABS.map(([id, label]) =>
+      `<button class="tab ${view === id ? "on" : ""}" data-v="${id}">${label} <span class="n">${c[id] ?? ""}</span></button>`).join("");
+    document.querySelectorAll(".tab").forEach((b) => b.onclick = () => { view = b.dataset.v; render(); });
+  }
+
+  function rowHTML(r, k, st) {
+    const isNew = r.isNew, isTgt = TARGETS.test(r.company);
+    const s = st || {};
+    const stageSel = `<select class="st-select" data-k="${esc(k)}">` +
+      `<option value="">— stage —</option>` +
+      STAGES.map((x) => `<option ${s.st === x ? "selected" : ""}>${x}</option>`).join("") + `</select>`;
+    return `<div class="row ${s.st ? "applied-row" : ""}" data-k="${esc(k)}">
+      <div class="r-main">
+        <div class="r-title"><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.company)} — ${esc(r.title)}</a></div>
+        <div class="r-sub">
+          ${isNew ? '<span class="badge new">new</span>' : ""}
+          ${isTgt ? '<span class="badge tgt">target</span>' : ""}
+          <span class="badge cat">${esc(r.category)}</span>
+          <span>${esc(r.locations[0] || "")}</span>
+          <span class="mono" style="font-size:12px;color:var(--faint)">${esc(r.posted)} · ${esc(r.level)}</span>
+          ${s.date ? `<span class="mono" style="font-size:12px;color:var(--green)">applied ${s.date}</span>` : ""}
+        </div>
+        <input class="notes" data-k="${esc(k)}" placeholder="notes — contact, referral, follow-up…" value="${esc(s.notes || "")}">
+      </div>
+      <div class="r-actions">
+        ${view === "applied" || s.st ? stageSel : `<a class="act primary" href="${esc(r.url)}" target="_blank" rel="noopener">Apply ↗</a>`}
+        ${s.st ? "" : `<button class="act mark" data-k="${esc(k)}">✓ Applied</button>`}
+        <button class="act star ${s.star ? "on" : ""}" data-k="${esc(k)}">★</button>
+        <button class="act note-t" data-k="${esc(k)}">✎</button>
+        ${view === "hidden" ? `<button class="act unhide" data-k="${esc(k)}">↩</button>` : s.st ? "" : `<button class="act hide" data-k="${esc(k)}">✕</button>`}
+      </div>
+    </div>`;
+  }
+
+  function render() {
+    tabs();
+    const q = document.getElementById("q").value.toLowerCase();
+    const cat = document.getElementById("cat").value;
+    const lvl = document.getElementById("lvl").value;
+    document.getElementById("fNew").classList.toggle("on", fNew);
+    document.getElementById("fTgt").classList.toggle("on", fTgt);
+
+    let rows = roles.filter((r) => {
+      const k = key(r), s = state.s[k];
+      if (view === "inbox" && (s?.st || state.hidden[k])) return false;
+      if (view === "starred" && !s?.star) return false;
+      if (view === "applied" && !s?.st) return false;
+      if (view === "hidden" && !state.hidden[k]) return false;
+      if (q && !(r.company + " " + r.title).toLowerCase().includes(q)) return false;
+      if (cat && r.category !== cat) return false;
+      if (lvl && r.level !== lvl) return false;
+      if (fNew && !r.isNew) return false;
+      if (fTgt && !TARGETS.test(r.company)) return false;
+      return true;
+    });
+
+    // Tracker view keeps closed postings (fell out of the feed) visible
+    let orphans = "";
+    if (view === "applied") {
+      const live = new Set(roles.map(key));
+      orphans = Object.entries(state.s).filter(([k, v]) => v.st && !live.has(k)).map(([k, v]) => {
+        const [company, title, loc] = k.split("|");
+        return rowHTML({ company, title, locations: [loc], url: v.url || "#", category: "closed posting", posted: "", level: "", isNew: false }, k, v);
+      }).join("");
+    }
+
+    const list = document.getElementById("list");
+    if (!rows.length && !orphans) { list.innerHTML = `<div class="empty">Nothing here. ${view === "inbox" ? "All caught up 🎉" : ""}</div>`; return; }
+
+    // group by posted date (inbox) or flat (other views)
+    let html = "";
+    if (view === "inbox") {
+      const groups = {};
+      for (const r of rows) (groups[r.posted] ||= []).push(r);
+      for (const d of Object.keys(groups).sort().reverse()) {
+        html += `<div class="day">${d}${groups[d].some((r) => r.isNew) ? " · has new" : ""}</div>`;
+        html += groups[d].map((r) => rowHTML(r, key(r), state.s[key(r)])).join("");
+      }
+    } else {
+      html = rows.map((r) => rowHTML(r, key(r), state.s[key(r)])).join("") + orphans;
+    }
+    list.innerHTML = html;
+    wire();
+  }
+
+  function wire() {
+    document.querySelectorAll(".mark").forEach((b) => b.onclick = () => {
+      const k = b.dataset.k;
+      const r = roles.find((x) => key(x) === k);
+      state.s[k] = { ...(state.s[k] || {}), st: "Applied", date: new Date().toISOString().slice(0, 10), url: r?.url };
+      save(); render();
+    });
+    document.querySelectorAll(".star").forEach((b) => b.onclick = () => {
+      const k = b.dataset.k;
+      state.s[k] = { ...(state.s[k] || {}), star: !state.s[k]?.star };
+      if (!state.s[k].star && !state.s[k].st && !state.s[k].notes) delete state.s[k];
+      save(); render();
+    });
+    document.querySelectorAll(".hide").forEach((b) => b.onclick = () => { state.hidden[b.dataset.k] = 1; save(); render(); });
+    document.querySelectorAll(".unhide").forEach((b) => b.onclick = () => { delete state.hidden[b.dataset.k]; save(); render(); });
+    document.querySelectorAll(".note-t").forEach((b) => b.onclick = () => b.closest(".row").classList.toggle("open"));
+    document.querySelectorAll(".notes").forEach((n) => n.onchange = () => {
+      state.s[n.dataset.k] = { ...(state.s[n.dataset.k] || {}), notes: n.value };
+      save();
+    });
+    document.querySelectorAll(".st-select").forEach((s) => s.onchange = () => {
+      const k = s.dataset.k;
+      if (s.value) state.s[k] = { ...(state.s[k] || {}), st: s.value, date: state.s[k]?.date || new Date().toISOString().slice(0, 10) };
+      else { delete state.s[k].st; if (!state.s[k].star && !state.s[k].notes) delete state.s[k]; }
+      save(); render();
+    });
+  }
+
+  // controls
+  ["q", "cat", "lvl"].forEach((id) => document.getElementById(id).addEventListener("input", render));
+  document.getElementById("fNew").onclick = () => { fNew = !fNew; render(); };
+  document.getElementById("fTgt").onclick = () => { fTgt = !fTgt; render(); };
+  document.getElementById("exp").onclick = () => {
+    const blob = new Blob([JSON.stringify(state, null, 1)], { type: "application/json" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "careeros-tracker-backup.json";
+    a.click();
+  };
+  document.getElementById("imp").onclick = () => {
+    const inp = document.createElement("input");
+    inp.type = "file"; inp.accept = ".json";
+    inp.onchange = () => inp.files[0].text().then((t) => { state = { s: {}, hidden: {}, ...JSON.parse(t) }; save(); render(); });
+    inp.click();
+  };
+
+  fetch(DATA_URL, { cache: "no-store" })
+    .then((r) => r.json())
+    .then((data) => {
+      roles = data;
+      const cats = [...new Set(roles.map((r) => r.category))].sort();
+      document.getElementById("cat").innerHTML += cats.map((c) => `<option>${esc(c)}</option>`).join("");
+      const newest = roles.reduce((m, r) => (r.posted > m ? r.posted : m), "");
+      document.getElementById("meta").textContent = `${roles.length} roles · data ${newest}`;
+      render();
+    })
+    .catch(() => { document.getElementById("list").innerHTML = `<div class="empty">Couldn't fetch roles.json — check connection.</div>`; });
+})();
+</script>
+</body>
+</html>
