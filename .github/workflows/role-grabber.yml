@@ -2,7 +2,8 @@ name: role-grabber
 
 on:
   schedule:
-    - cron: "23 13 * * *" # daily ~9:23am ET
+    - cron: "23 13 * * *"
+    - cron: "23 21 * * *" # daily ~9:23am ET
   workflow_dispatch: {}
 
 permissions:
