@@ -103,6 +103,7 @@
   <button class="chip" id="fNew">🆕 New</button>
   <button class="chip" id="fTgt">🎯 Targets</button>
   <div class="util">
+    <button id="undo" title="Undo last change (Ctrl+Z)" disabled>↶ Undo</button>
     <button id="exp">Export</button>
     <button id="imp">Import</button>
   </div>
@@ -120,6 +121,13 @@
   let roles = [], state = { s: {}, hidden: {} }, view = "inbox", fNew = false, fTgt = false, fHot = false;
   try { state = { s: {}, hidden: {}, ...JSON.parse(localStorage.getItem(LS) || "{}") } } catch {}
   const save = () => localStorage.setItem(LS, JSON.stringify(state));
+
+  // undo — snapshot state before each change so accidental actions revert.
+  // Call pushUndo() at the top of every mutating handler.
+  let undoStack = [];
+  const pushUndo = () => { undoStack.push(JSON.stringify(state)); if (undoStack.length > 40) undoStack.shift(); syncUndo(); };
+  const syncUndo = () => { const b = document.getElementById("undo"); if (b) b.disabled = undoStack.length === 0; };
+  const doUndo = () => { if (!undoStack.length) return; state = JSON.parse(undoStack.pop()); save(); render(); syncUndo(); };
   const key = (r) => (r.company + "|" + r.title + "|" + (r.locations[0] || "")).toLowerCase().replace(/\s+/g, " ");
   const esc = (s) => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
   // follow-up cadence (research: email 7-14 days after applying, max 2 attempts)
@@ -183,7 +191,7 @@
         ${s.st ? "" : `<button class="act mark" data-k="${esc(k)}">✓ Applied</button>`}
         <button class="act star ${s.star ? "on" : ""}" data-k="${esc(k)}">★</button>
         <button class="act note-t" data-k="${esc(k)}">✎</button>
-        ${view === "hidden" ? `<button class="act unhide" data-k="${esc(k)}">↩</button>` : s.st ? "" : `<button class="act hide" data-k="${esc(k)}">✕</button>`}
+        ${view === "hidden" ? `<button class="act unhide" data-k="${esc(k)}">↩</button>` : s.st ? `<button class="act untrack" data-k="${esc(k)}" title="Remove from tracker">Untrack</button>` : `<button class="act hide" data-k="${esc(k)}">✕</button>`}
       </div>
     </div>`;
   }
@@ -249,6 +257,7 @@
 
   function wire() {
     document.querySelectorAll(".mark").forEach((b) => b.onclick = () => {
+      pushUndo();
       const k = b.dataset.k;
       const r = roles.find((x) => key(x) === k);
       const d = today();
@@ -256,6 +265,7 @@
       save(); render();
     });
     document.querySelectorAll(".fu-done").forEach((b) => b.onclick = () => {
+      pushUndo();
       const k = b.dataset.k, s = state.s[k];
       s.fuDone = (s.fuDone || 0) + 1;
       if (s.fuDone >= 2) { delete s.fu; } // 2 attempts, then move on (research consensus)
@@ -263,19 +273,30 @@
       save(); render();
     });
     document.querySelectorAll(".star").forEach((b) => b.onclick = () => {
+      pushUndo();
       const k = b.dataset.k;
       state.s[k] = { ...(state.s[k] || {}), star: !state.s[k]?.star };
       if (!state.s[k].star && !state.s[k].st && !state.s[k].notes) delete state.s[k];
       save(); render();
     });
-    document.querySelectorAll(".hide").forEach((b) => b.onclick = () => { state.hidden[b.dataset.k] = 1; save(); render(); });
-    document.querySelectorAll(".unhide").forEach((b) => b.onclick = () => { delete state.hidden[b.dataset.k]; save(); render(); });
+    document.querySelectorAll(".hide").forEach((b) => b.onclick = () => { pushUndo(); state.hidden[b.dataset.k] = 1; save(); render(); });
+    document.querySelectorAll(".unhide").forEach((b) => b.onclick = () => { pushUndo(); delete state.hidden[b.dataset.k]; save(); render(); });
+    // untrack: reset a role to untracked (accidental add / wrong click) — keeps a star/note if set
+    document.querySelectorAll(".untrack").forEach((b) => b.onclick = () => {
+      pushUndo();
+      const k = b.dataset.k, s = state.s[k] || {};
+      delete s.st; delete s.date; delete s.fu; delete s.fuN; delete s.fuDone;
+      if (!s.star && !s.notes) delete state.s[k];
+      save(); render();
+    });
     document.querySelectorAll(".note-t").forEach((b) => b.onclick = () => b.closest(".row").classList.toggle("open"));
     document.querySelectorAll(".notes").forEach((n) => n.onchange = () => {
+      pushUndo();
       state.s[n.dataset.k] = { ...(state.s[n.dataset.k] || {}), notes: n.value };
       save();
     });
     document.querySelectorAll(".st-select").forEach((s) => s.onchange = () => {
+      pushUndo();
       const k = s.dataset.k;
       if (s.value) state.s[k] = { ...(state.s[k] || {}), st: s.value, date: state.s[k]?.date || new Date().toISOString().slice(0, 10) };
       else { delete state.s[k].st; if (!state.s[k].star && !state.s[k].notes) delete state.s[k]; }
@@ -285,6 +306,11 @@
 
   // controls
   ["q", "cat", "lvl", "term"].forEach((id) => document.getElementById(id).addEventListener("input", render));
+  document.getElementById("undo").onclick = doUndo;
+  document.addEventListener("keydown", (e) => {
+    const t = document.activeElement?.tagName;
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "z" && !/INPUT|TEXTAREA|SELECT/.test(t || "")) { e.preventDefault(); doUndo(); }
+  });
   document.getElementById("fHot").onclick = () => { fHot = !fHot; render(); };
   document.getElementById("fNew").onclick = () => { fNew = !fNew; render(); };
   document.getElementById("fTgt").onclick = () => { fTgt = !fTgt; render(); };
