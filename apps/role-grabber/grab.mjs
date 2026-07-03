@@ -5,7 +5,7 @@
 //
 // Zero dependencies — Node 20+ (global fetch). Run: node grab.mjs
 
-import { writeFileSync, mkdirSync } from "node:fs";
+import { writeFileSync, mkdirSync, readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -109,6 +109,13 @@ function fromJobrightDesign(md) {
 }
 
 // ── main ─────────────────────────────────────────────────────────────────────
+// previous run's keys (last committed data) → mark newly-appeared roles 🆕
+let prevKeys = new Set();
+try {
+  const prev = JSON.parse(readFileSync(join(ROOT, "data", "roles.json"), "utf8"));
+  prevKeys = new Set(prev.map((r) => `${r.company}|${r.title}|${r.locations[0] || ""}`.toLowerCase().replace(/\s+/g, " ")));
+} catch {}
+
 const collected = [];
 const errors = [];
 
@@ -137,6 +144,7 @@ for (const r of collected) {
   const key = `${r.company}|${r.title}|${r.locations[0] || ""}`.toLowerCase().replace(/\s+/g, " ");
   if (seen.has(key)) continue;
   seen.add(key);
+  r.isNew = prevKeys.size > 0 && !prevKeys.has(key);
   roles.push(r);
 }
 roles.sort((a, b) => (b.posted || "").localeCompare(a.posted || ""));
@@ -160,16 +168,26 @@ const recent = roles.filter((r) => r.posted >= cutoff);
 const ORDER = ["Graphics / Game / 3D", "Design / UX", "Software Engineering", "Data / AI / ML", "Product", "Quant", "Hardware", "Other"];
 const counts = Object.fromEntries(ORDER.map((c) => [c, roles.filter((r) => r.category === c).length]));
 
+// target-company hit list (master plan: big tech · design-forward · game studios · AI labs)
+const TARGETS = /\b(google|deepmind|meta|apple|amazon|microsoft|figma|notion|stripe|vercel|linear|anthropic|openai|riot games|epic games|roblox|naughty dog|nvidia|unity|valve|blizzard|nintendo|tiktok|bytedance|adobe|airbnb|netflix|ramp|retool|perplexity|scale ai)\b/i;
+const targetRows = recent.filter((r) => TARGETS.test(r.company));
+const newCount = roles.filter((r) => r.isNew).length;
+
+const row = (r) => `| ${r.isNew ? "🆕 " : ""}${r.posted} | ${r.company} | ${r.title.replace(/\|/g, "/")} | ${(r.locations[0] || "").replace(/\|/g, "/")} | ${r.level} | [link](${r.url}) |\n`;
+const HEAD = `| Posted | Company | Role | Location | Level | Apply |\n|---|---|---|---|---|---|\n`;
+
 let md = `# 📋 Open Roles — auto-updated daily\n\n`;
-md += `_Last updated: ${new Date().toISOString().slice(0, 16).replace("T", " ")} UTC · ${roles.length} active US roles total · showing roles posted in the last ${RECENT_DAYS} days (${recent.length}) · full data: [\`data/roles.csv\`](data/roles.csv)_\n\n`;
+md += `_Last updated: ${new Date().toISOString().slice(0, 16).replace("T", " ")} UTC · ${roles.length} active US roles total (🆕 ${newCount} since last run) · showing roles posted in the last ${RECENT_DAYS} days (${recent.length}) · full data: [\`data/roles.csv\`](data/roles.csv)_\n\n`;
 md += `| Category | Active total |\n|---|---|\n` + ORDER.map((c) => `| ${c} | ${counts[c]} |`).join("\n") + "\n";
+if (targetRows.length) {
+  md += `\n## 🎯 Target companies (${targetRows.length} recent)\n\n` + HEAD;
+  for (const r of targetRows) md += row(r);
+}
 for (const cat of ORDER) {
   const rows = recent.filter((r) => r.category === cat);
   if (rows.length === 0) continue;
-  md += `\n## ${cat} (${rows.length} recent)\n\n| Posted | Company | Role | Location | Level | Apply |\n|---|---|---|---|---|---|\n`;
-  for (const r of rows) {
-    md += `| ${r.posted} | ${r.company} | ${r.title.replace(/\|/g, "/")} | ${(r.locations[0] || "").replace(/\|/g, "/")} | ${r.level} | [link](${r.url}) |\n`;
-  }
+  md += `\n## ${cat} (${rows.length} recent)\n\n` + HEAD;
+  for (const r of rows) md += row(r);
 }
 if (errors.length) md += `\n> ⚠️ Sources with errors this run: ${errors.join("; ")}\n`;
 writeFileSync(join(ROOT, "ROLES.md"), md);
