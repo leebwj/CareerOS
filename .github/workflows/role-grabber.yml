@@ -1,0 +1,26 @@
+name: role-grabber
+
+on:
+  schedule:
+    - cron: "23 13 * * *" # daily ~9:23am ET
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  grab:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Pull + build the sheet
+        run: node apps/role-grabber/grab.mjs
+      - name: Commit if changed
+        run: |
+          git config user.name "role-grabber[bot]"
+          git config user.email "role-grabber@users.noreply.github.com"
+          git add apps/role-grabber/data apps/role-grabber/ROLES.md
+          git diff --cached --quiet && echo "no changes" || (git commit -m "chore(roles): daily sheet update" && git push)

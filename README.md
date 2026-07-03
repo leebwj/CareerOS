@@ -9,7 +9,7 @@ My personal career platform, built as a monorepo. Each module is a tool I actual
 | Module | Status | What it is |
 |---|---|---|
 | [`apps/portfolio`](apps/portfolio) | **Live** | My portfolio — case studies across graphics, engineering, and design |
-| `apps/role-grabber` | Planned | An agent that finds open roles (including the non-obvious ones) and feeds a tracking sheet |
+| [`apps/role-grabber`](apps/role-grabber) | **Lite live** | Daily-updated open-role sheet ([ROLES.md](apps/role-grabber/ROLES.md)); the full discovery agent comes next |
 | `apps/resume` | Planned | Résumé generation from the same shared project data |
 
 ## The portfolio
