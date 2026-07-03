@@ -68,11 +68,11 @@ export function buildDocx(spec) {
     .map((p) => {
       switch (p.kind) {
         case "name":
-          return `<w:p>${ppr({ center: true, after: 2 })}${run({ t: p.text, b: true, pt: spec.sizePt?.name ?? 22 }, B)}</w:p>`;
+          return `<w:p>${ppr({ center: true, after: 1 })}${run({ t: p.text, b: true, pt: spec.sizePt?.name ?? 22 }, B)}</w:p>`;
         case "contact":
-          return `<w:p>${ppr({ center: true, after: 3 })}${p.runs.map((r) => run(r, spec.sizePt?.contact ?? 9.5)).join("")}</w:p>`;
+          return `<w:p>${ppr({ center: true, after: 2 })}${p.runs.map((r) => run(r, spec.sizePt?.contact ?? 9.5)).join("")}</w:p>`;
         case "heading":
-          return `<w:p>${ppr({ rule: true, before: p.before ?? 4, after: 2 })}${run({ t: p.text, b: true, caps: true, pt: spec.sizePt?.heading ?? 11, spacing: 6 }, B)}</w:p>`;
+          return `<w:p>${ppr({ rule: true, before: p.before ?? 3, after: 2 })}${run({ t: p.text, b: true, caps: true, pt: spec.sizePt?.heading ?? 11, spacing: 6 }, B)}</w:p>`;
         case "twocol":
           return `<w:p>${ppr({ rightTab: true, before: p.before ?? 4, after: 0 })}${p.left.map((r) => run(r, B)).join("")}${run({ ...p.right[0], tab: true }, B)}${p.right.slice(1).map((r) => run(r, B)).join("")}</w:p>`;
         case "bullet":

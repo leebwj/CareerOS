@@ -59,6 +59,10 @@
   .badge.new { border-color:rgba(127,191,142,.5); color:var(--green); }
   .badge.tgt { border-color:rgba(217,179,106,.5); color:var(--amber); }
   .badge.cat { color:var(--cobalt-deep); border-color:rgba(111,136,207,.4); }
+  .badge.term { color:var(--muted); border-color:var(--line); }
+  .badge.hot { color:#ff8a5c; border-color:rgba(255,138,92,.55); background:rgba(255,138,92,.1); font-weight:700; }
+  .row.hot-row { border-color:rgba(255,138,92,.32); }
+  .chip.hot.on { border-color:#ff8a5c; color:#ff8a5c; background:rgba(255,138,92,.12); }
   .r-actions { display:flex; gap:6px; align-items:center; }
   .act { border:1px solid var(--line); background:transparent; color:var(--muted); border-radius:9px; padding:7px 12px; font-size:13px; cursor:pointer; font-family:"Mona Sans",sans-serif; font-weight:600; white-space:nowrap; }
   .act:hover { color:var(--ink); border-color:var(--faint); }
@@ -94,6 +98,7 @@
   <input type="search" id="q" placeholder="Search company or role…">
   <select id="cat"><option value="">All categories</option></select>
   <select id="lvl"><option value="">All levels</option><option value="intern">Intern</option><option value="new-grad">New grad</option></select>
+  <button class="chip hot" id="fHot">🔥 Hot</button>
   <button class="chip" id="fNew">🆕 New</button>
   <button class="chip" id="fTgt">🎯 Targets</button>
   <div class="util">
@@ -111,7 +116,7 @@
   const LS = "careeros-tracker-v1";
   const STAGES = ["Applied", "OA / Screen", "Interview", "Offer", "Rejected", "Ghosted"];
 
-  let roles = [], state = { s: {}, hidden: {} }, view = "inbox", fNew = false, fTgt = false;
+  let roles = [], state = { s: {}, hidden: {} }, view = "inbox", fNew = false, fTgt = false, fHot = false;
   try { state = { s: {}, hidden: {}, ...JSON.parse(localStorage.getItem(LS) || "{}") } } catch {}
   const save = () => localStorage.setItem(LS, JSON.stringify(state));
   const key = (r) => (r.company + "|" + r.title + "|" + (r.locations[0] || "")).toLowerCase().replace(/\s+/g, " ");
@@ -149,18 +154,20 @@
   }
 
   function rowHTML(r, k, st) {
-    const isNew = r.isNew, isTgt = TARGETS.test(r.company);
+    const isNew = r.isNew, isTgt = TARGETS.test(r.company), isHot = r.hot;
     const s = st || {};
     const stageSel = `<select class="st-select" data-k="${esc(k)}">` +
       `<option value="">— stage —</option>` +
       STAGES.map((x) => `<option ${s.st === x ? "selected" : ""}>${x}</option>`).join("") + `</select>`;
-    return `<div class="row ${s.st ? "applied-row" : ""}" data-k="${esc(k)}">
+    return `<div class="row ${s.st ? "applied-row" : ""} ${isHot ? "hot-row" : ""}" data-k="${esc(k)}">
       <div class="r-main">
         <div class="r-title"><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.company)} — ${esc(r.title)}</a></div>
         <div class="r-sub">
+          ${isHot ? '<span class="badge hot">🔥 hot</span>' : ""}
           ${isNew ? '<span class="badge new">new</span>' : ""}
           ${isTgt ? '<span class="badge tgt">target</span>' : ""}
           <span class="badge cat">${esc(r.category)}</span>
+          ${r.term ? `<span class="badge term">${esc(r.term)}</span>` : ""}
           <span>${esc(r.locations[0] || "")}</span>
           <span class="mono" style="font-size:12px;color:var(--faint)">${esc(r.posted)} · ${esc(r.level)}</span>
           ${s.date ? `<span class="mono" style="font-size:12px;color:var(--green)">applied ${s.date}</span>` : ""}
@@ -185,6 +192,7 @@
     const q = document.getElementById("q").value.toLowerCase();
     const cat = document.getElementById("cat").value;
     const lvl = document.getElementById("lvl").value;
+    document.getElementById("fHot").classList.toggle("on", fHot);
     document.getElementById("fNew").classList.toggle("on", fNew);
     document.getElementById("fTgt").classList.toggle("on", fTgt);
 
@@ -197,6 +205,7 @@
       if (q && !(r.company + " " + r.title).toLowerCase().includes(q)) return false;
       if (cat && r.category !== cat) return false;
       if (lvl && r.level !== lvl) return false;
+      if (fHot && !r.hot) return false;
       if (fNew && !r.isNew) return false;
       if (fTgt && !TARGETS.test(r.company)) return false;
       return true;
@@ -272,6 +281,7 @@
 
   // controls
   ["q", "cat", "lvl"].forEach((id) => document.getElementById(id).addEventListener("input", render));
+  document.getElementById("fHot").onclick = () => { fHot = !fHot; render(); };
   document.getElementById("fNew").onclick = () => { fNew = !fNew; render(); };
   document.getElementById("fTgt").onclick = () => { fTgt = !fTgt; render(); };
   document.getElementById("exp").onclick = () => {

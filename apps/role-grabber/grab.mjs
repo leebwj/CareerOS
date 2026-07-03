@@ -71,6 +71,15 @@ function levelFromTitle(t) {
   return "full-time";
 }
 
+// term extraction: Simplify carries a terms[] field; others parse from title
+function termFromTitle(t) {
+  const m = t.match(/(spring|summer|fall|autumn|winter)\s*[',-]?\s*(20\d{2})/i) || t.match(/(20\d{2})\s*(spring|summer|fall|autumn|winter)/i);
+  if (!m) return "";
+  const season = (/^20/.test(m[1]) ? m[2] : m[1]).toLowerCase().replace("autumn", "fall");
+  const year = /^20/.test(m[1]) ? m[1] : m[2];
+  return season[0].toUpperCase() + season.slice(1) + " " + year;
+}
+
 // ── US filter ────────────────────────────────────────────────────────────────
 // ATS boards use bare city names ("San Francisco") — recognize the majors too.
 const US_CITIES = /\b(san francisco|new york|nyc|seattle|mountain view|palo alto|menlo park|cupertino|redmond|bellevue|austin|chicago|boston|los angeles|santa monica|irvine|san diego|san jose|sunnyvale|denver|miami|washington|philadelphia|pittsburgh|atlanta|dallas|houston|portland|brooklyn|cambridge|durham|raleigh|salt lake|phoenix|minneapolis|nashville)\b/i;
@@ -106,6 +115,7 @@ function fromSimplify(list, level) {
       locations: x.locations || [],
       url: x.url,
       posted: new Date((x.date_posted || x.date_updated) * 1000).toISOString().slice(0, 10),
+      term: (x.terms || []).filter((t) => t && t !== "N/A").join(" / ") || termFromTitle(x.title),
       level,
       source: "simplify",
     }));
@@ -137,7 +147,7 @@ function fromJobrightDesign(md) {
       posted = `${y}-${String(mi + 1).padStart(2, "0")}-${String(m[2]).padStart(2, "0")}`;
     }
     if (!company || !title || !url) continue;
-    roles.push({ company, title, category: "Design / UX", locations: [location], url, posted, level: "intern", source: "jobright" });
+    roles.push({ company, title, category: "Design / UX", locations: [location], url, posted, term: termFromTitle(title), level: "intern", source: "jobright" });
   }
   return roles;
 }
@@ -152,6 +162,7 @@ async function fromGreenhouse(company, token) {
     locations: [j.location?.name || ""].filter(Boolean),
     url: j.absolute_url,
     posted: String(j.first_published || j.updated_at || "").slice(0, 10),
+    term: termFromTitle(j.title),
     level: levelFromTitle(j.title),
     source: "greenhouse",
   }));
@@ -165,6 +176,7 @@ async function fromAshby(company, org) {
     locations: [j.location || ""].concat((j.secondaryLocations || []).map((s) => s.location)).filter(Boolean),
     url: j.jobUrl || j.applyUrl,
     posted: String(j.publishedAt || "").slice(0, 10),
+    term: termFromTitle(j.title),
     level: j.employmentType === "Intern" ? "intern" : levelFromTitle(j.title),
     source: "ashby",
   }));
@@ -178,6 +190,7 @@ async function fromLever(company, site) {
     locations: [j.categories?.location || ""].filter(Boolean),
     url: j.hostedUrl,
     posted: j.createdAt ? new Date(j.createdAt).toISOString().slice(0, 10) : "",
+    term: termFromTitle(j.text),
     level: levelFromTitle(j.text),
     source: "lever",
   }));
@@ -266,6 +279,8 @@ for (const r of collected) {
   r.isNew = prevKeys.size > 0 && !prevKeys.has(key);
   r.firstSeen = prevFirstSeen[key] || r.posted || today;
   r.fit = Math.round(fitScore(r) * 1000) / 1000;
+  const freshDays = (Date.now() - new Date(r.posted || "2000-01-01").getTime()) / 864e5;
+  r.hot = freshDays <= 2 && r.level !== "full-time" && (TARGETS.test(r.company) || r.fit >= 0.6);
   const age = (Date.now() - new Date(r.posted || today).getTime()) / 864e5;
   if (age > GHOST_DAYS && r.source !== "greenhouse" && r.source !== "ashby" && r.source !== "lever") r.ghost = true;
   roles.push(r);
@@ -280,8 +295,8 @@ writeFileSync(join(ROOT, "data", "roles.json"), JSON.stringify(roles, null, 1));
 const csvEsc = (s) => `"${String(s ?? "").replace(/"/g, '""')}"`;
 writeFileSync(
   join(ROOT, "data", "roles.csv"),
-  ["posted,company,title,category,level,location,fit,url,source"]
-    .concat(roles.map((r) => [r.posted, r.company, r.title, r.category, r.level, r.locations.join(" · "), r.fit, r.url, r.source].map(csvEsc).join(",")))
+  ["posted,company,title,category,level,term,location,fit,url,source"]
+    .concat(roles.map((r) => [r.posted, r.company, r.title, r.category, r.level, r.term || "", r.locations.join(" · "), r.fit, r.url, r.source].map(csvEsc).join(",")))
     .join("\n")
 );
 
@@ -291,14 +306,15 @@ const freshCut = new Date(Date.now() - FRESH_HOURS * 36e5).toISOString().slice(0
 const recent = roles.filter((r) => r.posted >= cutoff);
 const ORDER = ["Graphics / Game / 3D", "Design / UX", "Software Engineering", "Data / AI / ML", "Product", "Quant", "Hardware", "Other"];
 const counts = Object.fromEntries(ORDER.map((c) => [c, roles.filter((r) => r.category === c).length]));
-const byFit = (a, b) => b.fit - a.fit || (b.posted || "").localeCompare(a.posted || "");
+const LEVEL_ORDER = { intern: 0, "new-grad": 1, "full-time": 2 };
+const byFit = (a, b) => (LEVEL_ORDER[a.level] ?? 3) - (LEVEL_ORDER[b.level] ?? 3) || b.fit - a.fit || (b.posted || "").localeCompare(a.posted || "");
 
 const targetRows = recent.filter((r) => TARGETS.test(r.company)).sort(byFit);
 const freshRows = recent.filter((r) => r.posted >= freshCut).sort(byFit).slice(0, 120);
 const newCount = roles.filter((r) => r.isNew).length;
 
-const row = (r) => `| ${tierIcon(r.fit)}${r.isNew ? " 🆕" : ""} ${r.posted} | ${r.company} | ${r.title.replace(/\|/g, "/")} | ${(r.locations[0] || "").replace(/\|/g, "/")} | ${r.level} | [link](${r.url}) |\n`;
-const HEAD = `| Posted | Company | Role | Location | Level | Apply |\n|---|---|---|---|---|---|\n`;
+const row = (r) => `| ${r.hot ? "🔥" : ""}${tierIcon(r.fit)}${r.isNew ? " 🆕" : ""} ${r.posted} | ${r.company} | ${r.title.replace(/\|/g, "/")} | ${(r.locations[0] || "").replace(/\|/g, "/")} | ${r.level} | [link](${r.url}) |\n`;
+const HEAD = `| Posted | Company | Role | Location | Level · Term | Apply |\n|---|---|---|---|---|---|\n`;
 
 let md = `# 📋 Open Roles — auto-updated twice daily\n\n`;
 md += `_Last updated: ${new Date().toISOString().slice(0, 16).replace("T", " ")} UTC · ${roles.length} active US roles (🆕 ${newCount} since last run) · sources: Simplify + jobright + ${Object.values(ATS_TARGETS).reduce((n, o) => n + Object.keys(o).length, 0)} company boards direct · ⭐ strong fit ◐ good fit · dashboard: [leebrian.dev/tracker](https://leebrian.dev/tracker) · full data: [\`data/roles.csv\`](data/roles.csv)_\n\n`;
