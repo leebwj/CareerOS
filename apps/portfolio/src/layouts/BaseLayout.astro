@@ -11,7 +11,9 @@ const {
   description = "Brian Lee blends creativity with technology to craft immersive, interactive experiences — graphics, 3D, and product design. CS + Design at Penn, interning at Aleph Lab (YC).",
 } = Astro.props;
 
-const ogImage = new URL("/og.png", Astro.site).href;
+// note: renamed from og.png — LinkedIn caches share-images BY URL and won't
+// re-fetch a changed image at the same address, so redesigns need a new name
+const ogImage = new URL("/og-hero.png", Astro.site).href;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 ---
 

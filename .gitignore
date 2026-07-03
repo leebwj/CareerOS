@@ -19,3 +19,7 @@ dist/
 Thumbs.db
 .idea/
 .vscode/
+
+# personal source docs (resume sources etc.) — never commit
+*.docx
+*.doc
