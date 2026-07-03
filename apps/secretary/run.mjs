@@ -38,7 +38,9 @@ if (wantMail && !brief.empty && existsSync(configPath)) {
         .replace(/(?<!["(>])(https?:\/\/[^\s<)"]+)/g, '<a href="$1" style="color:#3a5bbf">$1</a>')
         .replace(/\*\*(.*?)\*\*/g, "<b>$1</b>")
         .replace(/^- (.*)$/gm, '<div style="margin:3px 0">• $1</div>')
-        .replace(/_(.*?)_/g, '<span style="color:#828c99">$1</span>')
+        // italic: only match _..._ at a word boundary with no underscores inside,
+        // so URL query params (utm_campaign&utm_source…) inside hrefs are never touched
+        .replace(/(^|[\s>])_([^_<>\n]+)_/g, '$1<span style="color:#828c99">$2</span>')
         .replace(/\n\n/g, "<br>") +
       `</div>`;
     await sendMail({
