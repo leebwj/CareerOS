@@ -1,0 +1,13 @@
+{
+  "name": "careeros-desktop-pet",
+  "version": "0.1.0",
+  "description": "A desktop companion that delivers your CareerOS morning brief in a speech bubble.",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^32.0.0"
+  }
+}

@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { width:100%; height:100%; background:transparent; overflow:hidden; font-family:"Segoe UI Variable", "Segoe UI", sans-serif; -webkit-user-select:none; user-select:none; }
+  /* the stage fills the window but is click-through; children opt back in */
+  #stage { position:absolute; inset:0; }
+
+  /* ── the character (PLACEHOLDER — swap for your own art) ──
+     Replace #pet's contents with an <img>/<canvas>/sprite. Keep the
+     .interactive class so clicks register over it. */
+  #pet { position:absolute; bottom:8px; right:14px; width:120px; height:120px; cursor:pointer; animation:bob 3.2s ease-in-out infinite; }
+  @keyframes bob { 0%,100%{ transform:translateY(0) } 50%{ transform:translateY(-8px) } }
+  .blob { position:absolute; inset:0; border-radius:46% 54% 50% 50% / 55% 55% 45% 45%;
+    background:linear-gradient(160deg, #9aafe2, #6f88cf 60%, #4d67ad);
+    box-shadow:0 8px 24px rgba(77,103,173,.45), inset 0 -8px 16px rgba(0,0,0,.15), inset 0 6px 12px rgba(255,255,255,.3); }
+  .eye { position:absolute; top:44px; width:15px; height:19px; background:#0b0c0e; border-radius:50%; }
+  .eye.l { left:36px; } .eye.r { right:36px; }
+  .eye::after { content:""; position:absolute; top:3px; left:3px; width:5px; height:5px; background:#fff; border-radius:50%; }
+  .blush { position:absolute; top:62px; width:14px; height:8px; background:rgba(255,138,138,.5); border-radius:50%; }
+  .blush.l { left:24px; } .blush.r { right:24px; }
+  #pet.talking .blob { animation:pulse 1.4s ease-in-out infinite; }
+  @keyframes pulse { 0%,100%{ transform:scale(1) } 50%{ transform:scale(1.05) } }
+  /* blink */
+  #pet .eye { animation:blink 5s infinite; }
+  @keyframes blink { 0%,96%,100%{ transform:scaleY(1) } 98%{ transform:scaleY(.1) } }
+
+  /* ── speech bubble ── */
+  #bubble { position:absolute; bottom:132px; right:14px; width:340px; max-height:360px; overflow:auto;
+    background:rgba(21,23,26,.97); color:#f4f5f7; border:1px solid #2a2e35; border-radius:16px;
+    padding:16px 18px; font-size:13.5px; line-height:1.5; box-shadow:0 12px 40px rgba(0,0,0,.5);
+    opacity:0; transform:translateY(8px) scale(.98); transition:opacity .25s, transform .25s; pointer-events:none; }
+  #bubble.show { opacity:1; transform:translateY(0) scale(1); pointer-events:auto; }
+  #bubble::after { content:""; position:absolute; bottom:-9px; right:44px; width:16px; height:16px;
+    background:rgba(21,23,26,.97); border-right:1px solid #2a2e35; border-bottom:1px solid #2a2e35; transform:rotate(45deg); }
+  #bubble h2 { font-size:15px; margin:0 0 8px; }
+  #bubble h3 { font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:#9aafe2; margin:14px 0 5px; }
+  #bubble a { color:#9aafe2; }
+  #bubble .line { margin:3px 0; }
+  #bubble b { color:#fff; }
+  #close { position:absolute; top:9px; right:11px; color:#545c66; cursor:pointer; font-size:16px; line-height:1; }
+  #close:hover { color:#f4f5f7; }
+  .interactive { pointer-events:auto; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="bubble" class="interactive"><span id="close">✕</span><div id="content"></div></div>
+  <div id="pet" class="interactive">
+    <div class="blob"></div>
+    <div class="eye l"></div><div class="eye r"></div>
+    <div class="blush l"></div><div class="blush r"></div>
+  </div>
+</div>
+
+<script>
+  const pet = document.getElementById("pet");
+  const bubble = document.getElementById("bubble");
+  const content = document.getElementById("content");
+
+  // minimal markdown → html for the brief
+  function mdToHtml(md) {
+    return md.split("\n").map(l => {
+      if (/^# /.test(l)) return `<h2>${esc(l.slice(2))}</h2>`;
+      if (/^## /.test(l)) return `<h3>${esc(l.slice(3))}</h3>`;
+      if (/^- /.test(l)) return `<div class="line">• ${inline(l.slice(2))}</div>`;
+      if (!l.trim()) return "";
+      return `<div class="line">${inline(l)}</div>`;
+    }).join("");
+  }
+  const esc = s => s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  const inline = s => esc(s)
+    .replace(/\[apply\]\((.*?)\)/g, '<a href="$1" target="_blank">apply →</a>')
+    .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank">$1</a>')
+    .replace(/\*\*(.*?)\*\*/g, "<b>$1</b>")
+    .replace(/_(.*?)_/g, '<span style="color:#828c99">$1</span>');
+
+  let shown = false;
+  function showBrief(md) {
+    content.innerHTML = mdToHtml(md);
+    bubble.classList.add("show");
+    pet.classList.add("talking");
+    shown = true;
+  }
+  function hide() { bubble.classList.remove("show"); pet.classList.remove("talking"); shown = false; }
+
+  pet.onclick = async () => { shown ? hide() : showBrief(await window.pet.getBrief()); };
+  document.getElementById("close").onclick = (e) => { e.stopPropagation(); hide(); };
+  window.pet.onShowBrief(md => showBrief(md));
+
+  // click-through management: window ignores the mouse except over interactive
+  // regions. Enter a region → become interactive; leave → pass clicks through.
+  document.querySelectorAll(".interactive").forEach(el => {
+    el.addEventListener("mouseenter", () => window.pet.setInteractive(true));
+    el.addEventListener("mouseleave", () => { if (!shown) window.pet.setInteractive(false); });
+  });
+  // when the bubble is open the whole bubble stays interactive; when closed,
+  // only the pet region should grab the mouse
+  bubble.addEventListener("mouseleave", () => { if (!pet.matches(":hover")) window.pet.setInteractive(false); });
+
+  // greet on launch
+  window.addEventListener("DOMContentLoaded", async () => {
+    setTimeout(async () => showBrief(await window.pet.getBrief()), 600);
+  });
+</script>
+</body>
+</html>

@@ -32,3 +32,6 @@ apps/resume/out/
 apps/secretary/config.mjs
 apps/secretary/out/
 apps/secretary/data/
+
+# electron app deps
+apps/desktop-pet/node_modules/

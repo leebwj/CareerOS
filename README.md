@@ -12,7 +12,9 @@ My personal career platform, built as a monorepo. Each module is a tool I actual
 | [`apps/role-grabber`](apps/role-grabber) | **Live** | Twice-daily role aggregation (aggregators + direct ATS boards) → [ROLES.md](apps/role-grabber/ROLES.md); fit tiers, 🔥 hot / 🆕 new / 🎯 target, term + level |
 | [`apps/tracker`](apps/tracker) | **V1 live** | Single-file application dashboard over the daily data — Inbox / Starred / Tracker, Hot filter, follow-up reminders, local-first |
 | [`apps/resume`](apps/resume) | **V1 live** | Résumé-as-code — both variants render to ATS-clean docx/PDF from one data file (content stays private) |
-| [`apps/secretary`](apps/secretary) | **V1 brain** | Morning-brief agent — composes what-to-do-today from the feed, emails it; desktop-character face planned |
+| [`apps/apply-helper`](apps/apply-helper) | **V1 live** | Answer bank — 22 editable application answers + a draft-a-prompt mode; local-first, ATS-question ready |
+| [`apps/secretary`](apps/secretary) | **V1 brain** | Morning-brief agent — composes what-to-do-today from the feed, emails it (Task Scheduler @ 8am) |
+| [`apps/desktop-pet`](apps/desktop-pet) | **V1 scaffold** | The secretary's face — a transparent desktop character that pops the brief in a speech bubble (bring your own art) |
 
 ## The portfolio
 
