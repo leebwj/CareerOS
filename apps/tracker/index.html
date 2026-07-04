@@ -42,6 +42,7 @@
   .util { margin-left:auto; display:flex; gap:8px; }
   .util button { background:none; border:1px solid var(--line); color:var(--faint); border-radius:8px; padding:6px 10px; font-family:"Geist Mono",monospace; font-size:11px; cursor:pointer; }
   .util button:hover { color:var(--ink); border-color:var(--faint); }
+  #sync.on { color:var(--green); border-color:rgba(127,191,142,.5); }
 
   main { max-width:1280px; margin:0 auto; padding:10px 20px 80px; }
   .day { font-family:"Geist Mono",monospace; font-size:11.5px; color:var(--faint); text-transform:uppercase; letter-spacing:.16em; margin:22px 0 8px; display:flex; align-items:center; gap:10px; }
@@ -104,8 +105,10 @@
   <button class="chip" id="fTgt">🎯 Targets</button>
   <div class="util">
     <button id="undo" title="Undo last change (Ctrl+Z)" disabled>↶ Undo</button>
-    <button id="exp">Export</button>
-    <button id="imp">Import</button>
+    <button id="sync" title="Live-sync your tracked roles to a Google Sheet">⧉ Sheet</button>
+    <button id="csv" title="Download your tracked roles as a spreadsheet (opens in Excel/Sheets)">⬇ CSV</button>
+    <button id="exp" title="Back up all tracker data as JSON">Export</button>
+    <button id="imp" title="Restore tracker data from a JSON backup">Import</button>
   </div>
 </div>
 
@@ -120,7 +123,37 @@
 
   let roles = [], state = { s: {}, hidden: {} }, view = "inbox", fNew = false, fTgt = false, fHot = false;
   try { state = { s: {}, hidden: {}, ...JSON.parse(localStorage.getItem(LS) || "{}") } } catch {}
-  const save = () => localStorage.setItem(LS, JSON.stringify(state));
+  const save = () => { localStorage.setItem(LS, JSON.stringify(state)); syncToSheet(); };
+
+  // ── Google Sheet live sync (via a user-deployed Apps Script web app) ──
+  const SYNC_HEAD = ["Company", "Role", "Category", "Level", "Term", "Location", "Status", "Applied", "Follow-up", "Notes", "Fit", "URL"];
+  let syncUrl = localStorage.getItem("careeros-sync-url") || "";
+  let syncTimer, syncState = syncUrl ? "on" : "off";
+  function trackedRows() {
+    const byKey = {}; roles.forEach((r) => (byKey[key(r)] = r));
+    return Object.entries(state.s).map(([k, s]) => {
+      const r = byKey[k] || {}; const [company, title, loc] = k.split("|");
+      return [r.company || company, r.title || title, r.category || "", r.level || "", r.term || "",
+        (r.locations && r.locations[0]) || loc || "", s.st || (s.star ? "Starred" : ""),
+        s.date || "", s.fu || "", s.notes || "", r.fit ?? "", r.url || s.url || ""];
+    });
+  }
+  function setSyncBtn() {
+    const b = document.getElementById("sync"); if (!b) return;
+    b.classList.toggle("on", syncState === "on" || syncState === "synced" || syncState === "syncing");
+    b.textContent = syncState === "synced" ? "⧉ Synced ✓" : syncState === "syncing" ? "⧉ Syncing…" : syncState === "error" ? "⧉ Sync ✕" : "⧉ Sheet";
+  }
+  function syncToSheet() {
+    if (!syncUrl) return;
+    clearTimeout(syncTimer);
+    syncState = "syncing"; setSyncBtn();
+    syncTimer = setTimeout(() => {
+      // no-cors + text/plain = simple request (no preflight); fire-and-forget
+      fetch(syncUrl, { method: "POST", mode: "no-cors", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify({ rows: trackedRows() }) })
+        .then(() => { syncState = "synced"; setSyncBtn(); })
+        .catch(() => { syncState = "error"; setSyncBtn(); });
+    }, 1500);
+  }
 
   // undo — snapshot state before each change so accidental actions revert.
   // Call pushUndo() at the top of every mutating handler.
@@ -321,6 +354,25 @@
     a.download = "careeros-tracker-backup.json";
     a.click();
   };
+  // spreadsheet export — every tracked/starred role, joined with its feed data
+  document.getElementById("csv").onclick = () => {
+    const rows = trackedRows();
+    if (!rows.length) { alert("Nothing tracked yet — mark some roles Applied or ★ first."); return; }
+    const csv = [SYNC_HEAD, ...rows].map((row) => row.map((c) => `"${String(c).replace(/"/g, '""')}"`).join(",")).join("\r\n");
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob(["﻿" + csv], { type: "text/csv;charset=utf-8" }));
+    a.download = "careeros-applications.csv";
+    a.click();
+  };
+  document.getElementById("sync").onclick = () => {
+    const u = prompt("Google Sheet live-sync — paste your Apps Script web-app URL.\n\n(One-time setup guide is in apps/secretary… see the SHEET_SYNC guide, or ask.)\nLeave blank to turn sync OFF.", syncUrl);
+    if (u === null) return;
+    syncUrl = u.trim();
+    localStorage.setItem("careeros-sync-url", syncUrl);
+    syncState = syncUrl ? "on" : "off"; setSyncBtn();
+    if (syncUrl) syncToSheet();
+  };
+  setSyncBtn();
   document.getElementById("imp").onclick = () => {
     const inp = document.createElement("input");
     inp.type = "file"; inp.accept = ".json";

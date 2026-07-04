@@ -83,7 +83,7 @@
   "term": "",
   "level": "full-time",
   "source": "workday",
-  "isNew": true,
+  "isNew": false,
   "firstSeen": "2026-07-03",
   "fit": 0.645,
   "target": true,
@@ -101,7 +101,7 @@
   "term": "",
   "level": "full-time",
   "source": "workday",
-  "isNew": true,
+  "isNew": false,
   "firstSeen": "2026-07-03",
   "fit": 0.645,
   "target": true,
@@ -119,7 +119,7 @@
   "term": "",
   "level": "full-time",
   "source": "workday",
-  "isNew": true,
+  "isNew": false,
   "firstSeen": "2026-07-03",
   "fit": 0.645,
   "target": true,
@@ -137,7 +137,7 @@
   "term": "",
   "level": "full-time",
   "source": "workday",
-  "isNew": true,
+  "isNew": false,
   "firstSeen": "2026-07-03",
   "fit": 0.509,
   "target": true,
@@ -155,7 +155,7 @@
   "term": "",
   "level": "full-time",
   "source": "workday",
-  "isNew": true,
+  "isNew": false,
   "firstSeen": "2026-07-03",
   "fit": 0.645,
   "target": true,
@@ -1159,6 +1159,24 @@
   "hot": false
  },
  {
+  "company": "Stripe",
+  "title": "Technical Operations Engineer, Payments ",
+  "category": "Other",
+  "locations": [
+   "South San Francisco "
+  ],
+  "url": "https://stripe.com/jobs/search?gh_jid=8029252",
+  "posted": "2026-07-02",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-07-02",
+  "fit": 0.5,
+  "target": true,
+  "hot": false
+ },
+ {
   "company": "ElevenLabs",
   "title": "Writer and Editor",
   "category": "Other",
@@ -1201,24 +1219,6 @@
   "hot": false
  },
  {
-  "company": "Stripe",
-  "title": "Technical Operations Engineer, Payments ",
-  "category": "Other",
-  "locations": [
-   "South San Francisco "
-  ],
-  "url": "https://stripe.com/jobs/search?gh_jid=8029252",
-  "posted": "2026-07-02",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-07-02",
-  "fit": 0.5,
-  "target": true,
-  "hot": false
- },
- {
   "company": "NVIDIA",
   "title": "IT Infrastructure Compliance Engineer",
   "category": "Software Engineering",
@@ -1230,7 +1230,7 @@
   "term": "",
   "level": "full-time",
   "source": "workday",
-  "isNew": true,
+  "isNew": false,
   "firstSeen": "2026-07-02",
   "fit": 0.5,
   "target": false,
@@ -1248,7 +1248,7 @@
   "term": "Fall 2026",
   "level": "intern",
   "source": "workday",
-  "isNew": true,
+  "isNew": false,
   "firstSeen": "2026-07-02",
   "fit": 0.581,
   "target": false,
@@ -4565,6 +4565,24 @@
   "hot": false
  },
  {
+  "company": "Anthropic",
+  "title": "[P] Data Engineer, Safeguards",
+  "category": "Data / AI / ML",
+  "locations": [
+   "San Francisco, CA | New York City, NY"
+  ],
+  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5240422008",
+  "posted": "2026-07-01",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-07-01",
+  "fit": 0.491,
+  "target": true,
+  "hot": false
+ },
+ {
   "company": "Ramp",
   "title": "Employee Lifecycle Analyst",
   "category": "Other",
@@ -4639,24 +4657,6 @@
   "hot": false
  },
  {
-  "company": "Anthropic",
-  "title": "[P] Data Engineer, Safeguards",
-  "category": "Data / AI / ML",
-  "locations": [
-   "San Francisco, CA | New York City, NY"
-  ],
-  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5240422008",
-  "posted": "2026-07-01",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-07-01",
-  "fit": 0.491,
-  "target": true,
-  "hot": false
- },
- {
   "company": "OpenAI",
   "title": "Strategic Delivery Lead, Cyber",
   "category": "Other",
@@ -4704,7 +4704,7 @@
   "term": "",
   "level": "full-time",
   "source": "workday",
-  "isNew": true,
+  "isNew": false,
   "firstSeen": "2026-07-01",
   "fit": 0.491,
   "target": true,
@@ -4722,7 +4722,7 @@
   "term": "",
   "level": "full-time",
   "source": "workday",
-  "isNew": true,
+  "isNew": false,
   "firstSeen": "2026-07-01",
   "fit": 0.491,
   "target": true,
@@ -4776,7 +4776,7 @@
   "term": "",
   "level": "intern",
   "source": "jobright",
-  "isNew": true,
+  "isNew": false,
   "firstSeen": "2026-07-01",
   "fit": 0.35,
   "target": false,
@@ -6427,24 +6427,6 @@
   "hot": false
  },
  {
-  "company": "Replit",
-  "title": "Sales Leader",
-  "category": "Other",
-  "locations": [
-   "Foster City, CA"
-  ],
-  "url": "https://jobs.ashbyhq.com/replit/3701351d-c64c-4992-971a-b3dfbd712570",
-  "posted": "2026-06-30",
-  "term": "",
-  "level": "full-time",
-  "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-06-30",
-  "fit": 0.381,
-  "target": false,
-  "hot": false
- },
- {
   "company": "Stripe",
   "title": "Executive Engagement Lead, Office of the CRO",
   "category": "Other",
@@ -6456,6 +6438,24 @@
   "term": "",
   "level": "full-time",
   "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-06-30",
+  "fit": 0.381,
+  "target": false,
+  "hot": false
+ },
+ {
+  "company": "Replit",
+  "title": "Sales Leader",
+  "category": "Other",
+  "locations": [
+   "Foster City, CA"
+  ],
+  "url": "https://jobs.ashbyhq.com/replit/3701351d-c64c-4992-971a-b3dfbd712570",
+  "posted": "2026-06-30",
+  "term": "",
+  "level": "full-time",
+  "source": "ashby",
   "isNew": false,
   "firstSeen": "2026-06-30",
   "fit": 0.381,
@@ -6780,7 +6780,7 @@
   "term": "",
   "level": "intern",
   "source": "jobright",
-  "isNew": true,
+  "isNew": false,
   "firstSeen": "2026-06-30",
   "fit": 0.342,
   "target": false,
@@ -7677,6 +7677,24 @@
   "hot": false
  },
  {
+  "company": "Roblox",
+  "title": "Talent Sourcing Partner (Short Term)",
+  "category": "Other",
+  "locations": [
+   "San Mateo, CA, United States"
+  ],
+  "url": "https://careers.roblox.com/jobs/8031751?gh_jid=8031751",
+  "posted": "2026-06-29",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-06-29",
+  "fit": 0.373,
+  "target": false,
+  "hot": false
+ },
+ {
   "company": "ElevenLabs",
   "title": "Forward Deployed Creative",
   "category": "Software Engineering",
@@ -7722,24 +7740,6 @@
   "hot": false
  },
  {
-  "company": "Roblox",
-  "title": "Talent Sourcing Partner (Short Term)",
-  "category": "Other",
-  "locations": [
-   "San Mateo, CA, United States"
-  ],
-  "url": "https://careers.roblox.com/jobs/8031751?gh_jid=8031751",
-  "posted": "2026-06-29",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-06-29",
-  "fit": 0.373,
-  "target": false,
-  "hot": false
- },
- {
   "company": "Notion",
   "title": "Lead, IT Audit and Technology Risk",
   "category": "Other",
@@ -7751,24 +7751,6 @@
   "term": "",
   "level": "full-time",
   "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-06-29",
-  "fit": 0.373,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "Databricks",
-  "title": "Real Estate Strategic Planning Lead",
-  "category": "Other",
-  "locations": [
-   "Mountain View, California; San Francisco, California"
-  ],
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8603402002",
-  "posted": "2026-06-29",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
   "isNew": false,
   "firstSeen": "2026-06-29",
   "fit": 0.373,
@@ -7826,6 +7808,24 @@
   "isNew": false,
   "firstSeen": "2026-06-29",
   "fit": 0.611,
+  "target": false,
+  "hot": false
+ },
+ {
+  "company": "Databricks",
+  "title": "Real Estate Strategic Planning Lead",
+  "category": "Other",
+  "locations": [
+   "Mountain View, California; San Francisco, California"
+  ],
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8603402002",
+  "posted": "2026-06-29",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-06-29",
+  "fit": 0.373,
   "target": false,
   "hot": false
  },
@@ -9758,7 +9758,7 @@
   "source": "ashby",
   "isNew": false,
   "firstSeen": "2026-06-27",
-  "fit": 0.461,
+  "fit": 0.46,
   "target": true,
   "hot": false
  },
@@ -9776,7 +9776,7 @@
   "source": "jobright",
   "isNew": false,
   "firstSeen": "2026-06-27",
-  "fit": 0.32,
+  "fit": 0.319,
   "target": false,
   "hot": false
  },
@@ -9794,7 +9794,7 @@
   "source": "jobright",
   "isNew": false,
   "firstSeen": "2026-06-27",
-  "fit": 0.32,
+  "fit": 0.319,
   "target": false,
   "hot": false
  },
@@ -9812,7 +9812,7 @@
   "source": "jobright",
   "isNew": false,
   "firstSeen": "2026-06-27",
-  "fit": 0.66,
+  "fit": 0.659,
   "target": false,
   "hot": false
  },
@@ -9830,7 +9830,7 @@
   "source": "jobright",
   "isNew": false,
   "firstSeen": "2026-06-27",
-  "fit": 0.66,
+  "fit": 0.659,
   "target": false,
   "hot": false
  },
@@ -9848,7 +9848,7 @@
   "source": "simplify",
   "isNew": false,
   "firstSeen": "2026-06-27",
-  "fit": 0.66,
+  "fit": 0.659,
   "target": false,
   "hot": false
  },
@@ -9866,7 +9866,7 @@
   "source": "simplify",
   "isNew": false,
   "firstSeen": "2026-06-27",
-  "fit": 0.422,
+  "fit": 0.421,
   "target": false,
   "hot": false
  },
@@ -9884,7 +9884,7 @@
   "source": "simplify",
   "isNew": false,
   "firstSeen": "2026-06-27",
-  "fit": 0.422,
+  "fit": 0.421,
   "target": false,
   "hot": false
  },
@@ -9902,7 +9902,7 @@
   "source": "simplify",
   "isNew": false,
   "firstSeen": "2026-06-27",
-  "fit": 0.32,
+  "fit": 0.319,
   "target": false,
   "hot": false
  },
@@ -9920,7 +9920,7 @@
   "source": "simplify",
   "isNew": false,
   "firstSeen": "2026-06-27",
-  "fit": 0.558,
+  "fit": 0.557,
   "target": false,
   "hot": false
  },
@@ -9938,7 +9938,7 @@
   "source": "simplify",
   "isNew": false,
   "firstSeen": "2026-06-27",
-  "fit": 0.32,
+  "fit": 0.319,
   "target": false,
   "hot": false
  },
@@ -9956,7 +9956,7 @@
   "source": "simplify",
   "isNew": false,
   "firstSeen": "2026-06-27",
-  "fit": 0.54,
+  "fit": 0.539,
   "target": false,
   "hot": false
  },
@@ -9976,7 +9976,7 @@
   "source": "simplify",
   "isNew": false,
   "firstSeen": "2026-06-27",
-  "fit": 0.404,
+  "fit": 0.403,
   "target": false,
   "hot": false
  },
@@ -9994,7 +9994,7 @@
   "source": "simplify",
   "isNew": false,
   "firstSeen": "2026-06-27",
-  "fit": 0.404,
+  "fit": 0.403,
   "target": false,
   "hot": false
  },
@@ -10014,7 +10014,7 @@
   "source": "simplify",
   "isNew": false,
   "firstSeen": "2026-06-27",
-  "fit": 0.54,
+  "fit": 0.539,
   "target": false,
   "hot": false
  },
@@ -10032,7 +10032,7 @@
   "source": "simplify",
   "isNew": false,
   "firstSeen": "2026-06-27",
-  "fit": 0.404,
+  "fit": 0.403,
   "target": false,
   "hot": false
  },
@@ -10050,7 +10050,7 @@
   "source": "simplify",
   "isNew": false,
   "firstSeen": "2026-06-27",
-  "fit": 0.404,
+  "fit": 0.403,
   "target": false,
   "hot": false
  },
@@ -10068,7 +10068,7 @@
   "source": "simplify",
   "isNew": false,
   "firstSeen": "2026-06-27",
-  "fit": 0.54,
+  "fit": 0.539,
   "target": false,
   "hot": false
  },
@@ -10086,7 +10086,7 @@
   "source": "simplify",
   "isNew": false,
   "firstSeen": "2026-06-27",
-  "fit": 0.302,
+  "fit": 0.301,
   "target": false,
   "hot": false
  },
@@ -10106,7 +10106,7 @@
   "source": "simplify",
   "isNew": false,
   "firstSeen": "2026-06-27",
-  "fit": 0.404,
+  "fit": 0.403,
   "target": false,
   "hot": false
  },
@@ -10124,7 +10124,7 @@
   "source": "simplify",
   "isNew": false,
   "firstSeen": "2026-06-27",
-  "fit": 0.404,
+  "fit": 0.403,
   "target": false,
   "hot": false
  },
@@ -10142,7 +10142,7 @@
   "source": "simplify",
   "isNew": false,
   "firstSeen": "2026-06-27",
-  "fit": 0.404,
+  "fit": 0.403,
   "target": false,
   "hot": false
  },
@@ -10160,7 +10160,7 @@
   "source": "simplify",
   "isNew": false,
   "firstSeen": "2026-06-27",
-  "fit": 0.404,
+  "fit": 0.403,
   "target": false,
   "hot": false
  },
@@ -10181,7 +10181,7 @@
   "source": "simplify",
   "isNew": false,
   "firstSeen": "2026-06-27",
-  "fit": 0.404,
+  "fit": 0.403,
   "target": false,
   "hot": false
  },
@@ -10199,7 +10199,7 @@
   "source": "simplify",
   "isNew": false,
   "firstSeen": "2026-06-27",
-  "fit": 0.302,
+  "fit": 0.301,
   "target": false,
   "hot": false
  },
@@ -10218,6 +10218,24 @@
   "isNew": false,
   "firstSeen": "2026-06-26",
   "fit": 0.454,
+  "target": true,
+  "hot": false
+ },
+ {
+  "company": "Riot Games",
+  "title": "Software Engineer, Game UI - League of Legends",
+  "category": "Graphics / Game / 3D",
+  "locations": [
+   "Los Angeles, USA"
+  ],
+  "url": "https://www.riotgames.com/en/work-with-us/job/8025007?gh_jid=8025007",
+  "posted": "2026-06-26",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-06-26",
+  "fit": 0.692,
   "target": true,
   "hot": false
  },
@@ -10258,6 +10276,24 @@
   "hot": false
  },
  {
+  "company": "Datadog",
+  "title": "Deal Desk Analyst - Boston (Portuguese or Spanish Speaking)",
+  "category": "Other",
+  "locations": [
+   "Boston, Massachusetts, USA"
+  ],
+  "url": "https://careers.datadoghq.com/detail/8029969/?gh_jid=8029969",
+  "posted": "2026-06-26",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-06-26",
+  "fit": 0.352,
+  "target": false,
+  "hot": false
+ },
+ {
   "company": "Notion",
   "title": "Software Engineer, Data Product Platform",
   "category": "Software Engineering",
@@ -10273,42 +10309,6 @@
   "firstSeen": "2026-06-26",
   "fit": 0.59,
   "target": true,
-  "hot": false
- },
- {
-  "company": "Riot Games",
-  "title": "Software Engineer, Game UI - League of Legends",
-  "category": "Graphics / Game / 3D",
-  "locations": [
-   "Los Angeles, USA"
-  ],
-  "url": "https://www.riotgames.com/en/work-with-us/job/8025007?gh_jid=8025007",
-  "posted": "2026-06-26",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-06-26",
-  "fit": 0.692,
-  "target": true,
-  "hot": false
- },
- {
-  "company": "Databricks",
-  "title": "Global Regional Systems Integrator Leader",
-  "category": "Other",
-  "locations": [
-   "United States"
-  ],
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8603398002",
-  "posted": "2026-06-26",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-06-26",
-  "fit": 0.352,
-  "target": false,
   "hot": false
  },
  {
@@ -10510,13 +10510,13 @@
   "hot": false
  },
  {
-  "company": "Datadog",
-  "title": "Deal Desk Analyst - Boston (Portuguese or Spanish Speaking)",
+  "company": "Databricks",
+  "title": "Global Regional Systems Integrator Leader",
   "category": "Other",
   "locations": [
-   "Boston, Massachusetts, USA"
+   "United States"
   ],
-  "url": "https://careers.datadoghq.com/detail/8029969/?gh_jid=8029969",
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8603398002",
   "posted": "2026-06-26",
   "term": "",
   "level": "full-time",
@@ -11291,13 +11291,13 @@
   "hot": false
  },
  {
-  "company": "Figma",
-  "title": "Software Engineer, iOS",
+  "company": "Roblox",
+  "title": "Software Engineer, Data Engineering",
   "category": "Software Engineering",
   "locations": [
-   "San Francisco, CA • New York, NY • United States"
+   "San Mateo, CA, United States"
   ],
-  "url": "https://boards.greenhouse.io/figma/jobs/6100023004?gh_jid=6100023004",
+  "url": "https://careers.roblox.com/jobs/8025021?gh_jid=8025021",
   "posted": "2026-06-25",
   "term": "",
   "level": "full-time",
@@ -11309,34 +11309,13 @@
   "hot": false
  },
  {
-  "company": "Ramp",
-  "title": "Solutions Consultant | Enterprise ",
-  "category": "Other",
-  "locations": [
-   "New York, NY (HQ)",
-   "San Francisco, CA",
-   "Remote (US)",
-   "Miami, FL"
-  ],
-  "url": "https://jobs.ashbyhq.com/ramp/29b679a8-9990-48c1-b91e-001c566ced27",
-  "posted": "2026-06-25",
-  "term": "",
-  "level": "full-time",
-  "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-06-25",
-  "fit": 0.345,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "Roblox",
-  "title": "Software Engineer, Data Engineering",
+  "company": "Figma",
+  "title": "Software Engineer, iOS",
   "category": "Software Engineering",
   "locations": [
-   "San Mateo, CA, United States"
+   "San Francisco, CA • New York, NY • United States"
   ],
-  "url": "https://careers.roblox.com/jobs/8025021?gh_jid=8025021",
+  "url": "https://boards.greenhouse.io/figma/jobs/6100023004?gh_jid=6100023004",
   "posted": "2026-06-25",
   "term": "",
   "level": "full-time",
@@ -11384,35 +11363,20 @@
   "hot": false
  },
  {
-  "company": "Databricks",
-  "title": "Delivery Solutions Architect",
-  "category": "Software Engineering",
+  "company": "Ramp",
+  "title": "Solutions Consultant | Enterprise ",
+  "category": "Other",
   "locations": [
-   "Southwest - United States"
+   "New York, NY (HQ)",
+   "San Francisco, CA",
+   "Remote (US)",
+   "Miami, FL"
   ],
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8609622002",
+  "url": "https://jobs.ashbyhq.com/ramp/29b679a8-9990-48c1-b91e-001c566ced27",
   "posted": "2026-06-25",
   "term": "",
   "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-06-25",
-  "fit": 0.345,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "Databricks",
-  "title": "Delivery Solutions Architect",
-  "category": "Software Engineering",
-  "locations": [
-   "Central - United States"
-  ],
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8609617002",
-  "posted": "2026-06-25",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
+  "source": "ashby",
   "isNew": false,
   "firstSeen": "2026-06-25",
   "fit": 0.345,
@@ -11611,6 +11575,42 @@
   "term": "",
   "level": "full-time",
   "source": "ashby",
+  "isNew": false,
+  "firstSeen": "2026-06-25",
+  "fit": 0.345,
+  "target": false,
+  "hot": false
+ },
+ {
+  "company": "Databricks",
+  "title": "Delivery Solutions Architect",
+  "category": "Software Engineering",
+  "locations": [
+   "Southwest - United States"
+  ],
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8609622002",
+  "posted": "2026-06-25",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-06-25",
+  "fit": 0.345,
+  "target": false,
+  "hot": false
+ },
+ {
+  "company": "Databricks",
+  "title": "Delivery Solutions Architect",
+  "category": "Software Engineering",
+  "locations": [
+   "Central - United States"
+  ],
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8609617002",
+  "posted": "2026-06-25",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
   "isNew": false,
   "firstSeen": "2026-06-25",
   "fit": 0.345,
@@ -12735,43 +12735,6 @@
   "hot": false
  },
  {
-  "company": "Figma",
-  "title": "Workforce Management Analyst",
-  "category": "Other",
-  "locations": [
-   "San Francisco, CA • New York, NY • United States"
-  ],
-  "url": "https://boards.greenhouse.io/figma/jobs/6099183004?gh_jid=6099183004",
-  "posted": "2026-06-24",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-06-24",
-  "fit": 0.339,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "Ramp",
-  "title": "Applied AI Engineer, Fullstack",
-  "category": "Software Engineering",
-  "locations": [
-   "New York, NY (HQ)",
-   "San Francisco, CA"
-  ],
-  "url": "https://jobs.ashbyhq.com/ramp/6a7e382f-240a-4952-b9e5-7fe2b3856bc9",
-  "posted": "2026-06-24",
-  "term": "",
-  "level": "full-time",
-  "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-06-24",
-  "fit": 0.577,
-  "target": true,
-  "hot": false
- },
- {
   "company": "Roblox",
   "title": "Developer Engagement Representative - ANZ (Australia / New Zealand)  (Part-Time Contract)",
   "category": "Other",
@@ -12805,6 +12768,24 @@
   "firstSeen": "2026-06-24",
   "fit": 0.441,
   "target": true,
+  "hot": false
+ },
+ {
+  "company": "Figma",
+  "title": "Workforce Management Analyst",
+  "category": "Other",
+  "locations": [
+   "San Francisco, CA • New York, NY • United States"
+  ],
+  "url": "https://boards.greenhouse.io/figma/jobs/6099183004?gh_jid=6099183004",
+  "posted": "2026-06-24",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-06-24",
+  "fit": 0.339,
+  "target": false,
   "hot": false
  },
  {
@@ -12844,13 +12825,32 @@
   "hot": false
  },
  {
-  "company": "Databricks",
-  "title": "Solutions Architect - Financial Services (Asset and Wealth Management)",
+  "company": "Ramp",
+  "title": "Applied AI Engineer, Fullstack",
   "category": "Software Engineering",
   "locations": [
-   "Central - United States; Chicago, Illinois; Massachusetts; New York; North Carolina; Northeast - United States; Washington, D.C."
+   "New York, NY (HQ)",
+   "San Francisco, CA"
   ],
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8605158002",
+  "url": "https://jobs.ashbyhq.com/ramp/6a7e382f-240a-4952-b9e5-7fe2b3856bc9",
+  "posted": "2026-06-24",
+  "term": "",
+  "level": "full-time",
+  "source": "ashby",
+  "isNew": false,
+  "firstSeen": "2026-06-24",
+  "fit": 0.577,
+  "target": true,
+  "hot": false
+ },
+ {
+  "company": "Datadog",
+  "title": "Datadog for Startups - Forward Deployed Engineering Lead",
+  "category": "Software Engineering",
+  "locations": [
+   "New York, New York, USA"
+  ],
+  "url": "https://careers.datadoghq.com/detail/8003181/?gh_jid=8003181",
   "posted": "2026-06-24",
   "term": "",
   "level": "full-time",
@@ -12898,13 +12898,13 @@
   "hot": false
  },
  {
-  "company": "Datadog",
-  "title": "Datadog for Startups - Forward Deployed Engineering Lead",
+  "company": "Databricks",
+  "title": "Solutions Architect - Financial Services (Asset and Wealth Management)",
   "category": "Software Engineering",
   "locations": [
-   "New York, New York, USA"
+   "Central - United States; Chicago, Illinois; Massachusetts; New York; North Carolina; Northeast - United States; Washington, D.C."
   ],
-  "url": "https://careers.datadoghq.com/detail/8003181/?gh_jid=8003181",
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8605158002",
   "posted": "2026-06-24",
   "term": "",
   "level": "full-time",
@@ -13807,57 +13807,20 @@
   "hot": false
  },
  {
-  "company": "Ramp",
-  "title": "AI Solutions Strategist",
+  "company": "Stripe",
+  "title": "Machine Learning Engineer, Payment Intelligence",
   "category": "Data / AI / ML",
   "locations": [
-   "New York, NY (HQ)"
+   "Seattle"
   ],
-  "url": "https://jobs.ashbyhq.com/ramp/cbdf2857-1675-4b68-8cb5-2f92a20faa75",
-  "posted": "2026-06-23",
-  "term": "",
-  "level": "full-time",
-  "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-06-23",
-  "fit": 0.435,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "Epic Games",
-  "title": "Gameplay Designer",
-  "category": "Graphics / Game / 3D",
-  "locations": [
-   "Cary,North Carolina,United States"
-  ],
-  "url": "https://epicgames.com/careers/jobs/6098768004?gh_jid=6098768004",
+  "url": "https://stripe.com/jobs/search?gh_jid=7983456",
   "posted": "2026-06-23",
   "term": "",
   "level": "full-time",
   "source": "greenhouse",
   "isNew": false,
   "firstSeen": "2026-06-23",
-  "fit": 0.673,
-  "target": true,
-  "hot": false
- },
- {
-  "company": "Notion",
-  "title": "Software Engineer, Developer Experience (Go Lead)",
-  "category": "Software Engineering",
-  "locations": [
-   "New York, New York",
-   "San Francisco, California"
-  ],
-  "url": "https://jobs.ashbyhq.com/notion/876c69a9-be0a-4a71-bf4a-04cbc9c6328e",
-  "posted": "2026-06-23",
-  "term": "",
-  "level": "full-time",
-  "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-06-23",
-  "fit": 0.571,
+  "fit": 0.435,
   "target": true,
   "hot": false
  },
@@ -13880,20 +13843,20 @@
   "hot": false
  },
  {
-  "company": "Stripe",
-  "title": "Machine Learning Engineer, Payment Intelligence",
-  "category": "Data / AI / ML",
+  "company": "Epic Games",
+  "title": "Gameplay Designer",
+  "category": "Graphics / Game / 3D",
   "locations": [
-   "Seattle"
+   "Cary,North Carolina,United States"
   ],
-  "url": "https://stripe.com/jobs/search?gh_jid=7983456",
+  "url": "https://epicgames.com/careers/jobs/6098768004?gh_jid=6098768004",
   "posted": "2026-06-23",
   "term": "",
   "level": "full-time",
   "source": "greenhouse",
   "isNew": false,
   "firstSeen": "2026-06-23",
-  "fit": 0.435,
+  "fit": 0.673,
   "target": true,
   "hot": false
  },
@@ -13916,31 +13879,31 @@
   "hot": false
  },
  {
-  "company": "Databricks",
-  "title": "Software Engineer, Web Products",
-  "category": "Software Engineering",
+  "company": "Ramp",
+  "title": "AI Solutions Strategist",
+  "category": "Data / AI / ML",
   "locations": [
-   "Mountain View, California"
+   "New York, NY (HQ)"
   ],
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8560779002",
+  "url": "https://jobs.ashbyhq.com/ramp/cbdf2857-1675-4b68-8cb5-2f92a20faa75",
   "posted": "2026-06-23",
   "term": "",
   "level": "full-time",
-  "source": "greenhouse",
+  "source": "ashby",
   "isNew": false,
   "firstSeen": "2026-06-23",
-  "fit": 0.571,
-  "target": true,
+  "fit": 0.435,
+  "target": false,
   "hot": false
  },
  {
-  "company": "Databricks",
-  "title": "Solutions Architect - Casino / iGaming ",
+  "company": "Datadog",
+  "title": "Partner Solutions Architect (GSI) - AMER West",
   "category": "Software Engineering",
   "locations": [
-   "United States"
+   "Denver, Colorado, USA; San Francisco, California, USA"
   ],
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8595123002",
+  "url": "https://careers.datadoghq.com/detail/8010455/?gh_jid=8010455",
   "posted": "2026-06-23",
   "term": "",
   "level": "full-time",
@@ -13949,6 +13912,43 @@
   "firstSeen": "2026-06-23",
   "fit": 0.333,
   "target": false,
+  "hot": false
+ },
+ {
+  "company": "Datadog",
+  "title": "Partner Solutions Architect (GSI) - AMER West",
+  "category": "Software Engineering",
+  "locations": [
+   "California, USA, Remote; Illinois, USA, Remote; Texas, USA, Remote; Washington, USA, Remote"
+  ],
+  "url": "https://careers.datadoghq.com/detail/8015631/?gh_jid=8015631",
+  "posted": "2026-06-23",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-06-23",
+  "fit": 0.333,
+  "target": false,
+  "hot": false
+ },
+ {
+  "company": "Notion",
+  "title": "Software Engineer, Developer Experience (Go Lead)",
+  "category": "Software Engineering",
+  "locations": [
+   "New York, New York",
+   "San Francisco, California"
+  ],
+  "url": "https://jobs.ashbyhq.com/notion/876c69a9-be0a-4a71-bf4a-04cbc9c6328e",
+  "posted": "2026-06-23",
+  "term": "",
+  "level": "full-time",
+  "source": "ashby",
+  "isNew": false,
+  "firstSeen": "2026-06-23",
+  "fit": 0.571,
+  "target": true,
   "hot": false
  },
  {
@@ -14101,31 +14101,31 @@
   "hot": false
  },
  {
-  "company": "Datadog",
-  "title": "Partner Solutions Architect (GSI) - AMER West",
+  "company": "Databricks",
+  "title": "Software Engineer, Web Products",
   "category": "Software Engineering",
   "locations": [
-   "Denver, Colorado, USA; San Francisco, California, USA"
+   "Mountain View, California"
   ],
-  "url": "https://careers.datadoghq.com/detail/8010455/?gh_jid=8010455",
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8560779002",
   "posted": "2026-06-23",
   "term": "",
   "level": "full-time",
   "source": "greenhouse",
   "isNew": false,
   "firstSeen": "2026-06-23",
-  "fit": 0.333,
-  "target": false,
+  "fit": 0.571,
+  "target": true,
   "hot": false
  },
  {
-  "company": "Datadog",
-  "title": "Partner Solutions Architect (GSI) - AMER West",
+  "company": "Databricks",
+  "title": "Solutions Architect - Casino / iGaming ",
   "category": "Software Engineering",
   "locations": [
-   "California, USA, Remote; Illinois, USA, Remote; Texas, USA, Remote; Washington, USA, Remote"
+   "United States"
   ],
-  "url": "https://careers.datadoghq.com/detail/8015631/?gh_jid=8015631",
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8595123002",
   "posted": "2026-06-23",
   "term": "",
   "level": "full-time",
@@ -14844,6 +14844,24 @@
   "hot": false
  },
  {
+  "company": "Riot Games",
+  "title": "VFX Artist II - Unpublished R&D Product",
+  "category": "Art / Animation / VFX",
+  "locations": [
+   "Los Angeles, USA"
+  ],
+  "url": "https://www.riotgames.com/en/work-with-us/job/7984194?gh_jid=7984194",
+  "posted": "2026-06-22",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-06-22",
+  "fit": 0.328,
+  "target": false,
+  "hot": false
+ },
+ {
   "company": "Figma",
   "title": "Open Source Developer",
   "category": "Other",
@@ -14877,24 +14895,6 @@
   "firstSeen": "2026-06-22",
   "fit": 0.43,
   "target": true,
-  "hot": false
- },
- {
-  "company": "Riot Games",
-  "title": "VFX Artist II - Unpublished R&D Product",
-  "category": "Art / Animation / VFX",
-  "locations": [
-   "Los Angeles, USA"
-  ],
-  "url": "https://www.riotgames.com/en/work-with-us/job/7984194?gh_jid=7984194",
-  "posted": "2026-06-22",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-06-22",
-  "fit": 0.328,
-  "target": false,
   "hot": false
  },
  {
@@ -16755,6 +16755,42 @@
   "hot": false
  },
  {
+  "company": "Stripe",
+  "title": "Product Lead, Data Products",
+  "category": "Data / AI / ML",
+  "locations": [
+   "New York City, San Francisco "
+  ],
+  "url": "https://stripe.com/jobs/search?gh_jid=8014786",
+  "posted": "2026-06-18",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-06-18",
+  "fit": 0.41,
+  "target": false,
+  "hot": false
+ },
+ {
+  "company": "Anthropic",
+  "title": "Platform Security Engineer, OpenBMC",
+  "category": "Software Engineering",
+  "locations": [
+   "San Francisco, CA | New York City, NY | Seattle, WA"
+  ],
+  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5271346008",
+  "posted": "2026-06-18",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-06-18",
+  "fit": 0.41,
+  "target": true,
+  "hot": false
+ },
+ {
   "company": "Ramp",
   "title": "Virtual Events Associate",
   "category": "Other",
@@ -16812,60 +16848,6 @@
   "hot": false
  },
  {
-  "company": "Stripe",
-  "title": "Product Lead, Data Products",
-  "category": "Data / AI / ML",
-  "locations": [
-   "New York City, San Francisco "
-  ],
-  "url": "https://stripe.com/jobs/search?gh_jid=8014786",
-  "posted": "2026-06-18",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-06-18",
-  "fit": 0.41,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "Anthropic",
-  "title": "Platform Security Engineer, OpenBMC",
-  "category": "Software Engineering",
-  "locations": [
-   "San Francisco, CA | New York City, NY | Seattle, WA"
-  ],
-  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5271346008",
-  "posted": "2026-06-18",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-06-18",
-  "fit": 0.41,
-  "target": true,
-  "hot": false
- },
- {
-  "company": "Databricks",
-  "title": "Delivery Solutions Architect - Communications, Media, Entertainment & Games",
-  "category": "Software Engineering",
-  "locations": [
-   "United States"
-  ],
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8598012002",
-  "posted": "2026-06-18",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-06-18",
-  "fit": 0.308,
-  "target": false,
-  "hot": false
- },
- {
   "company": "OpenAI",
   "title": "Strategic Partnerships Lead, Education",
   "category": "Other",
@@ -16895,6 +16877,24 @@
   "term": "",
   "level": "full-time",
   "source": "ashby",
+  "isNew": false,
+  "firstSeen": "2026-06-18",
+  "fit": 0.308,
+  "target": false,
+  "hot": false
+ },
+ {
+  "company": "Databricks",
+  "title": "Delivery Solutions Architect - Communications, Media, Entertainment & Games",
+  "category": "Software Engineering",
+  "locations": [
+   "United States"
+  ],
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8598012002",
+  "posted": "2026-06-18",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
   "isNew": false,
   "firstSeen": "2026-06-18",
   "fit": 0.308,
@@ -17535,6 +17535,24 @@
   "hot": false
  },
  {
+  "company": "Datadog",
+  "title": "Partner Solutions Architect (GSI) - AMER East",
+  "category": "Software Engineering",
+  "locations": [
+   "Boston, Massachusetts, USA; New York, New York, USA"
+  ],
+  "url": "https://careers.datadoghq.com/detail/8003977/?gh_jid=8003977",
+  "posted": "2026-06-17",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-06-17",
+  "fit": 0.304,
+  "target": false,
+  "hot": false
+ },
+ {
   "company": "OpenAI",
   "title": "Full Stack Software Engineer, Agent Enablement",
   "category": "Software Engineering",
@@ -17636,24 +17654,6 @@
   "term": "",
   "level": "full-time",
   "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-06-17",
-  "fit": 0.304,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "Datadog",
-  "title": "Partner Solutions Architect (GSI) - AMER East",
-  "category": "Software Engineering",
-  "locations": [
-   "Boston, Massachusetts, USA; New York, New York, USA"
-  ],
-  "url": "https://careers.datadoghq.com/detail/8003977/?gh_jid=8003977",
-  "posted": "2026-06-17",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
   "isNew": false,
   "firstSeen": "2026-06-17",
   "fit": 0.304,
@@ -18545,6 +18545,24 @@
   "hot": false
  },
  {
+  "company": "Vercel",
+  "title": "Partner Operations Lead",
+  "category": "Other",
+  "locations": [
+   "Hybrid - San Francisco, New York City, Austin"
+  ],
+  "url": "https://job-boards.greenhouse.io/vercel/jobs/6087001004",
+  "posted": "2026-06-16",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-06-16",
+  "fit": 0.299,
+  "target": false,
+  "hot": false
+ },
+ {
   "company": "Cohere",
   "title": "Software Engineer, North for Finance",
   "category": "Software Engineering",
@@ -18565,13 +18583,13 @@
   "hot": false
  },
  {
-  "company": "Vercel",
-  "title": "Partner Operations Lead",
+  "company": "Datadog",
+  "title": "Deal Desk Analyst - NYC",
   "category": "Other",
   "locations": [
-   "Hybrid - San Francisco, New York City, Austin"
+   "New York, New York, USA"
   ],
-  "url": "https://job-boards.greenhouse.io/vercel/jobs/6087001004",
+  "url": "https://careers.datadoghq.com/detail/7993638/?gh_jid=7993638",
   "posted": "2026-06-16",
   "term": "",
   "level": "full-time",
@@ -18704,24 +18722,6 @@
   "term": "",
   "level": "full-time",
   "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-06-16",
-  "fit": 0.299,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "Datadog",
-  "title": "Deal Desk Analyst - NYC",
-  "category": "Other",
-  "locations": [
-   "New York, New York, USA"
-  ],
-  "url": "https://careers.datadoghq.com/detail/7993638/?gh_jid=7993638",
-  "posted": "2026-06-16",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
   "isNew": false,
   "firstSeen": "2026-06-16",
   "fit": 0.299,
@@ -19780,27 +19780,6 @@
   "hot": false
  },
  {
-  "company": "Cohere",
-  "title": "Software Engineer, Agents & Automations",
-  "category": "Software Engineering",
-  "locations": [
-   "London",
-   "Europe",
-   "Canada",
-   "United States"
-  ],
-  "url": "https://jobs.ashbyhq.com/cohere/4a3c3eb2-ae2e-4a86-a677-7bdecbc7d76e",
-  "posted": "2026-06-15",
-  "term": "",
-  "level": "full-time",
-  "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-06-15",
-  "fit": 0.534,
-  "target": true,
-  "hot": false
- },
- {
   "company": "Stripe",
   "title": "Full-Stack Engineer",
   "category": "Software Engineering",
@@ -19855,6 +19834,27 @@
   "hot": false
  },
  {
+  "company": "Cohere",
+  "title": "Software Engineer, Agents & Automations",
+  "category": "Software Engineering",
+  "locations": [
+   "London",
+   "Europe",
+   "Canada",
+   "United States"
+  ],
+  "url": "https://jobs.ashbyhq.com/cohere/4a3c3eb2-ae2e-4a86-a677-7bdecbc7d76e",
+  "posted": "2026-06-15",
+  "term": "",
+  "level": "full-time",
+  "source": "ashby",
+  "isNew": false,
+  "firstSeen": "2026-06-15",
+  "fit": 0.534,
+  "target": true,
+  "hot": false
+ },
+ {
   "company": "Anthropic",
   "title": "Platform Hardware Security",
   "category": "Software Engineering",
@@ -19873,13 +19873,13 @@
   "hot": false
  },
  {
-  "company": "Databricks",
-  "title": " Lakebase Sales Specialist-MFG",
+  "company": "Datadog",
+  "title": "Deal Desk Analyst - US West",
   "category": "Other",
   "locations": [
-   "Remote - Georgia; Remote - Texas; San Francisco, California"
+   "Denver, Colorado, USA"
   ],
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8569506002",
+  "url": "https://careers.datadoghq.com/detail/8003080/?gh_jid=8003080",
   "posted": "2026-06-15",
   "term": "",
   "level": "full-time",
@@ -19887,6 +19887,24 @@
   "isNew": false,
   "firstSeen": "2026-06-15",
   "fit": 0.296,
+  "target": false,
+  "hot": false
+ },
+ {
+  "company": "Datadog",
+  "title": "Federal Support Engineer 3",
+  "category": "Other",
+  "locations": [
+   "Denver, Colorado, USA"
+  ],
+  "url": "https://careers.datadoghq.com/detail/7997846/?gh_jid=7997846",
+  "posted": "2026-06-15",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-06-15",
+  "fit": 0.398,
   "target": false,
   "hot": false
  },
@@ -20059,13 +20077,13 @@
   "hot": false
  },
  {
-  "company": "Datadog",
-  "title": "Deal Desk Analyst - US West",
+  "company": "Databricks",
+  "title": " Lakebase Sales Specialist-MFG",
   "category": "Other",
   "locations": [
-   "Denver, Colorado, USA"
+   "Remote - Georgia; Remote - Texas; San Francisco, California"
   ],
-  "url": "https://careers.datadoghq.com/detail/8003080/?gh_jid=8003080",
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8569506002",
   "posted": "2026-06-15",
   "term": "",
   "level": "full-time",
@@ -20073,24 +20091,6 @@
   "isNew": false,
   "firstSeen": "2026-06-15",
   "fit": 0.296,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "Datadog",
-  "title": "Federal Support Engineer 3",
-  "category": "Other",
-  "locations": [
-   "Denver, Colorado, USA"
-  ],
-  "url": "https://careers.datadoghq.com/detail/7997846/?gh_jid=7997846",
-  "posted": "2026-06-15",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-06-15",
-  "fit": 0.398,
   "target": false,
   "hot": false
  },
@@ -21142,6 +21142,24 @@
   "hot": false
  },
  {
+  "company": "Stripe",
+  "title": "Tax Technology Lead",
+  "category": "Other",
+  "locations": [
+   "San Francisco, Seattle, New York"
+  ],
+  "url": "https://stripe.com/jobs/search?gh_jid=7905025",
+  "posted": "2026-06-12",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-06-12",
+  "fit": 0.285,
+  "target": false,
+  "hot": false
+ },
+ {
   "company": "Replit",
   "title": "GTM AI Operations Lead, Demand Generation",
   "category": "Data / AI / ML",
@@ -21232,24 +21250,6 @@
   "hot": false
  },
  {
-  "company": "Stripe",
-  "title": "Tax Technology Lead",
-  "category": "Other",
-  "locations": [
-   "San Francisco, Seattle, New York"
-  ],
-  "url": "https://stripe.com/jobs/search?gh_jid=7905025",
-  "posted": "2026-06-12",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-06-12",
-  "fit": 0.285,
-  "target": false,
-  "hot": false
- },
- {
   "company": "Anthropic",
   "title": "IT Systems Engineer, Client Platform Engineer",
   "category": "Software Engineering",
@@ -21275,42 +21275,6 @@
    "San Francisco, CA | New York City, NY"
   ],
   "url": "https://job-boards.greenhouse.io/anthropic/jobs/5257669008",
-  "posted": "2026-06-12",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-06-12",
-  "fit": 0.285,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "Databricks",
-  "title": "Cyber Security GTM Leader",
-  "category": "Other",
-  "locations": [
-   "Remote - California; Remote - New York"
-  ],
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8582312002",
-  "posted": "2026-06-12",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-06-12",
-  "fit": 0.285,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "Databricks",
-  "title": "Specialist Solutions Architect - Google Cloud Platform & Infrastructure",
-  "category": "Software Engineering",
-  "locations": [
-   "United States"
-  ],
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8589834002",
   "posted": "2026-06-12",
   "term": "",
   "level": "full-time",
@@ -21445,6 +21409,42 @@
   "firstSeen": "2026-06-12",
   "fit": 0.387,
   "target": true,
+  "hot": false
+ },
+ {
+  "company": "Databricks",
+  "title": "Cyber Security GTM Leader",
+  "category": "Other",
+  "locations": [
+   "Remote - California; Remote - New York"
+  ],
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8582312002",
+  "posted": "2026-06-12",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-06-12",
+  "fit": 0.285,
+  "target": false,
+  "hot": false
+ },
+ {
+  "company": "Databricks",
+  "title": "Specialist Solutions Architect - Google Cloud Platform & Infrastructure",
+  "category": "Software Engineering",
+  "locations": [
+   "United States"
+  ],
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8589834002",
+  "posted": "2026-06-12",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-06-12",
+  "fit": 0.285,
+  "target": false,
   "hot": false
  },
  {
@@ -22783,22 +22783,21 @@
   "hot": false
  },
  {
-  "company": "ElevenLabs",
-  "title": "Brand Marketing",
+  "company": "Roblox",
+  "title": "Developer Engagement Representative - Thailand (Part-Time Contract)",
   "category": "Other",
   "locations": [
-   "San Francisco",
-   "United States"
+   "Remote"
   ],
-  "url": "https://jobs.ashbyhq.com/elevenlabs/31b1c0e3-ca53-428d-8f15-2e3ffda491b8",
+  "url": "https://careers.roblox.com/jobs/7992558?gh_jid=7992558",
   "posted": "2026-06-10",
   "term": "",
   "level": "full-time",
-  "source": "ashby",
+  "source": "greenhouse",
   "isNew": false,
   "firstSeen": "2026-06-10",
-  "fit": 0.279,
-  "target": false,
+  "fit": 0.381,
+  "target": true,
   "hot": false
  },
  {
@@ -22838,21 +22837,22 @@
   "hot": false
  },
  {
-  "company": "Roblox",
-  "title": "Developer Engagement Representative - Thailand (Part-Time Contract)",
+  "company": "ElevenLabs",
+  "title": "Brand Marketing",
   "category": "Other",
   "locations": [
-   "Remote"
+   "San Francisco",
+   "United States"
   ],
-  "url": "https://careers.roblox.com/jobs/7992558?gh_jid=7992558",
+  "url": "https://jobs.ashbyhq.com/elevenlabs/31b1c0e3-ca53-428d-8f15-2e3ffda491b8",
   "posted": "2026-06-10",
   "term": "",
   "level": "full-time",
-  "source": "greenhouse",
+  "source": "ashby",
   "isNew": false,
   "firstSeen": "2026-06-10",
-  "fit": 0.381,
-  "target": true,
+  "fit": 0.279,
+  "target": false,
   "hot": false
  },
  {
@@ -22889,24 +22889,6 @@
   "isNew": false,
   "firstSeen": "2026-06-10",
   "fit": 0.279,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "Databricks",
-  "title": "Strategy & Execution AI Specialist",
-  "category": "Data / AI / ML",
-  "locations": [
-   "Mountain View, California"
-  ],
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8582459002",
-  "posted": "2026-06-10",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-06-10",
-  "fit": 0.381,
   "target": false,
   "hot": false
  },
@@ -22979,6 +22961,24 @@
   "isNew": false,
   "firstSeen": "2026-06-10",
   "fit": 0.279,
+  "target": false,
+  "hot": false
+ },
+ {
+  "company": "Databricks",
+  "title": "Strategy & Execution AI Specialist",
+  "category": "Data / AI / ML",
+  "locations": [
+   "Mountain View, California"
+  ],
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8582459002",
+  "posted": "2026-06-10",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-06-10",
+  "fit": 0.381,
   "target": false,
   "hot": false
  },
@@ -23635,6 +23635,24 @@
   "hot": false
  },
  {
+  "company": "Stripe",
+  "title": "Partner Solutions Architect, Technology Partnerships",
+  "category": "Software Engineering",
+  "locations": [
+   "United States"
+  ],
+  "url": "https://stripe.com/jobs/search?gh_jid=7964568",
+  "posted": "2026-06-09",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-06-09",
+  "fit": 0.276,
+  "target": false,
+  "hot": false
+ },
+ {
   "company": "Roblox",
   "title": "Global Mobility Lead",
   "category": "Other",
@@ -23671,42 +23689,6 @@
   "hot": false
  },
  {
-  "company": "Notion",
-  "title": "Software Engineer, Security",
-  "category": "Software Engineering",
-  "locations": [
-   "San Francisco, California"
-  ],
-  "url": "https://jobs.ashbyhq.com/notion/def3f337-5593-491c-b34d-e0b53f2a5cac",
-  "posted": "2026-06-09",
-  "term": "",
-  "level": "full-time",
-  "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-06-09",
-  "fit": 0.514,
-  "target": true,
-  "hot": false
- },
- {
-  "company": "Stripe",
-  "title": "Partner Solutions Architect, Technology Partnerships",
-  "category": "Software Engineering",
-  "locations": [
-   "United States"
-  ],
-  "url": "https://stripe.com/jobs/search?gh_jid=7964568",
-  "posted": "2026-06-09",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-06-09",
-  "fit": 0.276,
-  "target": false,
-  "hot": false
- },
- {
   "company": "Anthropic",
   "title": "Marketing Events Producer",
   "category": "Other",
@@ -23740,6 +23722,24 @@
   "firstSeen": "2026-06-09",
   "fit": 0.276,
   "target": false,
+  "hot": false
+ },
+ {
+  "company": "Notion",
+  "title": "Software Engineer, Security",
+  "category": "Software Engineering",
+  "locations": [
+   "San Francisco, California"
+  ],
+  "url": "https://jobs.ashbyhq.com/notion/def3f337-5593-491c-b34d-e0b53f2a5cac",
+  "posted": "2026-06-09",
+  "term": "",
+  "level": "full-time",
+  "source": "ashby",
+  "isNew": false,
+  "firstSeen": "2026-06-09",
+  "fit": 0.514,
+  "target": true,
   "hot": false
  },
  {
@@ -24391,6 +24391,42 @@
   "hot": false
  },
  {
+  "company": "Stripe",
+  "title": "Software Engineer",
+  "category": "Software Engineering",
+  "locations": [
+   "Seattle "
+  ],
+  "url": "https://stripe.com/jobs/search?gh_jid=7991636",
+  "posted": "2026-06-08",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-06-08",
+  "fit": 0.511,
+  "target": true,
+  "hot": false
+ },
+ {
+  "company": "Stripe",
+  "title": "Solutions Architect, AI",
+  "category": "Software Engineering",
+  "locations": [
+   "US-San Francisco"
+  ],
+  "url": "https://stripe.com/jobs/search?gh_jid=7975723",
+  "posted": "2026-06-08",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-06-08",
+  "fit": 0.375,
+  "target": false,
+  "hot": false
+ },
+ {
   "company": "Figma",
   "title": "Compensation Partner (Engineering)",
   "category": "Other",
@@ -24398,6 +24434,24 @@
    "San Francisco, CA • New York, NY • United States"
   ],
   "url": "https://boards.greenhouse.io/figma/jobs/6014642004?gh_jid=6014642004",
+  "posted": "2026-06-08",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-06-08",
+  "fit": 0.273,
+  "target": false,
+  "hot": false
+ },
+ {
+  "company": "Anthropic",
+  "title": "Security Controls Assurance Lead",
+  "category": "Other",
+  "locations": [
+   "San Francisco, CA | New York City, NY | Washington, DC"
+  ],
+  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5250063008",
   "posted": "2026-06-08",
   "term": "",
   "level": "full-time",
@@ -24443,78 +24497,6 @@
   "firstSeen": "2026-06-08",
   "fit": 0.375,
   "target": true,
-  "hot": false
- },
- {
-  "company": "Stripe",
-  "title": "Software Engineer",
-  "category": "Software Engineering",
-  "locations": [
-   "Seattle "
-  ],
-  "url": "https://stripe.com/jobs/search?gh_jid=7991636",
-  "posted": "2026-06-08",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-06-08",
-  "fit": 0.511,
-  "target": true,
-  "hot": false
- },
- {
-  "company": "Stripe",
-  "title": "Solutions Architect, AI",
-  "category": "Software Engineering",
-  "locations": [
-   "US-San Francisco"
-  ],
-  "url": "https://stripe.com/jobs/search?gh_jid=7975723",
-  "posted": "2026-06-08",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-06-08",
-  "fit": 0.375,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "Anthropic",
-  "title": "Security Controls Assurance Lead",
-  "category": "Other",
-  "locations": [
-   "San Francisco, CA | New York City, NY | Washington, DC"
-  ],
-  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5250063008",
-  "posted": "2026-06-08",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-06-08",
-  "fit": 0.273,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "Databricks",
-  "title": "Lakebase Sales Specialist-Manufacturing",
-  "category": "Other",
-  "locations": [
-   "Remote - California; Remote - Colorado; Remote - Texas; United States"
-  ],
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8569496002",
-  "posted": "2026-06-08",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-06-08",
-  "fit": 0.273,
-  "target": false,
   "hot": false
  },
  {
@@ -24621,6 +24603,24 @@
   "term": "",
   "level": "full-time",
   "source": "ashby",
+  "isNew": false,
+  "firstSeen": "2026-06-08",
+  "fit": 0.273,
+  "target": false,
+  "hot": false
+ },
+ {
+  "company": "Databricks",
+  "title": "Lakebase Sales Specialist-Manufacturing",
+  "category": "Other",
+  "locations": [
+   "Remote - California; Remote - Colorado; Remote - Texas; United States"
+  ],
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8569496002",
+  "posted": "2026-06-08",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
   "isNew": false,
   "firstSeen": "2026-06-08",
   "fit": 0.273,
@@ -26315,6 +26315,60 @@
   "hot": false
  },
  {
+  "company": "Stripe",
+  "title": "Finance & Strategy Analyst",
+  "category": "Other",
+  "locations": [
+   "CHI, SEA, NYC, SF"
+  ],
+  "url": "https://stripe.com/jobs/search?gh_jid=7985368",
+  "posted": "2026-06-05",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-06-05",
+  "fit": 0.265,
+  "target": false,
+  "hot": false
+ },
+ {
+  "company": "Stripe",
+  "title": "Mobile Security Engineer",
+  "category": "Software Engineering",
+  "locations": [
+   "New York, New York "
+  ],
+  "url": "https://stripe.com/jobs/search?gh_jid=7982720",
+  "posted": "2026-06-05",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-06-05",
+  "fit": 0.367,
+  "target": true,
+  "hot": false
+ },
+ {
+  "company": "Roblox",
+  "title": "Developer Engagement Representative - Malaysia  (Part-Time Contract)",
+  "category": "Other",
+  "locations": [
+   "Remote"
+  ],
+  "url": "https://careers.roblox.com/jobs/7978940?gh_jid=7978940",
+  "posted": "2026-06-05",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-06-05",
+  "fit": 0.367,
+  "target": true,
+  "hot": false
+ },
+ {
   "company": "Figma",
   "title": "Designer Advocate",
   "category": "Design / UX",
@@ -26369,21 +26423,21 @@
   "hot": false
  },
  {
-  "company": "Roblox",
-  "title": "Developer Engagement Representative - Malaysia  (Part-Time Contract)",
+  "company": "Anthropic",
+  "title": "Startup Partnerships Lead",
   "category": "Other",
   "locations": [
-   "Remote"
+   "San Francisco, CA | New York City, NY"
   ],
-  "url": "https://careers.roblox.com/jobs/7978940?gh_jid=7978940",
+  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5235692008",
   "posted": "2026-06-05",
   "term": "",
   "level": "full-time",
   "source": "greenhouse",
   "isNew": false,
   "firstSeen": "2026-06-05",
-  "fit": 0.367,
-  "target": true,
+  "fit": 0.265,
+  "target": false,
   "hot": false
  },
  {
@@ -26435,60 +26489,6 @@
   "term": "",
   "level": "full-time",
   "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-06-05",
-  "fit": 0.265,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "Stripe",
-  "title": "Finance & Strategy Analyst",
-  "category": "Other",
-  "locations": [
-   "CHI, SEA, NYC, SF"
-  ],
-  "url": "https://stripe.com/jobs/search?gh_jid=7985368",
-  "posted": "2026-06-05",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-06-05",
-  "fit": 0.265,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "Stripe",
-  "title": "Mobile Security Engineer",
-  "category": "Software Engineering",
-  "locations": [
-   "New York, New York "
-  ],
-  "url": "https://stripe.com/jobs/search?gh_jid=7982720",
-  "posted": "2026-06-05",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-06-05",
-  "fit": 0.367,
-  "target": true,
-  "hot": false
- },
- {
-  "company": "Anthropic",
-  "title": "Startup Partnerships Lead",
-  "category": "Other",
-  "locations": [
-   "San Francisco, CA | New York City, NY"
-  ],
-  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5235692008",
-  "posted": "2026-06-05",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
   "isNew": false,
   "firstSeen": "2026-06-05",
   "fit": 0.265,
@@ -26881,21 +26881,21 @@
   "hot": false
  },
  {
-  "company": "Databricks",
-  "title": "Lakebase Sales Specialist",
-  "category": "Other",
+  "company": "Datadog",
+  "title": "Security Engineer 2 - Cyber Threat Intelligence",
+  "category": "Software Engineering",
   "locations": [
-   "United States"
+   "New York, New York, USA"
   ],
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8569410002",
+  "url": "https://careers.datadoghq.com/detail/7982345/?gh_jid=7982345",
   "posted": "2026-06-04",
   "term": "",
   "level": "full-time",
   "source": "greenhouse",
   "isNew": false,
   "firstSeen": "2026-06-04",
-  "fit": 0.263,
-  "target": false,
+  "fit": 0.365,
+  "target": true,
   "hot": false
  },
  {
@@ -26917,21 +26917,21 @@
   "hot": false
  },
  {
-  "company": "Datadog",
-  "title": "Security Engineer 2 - Cyber Threat Intelligence",
-  "category": "Software Engineering",
+  "company": "Databricks",
+  "title": "Lakebase Sales Specialist",
+  "category": "Other",
   "locations": [
-   "New York, New York, USA"
+   "United States"
   ],
-  "url": "https://careers.datadoghq.com/detail/7982345/?gh_jid=7982345",
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8569410002",
   "posted": "2026-06-04",
   "term": "",
   "level": "full-time",
   "source": "greenhouse",
   "isNew": false,
   "firstSeen": "2026-06-04",
-  "fit": 0.365,
-  "target": true,
+  "fit": 0.263,
+  "target": false,
   "hot": false
  },
  {
@@ -27484,102 +27484,6 @@
   "hot": false
  },
  {
-  "company": "ElevenLabs",
-  "title": "Developer Community Growth",
-  "category": "Other",
-  "locations": [
-   "San Francisco",
-   "United States"
-  ],
-  "url": "https://jobs.ashbyhq.com/elevenlabs/db88ce4f-44a0-425c-88c4-1951c467c627",
-  "posted": "2026-06-03",
-  "term": "",
-  "level": "full-time",
-  "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-06-03",
-  "fit": 0.363,
-  "target": true,
-  "hot": false
- },
- {
-  "company": "Vercel",
-  "title": "Product Strategy & Operations",
-  "category": "Other",
-  "locations": [
-   "Hybrid - San Francisco"
-  ],
-  "url": "https://job-boards.greenhouse.io/vercel/jobs/6011651004",
-  "posted": "2026-06-03",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-06-03",
-  "fit": 0.261,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "Figma",
-  "title": "Workplace Generalist",
-  "category": "Other",
-  "locations": [
-   "San Francisco, CA"
-  ],
-  "url": "https://boards.greenhouse.io/figma/jobs/6011928004?gh_jid=6011928004",
-  "posted": "2026-06-03",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-06-03",
-  "fit": 0.261,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "Ramp",
-  "title": "Viral Creative Producer",
-  "category": "Other",
-  "locations": [
-   "New York, NY (HQ)",
-   "San Francisco, CA",
-   "Remote (US)",
-   "Miami, FL"
-  ],
-  "url": "https://jobs.ashbyhq.com/ramp/c48fddbc-6063-4cae-8bfc-cf17642f11ae",
-  "posted": "2026-06-03",
-  "term": "",
-  "level": "full-time",
-  "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-06-03",
-  "fit": 0.261,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "Ramp",
-  "title": "Data Scientist",
-  "category": "Data / AI / ML",
-  "locations": [
-   "New York, NY (HQ)",
-   "San Francisco, CA",
-   "Remote (US)"
-  ],
-  "url": "https://jobs.ashbyhq.com/ramp/e577622f-6657-4e53-8941-b3a774b04448",
-  "posted": "2026-06-03",
-  "term": "",
-  "level": "full-time",
-  "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-06-03",
-  "fit": 0.363,
-  "target": false,
-  "hot": false
- },
- {
   "company": "Stripe",
   "title": "Finance & Strategy Partner, Central Engineering",
   "category": "Other",
@@ -27631,6 +27535,61 @@
   "firstSeen": "2026-06-03",
   "fit": 0.261,
   "target": false,
+  "hot": false
+ },
+ {
+  "company": "Vercel",
+  "title": "Product Strategy & Operations",
+  "category": "Other",
+  "locations": [
+   "Hybrid - San Francisco"
+  ],
+  "url": "https://job-boards.greenhouse.io/vercel/jobs/6011651004",
+  "posted": "2026-06-03",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-06-03",
+  "fit": 0.261,
+  "target": false,
+  "hot": false
+ },
+ {
+  "company": "Figma",
+  "title": "Workplace Generalist",
+  "category": "Other",
+  "locations": [
+   "San Francisco, CA"
+  ],
+  "url": "https://boards.greenhouse.io/figma/jobs/6011928004?gh_jid=6011928004",
+  "posted": "2026-06-03",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-06-03",
+  "fit": 0.261,
+  "target": false,
+  "hot": false
+ },
+ {
+  "company": "ElevenLabs",
+  "title": "Developer Community Growth",
+  "category": "Other",
+  "locations": [
+   "San Francisco",
+   "United States"
+  ],
+  "url": "https://jobs.ashbyhq.com/elevenlabs/db88ce4f-44a0-425c-88c4-1951c467c627",
+  "posted": "2026-06-03",
+  "term": "",
+  "level": "full-time",
+  "source": "ashby",
+  "isNew": false,
+  "firstSeen": "2026-06-03",
+  "fit": 0.363,
+  "target": true,
   "hot": false
  },
  {
@@ -27688,20 +27647,43 @@
   "hot": false
  },
  {
-  "company": "Databricks",
-  "title": "Lakebase Sales Specialist- Financial Services",
+  "company": "Ramp",
+  "title": "Viral Creative Producer",
   "category": "Other",
   "locations": [
-   "United States"
+   "New York, NY (HQ)",
+   "San Francisco, CA",
+   "Remote (US)",
+   "Miami, FL"
   ],
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8569479002",
+  "url": "https://jobs.ashbyhq.com/ramp/c48fddbc-6063-4cae-8bfc-cf17642f11ae",
   "posted": "2026-06-03",
   "term": "",
   "level": "full-time",
-  "source": "greenhouse",
+  "source": "ashby",
   "isNew": false,
   "firstSeen": "2026-06-03",
   "fit": 0.261,
+  "target": false,
+  "hot": false
+ },
+ {
+  "company": "Ramp",
+  "title": "Data Scientist",
+  "category": "Data / AI / ML",
+  "locations": [
+   "New York, NY (HQ)",
+   "San Francisco, CA",
+   "Remote (US)"
+  ],
+  "url": "https://jobs.ashbyhq.com/ramp/e577622f-6657-4e53-8941-b3a774b04448",
+  "posted": "2026-06-03",
+  "term": "",
+  "level": "full-time",
+  "source": "ashby",
+  "isNew": false,
+  "firstSeen": "2026-06-03",
+  "fit": 0.363,
   "target": false,
   "hot": false
  },
@@ -27758,6 +27740,24 @@
   "firstSeen": "2026-06-03",
   "fit": 0.499,
   "target": true,
+  "hot": false
+ },
+ {
+  "company": "Databricks",
+  "title": "Lakebase Sales Specialist- Financial Services",
+  "category": "Other",
+  "locations": [
+   "United States"
+  ],
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8569479002",
+  "posted": "2026-06-03",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-06-03",
+  "fit": 0.261,
+  "target": false,
   "hot": false
  },
  {
@@ -28628,42 +28628,6 @@
   "hot": false
  },
  {
-  "company": "Epic Games",
-  "title": "Character Outsource Lead",
-  "category": "Other",
-  "locations": [
-   "Cary,North Carolina,United States"
-  ],
-  "url": "https://epicgames.com/careers/jobs/6001543004?gh_jid=6001543004",
-  "posted": "2026-06-02",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-06-02",
-  "fit": 0.259,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "Epic Games",
-  "title": "Environment Outsource Lead",
-  "category": "Other",
-  "locations": [
-   "Cary,North Carolina,United States"
-  ],
-  "url": "https://epicgames.com/careers/jobs/6001773004?gh_jid=6001773004",
-  "posted": "2026-06-02",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-06-02",
-  "fit": 0.259,
-  "target": false,
-  "hot": false
- },
- {
   "company": "Stripe",
   "title": "Security Engineer",
   "category": "Software Engineering",
@@ -28697,6 +28661,42 @@
   "firstSeen": "2026-06-02",
   "fit": 0.361,
   "target": true,
+  "hot": false
+ },
+ {
+  "company": "Epic Games",
+  "title": "Character Outsource Lead",
+  "category": "Other",
+  "locations": [
+   "Cary,North Carolina,United States"
+  ],
+  "url": "https://epicgames.com/careers/jobs/6001543004?gh_jid=6001543004",
+  "posted": "2026-06-02",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-06-02",
+  "fit": 0.259,
+  "target": false,
+  "hot": false
+ },
+ {
+  "company": "Epic Games",
+  "title": "Environment Outsource Lead",
+  "category": "Other",
+  "locations": [
+   "Cary,North Carolina,United States"
+  ],
+  "url": "https://epicgames.com/careers/jobs/6001773004?gh_jid=6001773004",
+  "posted": "2026-06-02",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-06-02",
+  "fit": 0.259,
+  "target": false,
   "hot": false
  },
  {
@@ -28768,24 +28768,6 @@
   "isNew": false,
   "firstSeen": "2026-06-02",
   "fit": 0.361,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "Databricks",
-  "title": "Lakebase Sales Specialist, Healthcare & Life Sciences",
-  "category": "Other",
-  "locations": [
-   "Central - United States; Northeast - United States; Southeast - United States; United States; West Coast - United States"
-  ],
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8569461002",
-  "posted": "2026-06-02",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-06-02",
-  "fit": 0.259,
   "target": false,
   "hot": false
  },
@@ -28877,6 +28859,24 @@
   "firstSeen": "2026-06-02",
   "fit": 0.599,
   "target": true,
+  "hot": false
+ },
+ {
+  "company": "Databricks",
+  "title": "Lakebase Sales Specialist, Healthcare & Life Sciences",
+  "category": "Other",
+  "locations": [
+   "Central - United States; Northeast - United States; Southeast - United States; United States; West Coast - United States"
+  ],
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8569461002",
+  "posted": "2026-06-02",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-06-02",
+  "fit": 0.259,
+  "target": false,
   "hot": false
  },
  {
@@ -29495,13 +29495,13 @@
   "hot": false
  },
  {
-  "company": "Supabase",
-  "title": "Core Product Lead",
+  "company": "Perplexity",
+  "title": "Workplace Operations Specialist",
   "category": "Other",
   "locations": [
-   "Remote"
+   "San Francisco"
   ],
-  "url": "https://jobs.ashbyhq.com/supabase/f2f28afa-4b42-43c7-b977-48f5b686fba2",
+  "url": "https://jobs.ashbyhq.com/perplexity/209036d1-278a-4a2f-a912-3c68a7881e6a",
   "posted": "2026-06-01",
   "term": "",
   "level": "full-time",
@@ -29513,13 +29513,13 @@
   "hot": false
  },
  {
-  "company": "Perplexity",
-  "title": "Workplace Operations Specialist",
+  "company": "Supabase",
+  "title": "Core Product Lead",
   "category": "Other",
   "locations": [
-   "San Francisco"
+   "Remote"
   ],
-  "url": "https://jobs.ashbyhq.com/perplexity/209036d1-278a-4a2f-a912-3c68a7881e6a",
+  "url": "https://jobs.ashbyhq.com/supabase/f2f28afa-4b42-43c7-b977-48f5b686fba2",
   "posted": "2026-06-01",
   "term": "",
   "level": "full-time",
@@ -29581,42 +29581,6 @@
   "isNew": false,
   "firstSeen": "2026-06-01",
   "fit": 0.257,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "Databricks",
-  "title": "Lakebase Sales Specialist - Retail",
-  "category": "Other",
-  "locations": [
-   "United States"
-  ],
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8569436002",
-  "posted": "2026-06-01",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-06-01",
-  "fit": 0.257,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "Databricks",
-  "title": "Specialist Solutions Architect - Data Engineering & Warehousing",
-  "category": "Software Engineering",
-  "locations": [
-   "United States"
-  ],
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8570023002",
-  "posted": "2026-06-01",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-06-01",
-  "fit": 0.359,
   "target": false,
   "hot": false
  },
@@ -29694,6 +29658,42 @@
   "firstSeen": "2026-06-01",
   "fit": 0.359,
   "target": true,
+  "hot": false
+ },
+ {
+  "company": "Databricks",
+  "title": "Lakebase Sales Specialist - Retail",
+  "category": "Other",
+  "locations": [
+   "United States"
+  ],
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8569436002",
+  "posted": "2026-06-01",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-06-01",
+  "fit": 0.257,
+  "target": false,
+  "hot": false
+ },
+ {
+  "company": "Databricks",
+  "title": "Specialist Solutions Architect - Data Engineering & Warehousing",
+  "category": "Software Engineering",
+  "locations": [
+   "United States"
+  ],
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8570023002",
+  "posted": "2026-06-01",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-06-01",
+  "fit": 0.359,
+  "target": false,
   "hot": false
  },
  {
@@ -30203,6 +30203,24 @@
   "hot": false
  },
  {
+  "company": "Roblox",
+  "title": "Law Enforcement and Digital Safety Specialist, West Virginia",
+  "category": "Other",
+  "locations": [
+   "Remote"
+  ],
+  "url": "https://careers.roblox.com/jobs/7963220?gh_jid=7963220",
+  "posted": "2026-05-29",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-05-29",
+  "fit": 0.252,
+  "target": false,
+  "hot": false
+ },
+ {
   "company": "Ramp",
   "title": "Associate, Strategic Finance",
   "category": "Other",
@@ -30215,24 +30233,6 @@
   "term": "",
   "level": "full-time",
   "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-05-29",
-  "fit": 0.252,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "Roblox",
-  "title": "Law Enforcement and Digital Safety Specialist, West Virginia",
-  "category": "Other",
-  "locations": [
-   "Remote"
-  ],
-  "url": "https://careers.roblox.com/jobs/7963220?gh_jid=7963220",
-  "posted": "2026-05-29",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
   "isNew": false,
   "firstSeen": "2026-05-29",
   "fit": 0.252,
@@ -30624,6 +30624,24 @@
   "hot": false
  },
  {
+  "company": "Epic Games",
+  "title": "Technical Designer in Animation",
+  "category": "Design / UX",
+  "locations": [
+   "Cary,North Carolina,United States"
+  ],
+  "url": "https://epicgames.com/careers/jobs/6001973004?gh_jid=6001973004",
+  "posted": "2026-05-28",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-05-28",
+  "fit": 0.25,
+  "target": false,
+  "hot": false
+ },
+ {
   "company": "ElevenLabs",
   "title": "Lead Generation Strategy and Operations",
   "category": "Other",
@@ -30661,24 +30679,6 @@
   "term": "",
   "level": "full-time",
   "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-05-28",
-  "fit": 0.25,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "Epic Games",
-  "title": "Technical Designer in Animation",
-  "category": "Design / UX",
-  "locations": [
-   "Cary,North Carolina,United States"
-  ],
-  "url": "https://epicgames.com/careers/jobs/6001973004?gh_jid=6001973004",
-  "posted": "2026-05-28",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
   "isNew": false,
   "firstSeen": "2026-05-28",
   "fit": 0.25,
@@ -31418,26 +31418,6 @@
   "hot": false
  },
  {
-  "company": "Ramp",
-  "title": "Software Engineer, Banking",
-  "category": "Software Engineering",
-  "locations": [
-   "New York, NY (HQ)",
-   "San Francisco, CA",
-   "Remote (US)"
-  ],
-  "url": "https://jobs.ashbyhq.com/ramp/d818443f-d4c5-4eab-892d-3715a935c165",
-  "posted": "2026-05-27",
-  "term": "",
-  "level": "full-time",
-  "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-05-27",
-  "fit": 0.487,
-  "target": true,
-  "hot": false
- },
- {
   "company": "Anthropic",
   "title": "Data Scientist, Policy",
   "category": "Data / AI / ML",
@@ -31471,6 +31451,26 @@
   "firstSeen": "2026-05-27",
   "fit": 0.249,
   "target": false,
+  "hot": false
+ },
+ {
+  "company": "Ramp",
+  "title": "Software Engineer, Banking",
+  "category": "Software Engineering",
+  "locations": [
+   "New York, NY (HQ)",
+   "San Francisco, CA",
+   "Remote (US)"
+  ],
+  "url": "https://jobs.ashbyhq.com/ramp/d818443f-d4c5-4eab-892d-3715a935c165",
+  "posted": "2026-05-27",
+  "term": "",
+  "level": "full-time",
+  "source": "ashby",
+  "isNew": false,
+  "firstSeen": "2026-05-27",
+  "fit": 0.487,
+  "target": true,
   "hot": false
  },
  {
@@ -32024,25 +32024,6 @@
   "hot": false
  },
  {
-  "company": "Notion",
-  "title": "Software Engineer, AI Workflows",
-  "category": "Software Engineering",
-  "locations": [
-   "San Francisco, California",
-   "New York, New York"
-  ],
-  "url": "https://jobs.ashbyhq.com/notion/17330e14-83db-49a4-ae31-411690d97dba",
-  "posted": "2026-05-26",
-  "term": "",
-  "level": "full-time",
-  "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-05-26",
-  "fit": 0.485,
-  "target": true,
-  "hot": false
- },
- {
   "company": "Anthropic",
   "title": "Communications Lead, Enterprise",
   "category": "Other",
@@ -32061,13 +32042,13 @@
   "hot": false
  },
  {
-  "company": "Databricks",
-  "title": "Lead GTM Enablement & Scale Architect, Lakebase",
+  "company": "Datadog",
+  "title": "Billing Operations Analyst",
   "category": "Other",
   "locations": [
-   "United States"
+   "Denver, Colorado, USA"
   ],
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8548502002",
+  "url": "https://careers.datadoghq.com/detail/7899542/?gh_jid=7899542",
   "posted": "2026-05-26",
   "term": "",
   "level": "full-time",
@@ -32076,6 +32057,25 @@
   "firstSeen": "2026-05-26",
   "fit": 0.247,
   "target": false,
+  "hot": false
+ },
+ {
+  "company": "Notion",
+  "title": "Software Engineer, AI Workflows",
+  "category": "Software Engineering",
+  "locations": [
+   "San Francisco, California",
+   "New York, New York"
+  ],
+  "url": "https://jobs.ashbyhq.com/notion/17330e14-83db-49a4-ae31-411690d97dba",
+  "posted": "2026-05-26",
+  "term": "",
+  "level": "full-time",
+  "source": "ashby",
+  "isNew": false,
+  "firstSeen": "2026-05-26",
+  "fit": 0.485,
+  "target": true,
   "hot": false
  },
  {
@@ -32151,13 +32151,13 @@
   "hot": false
  },
  {
-  "company": "Datadog",
-  "title": "Billing Operations Analyst",
+  "company": "Databricks",
+  "title": "Lead GTM Enablement & Scale Architect, Lakebase",
   "category": "Other",
   "locations": [
-   "Denver, Colorado, USA"
+   "United States"
   ],
-  "url": "https://careers.datadoghq.com/detail/7899542/?gh_jid=7899542",
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8548502002",
   "posted": "2026-05-26",
   "term": "",
   "level": "full-time",
@@ -32711,21 +32711,21 @@
   "hot": false
  },
  {
-  "company": "Ramp",
-  "title": "Filmmaker, Customer Stories",
-  "category": "Other",
+  "company": "Stripe",
+  "title": "Software Engineer",
+  "category": "Software Engineering",
   "locations": [
-   "New York, NY (HQ)"
+   "Seattle, WA"
   ],
-  "url": "https://jobs.ashbyhq.com/ramp/6c3cbaf3-33ad-453f-8b91-0d0b2c4f897d",
+  "url": "https://stripe.com/jobs/search?gh_jid=7922832",
   "posted": "2026-05-22",
   "term": "",
   "level": "full-time",
-  "source": "ashby",
+  "source": "greenhouse",
   "isNew": false,
   "firstSeen": "2026-05-22",
-  "fit": 0.242,
-  "target": false,
+  "fit": 0.48,
+  "target": true,
   "hot": false
  },
  {
@@ -32747,24 +32747,6 @@
   "hot": false
  },
  {
-  "company": "Stripe",
-  "title": "Software Engineer",
-  "category": "Software Engineering",
-  "locations": [
-   "Seattle, WA"
-  ],
-  "url": "https://stripe.com/jobs/search?gh_jid=7922832",
-  "posted": "2026-05-22",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-05-22",
-  "fit": 0.48,
-  "target": true,
-  "hot": false
- },
- {
   "company": "Anthropic",
   "title": "Support Engineer",
   "category": "Other",
@@ -32779,6 +32761,24 @@
   "isNew": false,
   "firstSeen": "2026-05-22",
   "fit": 0.344,
+  "target": false,
+  "hot": false
+ },
+ {
+  "company": "Ramp",
+  "title": "Filmmaker, Customer Stories",
+  "category": "Other",
+  "locations": [
+   "New York, NY (HQ)"
+  ],
+  "url": "https://jobs.ashbyhq.com/ramp/6c3cbaf3-33ad-453f-8b91-0d0b2c4f897d",
+  "posted": "2026-05-22",
+  "term": "",
+  "level": "full-time",
+  "source": "ashby",
+  "isNew": false,
+  "firstSeen": "2026-05-22",
+  "fit": 0.242,
   "target": false,
   "hot": false
  },
@@ -33416,21 +33416,57 @@
   "hot": false
  },
  {
-  "company": "ElevenLabs",
-  "title": "Creator Community Growth",
+  "company": "Stripe",
+  "title": "Indirect Tax (VAT/GST) Advisory Consultant",
   "category": "Other",
   "locations": [
-   "United States"
+   "NYC, SF, SEA, US Remote"
   ],
-  "url": "https://jobs.ashbyhq.com/elevenlabs/02c054a0-ef9d-4f38-b44b-ad943955aab6",
+  "url": "https://stripe.com/jobs/search?gh_jid=7950653",
   "posted": "2026-05-21",
   "term": "",
   "level": "full-time",
-  "source": "ashby",
+  "source": "greenhouse",
   "isNew": false,
   "firstSeen": "2026-05-21",
   "fit": 0.241,
   "target": false,
+  "hot": false
+ },
+ {
+  "company": "Stripe",
+  "title": "Software Engineer",
+  "category": "Software Engineering",
+  "locations": [
+   "New York, NY"
+  ],
+  "url": "https://stripe.com/jobs/search?gh_jid=7926966",
+  "posted": "2026-05-21",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-05-21",
+  "fit": 0.479,
+  "target": true,
+  "hot": false
+ },
+ {
+  "company": "Riot Games",
+  "title": "Network Engineer III, Enterprise IT",
+  "category": "Software Engineering",
+  "locations": [
+   "Mercer Island, USA"
+  ],
+  "url": "https://www.riotgames.com/en/work-with-us/job/7922798?gh_jid=7922798",
+  "posted": "2026-05-21",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-05-21",
+  "fit": 0.343,
+  "target": true,
   "hot": false
  },
  {
@@ -33470,71 +33506,17 @@
   "hot": false
  },
  {
-  "company": "Riot Games",
-  "title": "Network Engineer III, Enterprise IT",
-  "category": "Software Engineering",
-  "locations": [
-   "Mercer Island, USA"
-  ],
-  "url": "https://www.riotgames.com/en/work-with-us/job/7922798?gh_jid=7922798",
-  "posted": "2026-05-21",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-05-21",
-  "fit": 0.343,
-  "target": true,
-  "hot": false
- },
- {
-  "company": "Stripe",
-  "title": "Indirect Tax (VAT/GST) Advisory Consultant",
+  "company": "ElevenLabs",
+  "title": "Creator Community Growth",
   "category": "Other",
   "locations": [
-   "NYC, SF, SEA, US Remote"
+   "United States"
   ],
-  "url": "https://stripe.com/jobs/search?gh_jid=7950653",
+  "url": "https://jobs.ashbyhq.com/elevenlabs/02c054a0-ef9d-4f38-b44b-ad943955aab6",
   "posted": "2026-05-21",
   "term": "",
   "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-05-21",
-  "fit": 0.241,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "Stripe",
-  "title": "Software Engineer",
-  "category": "Software Engineering",
-  "locations": [
-   "New York, NY"
-  ],
-  "url": "https://stripe.com/jobs/search?gh_jid=7926966",
-  "posted": "2026-05-21",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-05-21",
-  "fit": 0.479,
-  "target": true,
-  "hot": false
- },
- {
-  "company": "Databricks",
-  "title": "Delivery Solutions Architect - Public Sector",
-  "category": "Software Engineering",
-  "locations": [
-   "Charlotte, North Carolina; Delaware; Maryland; New Jersey; New York City, New York; Philadelphia, Pennsylvania; Remote - Virginia; Remote - Washington D.C.; West Virginia"
-  ],
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8559315002",
-  "posted": "2026-05-21",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
+  "source": "ashby",
   "isNew": false,
   "firstSeen": "2026-05-21",
   "fit": 0.241,
@@ -33611,6 +33593,24 @@
   "firstSeen": "2026-05-21",
   "fit": 0.343,
   "target": true,
+  "hot": false
+ },
+ {
+  "company": "Databricks",
+  "title": "Delivery Solutions Architect - Public Sector",
+  "category": "Software Engineering",
+  "locations": [
+   "Charlotte, North Carolina; Delaware; Maryland; New Jersey; New York City, New York; Philadelphia, Pennsylvania; Remote - Virginia; Remote - Washington D.C.; West Virginia"
+  ],
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8559315002",
+  "posted": "2026-05-21",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-05-21",
+  "fit": 0.241,
+  "target": false,
   "hot": false
  },
  {
@@ -34126,24 +34126,6 @@
   "hot": false
  },
  {
-  "company": "Replit",
-  "title": "Security Engineer - Vuln Management (Code)",
-  "category": "Software Engineering",
-  "locations": [
-   "Foster City, CA"
-  ],
-  "url": "https://jobs.ashbyhq.com/replit/e2e3345e-251c-49c4-821b-6748d73efaeb",
-  "posted": "2026-05-20",
-  "term": "",
-  "level": "full-time",
-  "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-05-20",
-  "fit": 0.342,
-  "target": true,
-  "hot": false
- },
- {
   "company": "Stripe",
   "title": "Product Lead, Support Experience",
   "category": "Other",
@@ -34159,6 +34141,24 @@
   "firstSeen": "2026-05-20",
   "fit": 0.24,
   "target": false,
+  "hot": false
+ },
+ {
+  "company": "Replit",
+  "title": "Security Engineer - Vuln Management (Code)",
+  "category": "Software Engineering",
+  "locations": [
+   "Foster City, CA"
+  ],
+  "url": "https://jobs.ashbyhq.com/replit/e2e3345e-251c-49c4-821b-6748d73efaeb",
+  "posted": "2026-05-20",
+  "term": "",
+  "level": "full-time",
+  "source": "ashby",
+  "isNew": false,
+  "firstSeen": "2026-05-20",
+  "fit": 0.342,
+  "target": true,
   "hot": false
  },
  {
@@ -35019,6 +35019,42 @@
   "hot": false
  },
  {
+  "company": "OpenAI",
+  "title": "Security Preparedness Lead, Coding Agents",
+  "category": "Other",
+  "locations": [
+   "San Francisco"
+  ],
+  "url": "https://jobs.ashbyhq.com/openai/1bec5fd1-9cf2-4678-a82d-2d06385718b2",
+  "posted": "2026-05-18",
+  "term": "",
+  "level": "full-time",
+  "source": "ashby",
+  "isNew": false,
+  "firstSeen": "2026-05-18",
+  "fit": 0.238,
+  "target": false,
+  "hot": false
+ },
+ {
+  "company": "OpenAI",
+  "title": "Security Researcher, Agentic AI Threats",
+  "category": "Data / AI / ML",
+  "locations": [
+   "San Francisco"
+  ],
+  "url": "https://jobs.ashbyhq.com/openai/e0eef869-cd4d-4737-b7af-75c5a1970aeb",
+  "posted": "2026-05-18",
+  "term": "",
+  "level": "full-time",
+  "source": "ashby",
+  "isNew": false,
+  "firstSeen": "2026-05-18",
+  "fit": 0.34,
+  "target": false,
+  "hot": false
+ },
+ {
   "company": "Databricks",
   "title": "Delivery Solutions Architect - Digital Native Business",
   "category": "Software Engineering",
@@ -35066,42 +35102,6 @@
   "term": "",
   "level": "full-time",
   "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-05-18",
-  "fit": 0.34,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "OpenAI",
-  "title": "Security Preparedness Lead, Coding Agents",
-  "category": "Other",
-  "locations": [
-   "San Francisco"
-  ],
-  "url": "https://jobs.ashbyhq.com/openai/1bec5fd1-9cf2-4678-a82d-2d06385718b2",
-  "posted": "2026-05-18",
-  "term": "",
-  "level": "full-time",
-  "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-05-18",
-  "fit": 0.238,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "OpenAI",
-  "title": "Security Researcher, Agentic AI Threats",
-  "category": "Data / AI / ML",
-  "locations": [
-   "San Francisco"
-  ],
-  "url": "https://jobs.ashbyhq.com/openai/e0eef869-cd4d-4737-b7af-75c5a1970aeb",
-  "posted": "2026-05-18",
-  "term": "",
-  "level": "full-time",
-  "source": "ashby",
   "isNew": false,
   "firstSeen": "2026-05-18",
   "fit": 0.34,
@@ -35961,24 +35961,6 @@
   "hot": false
  },
  {
-  "company": "Vercel",
-  "title": "Developer Success Engineer",
-  "category": "Other",
-  "locations": [
-   "Hybrid - San Francisco, Austin"
-  ],
-  "url": "https://job-boards.greenhouse.io/vercel/jobs/5989803004",
-  "posted": "2026-05-15",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-05-15",
-  "fit": 0.337,
-  "target": true,
-  "hot": false
- },
- {
   "company": "Stripe",
   "title": "Employee Compensation and Benefits Tax Lead",
   "category": "Other",
@@ -35997,21 +35979,21 @@
   "hot": false
  },
  {
-  "company": "Databricks",
-  "title": "Delivery Solutions Architect - High-Tech & Manufacturing",
-  "category": "Software Engineering",
+  "company": "Vercel",
+  "title": "Developer Success Engineer",
+  "category": "Other",
   "locations": [
-   "Central - United States; West Coast - United States"
+   "Hybrid - San Francisco, Austin"
   ],
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8549046002",
+  "url": "https://job-boards.greenhouse.io/vercel/jobs/5989803004",
   "posted": "2026-05-15",
   "term": "",
   "level": "full-time",
   "source": "greenhouse",
   "isNew": false,
   "firstSeen": "2026-05-15",
-  "fit": 0.235,
-  "target": false,
+  "fit": 0.337,
+  "target": true,
   "hot": false
  },
  {
@@ -36067,6 +36049,24 @@
   "firstSeen": "2026-05-15",
   "fit": 0.337,
   "target": true,
+  "hot": false
+ },
+ {
+  "company": "Databricks",
+  "title": "Delivery Solutions Architect - High-Tech & Manufacturing",
+  "category": "Software Engineering",
+  "locations": [
+   "Central - United States; West Coast - United States"
+  ],
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8549046002",
+  "posted": "2026-05-15",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-05-15",
+  "fit": 0.235,
+  "target": false,
   "hot": false
  },
  {
@@ -36378,6 +36378,24 @@
   "ghost": true
  },
  {
+  "company": "Stripe",
+  "title": "Partner Solutions Architect - Billing",
+  "category": "Software Engineering",
+  "locations": [
+   "USA "
+  ],
+  "url": "https://stripe.com/jobs/search?gh_jid=7927330",
+  "posted": "2026-05-14",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-05-14",
+  "fit": 0.234,
+  "target": false,
+  "hot": false
+ },
+ {
   "company": "Cohere",
   "title": "Software Engineer, Data Infrastructure",
   "category": "Software Engineering",
@@ -36401,24 +36419,6 @@
   "hot": false
  },
  {
-  "company": "Stripe",
-  "title": "Partner Solutions Architect - Billing",
-  "category": "Software Engineering",
-  "locations": [
-   "USA "
-  ],
-  "url": "https://stripe.com/jobs/search?gh_jid=7927330",
-  "posted": "2026-05-14",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-05-14",
-  "fit": 0.234,
-  "target": false,
-  "hot": false
- },
- {
   "company": "Anthropic",
   "title": "Data Center OFE Strategic Sourcing Lead (Mechanical)",
   "category": "Data / AI / ML",
@@ -36433,24 +36433,6 @@
   "isNew": false,
   "firstSeen": "2026-05-14",
   "fit": 0.336,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "OpenAI",
-  "title": "Readiness & Enablement Lead, SMB Sales",
-  "category": "Other",
-  "locations": [
-   "San Francisco"
-  ],
-  "url": "https://jobs.ashbyhq.com/openai/bbee5a3c-d856-4086-9445-5fed1a68148a",
-  "posted": "2026-05-14",
-  "term": "",
-  "level": "full-time",
-  "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-05-14",
-  "fit": 0.234,
   "target": false,
   "hot": false
  },
@@ -36470,6 +36452,24 @@
   "firstSeen": "2026-05-14",
   "fit": 0.336,
   "target": true,
+  "hot": false
+ },
+ {
+  "company": "OpenAI",
+  "title": "Readiness & Enablement Lead, SMB Sales",
+  "category": "Other",
+  "locations": [
+   "San Francisco"
+  ],
+  "url": "https://jobs.ashbyhq.com/openai/bbee5a3c-d856-4086-9445-5fed1a68148a",
+  "posted": "2026-05-14",
+  "term": "",
+  "level": "full-time",
+  "source": "ashby",
+  "isNew": false,
+  "firstSeen": "2026-05-14",
+  "fit": 0.234,
+  "target": false,
   "hot": false
  },
  {
@@ -36909,6 +36909,24 @@
   "hot": false
  },
  {
+  "company": "Figma",
+  "title": "Sales AI Engineer",
+  "category": "Data / AI / ML",
+  "locations": [
+   "San Francisco, CA • New York, NY • United States"
+  ],
+  "url": "https://boards.greenhouse.io/figma/jobs/5991176004?gh_jid=5991176004",
+  "posted": "2026-05-13",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-05-13",
+  "fit": 0.336,
+  "target": false,
+  "hot": false
+ },
+ {
   "company": "Cohere",
   "title": "Machine Learning Intern/Co-op  (Fall, 2026)",
   "category": "Data / AI / ML",
@@ -36930,20 +36948,20 @@
   "hot": false
  },
  {
-  "company": "Figma",
-  "title": "Sales AI Engineer",
-  "category": "Data / AI / ML",
+  "company": "Anthropic",
+  "title": "Real Estate Program Coordinator",
+  "category": "Other",
   "locations": [
-   "San Francisco, CA • New York, NY • United States"
+   "San Francisco, CA"
   ],
-  "url": "https://boards.greenhouse.io/figma/jobs/5991176004?gh_jid=5991176004",
+  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5189008008",
   "posted": "2026-05-13",
   "term": "",
   "level": "full-time",
   "source": "greenhouse",
   "isNew": false,
   "firstSeen": "2026-05-13",
-  "fit": 0.336,
+  "fit": 0.234,
   "target": false,
   "hot": false
  },
@@ -37003,24 +37021,6 @@
   "firstSeen": "2026-05-13",
   "fit": 0.472,
   "target": true,
-  "hot": false
- },
- {
-  "company": "Anthropic",
-  "title": "Real Estate Program Coordinator",
-  "category": "Other",
-  "locations": [
-   "San Francisco, CA"
-  ],
-  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5189008008",
-  "posted": "2026-05-13",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-05-13",
-  "fit": 0.234,
-  "target": false,
   "hot": false
  },
  {
@@ -37346,24 +37346,6 @@
   "ghost": true
  },
  {
-  "company": "Databricks",
-  "title": "Solutions Architect - Public Sector (SLED) ",
-  "category": "Software Engineering",
-  "locations": [
-   "Central - United States"
-  ],
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8522044002",
-  "posted": "2026-05-12",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-05-12",
-  "fit": 0.233,
-  "target": false,
-  "hot": false
- },
- {
   "company": "OpenAI",
   "title": "Platform Product Partnerships Lead",
   "category": "Software Engineering",
@@ -37412,6 +37394,24 @@
   "term": "",
   "level": "full-time",
   "source": "ashby",
+  "isNew": false,
+  "firstSeen": "2026-05-12",
+  "fit": 0.233,
+  "target": false,
+  "hot": false
+ },
+ {
+  "company": "Databricks",
+  "title": "Solutions Architect - Public Sector (SLED) ",
+  "category": "Software Engineering",
+  "locations": [
+   "Central - United States"
+  ],
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8522044002",
+  "posted": "2026-05-12",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
   "isNew": false,
   "firstSeen": "2026-05-12",
   "fit": 0.233,
@@ -37703,24 +37703,6 @@
   "hot": false
  },
  {
-  "company": "Notion",
-  "title": "Enterprise Sales Leader",
-  "category": "Other",
-  "locations": [
-   "San Francisco, California"
-  ],
-  "url": "https://jobs.ashbyhq.com/notion/7f02bc74-65e8-4b62-a2dc-aee2fa8a3894",
-  "posted": "2026-05-11",
-  "term": "",
-  "level": "full-time",
-  "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-05-11",
-  "fit": 0.232,
-  "target": false,
-  "hot": false
- },
- {
   "company": "Anthropic",
   "title": "Amazon GTM Partnership, Startups",
   "category": "Other",
@@ -37739,20 +37721,20 @@
   "hot": false
  },
  {
-  "company": "Databricks",
-  "title": "Solutions Architect - Strategic AI Natives",
-  "category": "Software Engineering",
+  "company": "Notion",
+  "title": "Enterprise Sales Leader",
+  "category": "Other",
   "locations": [
-   "Remote - California; Remote - Colorado; Remote - Oregon; Remote - Washington"
+   "San Francisco, California"
   ],
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8487768002",
+  "url": "https://jobs.ashbyhq.com/notion/7f02bc74-65e8-4b62-a2dc-aee2fa8a3894",
   "posted": "2026-05-11",
   "term": "",
   "level": "full-time",
-  "source": "greenhouse",
+  "source": "ashby",
   "isNew": false,
   "firstSeen": "2026-05-11",
-  "fit": 0.334,
+  "fit": 0.232,
   "target": false,
   "hot": false
  },
@@ -37790,6 +37772,24 @@
   "firstSeen": "2026-05-11",
   "fit": 0.47,
   "target": true,
+  "hot": false
+ },
+ {
+  "company": "Databricks",
+  "title": "Solutions Architect - Strategic AI Natives",
+  "category": "Software Engineering",
+  "locations": [
+   "Remote - California; Remote - Colorado; Remote - Oregon; Remote - Washington"
+  ],
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8487768002",
+  "posted": "2026-05-11",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-05-11",
+  "fit": 0.334,
+  "target": false,
   "hot": false
  },
  {
@@ -38213,6 +38213,24 @@
   "ghost": true
  },
  {
+  "company": "Anthropic",
+  "title": "Data Scientist, Supply",
+  "category": "Data / AI / ML",
+  "locations": [
+   "San Francisco, CA | New York City, NY"
+  ],
+  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5212119008",
+  "posted": "2026-05-07",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-05-07",
+  "fit": 0.332,
+  "target": false,
+  "hot": false
+ },
+ {
   "company": "Notion",
   "title": "Software Engineer, Trust",
   "category": "Software Engineering",
@@ -38229,24 +38247,6 @@
   "firstSeen": "2026-05-07",
   "fit": 0.468,
   "target": true,
-  "hot": false
- },
- {
-  "company": "Anthropic",
-  "title": "Data Scientist, Supply",
-  "category": "Data / AI / ML",
-  "locations": [
-   "San Francisco, CA | New York City, NY"
-  ],
-  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5212119008",
-  "posted": "2026-05-07",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-05-07",
-  "fit": 0.332,
-  "target": false,
   "hot": false
  },
  {
@@ -38669,24 +38669,6 @@
   "hot": false
  },
  {
-  "company": "Databricks",
-  "title": "Deployment Strategist",
-  "category": "Other",
-  "locations": [
-   "United States; USCA"
-  ],
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8463063002",
-  "posted": "2026-05-06",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-05-06",
-  "fit": 0.229,
-  "target": false,
-  "hot": false
- },
- {
   "company": "OpenAI",
   "title": "Software Engineer, Core Network Engineering",
   "category": "Software Engineering",
@@ -38738,6 +38720,24 @@
   "firstSeen": "2026-05-06",
   "fit": 0.331,
   "target": true,
+  "hot": false
+ },
+ {
+  "company": "Databricks",
+  "title": "Deployment Strategist",
+  "category": "Other",
+  "locations": [
+   "United States; USCA"
+  ],
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8463063002",
+  "posted": "2026-05-06",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-05-06",
+  "fit": 0.229,
+  "target": false,
   "hot": false
  },
  {
@@ -40076,24 +40076,6 @@
   "ghost": true
  },
  {
-  "company": "Notion",
-  "title": "Business Operations & Strategy Lead",
-  "category": "Other",
-  "locations": [
-   "San Francisco, California"
-  ],
-  "url": "https://jobs.ashbyhq.com/notion/ef4d9a34-153f-47a7-ba9f-f9a9de821066",
-  "posted": "2026-05-04",
-  "term": "",
-  "level": "full-time",
-  "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-05-04",
-  "fit": 0.228,
-  "target": false,
-  "hot": false
- },
- {
   "company": "Stripe",
   "title": "Cloud Security Engineer",
   "category": "Software Engineering",
@@ -40123,6 +40105,24 @@
   "term": "",
   "level": "full-time",
   "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-05-04",
+  "fit": 0.228,
+  "target": false,
+  "hot": false
+ },
+ {
+  "company": "Notion",
+  "title": "Business Operations & Strategy Lead",
+  "category": "Other",
+  "locations": [
+   "San Francisco, California"
+  ],
+  "url": "https://jobs.ashbyhq.com/notion/ef4d9a34-153f-47a7-ba9f-f9a9de821066",
+  "posted": "2026-05-04",
+  "term": "",
+  "level": "full-time",
+  "source": "ashby",
   "isNew": false,
   "firstSeen": "2026-05-04",
   "fit": 0.228,
@@ -40394,50 +40394,6 @@
   "ghost": true
  },
  {
-  "company": "Cohere",
-  "title": "Research Internship (Fall, 2026)",
-  "category": "Data / AI / ML",
-  "locations": [
-   "Canada",
-   "San Francisco",
-   "Europe",
-   "London",
-   "United States",
-   "United Kingdom",
-   "Toronto",
-   "Montreal"
-  ],
-  "url": "https://jobs.ashbyhq.com/cohere/73bd3e2b-6597-4124-b64b-1e5dbc32e785",
-  "posted": "2026-05-01",
-  "term": "Fall 2026",
-  "level": "intern",
-  "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-05-01",
-  "fit": 0.41,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "Cohere",
-  "title": "Software Engineer Intern (Fall / Winter 2026)",
-  "category": "Software Engineering",
-  "locations": [
-   "Canada",
-   "United States"
-  ],
-  "url": "https://jobs.ashbyhq.com/cohere/8c035d3d-081d-4c8a-914a-72f4efaad254",
-  "posted": "2026-05-01",
-  "term": "Winter 2026",
-  "level": "intern",
-  "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-05-01",
-  "fit": 0.546,
-  "target": true,
-  "hot": false
- },
- {
   "company": "Stripe",
   "title": "Accounting Technical Solutions Lead",
   "category": "Other",
@@ -40489,6 +40445,50 @@
   "firstSeen": "2026-05-01",
   "fit": 0.227,
   "target": false,
+  "hot": false
+ },
+ {
+  "company": "Cohere",
+  "title": "Research Internship (Fall, 2026)",
+  "category": "Data / AI / ML",
+  "locations": [
+   "Canada",
+   "San Francisco",
+   "Europe",
+   "London",
+   "United States",
+   "United Kingdom",
+   "Toronto",
+   "Montreal"
+  ],
+  "url": "https://jobs.ashbyhq.com/cohere/73bd3e2b-6597-4124-b64b-1e5dbc32e785",
+  "posted": "2026-05-01",
+  "term": "Fall 2026",
+  "level": "intern",
+  "source": "ashby",
+  "isNew": false,
+  "firstSeen": "2026-05-01",
+  "fit": 0.41,
+  "target": false,
+  "hot": false
+ },
+ {
+  "company": "Cohere",
+  "title": "Software Engineer Intern (Fall / Winter 2026)",
+  "category": "Software Engineering",
+  "locations": [
+   "Canada",
+   "United States"
+  ],
+  "url": "https://jobs.ashbyhq.com/cohere/8c035d3d-081d-4c8a-914a-72f4efaad254",
+  "posted": "2026-05-01",
+  "term": "Winter 2026",
+  "level": "intern",
+  "source": "ashby",
+  "isNew": false,
+  "firstSeen": "2026-05-01",
+  "fit": 0.546,
+  "target": true,
   "hot": false
  },
  {
@@ -41173,24 +41173,6 @@
   "hot": false
  },
  {
-  "company": "Databricks",
-  "title": "Solutions Architect, Hunter - Digital Native Business",
-  "category": "Software Engineering",
-  "locations": [
-   "Remote - California; Remote - Colorado; Remote - Illinois; Remote - New York; Remote - Oregon; Remote - Texas; Remote - Washington"
-  ],
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8432348002",
-  "posted": "2026-04-29",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-04-29",
-  "fit": 0.226,
-  "target": false,
-  "hot": false
- },
- {
   "company": "OpenAI",
   "title": "Software Engineer, Productivity - Model Performance",
   "category": "Software Engineering",
@@ -41206,6 +41188,24 @@
   "firstSeen": "2026-04-29",
   "fit": 0.464,
   "target": true,
+  "hot": false
+ },
+ {
+  "company": "Databricks",
+  "title": "Solutions Architect, Hunter - Digital Native Business",
+  "category": "Software Engineering",
+  "locations": [
+   "Remote - California; Remote - Colorado; Remote - Illinois; Remote - New York; Remote - Oregon; Remote - Texas; Remote - Washington"
+  ],
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8432348002",
+  "posted": "2026-04-29",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-04-29",
+  "fit": 0.226,
+  "target": false,
   "hot": false
  },
  {
@@ -41411,24 +41411,6 @@
   "hot": false
  },
  {
-  "company": "Databricks",
-  "title": "Solutions Architect - Financial Services (Insurance)",
-  "category": "Software Engineering",
-  "locations": [
-   "Georgia; Illinois; Massachusetts; New York; North Carolina"
-  ],
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8520024002",
-  "posted": "2026-04-28",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-04-28",
-  "fit": 0.226,
-  "target": false,
-  "hot": false
- },
- {
   "company": "OpenAI",
   "title": "Software Engineer, Productivity - Networking",
   "category": "Software Engineering",
@@ -41476,6 +41458,24 @@
   "term": "",
   "level": "full-time",
   "source": "ashby",
+  "isNew": false,
+  "firstSeen": "2026-04-28",
+  "fit": 0.226,
+  "target": false,
+  "hot": false
+ },
+ {
+  "company": "Databricks",
+  "title": "Solutions Architect - Financial Services (Insurance)",
+  "category": "Software Engineering",
+  "locations": [
+   "Georgia; Illinois; Massachusetts; New York; North Carolina"
+  ],
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8520024002",
+  "posted": "2026-04-28",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
   "isNew": false,
   "firstSeen": "2026-04-28",
   "fit": 0.226,
@@ -41694,6 +41694,24 @@
   "hot": false
  },
  {
+  "company": "Datadog",
+  "title": "GTM Strategy and Operations Associate",
+  "category": "Other",
+  "locations": [
+   "New York, New York, USA"
+  ],
+  "url": "https://careers.datadoghq.com/detail/7843331/?gh_jid=7843331",
+  "posted": "2026-04-27",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-04-27",
+  "fit": 0.226,
+  "target": false,
+  "hot": false
+ },
+ {
   "company": "Notion",
   "title": "Software Engineer, New Grad (AI)",
   "category": "Software Engineering",
@@ -41768,24 +41786,6 @@
   "firstSeen": "2026-04-27",
   "fit": 0.464,
   "target": true,
-  "hot": false
- },
- {
-  "company": "Datadog",
-  "title": "GTM Strategy and Operations Associate",
-  "category": "Other",
-  "locations": [
-   "New York, New York, USA"
-  ],
-  "url": "https://careers.datadoghq.com/detail/7843331/?gh_jid=7843331",
-  "posted": "2026-04-27",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-04-27",
-  "fit": 0.226,
-  "target": false,
   "hot": false
  },
  {
@@ -42304,43 +42304,6 @@
   "hot": false
  },
  {
-  "company": "Notion",
-  "title": "Software Engineer, Collections Experience",
-  "category": "Software Engineering",
-  "locations": [
-   "San Francisco, California",
-   "New York, New York"
-  ],
-  "url": "https://jobs.ashbyhq.com/notion/5d8c1ec6-e9ea-416b-9715-880bf5037abc",
-  "posted": "2026-04-23",
-  "term": "",
-  "level": "full-time",
-  "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-04-23",
-  "fit": 0.462,
-  "target": true,
-  "hot": false
- },
- {
-  "company": "Notion",
-  "title": "Software Engineer, New Grad",
-  "category": "Software Engineering",
-  "locations": [
-   "San Francisco, California"
-  ],
-  "url": "https://jobs.ashbyhq.com/notion/a6311f97-4850-4674-a5f3-d9fe5f6f2555",
-  "posted": "2026-04-23",
-  "term": "",
-  "level": "new-grad",
-  "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-04-23",
-  "fit": 0.525,
-  "target": true,
-  "hot": false
- },
- {
   "company": "Anthropic",
   "title": "Research Engineer, Knowledge Foundations",
   "category": "Data / AI / ML",
@@ -42392,6 +42355,43 @@
   "firstSeen": "2026-04-23",
   "fit": 0.224,
   "target": false,
+  "hot": false
+ },
+ {
+  "company": "Notion",
+  "title": "Software Engineer, Collections Experience",
+  "category": "Software Engineering",
+  "locations": [
+   "San Francisco, California",
+   "New York, New York"
+  ],
+  "url": "https://jobs.ashbyhq.com/notion/5d8c1ec6-e9ea-416b-9715-880bf5037abc",
+  "posted": "2026-04-23",
+  "term": "",
+  "level": "full-time",
+  "source": "ashby",
+  "isNew": false,
+  "firstSeen": "2026-04-23",
+  "fit": 0.462,
+  "target": true,
+  "hot": false
+ },
+ {
+  "company": "Notion",
+  "title": "Software Engineer, New Grad",
+  "category": "Software Engineering",
+  "locations": [
+   "San Francisco, California"
+  ],
+  "url": "https://jobs.ashbyhq.com/notion/a6311f97-4850-4674-a5f3-d9fe5f6f2555",
+  "posted": "2026-04-23",
+  "term": "",
+  "level": "new-grad",
+  "source": "ashby",
+  "isNew": false,
+  "firstSeen": "2026-04-23",
+  "fit": 0.525,
+  "target": true,
   "hot": false
  },
  {
@@ -42604,6 +42604,24 @@
   "hot": false
  },
  {
+  "company": "Figma",
+  "title": "Data Scientist, Core Data -  PhD (2026)",
+  "category": "Data / AI / ML",
+  "locations": [
+   "San Francisco, CA • New York, NY"
+  ],
+  "url": "https://boards.greenhouse.io/figma/jobs/5976930004?gh_jid=5976930004",
+  "posted": "2026-04-22",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-04-22",
+  "fit": 0.326,
+  "target": false,
+  "hot": false
+ },
+ {
   "company": "ElevenLabs",
   "title": "Compliance Engineer - North America",
   "category": "Other",
@@ -42617,24 +42635,6 @@
   "term": "",
   "level": "full-time",
   "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-04-22",
-  "fit": 0.326,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "Figma",
-  "title": "Data Scientist, Core Data -  PhD (2026)",
-  "category": "Data / AI / ML",
-  "locations": [
-   "San Francisco, CA • New York, NY"
-  ],
-  "url": "https://boards.greenhouse.io/figma/jobs/5976930004?gh_jid=5976930004",
-  "posted": "2026-04-22",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
   "isNew": false,
   "firstSeen": "2026-04-22",
   "fit": 0.326,
@@ -42861,24 +42861,6 @@
   "hot": false
  },
  {
-  "company": "Notion",
-  "title": "Software Engineer, AI Capture",
-  "category": "Software Engineering",
-  "locations": [
-   "San Francisco, California"
-  ],
-  "url": "https://jobs.ashbyhq.com/notion/b31ce253-4238-4ed6-a5a2-73b63cbf1709",
-  "posted": "2026-04-21",
-  "term": "",
-  "level": "full-time",
-  "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-04-21",
-  "fit": 0.462,
-  "target": true,
-  "hot": false
- },
- {
   "company": "Anthropic",
   "title": "Corporate Legal Specialist",
   "category": "Other",
@@ -42951,21 +42933,21 @@
   "hot": false
  },
  {
-  "company": "Databricks",
-  "title": "Delivery Solutions Architect - Healthcare & Life Sciences",
+  "company": "Notion",
+  "title": "Software Engineer, AI Capture",
   "category": "Software Engineering",
   "locations": [
-   "United States"
+   "San Francisco, California"
   ],
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8476399002",
+  "url": "https://jobs.ashbyhq.com/notion/b31ce253-4238-4ed6-a5a2-73b63cbf1709",
   "posted": "2026-04-21",
   "term": "",
   "level": "full-time",
-  "source": "greenhouse",
+  "source": "ashby",
   "isNew": false,
   "firstSeen": "2026-04-21",
-  "fit": 0.224,
-  "target": false,
+  "fit": 0.462,
+  "target": true,
   "hot": false
  },
  {
@@ -43039,6 +43021,24 @@
   "firstSeen": "2026-04-21",
   "fit": 0.462,
   "target": true,
+  "hot": false
+ },
+ {
+  "company": "Databricks",
+  "title": "Delivery Solutions Architect - Healthcare & Life Sciences",
+  "category": "Software Engineering",
+  "locations": [
+   "United States"
+  ],
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8476399002",
+  "posted": "2026-04-21",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-04-21",
+  "fit": 0.224,
+  "target": false,
   "hot": false
  },
  {
@@ -43231,27 +43231,6 @@
   "hot": false
  },
  {
-  "company": "Ramp",
-  "title": "Partner Development Representative | Financial Institutions",
-  "category": "Other",
-  "locations": [
-   "New York, NY (HQ)",
-   "San Francisco, CA",
-   "Remote (US)",
-   "Miami, FL"
-  ],
-  "url": "https://jobs.ashbyhq.com/ramp/29d188c7-0529-4bc8-a04a-57902df2a7ae",
-  "posted": "2026-04-20",
-  "term": "",
-  "level": "full-time",
-  "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-04-20",
-  "fit": 0.224,
-  "target": false,
-  "hot": false
- },
- {
   "company": "Roblox",
   "title": "Design Engineer",
   "category": "Design / UX",
@@ -43281,6 +43260,27 @@
   "term": "",
   "level": "full-time",
   "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-04-20",
+  "fit": 0.224,
+  "target": false,
+  "hot": false
+ },
+ {
+  "company": "Ramp",
+  "title": "Partner Development Representative | Financial Institutions",
+  "category": "Other",
+  "locations": [
+   "New York, NY (HQ)",
+   "San Francisco, CA",
+   "Remote (US)",
+   "Miami, FL"
+  ],
+  "url": "https://jobs.ashbyhq.com/ramp/29d188c7-0529-4bc8-a04a-57902df2a7ae",
+  "posted": "2026-04-20",
+  "term": "",
+  "level": "full-time",
+  "source": "ashby",
   "isNew": false,
   "firstSeen": "2026-04-20",
   "fit": 0.224,
@@ -43706,25 +43706,6 @@
   "ghost": true
  },
  {
-  "company": "Notion",
-  "title": "Revenue Marketer",
-  "category": "Other",
-  "locations": [
-   "San Francisco, California",
-   "New York, New York"
-  ],
-  "url": "https://jobs.ashbyhq.com/notion/85e7823f-073c-4fef-9b51-7fc7b725686d",
-  "posted": "2026-04-17",
-  "term": "",
-  "level": "full-time",
-  "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-04-17",
-  "fit": 0.223,
-  "target": false,
-  "hot": false
- },
- {
   "company": "Anthropic",
   "title": "Applied AI Architect, Commercial",
   "category": "Data / AI / ML",
@@ -43758,6 +43739,25 @@
   "firstSeen": "2026-04-17",
   "fit": 0.325,
   "target": true,
+  "hot": false
+ },
+ {
+  "company": "Notion",
+  "title": "Revenue Marketer",
+  "category": "Other",
+  "locations": [
+   "San Francisco, California",
+   "New York, New York"
+  ],
+  "url": "https://jobs.ashbyhq.com/notion/85e7823f-073c-4fef-9b51-7fc7b725686d",
+  "posted": "2026-04-17",
+  "term": "",
+  "level": "full-time",
+  "source": "ashby",
+  "isNew": false,
+  "firstSeen": "2026-04-17",
+  "fit": 0.223,
+  "target": false,
   "hot": false
  },
  {
@@ -44449,26 +44449,6 @@
   "hot": false
  },
  {
-  "company": "Cohere",
-  "title": "Data Engineer, Data Foundations",
-  "category": "Data / AI / ML",
-  "locations": [
-   "New York",
-   "Canada",
-   "United States"
-  ],
-  "url": "https://jobs.ashbyhq.com/cohere/9baccd88-c051-474f-bfe8-6867fca54cee",
-  "posted": "2026-04-15",
-  "term": "",
-  "level": "full-time",
-  "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-04-15",
-  "fit": 0.325,
-  "target": true,
-  "hot": false
- },
- {
   "company": "Riot Games",
   "title": "Game Producer II - VALORANT, Narrative",
   "category": "Graphics / Game / 3D",
@@ -44487,21 +44467,23 @@
   "hot": false
  },
  {
-  "company": "Databricks",
-  "title": "Industry Lead Solutions Architect - Financial Services",
-  "category": "Software Engineering",
+  "company": "Cohere",
+  "title": "Data Engineer, Data Foundations",
+  "category": "Data / AI / ML",
   "locations": [
-   "Georgia; Illinois; Massachusetts; New York; North Carolina; Washington, D.C."
+   "New York",
+   "Canada",
+   "United States"
   ],
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8480642002",
+  "url": "https://jobs.ashbyhq.com/cohere/9baccd88-c051-474f-bfe8-6867fca54cee",
   "posted": "2026-04-15",
   "term": "",
   "level": "full-time",
-  "source": "greenhouse",
+  "source": "ashby",
   "isNew": false,
   "firstSeen": "2026-04-15",
-  "fit": 0.223,
-  "target": false,
+  "fit": 0.325,
+  "target": true,
   "hot": false
  },
  {
@@ -44562,6 +44544,24 @@
   "firstSeen": "2026-04-15",
   "fit": 0.325,
   "target": true,
+  "hot": false
+ },
+ {
+  "company": "Databricks",
+  "title": "Industry Lead Solutions Architect - Financial Services",
+  "category": "Software Engineering",
+  "locations": [
+   "Georgia; Illinois; Massachusetts; New York; North Carolina; Washington, D.C."
+  ],
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8480642002",
+  "posted": "2026-04-15",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-04-15",
+  "fit": 0.223,
+  "target": false,
   "hot": false
  },
  {
@@ -44677,24 +44677,6 @@
   "ghost": true
  },
  {
-  "company": "Notion",
-  "title": "Data Engineer, People Analytics ",
-  "category": "Data / AI / ML",
-  "locations": [
-   "San Francisco, California"
-  ],
-  "url": "https://jobs.ashbyhq.com/notion/a1216dba-e175-4a3d-b712-401c9fbdcd92",
-  "posted": "2026-04-14",
-  "term": "",
-  "level": "full-time",
-  "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-04-14",
-  "fit": 0.324,
-  "target": true,
-  "hot": false
- },
- {
   "company": "Anthropic",
   "title": "Full-Stack Software Engineer, Reinforcement Learning",
   "category": "Software Engineering",
@@ -44749,21 +44731,21 @@
   "hot": false
  },
  {
-  "company": "Databricks",
-  "title": "Sales Leader, VC-Backed Startups",
-  "category": "Other",
+  "company": "Notion",
+  "title": "Data Engineer, People Analytics ",
+  "category": "Data / AI / ML",
   "locations": [
    "San Francisco, California"
   ],
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8506402002",
+  "url": "https://jobs.ashbyhq.com/notion/a1216dba-e175-4a3d-b712-401c9fbdcd92",
   "posted": "2026-04-14",
   "term": "",
   "level": "full-time",
-  "source": "greenhouse",
+  "source": "ashby",
   "isNew": false,
   "firstSeen": "2026-04-14",
-  "fit": 0.222,
-  "target": false,
+  "fit": 0.324,
+  "target": true,
   "hot": false
  },
  {
@@ -44800,6 +44782,24 @@
   "firstSeen": "2026-04-14",
   "fit": 0.324,
   "target": true,
+  "hot": false
+ },
+ {
+  "company": "Databricks",
+  "title": "Sales Leader, VC-Backed Startups",
+  "category": "Other",
+  "locations": [
+   "San Francisco, California"
+  ],
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8506402002",
+  "posted": "2026-04-14",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-04-14",
+  "fit": 0.222,
+  "target": false,
   "hot": false
  },
  {
@@ -44991,24 +44991,6 @@
   "hot": false
  },
  {
-  "company": "ElevenLabs",
-  "title": "B2B Marketing - North America Generalist",
-  "category": "Other",
-  "locations": [
-   "United States"
-  ],
-  "url": "https://jobs.ashbyhq.com/elevenlabs/89f01b9a-be26-4fe4-8a06-e5a65b85fcdc",
-  "posted": "2026-04-13",
-  "term": "",
-  "level": "full-time",
-  "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-04-13",
-  "fit": 0.222,
-  "target": false,
-  "hot": false
- },
- {
   "company": "Stripe",
   "title": "Finance & Strategy Partner",
   "category": "Other",
@@ -45020,6 +45002,24 @@
   "term": "",
   "level": "full-time",
   "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-04-13",
+  "fit": 0.222,
+  "target": false,
+  "hot": false
+ },
+ {
+  "company": "ElevenLabs",
+  "title": "B2B Marketing - North America Generalist",
+  "category": "Other",
+  "locations": [
+   "United States"
+  ],
+  "url": "https://jobs.ashbyhq.com/elevenlabs/89f01b9a-be26-4fe4-8a06-e5a65b85fcdc",
+  "posted": "2026-04-13",
+  "term": "",
+  "level": "full-time",
+  "source": "ashby",
   "isNew": false,
   "firstSeen": "2026-04-13",
   "fit": 0.222,
@@ -45045,13 +45045,13 @@
   "hot": false
  },
  {
-  "company": "Databricks",
-  "title": "Strategic Customer Advisor ",
+  "company": "Datadog",
+  "title": "Services Architect 3 - Denver",
   "category": "Other",
   "locations": [
-   "United States"
+   "Denver, Colorado, USA"
   ],
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8479027002",
+  "url": "https://careers.datadoghq.com/detail/7807783/?gh_jid=7807783",
   "posted": "2026-04-13",
   "term": "",
   "level": "full-time",
@@ -45081,13 +45081,13 @@
   "hot": false
  },
  {
-  "company": "Datadog",
-  "title": "Services Architect 3 - Denver",
+  "company": "Databricks",
+  "title": "Strategic Customer Advisor ",
   "category": "Other",
   "locations": [
-   "Denver, Colorado, USA"
+   "United States"
   ],
-  "url": "https://careers.datadoghq.com/detail/7807783/?gh_jid=7807783",
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8479027002",
   "posted": "2026-04-13",
   "term": "",
   "level": "full-time",
@@ -45778,27 +45778,6 @@
   "ghost": true
  },
  {
-  "company": "Ramp",
-  "title": "Risk Operations, Collections",
-  "category": "Other",
-  "locations": [
-   "New York, NY (HQ)",
-   "Remote (Canada)",
-   "San Francisco, CA",
-   "Remote (US)"
-  ],
-  "url": "https://jobs.ashbyhq.com/ramp/924ad606-e32a-4bb9-967c-f609cdaebaa7",
-  "posted": "2026-04-09",
-  "term": "",
-  "level": "full-time",
-  "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-04-09",
-  "fit": 0.222,
-  "target": false,
-  "hot": false
- },
- {
   "company": "Riot Games",
   "title": "Game Designer III (Card Rules) - Riftbound",
   "category": "Art / Animation / VFX",
@@ -45817,17 +45796,20 @@
   "hot": false
  },
  {
-  "company": "Databricks",
-  "title": "Digital Native Go-to-Market (GTM) Leader",
+  "company": "Ramp",
+  "title": "Risk Operations, Collections",
   "category": "Other",
   "locations": [
-   "San Francisco, California"
+   "New York, NY (HQ)",
+   "Remote (Canada)",
+   "San Francisco, CA",
+   "Remote (US)"
   ],
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8495071002",
+  "url": "https://jobs.ashbyhq.com/ramp/924ad606-e32a-4bb9-967c-f609cdaebaa7",
   "posted": "2026-04-09",
   "term": "",
   "level": "full-time",
-  "source": "greenhouse",
+  "source": "ashby",
   "isNew": false,
   "firstSeen": "2026-04-09",
   "fit": 0.222,
@@ -45904,6 +45886,24 @@
   "firstSeen": "2026-04-09",
   "fit": 0.324,
   "target": true,
+  "hot": false
+ },
+ {
+  "company": "Databricks",
+  "title": "Digital Native Go-to-Market (GTM) Leader",
+  "category": "Other",
+  "locations": [
+   "San Francisco, California"
+  ],
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8495071002",
+  "posted": "2026-04-09",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-04-09",
+  "fit": 0.222,
+  "target": false,
   "hot": false
  },
  {
@@ -46371,27 +46371,6 @@
   "hot": false
  },
  {
-  "company": "Ramp",
-  "title": " Security Engineer, Cloud",
-  "category": "Software Engineering",
-  "locations": [
-   "New York, NY (HQ)",
-   "Remote (Canada)",
-   "Remote (US)",
-   "Miami, FL"
-  ],
-  "url": "https://jobs.ashbyhq.com/ramp/34413f8d-26bf-4bbc-8ade-eb309a0e2245",
-  "posted": "2026-04-07",
-  "term": "",
-  "level": "full-time",
-  "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-04-07",
-  "fit": 0.323,
-  "target": true,
-  "hot": false
- },
- {
   "company": "Anthropic",
   "title": "Network Engineer, Capacity and Efficiency",
   "category": "Software Engineering",
@@ -46428,20 +46407,23 @@
   "hot": false
  },
  {
-  "company": "Databricks",
-  "title": "Forward Deployed Engineer - FDE (Fullstack) - Digital Native Business ",
+  "company": "Ramp",
+  "title": " Security Engineer, Cloud",
   "category": "Software Engineering",
   "locations": [
-   "United States"
+   "New York, NY (HQ)",
+   "Remote (Canada)",
+   "Remote (US)",
+   "Miami, FL"
   ],
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8488399002",
+  "url": "https://jobs.ashbyhq.com/ramp/34413f8d-26bf-4bbc-8ade-eb309a0e2245",
   "posted": "2026-04-07",
   "term": "",
   "level": "full-time",
-  "source": "greenhouse",
+  "source": "ashby",
   "isNew": false,
   "firstSeen": "2026-04-07",
-  "fit": 0.459,
+  "fit": 0.323,
   "target": true,
   "hot": false
  },
@@ -46461,6 +46443,24 @@
   "firstSeen": "2026-04-07",
   "fit": 0.221,
   "target": false,
+  "hot": false
+ },
+ {
+  "company": "Databricks",
+  "title": "Forward Deployed Engineer - FDE (Fullstack) - Digital Native Business ",
+  "category": "Software Engineering",
+  "locations": [
+   "United States"
+  ],
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8488399002",
+  "posted": "2026-04-07",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-04-07",
+  "fit": 0.459,
+  "target": true,
   "hot": false
  },
  {
@@ -47765,13 +47765,13 @@
   "ghost": true
  },
  {
-  "company": "Roblox",
-  "title": "Software Engineer, User Sharing",
+  "company": "Stripe",
+  "title": "Software Engineer, Product Security Data Platforms",
   "category": "Software Engineering",
   "locations": [
-   "San Mateo, CA, United States"
+   "Seattle"
   ],
-  "url": "https://careers.roblox.com/jobs/7767204?gh_jid=7767204",
+  "url": "https://stripe.com/jobs/search?gh_jid=7761694",
   "posted": "2026-03-31",
   "term": "",
   "level": "full-time",
@@ -47783,13 +47783,13 @@
   "hot": false
  },
  {
-  "company": "Stripe",
-  "title": "Software Engineer, Product Security Data Platforms",
+  "company": "Roblox",
+  "title": "Software Engineer, User Sharing",
   "category": "Software Engineering",
   "locations": [
-   "Seattle"
+   "San Mateo, CA, United States"
   ],
-  "url": "https://stripe.com/jobs/search?gh_jid=7761694",
+  "url": "https://careers.roblox.com/jobs/7767204?gh_jid=7767204",
   "posted": "2026-03-31",
   "term": "",
   "level": "full-time",
@@ -48167,6 +48167,24 @@
   "ghost": true
  },
  {
+  "company": "Stripe",
+  "title": "Sales Compensation Analytics & Systems Specialist",
+  "category": "Other",
+  "locations": [
+   "CHI, SF, NYC, SEA, US Remote"
+  ],
+  "url": "https://stripe.com/jobs/search?gh_jid=7739207",
+  "posted": "2026-03-27",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-03-27",
+  "fit": 0.22,
+  "target": false,
+  "hot": false
+ },
+ {
   "company": "Ramp",
   "title": "Software Engineer, Fraud & Identity",
   "category": "Software Engineering",
@@ -48203,24 +48221,6 @@
   "firstSeen": "2026-03-27",
   "fit": 0.458,
   "target": true,
-  "hot": false
- },
- {
-  "company": "Stripe",
-  "title": "Sales Compensation Analytics & Systems Specialist",
-  "category": "Other",
-  "locations": [
-   "CHI, SF, NYC, SEA, US Remote"
-  ],
-  "url": "https://stripe.com/jobs/search?gh_jid=7739207",
-  "posted": "2026-03-27",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-03-27",
-  "fit": 0.22,
-  "target": false,
   "hot": false
  },
  {
@@ -48585,42 +48585,6 @@
   "hot": false
  },
  {
-  "company": "Databricks",
-  "title": "Systems PhD - Software Engineer ",
-  "category": "Software Engineering",
-  "locations": [
-   "Mountain View, California; San Francisco, California"
-  ],
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8482037002",
-  "posted": "2026-03-26",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-03-26",
-  "fit": 0.458,
-  "target": true,
-  "hot": false
- },
- {
-  "company": "Databricks",
-  "title": "Systems PhD - Software Engineer ",
-  "category": "Software Engineering",
-  "locations": [
-   "Bellevue, Washington; Seattle, Washington"
-  ],
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8482086002",
-  "posted": "2026-03-26",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-03-26",
-  "fit": 0.458,
-  "target": true,
-  "hot": false
- },
- {
   "company": "OpenAI",
   "title": "Product Designer, People Innovation Labs",
   "category": "Design / UX",
@@ -48674,6 +48638,42 @@
   "term": "",
   "level": "full-time",
   "source": "ashby",
+  "isNew": false,
+  "firstSeen": "2026-03-26",
+  "fit": 0.458,
+  "target": true,
+  "hot": false
+ },
+ {
+  "company": "Databricks",
+  "title": "Systems PhD - Software Engineer ",
+  "category": "Software Engineering",
+  "locations": [
+   "Mountain View, California; San Francisco, California"
+  ],
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8482037002",
+  "posted": "2026-03-26",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-03-26",
+  "fit": 0.458,
+  "target": true,
+  "hot": false
+ },
+ {
+  "company": "Databricks",
+  "title": "Systems PhD - Software Engineer ",
+  "category": "Software Engineering",
+  "locations": [
+   "Bellevue, Washington; Seattle, Washington"
+  ],
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8482086002",
+  "posted": "2026-03-26",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
   "isNew": false,
   "firstSeen": "2026-03-26",
   "fit": 0.458,
@@ -48908,24 +48908,6 @@
   "hot": false
  },
  {
-  "company": "Databricks",
-  "title": "Go-To-Market (GTM) Digital Natives Program Leader",
-  "category": "Other",
-  "locations": [
-   "San Francisco, California; United States"
-  ],
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8356420002",
-  "posted": "2026-03-25",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-03-25",
-  "fit": 0.22,
-  "target": false,
-  "hot": false
- },
- {
   "company": "OpenAI",
   "title": "Executive IT Support Lead",
   "category": "Other",
@@ -48937,6 +48919,24 @@
   "term": "",
   "level": "full-time",
   "source": "ashby",
+  "isNew": false,
+  "firstSeen": "2026-03-25",
+  "fit": 0.22,
+  "target": false,
+  "hot": false
+ },
+ {
+  "company": "Databricks",
+  "title": "Go-To-Market (GTM) Digital Natives Program Leader",
+  "category": "Other",
+  "locations": [
+   "San Francisco, California; United States"
+  ],
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8356420002",
+  "posted": "2026-03-25",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
   "isNew": false,
   "firstSeen": "2026-03-25",
   "fit": 0.22,
@@ -50400,24 +50400,6 @@
   "hot": false
  },
  {
-  "company": "Figma",
-  "title": "Security Engineer",
-  "category": "Software Engineering",
-  "locations": [
-   "San Francisco, CA • New York, NY • United States"
-  ],
-  "url": "https://boards.greenhouse.io/figma/jobs/5829751004?gh_jid=5829751004",
-  "posted": "2026-03-16",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-03-16",
-  "fit": 0.322,
-  "target": true,
-  "hot": false
- },
- {
   "company": "Roblox",
   "title": "Human Evaluator, Studio (Contract)",
   "category": "Other",
@@ -50433,6 +50415,24 @@
   "firstSeen": "2026-03-16",
   "fit": 0.22,
   "target": false,
+  "hot": false
+ },
+ {
+  "company": "Figma",
+  "title": "Security Engineer",
+  "category": "Software Engineering",
+  "locations": [
+   "San Francisco, CA • New York, NY • United States"
+  ],
+  "url": "https://boards.greenhouse.io/figma/jobs/5829751004?gh_jid=5829751004",
+  "posted": "2026-03-16",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-03-16",
+  "fit": 0.322,
+  "target": true,
   "hot": false
  },
  {
@@ -51156,6 +51156,42 @@
   "ghost": true
  },
  {
+  "company": "Roblox",
+  "title": "Developer Engagement Representative - LATAM (Part-Time Contract)",
+  "category": "Other",
+  "locations": [
+   "Remote"
+  ],
+  "url": "https://careers.roblox.com/jobs/7705949?gh_jid=7705949",
+  "posted": "2026-03-11",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-03-11",
+  "fit": 0.322,
+  "target": true,
+  "hot": false
+ },
+ {
+  "company": "Anthropic",
+  "title": "Transformative AI Research Economist, Economic Research ",
+  "category": "Data / AI / ML",
+  "locations": [
+   "San Francisco, CA"
+  ],
+  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5149802008",
+  "posted": "2026-03-11",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-03-11",
+  "fit": 0.322,
+  "target": false,
+  "hot": false
+ },
+ {
   "company": "Ramp",
   "title": "Software Engineer, Data Platform ",
   "category": "Software Engineering",
@@ -51192,42 +51228,6 @@
   "isNew": false,
   "firstSeen": "2026-03-11",
   "fit": 0.22,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "Roblox",
-  "title": "Developer Engagement Representative - LATAM (Part-Time Contract)",
-  "category": "Other",
-  "locations": [
-   "Remote"
-  ],
-  "url": "https://careers.roblox.com/jobs/7705949?gh_jid=7705949",
-  "posted": "2026-03-11",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-03-11",
-  "fit": 0.322,
-  "target": true,
-  "hot": false
- },
- {
-  "company": "Anthropic",
-  "title": "Transformative AI Research Economist, Economic Research ",
-  "category": "Data / AI / ML",
-  "locations": [
-   "San Francisco, CA"
-  ],
-  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5149802008",
-  "posted": "2026-03-11",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-03-11",
-  "fit": 0.322,
   "target": false,
   "hot": false
  },
@@ -51911,6 +51911,42 @@
   "hot": false
  },
  {
+  "company": "Anthropic",
+  "title": "Applied AI Architect, Government Technology",
+  "category": "Data / AI / ML",
+  "locations": [
+   "Washington, DC"
+  ],
+  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5140405008",
+  "posted": "2026-03-05",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-03-05",
+  "fit": 0.321,
+  "target": false,
+  "hot": false
+ },
+ {
+  "company": "Anthropic",
+  "title": "Applied AI Architect, State and Local Government",
+  "category": "Data / AI / ML",
+  "locations": [
+   "Washington, DC"
+  ],
+  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5140403008",
+  "posted": "2026-03-05",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-03-05",
+  "fit": 0.321,
+  "target": false,
+  "hot": false
+ },
+ {
   "company": "Ramp",
   "title": "Detection & Response, Lead",
   "category": "Other",
@@ -51941,42 +51977,6 @@
   "term": "",
   "level": "full-time",
   "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-03-05",
-  "fit": 0.321,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "Anthropic",
-  "title": "Applied AI Architect, Government Technology",
-  "category": "Data / AI / ML",
-  "locations": [
-   "Washington, DC"
-  ],
-  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5140405008",
-  "posted": "2026-03-05",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-03-05",
-  "fit": 0.321,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "Anthropic",
-  "title": "Applied AI Architect, State and Local Government",
-  "category": "Data / AI / ML",
-  "locations": [
-   "Washington, DC"
-  ],
-  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5140403008",
-  "posted": "2026-03-05",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
   "isNew": false,
   "firstSeen": "2026-03-05",
   "fit": 0.321,
@@ -52416,6 +52416,24 @@
   "ghost": true
  },
  {
+  "company": "Stripe",
+  "title": "Risk Strategist, User Risk Strategy",
+  "category": "Other",
+  "locations": [
+   "Chicago, SEA, SF, NYC, US-Remote"
+  ],
+  "url": "https://stripe.com/jobs/search?gh_jid=7594866",
+  "posted": "2026-03-04",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-03-04",
+  "fit": 0.219,
+  "target": false,
+  "hot": false
+ },
+ {
   "company": "Cohere",
   "title": "Forward Deployed Engineer, Agentic Platform",
   "category": "Software Engineering",
@@ -52454,24 +52472,6 @@
   "firstSeen": "2026-03-04",
   "fit": 0.321,
   "target": true,
-  "hot": false
- },
- {
-  "company": "Stripe",
-  "title": "Risk Strategist, User Risk Strategy",
-  "category": "Other",
-  "locations": [
-   "Chicago, SEA, SF, NYC, US-Remote"
-  ],
-  "url": "https://stripe.com/jobs/search?gh_jid=7594866",
-  "posted": "2026-03-04",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-03-04",
-  "fit": 0.219,
-  "target": false,
   "hot": false
  },
  {
@@ -54179,24 +54179,6 @@
   "ghost": true
  },
  {
-  "company": "Notion",
-  "title": "Solutions Engineer, Commercial",
-  "category": "Other",
-  "locations": [
-   "New York, New York"
-  ],
-  "url": "https://jobs.ashbyhq.com/notion/fede5201-c97f-4492-bfa6-66da7afbb068",
-  "posted": "2026-02-25",
-  "term": "",
-  "level": "full-time",
-  "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-02-25",
-  "fit": 0.321,
-  "target": false,
-  "hot": false
- },
- {
   "company": "Stripe",
   "title": "Product Lead, AI",
   "category": "Data / AI / ML",
@@ -54215,20 +54197,20 @@
   "hot": false
  },
  {
-  "company": "Databricks",
-  "title": "Solutions Architect - Digital Native Business, Strategic",
-  "category": "Software Engineering",
+  "company": "Notion",
+  "title": "Solutions Engineer, Commercial",
+  "category": "Other",
   "locations": [
-   "Remote - California; Remote - Colorado; Remote - Oregon; Remote - Washington"
+   "New York, New York"
   ],
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8434467002",
+  "url": "https://jobs.ashbyhq.com/notion/fede5201-c97f-4492-bfa6-66da7afbb068",
   "posted": "2026-02-25",
   "term": "",
   "level": "full-time",
-  "source": "greenhouse",
+  "source": "ashby",
   "isNew": false,
   "firstSeen": "2026-02-25",
-  "fit": 0.219,
+  "fit": 0.321,
   "target": false,
   "hot": false
  },
@@ -54282,6 +54264,24 @@
   "term": "",
   "level": "full-time",
   "source": "ashby",
+  "isNew": false,
+  "firstSeen": "2026-02-25",
+  "fit": 0.219,
+  "target": false,
+  "hot": false
+ },
+ {
+  "company": "Databricks",
+  "title": "Solutions Architect - Digital Native Business, Strategic",
+  "category": "Software Engineering",
+  "locations": [
+   "Remote - California; Remote - Colorado; Remote - Oregon; Remote - Washington"
+  ],
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8434467002",
+  "posted": "2026-02-25",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
   "isNew": false,
   "firstSeen": "2026-02-25",
   "fit": 0.219,
@@ -54727,24 +54727,6 @@
   "hot": false
  },
  {
-  "company": "Databricks",
-  "title": "Solutions Architect - High Tech and MFG",
-  "category": "Software Engineering",
-  "locations": [
-   "San Francisco, California"
-  ],
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8434341002",
-  "posted": "2026-02-24",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-02-24",
-  "fit": 0.219,
-  "target": false,
-  "hot": false
- },
- {
   "company": "OpenAI",
   "title": "AI Support Engineer - San Francisco",
   "category": "Data / AI / ML",
@@ -54777,6 +54759,24 @@
   "isNew": false,
   "firstSeen": "2026-02-24",
   "fit": 0.321,
+  "target": false,
+  "hot": false
+ },
+ {
+  "company": "Databricks",
+  "title": "Solutions Architect - High Tech and MFG",
+  "category": "Software Engineering",
+  "locations": [
+   "San Francisco, California"
+  ],
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8434341002",
+  "posted": "2026-02-24",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-02-24",
+  "fit": 0.219,
   "target": false,
   "hot": false
  },
@@ -55887,6 +55887,24 @@
   "ghost": true
  },
  {
+  "company": "Stripe",
+  "title": "Writer, Content Marketing",
+  "category": "Other",
+  "locations": [
+   "Remote US"
+  ],
+  "url": "https://stripe.com/jobs/search?gh_jid=7587814",
+  "posted": "2026-02-20",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-02-20",
+  "fit": 0.219,
+  "target": false,
+  "hot": false
+ },
+ {
   "company": "Cohere",
   "title": "Data Annotation Specialist - German Writer/Translator",
   "category": "Data / AI / ML",
@@ -55913,6 +55931,42 @@
   "isNew": false,
   "firstSeen": "2026-02-20",
   "fit": 0.321,
+  "target": false,
+  "hot": false
+ },
+ {
+  "company": "Anthropic",
+  "title": "Infrastructure Tax Lead",
+  "category": "Software Engineering",
+  "locations": [
+   "Remote-Friendly (Travel-Required) | San Francisco, CA | New York City, NY"
+  ],
+  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5123851008",
+  "posted": "2026-02-20",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-02-20",
+  "fit": 0.219,
+  "target": false,
+  "hot": false
+ },
+ {
+  "company": "Anthropic",
+  "title": "Solutions Architect, National Security",
+  "category": "Software Engineering",
+  "locations": [
+   "Washington, DC"
+  ],
+  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5126080008",
+  "posted": "2026-02-20",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-02-20",
+  "fit": 0.219,
   "target": false,
   "hot": false
  },
@@ -55954,56 +56008,20 @@
   "hot": false
  },
  {
-  "company": "Stripe",
-  "title": "Writer, Content Marketing",
-  "category": "Other",
+  "company": "OpenAI",
+  "title": "AI Support Engineer, Government - San Francisco",
+  "category": "Data / AI / ML",
   "locations": [
-   "Remote US"
+   "San Francisco"
   ],
-  "url": "https://stripe.com/jobs/search?gh_jid=7587814",
+  "url": "https://jobs.ashbyhq.com/openai/3ea8b9e4-e193-4f0c-a4ba-2da65242df45",
   "posted": "2026-02-20",
   "term": "",
   "level": "full-time",
-  "source": "greenhouse",
+  "source": "ashby",
   "isNew": false,
   "firstSeen": "2026-02-20",
-  "fit": 0.219,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "Anthropic",
-  "title": "Infrastructure Tax Lead",
-  "category": "Software Engineering",
-  "locations": [
-   "Remote-Friendly (Travel-Required) | San Francisco, CA | New York City, NY"
-  ],
-  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5123851008",
-  "posted": "2026-02-20",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-02-20",
-  "fit": 0.219,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "Anthropic",
-  "title": "Solutions Architect, National Security",
-  "category": "Software Engineering",
-  "locations": [
-   "Washington, DC"
-  ],
-  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5126080008",
-  "posted": "2026-02-20",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-02-20",
-  "fit": 0.219,
+  "fit": 0.321,
   "target": false,
   "hot": false
  },
@@ -56022,24 +56040,6 @@
   "isNew": false,
   "firstSeen": "2026-02-20",
   "fit": 0.219,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "OpenAI",
-  "title": "AI Support Engineer, Government - San Francisco",
-  "category": "Data / AI / ML",
-  "locations": [
-   "San Francisco"
-  ],
-  "url": "https://jobs.ashbyhq.com/openai/3ea8b9e4-e193-4f0c-a4ba-2da65242df45",
-  "posted": "2026-02-20",
-  "term": "",
-  "level": "full-time",
-  "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-02-20",
-  "fit": 0.321,
   "target": false,
   "hot": false
  },
@@ -57353,13 +57353,13 @@
   "ghost": true
  },
  {
-  "company": "Vercel",
-  "title": "Solutions Architect ",
-  "category": "Software Engineering",
+  "company": "Stripe",
+  "title": "Corporate Accounting",
+  "category": "Other",
   "locations": [
-   "Hybrid - San Francisco, New York City, Austin"
+   "San Francisco, Seattle "
   ],
-  "url": "https://job-boards.greenhouse.io/vercel/jobs/5806749004",
+  "url": "https://stripe.com/jobs/search?gh_jid=7618067",
   "posted": "2026-02-18",
   "term": "",
   "level": "full-time",
@@ -57371,13 +57371,13 @@
   "hot": false
  },
  {
-  "company": "Stripe",
-  "title": "Corporate Accounting",
-  "category": "Other",
+  "company": "Vercel",
+  "title": "Solutions Architect ",
+  "category": "Software Engineering",
   "locations": [
-   "San Francisco, Seattle "
+   "Hybrid - San Francisco, New York City, Austin"
   ],
-  "url": "https://stripe.com/jobs/search?gh_jid=7618067",
+  "url": "https://job-boards.greenhouse.io/vercel/jobs/5806749004",
   "posted": "2026-02-18",
   "term": "",
   "level": "full-time",
@@ -57862,6 +57862,24 @@
   "hot": false
  },
  {
+  "company": "Stripe",
+  "title": "Partner Solutions Architect - AWS",
+  "category": "Software Engineering",
+  "locations": [
+   "New York"
+  ],
+  "url": "https://stripe.com/jobs/search?gh_jid=7607761",
+  "posted": "2026-02-12",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-02-12",
+  "fit": 0.219,
+  "target": false,
+  "hot": false
+ },
+ {
   "company": "Vercel",
   "title": "Software Engineer, AI Gateway",
   "category": "Software Engineering",
@@ -57913,24 +57931,6 @@
   "firstSeen": "2026-02-12",
   "fit": 0.321,
   "target": true,
-  "hot": false
- },
- {
-  "company": "Stripe",
-  "title": "Partner Solutions Architect - AWS",
-  "category": "Software Engineering",
-  "locations": [
-   "New York"
-  ],
-  "url": "https://stripe.com/jobs/search?gh_jid=7607761",
-  "posted": "2026-02-12",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-02-12",
-  "fit": 0.219,
-  "target": false,
   "hot": false
  },
  {
@@ -58357,24 +58357,6 @@
   "ghost": true
  },
  {
-  "company": "Replit",
-  "title": "Security Architecture Lead",
-  "category": "Other",
-  "locations": [
-   "Foster City, CA"
-  ],
-  "url": "https://jobs.ashbyhq.com/replit/e62af1d6-6cef-465a-80a1-a2e80e1f54a6",
-  "posted": "2026-02-10",
-  "term": "",
-  "level": "full-time",
-  "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-02-10",
-  "fit": 0.219,
-  "target": false,
-  "hot": false
- },
- {
   "company": "Stripe",
   "title": "Network Solution Specialist",
   "category": "Other",
@@ -58386,6 +58368,24 @@
   "term": "",
   "level": "full-time",
   "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-02-10",
+  "fit": 0.219,
+  "target": false,
+  "hot": false
+ },
+ {
+  "company": "Replit",
+  "title": "Security Architecture Lead",
+  "category": "Other",
+  "locations": [
+   "Foster City, CA"
+  ],
+  "url": "https://jobs.ashbyhq.com/replit/e62af1d6-6cef-465a-80a1-a2e80e1f54a6",
+  "posted": "2026-02-10",
+  "term": "",
+  "level": "full-time",
+  "source": "ashby",
   "isNew": false,
   "firstSeen": "2026-02-10",
   "fit": 0.219,
@@ -58524,6 +58524,24 @@
   "ghost": true
  },
  {
+  "company": "Stripe",
+  "title": "Internal Audit Lead, Merchant Acquirer Limited Purpose Bank (MALPB)",
+  "category": "Other",
+  "locations": [
+   "Atlanta; New York"
+  ],
+  "url": "https://stripe.com/jobs/search?gh_jid=7569605",
+  "posted": "2026-02-09",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-02-09",
+  "fit": 0.219,
+  "target": false,
+  "hot": false
+ },
+ {
   "company": "Ramp",
   "title": "Design Engineer",
   "category": "Design / UX",
@@ -58553,24 +58571,6 @@
   "term": "",
   "level": "full-time",
   "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-02-09",
-  "fit": 0.219,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "Stripe",
-  "title": "Internal Audit Lead, Merchant Acquirer Limited Purpose Bank (MALPB)",
-  "category": "Other",
-  "locations": [
-   "Atlanta; New York"
-  ],
-  "url": "https://stripe.com/jobs/search?gh_jid=7569605",
-  "posted": "2026-02-09",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
   "isNew": false,
   "firstSeen": "2026-02-09",
   "fit": 0.219,
@@ -58786,13 +58786,13 @@
   "ghost": true
  },
  {
-  "company": "Figma",
-  "title": "Solutions Consultant",
+  "company": "Riot Games",
+  "title": "Level Design Lead - VALORANT",
   "category": "Other",
   "locations": [
-   "San Francisco, CA • New York, NY • United States"
+   "Los Angeles, USA"
   ],
-  "url": "https://boards.greenhouse.io/figma/jobs/5783377004?gh_jid=5783377004",
+  "url": "https://www.riotgames.com/en/work-with-us/job/7532239?gh_jid=7532239",
   "posted": "2026-02-06",
   "term": "",
   "level": "full-time",
@@ -58804,13 +58804,13 @@
   "hot": false
  },
  {
-  "company": "Riot Games",
-  "title": "Level Design Lead - VALORANT",
+  "company": "Figma",
+  "title": "Solutions Consultant",
   "category": "Other",
   "locations": [
-   "Los Angeles, USA"
+   "San Francisco, CA • New York, NY • United States"
   ],
-  "url": "https://www.riotgames.com/en/work-with-us/job/7532239?gh_jid=7532239",
+  "url": "https://boards.greenhouse.io/figma/jobs/5783377004?gh_jid=5783377004",
   "posted": "2026-02-06",
   "term": "",
   "level": "full-time",
@@ -59051,6 +59051,24 @@
   "ghost": true
  },
  {
+  "company": "Stripe",
+  "title": "Specialist Solutions Architect, Payments",
+  "category": "Software Engineering",
+  "locations": [
+   "NY, SF, Chicago"
+  ],
+  "url": "https://stripe.com/jobs/search?gh_jid=7377591",
+  "posted": "2026-02-04",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-02-04",
+  "fit": 0.219,
+  "target": false,
+  "hot": false
+ },
+ {
   "company": "Replit",
   "title": "Software Engineer, Enterprise Platform",
   "category": "Software Engineering",
@@ -59076,24 +59094,6 @@
    "San Francisco, CA • New York, NY • United States"
   ],
   "url": "https://boards.greenhouse.io/figma/jobs/5792631004?gh_jid=5792631004",
-  "posted": "2026-02-04",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-02-04",
-  "fit": 0.219,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "Stripe",
-  "title": "Specialist Solutions Architect, Payments",
-  "category": "Software Engineering",
-  "locations": [
-   "NY, SF, Chicago"
-  ],
-  "url": "https://stripe.com/jobs/search?gh_jid=7377591",
   "posted": "2026-02-04",
   "term": "",
   "level": "full-time",
@@ -59381,26 +59381,6 @@
   "ghost": true
  },
  {
-  "company": "ElevenLabs",
-  "title": "Revenue Partnerships",
-  "category": "Other",
-  "locations": [
-   "United States",
-   "New York",
-   "San Francisco"
-  ],
-  "url": "https://jobs.ashbyhq.com/elevenlabs/f73b607d-81fe-4f5c-b04b-0b8c826989bf",
-  "posted": "2026-02-03",
-  "term": "",
-  "level": "full-time",
-  "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-02-03",
-  "fit": 0.219,
-  "target": false,
-  "hot": false
- },
- {
   "company": "Figma",
   "title": "Software Engineer, Developer Experience",
   "category": "Software Engineering",
@@ -59419,13 +59399,15 @@
   "hot": false
  },
  {
-  "company": "Notion",
-  "title": "Corporate Strategic Finance",
+  "company": "ElevenLabs",
+  "title": "Revenue Partnerships",
   "category": "Other",
   "locations": [
-   "San Francisco, California"
+   "United States",
+   "New York",
+   "San Francisco"
   ],
-  "url": "https://jobs.ashbyhq.com/notion/a8acb2fc-2a83-487b-9338-a45f416802b0",
+  "url": "https://jobs.ashbyhq.com/elevenlabs/f73b607d-81fe-4f5c-b04b-0b8c826989bf",
   "posted": "2026-02-03",
   "term": "",
   "level": "full-time",
@@ -59448,6 +59430,24 @@
   "term": "",
   "level": "full-time",
   "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-02-03",
+  "fit": 0.219,
+  "target": false,
+  "hot": false
+ },
+ {
+  "company": "Notion",
+  "title": "Corporate Strategic Finance",
+  "category": "Other",
+  "locations": [
+   "San Francisco, California"
+  ],
+  "url": "https://jobs.ashbyhq.com/notion/a8acb2fc-2a83-487b-9338-a45f416802b0",
+  "posted": "2026-02-03",
+  "term": "",
+  "level": "full-time",
+  "source": "ashby",
   "isNew": false,
   "firstSeen": "2026-02-03",
   "fit": 0.219,
@@ -60780,6 +60780,24 @@
   "ghost": true
  },
  {
+  "company": "Stripe",
+  "title": "Android Engineer, Terminal OS Platform",
+  "category": "Software Engineering",
+  "locations": [
+   "San Francisco, Seattle"
+  ],
+  "url": "https://stripe.com/jobs/search?gh_jid=7557403",
+  "posted": "2026-01-22",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-01-22",
+  "fit": 0.321,
+  "target": true,
+  "hot": false
+ },
+ {
   "company": "ElevenLabs",
   "title": "Growth Generalist",
   "category": "Other",
@@ -60798,24 +60816,6 @@
   "firstSeen": "2026-01-22",
   "fit": 0.219,
   "target": false,
-  "hot": false
- },
- {
-  "company": "Stripe",
-  "title": "Android Engineer, Terminal OS Platform",
-  "category": "Software Engineering",
-  "locations": [
-   "San Francisco, Seattle"
-  ],
-  "url": "https://stripe.com/jobs/search?gh_jid=7557403",
-  "posted": "2026-01-22",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-01-22",
-  "fit": 0.321,
-  "target": true,
   "hot": false
  },
  {
@@ -61063,6 +61063,24 @@
   "ghost": true
  },
  {
+  "company": "Anthropic",
+  "title": "Threat Collections Engineer",
+  "category": "Other",
+  "locations": [
+   "Remote-Friendly (Travel-Required) | San Francisco, CA | Washington, DC"
+  ],
+  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5074937008",
+  "posted": "2026-01-20",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-01-20",
+  "fit": 0.321,
+  "target": true,
+  "hot": false
+ },
+ {
   "company": "Ramp",
   "title": "Software Engineer, Core Product",
   "category": "Software Engineering",
@@ -61134,24 +61152,6 @@
   "isNew": false,
   "firstSeen": "2026-01-20",
   "fit": 0.457,
-  "target": true,
-  "hot": false
- },
- {
-  "company": "Anthropic",
-  "title": "Threat Collections Engineer",
-  "category": "Other",
-  "locations": [
-   "Remote-Friendly (Travel-Required) | San Francisco, CA | Washington, DC"
-  ],
-  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5074937008",
-  "posted": "2026-01-20",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-01-20",
-  "fit": 0.321,
   "target": true,
   "hot": false
  },
@@ -61697,24 +61697,6 @@
   "hot": false
  },
  {
-  "company": "OpenAI",
-  "title": "SMS Prototype Handling Specialist",
-  "category": "Other",
-  "locations": [
-   "San Francisco"
-  ],
-  "url": "https://jobs.ashbyhq.com/openai/eda8b702-16b1-4fec-8444-76969695ac5d",
-  "posted": "2026-01-14",
-  "term": "",
-  "level": "full-time",
-  "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2026-01-14",
-  "fit": 0.219,
-  "target": false,
-  "hot": false
- },
- {
   "company": "Datadog",
   "title": "Datadog for Startups Founding Engineering Lead",
   "category": "Other",
@@ -61726,6 +61708,24 @@
   "term": "",
   "level": "full-time",
   "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-01-14",
+  "fit": 0.219,
+  "target": false,
+  "hot": false
+ },
+ {
+  "company": "OpenAI",
+  "title": "SMS Prototype Handling Specialist",
+  "category": "Other",
+  "locations": [
+   "San Francisco"
+  ],
+  "url": "https://jobs.ashbyhq.com/openai/eda8b702-16b1-4fec-8444-76969695ac5d",
+  "posted": "2026-01-14",
+  "term": "",
+  "level": "full-time",
+  "source": "ashby",
   "isNew": false,
   "firstSeen": "2026-01-14",
   "fit": 0.219,
@@ -61787,6 +61787,24 @@
   "hot": false
  },
  {
+  "company": "Datadog",
+  "title": "Enterprise Sales Executive",
+  "category": "Other",
+  "locations": [
+   "Florida, USA, Remote"
+  ],
+  "url": "https://careers.datadoghq.com/detail/7466155/?gh_jid=7466155",
+  "posted": "2026-01-13",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-01-13",
+  "fit": 0.219,
+  "target": false,
+  "hot": false
+ },
+ {
   "company": "OpenAI",
   "title": "ML Research Engineer - Hardware Codesign",
   "category": "Data / AI / ML",
@@ -61820,24 +61838,6 @@
   "firstSeen": "2026-01-13",
   "fit": 0.457,
   "target": true,
-  "hot": false
- },
- {
-  "company": "Datadog",
-  "title": "Enterprise Sales Executive",
-  "category": "Other",
-  "locations": [
-   "Florida, USA, Remote"
-  ],
-  "url": "https://careers.datadoghq.com/detail/7466155/?gh_jid=7466155",
-  "posted": "2026-01-13",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-01-13",
-  "fit": 0.219,
-  "target": false,
   "hot": false
  },
  {
@@ -61996,6 +61996,24 @@
   "hot": false
  },
  {
+  "company": "Anthropic",
+  "title": "Applied AI Architect, Enterprise Tech",
+  "category": "Data / AI / ML",
+  "locations": [
+   "Boston, MA; New York City, NY; San Francisco, CA | New York City, NY; Seattle, WA; Washington, DC"
+  ],
+  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5065835008",
+  "posted": "2026-01-12",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2026-01-12",
+  "fit": 0.321,
+  "target": false,
+  "hot": false
+ },
+ {
   "company": "Ramp",
   "title": "Applied AI Engineer",
   "category": "Data / AI / ML",
@@ -62012,24 +62030,6 @@
   "firstSeen": "2026-01-12",
   "fit": 0.321,
   "target": true,
-  "hot": false
- },
- {
-  "company": "Anthropic",
-  "title": "Applied AI Architect, Enterprise Tech",
-  "category": "Data / AI / ML",
-  "locations": [
-   "Boston, MA; New York City, NY; San Francisco, CA | New York City, NY; Seattle, WA; Washington, DC"
-  ],
-  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5065835008",
-  "posted": "2026-01-12",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2026-01-12",
-  "fit": 0.321,
-  "target": false,
   "hot": false
  },
  {
@@ -63328,6 +63328,24 @@
   "ghost": true
  },
  {
+  "company": "Roblox",
+  "title": "[2026] Data Scientist, Social ",
+  "category": "Data / AI / ML",
+  "locations": [
+   "San Mateo, CA, United States"
+  ],
+  "url": "https://careers.roblox.com/jobs/7463634?gh_jid=7463634",
+  "posted": "2025-12-16",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2025-12-16",
+  "fit": 0.321,
+  "target": false,
+  "hot": false
+ },
+ {
   "company": "Ramp",
   "title": "Customer Activation | Partnerships ",
   "category": "Other",
@@ -63345,24 +63363,6 @@
   "isNew": false,
   "firstSeen": "2025-12-16",
   "fit": 0.219,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "Roblox",
-  "title": "[2026] Data Scientist, Social ",
-  "category": "Data / AI / ML",
-  "locations": [
-   "San Mateo, CA, United States"
-  ],
-  "url": "https://careers.roblox.com/jobs/7463634?gh_jid=7463634",
-  "posted": "2025-12-16",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2025-12-16",
-  "fit": 0.321,
   "target": false,
   "hot": false
  },
@@ -64710,24 +64710,6 @@
   "ghost": true
  },
  {
-  "company": "OpenAI",
-  "title": "Research Engineer / Research Scientist- Personal AGI (Post Training)",
-  "category": "Data / AI / ML",
-  "locations": [
-   "San Francisco"
-  ],
-  "url": "https://jobs.ashbyhq.com/openai/1c516e9f-c97d-4a40-8529-9871dac615a5",
-  "posted": "2025-12-01",
-  "term": "",
-  "level": "full-time",
-  "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2025-12-01",
-  "fit": 0.321,
-  "target": true,
-  "hot": false
- },
- {
   "company": "Datadog",
   "title": "Enterprise Sales Executive (FED)",
   "category": "Other",
@@ -64779,6 +64761,24 @@
   "firstSeen": "2025-12-01",
   "fit": 0.219,
   "target": false,
+  "hot": false
+ },
+ {
+  "company": "OpenAI",
+  "title": "Research Engineer / Research Scientist- Personal AGI (Post Training)",
+  "category": "Data / AI / ML",
+  "locations": [
+   "San Francisco"
+  ],
+  "url": "https://jobs.ashbyhq.com/openai/1c516e9f-c97d-4a40-8529-9871dac615a5",
+  "posted": "2025-12-01",
+  "term": "",
+  "level": "full-time",
+  "source": "ashby",
+  "isNew": false,
+  "firstSeen": "2025-12-01",
+  "fit": 0.321,
+  "target": true,
   "hot": false
  },
  {
@@ -65537,13 +65537,13 @@
   "hot": false
  },
  {
-  "company": "Vercel",
-  "title": "Software Engineer, Agent",
+  "company": "Stripe",
+  "title": "Software Engineer, Bridge",
   "category": "Software Engineering",
   "locations": [
-   "Hybrid - San Francisco"
+   "San Francisco, NY, Seattle"
   ],
-  "url": "https://job-boards.greenhouse.io/vercel/jobs/5704320004",
+  "url": "https://stripe.com/jobs/search?gh_jid=7277110",
   "posted": "2025-11-20",
   "term": "",
   "level": "full-time",
@@ -65555,13 +65555,13 @@
   "hot": false
  },
  {
-  "company": "Stripe",
-  "title": "Software Engineer, Bridge",
+  "company": "Vercel",
+  "title": "Software Engineer, Agent",
   "category": "Software Engineering",
   "locations": [
-   "San Francisco, NY, Seattle"
+   "Hybrid - San Francisco"
   ],
-  "url": "https://stripe.com/jobs/search?gh_jid=7277110",
+  "url": "https://job-boards.greenhouse.io/vercel/jobs/5704320004",
   "posted": "2025-11-20",
   "term": "",
   "level": "full-time",
@@ -67510,24 +67510,6 @@
   "hot": false
  },
  {
-  "company": "Databricks",
-  "title": "Software Engineer - GenAI inference ",
-  "category": "Software Engineering",
-  "locations": [
-   "San Francisco, California"
-  ],
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8202670002",
-  "posted": "2025-10-08",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
-  "isNew": false,
-  "firstSeen": "2025-10-08",
-  "fit": 0.457,
-  "target": true,
-  "hot": false
- },
- {
   "company": "OpenAI",
   "title": "Software Engineer, Inference – AMD GPU Enablement ",
   "category": "Software Engineering",
@@ -67539,6 +67521,24 @@
   "term": "",
   "level": "full-time",
   "source": "ashby",
+  "isNew": false,
+  "firstSeen": "2025-10-08",
+  "fit": 0.457,
+  "target": true,
+  "hot": false
+ },
+ {
+  "company": "Databricks",
+  "title": "Software Engineer - GenAI inference ",
+  "category": "Software Engineering",
+  "locations": [
+   "San Francisco, California"
+  ],
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8202670002",
+  "posted": "2025-10-08",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
   "isNew": false,
   "firstSeen": "2025-10-08",
   "fit": 0.457,
@@ -68337,24 +68337,6 @@
   "hot": false
  },
  {
-  "company": "OpenAI",
-  "title": "Research Engineer, Codex",
-  "category": "Data / AI / ML",
-  "locations": [
-   "San Francisco"
-  ],
-  "url": "https://jobs.ashbyhq.com/openai/793964ae-d40b-45e3-9798-84f4b6da48c5",
-  "posted": "2025-08-05",
-  "term": "",
-  "level": "full-time",
-  "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2025-08-05",
-  "fit": 0.321,
-  "target": true,
-  "hot": false
- },
- {
   "company": "Datadog",
   "title": "Enterprise Security Sales Specialist",
   "category": "Other",
@@ -68370,6 +68352,24 @@
   "firstSeen": "2025-08-05",
   "fit": 0.219,
   "target": false,
+  "hot": false
+ },
+ {
+  "company": "OpenAI",
+  "title": "Research Engineer, Codex",
+  "category": "Data / AI / ML",
+  "locations": [
+   "San Francisco"
+  ],
+  "url": "https://jobs.ashbyhq.com/openai/793964ae-d40b-45e3-9798-84f4b6da48c5",
+  "posted": "2025-08-05",
+  "term": "",
+  "level": "full-time",
+  "source": "ashby",
+  "isNew": false,
+  "firstSeen": "2025-08-05",
+  "fit": 0.321,
+  "target": true,
   "hot": false
  },
  {
@@ -70233,6 +70233,24 @@
   "hot": false
  },
  {
+  "company": "Datadog",
+  "title": "AI Research Scientist - Datadog AI Research (DAIR)",
+  "category": "Data / AI / ML",
+  "locations": [
+   "New York, New York, USA"
+  ],
+  "url": "https://careers.datadoghq.com/detail/6572669/?gh_jid=6572669",
+  "posted": "2025-01-24",
+  "term": "",
+  "level": "full-time",
+  "source": "greenhouse",
+  "isNew": false,
+  "firstSeen": "2025-01-24",
+  "fit": 0.321,
+  "target": false,
+  "hot": false
+ },
+ {
   "company": "OpenAI",
   "title": "Data Scientist, Product",
   "category": "Data / AI / ML",
@@ -70245,24 +70263,6 @@
   "term": "",
   "level": "full-time",
   "source": "ashby",
-  "isNew": false,
-  "firstSeen": "2025-01-24",
-  "fit": 0.321,
-  "target": false,
-  "hot": false
- },
- {
-  "company": "Datadog",
-  "title": "AI Research Scientist - Datadog AI Research (DAIR)",
-  "category": "Data / AI / ML",
-  "locations": [
-   "New York, New York, USA"
-  ],
-  "url": "https://careers.datadoghq.com/detail/6572669/?gh_jid=6572669",
-  "posted": "2025-01-24",
-  "term": "",
-  "level": "full-time",
-  "source": "greenhouse",
   "isNew": false,
   "firstSeen": "2025-01-24",
   "fit": 0.321,
