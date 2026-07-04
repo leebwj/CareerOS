@@ -39,8 +39,9 @@
   input[type=search]:focus, select:focus { border-color:var(--cobalt); }
   .chip { font-family:"Geist Mono",monospace; font-size:11.5px; letter-spacing:.06em; padding:6px 11px; border-radius:999px; border:1px solid var(--line); color:var(--muted); background:transparent; cursor:pointer; }
   .chip.on { border-color:var(--cobalt); color:var(--cobalt-deep); background:rgba(111,136,207,.12); }
-  .util { margin-left:auto; display:flex; gap:8px; }
-  .util button { background:none; border:1px solid var(--line); color:var(--faint); border-radius:8px; padding:6px 10px; font-family:"Geist Mono",monospace; font-size:11px; cursor:pointer; }
+  /* action buttons — same pill shape/height as the filter chips, grouped right */
+  .util { margin-left:auto; display:flex; gap:6px; flex-wrap:wrap; }
+  .util button { background:transparent; border:1px solid var(--line); color:var(--muted); border-radius:999px; padding:7px 12px; font-family:"Geist Mono",monospace; font-size:11.5px; letter-spacing:.06em; cursor:pointer; }
   .util button:hover { color:var(--ink); border-color:var(--faint); }
   #sync.on { color:var(--green); border-color:rgba(127,191,142,.5); }
 
@@ -148,8 +149,9 @@
     clearTimeout(syncTimer);
     syncState = "syncing"; setSyncBtn();
     syncTimer = setTimeout(() => {
-      // no-cors + text/plain = simple request (no preflight); fire-and-forget
-      fetch(syncUrl, { method: "POST", mode: "no-cors", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify({ rows: trackedRows() }) })
+      // form-encoded = the transport Apps Script reliably preserves through its
+      // 302 redirect (text/plain bodies can get dropped). no-cors, fire-and-forget.
+      fetch(syncUrl, { method: "POST", mode: "no-cors", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: "payload=" + encodeURIComponent(JSON.stringify({ rows: trackedRows() })) })
         .then(() => { syncState = "synced"; setSyncBtn(); })
         .catch(() => { syncState = "error"; setSyncBtn(); });
     }, 1500);
@@ -339,11 +341,8 @@
 
   // controls
   ["q", "cat", "lvl", "term"].forEach((id) => document.getElementById(id).addEventListener("input", render));
+  // Undo is button-only — no global Ctrl+Z (a reflex Ctrl+Z must never wipe tracked roles)
   document.getElementById("undo").onclick = doUndo;
-  document.addEventListener("keydown", (e) => {
-    const t = document.activeElement?.tagName;
-    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "z" && !/INPUT|TEXTAREA|SELECT/.test(t || "")) { e.preventDefault(); doUndo(); }
-  });
   document.getElementById("fHot").onclick = () => { fHot = !fHot; render(); };
   document.getElementById("fNew").onclick = () => { fNew = !fNew; render(); };
   document.getElementById("fTgt").onclick = () => { fTgt = !fTgt; render(); };
