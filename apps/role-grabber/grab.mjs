@@ -40,6 +40,10 @@ const ATS_TARGETS = {
     Replit: "replit", Cohere: "cohere", ElevenLabs: "elevenlabs",
   },
   lever: { Palantir: "palantir" },
+  // SmartRecruiters: { Company: "companyId" } — id is often oddly suffixed (e.g. Ubisoft2)
+  smartrecruiters: { Ubisoft: "Ubisoft2" },
+  // Workday: { Company: { tenant, wd, site } } — POST endpoint, per-tenant
+  workday: { NVIDIA: { tenant: "nvidia", wd: 5, site: "NVIDIAExternalCareerSite" } },
 };
 
 // knockout: senior+ roles are never relevant (intern/new-grad/early-career focus)
@@ -59,7 +63,7 @@ const DESIGN_RX = /\b(product design|ux|ui designer|user experience|interaction 
 // tech titles (supply chain, procurement, accounting, warehouse, solutions
 // architect) are deliberately NOT excluded — e.g. "ML Engineer - Supply Chain",
 // "Data Warehouse Software Engineer", "Software Engineer, Accounting" must survive.
-const EXCLUDE_RX = /\b(account executive|account manager|\baccountant\b|bookkeeper|sales representative|sales associate|sales manager|sales lead|sales development|sales engineer|account partner|\bsdr\b|\bbdr\b|business development representative|business development manager|pre[- ]?sales|sales operations|revenue operations|\brevops\b|revenue analyst|\brecruiter\b|recruiting|talent acquisition|\bsourcer\b|human resources|people operations|people partner|payroll|benefits administrator|compensation analyst|legal counsel|\bparalegal\b|\battorney\b|law clerk|financial analyst|finance manager|treasury|tax associate|tax analyst|\bauditor\b|\bactuary\b|marketing manager|marketing associate|marketing specialist|product marketing|developer marketing|growth marketing|brand manager|content strategist|content writer|copywriter|social media|public relations|communications manager|customer success|customer support|customer experience|support specialist|technical support|help desk|privacy counsel|\bcounsel\b|\bgrc\b|accounts payable|accounts receivable|marketing lead|influencer marketing|creator marketing|\brvp\b|regional vice president|inside sales|field sales|brand ambassador|grant writer|technical writer|proposal writer|executive assistant|administrative assistant|office manager|receptionist|facilities|\bbuyer\b|logistics coordinator|clinical|registered nurse|\bphysician\b|therapist|\bteacher\b|\btutor\b|\bbarista\b|\bcashier\b|retail associate|store manager|delivery driver|maintenance technician|field technician|installation technician|phlebotomist|dental|pharmac)\b/i;
+const EXCLUDE_RX = /\b(account executive|account manager|\baccountant\b|bookkeeper|sales representative|sales associate|sales manager|sales lead|sales development|sales engineer|account partner|\bsdr\b|\bbdr\b|business development representative|business development manager|pre[- ]?sales|sales operations|revenue operations|\brevops\b|revenue analyst|\brecruiter\b|recruiting|talent acquisition|\bsourcer\b|human resources|human resource|\bhr\b|business partner|people operations|people partner|people team|payroll|benefits administrator|compensation analyst|financial planning|fp&a|legal counsel|\bparalegal\b|\battorney\b|law clerk|financial analyst|finance manager|treasury|tax associate|tax analyst|\bauditor\b|\bactuary\b|marketing manager|marketing associate|marketing specialist|product marketing|developer marketing|growth marketing|brand manager|content strategist|content writer|copywriter|social media|public relations|communications manager|customer success|customer support|customer experience|support specialist|technical support|help desk|privacy counsel|\bcounsel\b|\bgrc\b|accounts payable|accounts receivable|marketing lead|influencer marketing|creator marketing|\brvp\b|regional vice president|inside sales|field sales|brand ambassador|grant writer|technical writer|proposal writer|executive assistant|administrative assistant|office manager|receptionist|facilities|\bbuyer\b|logistics coordinator|clinical|registered nurse|\bphysician\b|therapist|\bteacher\b|\btutor\b|\bbarista\b|\bcashier\b|retail associate|store manager|delivery driver|maintenance technician|field technician|installation technician|phlebotomist|dental|pharmac)\b/i;
 
 function categorize(title, sourceCategory) {
   if (ART_RX.test(title)) return "Art / Animation / VFX";
@@ -96,12 +100,16 @@ function termFromTitle(t) {
 // ── US filter ────────────────────────────────────────────────────────────────
 // ATS boards use bare city names ("San Francisco") — recognize the majors too.
 const US_CITIES = /\b(san francisco|new york|nyc|seattle|mountain view|palo alto|menlo park|cupertino|redmond|bellevue|austin|chicago|boston|los angeles|santa monica|irvine|san diego|san jose|sunnyvale|denver|miami|washington|philadelphia|pittsburgh|atlanta|dallas|houston|portland|brooklyn|cambridge|durham|raleigh|salt lake|phoenix|minneapolis|nashville)\b/i;
+// the real 50 states + DC/territories — precise, so foreign region codes
+// (German "RP", Canadian "QC") that look like US states don't sneak through.
+const US_STATE = /,\s*(AL|AK|AZ|AR|CA|CO|CT|DE|FL|GA|HI|ID|IL|IN|IA|KS|KY|LA|ME|MD|MA|MI|MN|MS|MO|MT|NE|NV|NH|NJ|NM|NY|NC|ND|OH|OK|OR|PA|RI|SC|SD|TN|TX|UT|VT|VA|WA|WV|WI|WY|DC|PR)\b/;
 function isUS(locations) {
   if (!locations || locations.length === 0) return false;
   return locations.some((raw) => {
     const l = String(raw).trim();
-    if (/\b(canada|uk|united kingdom|london|toronto|vancouver|india|singapore|germany|munich|berlin|paris|france|ireland|dublin|australia|sydney|japan|tokyo|korea|seoul|mexico|brazil|netherlands|amsterdam|zurich|switzerland|spain|israel|tel aviv|poland|warsaw)\b/i.test(l)) return false;
-    return /,\s*[A-Z]{2}(\s|$)/.test(l) || /\b(usa|united states|u\.s\.)\b/i.test(l) || /^remote$/i.test(l) || /remote.*(us|usa|united states)/i.test(l) || /\b(sf bay|bay area)\b/i.test(l) || US_CITIES.test(l);
+    // explicit non-US (global ATS boards return worldwide roles)
+    if (/\b(canada|montr[eé]al|qu[eé]bec|ontario|toronto|ottawa|vancouver|calgary|edmonton|winnipeg|uk|united kingdom|england|scotland|london|manchester|india|bangalore|bengaluru|hyderabad|pune|gurgaon|noida|singapore|germany|mainz|munich|berlin|hamburg|frankfurt|paris|france|lyon|bordeaux|ireland|dublin|australia|sydney|melbourne|japan|tokyo|osaka|korea|seoul|mexico|guadalajara|brazil|netherlands|amsterdam|zurich|switzerland|geneva|spain|barcelona|madrid|israel|tel aviv|poland|warsaw|krakow|china|shanghai|beijing|shenzhen|hong kong|taiwan|taipei|philippines|manila|vietnam|malaysia|thailand|bangkok|new zealand|sweden|stockholm|finland|helsinki|norway|denmark|copenhagen|italy|rome|milan|portugal|lisbon|romania|bucharest|belgium|brussels|austria|vienna|czech|prague|turkey|istanbul|uae|dubai|abu dhabi|argentina|colombia|chile|egypt|nigeria|south africa|kenya)\b/i.test(l)) return false;
+    return US_STATE.test(l) || /\b(usa|united states|u\.s\.)\b/i.test(l) || /^remote$/i.test(l) || /remote.*(us|usa|united states)/i.test(l) || /\b(sf bay|bay area)\b/i.test(l) || US_CITIES.test(l);
   });
 }
 
@@ -209,6 +217,71 @@ async function fromLever(company, site) {
   }));
 }
 
+async function fromSmartRecruiters(company, id) {
+  // paginate: 100/page, a couple pages is plenty for early-career filtering
+  const out = [];
+  for (let offset = 0; offset < 300; offset += 100) {
+    const d = await fetchJSON(`https://api.smartrecruiters.com/v1/companies/${id}/postings?limit=100&offset=${offset}`);
+    const page = d.content || [];
+    out.push(...page);
+    if (page.length < 100) break;
+  }
+  return out.filter((j) => !SENIOR_RX.test(j.name)).map((j) => ({
+    company,
+    title: j.name,
+    category: categorize(j.name, ""),
+    locations: [[j.location?.city, j.location?.region].filter(Boolean).join(", ") || (j.location?.remote ? "Remote" : "")].filter(Boolean),
+    url: `https://jobs.smartrecruiters.com/${id}/${j.id}`,
+    posted: String(j.releasedDate || "").slice(0, 10),
+    term: termFromTitle(j.name),
+    level: levelFromTitle(j.name),
+    source: "smartrecruiters",
+  }));
+}
+
+// Workday "postedOn" is relative text ("Posted 3 Days Ago") → approximate ISO date
+function workdayPosted(text) {
+  if (!text) return "";
+  const t = text.toLowerCase();
+  if (/today/.test(t)) return new Date().toISOString().slice(0, 10);
+  if (/yesterday/.test(t)) return new Date(Date.now() - 864e5).toISOString().slice(0, 10);
+  const m = t.match(/(\d+)\+?\s*day/);
+  if (m) return new Date(Date.now() - +m[1] * 864e5).toISOString().slice(0, 10);
+  const mo = t.match(/(\d+)\+?\s*month/);
+  if (mo) return new Date(Date.now() - +mo[1] * 30 * 864e5).toISOString().slice(0, 10);
+  return "";
+}
+
+async function fromWorkday(company, { tenant, wd, site }) {
+  const api = `https://${tenant}.wd${wd}.myworkdayjobs.com/wday/cxs/${tenant}/${site}/jobs`;
+  const base = `https://${tenant}.wd${wd}.myworkdayjobs.com/en-US/${site}`;
+  const out = [];
+  // large tenants (NVIDIA ~2000) → cap at a sample of the newest ~200
+  for (let offset = 0; offset < 200; offset += 20) {
+    const r = await fetch(api, {
+      method: "POST",
+      headers: { "content-type": "application/json", "user-agent": "careeros-role-grabber" },
+      body: JSON.stringify({ appliedFacets: {}, limit: 20, offset, searchText: "" }),
+    });
+    if (!r.ok) throw new Error(`${r.status} workday ${company}`);
+    const d = await r.json();
+    const page = d.jobPostings || [];
+    out.push(...page);
+    if (page.length < 20) break;
+  }
+  return out.filter((j) => !SENIOR_RX.test(j.title)).map((j) => ({
+    company,
+    title: j.title,
+    category: categorize(j.title, ""),
+    locations: [j.locationsText || ""].filter(Boolean),
+    url: base + j.externalPath,
+    posted: workdayPosted(j.postedOn),
+    term: termFromTitle(j.title),
+    level: levelFromTitle(j.title),
+    source: "workday",
+  }));
+}
+
 // ── deterministic fit scoring (title tier + skills + recency + target + level)
 // Tiers not fake-precision percentages — the #1 complaint about commercial
 // match scores is inflated exactness.
@@ -280,6 +353,10 @@ for (const [company, org] of Object.entries(ATS_TARGETS.ashby))
   atsJobs.push(fromAshby(company, org).then((r) => { atsCounts[company] = r.length; collectedATS.push(...r); }).catch((e) => errors.push(`ashby:${company}: ${e.message}`)));
 for (const [company, site] of Object.entries(ATS_TARGETS.lever))
   atsJobs.push(fromLever(company, site).then((r) => { atsCounts[company] = r.length; collectedATS.push(...r); }).catch((e) => errors.push(`lever:${company}: ${e.message}`)));
+for (const [company, id] of Object.entries(ATS_TARGETS.smartrecruiters || {}))
+  atsJobs.push(fromSmartRecruiters(company, id).then((r) => { atsCounts[company] = r.length; collectedATS.push(...r); }).catch((e) => errors.push(`sr:${company}: ${e.message}`)));
+for (const [company, cfg] of Object.entries(ATS_TARGETS.workday || {}))
+  atsJobs.push(fromWorkday(company, cfg).then((r) => { atsCounts[company] = r.length; collectedATS.push(...r); }).catch((e) => errors.push(`wd:${company}: ${e.message}`)));
 
 await Promise.all([
   ...atsJobs,
