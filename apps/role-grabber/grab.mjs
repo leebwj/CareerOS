@@ -33,17 +33,34 @@ const ATS_TARGETS = {
     Figma: "figma", Stripe: "stripe", Anthropic: "anthropic", "Scale AI": "scaleai",
     Roblox: "roblox", "Epic Games": "epicgames", "Riot Games": "riotgames",
     Vercel: "vercel", Databricks: "databricks", Datadog: "datadog", Duolingo: "duolingo",
+    // v2 (research-verified 2026-07-04) — games + VFX + tech
+    "Rockstar Games": "rockstargames", "2K": "2k", "Take-Two": "taketwo", Nintendo: "nintendo",
+    "Naughty Dog": "naughtydog", "Insomniac Games": "insomniac", Bungie: "bungie", "Bandai Namco": "bandainamco",
+    Krafton: "krafton", "NetEase Games": "neteasegames", Gearbox: "gearbox",
+    "Sony Pictures Imageworks": "sonypicturesimageworks", "Sony Pictures Animation": "sonypicturesanimation", Laika: "laika",
+    Discord: "discord", Reddit: "reddit", Twitch: "twitch", Cloudflare: "cloudflare", MongoDB: "mongodb",
+    Twilio: "twilio", Pinterest: "pinterest", Coinbase: "coinbase", Robinhood: "robinhood", Dropbox: "dropbox", GitLab: "gitlab",
   },
   ashby: {
     OpenAI: "openai", Notion: "notion", Linear: "linear", Ramp: "ramp",
     Perplexity: "perplexity", Cursor: "cursor", Supabase: "supabase",
-    Replit: "replit", Cohere: "cohere", ElevenLabs: "elevenlabs",
+    Replit: "replit", Cohere: "cohere", ElevenLabs: "elevenlabs", Snowflake: "snowflake",
   },
-  lever: { Palantir: "palantir" },
-  // SmartRecruiters: { Company: "companyId" } — id is often oddly suffixed (e.g. Ubisoft2)
-  smartrecruiters: { Ubisoft: "Ubisoft2" },
-  // Workday: { Company: { tenant, wd, site } } — POST endpoint, per-tenant
-  workday: { NVIDIA: { tenant: "nvidia", wd: 5, site: "NVIDIAExternalCareerSite" } },
+  lever: { Palantir: "palantir", Spotify: "spotify", Larian: "larian", Illumination: "illumination" },
+  // SmartRecruiters: { Company: "companyId" } — CASE-SENSITIVE, oddly suffixed (Ubisoft2)
+  smartrecruiters: { Ubisoft: "Ubisoft2", "CD Projekt Red": "CDPROJEKTRED", HoYoverse: "HoYoverse", "Rodeo FX": "RodeoFX", "Weta Workshop": "WetaWorkshop" },
+  // Workday: { Company: { tenant, wd, site } } — POST; wd number is per-tenant (Pixar = wd501!)
+  workday: {
+    NVIDIA: { tenant: "nvidia", wd: 5, site: "NVIDIAExternalCareerSite" },
+    Adobe: { tenant: "adobe", wd: 5, site: "external_experienced" },
+    Intel: { tenant: "intel", wd: 1, site: "External" },
+    Disney: { tenant: "disney", wd: 5, site: "disneycareer" },
+    Autodesk: { tenant: "autodesk", wd: 1, site: "Ext" },
+    "Warner Bros Games": { tenant: "warnerbros", wd: 5, site: "global" },
+    Pixar: { tenant: "pixar", wd: 501, site: "Pixar_External_Career_Site" },
+  },
+  workable: { "Square Enix": "square-enix" },
+  recruitee: { Framestore: "framestore" },
 };
 
 // knockout: senior+ roles are never relevant (intern/new-grad/early-career focus)
@@ -282,6 +299,42 @@ async function fromWorkday(company, { tenant, wd, site }) {
   }));
 }
 
+async function fromWorkable(company, account) {
+  const r = await fetch(`https://apply.workable.com/api/v3/accounts/${account}/jobs`, {
+    method: "POST",
+    headers: { "content-type": "application/json", "user-agent": "careeros-role-grabber" },
+    body: JSON.stringify({ query: "", location: [], department: [], worktype: [], remote: [] }),
+  });
+  if (!r.ok) throw new Error(`${r.status} workable ${company}`);
+  const d = await r.json();
+  return (d.results || []).filter((j) => !SENIOR_RX.test(j.title)).map((j) => ({
+    company,
+    title: j.title,
+    category: categorize(j.title, ""),
+    locations: [j.location ? [j.location.city, j.location.region || j.location.country].filter(Boolean).join(", ") : (j.remote ? "Remote" : "")].filter(Boolean),
+    url: `https://apply.workable.com/${account}/j/${j.shortcode}/`,
+    posted: String(j.published || j.created_at || "").slice(0, 10),
+    term: termFromTitle(j.title),
+    level: levelFromTitle(j.title),
+    source: "workable",
+  }));
+}
+
+async function fromRecruitee(company, subdomain) {
+  const d = await fetchJSON(`https://${subdomain}.recruitee.com/api/offers/`);
+  return (d.offers || []).filter((j) => !SENIOR_RX.test(j.title)).map((j) => ({
+    company,
+    title: j.title,
+    category: categorize(j.title, ""),
+    locations: [j.location || [j.city, j.country_code].filter(Boolean).join(", ")].filter(Boolean),
+    url: j.careers_url || j.careers_apply_url || j.url,
+    posted: String(j.published_at || "").slice(0, 10),
+    term: termFromTitle(j.title),
+    level: levelFromTitle(j.title),
+    source: "recruitee",
+  }));
+}
+
 // ── deterministic fit scoring (title tier + skills + recency + target + level)
 // Tiers not fake-precision percentages — the #1 complaint about commercial
 // match scores is inflated exactness.
@@ -357,6 +410,10 @@ for (const [company, id] of Object.entries(ATS_TARGETS.smartrecruiters || {}))
   atsJobs.push(fromSmartRecruiters(company, id).then((r) => { atsCounts[company] = r.length; collectedATS.push(...r); }).catch((e) => errors.push(`sr:${company}: ${e.message}`)));
 for (const [company, cfg] of Object.entries(ATS_TARGETS.workday || {}))
   atsJobs.push(fromWorkday(company, cfg).then((r) => { atsCounts[company] = r.length; collectedATS.push(...r); }).catch((e) => errors.push(`wd:${company}: ${e.message}`)));
+for (const [company, account] of Object.entries(ATS_TARGETS.workable || {}))
+  atsJobs.push(fromWorkable(company, account).then((r) => { atsCounts[company] = r.length; collectedATS.push(...r); }).catch((e) => errors.push(`wk:${company}: ${e.message}`)));
+for (const [company, sub] of Object.entries(ATS_TARGETS.recruitee || {}))
+  atsJobs.push(fromRecruitee(company, sub).then((r) => { atsCounts[company] = r.length; collectedATS.push(...r); }).catch((e) => errors.push(`rc:${company}: ${e.message}`)));
 
 await Promise.all([
   ...atsJobs,
