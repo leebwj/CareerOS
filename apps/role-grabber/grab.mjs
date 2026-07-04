@@ -46,10 +46,23 @@ const ATS_TARGETS = {
 const SENIOR_RX = /\b(senior|staff|principal|director|manager|head of|vp|vice president|distinguished|sr\.?|lead architect)\b/i;
 
 // ── category mapping (Brian's scope: broad — every bucket matters) ──────────
-const GAME_RX = /\b(game|graphics|render(ing)?|technical artist|shader|unreal|unity|3d)\b/i;
-const DESIGN_RX = /\b(product design|ux|ui designer|user experience|interaction design|visual design|brand design|graphic design)\b/i;
+const GAME_RX = /\b(game|graphics|render(ing)?|technical artist|shader|unreal|unity|3d|gameplay|game engine)\b/i;
+// pure art/creative roles Brian added to scope (2026-07-04) — niche but wanted
+const ART_RX = /\b(3d artist|character artist|environment artist|concept artist|texture artist|lighting artist|vfx artist|fx artist|cg artist|cgi artist|digital sculptor|3d modell?er|character modell?er|animator|character animator|technical animator|look[- ]?dev|\brigger\b|rigging artist|character td|creature td|compositor|matte painter|simulation artist|storyboard artist|3d generalist|game artist|game designer)\b/i;
+const DESIGN_RX = /\b(product design|ux|ui designer|user experience|interaction design|visual design|brand design|graphic design|\bdesigner\b|design engineer)\b/i;
+
+// ── inbox relevance gate — DROP wildly-unrelated roles so the inbox stays clean.
+// GUARDRAIL: exclude by SPECIFIC phrase/qualifier, NEVER by bare "engineer"/
+// "developer" — every real tech title must survive. Verified against category
+// counts before shipping (Software Eng + Data/AI/ML must stay ~unchanged).
+// NOTE: only CLEARLY non-tech phrases here. Domain words that appear in real
+// tech titles (supply chain, procurement, accounting, warehouse, solutions
+// architect) are deliberately NOT excluded — e.g. "ML Engineer - Supply Chain",
+// "Data Warehouse Software Engineer", "Software Engineer, Accounting" must survive.
+const EXCLUDE_RX = /\b(account executive|account manager|\baccountant\b|bookkeeper|sales representative|sales associate|sales manager|sales lead|sales development|sales engineer|account partner|\bsdr\b|\bbdr\b|business development representative|business development manager|pre[- ]?sales|sales operations|revenue operations|\brevops\b|revenue analyst|\brecruiter\b|recruiting|talent acquisition|\bsourcer\b|human resources|people operations|people partner|payroll|benefits administrator|compensation analyst|legal counsel|\bparalegal\b|\battorney\b|law clerk|financial analyst|finance manager|treasury|tax associate|tax analyst|\bauditor\b|\bactuary\b|marketing manager|marketing associate|marketing specialist|product marketing|developer marketing|growth marketing|brand manager|content strategist|content writer|copywriter|social media|public relations|communications manager|customer success|customer support|customer experience|support specialist|technical support|help desk|privacy counsel|\bcounsel\b|\bgrc\b|accounts payable|accounts receivable|marketing lead|influencer marketing|creator marketing|\brvp\b|regional vice president|inside sales|field sales|brand ambassador|grant writer|technical writer|proposal writer|executive assistant|administrative assistant|office manager|receptionist|facilities|\bbuyer\b|logistics coordinator|clinical|registered nurse|\bphysician\b|therapist|\bteacher\b|\btutor\b|\bbarista\b|\bcashier\b|retail associate|store manager|delivery driver|maintenance technician|field technician|installation technician|phlebotomist|dental|pharmac)\b/i;
 
 function categorize(title, sourceCategory) {
+  if (ART_RX.test(title)) return "Art / Animation / VFX";
   if (GAME_RX.test(title)) return "Graphics / Game / 3D";
   if (DESIGN_RX.test(title)) return "Design / UX";
   const c = (sourceCategory || "").toLowerCase();
@@ -59,7 +72,7 @@ function categorize(title, sourceCategory) {
   if (c.includes("product")) return "Product";
   if (c.includes("quant")) return "Quant";
   if (c.includes("hardware")) return "Hardware";
-  if (/\b(software|swe|full[- ]?stack|front[- ]?end|back[- ]?end|infrastructure|platform|web develop|mobile|ios|android|founding engineer)\b/i.test(title)) return "Software Engineering";
+  if (/\b(software|swe|full[- ]?stack|front[- ]?end|back[- ]?end|infrastructure|platform|web develop|mobile|ios|android|founding engineer|security engineer|systems engineer|devops|site reliability|\bsre\b|cloud engineer|network engineer|\bqa\b|test engineer|automation engineer|embedded|firmware|solutions architect|application engineer|forward deployed)\b/i.test(title)) return "Software Engineering";
   if (/\b(data|machine learning|\bml\b|\bai\b|research)\b/i.test(title)) return "Data / AI / ML";
   if (/\bproduct manager\b/i.test(title)) return "Product";
   return "Other";
@@ -210,8 +223,12 @@ const TARGETS = new RegExp("\\b(" + [
   "anthropic", "openai", "perplexity", "cursor", "cohere", "elevenlabs", "scale ai", "mistral", "hugging face", "runway", "midjourney", "character.ai", "together ai", "supabase", "replit",
   // game studios
   "electronic arts", "ea sports", "ubisoft", "activision", "blizzard", "take-two", "rockstar", "2k games", "bungie", "insomniac", "naughty dog", "santa monica studio", "sony interactive", "playstation", "bethesda", "zenimax", "respawn", "id software", "sucker punch", "343 industries", "sledgehammer", "riot games", "epic games", "roblox", "valve", "nintendo", "tencent", "square enix", "capcom", "bandai namco", "supercell", "zynga", "scopely", "hoyoverse", "mihoyo", "netease", "niantic", "magic leap",
+  "sega", "larian", "fromsoftware", "from software", "cd projekt", "remedy", "obsidian", "gearbox", "playground games", "turn 10", "guerrilla", "media molecule", "arkane", "crystal dynamics", "kojima productions", "krafton", "mojang", "the coalition", "bioware", "wizards of the coast", "double fine", "supergiant", "annapurna", "devolver", "innersloth", "moon studios",
   // graphics / VFX / animation / 3D
   "pixar", "dreamworks", "industrial light", "lucasfilm", "weta", "autodesk", "sidefx", "framestore", "dneg", "walt disney", "disney animation", "sony pictures imageworks", "unity",
+  "digital domain", "blur studio", "method studios", "cinesite", "animal logic", "rodeo fx", "scanline", "image engine", "\\bmpc\\b", "pixomondo", "laika", "illumination", "sony pictures animation", "titmouse", "the mill", "wētā",
+  // dev tools / infra / consumer tech
+  "atlassian", "gitlab", "github", "hashicorp", "cloudflare", "mongodb", "snowflake", "twilio", "asana", "airtable", "zapier", "plaid", "brex", "mercury", "rippling", "affirm", "docusign", "grammarly", "chime", "unity technologies",
 ].join("|") + ")\\b", "i");
 
 // role types Brian is targeting (product design · SWE · TA · game · graphics · data)
@@ -292,6 +309,7 @@ const roles = [];
 const today = new Date().toISOString().slice(0, 10);
 for (const r of collected) {
   if (!isUS(r.locations)) continue;
+  if (EXCLUDE_RX.test(r.title)) continue; // inbox relevance gate — drop the noise
   const key = `${r.company}|${r.title}|${r.locations[0] || ""}`.toLowerCase().replace(/\s+/g, " ");
   if (seen.has(key)) continue;
   seen.add(key);
@@ -327,7 +345,7 @@ writeFileSync(
 const cutoff = new Date(Date.now() - RECENT_DAYS * 864e5).toISOString().slice(0, 10);
 const freshCut = new Date(Date.now() - FRESH_HOURS * 36e5).toISOString().slice(0, 10);
 const recent = roles.filter((r) => r.posted >= cutoff);
-const ORDER = ["Graphics / Game / 3D", "Design / UX", "Software Engineering", "Data / AI / ML", "Product", "Quant", "Hardware", "Other"];
+const ORDER = ["Graphics / Game / 3D", "Art / Animation / VFX", "Design / UX", "Software Engineering", "Data / AI / ML", "Product", "Quant", "Hardware", "Other"];
 const counts = Object.fromEntries(ORDER.map((c) => [c, roles.filter((r) => r.category === c).length]));
 const LEVEL_ORDER = { intern: 0, "new-grad": 1, "full-time": 2 };
 const byFit = (a, b) => (LEVEL_ORDER[a.level] ?? 3) - (LEVEL_ORDER[b.level] ?? 3) || b.fit - a.fit || (b.posted || "").localeCompare(a.posted || "");
