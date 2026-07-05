@@ -38,3 +38,7 @@ apps/desktop-pet/node_modules/
 
 # generated task file (machine-specific paths)
 apps/secretary/careeros-secretary-task.xml
+
+# but DO commit the final résumé deliverables (public anyway — served on the site)
+!apps/resume/dist/
+!apps/resume/dist/*.docx
