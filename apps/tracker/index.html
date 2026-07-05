@@ -39,8 +39,9 @@
   input[type=search]:focus, select:focus { border-color:var(--cobalt); }
   .chip { font-family:"Geist Mono",monospace; font-size:11.5px; letter-spacing:.06em; padding:6px 11px; border-radius:999px; border:1px solid var(--line); color:var(--muted); background:transparent; cursor:pointer; }
   .chip.on { border-color:var(--cobalt); color:var(--cobalt-deep); background:rgba(111,136,207,.12); }
-  /* action buttons — same pill shape/height as the filter chips, grouped right */
-  .util { margin-left:auto; display:flex; gap:6px; flex-wrap:wrap; }
+  /* action toolbar — same pill shape as the filter chips; left-aligned so it
+     lines up cleanly under the search box (no orphaned right-float) */
+  .util { display:flex; gap:6px; flex-wrap:wrap; align-items:center; flex-basis:100%; margin-top:2px; }
   .util button { background:transparent; border:1px solid var(--line); color:var(--muted); border-radius:999px; padding:7px 12px; font-family:"Geist Mono",monospace; font-size:11.5px; letter-spacing:.06em; cursor:pointer; }
   .util button:hover { color:var(--ink); border-color:var(--faint); }
   #sync.on { color:var(--green); border-color:rgba(127,191,142,.5); }
