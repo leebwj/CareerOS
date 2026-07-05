@@ -122,9 +122,28 @@
   const LS = "careeros-tracker-v1";
   const STAGES = ["Applied", "OA / Screen", "Interview", "Offer", "Rejected", "Ghosted"];
 
+  const LS_BAK = LS + "-lastgood";
   let roles = [], state = { s: {}, hidden: {} }, view = "inbox", fNew = false, fTgt = false, fHot = false;
   try { state = { s: {}, hidden: {}, ...JSON.parse(localStorage.getItem(LS) || "{}") } } catch {}
-  const save = () => { localStorage.setItem(LS, JSON.stringify(state)); syncToSheet(); };
+  // safety net: if the live tracker is empty but a backup holds tracked roles,
+  // offer to restore (covers accidental wipes). Non-nagging: clears backup on decline.
+  try {
+    const bak = JSON.parse(localStorage.getItem(LS_BAK) || "{}");
+    const nBak = Object.keys(bak.s || {}).length;
+    if (!Object.keys(state.s || {}).length && nBak) {
+      if (confirm(`CareerOS: found ${nBak} tracked role(s) from a local backup. Restore them?`)) {
+        state = { s: {}, hidden: {}, ...bak };
+        localStorage.setItem(LS, JSON.stringify(state));
+      } else {
+        localStorage.removeItem(LS_BAK);
+      }
+    }
+  } catch {}
+  const save = () => {
+    localStorage.setItem(LS, JSON.stringify(state));
+    if (Object.keys(state.s || {}).length) localStorage.setItem(LS_BAK, JSON.stringify(state)); // rolling backup of last non-empty state
+    syncToSheet();
+  };
 
   // ── Google Sheet live sync (via a user-deployed Apps Script web app) ──
   const SYNC_HEAD = ["Company", "Role", "Category", "Level", "Term", "Location", "Status", "Applied", "Follow-up", "Notes", "Fit", "URL"];
