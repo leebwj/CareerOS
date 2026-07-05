@@ -42,3 +42,6 @@ apps/secretary/careeros-secretary-task.xml
 # but DO commit the final résumé deliverables (public anyway — served on the site)
 !apps/resume/dist/
 !apps/resume/dist/*.docx
+
+# stray root résumé copies — canonical versions live in apps/resume/dist/
+/Brian_Lee_Resume_*.pdf
