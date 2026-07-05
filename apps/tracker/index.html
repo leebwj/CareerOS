@@ -144,6 +144,7 @@
     }
   } catch {}
   const save = () => {
+    state.updated = Date.now(); // for last-write-wins across devices
     localStorage.setItem(LS, JSON.stringify(state));
     if (Object.keys(state.s || {}).length) localStorage.setItem(LS_BAK, JSON.stringify(state)); // rolling backup of last non-empty state
     syncToSheet();
@@ -174,10 +175,35 @@
     syncTimer = setTimeout(() => {
       // form-encoded = the transport Apps Script reliably preserves through its
       // 302 redirect (text/plain bodies can get dropped). no-cors, fire-and-forget.
-      fetch(syncUrl, { method: "POST", mode: "no-cors", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: "payload=" + encodeURIComponent(JSON.stringify({ rows: trackedRows() })) })
+      // push the FULL state (for cross-device load) + readable rows (for the sheet)
+      fetch(syncUrl, { method: "POST", mode: "no-cors", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: "payload=" + encodeURIComponent(JSON.stringify({ state: JSON.stringify(state), rows: trackedRows() })) })
         .then(() => { syncState = "synced"; setSyncBtn(); })
         .catch(() => { syncState = "error"; setSyncBtn(); });
     }, 1500);
+  }
+  // pull state from the sheet (JSONP — bypasses CORS on Apps Script GET); adopt
+  // it only if it's NEWER than what we have and non-empty (never wipes local).
+  function pullFromSheet() {
+    if (!syncUrl) return;
+    const fn = "__cos_" + Date.now() + "_" + Math.floor(Math.random() * 1e6);
+    const s = document.createElement("script");
+    const done = () => { try { delete window[fn]; } catch {} if (s.parentNode) s.parentNode.removeChild(s); };
+    const timer = setTimeout(done, 9000);
+    window[fn] = (payload) => {
+      clearTimeout(timer); done();
+      try {
+        const remote = payload && payload.state ? JSON.parse(payload.state) : null;
+        if (remote && Object.keys(remote.s || {}).length && (remote.updated || 0) > (state.updated || 0)) {
+          state = { s: {}, hidden: {}, ...remote };
+          localStorage.setItem(LS, JSON.stringify(state));
+          if (Object.keys(state.s || {}).length) localStorage.setItem(LS_BAK, JSON.stringify(state));
+          render();
+        }
+      } catch {}
+    };
+    s.src = syncUrl + (syncUrl.includes("?") ? "&" : "?") + "callback=" + fn;
+    s.onerror = () => { clearTimeout(timer); done(); };
+    document.head.appendChild(s);
   }
 
   // undo — snapshot state before each change so accidental actions revert.
@@ -420,8 +446,13 @@
       const newest = roles.reduce((m, r) => (r.posted > m ? r.posted : m), "");
       document.getElementById("meta").textContent = `${roles.length} roles · data ${newest}`;
       render();
+      pullFromSheet(); // adopt newer state from the sheet (cross-device)
     })
     .catch(() => { document.getElementById("list").innerHTML = `<div class="empty">Couldn't fetch roles.json — check connection.</div>`; });
+
+  // re-pull when you return to the tab (picks up edits made on another device)
+  let lastPull = 0;
+  window.addEventListener("focus", () => { if (Date.now() - lastPull > 15000) { lastPull = Date.now(); pullFromSheet(); } });
 })();
 </script>
 </body>
