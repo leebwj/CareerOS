@@ -47,6 +47,8 @@
   .chip .dot { width:6px; height:6px; border-radius:50%; flex:none; opacity:.85; }
   .dot-fit { background:#e5c06a; } .dot-hot { background:#ff8a5c; } .dot-new { background:var(--green); } .dot-tgt { background:var(--cobalt-deep); }
   .chip.on .dot { opacity:1; }
+  /* keep the four filter chips together so none orphans onto its own line */
+  .chipgroup { display:flex; gap:6px; flex-wrap:wrap; }
   /* action toolbar — same pill shape as the filter chips; left-aligned so it
      lines up cleanly under the search box (no orphaned right-float) */
   .util { display:flex; gap:6px; flex-wrap:wrap; align-items:center; flex-basis:100%; margin-top:2px; }
@@ -114,10 +116,12 @@
   <select id="lvl"><option value="">All levels</option><option value="intern">Intern</option><option value="new-grad">New grad</option><option value="full-time">Full-time</option></select>
   <select id="term"><option value="">All terms</option></select>
   <select id="sort"><option value="newest">Newest</option><option value="fit">Best fit</option><option value="followup">Follow-up due</option></select>
-  <button class="chip" id="fFit"><i class="dot dot-fit"></i>Strong fit</button>
-  <button class="chip" id="fHot"><i class="dot dot-hot"></i>Hot</button>
-  <button class="chip" id="fNew"><i class="dot dot-new"></i>New</button>
-  <button class="chip" id="fTgt"><i class="dot dot-tgt"></i>Targets</button>
+  <div class="chipgroup">
+    <button class="chip" id="fFit"><i class="dot dot-fit"></i>Strong fit</button>
+    <button class="chip" id="fHot"><i class="dot dot-hot"></i>Hot</button>
+    <button class="chip" id="fNew"><i class="dot dot-new"></i>New</button>
+    <button class="chip" id="fTgt"><i class="dot dot-tgt"></i>Targets</button>
+  </div>
   <div class="util">
     <button id="undo" title="Undo last change (Ctrl+Z)" disabled>↶ Undo</button>
     <button id="sync" title="Live-sync your tracked roles to a Google Sheet">⧉ Sheet</button>
