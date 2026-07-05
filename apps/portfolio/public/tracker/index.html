@@ -175,29 +175,32 @@
     b.classList.toggle("on", syncState === "on" || syncState === "synced" || syncState === "syncing");
     b.textContent = syncState === "synced" ? "⧉ Synced ✓" : syncState === "syncing" ? "⧉ Syncing…" : syncState === "error" ? "⧉ Sync ✕" : "⧉ Sheet";
   }
-  function syncToSheet() {
+  function doPush() {
+    // form-encoded = the transport Apps Script reliably preserves through its 302
+    // redirect (text/plain bodies get dropped). Pushes FULL state + readable rows.
+    fetch(syncUrl, { method: "POST", mode: "no-cors", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: "payload=" + encodeURIComponent(JSON.stringify({ state: JSON.stringify(state), rows: trackedRows() })) })
+      .then(() => { syncState = "synced"; setSyncBtn(); })
+      .catch(() => { syncState = "error"; setSyncBtn(); });
+  }
+  function syncToSheet(immediate) {
     if (!syncUrl) return;
     clearTimeout(syncTimer);
     syncState = "syncing"; setSyncBtn();
-    syncTimer = setTimeout(() => {
-      // form-encoded = the transport Apps Script reliably preserves through its
-      // 302 redirect (text/plain bodies can get dropped). no-cors, fire-and-forget.
-      // push the FULL state (for cross-device load) + readable rows (for the sheet)
-      fetch(syncUrl, { method: "POST", mode: "no-cors", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: "payload=" + encodeURIComponent(JSON.stringify({ state: JSON.stringify(state), rows: trackedRows() })) })
-        .then(() => { syncState = "synced"; setSyncBtn(); })
-        .catch(() => { syncState = "error"; setSyncBtn(); });
-    }, 1500);
+    if (immediate) doPush();
+    else syncTimer = setTimeout(doPush, 1500);
   }
   // pull state from the sheet (JSONP — bypasses CORS on Apps Script GET); adopt
   // it only if it's NEWER than what we have and non-empty (never wipes local).
-  function pullFromSheet() {
-    if (!syncUrl) return;
+  // `after` fires once the pull settles (used to sequence pull→push on connect).
+  function pullFromSheet(after) {
+    if (!syncUrl) { if (after) after(); return; }
     const fn = "__cos_" + Date.now() + "_" + Math.floor(Math.random() * 1e6);
     const s = document.createElement("script");
-    const done = () => { try { delete window[fn]; } catch {} if (s.parentNode) s.parentNode.removeChild(s); };
+    let fired = false;
+    const done = () => { if (fired) return; fired = true; try { delete window[fn]; } catch {} if (s.parentNode) s.parentNode.removeChild(s); if (after) after(); };
     const timer = setTimeout(done, 9000);
     window[fn] = (payload) => {
-      clearTimeout(timer); done();
+      clearTimeout(timer);
       try {
         const remote = payload && payload.state ? JSON.parse(payload.state) : null;
         if (remote && Object.keys(remote.s || {}).length && (remote.updated || 0) > (state.updated || 0)) {
@@ -207,6 +210,7 @@
           render();
         }
       } catch {}
+      done();
     };
     s.src = syncUrl + (syncUrl.includes("?") ? "&" : "?") + "callback=" + fn;
     s.onerror = () => { clearTimeout(timer); done(); };
@@ -465,8 +469,9 @@
     testConnection((ok) => {
       if (ok) {
         alert("✓ Connected. Your tracked roles now sync to your sheet and load on any computer.");
-        syncToSheet(); pullFromSheet();
-        syncState = "synced"; setSyncBtn();
+        // download first (adopt newer remote), THEN upload — so a fresh device
+        // can't overwrite a populated sheet with its empty state
+        pullFromSheet(() => syncToSheet(true));
       } else {
         alert("✕ Couldn't reach your sheet.\n\nCheck the deployment:\n• 'Who has access' = Anyone\n• URL ends in /exec (not /dev)\n• the script includes the doGet function\n\nThen redeploy a New version and paste the URL again.");
         syncState = "error"; setSyncBtn();
