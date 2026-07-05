@@ -499,9 +499,12 @@
     })
     .catch(() => { document.getElementById("list").innerHTML = `<div class="empty">Couldn't fetch roles.json — check connection.</div>`; });
 
-  // re-pull when you return to the tab (picks up edits made on another device)
+  // re-pull when you return to the tab, AND poll every 60s while visible —
+  // so a change made on another computer shows up here automatically
   let lastPull = 0;
-  window.addEventListener("focus", () => { if (Date.now() - lastPull > 15000) { lastPull = Date.now(); pullFromSheet(); } });
+  const maybePull = () => { if (syncUrl && Date.now() - lastPull > 12000) { lastPull = Date.now(); pullFromSheet(); } };
+  window.addEventListener("focus", maybePull);
+  setInterval(() => { if (!document.hidden) maybePull(); }, 60000);
 })();
 </script>
 </body>
