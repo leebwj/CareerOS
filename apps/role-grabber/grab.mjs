@@ -33,23 +33,46 @@ const ATS_TARGETS = {
     Figma: "figma", Stripe: "stripe", Anthropic: "anthropic", "Scale AI": "scaleai",
     Roblox: "roblox", "Epic Games": "epicgames", "Riot Games": "riotgames",
     Vercel: "vercel", Databricks: "databricks", Datadog: "datadog", Duolingo: "duolingo",
-    // v2 (research-verified 2026-07-04) — games + VFX + tech
     "Rockstar Games": "rockstargames", "2K": "2k", "Take-Two": "taketwo", Nintendo: "nintendo",
     "Naughty Dog": "naughtydog", "Insomniac Games": "insomniac", Bungie: "bungie", "Bandai Namco": "bandainamco",
     Krafton: "krafton", "NetEase Games": "neteasegames", Gearbox: "gearbox",
     "Sony Pictures Imageworks": "sonypicturesimageworks", "Sony Pictures Animation": "sonypicturesanimation", Laika: "laika",
     Discord: "discord", Reddit: "reddit", Twitch: "twitch", Cloudflare: "cloudflare", MongoDB: "mongodb",
     Twilio: "twilio", Pinterest: "pinterest", Coinbase: "coinbase", Robinhood: "robinhood", Dropbox: "dropbox", GitLab: "gitlab",
+    // v2b (research-verified 2026-07-05)
+    Scopely: "scopely", "Digital Extremes": "digitalextremes", "Singularity 6": "singularity6", Wooga: "wooga",
+    "Wildlife Studios": "wildlifestudios", "Hasbro (WotC)": "hasbro", "Tripwire": "tripwireinteractive",
+    Airbnb: "airbnb", Waymo: "waymo", Samsara: "samsara", Verkada: "verkada", Remote: "remotecom", Brex: "brex",
+    Elastic: "elastic", Affirm: "affirm", Instacart: "instacart", Lyft: "lyft", Asana: "asana", Fivetran: "fivetran",
+    Gusto: "gusto", Faire: "faire", "Sigma Computing": "sigmacomputing", Chime: "chime", Mercury: "mercury",
+    Temporal: "temporaltechnologies", Carta: "carta", Amplitude: "amplitude", Airtable: "airtable", Mixpanel: "mixpanel",
+    "Cockroach Labs": "cockroachlabs", LaunchDarkly: "launchdarkly", Marqeta: "marqeta", Webflow: "webflow",
+    PlanetScale: "planetscale", Netlify: "netlify",
   },
   ashby: {
     OpenAI: "openai", Notion: "notion", Linear: "linear", Ramp: "ramp",
     Perplexity: "perplexity", Cursor: "cursor", Supabase: "supabase",
     Replit: "replit", Cohere: "cohere", ElevenLabs: "elevenlabs", Snowflake: "snowflake",
+    // v2b
+    "That Game Company": "thatgamecompany", "Second Dinner": "seconddinner", Crusoe: "crusoe", Harvey: "harvey",
+    Sierra: "sierra", Decagon: "decagon", Cerebras: "cerebras", "Cognition": "cognition", Synthesia: "synthesia",
+    Lovable: "lovable", Baseten: "baseten", Mercor: "mercor", Suno: "suno", Deepgram: "deepgram", Writer: "writer",
+    "Lambda Labs": "lambda", Cartesia: "cartesia", Modal: "modal", "Physical Intelligence": "physicalintelligence",
+    Krea: "krea", "Character.AI": "character", "Normal Computing": "normalcomputing", Pika: "pika", Tavus: "tavus",
+    Reka: "reka", Ideogram: "ideogram", Runway: "runway", Plaid: "plaid", Vanta: "vanta", Sardine: "sardine",
+    Miro: "miro", Browserbase: "browserbase",
   },
-  lever: { Palantir: "palantir", Spotify: "spotify", Larian: "larian", Illumination: "illumination" },
-  // SmartRecruiters: { Company: "companyId" } — CASE-SENSITIVE, oddly suffixed (Ubisoft2)
-  smartrecruiters: { Ubisoft: "Ubisoft2", "CD Projekt Red": "CDPROJEKTRED", HoYoverse: "HoYoverse", "Rodeo FX": "RodeoFX", "Weta Workshop": "WetaWorkshop" },
-  // Workday: { Company: { tenant, wd, site } } — POST; wd number is per-tenant (Pixar = wd501!)
+  lever: {
+    Palantir: "palantir", Spotify: "spotify", Larian: "larian", Illumination: "illumination",
+    Skydance: "skydance", Voodoo: "voodoo", Kabam: "kabam", "Dream Games": "dreamgames",
+    Easybrain: "easybrain", Mistplay: "mistplay", "Jam City": "jamcity",
+  },
+  // SmartRecruiters: { Company: "companyId" } — CASE-SENSITIVE, oddly suffixed (Ubisoft2, NBCUniversal3)
+  smartrecruiters: {
+    Ubisoft: "Ubisoft2", "CD Projekt Red": "CDPROJEKTRED", HoYoverse: "HoYoverse", "Rodeo FX": "RodeoFX", "Weta Workshop": "WetaWorkshop",
+    "NBCUniversal (DreamWorks)": "NBCUniversal3", Gameloft: "Gameloft", "Keywords Studios": "KeywordsStudios", "People Can Fly": "PeopleCanFly",
+  },
+  // Workday: { Company: { tenant, wd, site } } — POST; wd number is per-tenant (Pixar=wd501, Sega=wd3!)
   workday: {
     NVIDIA: { tenant: "nvidia", wd: 5, site: "NVIDIAExternalCareerSite" },
     Adobe: { tenant: "adobe", wd: 5, site: "external_experienced" },
@@ -58,10 +81,16 @@ const ATS_TARGETS = {
     Autodesk: { tenant: "autodesk", wd: 1, site: "Ext" },
     "Warner Bros Games": { tenant: "warnerbros", wd: 5, site: "global" },
     Pixar: { tenant: "pixar", wd: 501, site: "Pixar_External_Career_Site" },
+    Sony: { tenant: "sonyglobal", wd: 1, site: "SonyGlobalCareers" },
+    Sega: { tenant: "sega", wd: 3, site: "Sega_Careers" },
   },
   workable: { "Square Enix": "square-enix" },
   recruitee: { Framestore: "framestore" },
 };
+// every company we source directly IS a desirable target-company (curated), so
+// treat them as targets without bloating the TARGETS regex. ATS rows carry the
+// exact display name as r.company, so an exact-set check is reliable.
+const ATS_COMPANY_SET = new Set(Object.values(ATS_TARGETS).flatMap((o) => Object.keys(o)));
 
 // knockout: senior+ roles are never relevant (intern/new-grad/early-career focus)
 const SENIOR_RX = /\b(senior|staff|principal|director|manager|head of|vp|vice president|distinguished|sr\.?|lead architect)\b/i;
@@ -360,7 +389,7 @@ const TARGETS = new RegExp("\\b(" + [
 ].join("|") + ")\\b", "i");
 
 // role types Brian is targeting (product design · SWE · TA · game · graphics · data)
-const RELEVANT_RX = /\b(product design|ux|ui|interaction design|visual design|design engineer|ux engineer|software engineer|swe|full[- ]?stack|front[- ]?end|back[- ]?end|founding engineer|web develop|developer|engineer|graphics|render(ing)?|technical artist|shader|game|gameplay|3d|unreal|unity|creative technolog)\b/i;
+const RELEVANT_RX = /\b(product design|ux|ui|interaction design|visual design|design engineer|ux engineer|software engineer|swe|full[- ]?stack|front[- ]?end|back[- ]?end|founding engineer|web develop|developer|engineer|graphics|render(ing)?|technical artist|shader|game|gameplay|3d|unreal|unity|creative technolog|animator|\bartist\b|\bvfx\b|compositor|\brigger\b|look[- ]?dev|texture|lighting artist|environment artist)\b/i;
 // …but NOT these — sales/marketing/support/ops roles that merely contain
 // "engineer"/"developer" (e.g. "Sales Engineer", "Salesforce Developer").
 const IRRELEVANT_RX = /\b(sales|marketing|solutions engineer|pre[- ]?sales|salesforce|account executive|\baccount\b|recruit|revenue|finance|accountant|legal|counsel|paralegal|\bgrc\b|compliance|customer success|support engineer|partnerships|go[- ]to[- ]market|\bgtm\b|talent)\b/i;
@@ -455,7 +484,7 @@ for (const r of collected) {
   // a "target" is a RELEVANT role (Brian's fields) AT a desirable company —
   // so a revenue analyst at a target company is NOT flagged, but a technical
   // artist at EA is. One flag, shared by the sheet, tracker, and email.
-  r.target = TARGETS.test(r.company) && RELEVANT_RX.test(r.title) && !IRRELEVANT_RX.test(r.title) && !SENIOR_RX.test(r.title);
+  r.target = (TARGETS.test(r.company) || ATS_COMPANY_SET.has(r.company)) && RELEVANT_RX.test(r.title) && !IRRELEVANT_RX.test(r.title) && !SENIOR_RX.test(r.title);
   const freshDays = (Date.now() - new Date(r.posted || "2000-01-01").getTime()) / 864e5;
   r.hot = freshDays <= 2 && r.level !== "full-time" && (r.target || r.fit >= 0.6);
   const age = (Date.now() - new Date(r.posted || today).getTime()) / 864e5;
