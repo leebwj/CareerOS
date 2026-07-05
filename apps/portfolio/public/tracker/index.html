@@ -25,6 +25,11 @@
   .brand { font-weight:800; font-size:17px; letter-spacing:-.02em; }
   .brand span { color:var(--cobalt-deep); }
   .meta { font-family:"Geist Mono",monospace; font-size:11.5px; color:var(--faint); text-transform:uppercase; letter-spacing:.14em; }
+  .statsbar { max-width:1280px; margin:0 auto; padding:0 20px 11px; display:flex; gap:16px; flex-wrap:wrap; font-family:"Geist Mono",monospace; font-size:12px; color:var(--muted); }
+  .statsbar b { color:var(--ink); }
+  .statsbar .stat-offer b { color:var(--green); }
+  .statsbar .stat-due { color:var(--amber); }
+  .statsbar:empty { display:none; }
   .spacer { flex:1; }
 
   .tabs { display:flex; gap:6px; }
@@ -97,6 +102,7 @@
     <div class="spacer"></div>
     <nav class="tabs" id="tabs"></nav>
   </div>
+  <div class="statsbar" id="stats"></div>
 </header>
 
 <div class="controls">
@@ -104,6 +110,7 @@
   <select id="cat"><option value="">All categories</option></select>
   <select id="lvl"><option value="">All levels</option><option value="intern">Intern</option><option value="new-grad">New grad</option><option value="full-time">Full-time</option></select>
   <select id="term"><option value="">All terms</option></select>
+  <select id="sort"><option value="newest">Newest</option><option value="fit">Best fit</option><option value="followup">Follow-up due</option></select>
   <button class="chip" id="fFit">⭐ Strong fit</button>
   <button class="chip hot" id="fHot">🔥 Hot</button>
   <button class="chip" id="fNew">🆕 New</button>
@@ -281,8 +288,26 @@
     </div>`;
   }
 
+  function renderStats() {
+    const el = document.getElementById("stats"); if (!el) return;
+    let applied = 0, prog = 0, offer = 0, week = 0, due = 0;
+    const weekAgo = new Date(Date.now() - 7 * 864e5).toISOString().slice(0, 10);
+    for (const v of Object.values(state.s)) {
+      if (v.st) applied++;
+      if (v.st === "OA / Screen" || v.st === "Interview") prog++;
+      if (v.st === "Offer") offer++;
+      if (v.date && v.date >= weekAgo) week++;
+      if (v.fu && v.st === "Applied" && v.fu <= today()) due++;
+    }
+    el.innerHTML = applied === 0 ? "" :
+      `<span><b>${applied}</b> applied</span><span><b>${prog}</b> in progress</span>` +
+      (offer ? `<span class="stat-offer"><b>${offer}</b> offer${offer > 1 ? "s" : ""}</span>` : "") +
+      `<span><b>${week}</b> this week</span>` +
+      (due ? `<span class="stat-due">⏰ <b>${due}</b> follow-up${due > 1 ? "s" : ""} due</span>` : "");
+  }
   function render() {
     tabs();
+    renderStats();
     const q = document.getElementById("q").value.toLowerCase();
     const cat = document.getElementById("cat").value;
     const lvl = document.getElementById("lvl").value;
@@ -310,8 +335,10 @@
       return true;
     });
 
-    // Tracker view: overdue follow-ups float to the top
-    if (view === "applied") rows.sort((a, b) => (state.s[key(a)]?.fu || "9999").localeCompare(state.s[key(b)]?.fu || "9999"));
+    // sort (default newest; Tracker view defaults to overdue follow-ups first)
+    const sortBy = document.getElementById("sort").value;
+    if (sortBy === "fit") rows.sort((a, b) => (b.fit || 0) - (a.fit || 0));
+    else if (sortBy === "followup" || view === "applied") rows.sort((a, b) => (state.s[key(a)]?.fu || "9999").localeCompare(state.s[key(b)]?.fu || "9999"));
 
     // Tracker view keeps closed postings (fell out of the feed) visible
     let orphans = "";
@@ -326,9 +353,9 @@
     const list = document.getElementById("list");
     if (!rows.length && !orphans) { list.innerHTML = `<div class="empty">Nothing here. ${view === "inbox" ? "All caught up 🎉" : ""}</div>`; return; }
 
-    // group by posted date (inbox) or flat (other views)
+    // group by posted date (inbox, newest sort) or flat (sorted) list
     let html = "";
-    if (view === "inbox") {
+    if (view === "inbox" && sortBy === "newest") {
       const groups = {};
       for (const r of rows) (groups[r.posted] ||= []).push(r);
       for (const d of Object.keys(groups).sort().reverse()) {
@@ -392,7 +419,7 @@
   }
 
   // controls
-  ["q", "cat", "lvl", "term"].forEach((id) => document.getElementById(id).addEventListener("input", render));
+  ["q", "cat", "lvl", "term", "sort"].forEach((id) => document.getElementById(id).addEventListener("input", render));
   // Undo is button-only — no global Ctrl+Z (a reflex Ctrl+Z must never wipe tracked roles)
   document.getElementById("undo").onclick = doUndo;
   document.getElementById("fFit").onclick = () => { fFit = !fFit; render(); };
@@ -416,13 +443,35 @@
     a.download = "careeros-applications.csv";
     a.click();
   };
+  // JSONP connection test — confirms the deploy is reachable + doGet works
+  function testConnection(cb) {
+    if (!syncUrl) return cb(false);
+    const fn = "__cost_" + Date.now() + "_" + Math.floor(Math.random() * 1e6);
+    const s = document.createElement("script");
+    const fin = (ok) => { try { delete window[fn]; } catch {} if (s.parentNode) s.parentNode.removeChild(s); cb(ok); };
+    const timer = setTimeout(() => fin(false), 9000);
+    window[fn] = (payload) => { clearTimeout(timer); fin(!!payload && typeof payload.state !== "undefined"); };
+    s.src = syncUrl + (syncUrl.includes("?") ? "&" : "?") + "callback=" + fn;
+    s.onerror = () => { clearTimeout(timer); fin(false); };
+    document.head.appendChild(s);
+  }
   document.getElementById("sync").onclick = () => {
-    const u = prompt("Google Sheet live-sync — paste your Apps Script web-app URL.\n\n(One-time setup guide is in apps/secretary… see the SHEET_SYNC guide, or ask.)\nLeave blank to turn sync OFF.", syncUrl);
+    const u = prompt("Google Sheet sync — paste your Apps Script web-app URL (ends in /exec).\n\nSetup: click ⧉ then follow the SHEET_SYNC guide. Leave blank to turn OFF.", syncUrl);
     if (u === null) return;
     syncUrl = u.trim();
     localStorage.setItem("careeros-sync-url", syncUrl);
-    syncState = syncUrl ? "on" : "off"; setSyncBtn();
-    if (syncUrl) syncToSheet();
+    if (!syncUrl) { syncState = "off"; setSyncBtn(); return; }
+    syncState = "syncing"; setSyncBtn();
+    testConnection((ok) => {
+      if (ok) {
+        alert("✓ Connected. Your tracked roles now sync to your sheet and load on any computer.");
+        syncToSheet(); pullFromSheet();
+        syncState = "synced"; setSyncBtn();
+      } else {
+        alert("✕ Couldn't reach your sheet.\n\nCheck the deployment:\n• 'Who has access' = Anyone\n• URL ends in /exec (not /dev)\n• the script includes the doGet function\n\nThen redeploy a New version and paste the URL again.");
+        syncState = "error"; setSyncBtn();
+      }
+    });
   };
   setSyncBtn();
   document.getElementById("imp").onclick = () => {
