@@ -64,6 +64,8 @@
   .badge.cat { color:var(--cobalt-deep); border-color:rgba(111,136,207,.4); }
   .badge.term { color:var(--muted); border-color:var(--line); }
   .badge.hot { color:#ff8a5c; border-color:rgba(255,138,92,.55); background:rgba(255,138,92,.1); font-weight:700; }
+  .badge.fit-s { color:#e5c06a; border-color:rgba(229,192,106,.5); }
+  .badge.fit-g { color:var(--muted); border-color:var(--line); }
   .row.hot-row { border-color:rgba(255,138,92,.32); }
   .chip.hot.on { border-color:#ff8a5c; color:#ff8a5c; background:rgba(255,138,92,.12); }
   .r-actions { display:flex; gap:6px; align-items:center; }
@@ -102,6 +104,7 @@
   <select id="cat"><option value="">All categories</option></select>
   <select id="lvl"><option value="">All levels</option><option value="intern">Intern</option><option value="new-grad">New grad</option><option value="full-time">Full-time</option></select>
   <select id="term"><option value="">All terms</option></select>
+  <button class="chip" id="fFit">⭐ Strong fit</button>
   <button class="chip hot" id="fHot">🔥 Hot</button>
   <button class="chip" id="fNew">🆕 New</button>
   <button class="chip" id="fTgt">🎯 Targets</button>
@@ -124,7 +127,7 @@
   const STAGES = ["Applied", "OA / Screen", "Interview", "Offer", "Rejected", "Ghosted"];
 
   const LS_BAK = LS + "-lastgood";
-  let roles = [], state = { s: {}, hidden: {} }, view = "inbox", fNew = false, fTgt = false, fHot = false;
+  let roles = [], state = { s: {}, hidden: {} }, view = "inbox", fNew = false, fTgt = false, fHot = false, fFit = false;
   try { state = { s: {}, hidden: {}, ...JSON.parse(localStorage.getItem(LS) || "{}") } } catch {}
   // safety net: if the live tracker is empty but a backup holds tracked roles,
   // offer to restore (covers accidental wipes). Non-nagging: clears backup on decline.
@@ -227,6 +230,7 @@
       <div class="r-main">
         <div class="r-title"><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.company)} — ${esc(r.title)}</a></div>
         <div class="r-sub">
+          ${r.fit >= 0.6 ? '<span class="badge fit-s" title="Strong fit">⭐</span>' : r.fit >= 0.48 ? '<span class="badge fit-g" title="Good fit">◐</span>' : ""}
           ${isHot ? '<span class="badge hot">🔥 hot</span>' : ""}
           ${isNew ? '<span class="badge new">new</span>' : ""}
           ${isTgt ? '<span class="badge tgt">target</span>' : ""}
@@ -257,6 +261,7 @@
     const cat = document.getElementById("cat").value;
     const lvl = document.getElementById("lvl").value;
     const term = document.getElementById("term").value;
+    document.getElementById("fFit").classList.toggle("on", fFit);
     document.getElementById("fHot").classList.toggle("on", fHot);
     document.getElementById("fNew").classList.toggle("on", fNew);
     document.getElementById("fTgt").classList.toggle("on", fTgt);
@@ -273,6 +278,7 @@
       if (term === "__none__") { if (r.term) return false; }
       else if (term && !(r.term || "").split(" / ").includes(term)) return false;
       if (fHot && !r.hot) return false;
+      if (fFit && !(r.fit >= 0.6)) return false;
       if (fNew && !r.isNew) return false;
       if (fTgt && !r.target) return false;
       return true;
@@ -363,6 +369,7 @@
   ["q", "cat", "lvl", "term"].forEach((id) => document.getElementById(id).addEventListener("input", render));
   // Undo is button-only — no global Ctrl+Z (a reflex Ctrl+Z must never wipe tracked roles)
   document.getElementById("undo").onclick = doUndo;
+  document.getElementById("fFit").onclick = () => { fFit = !fFit; render(); };
   document.getElementById("fHot").onclick = () => { fHot = !fHot; render(); };
   document.getElementById("fNew").onclick = () => { fNew = !fNew; render(); };
   document.getElementById("fTgt").onclick = () => { fTgt = !fTgt; render(); };
