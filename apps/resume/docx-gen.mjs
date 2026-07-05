@@ -58,7 +58,7 @@ export function buildDocx(spec) {
     (o.bullet ? '<w:numPr><w:ilvl w:val="0"/><w:numId w:val="1"/></w:numPr>' : "") +
     (o.rule ? '<w:pBdr><w:bottom w:val="single" w:sz="6" w:space="1" w:color="000000"/></w:pBdr>' : "") +
     (o.rightTab ? `<w:tabs><w:tab w:val="right" w:pos="${contentWidth}"/></w:tabs>` : "") +
-    `<w:spacing w:before="${Math.round((o.before ?? 0) * 20)}" w:after="${Math.round((o.after ?? 0) * 20)}" w:line="212" w:lineRule="auto"/>` +
+    `<w:spacing w:before="${Math.round((o.before ?? 0) * 20)}" w:after="${Math.round((o.after ?? 0) * 20)}" w:line="220" w:lineRule="auto"/>` +
     (o.ind ? `<w:ind w:left="${o.ind}" w:hanging="216"/>` : "") +
     (o.center ? '<w:jc w:val="center"/>' : "") +
     "</w:pPr>";
