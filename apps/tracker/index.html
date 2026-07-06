@@ -157,6 +157,16 @@
       }
     }
   } catch {}
+  // Guard against the #1 confusion: this tracker is only "yours" on leebrian.dev.
+  // A local copy (127.0.0.1 / localhost / a file:// open / a preview URL) has its
+  // OWN separate, empty browser storage — which is exactly what makes tracked
+  // roles look like they reset to 0. Warn loudly so the two are never confused.
+  if (location.hostname !== "leebrian.dev") {
+    const bar = document.createElement("div");
+    bar.style.cssText = "position:sticky;top:0;z-index:200;background:linear-gradient(#c2410c,#9a3412);color:#fff;font:600 13px/1.5 'Geist Mono',monospace;padding:9px 16px;text-align:center";
+    bar.innerHTML = "⚠ This is a LOCAL copy — its data is separate and won't match your real tracker. Use <a href='https://leebrian.dev/tracker' style='color:#fff'>leebrian.dev/tracker</a> so every device stays in sync.";
+    document.body.prepend(bar);
+  }
   const save = () => {
     state.updated = Date.now(); // for last-write-wins across devices
     localStorage.setItem(LS, JSON.stringify(state));
