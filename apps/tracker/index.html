@@ -167,7 +167,9 @@
   // ── Google Sheet live sync (via a user-deployed Apps Script web app) ──
   const SYNC_HEAD = ["Company", "Role", "Category", "Level", "Term", "Location", "Status", "Applied", "Follow-up", "Notes", "Fit", "URL"];
   let syncUrl = localStorage.getItem("careeros-sync-url") || "";
-  let syncTimer, syncState = syncUrl ? "on" : "off";
+  // a saved URL means this device is connected → show "Synced ✓" on load (was
+  // "on", which fell through to the plain "Sheet" label and looked disconnected)
+  let syncTimer, syncState = syncUrl ? "synced" : "off";
   function trackedRows() {
     const byKey = {}; roles.forEach((r) => (byKey[key(r)] = r));
     return Object.entries(state.s).map(([k, s]) => {
