@@ -24,10 +24,10 @@ later (V2) — this is the brain.
 
 | file | what | committed? |
 |---|---|---|
-| `brief.mjs` | composes the brief from the role feed (+ optional tracker export) — pure, deterministic, no secrets | ✅ |
+| `brief.mjs` | composes the brief from the role feed + live tracker state — pure, deterministic, no secrets; also exports `fetchTrackerState(sheetUrl)` | ✅ |
 | `send.mjs` | zero-dep Gmail sender (raw SMTP over TLS) | ✅ |
-| `run.mjs` | compose → print + write `out/brief.md` → email if configured | ✅ |
-| `config.mjs` | your Gmail creds | 🚫 gitignored |
+| `run.mjs` | load config → pull follow-ups from the sheet → compose → print + write `out/brief.md` → email if configured | ✅ |
+| `config.mjs` | your Gmail creds + optional tracker `sheetUrl` | 🚫 gitignored |
 | `config.example.mjs` | the shape of config | ✅ |
 
 ## Setup (~5 min, once)
@@ -48,12 +48,21 @@ later (V2) — this is the brain.
    - Action: `node`, arguments `run.mjs`, start-in this folder
    - Settings: ✔ *Run whether user is logged on or not* → ✔ *Wake the computer to run* → ✔ *Start when available* (catches a missed run)
 
-## Follow-ups in the brief (optional bridge)
+## Follow-ups in the brief (V2 — live from your Google Sheet)
 
-The follow-up section appears once the tracker's data is available to this
-script. The tracker keeps state in your browser; export it (tracker → Export)
-to `apps/secretary/data/tracker-export.json` and the brief picks it up. A
-smoother auto-bridge is a planned upgrade.
+Follow-ups due are pulled **live from your tracker's Google Sheet** each morning —
+no manual export. Add your sheet's web-app URL (the same `/exec` URL you paste
+into the tracker's **⧉ Sheet** button) to `config.mjs`:
+
+```js
+sheetUrl: "https://script.google.com/macros/s/AKfyc.../exec",
+```
+
+`run.mjs` fetches the tracker state from that endpoint, computes follow-ups due +
+applied-this-week, and places the **📮 Follow up today** section at the **bottom**
+of the brief (so new openings stay at the top where they're most visible). A
+headline nudge points down to it. Leave `sheetUrl` blank to skip follow-ups
+(it also still falls back to a local `data/tracker-export.json` if present).
 
 ## Later: LLM polish + a desktop character (V2)
 

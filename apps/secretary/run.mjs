@@ -1,30 +1,45 @@
 // CareerOS · secretary — daily runner.
 // Composes the brief, always writes it to out/brief.md + prints it, and emails
-// it to you IF config.mjs exists with Gmail credentials. Safe to run with no
-// config (print-only). Wire this into Windows Task Scheduler at 08:00.
+// it to you IF config.mjs exists with Gmail credentials. Follow-ups are pulled
+// LIVE from your tracker's Google Sheet when config.sheetUrl is set. Safe to run
+// with no config (print-only). Wire into Windows Task Scheduler at 08:00.
 //
 //   node run.mjs           compose + print (+ email if configured)
 //   node run.mjs --no-mail  never email, even if configured
 
-import { composeBrief } from "./brief.mjs";
+import { composeBrief, fetchTrackerState } from "./brief.mjs";
 import { writeFileSync, mkdirSync, existsSync } from "node:fs";
 import { dirname, join } from "node:path";
-import { fileURLToPath } from "node:url";
-import { pathToFileURL } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
-const brief = await composeBrief();
+const configPath = join(ROOT, "config.mjs");
+
+// load config up front — needed for the sheet URL, before composing the brief
+let cfg = {};
+if (existsSync(configPath)) {
+  try { cfg = (await import(pathToFileURL(configPath).href)).default; }
+  catch (e) { console.error("[secretary] config load failed:", e.message); }
+}
+
+// pull follow-ups LIVE from the tracker's Google Sheet (if configured)
+const trackerState = await fetchTrackerState(cfg.sheetUrl);
+if (cfg.sheetUrl) {
+  console.log(trackerState
+    ? "[secretary] tracker follow-ups pulled from sheet ✓"
+    : "[secretary] sheet configured but no state fetched — check the /exec URL + access");
+}
+
+const brief = await composeBrief(undefined, trackerState);
 
 mkdirSync(join(ROOT, "out"), { recursive: true });
 if (brief.md) writeFileSync(join(ROOT, "out", "brief.md"), brief.md);
 console.log("\n" + brief.text + "\n");
 
 const wantMail = !process.argv.includes("--no-mail");
-const configPath = join(ROOT, "config.mjs");
 
-if (wantMail && !brief.empty && existsSync(configPath)) {
+if (wantMail && !brief.empty && cfg.gmailUser) {
   try {
-    const { default: cfg } = await import(pathToFileURL(configPath).href);
     const { sendMail } = await import("./send.mjs");
     // minimal markdown → html for the email body
     const html = `<div style="font-family:-apple-system,Segoe UI,sans-serif;font-size:15px;line-height:1.5;color:#1a1d21;max-width:600px">` +

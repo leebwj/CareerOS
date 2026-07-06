@@ -5,4 +5,8 @@ export default {
   gmailUser: "you@gmail.com",
   gmailAppPassword: "xxxxxxxxxxxxxxxx", // 16 chars, no spaces
   to: "you@gmail.com",                 // where the brief lands (defaults to gmailUser)
+  // Optional: your tracker's Google Sheet web-app URL — the SAME /exec URL you
+  // paste into the tracker's "⧉ Sheet" button. Enables follow-up reminders in
+  // the brief, pulled live from the sheet each morning. Leave "" to skip.
+  sheetUrl: "",
 };

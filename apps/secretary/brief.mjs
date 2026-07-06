@@ -35,9 +35,22 @@ async function readRoles() {
   return readJSON(FEED_LOCAL, []);
 }
 
+// pull the tracker's live state from the synced Google Sheet — its doGet returns
+// {state:"<json>"} (plain JSON when no ?callback); Node follows the 302 redirect.
+// Returns the parsed tracker state ({s,hidden,updated}) or null on any failure.
+export async function fetchTrackerState(sheetUrl) {
+  if (!sheetUrl) return null;
+  try {
+    const r = await fetch(sheetUrl, { redirect: "follow", headers: { "user-agent": "careeros-secretary" } });
+    if (!r.ok) return null;
+    const data = JSON.parse(await r.text());
+    return data && data.state ? JSON.parse(data.state) : null;
+  } catch { return null; }
+}
+
 // `todayISO` is injected (Node's Date is fine here — this is a live script, not
 // a replay-sensitive workflow) so the brief can be generated for any date.
-export async function composeBrief(todayISO = new Date().toISOString().slice(0, 10)) {
+export async function composeBrief(todayISO = new Date().toISOString().slice(0, 10), trackerState = null) {
   const roles = await readRoles();
   if (!roles.length) return { text: "No roles feed found — run the role-grabber first.", empty: true };
 
@@ -54,8 +67,9 @@ export async function composeBrief(todayISO = new Date().toISOString().slice(0, 
     .sort((a, b) => b.fit - a.fit)
     .slice(0, 5);
 
-  // tracker export (if present) → follow-ups due + applied-this-week count
-  const tracker = readJSON(TRACKER, null);
+  // tracker state — live from the synced Google Sheet if provided, else the
+  // optional local export file → follow-ups due + applied-this-week count
+  const tracker = trackerState || readJSON(TRACKER, null);
   let followups = [], appliedWeek = 0;
   if (tracker && tracker.s) {
     const weekAgo = new Date(new Date(todayISO + "T12:00:00").getTime() - 7 * 864e5).toISOString().slice(0, 10);
@@ -74,18 +88,13 @@ export async function composeBrief(todayISO = new Date().toISOString().slice(0, 
   L.push(`# ☀️ Morning brief — ${dow}`, "");
 
   // the one-line headline: the single most important thing
+  // openings lead the brief (most visible); follow-ups get a nudge → bottom section
   const headline =
-    followups.length ? `**${followups.length} follow-up${followups.length > 1 ? "s" : ""} due today** — send those first, then the internships below.`
-    : internships.length ? `**${internships.length} new internship${internships.length > 1 ? "s" : ""}** posted — your priority, apply today.`
+    internships.length ? `**${internships.length} new internship${internships.length > 1 ? "s" : ""}** posted — your priority, apply today.`
     : hot.length ? `**${hot.length} hot role${hot.length > 1 ? "s" : ""} posted** — apply today, they get swamped fast.`
-    : `No urgent items — a good day to polish a case study or tailor a résumé.`;
-  L.push(headline, "");
-
-  if (followups.length) {
-    L.push(`## 📮 Follow up today (${followups.length})`);
-    for (const f of followups) L.push(`- **${f.company}** — ${f.title}${f.n > 1 ? ` (attempt #${f.n})` : ""}`);
-    L.push("");
-  }
+    : `No new urgent openings — a good day to polish a case study or tailor a résumé.`;
+  const fuNudge = followups.length ? ` _· ${followups.length} follow-up${followups.length > 1 ? "s" : ""} due today — see the bottom._` : "";
+  L.push(headline + fuNudge, "");
 
   const roleRow = (r) => {
     const tier = r.fit >= 0.6 ? "⭐ " : "";
@@ -117,6 +126,13 @@ export async function composeBrief(todayISO = new Date().toISOString().slice(0, 
   if (appliedWeek) L.push(`- You've applied to ${appliedWeek} role${appliedWeek > 1 ? "s" : ""} this week — keep the streak.`);
   L.push(`- [Open the full board →](https://leebrian.dev/tracker)`);
   L.push(`- [Answer bank & apply helper →](https://leebrian.dev/apply)`, "");
+
+  // follow-ups go LAST — openings stay at the top where they're most visible
+  if (followups.length) {
+    L.push(`## 📮 Follow up today (${followups.length})`);
+    for (const f of followups) L.push(`- **${f.company}** — ${f.title}${f.n > 1 ? ` (attempt #${f.n})` : ""}`);
+    L.push("");
+  }
 
   L.push(`_Composed by your CareerOS secretary._`);
 
