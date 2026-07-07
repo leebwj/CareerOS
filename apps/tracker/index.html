@@ -189,6 +189,10 @@
   // ── Google Sheet live sync (via a user-deployed Apps Script web app) ──
   const SYNC_HEAD = ["Company", "Role", "Category", "Level", "Term", "Location", "Status", "Applied", "Follow-up", "Notes", "Fit", "URL"];
   let syncUrl = localStorage.getItem("careeros-sync-url") || "";
+  // AUTO-CONNECT from a bookmarked #sync=<url> — survives localStorage wipes and
+  // brand-new browsers, so opening the bookmark always reconnects + pulls your
+  // data. (URLSearchParams returns the value already URL-decoded.)
+  try { const hs = new URLSearchParams(location.hash.slice(1)).get("sync"); if (hs) { syncUrl = hs; localStorage.setItem("careeros-sync-url", syncUrl); } } catch {}
   // a saved URL means this device is connected → show "Synced ✓" on load (was
   // "on", which fell through to the plain "Sheet" label and looked disconnected)
   let syncTimer, syncState = syncUrl ? "synced" : "off";
@@ -207,6 +211,10 @@
     b.textContent = syncState === "synced" ? "⧉ Synced ✓" : syncState === "syncing" ? "⧉ Syncing…" : syncState === "error" ? "⧉ Sync ✕" : "⧉ Sheet";
   }
   function doPush() {
+    // NEVER overwrite the sheet with an empty state — a fresh/wiped browser must
+    // not be able to blow away the durable backup. (The sheet is the source of
+    // truth; clearing it is a deliberate manual act, not an automatic sync.)
+    if (!Object.keys(state.s || {}).length) { syncState = "synced"; setSyncBtn(); return; }
     // form-encoded = the transport Apps Script reliably preserves through its 302
     // redirect (text/plain bodies get dropped). Pushes FULL state + readable rows.
     fetch(syncUrl, { method: "POST", mode: "no-cors", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: "payload=" + encodeURIComponent(JSON.stringify({ state: JSON.stringify(state), rows: trackedRows() })) })
