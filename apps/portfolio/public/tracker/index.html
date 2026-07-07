@@ -29,7 +29,14 @@
   .statsbar b { color:var(--ink); }
   .statsbar .stat-offer b { color:var(--green); }
   .statsbar .stat-due { color:var(--amber); }
+  .statsbar .stat-int { color:var(--cobalt-deep); }
   .statsbar:empty { display:none; }
+  /* group-by-company headers + interview-date field (tracker polish) */
+  .cohead { font-family:"Geist Mono",monospace; font-size:13px; font-weight:600; color:var(--ink); padding:11px 4px 5px; margin-top:8px; border-bottom:1px solid var(--line); cursor:pointer; user-select:none; }
+  .cohead:hover { color:var(--cobalt-deep); }
+  .cohead .con { color:var(--faint); font-weight:400; margin-left:2px; }
+  .idate { background:var(--card2); border:1px solid var(--line); border-radius:8px; color:var(--ink); font-family:"Geist Mono",monospace; font-size:11px; padding:4px 6px; }
+  .idate:focus { border-color:var(--cobalt); outline:none; }
   .spacer { flex:1; }
 
   .tabs { display:flex; gap:6px; }
@@ -116,6 +123,8 @@
   <select id="lvl"><option value="">All levels</option><option value="intern">Intern</option><option value="new-grad">New grad</option><option value="full-time">Full-time</option></select>
   <select id="term"><option value="">All terms</option></select>
   <select id="sort"><option value="newest">Newest</option><option value="fit">Best fit</option><option value="followup">Follow-up due</option></select>
+  <button class="chip" id="grp" title="Group roles under collapsible company headers">🏢 By company</button>
+  <button class="chip" id="notif" title="Browser alert when a new 🔥 hot role appears">🔔 Alerts</button>
   <div class="chipgroup">
     <button class="chip" id="fFit"><i class="dot dot-fit"></i>Strong fit</button>
     <button class="chip" id="fHot"><i class="dot dot-hot"></i>Hot</button>
@@ -141,7 +150,10 @@
   const STAGES = ["Applied", "OA / Screen", "Interview", "Offer", "Rejected", "Ghosted"];
 
   const LS_BAK = LS + "-lastgood";
-  let roles = [], state = { s: {}, hidden: {} }, view = "inbox", fNew = false, fTgt = false, fHot = false, fFit = false;
+  let roles = [], state = { s: {}, hidden: {} }, view = "inbox", fNew = false, fTgt = false, fHot = false, fFit = false, fGroup = false;
+  const collapsedCos = new Set(); // company headers collapsed in group-by-company view
+  let notifOn = localStorage.getItem("careeros-notif") === "1"; // hot-role browser alerts
+  const notified = new Set(JSON.parse(localStorage.getItem("careeros-notified") || "[]"));
   try { state = { s: {}, hidden: {}, ...JSON.parse(localStorage.getItem(LS) || "{}") } } catch {}
   // safety net: if the live tracker is empty but a backup holds tracked roles,
   // offer to restore (covers accidental wipes). Non-nagging: clears backup on decline.
@@ -297,11 +309,13 @@
           ${s.date ? `<span class="mono" style="font-size:12px;color:var(--green)">applied ${s.date}</span>` : ""}
           ${s.fu && s.st === "Applied" ? `<span class="mono" style="font-size:12px;color:${s.fu <= today() ? "var(--red)" : "var(--amber)"}">${s.fu <= today() ? "⏰ follow up now" : "follow-up " + s.fu}${s.fuN > 1 ? " (#2)" : ""}</span>` : ""}
           ${s.fuDone ? `<span class="mono" style="font-size:12px;color:var(--faint)">followed up ×${s.fuDone} — consider closing if silent</span>` : ""}
+          ${s.idate ? `<span class="mono" style="font-size:12px;color:${s.idate >= today() ? "var(--cobalt-deep)" : "var(--faint)"}">📅 interview ${s.idate}</span>` : ""}
         </div>
         <input class="notes" data-k="${esc(k)}" placeholder="notes — contact, referral, follow-up…" value="${esc(s.notes || "")}">
       </div>
       <div class="r-actions">
         ${view === "applied" || s.st ? stageSel : `<a class="act primary" href="${esc(r.url)}" target="_blank" rel="noopener">Apply ↗</a>`}
+        ${(s.st === "Interview" || s.st === "OA / Screen") ? `<input type="date" class="idate" data-k="${esc(k)}" value="${esc(s.idate || "")}" title="Interview / screen date">` : ""}
         ${s.fu && s.st === "Applied" && s.fu <= today() ? `<button class="act fu-done" data-k="${esc(k)}">✉ Followed up</button>` : ""}
         ${s.st ? "" : `<button class="act mark" data-k="${esc(k)}">✓ Applied</button>`}
         <button class="act star ${s.star ? "on" : ""}" data-k="${esc(k)}">★</button>
@@ -313,19 +327,21 @@
 
   function renderStats() {
     const el = document.getElementById("stats"); if (!el) return;
-    let applied = 0, prog = 0, offer = 0, week = 0, due = 0;
-    const weekAgo = new Date(Date.now() - 7 * 864e5).toISOString().slice(0, 10);
+    let applied = 0, prog = 0, offer = 0, week = 0, due = 0, interviews = 0;
+    const weekAgo = new Date(Date.now() - 7 * 864e5).toISOString().slice(0, 10), td = today();
     for (const v of Object.values(state.s)) {
       if (v.st) applied++;
       if (v.st === "OA / Screen" || v.st === "Interview") prog++;
       if (v.st === "Offer") offer++;
       if (v.date && v.date >= weekAgo) week++;
-      if (v.fu && v.st === "Applied" && v.fu <= today()) due++;
+      if (v.fu && v.st === "Applied" && v.fu <= td) due++;
+      if (v.idate && v.idate >= td) interviews++;
     }
     el.innerHTML = applied === 0 ? "" :
       `<span><b>${applied}</b> applied</span><span><b>${prog}</b> in progress</span>` +
       (offer ? `<span class="stat-offer"><b>${offer}</b> offer${offer > 1 ? "s" : ""}</span>` : "") +
       `<span><b>${week}</b> this week</span>` +
+      (interviews ? `<span class="stat-int">📅 <b>${interviews}</b> interview${interviews > 1 ? "s" : ""} upcoming</span>` : "") +
       (due ? `<span class="stat-due">⏰ <b>${due}</b> follow-up${due > 1 ? "s" : ""} due</span>` : "");
   }
   function render() {
@@ -339,6 +355,8 @@
     document.getElementById("fHot").classList.toggle("on", fHot);
     document.getElementById("fNew").classList.toggle("on", fNew);
     document.getElementById("fTgt").classList.toggle("on", fTgt);
+    document.getElementById("grp").classList.toggle("on", fGroup);
+    document.getElementById("notif").classList.toggle("on", notifOn);
 
     let rows = roles.filter((r) => {
       const k = key(r), s = state.s[k];
@@ -376,9 +394,18 @@
     const list = document.getElementById("list");
     if (!rows.length && !orphans) { list.innerHTML = `<div class="empty">Nothing here. ${view === "inbox" ? "All caught up 🎉" : ""}</div>`; return; }
 
-    // group by posted date (inbox, newest sort) or flat (sorted) list
+    // group-by-company (if toggled) → date-grouped (inbox/newest) → flat
     let html = "";
-    if (view === "inbox" && sortBy === "newest") {
+    if (fGroup) {
+      const cos = {};
+      for (const r of rows) (cos[r.company] ||= []).push(r);
+      for (const co of Object.keys(cos).sort((a, b) => cos[b].length - cos[a].length || a.localeCompare(b))) {
+        const collapsed = collapsedCos.has(co);
+        html += `<div class="cohead" data-co="${esc(co)}">${collapsed ? "▸" : "▾"} ${esc(co)} <span class="con">${cos[co].length}</span></div>`;
+        if (!collapsed) html += cos[co].map((r) => rowHTML(r, key(r), state.s[key(r)])).join("");
+      }
+      html += orphans;
+    } else if (view === "inbox" && sortBy === "newest") {
       const groups = {};
       for (const r of rows) (groups[r.posted] ||= []).push(r);
       for (const d of Object.keys(groups).sort().reverse()) {
@@ -436,8 +463,18 @@
       pushUndo();
       const k = s.dataset.k;
       if (s.value) state.s[k] = { ...(state.s[k] || {}), st: s.value, date: state.s[k]?.date || new Date().toISOString().slice(0, 10) };
-      else { delete state.s[k].st; if (!state.s[k].star && !state.s[k].notes) delete state.s[k]; }
+      else { delete state.s[k].st; delete state.s[k].idate; if (!state.s[k].star && !state.s[k].notes) delete state.s[k]; }
       save(); render();
+    });
+    document.querySelectorAll(".idate").forEach((n) => n.onchange = () => {
+      pushUndo();
+      state.s[n.dataset.k] = { ...(state.s[n.dataset.k] || {}), idate: n.value };
+      save(); render();
+    });
+    document.querySelectorAll(".cohead").forEach((h) => h.onclick = () => {
+      const co = h.dataset.co;
+      collapsedCos.has(co) ? collapsedCos.delete(co) : collapsedCos.add(co);
+      render();
     });
   }
 
@@ -449,6 +486,32 @@
   document.getElementById("fHot").onclick = () => { fHot = !fHot; render(); };
   document.getElementById("fNew").onclick = () => { fNew = !fNew; render(); };
   document.getElementById("fTgt").onclick = () => { fTgt = !fTgt; render(); };
+  document.getElementById("grp").onclick = () => { fGroup = !fGroup; render(); };
+  document.getElementById("notif").onclick = async () => {
+    if (!notifOn) {
+      if (!("Notification" in window)) { alert("This browser doesn't support notifications."); return; }
+      let perm = Notification.permission;
+      if (perm !== "granted") perm = await Notification.requestPermission();
+      if (perm !== "granted") { alert("Notifications are blocked — allow them for this site to get 🔥 hot-role alerts."); return; }
+      notifOn = true; localStorage.setItem("careeros-notif", "1");
+      roles.filter((r) => r.hot).forEach((r) => notified.add(key(r))); // seed → only alert on FUTURE new hot roles
+      localStorage.setItem("careeros-notified", JSON.stringify([...notified]));
+      new Notification("CareerOS alerts on 🔔", { body: "I'll ping you when a new 🔥 hot role drops." });
+    } else {
+      notifOn = false; localStorage.setItem("careeros-notif", "0");
+    }
+    render();
+  };
+  // fire a browser notification for hot roles we haven't alerted on yet
+  function maybeNotifyHot() {
+    if (!notifOn || !("Notification" in window) || Notification.permission !== "granted") return;
+    const fresh = roles.filter((r) => r.hot && !notified.has(key(r)));
+    if (!fresh.length) return;
+    fresh.forEach((r) => notified.add(key(r)));
+    localStorage.setItem("careeros-notified", JSON.stringify([...notified].slice(-800)));
+    if (fresh.length === 1) new Notification("🔥 New hot role", { body: `${fresh[0].company} — ${fresh[0].title}` });
+    else new Notification(`🔥 ${fresh.length} new hot roles`, { body: fresh.slice(0, 3).map((r) => r.company).join(", ") + (fresh.length > 3 ? "…" : "") });
+  }
   document.getElementById("exp").onclick = () => {
     const blob = new Blob([JSON.stringify(state, null, 1)], { type: "application/json" });
     const a = document.createElement("a");
@@ -519,16 +582,29 @@
       const newest = roles.reduce((m, r) => (r.posted > m ? r.posted : m), "");
       document.getElementById("meta").textContent = `${roles.length} roles · data ${newest}`;
       render();
-      pullFromSheet(); // adopt newer state from the sheet (cross-device)
+      maybeNotifyHot();           // alert on any hot roles new since last visit
+      pullFromSheet();            // adopt newer state from the sheet (cross-device)
     })
     .catch(() => { document.getElementById("list").innerHTML = `<div class="empty">Couldn't fetch roles.json — check connection.</div>`; });
 
-  // re-pull when you return to the tab, AND poll every 60s while visible —
-  // so a change made on another computer shows up here automatically
+  // re-fetch the roles feed (no select re-population) so new 🔥 hot roles can alert while the tab's open
+  let lastRoles = Date.now();
+  function refreshRoles() {
+    lastRoles = Date.now();
+    fetch(DATA_URL, { cache: "no-store" }).then((r) => r.json()).then((data) => {
+      roles = data;
+      document.getElementById("meta").textContent = `${roles.length} roles · data ${roles.reduce((m, r) => (r.posted > m ? r.posted : m), "")}`;
+      render();
+      maybeNotifyHot();
+    }).catch(() => {});
+  }
+
+  // re-pull sheet on focus + every 60s; re-fetch roles on focus + every 20min
   let lastPull = 0;
   const maybePull = () => { if (syncUrl && Date.now() - lastPull > 12000) { lastPull = Date.now(); pullFromSheet(); } };
-  window.addEventListener("focus", maybePull);
+  window.addEventListener("focus", () => { maybePull(); if (Date.now() - lastRoles > 120000) refreshRoles(); });
   setInterval(() => { if (!document.hidden) maybePull(); }, 60000);
+  setInterval(() => { if (!document.hidden) refreshRoles(); }, 20 * 60000);
 })();
 </script>
 </body>
