@@ -188,13 +188,21 @@
 
   // ── Google Sheet live sync (via a user-deployed Apps Script web app) ──
   const SYNC_HEAD = ["Company", "Role", "Category", "Level", "Term", "Location", "Status", "Applied", "Follow-up", "Notes", "Fit", "URL"];
-  let syncUrl = localStorage.getItem("careeros-sync-url") || "";
-  // AUTO-CONNECT from a bookmarked #sync=<url> — survives localStorage wipes and
-  // brand-new browsers, so opening the bookmark always reconnects + pulls your
-  // data. (URLSearchParams returns the value already URL-decoded.)
-  try { const hs = new URLSearchParams(location.hash.slice(1)).get("sync"); if (hs) { syncUrl = hs; localStorage.setItem("careeros-sync-url", syncUrl); } } catch {}
-  // a saved URL means this device is connected → show "Synced ✓" on load (was
-  // "on", which fell through to the plain "Sheet" label and looked disconnected)
+  // Sync-URL persistence: kept in BOTH localStorage AND a 1-year first-party
+  // cookie (belt & suspenders — some clears wipe one but not the other), plus an
+  // optional bookmarkable #sync=<url>. Goal: connect ONCE, then plain
+  // leebrian.dev/tracker stays connected — no re-pasting, no long URL.
+  const setSyncCookie = (v) => { try { document.cookie = "careeros_sync=" + encodeURIComponent(v) + ";max-age=31536000;path=/;SameSite=Lax"; } catch {} };
+  const getSyncCookie = () => { try { return decodeURIComponent((document.cookie.match(/(?:^|;\s*)careeros_sync=([^;]*)/) || [])[1] || ""); } catch { return ""; } };
+  let syncUrl = localStorage.getItem("careeros-sync-url") || getSyncCookie() || "";
+  try { const hs = new URLSearchParams(location.hash.slice(1)).get("sync"); if (hs) syncUrl = hs; } catch {}
+  const saveSyncUrl = (u) => {
+    syncUrl = u;
+    if (u) { localStorage.setItem("careeros-sync-url", u); setSyncCookie(u); }
+    else { localStorage.removeItem("careeros-sync-url"); setSyncCookie(""); }
+  };
+  if (syncUrl) saveSyncUrl(syncUrl); // re-persist to both stores on every load
+  // a saved URL means this device is connected → show "Synced ✓" on load
   let syncTimer, syncState = syncUrl ? "synced" : "off";
   function trackedRows() {
     const byKey = {}; roles.forEach((r) => (byKey[key(r)] = r));
@@ -552,8 +560,7 @@
   document.getElementById("sync").onclick = () => {
     const u = prompt("Google Sheet sync — paste your Apps Script web-app URL (ends in /exec).\n\nSetup: click ⧉ then follow the SHEET_SYNC guide. Leave blank to turn OFF.", syncUrl);
     if (u === null) return;
-    syncUrl = u.trim();
-    localStorage.setItem("careeros-sync-url", syncUrl);
+    saveSyncUrl(u.trim()); // persists to localStorage + the 1-year cookie
     if (!syncUrl) { syncState = "off"; setSyncBtn(); return; }
     syncState = "syncing"; setSyncBtn();
     testConnection((ok) => {
