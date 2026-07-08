@@ -96,10 +96,10 @@ const ATS_COMPANY_SET = new Set(Object.values(ATS_TARGETS).flatMap((o) => Object
 const SENIOR_RX = /\b(senior|staff|principal|director|manager|head of|vp|vice president|distinguished|sr\.?|lead architect)\b/i;
 
 // ── category mapping (Brian's scope: broad — every bucket matters) ──────────
-const GAME_RX = /\b(game|graphics|render(ing)?|technical artist|shader|unreal|unity|3d|gameplay|game engine)\b/i;
+const GAME_RX = /\b(game|graphics|render(ing)?|technical artist|shader|unreal|unity|3d|gameplay|game engine|xr|augmented reality|virtual reality|mixed reality|spatial comput\w*|creative technolog\w*|creative cod\w*|creative develop\w*)\b/i;
 // pure art/creative roles Brian added to scope (2026-07-04) — niche but wanted
 const ART_RX = /\b(3d artist|character artist|environment artist|concept artist|texture artist|lighting artist|vfx artist|fx artist|cg artist|cgi artist|digital sculptor|3d modell?er|character modell?er|animator|character animator|technical animator|look[- ]?dev|\brigger\b|rigging artist|character td|creature td|compositor|matte painter|simulation artist|storyboard artist|3d generalist|game artist|game designer)\b/i;
-const DESIGN_RX = /\b(product design|ux|ui designer|user experience|user research|interaction design|visual design|brand design|graphic design|\bdesigner\b|design engineer)\b/i;
+const DESIGN_RX = /\b(product design|ux|ui designer|user experience|user research|interaction design|visual design|brand design|graphic design|\bdesigner\b|design engineer|design technolog\w*|prototyper)\b/i;
 
 // ── inbox relevance gate — DROP wildly-unrelated roles so the inbox stays clean.
 // GUARDRAIL: exclude by SPECIFIC phrase/qualifier, NEVER by bare "engineer"/
@@ -122,8 +122,8 @@ function categorize(title, sourceCategory) {
   if (c.includes("product")) return "Product";
   if (c.includes("quant")) return "Quant";
   if (c.includes("hardware")) return "Hardware";
-  if (/\b(software|swe|full[- ]?stack|front[- ]?end|back[- ]?end|infrastructure|platform|web develop|mobile|ios|android|founding engineer|security engineer|security operations|systems engineer|devops|site reliability|reliability engineer|observability|\bsre\b|cloud engineer|network engineer|\bqa\b|test engineer|automation engineer|embedded|firmware|solutions architect|application engineer|deployment engineer|technical operations|forward deployed)\b/i.test(title)) return "Software Engineering";
-  if (/\b(data|machine learning|\bml\b|\bai\b|research)\b/i.test(title)) return "Data / AI / ML";
+  if (/\b(software|swe|full[- ]?stack|front[- ]?end|back[- ]?end|infrastructure|platform|web develop|mobile|ios|android|founding engineer|security engineer|security operations|systems engineer|devops|site reliability|reliability engineer|observability|\bsre\b|cloud engineer|network engineer|\bqa\b|test engineer|automation engineer|embedded|firmware|solutions architect|application engineer|deployment engineer|technical operations|forward deployed|developer advocate|developer relations|developer experience|\bdevrel\b|growth engineer|applied engineer|member of technical staff|prototype engineer)\b/i.test(title)) return "Software Engineering";
+  if (/\b(data|machine learning|\bml\b|\bai\b|research|applied scientist)\b/i.test(title)) return "Data / AI / ML";
   if (/\bproduct manager\b/i.test(title)) return "Product";
   return "Other";
 }
@@ -389,7 +389,7 @@ const TARGETS = new RegExp("\\b(" + [
 ].join("|") + ")\\b", "i");
 
 // role types Brian is targeting (product design · SWE · TA · game · graphics · data)
-const RELEVANT_RX = /\b(product design|ux|ui|interaction design|visual design|design engineer|ux engineer|software engineer|swe|full[- ]?stack|front[- ]?end|back[- ]?end|founding engineer|web develop|developer|engineer|graphics|render(ing)?|technical artist|shader|game|gameplay|3d|unreal|unity|creative technolog|animator|\bartist\b|\bvfx\b|compositor|\brigger\b|look[- ]?dev|texture|lighting artist|environment artist)\b/i;
+const RELEVANT_RX = /\b(product design|ux|ui|interaction design|visual design|design engineer|ux engineer|software engineer|swe|full[- ]?stack|front[- ]?end|back[- ]?end|founding engineer|web develop|developer|engineer|graphics|render(ing)?|technical artist|shader|game|gameplay|3d|unreal|unity|creative technolog\w*|creative cod\w*|design technolog\w*|prototyper|member of technical staff|applied scientist|animator|\bartist\b|\bvfx\b|compositor|\brigger\b|look[- ]?dev|texture|lighting artist|environment artist)\b/i;
 // …but NOT these — sales/marketing/support/ops roles that merely contain
 // "engineer"/"developer" (e.g. "Sales Engineer", "Salesforce Developer").
 const IRRELEVANT_RX = /\b(sales|marketing|solutions engineer|pre[- ]?sales|salesforce|account executive|\baccount\b|recruit|revenue|finance|accountant|legal|counsel|paralegal|\bgrc\b|compliance|customer success|support engineer|partnerships|go[- ]to[- ]market|\bgtm\b|talent)\b/i;
