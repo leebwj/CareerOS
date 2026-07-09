@@ -33,28 +33,23 @@ const withCover = projects.map((p) => ({
       </p>
     </section>
 
-    <section class="proj-grid">
+    <section class="ag-grid">
       {
         withCover.map((p, i) => (
           <button
-            class="proj reveal"
-            style={`--d:${(i % 4) * 50}ms`}
+            class="ag-card reveal"
+            style={`--d:${(i % 3) * 45}ms`}
             data-i={i}
             data-cursor="open"
             data-cursor-keep
             aria-label={`Open ${p.title}`}
           >
-            <span class="proj-cover">
-              {p.cover ? (
-                <img src={p.cover} alt="" loading="lazy" decoding="async" />
-              ) : (
-                <span class="proj-ph">▶</span>
-              )}
-            </span>
-            <span class="proj-meta">
-              <span class="proj-name">{p.title}</span>
-              <span class="proj-n">{p.videoPending && !p.cover ? "Video" : p.count + (p.count === 1 ? " work" : " works")}</span>
-            </span>
+            {p.cover ? (
+              <img class="ag-img" src={p.cover} alt={p.title} loading="lazy" decoding="async" />
+            ) : (
+              <span class="ag-ph">▶</span>
+            )}
+            <span class="ag-cap"><span class="ag-cap-t">{p.title}</span></span>
           </button>
         ))
       }
@@ -103,16 +98,17 @@ const withCover = projects.map((p) => ({
   .art-title { font-family: "Mona Sans", sans-serif; font-weight: 700; font-size: clamp(52px, 12vw, 132px); line-height: 0.92; letter-spacing: -0.03em; margin: 0 0 22px; }
   .art-lede { font-size: clamp(15px, 2vw, 18px); line-height: 1.6; color: var(--muted); max-width: 46ch; margin: 0; }
 
-  /* project cards */
-  .proj-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: clamp(20px, 3vw, 40px) clamp(16px, 2.4vw, 30px); }
-  .proj { display: block; text-align: left; padding: 0; border: 0; background: none; cursor: pointer; color: inherit; }
-  .proj-cover { display: block; aspect-ratio: 4 / 3; border-radius: 10px; overflow: hidden; background: var(--line); box-shadow: 0 1px 2px rgba(0,0,0,.15); position: relative; }
-  .proj-cover img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.97); transition: transform .7s cubic-bezier(.2,.7,.2,1), filter .5s; }
-  .proj-ph { position: absolute; inset: 0; display: grid; place-items: center; font-size: 34px; color: var(--muted); }
-  @media (hover: hover) { .proj:hover .proj-cover img { transform: scale(1.04); filter: saturate(1.06); } }
-  .proj-meta { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-top: 12px; }
-  .proj-name { font-family: "Mona Sans", sans-serif; font-weight: 600; font-size: 15px; letter-spacing: -0.01em; }
-  .proj-n { font-family: "Geist Mono", monospace; font-size: 11px; color: var(--muted); white-space: nowrap; }
+  /* scattered masonry of project covers — natural heights, image-first (title on hover) */
+  .ag-grid { column-count: 3; column-gap: clamp(14px, 2vw, 26px); }
+  @media (max-width: 1000px) { .ag-grid { column-count: 2; } }
+  @media (max-width: 560px) { .ag-grid { column-count: 1; } }
+  .ag-card { position: relative; display: block; width: 100%; margin: 0 0 clamp(14px, 2vw, 26px); padding: 0; border: 0; background: var(--line); border-radius: 6px; overflow: hidden; cursor: pointer; break-inside: avoid; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); color: inherit; }
+  .ag-img { display: block; width: 100%; height: auto; filter: saturate(0.97); transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1), filter 0.6s; }
+  .ag-ph { display: grid; place-items: center; aspect-ratio: 4 / 3; font-size: 34px; color: var(--muted); }
+  .ag-cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 14px 13px; background: linear-gradient(to top, rgba(0, 0, 0, 0.62), transparent); opacity: 0; transition: opacity 0.4s ease; pointer-events: none; text-align: left; }
+  .ag-cap-t { font-family: "Mona Sans", sans-serif; font-weight: 600; font-size: 14px; color: #fff; letter-spacing: -0.01em; }
+  @media (hover: hover) { .ag-card:hover .ag-img { transform: scale(1.03); filter: saturate(1.06); } .ag-card:hover .ag-cap { opacity: 1; } }
+  @media (hover: none) { .ag-cap { opacity: 1; } }
 
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease var(--d,0ms), transform .7s cubic-bezier(.2,.7,.2,1) var(--d,0ms); }
   .reveal.is-in { opacity: 1; transform: none; }
@@ -158,7 +154,7 @@ const withCover = projects.map((p) => ({
       document.body.style.overflow = "hidden";
     };
     const close = () => { pv.classList.remove("open"); pv.setAttribute("aria-hidden", "true"); document.body.style.overflow = ""; mEl.innerHTML = ""; };
-    document.querySelectorAll(".proj").forEach((b) => b.addEventListener("click", () => open(+b.dataset.i)));
+    document.querySelectorAll(".ag-card").forEach((b) => b.addEventListener("click", () => open(+b.dataset.i)));
     document.getElementById("pv-close").addEventListener("click", close);
     addEventListener("keydown", (e) => { if (e.key === "Escape" && pv.classList.contains("open")) close(); });
   })();
