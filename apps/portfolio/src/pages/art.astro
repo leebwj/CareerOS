@@ -2,11 +2,10 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import projects from "../data/art.json";
 
-// cover per project: first image, else a youtube thumb, else null (video-pending placeholder)
+// cover + count are precomputed in art.json (image, youtube thumb, or video frame)
 const withCover = projects.map((p) => ({
   ...p,
-  cover: p.images[0] || (p.youtube[0] ? `https://i.ytimg.com/vi/${p.youtube[0]}/hqdefault.jpg` : null),
-  count: p.images.length + p.youtube.length + (p.videoPending ? 1 : 0),
+  count: p.images.length + p.youtube.length + (p.video ? 1 : 0) + (p.videoPending ? 1 : 0),
 }));
 ---
 
@@ -129,6 +128,7 @@ const withCover = projects.map((p) => ({
   .pv-media img, .pv-media .pv-embed { width: 100%; border-radius: 6px; display: block; }
   .pv-media img { height: auto; box-shadow: 0 10px 40px rgba(0,0,0,.22); }
   .pv-embed { aspect-ratio: 16 / 9; border: 0; }
+  .pv-media video.pv-embed { aspect-ratio: auto; background: #000; max-height: 82vh; }
   .pv-pending { font-family: "Geist Mono", monospace; font-size: 12px; color: color-mix(in srgb, currentColor 50%, transparent); border: 1px dashed color-mix(in srgb, currentColor 25%, transparent); border-radius: 8px; padding: 26px; text-align: center; }
   .pv-close { position: fixed; top: 20px; right: 22px; z-index: 101; width: 42px; height: 42px; border-radius: 999px; background: rgba(128,128,128,.14); color: inherit; border: 1px solid color-mix(in srgb, currentColor 20%, transparent); font-size: 16px; cursor: pointer; display: grid; place-items: center; }
   .pv-close:hover { background: rgba(128,128,128,.26); }
@@ -147,9 +147,10 @@ const withCover = projects.map((p) => ({
       dEl.textContent = p.desc || "";
       dEl.style.display = p.desc ? "" : "none";
       let html = "";
+      if (p.video) html += `<video class="pv-embed" controls playsinline preload="metadata"${p.cover ? ` poster="${p.cover}"` : ""}><source src="${p.video}" type="video/mp4"></video>`;
       p.youtube.forEach((id) => (html += `<iframe class="pv-embed" src="https://www.youtube.com/embed/${id}" title="${p.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>`));
       p.images.forEach((src) => (html += `<img src="${src}" alt="" loading="lazy">`));
-      if (p.videoPending && !p.images.length && !p.youtube.length) html += `<div class="pv-pending">▶ Video piece — embed coming soon.</div>`;
+      if (p.videoPending && !p.images.length && !p.youtube.length && !p.video) html += `<div class="pv-pending">▶ Video piece — embed coming soon.</div>`;
       mEl.innerHTML = html;
       pv.classList.add("open");
       pv.setAttribute("aria-hidden", "false");

@@ -9,15 +9,21 @@
    "/art/seoul-street-2/03.jpg"
   ],
   "youtube": [],
-  "videoPending": true
+  "video": null,
+  "videoPending": false,
+  "cover": "/art/seoul-street-2/01.jpg"
  },
  {
   "title": "A Composition that brings together non-adjacent spaces",
   "slug": "a-composition-that-brings-together-non-adjacent-spaces",
   "desc": "Many different legends attempt to speculate how human beings had advent in this world. Even though there are numerous theories yet have been proven, one thing is clear: we all began from a united entity. While the cycle of life and death continued over millenniums, the world has been civilized in different places with different people. Like how Europeans established a distinct country in a new-found land, culture, language, and society began to segregate from one another. Through this work, I tried to convey the message of how people developed various appearances, personalities, and beliefs over time. And inspired by The Red Thread of Fate from Chinese mythology, I tried to show how our distinct individualities are all related to each other, as we all originated from a united group, tribe, matter, or being. In the end, the threads bring the society, culture, and territories together into one identity.\n\n9.44” x 9.44” x 15.74”",
   "images": [],
-  "youtube": [],
-  "videoPending": true
+  "youtube": [
+   "qB6JYdGljIs"
+  ],
+  "video": null,
+  "videoPending": false,
+  "cover": "https://i.ytimg.com/vi/qB6JYdGljIs/hqdefault.jpg"
  },
  {
   "title": "Playground",
@@ -25,7 +31,9 @@
   "desc": "Recreation of a childhood memory, bringing life to a character with distinctive animations through user interactive actions with the 3D models. Using keyboard or a mouse, press the keys to make interactive animations come to life as “Boo” comes to life. Press ‘Q’ to reset the scene. Made using Maya, Spline, Three.js. \n\nLink to website for fullscreen and more interactive plays:\n\n https://my.spline.design/untitled-QVRKLSCWxKCmX5aAVZUXDukV/",
   "images": [],
   "youtube": [],
-  "videoPending": true
+  "video": null,
+  "videoPending": true,
+  "cover": null
  },
  {
   "title": "Windex P",
@@ -35,7 +43,9 @@
    "/art/windex-p/01.jpg"
   ],
   "youtube": [],
-  "videoPending": false
+  "video": null,
+  "videoPending": false,
+  "cover": "/art/windex-p/01.jpg"
  },
  {
   "title": "Seoul Street",
@@ -45,7 +55,9 @@
    "/art/seoul-street/01.jpg"
   ],
   "youtube": [],
-  "videoPending": false
+  "video": null,
+  "videoPending": false,
+  "cover": "/art/seoul-street/01.jpg"
  },
  {
   "title": "Dispersion",
@@ -53,7 +65,9 @@
   "desc": "Ordinary Nikon camera, with an unsual glass dispersion texture. Creation of a well-known object into a texture that we have never seen in reality gives the feeling of both distance and wonder. The turntable allows the object to reflect light in different angles, allowing us to find out how the texture interacts with the given lighting environment. Made using Maya, Substance Painter, and After Effect.",
   "images": [],
   "youtube": [],
-  "videoPending": true
+  "video": "/art/dispersion/video.mp4",
+  "videoPending": false,
+  "cover": "/art/dispersion/cover.jpg"
  },
  {
   "title": "A View from Window",
@@ -63,7 +77,9 @@
    "/art/a-view-from-window/01.jpg"
   ],
   "youtube": [],
-  "videoPending": false
+  "video": null,
+  "videoPending": false,
+  "cover": "/art/a-view-from-window/01.jpg"
  },
  {
   "title": "Somnium",
@@ -71,10 +87,11 @@
   "desc": "Olympus, Atlantis, Avalon, El Dorado… Whenever I came across such places as a child while reading a fiction book such as Percy Jackson, I would imagine myself at a place where I would never see or get to go in my entire lifetime. Simply fantasizing myself as a hero or a traveler from a different world kept me entertained throughout the day. Growing up, I realized that I have stopped exploring my own imaginations, and solely began to chase after realism. At one point, I was no longer innocent, naive, or pure like how I used to during childhood. Using a foamular, gesso mixture, grass powder, acrylic, and green screen, I was able to create a “sky island”, a place I used to fly around in my own imaginations years ago.",
   "images": [],
   "youtube": [
-   "5Rp-sjQO3Sk",
    "87yMHpuJZZQ"
   ],
-  "videoPending": false
+  "video": null,
+  "videoPending": false,
+  "cover": "https://i.ytimg.com/vi/87yMHpuJZZQ/hqdefault.jpg"
  },
  {
   "title": "Ceiling Light",
@@ -90,7 +107,9 @@
    "/art/ceiling-light/07.jpg"
   ],
   "youtube": [],
-  "videoPending": false
+  "video": null,
+  "videoPending": false,
+  "cover": "/art/ceiling-light/01.jpg"
  },
  {
   "title": "Odds and Ends",
@@ -145,6 +164,44 @@
    "/art/odds-and-ends/46.jpg"
   ],
   "youtube": [],
-  "videoPending": false
+  "video": null,
+  "videoPending": false,
+  "cover": "/art/odds-and-ends/01.jpg"
+ },
+ {
+  "title": "Pick Up",
+  "slug": "pick-up",
+  "desc": "",
+  "images": [],
+  "youtube": [
+   "VjmlxtnApIA"
+  ],
+  "video": null,
+  "videoPending": false,
+  "cover": "https://i.ytimg.com/vi/VjmlxtnApIA/hqdefault.jpg"
+ },
+ {
+  "title": "A Self-Portrait as a Pattern",
+  "slug": "a-self-portrait-as-a-pattern",
+  "desc": "",
+  "images": [],
+  "youtube": [
+   "vP7rxgifUSE"
+  ],
+  "video": null,
+  "videoPending": false,
+  "cover": "https://i.ytimg.com/vi/vP7rxgifUSE/hqdefault.jpg"
+ },
+ {
+  "title": "A Sequence that shows a Shift in Behavior",
+  "slug": "a-sequence-that-shows-a-shift-in-behavior",
+  "desc": "",
+  "images": [],
+  "youtube": [
+   "pLMINe6_Utk"
+  ],
+  "video": null,
+  "videoPending": false,
+  "cover": "https://i.ytimg.com/vi/pLMINe6_Utk/hqdefault.jpg"
  }
 ]
