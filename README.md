@@ -12,7 +12,7 @@ My personal career platform, built as a monorepo. Each module is a tool I actual
 | [`apps/role-grabber`](apps/role-grabber) | **Live** | Twice-daily role aggregation from ~110 company boards + curated feeds → [ROLES.md](apps/role-grabber/ROLES.md); deterministic fit tiers, 🔥 hot / 🆕 new / 🎯 target, term + level |
 | [`apps/tracker`](apps/tracker) | **Live** | Application dashboard over the daily data — filter, fit-rank, track stages + follow-ups, **two-way Google Sheet sync (durable + cross-device)** |
 | [`apps/resume`](apps/resume) | **V1 live** | Résumé-as-code — both variants render to ATS-clean docx/PDF from one data file (content stays private) |
-| [`apps/apply-helper`](apps/apply-helper) | **V1 live** | Answer bank — 22 editable application answers + a draft-a-prompt mode; local-first, ATS-question ready |
+| [`apps/apply-helper`](apps/apply-helper) | **V2 live** | Answer bank (22 editable answers) + **in-app AI drafter** — type any question, get a tailored answer via the Claude API (serverless, passphrase-gated), edit, and save to your bank |
 | [`apps/secretary`](apps/secretary) | **V1** | Morning-brief agent — composes what-to-do-today from the feed and emails it daily (Task Scheduler @ 8am) |
 | [`apps/desktop-pet`](apps/desktop-pet) | **V1 scaffold** | The secretary's face — a transparent desktop character that pops the brief in a speech bubble (bring your own art) |
 
