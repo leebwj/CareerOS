@@ -235,6 +235,14 @@ Identity: a designer who builds what he designs — from C++/OpenGL rendering to
         <button class="btn primary" id="drawit">✨ Draft it for me</button>
         <button class="btn" id="genprompt">Copy a prompt instead</button>
       </div>
+      <div id="dgate" style="display:none;margin-top:12px">
+        <label>Your apply passphrase — the APPLY_SECRET you set in Vercel (asked once per browser)</label>
+        <div class="qa__row" style="margin-top:0">
+          <input type="password" id="dkey" placeholder="passphrase" autocomplete="off" style="flex:1;background:var(--card);border:1px solid var(--line);color:var(--ink);border-radius:10px;padding:9px 12px;font-family:'Mona Sans',sans-serif;font-size:14px;outline:none">
+          <button class="btn primary" id="dkeygo">Save &amp; draft</button>
+        </div>
+      </div>
+      <div id="dstatus" class="note" style="display:none;margin-top:10px"></div>
       <div class="out" id="dout" style="display:none"></div>
       <div id="dresult" style="display:none">
         <label>Draft — edit freely, then save</label>
@@ -248,20 +256,20 @@ Identity: a designer who builds what he designs — from C++/OpenGL rendering to
       <p class="note">A good answer must be true to <em>your</em> experience — review every draft before it's yours. Saved drafts land in your bank under "Drafted".</p>
     </div>`;
 
-    // ✨ Draft it for me — calls /api/draft (Claude), returns the answer inline
-    document.getElementById("drawit").onclick = async () => {
+    // inline status line — no native alert()/prompt() (some browsers block them)
+    const setStatus = (msg, kind) => {
+      const s = document.getElementById("dstatus");
+      if (!msg) { s.style.display = "none"; s.textContent = ""; return; }
+      s.style.display = "block"; s.textContent = msg;
+      s.style.color = kind === "error" ? "#e0736f" : (kind === "ok" ? "var(--green)" : "var(--muted)");
+    };
+
+    const doDraft = async (applyKey) => {
       const dq = document.getElementById("dq").value.trim();
       const ctx = document.getElementById("dctx").value.trim();
-      if (!dq) { document.getElementById("dq").focus(); return; }
-      let applyKey = localStorage.getItem(APPLY_KEY);
-      if (!applyKey) {
-        applyKey = (prompt("One-time: enter your CareerOS apply passphrase (the APPLY_SECRET you set in Vercel):") || "").trim();
-        if (!applyKey) return;
-        localStorage.setItem(APPLY_KEY, applyKey);
-      }
       const btn = document.getElementById("drawit");
-      const label = btn.textContent;
       btn.textContent = "Drafting…"; btn.disabled = true;
+      setStatus("Drafting your answer…", "muted");
       try {
         const r = await fetch("/api/draft", {
           method: "POST",
@@ -270,8 +278,14 @@ Identity: a designer who builds what he designs — from C++/OpenGL rendering to
         });
         const data = await r.json().catch(() => ({}));
         if (!r.ok) {
-          if (r.status === 401) localStorage.removeItem(APPLY_KEY); // bad passphrase — clear so it re-prompts
-          alert(data.error || ("Error " + r.status) + (data.detail ? "\n\n" + data.detail : ""));
+          if (r.status === 401) { // wrong passphrase — clear it and reopen the field
+            localStorage.removeItem(APPLY_KEY);
+            document.getElementById("dgate").style.display = "block";
+            const k = document.getElementById("dkey"); k.value = ""; k.focus();
+            setStatus("Wrong passphrase — re-enter the APPLY_SECRET you set in Vercel.", "error");
+          } else {
+            setStatus((data.error || ("Error " + r.status)) + (data.detail ? " — " + data.detail : ""), "error");
+          }
           return;
         }
         const ans = document.getElementById("danswer");
@@ -280,12 +294,39 @@ Identity: a designer who builds what he designs — from C++/OpenGL rendering to
         document.getElementById("dout").style.display = "none";
         document.getElementById("dcount").textContent = ans.value.length + " characters";
         ans.oninput = () => document.getElementById("dcount").textContent = ans.value.length + " characters";
+        setStatus("", null);
       } catch {
-        alert("Request failed — are you online? (The drafter only works on the deployed site, not a local file open.)");
+        setStatus("Request failed — check your connection. (The drafter works on the live site, not a local file.)", "error");
       } finally {
-        btn.textContent = label; btn.disabled = false;
+        btn.textContent = "✨ Draft it for me"; btn.disabled = false;
       }
     };
+
+    // ✨ Draft it for me — reveal the inline passphrase field on first use, else draft
+    document.getElementById("drawit").onclick = () => {
+      if (!document.getElementById("dq").value.trim()) {
+        document.getElementById("dq").focus();
+        setStatus("Type a question first ↑", "error");
+        return;
+      }
+      const applyKey = localStorage.getItem(APPLY_KEY);
+      if (!applyKey) {
+        document.getElementById("dgate").style.display = "block";
+        document.getElementById("dkey").focus();
+        setStatus("Enter your passphrase once to unlock drafting.", "muted");
+        return;
+      }
+      doDraft(applyKey);
+    };
+
+    document.getElementById("dkeygo").onclick = () => {
+      const k = document.getElementById("dkey").value.trim();
+      if (!k) { document.getElementById("dkey").focus(); return; }
+      localStorage.setItem(APPLY_KEY, k);
+      document.getElementById("dgate").style.display = "none";
+      doDraft(k);
+    };
+    document.getElementById("dkey").addEventListener("keydown", (e) => { if (e.key === "Enter") document.getElementById("dkeygo").click(); });
 
     document.getElementById("dcopy").onclick = () => {
       const b = document.getElementById("dcopy");
@@ -313,7 +354,7 @@ Identity: a designer who builds what he designs — from C++/OpenGL rendering to
     document.getElementById("genprompt").onclick = () => {
       const dq = document.getElementById("dq").value.trim();
       const ctx = document.getElementById("dctx").value.trim();
-      if (!dq) { document.getElementById("dq").focus(); return; }
+      if (!dq) { document.getElementById("dq").focus(); setStatus("Type a question first ↑", "error"); return; }
       const p = `You are helping me answer a job-application question. Write a first-person answer in my voice — confident but honest, specific, no clichés or filler, no invented facts (use only what's below; leave a [bracket] if you'd need a detail I didn't give). ${ctx ? "Context: " + ctx + ". " : ""}Keep it tight.\n\nMY BACKGROUND:\n${PROFILE}\n\nTHE QUESTION:\n${dq}\n\nWrite the answer:`;
       const out = document.getElementById("dout");
       out.textContent = p; out.style.display = "block";
