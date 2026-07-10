@@ -101,6 +101,7 @@
 <script>
 (() => {
   const LS = "careeros-answers-v1";
+  const APPLY_KEY = "careeros-apply-key"; // passphrase for /api/draft (matches Vercel's APPLY_SECRET), stored per-browser
   const esc = (s) => String(s ?? "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
 
   // ── your background (feeds the "Draft new" prompt; edit freely) ──
@@ -165,7 +166,9 @@ Identity: a designer who builds what he designs — from C++/OpenGL rendering to
     const catF = document.getElementById("cat").value;
     const cats = [...new Set(state.order.map(id => state.answers[id].c))];
     const sel = document.getElementById("cat");
-    if (sel.options.length <= 1) sel.innerHTML = '<option value="">All categories</option>' + cats.map(c => `<option>${esc(c)}</option>`).join("");
+    const curCat = sel.value;
+    sel.innerHTML = '<option value="">All categories</option>' + cats.map(c => `<option>${esc(c)}</option>`).join("");
+    sel.value = curCat;
     const editedN = state.order.filter(id => state.answers[id].edited).length;
     document.getElementById("meta").textContent = `${state.order.length} questions · ${editedN} personalized`;
 
@@ -223,28 +226,102 @@ Identity: a designer who builds what he designs — from C++/OpenGL rendering to
     document.getElementById("meta").textContent = "draft a new answer";
     document.getElementById("main").innerHTML = `<div class="draft">
       <h2>Draft an answer for a new question</h2>
-      <p class="sub">For a question not in your bank. This builds a ready-to-paste prompt from your background — drop it into <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a> and you'll get a tailored, honest answer in your voice. (No API key, nothing leaves your machine until you paste it.)</p>
+      <p class="sub">For a question not in your bank. Type it and Claude drafts a tailored, honest answer in your voice from your background — edit it, then save it to your bank. (No API key? Use "Copy a prompt instead" and paste into <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a>.)</p>
       <label>The application question</label>
       <textarea id="dq" placeholder="e.g. Describe a time you had to learn a new technology quickly."></textarea>
       <label>Any context (optional) — company, role, word limit, tone</label>
       <input type="text" id="dctx" placeholder="e.g. Riot Games, graphics intern, 150 words max">
       <div class="qa__row" style="margin-top:14px">
-        <button class="btn primary" id="genprompt">Build Claude prompt</button>
-        <button class="btn" id="copyprompt" style="display:none">Copy prompt</button>
+        <button class="btn primary" id="drawit">✨ Draft it for me</button>
+        <button class="btn" id="genprompt">Copy a prompt instead</button>
       </div>
-      <div class="out" id="dout"></div>
-      <p class="note">Why not answer here directly? A good answer must be true to <em>your</em> experience — so you review it before it's yours. Paste the result back into your bank once you like it.</p>
+      <div class="out" id="dout" style="display:none"></div>
+      <div id="dresult" style="display:none">
+        <label>Draft — edit freely, then save</label>
+        <textarea id="danswer" style="min-height:180px"></textarea>
+        <div class="qa__row" style="margin-top:9px">
+          <button class="btn primary copy" id="dcopy">Copy</button>
+          <button class="btn savebtn" id="dsave">Save to bank</button>
+          <span class="count" id="dcount"></span>
+        </div>
+      </div>
+      <p class="note">A good answer must be true to <em>your</em> experience — review every draft before it's yours. Saved drafts land in your bank under "Drafted".</p>
     </div>`;
+
+    // ✨ Draft it for me — calls /api/draft (Claude), returns the answer inline
+    document.getElementById("drawit").onclick = async () => {
+      const dq = document.getElementById("dq").value.trim();
+      const ctx = document.getElementById("dctx").value.trim();
+      if (!dq) { document.getElementById("dq").focus(); return; }
+      let applyKey = localStorage.getItem(APPLY_KEY);
+      if (!applyKey) {
+        applyKey = (prompt("One-time: enter your CareerOS apply passphrase (the APPLY_SECRET you set in Vercel):") || "").trim();
+        if (!applyKey) return;
+        localStorage.setItem(APPLY_KEY, applyKey);
+      }
+      const btn = document.getElementById("drawit");
+      const label = btn.textContent;
+      btn.textContent = "Drafting…"; btn.disabled = true;
+      try {
+        const r = await fetch("/api/draft", {
+          method: "POST",
+          headers: { "content-type": "application/json", "x-apply-key": applyKey },
+          body: JSON.stringify({ question: dq, context: ctx, profile: PROFILE }),
+        });
+        const data = await r.json().catch(() => ({}));
+        if (!r.ok) {
+          if (r.status === 401) localStorage.removeItem(APPLY_KEY); // bad passphrase — clear so it re-prompts
+          alert(data.error || ("Error " + r.status) + (data.detail ? "\n\n" + data.detail : ""));
+          return;
+        }
+        const ans = document.getElementById("danswer");
+        ans.value = data.answer || "";
+        document.getElementById("dresult").style.display = "block";
+        document.getElementById("dout").style.display = "none";
+        document.getElementById("dcount").textContent = ans.value.length + " characters";
+        ans.oninput = () => document.getElementById("dcount").textContent = ans.value.length + " characters";
+      } catch {
+        alert("Request failed — are you online? (The drafter only works on the deployed site, not a local file open.)");
+      } finally {
+        btn.textContent = label; btn.disabled = false;
+      }
+    };
+
+    document.getElementById("dcopy").onclick = () => {
+      const b = document.getElementById("dcopy");
+      navigator.clipboard.writeText(document.getElementById("danswer").value);
+      b.textContent = "Copied ✓"; b.classList.add("copied");
+      setTimeout(() => { b.textContent = "Copy"; b.classList.remove("copied"); }, 1400);
+    };
+
+    document.getElementById("dsave").onclick = () => {
+      const a = document.getElementById("danswer").value.trim();
+      const q = document.getElementById("dq").value.trim();
+      if (!a || !q) return;
+      const id = "q" + Date.now();
+      state.answers[id] = { c: "Drafted", q, a, edited: true };
+      state.order.push(id);
+      save();
+      // jump to the bank so the user sees it saved
+      view = "bank";
+      document.querySelectorAll(".tab").forEach(x => x.classList.toggle("on", x.dataset.v === "bank"));
+      document.getElementById("bankControls").style.display = "flex";
+      render();
+    };
+
+    // Fallback: build a prompt to paste into claude.ai (no key needed)
     document.getElementById("genprompt").onclick = () => {
       const dq = document.getElementById("dq").value.trim();
       const ctx = document.getElementById("dctx").value.trim();
       if (!dq) { document.getElementById("dq").focus(); return; }
-      const prompt = `You are helping me answer a job-application question. Write a first-person answer in my voice — confident but honest, specific, no clichés or filler, no invented facts (use only what's below; leave a [bracket] if you'd need a detail I didn't give). ${ctx ? "Context: " + ctx + ". " : ""}Keep it tight.\n\nMY BACKGROUND:\n${PROFILE}\n\nTHE QUESTION:\n${dq}\n\nWrite the answer:`;
+      const p = `You are helping me answer a job-application question. Write a first-person answer in my voice — confident but honest, specific, no clichés or filler, no invented facts (use only what's below; leave a [bracket] if you'd need a detail I didn't give). ${ctx ? "Context: " + ctx + ". " : ""}Keep it tight.\n\nMY BACKGROUND:\n${PROFILE}\n\nTHE QUESTION:\n${dq}\n\nWrite the answer:`;
       const out = document.getElementById("dout");
-      out.textContent = prompt; out.style.display = "block";
-      const cp = document.getElementById("copyprompt");
-      cp.style.display = "inline-block";
-      cp.onclick = () => { navigator.clipboard.writeText(prompt); cp.textContent = "Copied ✓"; setTimeout(() => cp.textContent = "Copy prompt", 1400); };
+      out.textContent = p; out.style.display = "block";
+      document.getElementById("dresult").style.display = "none";
+      navigator.clipboard.writeText(p);
+      const b = document.getElementById("genprompt");
+      b.textContent = "Copied ✓ — paste in claude.ai";
+      setTimeout(() => b.textContent = "Copy a prompt instead", 1600);
     };
   }
 
