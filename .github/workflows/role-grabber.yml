@@ -18,6 +18,8 @@ jobs:
         with:
           node-version: 20
       - name: Pull + build the sheet
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }} # Path A: scoped LLM rescue of "Other"@target roles (no-op if unset)
         run: node apps/role-grabber/grab.mjs
       - name: Commit if changed
         run: |

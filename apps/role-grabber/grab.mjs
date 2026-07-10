@@ -412,6 +412,115 @@ function fitScore(r) {
 }
 const tierIcon = (fit) => (fit >= 0.6 ? "⭐" : fit >= 0.48 ? "◐" : "");
 
+// ── Path A: scoped LLM rescue of "Other" roles at target companies ────────────
+// Deterministic regex can't place every title. A strong-but-oddly-worded role at
+// a dream company ("Member of Technical Staff", "Forward Deployed Engineer", a
+// left-field creative title) lands in "Other". Path A sends ONLY that tiny slice
+// — Other + target company, not yet judged — to a cheap model in ONE batched
+// call, and re-tags the real fits into their category (+ 🎯). Cost ceiling: a
+// hard per-run cap + a committed verdict cache so a role is never re-judged.
+// Free-degrading: no key or any error → skip; the grabber still ships (Path B).
+const LLM_MODEL = "claude-haiku-4-5"; // cheapest tier — title triage doesn't need more
+const LLM_MAX = 40;                    // hard cap of titles judged per run (cost ceiling)
+const LLM_CACHE_FILE = join(ROOT, "data", "llm-cache.json");
+const LLM_CATS = ["Graphics / Game / 3D", "Art / Animation / VFX", "Design / UX", "Software Engineering", "Data / AI / ML", "Product", "Quant", "Hardware", "Other"];
+
+async function enrichOther(roles, errors) {
+  const key = process.env.ANTHROPIC_API_KEY;
+  if (!key) { console.log("[llm] no ANTHROPIC_API_KEY — Path A skipped (deterministic only)"); return { judged: 0, rescued: 0 }; }
+
+  let cache = {};
+  try { cache = JSON.parse(readFileSync(LLM_CACHE_FILE, "utf8")); } catch {}
+  const roleKey = (r) => `${r.company}|${r.title}`.toLowerCase().replace(/\s+/g, " ");
+  const isTargetCo = (r) => TARGETS.test(r.company) || ATS_COMPANY_SET.has(r.company);
+
+  const applyVerdict = (r, v) => {
+    if (!v || !v.relevant || !v.category || v.category === "Other") return;
+    r.category = v.category;
+    r.target = !!v.target;
+    r.aiTagged = true; // provenance: this row was rescued out of "Other" by Path A
+    const freshDays = (Date.now() - new Date(r.posted || "2000-01-01").getTime()) / 864e5;
+    r.hot = freshDays <= 2 && r.level !== "full-time" && (r.target || r.fit >= 0.6);
+  };
+
+  // apply cached verdicts for free; collect only the uncached candidates
+  const candidates = [];
+  for (const r of roles) {
+    if (r.category !== "Other" || !isTargetCo(r)) continue;
+    const k = roleKey(r);
+    if (k in cache) { applyVerdict(r, cache[k]); continue; }
+    candidates.push({ r, k });
+  }
+  if (candidates.length === 0) { console.log("[llm] no new Other@target candidates"); return { judged: 0, rescued: 0 }; }
+
+  candidates.sort((a, b) => (b.r.posted || "").localeCompare(a.r.posted || "")); // freshest first
+  const batch = candidates.slice(0, LLM_MAX);
+  const dropped = candidates.length - batch.length;
+
+  const system =
+    "You triage job titles for one candidate: a Computer Science + Design new-grad/intern (US citizen, no sponsorship) targeting software engineering, computer graphics, game development, technical art, and product/UX design. Each numbered title landed in an 'Other' bucket because keyword rules couldn't place it — many are still strong fits (e.g. 'Member of Technical Staff', 'Forward Deployed Engineer', 'Creative Technologist', 'Solutions Engineer' at a graphics-tools company). Mark relevant=true only for a plausible fit and pick the closest category. Exclude senior/staff/principal/lead/manager/director roles and anything clearly non-technical (sales, recruiting, finance, legal, support, marketing).";
+  const list = batch.map((c, i) => `${i}. ${c.r.title} @ ${c.r.company}`).join("\n");
+  const userText = `Titles:\n${list}\n\nReturn one verdict per index 0..${batch.length - 1}. category must come from the allowed list ("Other" if genuinely not a fit); target=true only when it is a real fit at this (desirable) company.`;
+  const schema = {
+    type: "object", additionalProperties: false,
+    properties: {
+      verdicts: {
+        type: "array",
+        items: {
+          type: "object", additionalProperties: false,
+          properties: {
+            i: { type: "integer" },
+            relevant: { type: "boolean" },
+            category: { type: "string", enum: LLM_CATS },
+            target: { type: "boolean" },
+          },
+          required: ["i", "relevant", "category", "target"],
+        },
+      },
+    },
+    required: ["verdicts"],
+  };
+
+  let verdicts = [];
+  try {
+    const resp = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: { "content-type": "application/json", "x-api-key": key, "anthropic-version": "2023-06-01" },
+      body: JSON.stringify({
+        model: LLM_MODEL,
+        max_tokens: 2048,
+        system,
+        output_config: { format: { type: "json_schema", schema } },
+        messages: [{ role: "user", content: userText }],
+      }),
+    });
+    if (!resp.ok) { errors.push(`llm: ${resp.status} ${(await resp.text()).slice(0, 140)}`); return { judged: 0, rescued: 0 }; }
+    const data = await resp.json();
+    const txt = (data.content || []).filter((b) => b.type === "text").map((b) => b.text).join("");
+    verdicts = JSON.parse(txt).verdicts || [];
+  } catch (e) {
+    errors.push(`llm: ${String(e).slice(0, 140)}`);
+    return { judged: 0, rescued: 0 };
+  }
+
+  let rescued = 0;
+  for (const v of verdicts) {
+    const c = batch[v.i];
+    if (!c) continue;
+    cache[c.k] = { relevant: !!v.relevant, category: v.category, target: !!v.target }; // cache all judged (even non-fits) so we never re-pay
+    if (v.relevant && v.category !== "Other") { applyVerdict(c.r, cache[c.k]); rescued++; }
+  }
+
+  // prune the cache to keys still present this run so it can't grow unbounded
+  const live = new Set(roles.map(roleKey));
+  const pruned = {};
+  for (const [k, v] of Object.entries(cache)) if (live.has(k)) pruned[k] = v;
+  try { writeFileSync(LLM_CACHE_FILE, JSON.stringify(pruned)); } catch {}
+
+  console.log(`[llm] Path A: judged ${batch.length} Other@target${dropped ? ` (+${dropped} over cap, next run)` : ""}, rescued ${rescued} into categories`);
+  return { judged: batch.length, rescued };
+}
+
 // ── main ─────────────────────────────────────────────────────────────────────
 // previous run's data → 🆕 detection + firstSeen persistence
 let prevKeys = new Set();
@@ -491,6 +600,10 @@ for (const r of collected) {
   if (age > GHOST_DAYS && r.source !== "greenhouse" && r.source !== "ashby" && r.source !== "lever") r.ghost = true;
   roles.push(r);
 }
+
+// Path A — LLM rescue of "Other" roles at target companies (scoped + cached; no-op without a key)
+await enrichOther(roles, errors);
+
 roles.sort((a, b) => (b.posted || "").localeCompare(a.posted || ""));
 
 // ── emit ─────────────────────────────────────────────────────────────────────
