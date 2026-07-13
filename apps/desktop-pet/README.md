@@ -1,20 +1,30 @@
 # desktop-pet — the secretary's face
 
-A desktop companion that lives in the corner of your screen and delivers your
-CareerOS morning brief in a speech bubble. This is the **V2 skin** over the
-[secretary](../secretary) brain — the brain composes the brief, the character
-delivers it.
+A desktop companion that greets you each morning and delivers your CareerOS
+job-hunt brief in a speech bubble. This is the **V2 skin** over the
+[secretary](../secretary) brain.
 
-## What it is
+## ✅ Chosen approach — OpenPets + Pikachu + the CareerOS Brief plugin
 
-- A transparent, frameless, always-on-top window in the bottom-right corner
-- **Click-through everywhere except the character + bubble** — it won't block
-  your desktop
-- Pops the brief on launch and every morning at 8am; click the character to
-  toggle it anytime
-- A placeholder character (a friendly cobalt blob) that's **yours to replace**
+Runs on **macOS and Windows** (Electron). You get a polished animated pet with
+zero art work, plus your daily brief:
 
-## Run it
+1. **Install OpenPets** for your OS from [releases](https://github.com/alvinunreal/openpets/releases/latest) (`.exe` / `.dmg`).
+2. **Add the pet:** `npx -y install-pet pikachu`, then select Pikachu in the Pet Gallery.
+3. **Add the brief:** install [`openpets-careeros-brief/`](openpets-careeros-brief) as a plugin — it makes the pet speak today's fresh roles / hot listings / internships on a schedule. Full steps in that folder's README.
+
+The brief data is a tiny `brief.json` the role-grabber emits twice daily
+(`apps/role-grabber/data/brief.json`); the plugin fetches it and speaks a short
+summary (with a friendly offline fallback).
+
+> ⚠️ Pet sprite packs (Pikachu etc.) are third-party IP — they install into
+> OpenPets on your machine and are **gitignored**, never committed to this public repo.
+
+## Option B — the from-scratch Electron scaffold (in this folder)
+
+The `index.html` / `main.js` / `preload.js` here are a minimal, own-it-end-to-end
+alternative that reads `secretary/out/brief.md` directly. Kept as a reference /
+fallback; the OpenPets route above is the one in use.
 
 ```bash
 cd apps/desktop-pet
@@ -22,14 +32,11 @@ npm install     # pulls Electron (~one-time, ~200 MB)
 npm start
 ```
 
-> ⚠️ **Untested on a real display by the author** — transparent/always-on-top/
-> click-through behavior is OS-specific and can't be verified headlessly. Run it
-> once and confirm: (1) the character shows with a transparent background (no
-> white box), (2) it stays on top, (3) clicks pass through the empty area to
-> your desktop but land on the character. If any of those misbehave on your
-> Windows build, tell me the symptom and I'll tune the window flags.
+> ⚠️ Transparent/always-on-top/click-through behavior is OS-specific and can't be
+> verified headlessly — run once and confirm the character shows with a
+> transparent background, stays on top, and clicks pass through the empty area.
 
-## Make it yours (the fun part)
+### Make the scaffold character yours
 
 - **The character:** in `index.html`, replace the `#pet` block (`.blob` + eyes +
   blush) with your own art — a PNG spritesheet, an `<img>`, a `<canvas>`, a

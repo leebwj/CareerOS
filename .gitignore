@@ -18,6 +18,13 @@ dist/
 .DS_Store
 Thumbs.db
 .idea/
+
+# desktop pet — third-party pet sprite packs (Pikachu/Pokémon etc.) are others' IP;
+# they install into OpenPets on your machine and must never be committed to this PUBLIC repo
+apps/secretary/pikachu.zip
+**/pikachu/
+**/*.pet.zip
+**/spritesheet.webp
 .vscode/
 
 # personal source docs (resume sources etc.) — never commit

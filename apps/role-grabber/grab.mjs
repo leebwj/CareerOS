@@ -636,6 +636,17 @@ const targetRows = recent.filter((r) => r.target).sort(byFit);
 const freshRows = recent.filter((r) => r.posted >= freshCut).sort(byFit).slice(0, 120);
 const newCount = roles.filter((r) => r.isNew).length;
 
+// compact brief.json for the desktop pet — it fetches this tiny summary, not the ~2MB feed
+writeFileSync(join(ROOT, "data", "brief.json"), JSON.stringify({
+  updated: new Date().toISOString(),
+  total: roles.length,
+  isNew: newCount,
+  newInterns: roles.filter((r) => r.isNew && r.level === "intern").length,
+  hot: roles.filter((r) => r.hot).length,
+  fresh: freshRows.length,
+  targets: targetRows.length,
+}));
+
 const row = (r) => `| ${r.hot ? "🔥" : ""}${tierIcon(r.fit)}${r.isNew ? " 🆕" : ""} ${r.posted} | ${r.company} | ${r.title.replace(/\|/g, "/")} | ${(r.locations[0] || "").replace(/\|/g, "/")} | ${r.level} | [link](${r.url}) |\n`;
 const HEAD = `| Posted | Company | Role | Location | Level · Term | Apply |\n|---|---|---|---|---|---|\n`;
 

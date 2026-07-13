@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 3,
+  "id": "careeros.brief",
+  "name": "CareerOS Brief",
+  "description": "Your pet greets you each morning with today's job-hunt brief — fresh roles, hot listings, and a nudge to apply. Powered by your CareerOS role feed.",
+  "version": "1.0.0",
+  "runtime": "javascript",
+  "icon": "bell",
+  "sdkVersion": "3.0.0",
+  "entry": "index.js",
+  "permissions": ["pet:speak", "schedule", "storage", "commands", "network"],
+  "network": { "hosts": ["raw.githubusercontent.com"] },
+  "assets": {
+    "icons": {
+      "brief": "assets/brief.svg"
+    }
+  },
+  "configSchema": {
+    "briefTime": {
+      "type": "time",
+      "default": "08:00",
+      "label": "Morning brief time",
+      "description": "When your pet delivers the daily job-hunt brief."
+    },
+    "greetOnLaunch": {
+      "type": "boolean",
+      "default": true,
+      "label": "Greet on launch",
+      "description": "Also deliver today's brief when OpenPets starts (once per day)."
+    }
+  }
+}
