@@ -423,7 +423,11 @@ const tierIcon = (fit) => (fit >= 0.6 ? "⭐" : fit >= 0.48 ? "◐" : "");
 const LLM_MODEL = "claude-haiku-4-5"; // cheapest tier — title triage doesn't need more
 const LLM_MAX = 40;                    // hard cap of titles judged per run (cost ceiling)
 const LLM_CACHE_FILE = join(ROOT, "data", "llm-cache.json");
-const LLM_CATS = ["Graphics / Game / 3D", "Art / Animation / VFX", "Design / UX", "Software Engineering", "Data / AI / ML", "Product", "Quant", "Hardware", "Other"];
+// NOTE: "Hardware" is deliberately NOT here — Brian is CS + Design, not EE, so
+// the LLM must never rescue semiconductor/electrical roles into a Hardware bucket.
+// Dropping it from the enum (the LLM can't output it) + the guard in applyVerdict
+// (ignores any stale cached "Hardware" verdict) keeps those roles in "Other".
+const LLM_CATS = ["Graphics / Game / 3D", "Art / Animation / VFX", "Design / UX", "Software Engineering", "Data / AI / ML", "Product", "Quant", "Other"];
 
 async function enrichOther(roles, errors) {
   const key = process.env.ANTHROPIC_API_KEY;
@@ -435,7 +439,7 @@ async function enrichOther(roles, errors) {
   const isTargetCo = (r) => TARGETS.test(r.company) || ATS_COMPANY_SET.has(r.company);
 
   const applyVerdict = (r, v) => {
-    if (!v || !v.relevant || !v.category || v.category === "Other") return;
+    if (!v || !v.relevant || !v.category || v.category === "Other" || !LLM_CATS.includes(v.category)) return; // guard drops stale "Hardware" (and any non-allowed) verdicts
     r.category = v.category;
     r.target = !!v.target;
     r.aiTagged = true; // provenance: this row was rescued out of "Other" by Path A
@@ -458,7 +462,7 @@ async function enrichOther(roles, errors) {
   const dropped = candidates.length - batch.length;
 
   const system =
-    "You triage job titles for one candidate: a Computer Science + Design new-grad/intern (US citizen, no sponsorship) targeting software engineering, computer graphics, game development, technical art, and product/UX design. Each numbered title landed in an 'Other' bucket because keyword rules couldn't place it — many are still strong fits (e.g. 'Member of Technical Staff', 'Forward Deployed Engineer', 'Creative Technologist', 'Solutions Engineer' at a graphics-tools company). Mark relevant=true only for a plausible fit and pick the closest category. Exclude senior/staff/principal/lead/manager/director roles and anything clearly non-technical (sales, recruiting, finance, legal, support, marketing).";
+    "You triage job titles for one candidate: a Computer Science + Design new-grad/intern (US citizen, no sponsorship) targeting software engineering, computer graphics, game development, technical art, and product/UX design. Each numbered title landed in an 'Other' bucket because keyword rules couldn't place it — many are still strong fits (e.g. 'Member of Technical Staff', 'Forward Deployed Engineer', 'Creative Technologist', 'Solutions Engineer' at a graphics-tools company). Mark relevant=true only for a plausible fit and pick the closest category. Mark relevant=false with category 'Other' for: senior/staff/principal/lead/manager/director roles; anything clearly non-technical (sales, recruiting, finance, legal, support, marketing, operations); and ALL electrical/hardware/semiconductor roles (ASIC, chip, silicon, litho, wafer, packaging, thermal, RF, analog, PCB, instrumentation, controls, failure-analysis, process/manufacturing engineering) — this candidate does software and design, NOT electrical or hardware engineering.";
   const list = batch.map((c, i) => `${i}. ${c.r.title} @ ${c.r.company}`).join("\n");
   const userText = `Titles:\n${list}\n\nReturn one verdict per index 0..${batch.length - 1}. category must come from the allowed list ("Other" if genuinely not a fit); target=true only when it is a real fit at this (desirable) company.`;
   const schema = {
@@ -508,7 +512,7 @@ async function enrichOther(roles, errors) {
     const c = batch[v.i];
     if (!c) continue;
     cache[c.k] = { relevant: !!v.relevant, category: v.category, target: !!v.target }; // cache all judged (even non-fits) so we never re-pay
-    if (v.relevant && v.category !== "Other") { applyVerdict(c.r, cache[c.k]); rescued++; }
+    if (v.relevant && v.category !== "Other" && LLM_CATS.includes(v.category)) { applyVerdict(c.r, cache[c.k]); rescued++; }
   }
 
   // prune the cache to keys still present this run so it can't grow unbounded
