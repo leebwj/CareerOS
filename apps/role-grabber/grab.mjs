@@ -48,6 +48,8 @@ const ATS_TARGETS = {
     Temporal: "temporaltechnologies", Carta: "carta", Amplitude: "amplitude", Airtable: "airtable", Mixpanel: "mixpanel",
     "Cockroach Labs": "cockroachlabs", LaunchDarkly: "launchdarkly", Marqeta: "marqeta", Webflow: "webflow",
     PlanetScale: "planetscale", Netlify: "netlify",
+    // v3 (2026-07-14) — coverage expansion (adjacent AI / dev-tools seen on LinkedIn but not sourced)
+    Anduril: "andurilindustries", Glean: "gleanwork", Hex: "hextechnologies", "Together AI": "togetherai", Watershed: "watershed", xAI: "xai",
   },
   ashby: {
     OpenAI: "openai", Notion: "notion", Linear: "linear", Ramp: "ramp",
@@ -61,6 +63,8 @@ const ATS_TARGETS = {
     Krea: "krea", "Character.AI": "character", "Normal Computing": "normalcomputing", Pika: "pika", Tavus: "tavus",
     Reka: "reka", Ideogram: "ideogram", Runway: "runway", Plaid: "plaid", Vanta: "vanta", Sardine: "sardine",
     Miro: "miro", Browserbase: "browserbase",
+    // v3 (2026-07-14) — Speak + adjacent AI startups
+    Speak: "speak", Abridge: "abridge", Gamma: "gamma", Poolside: "poolside", Zapier: "zapier",
   },
   lever: {
     Palantir: "palantir", Spotify: "spotify", Larian: "larian", Illumination: "illumination",
