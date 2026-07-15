@@ -251,7 +251,13 @@
       clearTimeout(timer);
       try {
         const remote = payload && payload.state ? JSON.parse(payload.state) : null;
-        if (remote && Object.keys(remote.s || {}).length && (remote.updated || 0) > (state.updated || 0)) {
+        const remoteN = remote ? Object.keys(remote.s || {}).length : 0;
+        const localN = Object.keys(state.s || {}).length;
+        // A NON-EMPTY sheet must win over an EMPTY local copy regardless of timestamp
+        // (mirrors the empty-push guard). Otherwise a wiped browser's fresh-but-empty
+        // state out-timestamps the sheet and blocks pulling your real data back — the
+        // "tracker lost all my jobs, resync won't fix it" footgun. Else last-write-wins.
+        if (remoteN && (localN === 0 || (remote.updated || 0) > (state.updated || 0))) {
           state = { s: {}, hidden: {}, ...remote };
           localStorage.setItem(LS, JSON.stringify(state));
           if (Object.keys(state.s || {}).length) localStorage.setItem(LS_BAK, JSON.stringify(state));
