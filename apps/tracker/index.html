@@ -205,6 +205,10 @@
   if (syncUrl) saveSyncUrl(syncUrl); // re-persist to both stores on every load
   // a saved URL means this device is connected → show "Synced ✓" on load
   let syncTimer, syncState = syncUrl ? "synced" : "off";
+  // ── sync durability: remember the last VERIFIED push + alarm on silent failure ──
+  const LS_OK = "careeros-sync-lastok";
+  let lastSyncOk = +(localStorage.getItem(LS_OK) || 0);
+  const markSyncOk = () => { lastSyncOk = Date.now(); try { localStorage.setItem(LS_OK, String(lastSyncOk)); } catch {} };
   function trackedRows() {
     const byKey = {}; roles.forEach((r) => (byKey[key(r)] = r));
     return Object.entries(state.s).map(([k, s]) => {
@@ -226,9 +230,60 @@
     if (!Object.keys(state.s || {}).length) { syncState = "synced"; setSyncBtn(); return; }
     // form-encoded = the transport Apps Script reliably preserves through its 302
     // redirect (text/plain bodies get dropped). Pushes FULL state + readable rows.
+    const pushedAt = state.updated || Date.now();
     fetch(syncUrl, { method: "POST", mode: "no-cors", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: "payload=" + encodeURIComponent(JSON.stringify({ state: JSON.stringify(state), rows: trackedRows() })) })
-      .then(() => { syncState = "synced"; setSyncBtn(); })
-      .catch(() => { syncState = "error"; setSyncBtn(); });
+      .then(() => { syncState = "synced"; setSyncBtn(); setTimeout(() => verifySync(pushedAt), 3000); }) // no-cors can't read the reply → confirm it landed
+      .catch(() => { syncState = "error"; setSyncBtn(); checkStale(); });
+  }
+  // verify-after-push: pull the sheet back and confirm our push actually landed.
+  // If it didn't, the banner below trips — this is what would have caught the
+  // week-long silent sync failure the day it happened.
+  function verifySync(pushedAt) {
+    if (!syncUrl) return;
+    const fn = "__cosv_" + Date.now() + "_" + Math.floor(Math.random() * 1e6);
+    const s = document.createElement("script");
+    let fired = false;
+    const fail = () => { syncState = "error"; setSyncBtn(); checkStale(); };
+    const done = () => { if (fired) return; fired = true; try { delete window[fn]; } catch {} if (s.parentNode) s.parentNode.removeChild(s); };
+    const timer = setTimeout(() => { fail(); done(); }, 9000);
+    window[fn] = (payload) => {
+      clearTimeout(timer);
+      try {
+        const remote = payload && payload.state ? JSON.parse(payload.state) : null;
+        if (remote && (remote.updated || 0) >= (pushedAt || 0) - 2000) { markSyncOk(); syncState = "synced"; }
+        else syncState = "error";
+      } catch { syncState = "error"; }
+      setSyncBtn(); checkStale(); done();
+    };
+    s.src = syncUrl + (syncUrl.includes("?") ? "&" : "?") + "callback=" + fn;
+    s.onerror = () => { clearTimeout(timer); fail(); done(); };
+    document.head.appendChild(s);
+  }
+  // loud staleness alarm — shows a red banner when you have tracked jobs but your
+  // changes haven't reached the sheet (not connected · a sync error · a push that
+  // didn't confirm). Actionable: Reconnect + Download backup. Stays silent when
+  // everything's synced (a verified push keeps lastSyncOk ahead of your edits).
+  let staleBar;
+  function checkStale() {
+    if (location.hostname !== "leebrian.dev") return; // the local-copy bar already covers non-prod
+    const nJobs = Object.keys(state.s || {}).length;
+    const unsynced = (state.updated || 0) > lastSyncOk + 3000 && Date.now() - (state.updated || 0) > 20000;
+    const overdue = nJobs > 0 && (!syncUrl || syncState === "error" || unsynced);
+    if (overdue) {
+      if (!staleBar) {
+        staleBar = document.createElement("div");
+        staleBar.style.cssText = "position:sticky;top:0;z-index:201;background:linear-gradient(#b91c1c,#7f1d1d);color:#fff;font:600 13px/1.5 'Geist Mono',monospace;padding:9px 16px;text-align:center";
+        document.body.prepend(staleBar);
+        staleBar.addEventListener("click", (e) => {
+          const a = e.target.closest("[data-act]"); if (!a) return; e.preventDefault();
+          if (a.dataset.act === "reconnect") document.getElementById("sync").click();
+          if (a.dataset.act === "backup") document.getElementById("exp").click();
+        });
+      }
+      const reason = !syncUrl ? "NOT connected to your sheet" : syncState === "error" ? "the last sync FAILED" : "your latest changes haven't reached the sheet";
+      staleBar.innerHTML = `⚠ ${nJobs} tracked job${nJobs > 1 ? "s" : ""} — ${reason}. <a href="#" data-act="reconnect" style="color:#fff;text-decoration:underline">Reconnect</a> · <a href="#" data-act="backup" style="color:#fff;text-decoration:underline">Download backup</a>`;
+      staleBar.style.display = "";
+    } else if (staleBar) staleBar.style.display = "none";
   }
   function syncToSheet(immediate) {
     if (!syncUrl) return;
@@ -263,7 +318,9 @@
           if (Object.keys(state.s || {}).length) localStorage.setItem(LS_BAK, JSON.stringify(state));
           render();
         }
+        if (remote && (remote.updated || 0) >= (state.updated || 0)) markSyncOk(); // sheet already holds our latest → sync is healthy
       } catch {}
+      checkStale();
       done();
     };
     s.src = syncUrl + (syncUrl.includes("?") ? "&" : "?") + "callback=" + fn;
@@ -614,6 +671,7 @@
       render();
       maybeNotifyHot();           // alert on any hot roles new since last visit
       pullFromSheet();            // adopt newer state from the sheet (cross-device)
+      checkStale();               // loud alarm if tracked jobs aren't reaching the sheet
     })
     .catch(() => { document.getElementById("list").innerHTML = `<div class="empty">Couldn't fetch roles.json — check connection.</div>`; });
 
@@ -633,7 +691,7 @@
   let lastPull = 0;
   const maybePull = () => { if (syncUrl && Date.now() - lastPull > 12000) { lastPull = Date.now(); pullFromSheet(); } };
   window.addEventListener("focus", () => { maybePull(); if (Date.now() - lastRoles > 120000) refreshRoles(); });
-  setInterval(() => { if (!document.hidden) maybePull(); }, 60000);
+  setInterval(() => { if (!document.hidden) { maybePull(); checkStale(); } }, 60000);
   setInterval(() => { if (!document.hidden) refreshRoles(); }, 20 * 60000);
 })();
 </script>
