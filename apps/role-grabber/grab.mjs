@@ -434,9 +434,6 @@ const LLM_CACHE_FILE = join(ROOT, "data", "llm-cache.json");
 const LLM_CATS = ["Graphics / Game / 3D", "Art / Animation / VFX", "Design / UX", "Software Engineering", "Data / AI / ML", "Product", "Quant", "Other"];
 
 async function enrichOther(roles, errors) {
-  const key = process.env.ANTHROPIC_API_KEY;
-  if (!key) { console.log("[llm] no ANTHROPIC_API_KEY — Path A skipped (deterministic only)"); return { judged: 0, rescued: 0 }; }
-
   let cache = {};
   try { cache = JSON.parse(readFileSync(LLM_CACHE_FILE, "utf8")); } catch {}
   const roleKey = (r) => `${r.company}|${r.title}`.toLowerCase().replace(/\s+/g, " ");
@@ -459,6 +456,10 @@ async function enrichOther(roles, errors) {
     if (k in cache) { applyVerdict(r, cache[k]); continue; }
     candidates.push({ r, k });
   }
+  // Judging NEW candidates needs the key; every cached rescue above already
+  // applied. A keyless run (local/manual force-grab) just won't judge new ones.
+  const key = process.env.ANTHROPIC_API_KEY;
+  if (!key) { console.log(`[llm] no ANTHROPIC_API_KEY — applied cached rescues, skipped ${candidates.length} new candidate(s) (next keyed cron judges them)`); return { judged: 0, rescued: 0 }; }
   if (candidates.length === 0) { console.log("[llm] no new Other@target candidates"); return { judged: 0, rescued: 0 }; }
 
   candidates.sort((a, b) => (b.r.posted || "").localeCompare(a.r.posted || "")); // freshest first
