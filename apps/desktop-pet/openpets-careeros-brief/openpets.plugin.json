@@ -1,32 +1,44 @@
 {
   "manifestVersion": 3,
   "id": "careeros.brief",
-  "name": "CareerOS Brief",
-  "description": "Your pet greets you each morning with today's job-hunt brief — fresh roles, hot listings, and a nudge to apply. Powered by your CareerOS role feed.",
-  "version": "1.0.0",
+  "name": "CareerOS · Morning Digest",
+  "description": "mini-Jarvis: your pet greets you each morning with your day — today's calendar, weather, and job-hunt brief. Personal accounts only; your calendar link stays on your machine.",
+  "version": "2.0.0",
   "runtime": "javascript",
-  "icon": "bell",
+  "icon": "sun",
   "sdkVersion": "3.0.0",
   "entry": "index.js",
   "permissions": ["pet:speak", "schedule", "storage", "commands", "network"],
-  "network": { "hosts": ["raw.githubusercontent.com"] },
+  "network": { "hosts": ["raw.githubusercontent.com", "calendar.google.com", "geocoding-api.open-meteo.com", "api.open-meteo.com"] },
   "assets": {
     "icons": {
       "brief": "assets/brief.svg"
     }
   },
   "configSchema": {
-    "briefTime": {
+    "digestTime": {
       "type": "time",
       "default": "08:00",
-      "label": "Morning brief time",
-      "description": "When your pet delivers the daily job-hunt brief."
+      "label": "Morning digest time",
+      "description": "When your pet delivers the daily digest."
+    },
+    "city": {
+      "type": "text",
+      "default": "",
+      "label": "Your city (for weather)",
+      "description": "e.g. Philadelphia — leave blank to skip weather."
+    },
+    "icalUrl": {
+      "type": "text",
+      "default": "",
+      "label": "Google Calendar secret iCal link",
+      "description": "Calendar → Settings → your calendar → 'Secret address in iCal format' (ends in .ics). Stays on your machine; leave blank to skip calendar."
     },
     "greetOnLaunch": {
       "type": "boolean",
       "default": true,
       "label": "Greet on launch",
-      "description": "Also deliver today's brief when OpenPets starts (once per day)."
+      "description": "Also deliver the digest when OpenPets starts (once per day)."
     }
   }
 }

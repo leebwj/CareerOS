@@ -1,34 +1,27 @@
-# CareerOS Brief — OpenPets plugin
+# CareerOS · Morning Digest — OpenPets plugin (mini-Jarvis v1)
 
-Makes your desktop pet (Pikachu or any other) **greet you each morning and speak today's job-hunt brief** — new internships, fresh roles, hot listings — pulled live from your CareerOS feed. Pure JS on the [OpenPets](https://github.com/alvinunreal/openpets) SDK, so it runs identically on **macOS and Windows** (only the pet art differs).
+Your desktop pet (Pikachu) greets you each morning with your **whole day** — today's **calendar**, the **weather**, and your **job-hunt brief** — in one speech bubble. Pure JS on the [OpenPets](https://github.com/alvinunreal/openpets) SDK, so it runs identically on **macOS and Windows**. **Personal accounts only**; your calendar link stays on your machine.
+
+> ☀️ Morning, Brian! 3 events today — first: Aleph standup at 10:00am. ☁️ 71°F, partly cloudy (H78/L62). Job hunt: 3 new internships · 2 🔥 hot. Let's make it count!
 
 ## What it does
-- At your chosen time (default **08:00**) — and once on launch — the pet pops a speech bubble like:
-  > ☀️ Morning, Brian! Today: 3 new internships · 5 new roles · 2 🔥 hot. Open your tracker and fire off a few applications — you've got this!
-- Fetches a tiny `brief.json` summary the role-grabber emits twice daily (not the ~2 MB feed).
-- **Never stays silent** — if you're offline it still greets you with a plain nudge.
-- Adds a **"Deliver brief now"** command (Control Center / command palette) to trigger it on demand.
+- Fires at your chosen time (default **08:00**) + once on launch, via the pet's speech bubble.
+- **Calendar:** reads today's events from your Google Calendar's private iCal link (`ctx.net`, allow-listed to `calendar.google.com`). Handles recurring events (daily/weekly/monthly/yearly), all-day events, and exclusions.
+- **Weather:** free, no-key [Open-Meteo](https://open-meteo.com) for your city.
+- **Job brief:** the tiny `brief.json` the role-grabber emits.
+- **Never silent / never breaks** — any piece that's offline or unconfigured is simply skipped; you still get a greeting.
+- Adds a **"Deliver digest now"** command to trigger it on demand.
 
-## Setup (macOS + Windows)
+## Setup
 
-**1. Install OpenPets** (cross-platform Electron app) — download the installer for your OS from [OpenPets releases](https://github.com/alvinunreal/openpets/releases/latest): `…win-x64-setup.exe` (Windows) or the `.dmg` (macOS).
-
-**2. Add the Pikachu pet:**
-```bash
-npx -y install-pet pikachu
-```
-Then pick **Pikachu** in OpenPets → Control Center → Pet Gallery. *(If you have `pikachu.zip`, you can also import it there instead.)*
-
-**3. Install this plugin** — copy this whole `openpets-careeros-brief/` folder into OpenPets' **user plugins** directory, then enable **"CareerOS Brief"** in the Control Center → Plugins. (Find the exact plugins path via the Control Center; on most setups it's under the OpenPets app-data folder.) Optionally validate first:
-```bash
-npx @open-pets/cli plugin validate ./openpets-careeros-brief
-```
-
-**4. Configure** (Control Center → this plugin):
-- **Morning brief time** — when the pet delivers the brief (default `08:00`)
-- **Greet on launch** — also deliver it when OpenPets starts (default on)
+1. **Install OpenPets** + the Pikachu pet (see the parent [desktop-pet README](../README.md)).
+2. **Install this plugin** — it lives in OpenPets' `plugins-dev/careeros.brief/`. On Brian's Windows machine it's already installed + enabled.
+3. **Configure it** (OpenPets → Control Center → this plugin → Settings):
+   - **Your city** — e.g. `Philadelphia` (blank = skip weather)
+   - **Google Calendar secret iCal link** — Google Calendar → ⚙ Settings → *Settings for my calendars* → your calendar → *Integrate calendar* → **"Secret address in iCal format"** → copy (ends in `.ics`). Blank = skip calendar.
+   - **Digest time** / **greet on launch**
 
 ## Notes
-- **Live counts** appear once the grabber has committed `apps/role-grabber/data/brief.json` (next scheduled run). Until then, the pet shows the friendly fallback nudge.
-- The feed host `raw.githubusercontent.com` is allow-listed in `openpets.plugin.json` (`network.hosts`) — the plugin can only reach that one host.
-- Files: `index.js` (logic), `openpets.plugin.json` (manifest/permissions/config), `assets/brief.svg` (bubble icon).
+- The iCal link is a **private** read-only calendar URL — it's stored in the plugin's local config on your machine and only ever sent to `calendar.google.com`. Don't share it.
+- Personal accounts only — this never touches work/Aleph calendars or data.
+- Files: `index.js` (logic + iCal parser + weather + digest), `openpets.plugin.json` (manifest/permissions/config/hosts), `assets/brief.svg`.
