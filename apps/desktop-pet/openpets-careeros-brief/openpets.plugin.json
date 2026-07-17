@@ -3,13 +3,13 @@
   "id": "careeros.brief",
   "name": "CareerOS · Morning Digest",
   "description": "mini-Jarvis: your pet greets you each morning with your day — today's calendar, weather, and job-hunt brief. Personal accounts only; your calendar link stays on your machine.",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "runtime": "javascript",
   "icon": "sun",
   "sdkVersion": "3.0.0",
   "entry": "index.js",
   "permissions": ["pet:speak", "schedule", "storage", "commands", "network"],
-  "network": { "hosts": ["raw.githubusercontent.com", "calendar.google.com", "geocoding-api.open-meteo.com", "api.open-meteo.com"] },
+  "network": { "hosts": ["raw.githubusercontent.com", "calendar.google.com", "geocoding-api.open-meteo.com", "api.open-meteo.com", "script.google.com", "script.googleusercontent.com"] },
   "assets": {
     "icons": {
       "brief": "assets/brief.svg"
@@ -33,6 +33,12 @@
       "default": "",
       "label": "Google Calendar secret iCal link",
       "description": "Calendar → Settings → your calendar → 'Secret address in iCal format' (ends in .ics). Stays on your machine; leave blank to skip calendar."
+    },
+    "trackerUrl": {
+      "type": "text",
+      "default": "",
+      "label": "Tracker sheet URL (for follow-up reminders)",
+      "description": "Your CareerOS tracker's Apps Script /exec URL. Pre-filled; used to remind you which applications are due for a follow-up. Blank = skip."
     },
     "greetOnLaunch": {
       "type": "boolean",

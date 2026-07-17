@@ -9,6 +9,7 @@ Your desktop pet (Pikachu) greets you each morning with your **whole day** — t
 - **Calendar:** reads today's events from your Google Calendar's private iCal link (`ctx.net`, allow-listed to `calendar.google.com`). Handles recurring events (daily/weekly/monthly/yearly), all-day events, and exclusions.
 - **Weather:** free, no-key [Open-Meteo](https://open-meteo.com) for your city.
 - **Job brief:** the tiny `brief.json` the role-grabber emits.
+- **Follow-up reminders:** reads your tracker sheet and reminds you which applications are due for a follow-up (still-active stages, past their auto-computed follow-up date). Tracker link is pre-filled.
 - **Never silent / never breaks** — any piece that's offline or unconfigured is simply skipped; you still get a greeting.
 - Adds a **"Deliver digest now"** command to trigger it on demand.
 

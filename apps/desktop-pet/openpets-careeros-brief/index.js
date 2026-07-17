@@ -127,8 +127,33 @@ async function getBrief(ctx) {
   } catch { return null; }
 }
 
+// ── follow-up reminders (from your tracker's Google Sheet) ────────────────────
+// Applications you're still waiting on whose auto-computed follow-up date is due.
+async function getFollowUps(ctx, trackerUrl) {
+  if (!trackerUrl) return null;
+  try {
+    const r = await ctx.net.fetch(trackerUrl, { timeoutMs: 12000 });
+    if (!r.ok) return null;
+    let st = r.json ?? JSON.parse(r.text || "{}");
+    st = st.state ?? st;
+    if (typeof st === "string") st = JSON.parse(st); // the sheet double-encodes state
+    const s = st.s || {};
+    const today = localDateKey();
+    const ACTIVE = ["Applied", "OA / Screen", "Interview"]; // still awaiting a reply
+    let count = 0;
+    const companies = new Set();
+    for (const [k, v] of Object.entries(s)) {
+      if (v && v.fu && v.fu <= today && ACTIVE.includes(v.st)) {
+        count++;
+        companies.add((k.split("|")[0] || "").replace(/\b\w/g, (c) => c.toUpperCase()));
+      }
+    }
+    return { count, companies: [...companies] };
+  } catch { return null; }
+}
+
 // ── compose the spoken digest ─────────────────────────────────────────────────
-export function composeDigest({ events, weather, brief }) {
+export function composeDigest({ events, weather, brief, followUps }) {
   const parts = ["☀️ Morning, Brian!"];
   if (events) {
     if (events.length === 0) parts.push("No events today — open runway.");
@@ -141,17 +166,19 @@ export function composeDigest({ events, weather, brief }) {
   const wp = weatherPhrase(weather);
   if (wp) parts.push(wp + ".");
   if (brief) parts.push(`Job hunt: ${brief}.`);
+  if (followUps && followUps.count) parts.push(`📮 ${followUps.count} follow-up${followUps.count > 1 ? "s" : ""} due${followUps.companies.length ? " — " + followUps.companies.slice(0, 3).join(", ") + (followUps.companies.length > 3 ? "…" : "") : ""}.`);
   parts.push("Let's make it count!");
   return parts.join(" ");
 }
 async function buildDigest(ctx) {
   const cfg = await getConfig(ctx);
-  const [events, weather, brief] = await Promise.all([
+  const [events, weather, brief, followUps] = await Promise.all([
     getEvents(ctx, cfg.icalUrl),
     getWeather(ctx, cfg.city),
     getBrief(ctx),
+    getFollowUps(ctx, cfg.trackerUrl),
   ]);
-  return composeDigest({ events, weather, brief });
+  return composeDigest({ events, weather, brief, followUps });
 }
 
 function digestSpeechSpec(ctx, text) {
