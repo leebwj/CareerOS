@@ -90,8 +90,16 @@
       canvas.addEventListener("webglcontextlost", (e) => { e.preventDefault(); running = false; }, false);
 
       if (reduce) { draw(0); return true; }
-      let t0 = 0;
-      const loop = (now: number) => { if (!running) { looping = false; return; } if (!t0) t0 = now; draw((now - t0) / 1000); requestAnimationFrame(loop); };
+      let t0 = 0, lastDraw = 0;
+      const fps = lowPower ? 30 : 60, interval = 1000 / fps;   // cap the 2nd context on weak GPUs
+      const loop = (now: number) => {
+        if (!running) { looping = false; return; }
+        requestAnimationFrame(loop);
+        if (!t0) { t0 = now; lastDraw = now - 999; }
+        if (now - lastDraw < interval - 2) return;             // skip early ticks (saves GPU)
+        lastDraw = now;
+        draw((now - t0) / 1000);
+      };
       start = () => { if (!looping) { looping = true; requestAnimationFrame(loop); } };
       return true;
     };

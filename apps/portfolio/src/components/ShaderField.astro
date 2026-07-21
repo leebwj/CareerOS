@@ -86,7 +86,7 @@ const { variant, mode = 0 } = Astro.props;
   const wrap = canvas?.closest(".vp") as HTMLElement | null;
   if (canvas && wrap) {
     let gl = canvas.getContext("webgl", { antialias: true, alpha: false, premultipliedAlpha: false }) as WebGLRenderingContext | null;
-    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches || /[?&]nogfx\b/.test(location.search);
     const fine = matchMedia("(hover: hover) and (pointer: fine)").matches;
     const bleed = wrap.classList.contains("vp--bleed");
 
@@ -264,8 +264,9 @@ const { variant, mode = 0 } = Astro.props;
         // resolution: DPR cap + a total-pixel cap. Weak GPUs start lower, and the
         // runtime throttle can push qScale down further if frames stay slow.
         let qScale = 1;
-        const dprCap = bleed ? (lowPower ? 1.0 : 1.25) : (lowPower ? 1.35 : 1.75);
-        const areaCap = bleed ? (lowPower ? 1500000 : 2200000) : (lowPower ? 1000000 : 1400000);
+        let targetFps = lowPower ? 30 : 60;   // ambient field is fine at 30; the throttle can drop it further
+        const dprCap = bleed ? (lowPower ? 0.85 : 1.25) : (lowPower ? 1.1 : 1.75);
+        const areaCap = bleed ? (lowPower ? 1200000 : 2200000) : (lowPower ? 850000 : 1400000);
         const resize = () => {
           let dpr = Math.min(devicePixelRatio || 1, dprCap) * qScale;
           const r = wrap.getBoundingClientRect();
@@ -341,31 +342,48 @@ const { variant, mode = 0 } = Astro.props;
           drawFrame(0);
           addEventListener("shadermode", (e: any) => { const t = (e && e.detail | 0) || 0; modeA = t; modeB = t; mixV = 0; curMode = t; drawFrame(0); });
         } else {
-          let t0 = 0, last = 0;
-          // runtime throttle: if raw frame time stays high, step DPR down (up to
-          // twice). Catches weak GPUs even when the renderer string is masked.
-          let slow = 0, steps = 0;
+          // Frame pacing + self-correcting quality. A soft ambient field doesn't
+          // need 60fps, so we cap it (30 on weak GPUs) and skip rAF ticks that
+          // come early — that alone halves fragment work. If real inter-draw time
+          // still balloons, we step DOWN decisively: fps → resolution → lower fps
+          // → freeze to a static frame. This converges to smooth on ANY device,
+          // even when GPU detection is masked (Safari/Chrome on Mac report a
+          // generic renderer), so it no longer depends on catching "Intel/Iris".
+          let t0 = 0, lastDraw = 0, slow = 0, steps = 0, frozen = false;
+          const FLOOR = 0.42;
           const loop = (now: number) => {
             if (!running) { looping = false; return; }
-            if (!t0) { t0 = now; last = now; }
+            requestAnimationFrame(loop);
+            if (!t0) { t0 = now; lastDraw = now - 999; }
             const time = (now - t0) / 1000;
-            const raw = (now - last) / 1000;
-            const dt = Math.min(raw, 0.05); last = now;
+            const interval = 1000 / targetFps;
+            const sinceDraw = now - lastDraw;
+            if (sinceDraw < interval - 2) return;            // too soon for the target fps → skip (saves GPU)
 
-            if (steps < 2 && raw > 0.001) {
-              if (raw > 0.030) slow++; else if (slow > 0) slow--;   // >~33ms ≈ under 30fps
-              if (slow > 50) { steps++; qScale *= 0.72; slow = 0; resize(); }
+            // Inter-draw time balloons past the budget when the GPU can't keep
+            // pace even under the fps cap → react within ~0.3s and step down.
+            if (!frozen && steps < 6) {
+              if (sinceDraw > interval + 9) slow++; else if (slow > 0) slow -= 2;
+              if (slow > 10) {
+                slow = 0; steps++;
+                if (targetFps > 30) targetFps = 30;                              // 1) drop to 30fps
+                else if (qScale > FLOOR) { qScale = Math.max(FLOOR, qScale * 0.72); resize(); }  // 2) shrink resolution
+                else if (targetFps > 20) targetFps = 20;                         // 3) drop to 20fps
+                else frozen = true;                                              // 4) give up → static frame
+              }
             }
 
+            const dt = Math.min(sinceDraw / 1000, 0.08);
+            lastDraw = now;
             if (fading) { mixV += dt / 0.55; if (mixV >= 1) { mixV = 0; modeA = modeB; fading = false; } }
             if (idle) { tmx = 0.5 + 0.32 * Math.cos(time * 0.18); tmy = 0.5 + 0.28 * Math.sin(time * 0.23); }
             mx += (tmx - mx) * 0.06; my += (tmy - my) * 0.06;
             drawFrame(time);
-            requestAnimationFrame(loop);
+            if (frozen) { running = false; looping = false; }   // last frame drawn → leave it static
           };
           start = () => { if (!looping) { looping = true; requestAnimationFrame(loop); } };
           const io = new IntersectionObserver((es) => {
-            for (const e of es) { if (e.isIntersecting) { running = true; start(); } else { running = false; } }
+            for (const e of es) { if (e.isIntersecting) { if (!frozen) { running = true; start(); } } else { running = false; } }
           }, { threshold: 0.01 });
           io.observe(wrap);
         }

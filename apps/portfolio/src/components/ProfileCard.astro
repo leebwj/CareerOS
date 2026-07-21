@@ -26,7 +26,7 @@ const exp = [
 
       <dl class="pcard__stats">
         <div><dt>Focus</dt><dd>Graphics <span class="dim">+</span> Product</dd></div>
-        <div><dt>Study</dt><dd>CS&nbsp;+&nbsp;Design <span class="dim">’27</span> · CGGT&nbsp;MSE <span class="dim">’28</span>, Penn</dd></div>
+        <div><dt>Study</dt><dd class="pcard__study">BA CS&nbsp;+&nbsp;Design, Penn <span class="dim">’27</span><br />MSE CGGT, Penn <span class="dim">’28</span></dd></div>
         <div><dt>Based</dt><dd>Philadelphia, PA</dd></div>
       </dl>
 
@@ -145,6 +145,7 @@ const exp = [
   .pcard__stats > div:first-child { border-top: 0; padding-top: 0; }
   .pcard__stats dt { font-family: var(--font-mono); font-size: 10px; letter-spacing: .06em; text-transform: uppercase; color: var(--color-cobalt-deep); }
   .pcard__stats dd { font-size: .88rem; color: var(--color-ink); }
+  .pcard__study { line-height: 1.5; }
   .pcard__stats .dim { color: var(--color-muted); }
 
   /* experience */
