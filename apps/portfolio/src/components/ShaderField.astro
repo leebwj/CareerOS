@@ -108,6 +108,11 @@ const { variant, mode = 0 } = Astro.props;
       };
       const lowPower = detectLowPower(gl) || /[?&]lowgfx\b/.test(location.search);
       const OCT = lowPower ? 3 : 5; // fbm octaves — 3 halves the noise cost on weak GPUs
+      // Weak GPUs (and reduced-motion) → render ONE static frame, no animation
+      // loop. A 2020 Intel Iris Plus can't sustain a full-bleed animated shader
+      // (it lags AND visually breaks), so on that hardware we paint a single
+      // frame of the field and stop: zero ongoing GPU cost, cannot lag or break.
+      const staticOnly = reduce || lowPower;
 
       const deriv = gl.getExtension("OES_standard_derivatives");
       const W = deriv ? "fwidth(v)" : "0.03";
@@ -319,27 +324,31 @@ const { variant, mode = 0 } = Astro.props;
           gl!.drawArrays(gl!.TRIANGLES, 0, 3);
         };
 
-        let running = false, looping = false;
+        let running = false, looping = false, lostCount = 0;
         let start = () => {};
 
         // ── context loss → show the CSS grid fallback; restore → rebuild ──────
+        // After a couple of losses we stop recovering and leave the CSS grid up,
+        // so a struggling GPU can't thrash on rebuild → lose → rebuild.
         canvas.addEventListener("webglcontextlost", (e) => {
           e.preventDefault();      // signal we can recover (else no restore fires)
           running = false;
           wrap.classList.add("vp-lost");
         }, false);
         canvas.addEventListener("webglcontextrestored", () => {
+          if (++lostCount > 2) { wrap.classList.add("vp-lost"); return; }  // give up → CSS grid
           if (!build()) return;    // rebuild program/buffers/uniforms on the new context
           setColors();
           resize();
           wrap.classList.remove("vp-lost");
-          if (reduce) { drawFrame(0); return; }
+          if (staticOnly) { drawFrame(0); return; }
           running = true;
           start();
         }, false);
 
-        if (reduce) {
+        if (staticOnly) {
           drawFrame(0);
+          addEventListener("resize", () => drawFrame(0), { passive: true });   // a resize clears the buffer → repaint the static frame
           addEventListener("shadermode", (e: any) => { const t = (e && e.detail | 0) || 0; modeA = t; modeB = t; mixV = 0; curMode = t; drawFrame(0); });
         } else {
           // Frame pacing + self-correcting quality. A soft ambient field doesn't
