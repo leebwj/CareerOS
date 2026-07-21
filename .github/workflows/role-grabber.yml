@@ -2,8 +2,10 @@ name: role-grabber
 
 on:
   schedule:
-    - cron: "23 13 * * *"
-    - cron: "23 21 * * *" # daily ~9:23am ET
+    # 4×/day, every ~6h (01:23 / 07:23 / 13:23 / 19:23 UTC) — shrinks the window
+    # where a currently-active Simplify listing sits between snapshots and is
+    # transiently missing from the feed. 13:23 UTC stays ~9:23am ET.
+    - cron: "23 1,7,13,19 * * *"
   workflow_dispatch: {}
 
 permissions:
