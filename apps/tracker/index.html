@@ -314,15 +314,34 @@
         const remote = payload && payload.state ? JSON.parse(payload.state) : null;
         const remoteN = remote ? Object.keys(remote.s || {}).length : 0;
         const localN = Object.keys(state.s || {}).length;
-        // A NON-EMPTY sheet must win over an EMPTY local copy regardless of timestamp
-        // (mirrors the empty-push guard). Otherwise a wiped browser's fresh-but-empty
-        // state out-timestamps the sheet and blocks pulling your real data back — the
-        // "tracker lost all my jobs, resync won't fix it" footgun. Else last-write-wins.
+        // MERGE, never last-write-wins. Wholesale replacement is how 33 tracked
+        // jobs got clobbered by a fresh browser holding 1 newer job (2026-07-22):
+        // guards caught EMPTY overwrites but not small-vs-big. Now: union both
+        // sides' roles; for a key present in both, the globally-newer state's
+        // entry wins. Nothing tracked on ANY device can be silently lost.
+        // (Tradeoff: an untrack on one device can resurrect via another's stale
+        // copy — acceptable; losing applications is not.)
         if (remoteN && (localN === 0 || (remote.updated || 0) > (state.updated || 0))) {
-          state = { s: {}, hidden: {}, ...remote };
+          // remote strictly newer (or local empty): adopt remote, then graft any
+          // local-only keys back in (the 1-vs-33 case in both directions)
+          const localOnly = Object.fromEntries(Object.entries(state.s || {}).filter(([k]) => !(remote.s || {})[k]));
+          const hiddenU = { ...(state.hidden || {}), ...(remote.hidden || {}) };
+          state = { s: { ...(remote.s || {}), ...localOnly }, hidden: hiddenU, updated: remote.updated || Date.now() };
+          if (Object.keys(localOnly).length) { state.updated = Date.now(); syncToSheet(); } // union is newer than both → push it back
           localStorage.setItem(LS, JSON.stringify(state));
           if (Object.keys(state.s || {}).length) localStorage.setItem(LS_BAK, JSON.stringify(state));
           render();
+        } else if (remoteN && localN) {
+          // local is newer: keep local entries, but graft any remote-only keys
+          // (another device's work must survive this device's next push)
+          const remoteOnly = Object.fromEntries(Object.entries(remote.s || {}).filter(([k]) => !(state.s || {})[k]));
+          if (Object.keys(remoteOnly).length || Object.keys(remote.hidden || {}).some((k) => !(state.hidden || {})[k])) {
+            state = { s: { ...remoteOnly, ...state.s }, hidden: { ...(remote.hidden || {}), ...(state.hidden || {}) }, updated: Date.now() };
+            localStorage.setItem(LS, JSON.stringify(state));
+            localStorage.setItem(LS_BAK, JSON.stringify(state));
+            render();
+            syncToSheet(); // sheet lacks the union → push it back
+          }
         }
         if (remote && (remote.updated || 0) >= (state.updated || 0)) markSyncOk(); // sheet already holds our latest → sync is healthy
         syncState = "synced"; setSyncBtn();   // the sheet actually responded → honestly synced

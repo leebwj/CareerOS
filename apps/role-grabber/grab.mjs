@@ -176,9 +176,16 @@ async function fetchText(url) {
 }
 
 // ── source parsers → normalized {company,title,category,locations,url,posted,level,source}
+// Simplify: active listings PLUS ones it closed within the last 14 days.
+// Companies like Google rotate posting IDs, so Simplify flips real, still-
+// applyable roles (e.g. the Summer-2027 SWE MS intern) to inactive — those
+// must not silently vanish from Brian's feed. Recently-closed rows carry
+// closedRecently=true and get ghost-flagged (dimmed, "verify before applying").
+const CLOSED_KEEP_DAYS = 14;
 function fromSimplify(list, level) {
+  const cutoff = Date.now() / 1000 - CLOSED_KEEP_DAYS * 86400;
   return list
-    .filter((x) => x.active && x.is_visible !== false)
+    .filter((x) => x.is_visible !== false && (x.active || (x.date_updated || 0) > cutoff))
     .map((x) => ({
       company: x.company_name,
       title: x.title,
@@ -189,6 +196,7 @@ function fromSimplify(list, level) {
       term: (x.terms || []).filter((t) => t && t !== "N/A").join(" / ") || termFromTitle(x.title),
       level,
       source: "simplify",
+      ...(x.active ? {} : { closedRecently: true }),
     }));
 }
 
@@ -613,11 +621,13 @@ for (const r of collected) {
   // that Simplify adds late must still fire the 🔥/alert path — "new to us"
   // is what an alert means, not "new to the internet")
   const freshDays = (Date.now() - new Date(r.posted || "2000-01-01").getTime()) / 864e5;
-  r.hot = (freshDays <= 2 || r.isNew) && r.level !== "full-time" && (r.target || r.fit >= 0.6);
+  r.hot = (freshDays <= 2 || r.isNew) && !r.closedRecently && r.level !== "full-time" && (r.target || r.fit >= 0.6);
   const age = (Date.now() - new Date(r.posted || today).getTime()) / 864e5;
-  // simplify exempt from ghosting: its bot marks dead listings inactive, so
-  // active-in-feed = verified alive regardless of posted age
-  if (age > GHOST_DAYS && !curated && r.source !== "greenhouse" && r.source !== "ashby" && r.source !== "lever") r.ghost = true;
+  // simplify exempt from age-ghosting (its bot marks dead listings inactive, so
+  // active-in-feed = verified alive) — but rows Simplify itself closed within
+  // the keep-window ARE ghosts: still listed + applyable, dimmed for "verify"
+  if (r.closedRecently) r.ghost = true;
+  else if (age > GHOST_DAYS && !curated && r.source !== "greenhouse" && r.source !== "ashby" && r.source !== "lever") r.ghost = true;
   roles.push(r);
 }
 
