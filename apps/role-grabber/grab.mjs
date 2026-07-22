@@ -50,6 +50,12 @@ const ATS_TARGETS = {
     PlanetScale: "planetscale", Netlify: "netlify",
     // v3 (2026-07-14) — coverage expansion (adjacent AI / dev-tools seen on LinkedIn but not sourced)
     Anduril: "andurilindustries", Glean: "gleanwork", Hex: "hextechnologies", "Together AI": "togetherai", Watershed: "watershed", xAI: "xai",
+    // v4 (2026-07-24) — big-tech + game-company sweep (all probe-verified w/ sample
+    // titles). SpaceX ("spacex", 1,977 jobs) probed OK but intentionally NOT added:
+    // it would be ~13% of the whole feed with auto-🎯 flooding, and it's not on
+    // Brian's target list — one config line away if he ever wants it.
+    "PlayStation (SIE)": "sonyinteractiveentertainmentglobal", "Google DeepMind": "deepmind",
+    "Magic Leap": "magicleap", DoorDash: "doordashusa", "Samsung Research America": "samsungresearchamerica", Squarespace: "squarespace",
   },
   ashby: {
     OpenAI: "openai", Notion: "notion", Linear: "linear", Ramp: "ramp",
@@ -87,6 +93,10 @@ const ATS_TARGETS = {
     Pixar: { tenant: "pixar", wd: 501, site: "Pixar_External_Career_Site" },
     Sony: { tenant: "sonyglobal", wd: 1, site: "SonyGlobalCareers" },
     Sega: { tenant: "sega", wd: 3, site: "Sega_Careers" },
+    // v4 (2026-07-24) — probe-verified; adapter samples the newest ~200/tenant
+    Salesforce: { tenant: "salesforce", wd: 12, site: "External_Career_Site" },
+    Micron: { tenant: "micron", wd: 1, site: "External" },
+    "Xbox Game Studios": { tenant: "xboxgaming", wd: 1, site: "External" },  // Microsoft Gaming central board (Xbox/ActiBlizz/ZeniMax)
   },
   workable: { "Square Enix": "square-enix" },
   recruitee: { Framestore: "framestore" },
@@ -327,7 +337,8 @@ async function fromWorkday(company, { tenant, wd, site }) {
     out.push(...page);
     if (page.length < 20) break;
   }
-  return out.filter((j) => !SENIOR_RX.test(j.title)).map((j) => ({
+  // some tenants (Disney) return occasional rows with no title — drop them
+  return out.filter((j) => j.title && !SENIOR_RX.test(j.title)).map((j) => ({
     company,
     title: j.title,
     category: categorize(j.title, ""),
