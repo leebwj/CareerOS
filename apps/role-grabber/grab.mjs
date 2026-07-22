@@ -340,6 +340,78 @@ async function fromWorkday(company, { tenant, wd, site }) {
   }));
 }
 
+// Amazon posts on amazon.jobs (custom site, public search.json) — NOT on any
+// public ATS, so without this its intern roles only appear when Simplify
+// curates them (Brian applied to postings we were missing). Location format is
+// country-first ("US, WA, Seattle") → filter US here and normalize to
+// "City, ST". Legal-entity company names ("Amazon.com Services LLC") are
+// collapsed to "Amazon" so tracker grouping and TARGETS stay coherent.
+async function fromAmazonJobs() {
+  const out = [];
+  const seenPaths = new Set();
+  // two sweeps: the official student-programs bucket (interns + Jr/new-grad
+  // programs, ~260 rows) + a full-text intern query for stragglers outside it
+  for (const q of ["business_category[]=studentprograms", "base_query=intern"]) {
+    let offset = 0, hits = Infinity;
+    while (offset < Math.min(hits, 400)) {
+      const r = await fetch(`https://www.amazon.jobs/en/search.json?${q}&result_limit=100&offset=${offset}`, {
+        headers: { "user-agent": "Mozilla/5.0 (careeros-role-grabber)" },
+      });
+      if (!r.ok) throw new Error(`${r.status} amazon.jobs`);
+      const d = await r.json();
+      hits = d.hits || 0;
+      const page = d.jobs || [];
+      if (!page.length) break;
+      offset += page.length;
+      for (const j of page) {
+        if (seenPaths.has(j.job_path)) continue;
+        seenPaths.add(j.job_path);
+        const loc = String(j.location || "");
+        if (!loc.startsWith("US")) continue;                     // country-first format
+        const [, st, city] = loc.split(",").map((s) => s.trim());
+        if (SENIOR_RX.test(j.title)) continue;
+        out.push({
+          company: "Amazon",
+          title: j.title,
+          category: categorize(j.title, j.job_category || ""),
+          locations: [[city, st].filter(Boolean).join(", ")].filter(Boolean),
+          url: "https://www.amazon.jobs" + j.job_path,
+          posted: j.posted_date ? new Date(j.posted_date).toISOString().slice(0, 10) : "",
+          term: termFromTitle(j.title),
+          level: /\b(intern|co-?op)\b/i.test(j.title) ? "intern" : "new-grad",
+          source: "amazonjobs",
+        });
+      }
+    }
+  }
+  return out;
+}
+
+// Netflix runs on Eightfold (explore.jobs.netflix.net) — public JSON API.
+async function fromNetflixEightfold() {
+  const r = await fetch("https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com&query=intern&num=50&start=0", {
+    headers: { "user-agent": "Mozilla/5.0 (careeros-role-grabber)" },
+  });
+  if (!r.ok) throw new Error(`${r.status} netflix eightfold`);
+  const d = await r.json();
+  return (d.positions || []).filter((p) => !SENIOR_RX.test(p.name)).map((p) => {
+    // keep the full "City, State, Country" string — isUS() matches on the
+    // country name (2-letter state codes are absent in Eightfold's format)
+    const parts = String((p.locations && p.locations[0]) || p.location || "").split(",").map((s) => s.trim());
+    return {
+      company: "Netflix",
+      title: p.name,
+      category: categorize(p.name, p.department || ""),
+      locations: [parts.join(", ")].filter(Boolean),
+      url: p.canonicalPositionUrl,
+      posted: p.t_create ? new Date(p.t_create * 1000).toISOString().slice(0, 10) : "",
+      term: termFromTitle(p.name),
+      level: levelFromTitle(p.name),
+      source: "netflix",
+    };
+  });
+}
+
 async function fromWorkable(company, account) {
   const r = await fetch(`https://apply.workable.com/api/v3/accounts/${account}/jobs`, {
     method: "POST",
@@ -583,6 +655,13 @@ await Promise.all([
   fetchText(SOURCES.jobrightDesign)
     .then((t) => collectedAgg.push(...fromJobrightDesign(t)))
     .catch((e) => errors.push(`jobrightDesign: ${e.message}`)),
+  // big-tech custom career sites with public JSON (no public ATS → Simplify-only before this)
+  fromAmazonJobs()
+    .then((rows) => { collectedATS.push(...rows); atsCounts["Amazon(jobs)"] = rows.length; })
+    .catch((e) => errors.push(`amazonjobs: ${e.message}`)),
+  fromNetflixEightfold()
+    .then((rows) => { collectedATS.push(...rows); atsCounts["Netflix(eightfold)"] = rows.length; })
+    .catch((e) => errors.push(`netflix: ${e.message}`)),
 ]);
 
 // stale-board tripwire (research trap: 200 + empty ≠ healthy)
