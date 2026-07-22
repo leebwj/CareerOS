@@ -76,7 +76,6 @@ const capabilities = [
           <a href="#contact" class="btn btn-ghost" data-magnetic="0.4">Get in touch</a>
         </div></div>
       </div>
-      <div class="scroll-cue" aria-hidden="true"><span class="scroll-cue__line"></span>scroll</div>
       <div class="shader-pick">
         <span>shader</span>
         <button type="button" data-shader-mode="0" aria-pressed="true">Field</button>
@@ -202,18 +201,20 @@ const capabilities = [
   <script is:inline>
     (() => {
       document.querySelectorAll(".copy-email").forEach((a) => {
+        const email = a.getAttribute("data-email") || "";
+        let timer = null;
+        const restore = () => { a.textContent = email; a.classList.remove("is-copied"); };
         a.addEventListener("click", (e) => {
           if (!navigator.clipboard) return;            // no clipboard API → plain mailto
           e.preventDefault();
-          navigator.clipboard.writeText(a.getAttribute("data-email") || "").then(() => {
-            if (a.dataset.busy) return;
-            a.dataset.busy = "1";
-            const orig = a.textContent;
-            a.textContent = "copied to clipboard ✓";
+          navigator.clipboard.writeText(email).then(() => {
+            a.textContent = "copied ✓";
             a.classList.add("is-copied");
-            setTimeout(() => { a.textContent = orig; a.classList.remove("is-copied"); delete a.dataset.busy; }, 1500);
-          }).catch(() => { location.href = "mailto:" + (a.getAttribute("data-email") || ""); });
+            clearTimeout(timer);
+            timer = setTimeout(restore, 1400);         // always returns to the address
+          }).catch(() => { location.href = "mailto:" + email; });
         });
+        a.addEventListener("pointerleave", () => { if (a.classList.contains("is-copied")) { clearTimeout(timer); timer = setTimeout(restore, 500); } });
       });
     })();
   </script>

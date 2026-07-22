@@ -14,6 +14,16 @@
   "cover": "/art/seoul-street-2/01.jpg"
  },
  {
+  "title": "Passenger",
+  "slug": "passenger",
+  "desc": "A cinematic Unreal Engine 5 short: a canyon, a train swallowed by roots, and a figure who picks up something that briefly opens the world backward. Environment, lighting, character animation, and hand-written HLSL post-process shaders (an anisotropic Kuwahara filter and a cell shader) that make real-time frames feel oil-painted.\n\nMade with Unreal Engine 5, Maya, and Megascans; rendered at 2560×1080 through the Movie Render Pipeline.",
+  "cover": "https://i.ytimg.com/vi/mSnqY3R2d-E/hqdefault.jpg",
+  "images": [],
+  "youtube": [
+   "mSnqY3R2d-E"
+  ]
+ },
+ {
   "title": "A Composition that brings together non-adjacent spaces",
   "slug": "a-composition-that-brings-together-non-adjacent-spaces",
   "desc": "Many different legends attempt to speculate how human beings had advent in this world. Even though there are numerous theories yet have been proven, one thing is clear: we all began from a united entity. While the cycle of life and death continued over millenniums, the world has been civilized in different places with different people. Like how Europeans established a distinct country in a new-found land, culture, language, and society began to segregate from one another. Through this work, I tried to convey the message of how people developed various appearances, personalities, and beliefs over time. And inspired by The Red Thread of Fate from Chinese mythology, I tried to show how our distinct individualities are all related to each other, as we all originated from a united group, tribe, matter, or being. In the end, the threads bring the society, culture, and territories together into one identity.\n\n9.44” x 9.44” x 15.74”",
@@ -82,6 +92,15 @@
   "video": null,
   "videoPending": false,
   "cover": "https://i.ytimg.com/vi/87yMHpuJZZQ/hqdefault.jpg"
+ },
+ {
+  "title": "Playground",
+  "slug": "playground",
+  "desc": "Recreation of a childhood memory, bringing life to a character with distinctive animations through user-interactive actions with the 3D models. Using a keyboard or mouse, press the keys to make interactive animations come to life as “Boo” wakes up. Press ‘Q’ to reset the scene.\n\nMade using Maya, Substance Painter, and Spline — play with it right here.",
+  "cover": "/art/playground/cover.jpg",
+  "images": [],
+  "youtube": [],
+  "spline": "https://my.spline.design/untitled-QVRKLSCWxKCmX5aAVZUXDukV/"
  },
  {
   "title": "Ceiling Light",

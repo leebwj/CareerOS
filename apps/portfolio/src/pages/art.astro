@@ -56,8 +56,10 @@ const withCover = projects.map((p) => ({
     </section>
   </main>
 
-  <!-- expanded project view -->
-  <div class="pv" id="pv" aria-hidden="true">
+  <!-- expanded project view. data-lenis-prevent: the page's smooth-scroll
+       (Lenis) intercepts wheel events globally — without this the fixed
+       overlay can never scroll natively. -->
+  <div class="pv" id="pv" aria-hidden="true" data-lenis-prevent>
     <button class="pv-close" id="pv-close" aria-label="Close">✕</button>
     <article class="pv-inner">
       <h2 class="pv-title" id="pv-title"></h2>
@@ -124,6 +126,7 @@ const withCover = projects.map((p) => ({
   .pv-media img, .pv-media .pv-embed { width: 100%; border-radius: 6px; display: block; }
   .pv-media img { height: auto; box-shadow: 0 10px 40px rgba(0,0,0,.22); }
   .pv-embed { aspect-ratio: 16 / 9; border: 0; }
+  .pv-embed--tall { aspect-ratio: 4 / 3; min-height: min(70vh, 640px); }  /* interactive 3D scenes get room */
   .pv-media video.pv-embed { aspect-ratio: auto; background: #000; max-height: 82vh; }
   .pv-pending { font-family: "Geist Mono", monospace; font-size: 12px; color: color-mix(in srgb, currentColor 50%, transparent); border: 1px dashed color-mix(in srgb, currentColor 25%, transparent); border-radius: 8px; padding: 26px; text-align: center; }
   .pv-close { position: fixed; top: 20px; right: 22px; z-index: 101; width: 42px; height: 42px; border-radius: 999px; background: rgba(128,128,128,.14); color: inherit; border: 1px solid color-mix(in srgb, currentColor 20%, transparent); font-size: 16px; cursor: pointer; display: grid; place-items: center; }
@@ -137,25 +140,35 @@ const withCover = projects.map((p) => ({
     const tEl = document.getElementById("pv-title");
     const dEl = document.getElementById("pv-desc");
     const mEl = document.getElementById("pv-media");
-    const open = (i) => {
+    const open = (i, push) => {
       const p = data[i];
       tEl.textContent = p.title;
       dEl.textContent = p.desc || "";
       dEl.style.display = p.desc ? "" : "none";
       let html = "";
       if (p.video) html += `<video class="pv-embed" controls playsinline preload="metadata"${p.cover ? ` poster="${p.cover}"` : ""}><source src="${p.video}" type="video/mp4"></video>`;
-      p.youtube.forEach((id) => (html += `<iframe class="pv-embed" src="https://www.youtube.com/embed/${id}" title="${p.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>`));
-      p.images.forEach((src) => (html += `<img src="${src}" alt="" loading="lazy">`));
-      if (p.videoPending && !p.images.length && !p.youtube.length && !p.video) html += `<div class="pv-pending">▶ Video piece — embed coming soon.</div>`;
+      (p.youtube || []).forEach((id) => (html += `<iframe class="pv-embed" src="https://www.youtube.com/embed/${id}" title="${p.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>`));
+      if (p.spline) html += `<iframe class="pv-embed pv-embed--tall" src="${p.spline}" title="${p.title} — interactive 3D" loading="lazy" allow="fullscreen"></iframe>`;
+      (p.images || []).forEach((src) => (html += `<img src="${src}" alt="" loading="lazy">`));
+      if (p.videoPending && !(p.images || []).length && !(p.youtube || []).length && !p.video) html += `<div class="pv-pending">▶ Video piece — embed coming soon.</div>`;
       mEl.innerHTML = html;
       pv.classList.add("open");
       pv.setAttribute("aria-hidden", "false");
       pv.scrollTop = 0;
       document.body.style.overflow = "hidden";
+      if (push !== false) history.pushState({ pv: i }, "", "#" + (p.slug || i));  // browser Back now closes the view
     };
-    const close = () => { pv.classList.remove("open"); pv.setAttribute("aria-hidden", "true"); document.body.style.overflow = ""; mEl.innerHTML = ""; };
+    const doClose = () => { pv.classList.remove("open"); pv.setAttribute("aria-hidden", "true"); document.body.style.overflow = ""; mEl.innerHTML = ""; };
+    const close = () => { if (history.state && history.state.pv != null) history.back(); else doClose(); };
+    addEventListener("popstate", (e) => {
+      if (e.state && e.state.pv != null) open(e.state.pv, false);
+      else if (pv.classList.contains("open")) doClose();
+    });
     document.querySelectorAll(".ag-card").forEach((b) => b.addEventListener("click", () => open(+b.dataset.i)));
     document.getElementById("pv-close").addEventListener("click", close);
     addEventListener("keydown", (e) => { if (e.key === "Escape" && pv.classList.contains("open")) close(); });
+    // deep link: /art#slug opens that project directly
+    const initial = data.findIndex((p) => "#" + (p.slug || "") === decodeURIComponent(location.hash));
+    if (initial >= 0) { history.replaceState(null, "", location.pathname); open(initial); }
   })();
 </script>
