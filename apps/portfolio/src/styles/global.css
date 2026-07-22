@@ -273,16 +273,55 @@ html.lenis, html.lenis body { height: auto; }
   .velocity-type { transform: skewY(var(--vskew, 0deg)); transition: transform .3s ease-out; transform-origin: left center; will-change: transform; }
   @media (prefers-reduced-motion: reduce) { .velocity-type { transform: none !important; } }
 
-  /* ── contact CTA: the one full accent block per page (carries the identity colour) ── */
-  .cta-block { background: var(--color-cobalt); color: var(--color-on-accent); border-radius: 22px; padding: clamp(2rem, 4.5vw, 3.2rem); }
+  /* ── contact CTA: the one full accent block per page (carries the identity colour).
+     Textured like the rest of the system — faint drawing grid + light entering
+     top-left + film grain — a blueprint surface, not a flat rectangle. ── */
+  .cta-block {
+    position: relative; overflow: hidden;
+    background:
+      radial-gradient(120% 140% at 10% -12%, rgba(255, 255, 255, .17), transparent 52%),
+      linear-gradient(rgba(255, 255, 255, .05) 1px, transparent 1px) 0 0 / 26px 26px,
+      linear-gradient(90deg, rgba(255, 255, 255, .05) 1px, transparent 1px) 0 0 / 26px 26px,
+      var(--color-cobalt);
+    color: var(--color-on-accent); border-radius: 22px; padding: clamp(2rem, 4.5vw, 3.2rem);
+  }
+  .cta-block::before {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+    background-size: 160px 160px; mix-blend-mode: overlay; opacity: .45;
+  }
+  .cta-block > * { position: relative; }
   .cta-link { color: var(--color-on-accent); opacity: .82; transition: opacity .2s ease; }
   .cta-link:hover { opacity: 1; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1.5px; }
   .cta-grid { display: grid; gap: 2rem; }
   @media (min-width: 768px) { .cta-grid { grid-template-columns: 1.5fr 1fr; gap: 3rem; align-items: center; } }
   .cta-links { display: flex; flex-direction: column; gap: .7rem; font-family: var(--font-mono); font-size: .95rem; }
-  .copy-email { transition: color .2s ease; }
-  .copy-email.is-copied { color: var(--color-cobalt-deep); }
+  .copy-email { transition: color .2s ease, opacity .2s ease; }
+  .copy-email.is-copied { opacity: 1; color: #fff; }
   @media (min-width: 768px) { .cta-links { align-items: flex-end; text-align: right; } }
+
+  /* ── hero scroll cue: a quiet falling dot, centered at the hero's foot ── */
+  .scroll-cue {
+    position: absolute; left: 50%; transform: translateX(-50%);
+    bottom: clamp(1.1rem, 3vw, 2rem); z-index: 2;
+    display: flex; flex-direction: column; align-items: center; gap: 9px;
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: .16em;
+    text-transform: uppercase; color: var(--color-muted); pointer-events: none;
+  }
+  .scroll-cue__line { position: relative; width: 1px; height: 40px; background: color-mix(in oklab, var(--color-line) 85%, transparent); overflow: hidden; }
+  .scroll-cue__line::after {
+    content: ""; position: absolute; left: -1px; top: -10px; width: 3px; height: 10px;
+    border-radius: 2px; background: var(--color-cobalt);
+    animation: cue-fall 2.4s cubic-bezier(.55, 0, .45, 1) infinite;
+  }
+  @keyframes cue-fall {
+    0% { transform: translateY(0); opacity: 0; }
+    14% { opacity: 1; }
+    72% { opacity: 1; }
+    100% { transform: translateY(52px); opacity: 0; }
+  }
+  @media (max-width: 640px) { .scroll-cue { display: none; } }  /* phones scroll without prompting */
+  @media (prefers-reduced-motion: reduce) { .scroll-cue__line::after { animation: none; top: 38%; opacity: .8; } }
 }
 
 /* LIGHT MODE — warm "Paper" twin, toggled via the nav sun/moon → [data-mode="light"]. */

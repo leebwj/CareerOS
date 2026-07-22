@@ -76,6 +76,7 @@ const capabilities = [
           <a href="#contact" class="btn btn-ghost" data-magnetic="0.4">Get in touch</a>
         </div></div>
       </div>
+      <div class="scroll-cue" aria-hidden="true"><span class="scroll-cue__line"></span>scroll</div>
       <div class="shader-pick">
         <span>shader</span>
         <button type="button" data-shader-mode="0" aria-pressed="true">Field</button>
@@ -190,12 +191,32 @@ const capabilities = [
             <a href="mailto:leebwj@sas.upenn.edu" class="cta-link copy-email" data-email="leebwj@sas.upenn.edu">leebwj@sas.upenn.edu</a>
             <a href="https://www.linkedin.com/in/brian-lee-0b706b225/" target="_blank" rel="noopener" data-cursor="LinkedIn" class="cta-link">LinkedIn ↗</a>
             <a href="https://github.com/leebwj" target="_blank" rel="noopener" data-cursor="GitHub" class="cta-link">GitHub ↗</a>
-            <a href="https://brianleeportfolio.cargo.site/" target="_blank" rel="noopener" data-cursor="Art" class="cta-link">Art ↗</a>
+            <a href="/art" data-cursor="Art" class="cta-link">Art ↗</a>
           </div>
         </div>
       </div>
     </footer>
   </main>
+
+  <!-- copy email on click (inline feedback — never native dialogs) -->
+  <script is:inline>
+    (() => {
+      document.querySelectorAll(".copy-email").forEach((a) => {
+        a.addEventListener("click", (e) => {
+          if (!navigator.clipboard) return;            // no clipboard API → plain mailto
+          e.preventDefault();
+          navigator.clipboard.writeText(a.getAttribute("data-email") || "").then(() => {
+            if (a.dataset.busy) return;
+            a.dataset.busy = "1";
+            const orig = a.textContent;
+            a.textContent = "copied to clipboard ✓";
+            a.classList.add("is-copied");
+            setTimeout(() => { a.textContent = orig; a.classList.remove("is-copied"); delete a.dataset.busy; }, 1500);
+          }).catch(() => { location.href = "mailto:" + (a.getAttribute("data-email") || ""); });
+        });
+      });
+    })();
+  </script>
 
   <!-- shader mode switch: dispatch to ShaderField (it crossfades) -->
   <script is:inline>
