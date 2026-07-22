@@ -15,6 +15,9 @@ const ROOT = dirname(fileURLToPath(import.meta.url));
 const RECENT_DAYS = 30; // ROLES.md shows roles posted within this window
 const FRESH_HOURS = 48; // "fresh" section window
 const GHOST_DAYS = 45;  // postings older than this get flagged in data
+const STALE_INTERN_DAYS = 120;  // intern posts older than this + no future term → dropped (dead cycle)
+// terms that reference a still-upcoming intake (Fall 2026 onward, any 2027+)
+const FUTURE_TERM_RX = /(fall|autumn)\s*20(2[6-9])|winter\s*20(2[6-9])|spring\s*20(2[7-9])|summer\s*20(2[7-9])|\b20(2[7-9]|3[0-9])\b/i;
 
 const SOURCES = {
   simplifyIntern:
@@ -720,6 +723,15 @@ for (const r of collected) {
   // so a revenue analyst at a target company is NOT flagged, but a technical
   // artist at EA is. One flag, shared by the sheet, tracker, and email.
   r.target = (TARGETS.test(r.company) || ATS_COMPANY_SET.has(r.company)) && RELEVANT_RX.test(r.title) && !IRRELEVANT_RX.test(r.title) && !SENIOR_RX.test(r.title);
+  // dead-cycle cleanup (Brian 2026-07-24): an INTERN post older than ~4 months
+  // whose term doesn't reference a future intake is recruiting for a season
+  // that already started — clutter, drop it. Old rows recruiting for future
+  // terms (Fall 2026+, 2027…) stay, as do all full-time/new-grad rows
+  // (evergreen reqs on live boards are genuinely applyable).
+  if (r.level === "intern") {
+    const postedT = new Date(r.posted || r.firstSeen || Date.now()).getTime();
+    if (postedT < Date.now() - STALE_INTERN_DAYS * 864e5 && !FUTURE_TERM_RX.test(r.term || "")) continue;
+  }
   // fresh = recently posted OR just entered our feed (a Google-tier listing
   // that Simplify adds late must still fire the 🔥/alert path — "new to us"
   // is what an alert means, not "new to the internet")
