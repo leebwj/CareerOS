@@ -591,8 +591,14 @@ const seen = new Set();
 const roles = [];
 const today = new Date().toISOString().slice(0, 10);
 for (const r of collected) {
-  if (!isUS(r.locations)) continue;
-  if (EXCLUDE_RX.test(r.title)) continue; // inbox relevance gate — drop the noise
+  // The Simplify repos are hand-curated tech feeds (the GitHub pages Brian
+  // reads for alerts) — take EVERY active listing verbatim: no US gate, no
+  // noise gate. Missing a Google-tier posting costs more than any noise the
+  // curated feed could ever admit. Raw ATS boards (all departments, global)
+  // still go through both gates.
+  const curated = r.source === "simplify";
+  if (!curated && !isUS(r.locations)) continue;
+  if (!curated && EXCLUDE_RX.test(r.title)) continue; // inbox relevance gate — drop the noise
   const key = `${r.company}|${r.title}|${r.locations[0] || ""}`.toLowerCase().replace(/\s+/g, " ");
   if (seen.has(key)) continue;
   seen.add(key);
@@ -603,10 +609,15 @@ for (const r of collected) {
   // so a revenue analyst at a target company is NOT flagged, but a technical
   // artist at EA is. One flag, shared by the sheet, tracker, and email.
   r.target = (TARGETS.test(r.company) || ATS_COMPANY_SET.has(r.company)) && RELEVANT_RX.test(r.title) && !IRRELEVANT_RX.test(r.title) && !SENIOR_RX.test(r.title);
+  // fresh = recently posted OR just entered our feed (a Google-tier listing
+  // that Simplify adds late must still fire the 🔥/alert path — "new to us"
+  // is what an alert means, not "new to the internet")
   const freshDays = (Date.now() - new Date(r.posted || "2000-01-01").getTime()) / 864e5;
-  r.hot = freshDays <= 2 && r.level !== "full-time" && (r.target || r.fit >= 0.6);
+  r.hot = (freshDays <= 2 || r.isNew) && r.level !== "full-time" && (r.target || r.fit >= 0.6);
   const age = (Date.now() - new Date(r.posted || today).getTime()) / 864e5;
-  if (age > GHOST_DAYS && r.source !== "greenhouse" && r.source !== "ashby" && r.source !== "lever") r.ghost = true;
+  // simplify exempt from ghosting: its bot marks dead listings inactive, so
+  // active-in-feed = verified alive regardless of posted age
+  if (age > GHOST_DAYS && !curated && r.source !== "greenhouse" && r.source !== "ashby" && r.source !== "lever") r.ghost = true;
   roles.push(r);
 }
 
