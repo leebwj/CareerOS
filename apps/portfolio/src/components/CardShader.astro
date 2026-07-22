@@ -16,7 +16,6 @@
     return [parseInt(n.slice(0, 2), 16) / 255, parseInt(n.slice(2, 4), 16) / 255, parseInt(n.slice(4, 6), 16) / 255];
   };
   document.querySelectorAll<HTMLCanvasElement>(".cshader").forEach((canvas) => {
-    if (/[?&]noshader\b/.test(location.search)) return;   // DIAGNOSTIC: skip 2nd WebGL context
     const gl = canvas.getContext("webgl", { antialias: true, alpha: false });
     if (!gl) return;
     const wrap = canvas.parentElement as HTMLElement;
