@@ -380,7 +380,19 @@
     // A pull that never returns (dead/renamed deployment, blocked script, access
     // revoked) must NOT keep claiming "Synced" — flip to an honest error state and
     // trip the stale alarm so the false-green "Synced ✓ over empty" can't happen.
-    const fail = () => { syncState = "error"; setSyncBtn(); checkStale(); done(); };
+    // AUTO-HEAL: a failing STORED url while the built-in proxy exists = a stale
+    // override from an old re-paste (the exact 'Sync ✕, 0 jobs' Brian hit) —
+    // drop it and retry through the proxy instead of staying broken.
+    const fail = () => {
+      if (fired) return;
+      if (syncUrl && effUrl() !== PROXY && location.hostname === "leebrian.dev") {
+        fired = true; try { delete window[fn]; } catch {} if (s.parentNode) s.parentNode.removeChild(s);
+        saveSyncUrl("");            // clear the dead override (localStorage + cookie)
+        pullFromSheet(after);       // retry via the built-in proxy
+        return;
+      }
+      syncState = "error"; setSyncBtn(); checkStale(); done();
+    };
     const timer = setTimeout(fail, 9000);
     window[fn] = (payload) => { clearTimeout(timer); handlePayload(payload); done(); };
     s.src = u + (u.includes("?") ? "&" : "?") + "callback=" + fn;
