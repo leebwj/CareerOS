@@ -50,12 +50,10 @@ const ATS_TARGETS = {
     PlanetScale: "planetscale", Netlify: "netlify",
     // v3 (2026-07-14) — coverage expansion (adjacent AI / dev-tools seen on LinkedIn but not sourced)
     Anduril: "andurilindustries", Glean: "gleanwork", Hex: "hextechnologies", "Together AI": "togetherai", Watershed: "watershed", xAI: "xai",
-    // v4 (2026-07-24) — big-tech + game-company sweep (all probe-verified w/ sample
-    // titles). SpaceX ("spacex", 1,977 jobs) probed OK but intentionally NOT added:
-    // it would be ~13% of the whole feed with auto-🎯 flooding, and it's not on
-    // Brian's target list — one config line away if he ever wants it.
+    // v4 (2026-07-24) — big-tech + game-company sweep (all probe-verified w/ sample titles)
     "PlayStation (SIE)": "sonyinteractiveentertainmentglobal", "Google DeepMind": "deepmind",
     "Magic Leap": "magicleap", DoorDash: "doordashusa", "Samsung Research America": "samsungresearchamerica", Squarespace: "squarespace",
+    SpaceX: "spacex",  // Brian's explicit ask — huge board (~2k jobs); auto-🎯 exempted below so it can't bury the target view
   },
   ashby: {
     OpenAI: "openai", Notion: "notion", Linear: "linear", Ramp: "ramp",
@@ -104,7 +102,11 @@ const ATS_TARGETS = {
 // every company we source directly IS a desirable target-company (curated), so
 // treat them as targets without bloating the TARGETS regex. ATS rows carry the
 // exact display name as r.company, so an exact-set check is reliable.
-const ATS_COMPANY_SET = new Set(Object.values(ATS_TARGETS).flatMap((o) => Object.keys(o)));
+// Exception: boards included for COVERAGE at Brian's ask but not on his target
+// list — their rows are fully in the feed but don't auto-🎯 (a ~2k-role board
+// would otherwise bury the target view).
+const NO_AUTO_TARGET = new Set(["SpaceX"]);
+const ATS_COMPANY_SET = new Set(Object.values(ATS_TARGETS).flatMap((o) => Object.keys(o)).filter((c) => !NO_AUTO_TARGET.has(c)));
 
 // knockout: senior+ roles are never relevant (intern/new-grad/early-career focus)
 const SENIOR_RX = /\b(senior|staff|principal|director|manager|head of|vp|vice president|distinguished|sr\.?|lead architect)\b/i;
