@@ -54,6 +54,11 @@ const ATS_TARGETS = {
     "PlayStation (SIE)": "sonyinteractiveentertainmentglobal", "Google DeepMind": "deepmind",
     "Magic Leap": "magicleap", DoorDash: "doordashusa", "Samsung Research America": "samsungresearchamerica", Squarespace: "squarespace",
     SpaceX: "spacex",  // Brian's explicit ask — huge board (~2k jobs); auto-🎯 exempted below so it can't bury the target view
+    // v5 (2026-07-24) — final product-co sweep (probe-verified; empty boards like
+    // HubSpot/Raycast/Atlassian-lever exist but return 0 rows → NOT added, they'd
+    // trip the stale-board alarm every run)
+    "Block (Square)": "block", Peloton: "peloton", Box: "boxinc", "Khan Academy": "khanacademy",
+    Coursera: "coursera", Calm: "calm",
   },
   ashby: {
     OpenAI: "openai", Notion: "notion", Linear: "linear", Ramp: "ramp",
@@ -69,6 +74,8 @@ const ATS_TARGETS = {
     Miro: "miro", Browserbase: "browserbase",
     // v3 (2026-07-14) — Speak + adjacent AI startups
     Speak: "speak", Abridge: "abridge", Gamma: "gamma", Poolside: "poolside", Zapier: "zapier",
+    // v5 (2026-07-24)
+    Granola: "granola", Quora: "quora",
   },
   lever: {
     Palantir: "palantir", Spotify: "spotify", Larian: "larian", Illumination: "illumination",
@@ -79,6 +86,7 @@ const ATS_TARGETS = {
   smartrecruiters: {
     Ubisoft: "Ubisoft2", "CD Projekt Red": "CDPROJEKTRED", HoYoverse: "HoYoverse", "Rodeo FX": "RodeoFX", "Weta Workshop": "WetaWorkshop",
     "NBCUniversal (DreamWorks)": "NBCUniversal3", Gameloft: "Gameloft", "Keywords Studios": "KeywordsStudios", "People Can Fly": "PeopleCanFly",
+    Canva: "Canva",  // v5 — 222 jobs (their greenhouse/lever/ashby probes all 404)
   },
   // Workday: { Company: { tenant, wd, site } } — POST; wd number is per-tenant (Pixar=wd501, Sega=wd3!)
   workday: {
@@ -95,6 +103,9 @@ const ATS_TARGETS = {
     Salesforce: { tenant: "salesforce", wd: 12, site: "External_Career_Site" },
     Micron: { tenant: "micron", wd: 1, site: "External" },
     "Xbox Game Studios": { tenant: "xboxgaming", wd: 1, site: "External" },  // Microsoft Gaming central board (Xbox/ActiBlizz/ZeniMax)
+    // v5 (2026-07-24)
+    Zoom: { tenant: "zoom", wd: 5, site: "Zoom" },
+    PayPal: { tenant: "paypal", wd: 1, site: "jobs" },
   },
   workable: { "Square Enix": "square-enix" },
   recruitee: { Framestore: "framestore" },
