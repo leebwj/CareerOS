@@ -203,10 +203,18 @@
     else { localStorage.removeItem("careeros-sync-url"); setSyncCookie(""); }
   };
   if (syncUrl) saveSyncUrl(syncUrl); // re-persist to both stores on every load
-  // a saved URL starts as "syncing" — NOT "synced" — until the load-time pull
+  // ── ZERO-CONFIG SYNC: on the live site the tracker syncs through the
+  // server-side proxy (/api/sync — the sheet URL lives in a Vercel env var).
+  // Nothing about the connection is stored in the browser, so clearing
+  // storage / new devices / new browsers can NEVER disconnect it again.
+  // A manually-stored URL still overrides (legacy path, local use).
+  const PROXY = "/api/sync";
+  const effUrl = () => syncUrl || (location.hostname === "leebrian.dev" ? PROXY : "");
+  const isProxy = (u) => !!u && u.startsWith("/");
+  // a connection starts as "syncing" — NOT "synced" — until the load-time pull
   // actually reaches the sheet. Otherwise a dead/lost URL shows a false "Synced ✓"
   // over an empty tracker (the bug that made it look like data was gone).
-  let syncTimer, syncState = syncUrl ? "syncing" : "off";
+  let syncTimer, syncState = effUrl() ? "syncing" : "off";
   // ── sync durability: remember the last VERIFIED push + alarm on silent failure ──
   const LS_OK = "careeros-sync-lastok";
   let lastSyncOk = +(localStorage.getItem(LS_OK) || 0);
@@ -232,8 +240,24 @@
     if (!Object.keys(state.s || {}).length) { syncState = "synced"; setSyncBtn(); return; }
     // form-encoded = the transport Apps Script reliably preserves through its 302
     // redirect (text/plain bodies get dropped). Pushes FULL state + readable rows.
+    const u = effUrl(); if (!u) return;
     const pushedAt = state.updated || Date.now();
-    fetch(syncUrl, { method: "POST", mode: "no-cors", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: "payload=" + encodeURIComponent(JSON.stringify({ state: JSON.stringify(state), rows: trackedRows() })) })
+    const body = "payload=" + encodeURIComponent(JSON.stringify({ state: JSON.stringify(state), rows: trackedRows() }));
+    if (isProxy(u)) {
+      // same-origin proxy: a REAL request — the response IS the post-push sheet
+      // state, so push + verify happen in one round-trip (no blind no-cors)
+      fetch(u, { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body })
+        .then((r) => { if (!r.ok) throw 0; return r.json(); })
+        .then((p) => {
+          const remote = p && p.state ? JSON.parse(p.state) : null;
+          if (remote && (remote.updated || 0) >= pushedAt - 2000) { markSyncOk(); syncState = "synced"; }
+          else syncState = "error";
+          setSyncBtn(); checkStale();
+        })
+        .catch(() => { syncState = "error"; setSyncBtn(); checkStale(); });
+      return;
+    }
+    fetch(u, { method: "POST", mode: "no-cors", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body })
       .then(() => { syncState = "synced"; setSyncBtn(); setTimeout(() => verifySync(pushedAt), 3000); }) // no-cors can't read the reply → confirm it landed
       .catch(() => { syncState = "error"; setSyncBtn(); checkStale(); });
   }
@@ -241,7 +265,8 @@
   // If it didn't, the banner below trips — this is what would have caught the
   // week-long silent sync failure the day it happened.
   function verifySync(pushedAt) {
-    if (!syncUrl) return;
+    const u = effUrl();
+    if (!u || isProxy(u)) return;   // proxy pushes self-verify from the response
     const fn = "__cosv_" + Date.now() + "_" + Math.floor(Math.random() * 1e6);
     const s = document.createElement("script");
     let fired = false;
@@ -257,7 +282,7 @@
       } catch { syncState = "error"; }
       setSyncBtn(); checkStale(); done();
     };
-    s.src = syncUrl + (syncUrl.includes("?") ? "&" : "?") + "callback=" + fn;
+    s.src = u + (u.includes("?") ? "&" : "?") + "callback=" + fn;
     s.onerror = () => { clearTimeout(timer); fail(); done(); };
     document.head.appendChild(s);
   }
@@ -270,7 +295,7 @@
     if (location.hostname !== "leebrian.dev") return; // the local-copy bar already covers non-prod
     const nJobs = Object.keys(state.s || {}).length;
     const unsynced = (state.updated || 0) > lastSyncOk + 3000 && Date.now() - (state.updated || 0) > 20000;
-    const overdue = nJobs > 0 && (!syncUrl || syncState === "error" || unsynced);
+    const overdue = nJobs > 0 && (!effUrl() || syncState === "error" || unsynced);
     if (overdue) {
       if (!staleBar) {
         staleBar = document.createElement("div");
@@ -282,13 +307,13 @@
           if (a.dataset.act === "backup") document.getElementById("exp").click();
         });
       }
-      const reason = !syncUrl ? "NOT connected to your sheet" : syncState === "error" ? "the last sync FAILED" : "your latest changes haven't reached the sheet";
+      const reason = !effUrl() ? "NOT connected to your sheet" : syncState === "error" ? "the last sync FAILED" : "your latest changes haven't reached the sheet";
       staleBar.innerHTML = `⚠ ${nJobs} tracked job${nJobs > 1 ? "s" : ""} — ${reason}. <a href="#" data-act="reconnect" style="color:#fff;text-decoration:underline">Reconnect</a> · <a href="#" data-act="backup" style="color:#fff;text-decoration:underline">Download backup</a>`;
       staleBar.style.display = "";
     } else if (staleBar) staleBar.style.display = "none";
   }
   function syncToSheet(immediate) {
-    if (!syncUrl) return;
+    if (!effUrl()) return;
     clearTimeout(syncTimer);
     syncState = "syncing"; setSyncBtn();
     if (immediate) doPush();
@@ -298,18 +323,10 @@
   // it only if it's NEWER than what we have and non-empty (never wipes local).
   // `after` fires once the pull settles (used to sequence pull→push on connect).
   function pullFromSheet(after) {
-    if (!syncUrl) { if (after) after(); return; }
-    const fn = "__cos_" + Date.now() + "_" + Math.floor(Math.random() * 1e6);
-    const s = document.createElement("script");
-    let fired = false;
-    const done = () => { if (fired) return; fired = true; try { delete window[fn]; } catch {} if (s.parentNode) s.parentNode.removeChild(s); if (after) after(); };
-    // A pull that never returns (dead/renamed deployment, blocked script, access
-    // revoked) must NOT keep claiming "Synced" — flip to an honest error state and
-    // trip the stale alarm so the false-green "Synced ✓ over empty" can't happen.
-    const fail = () => { syncState = "error"; setSyncBtn(); checkStale(); done(); };
-    const timer = setTimeout(fail, 9000);
-    window[fn] = (payload) => {
-      clearTimeout(timer);
+    const u = effUrl();
+    if (!u) { if (after) after(); return; }
+    // shared payload handler — fed by either transport (proxy fetch or JSONP)
+    const handlePayload = (payload) => {
       try {
         const remote = payload && payload.state ? JSON.parse(payload.state) : null;
         const remoteN = remote ? Object.keys(remote.s || {}).length : 0;
@@ -347,9 +364,26 @@
         syncState = "synced"; setSyncBtn();   // the sheet actually responded → honestly synced
       } catch { syncState = "error"; setSyncBtn(); }
       checkStale();
-      done();
     };
-    s.src = syncUrl + (syncUrl.includes("?") ? "&" : "?") + "callback=" + fn;
+    if (isProxy(u)) {
+      // same-origin proxy: plain fetch, readable errors, no JSONP dance
+      fetch(u)
+        .then((r) => { if (!r.ok) throw 0; return r.json(); })
+        .then((p) => { handlePayload(p); if (after) after(); })
+        .catch(() => { syncState = "error"; setSyncBtn(); checkStale(); if (after) after(); });
+      return;
+    }
+    const fn = "__cos_" + Date.now() + "_" + Math.floor(Math.random() * 1e6);
+    const s = document.createElement("script");
+    let fired = false;
+    const done = () => { if (fired) return; fired = true; try { delete window[fn]; } catch {} if (s.parentNode) s.parentNode.removeChild(s); if (after) after(); };
+    // A pull that never returns (dead/renamed deployment, blocked script, access
+    // revoked) must NOT keep claiming "Synced" — flip to an honest error state and
+    // trip the stale alarm so the false-green "Synced ✓ over empty" can't happen.
+    const fail = () => { syncState = "error"; setSyncBtn(); checkStale(); done(); };
+    const timer = setTimeout(fail, 9000);
+    window[fn] = (payload) => { clearTimeout(timer); handlePayload(payload); done(); };
+    s.src = u + (u.includes("?") ? "&" : "?") + "callback=" + fn;
     s.onerror = () => { clearTimeout(timer); fail(); };
     document.head.appendChild(s);
   }
@@ -645,13 +679,18 @@
   };
   // JSONP connection test — confirms the deploy is reachable + doGet works
   function testConnection(cb) {
-    if (!syncUrl) return cb(false);
+    const u = effUrl();
+    if (!u) return cb(false);
+    if (isProxy(u)) {
+      fetch(u).then((r) => (r.ok ? r.json() : null)).then((p) => cb(!!p && typeof p.state !== "undefined")).catch(() => cb(false));
+      return;
+    }
     const fn = "__cost_" + Date.now() + "_" + Math.floor(Math.random() * 1e6);
     const s = document.createElement("script");
     const fin = (ok) => { try { delete window[fn]; } catch {} if (s.parentNode) s.parentNode.removeChild(s); cb(ok); };
     const timer = setTimeout(() => fin(false), 9000);
     window[fn] = (payload) => { clearTimeout(timer); fin(!!payload && typeof payload.state !== "undefined"); };
-    s.src = syncUrl + (syncUrl.includes("?") ? "&" : "?") + "callback=" + fn;
+    s.src = u + (u.includes("?") ? "&" : "?") + "callback=" + fn;
     s.onerror = () => { clearTimeout(timer); fin(false); };
     document.head.appendChild(s);
   }
@@ -666,7 +705,7 @@
     panel.style.cssText = "position:fixed;top:60px;right:14px;z-index:300;background:#15171c;border:1px solid rgba(255,255,255,.16);border-radius:11px;padding:15px;width:min(93vw,430px);box-shadow:0 14px 44px rgba(0,0,0,.55);font:13px/1.55 'Geist Mono',ui-monospace,monospace;color:#e9e9ee";
     panel.innerHTML =
       '<div style="font-weight:600;margin-bottom:6px">Google Sheet sync</div>' +
-      '<div style="opacity:.72;margin-bottom:9px">Paste your Apps Script web-app URL (ends in <b>/exec</b>). Leave blank to turn sync OFF.</div>' +
+      '<div style="opacity:.72;margin-bottom:9px">Sync is <b>built-in</b> on leebrian.dev — no setup needed. Paste an Apps Script <b>/exec</b> URL only to override; leave blank to use the built-in connection.</div>' +
       '<input id="syncInput" type="text" spellcheck="false" placeholder="https://script.google.com/macros/s/…/exec" style="width:100%;box-sizing:border-box;padding:9px;border-radius:7px;border:1px solid rgba(255,255,255,.22);background:rgba(0,0,0,.32);color:inherit;font:inherit;margin-bottom:9px">' +
       '<div id="syncMsg" style="min-height:34px;margin-bottom:9px;opacity:.92"></div>' +
       '<div style="display:flex;gap:8px;justify-content:flex-end">' +
@@ -682,7 +721,7 @@
     panel.querySelector("#syncCancel").onclick = close;
     const go = () => {
       saveSyncUrl(input.value.trim()); // persists to localStorage + the 1-year cookie
-      if (!syncUrl) { syncState = "off"; setSyncBtn(); close(); return; }
+      if (!effUrl()) { syncState = "off"; setSyncBtn(); close(); return; }  // blank off-site = truly off; on-site falls back to the built-in proxy
       syncState = "syncing"; setSyncBtn();
       msg.textContent = "Testing connection…";
       testConnection((ok) => {
@@ -742,7 +781,7 @@
 
   // re-pull sheet on focus + every 60s; re-fetch roles on focus + every 20min
   let lastPull = 0;
-  const maybePull = () => { if (syncUrl && Date.now() - lastPull > 12000) { lastPull = Date.now(); pullFromSheet(); } };
+  const maybePull = () => { if (effUrl() && Date.now() - lastPull > 12000) { lastPull = Date.now(); pullFromSheet(); } };
   window.addEventListener("focus", () => { maybePull(); if (Date.now() - lastRoles > 120000) refreshRoles(); });
   setInterval(() => { if (!document.hidden) { maybePull(); checkStale(); } }, 60000);
   setInterval(() => { if (!document.hidden) refreshRoles(); }, 20 * 60000);
