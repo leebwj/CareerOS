@@ -213,7 +213,8 @@ const { variant, mode = 0 } = Astro.props;
           float edgeAmt = clamp(length(grad) * 0.55, 0.0, 1.0);      // where light bends most
           // ── the blueprint, refracted + frosted (multi-tap) + edge fringe ──
           float gw = max(${GW}, 0.001);
-          vec2 ruv = uv + n.xy * 0.034;
+          // waves LENS harder: refraction magnifies where the surface is displaced
+          vec2 ruv = uv + n.xy * (0.034 + 0.030 * clamp(abs(hc) * 3.0, 0.0, 1.0));
           float g0 = wGridF(ruv, ar, gw);
           float gB = (g0                                              // frosted soften: ~1px taps
             + wGridF(ruv + vec2(0.0012, 0.0007), ar, gw)
@@ -226,19 +227,37 @@ const { variant, mode = 0 } = Astro.props;
             wGridF(ruv + n.xy * split, ar, gw));
           // sharp fringed lines where light bends; slightly soft where calm
           vec3 gridCol = mix(grid3, vec3(gB), 0.45 * (1.0 - edgeAmt));
-          // ── compose: depth body → drawing → caustics → frost → fresnel →
-          //    edge highlight → sun glint ──
+          // ── compose: depth body → drawing → caustics → frost → sheen →
+          //    fresnel → rim → dual specular → top-light. The glassmorphism
+          //    cues, per the canon (Prismal, liquidGL, Apple teardowns):
+          //    dual key+fill speculars, drifting sheen bands, frost that READS
+          //    the waves (troughs milkier, crests clearer), crest rim light. ──
           vec3 milky = mix(uLine, vec3(1.0), 0.65);
           vec3 col = mix(uBg, uDeep, 0.34);
           col = mix(col, mix(uDeep, uLine, 0.68), gridCol * 0.92);
           float caust = wCaustic(p + q * 0.4);
           col += mix(uLine, vec3(1.0), 0.35) * caust *
             (0.40 + 0.35 * clamp(swell * 2.0 + 0.5, 0.0, 1.0) + 0.7 * clamp(hc * 4.0, 0.0, 1.0));
-          col = mix(col, milky, 0.05 + 0.05 * (1.0 - edgeAmt));       // calm glass diffuses milkier
+          // frost is a MATERIAL readout: calm glass diffuses; troughs go milkier,
+          // crests thin out and clear (the pane feels like it has thickness)
+          float frost = 0.045 + 0.05 * (1.0 - edgeAmt) + 0.055 * clamp(-hc * 4.0, 0.0, 1.0);
+          col = mix(col, milky, frost);
+          // two soft sheen bands drifting at unequal angles/speeds, bent by the
+          // swell — the slow "light moving across glass" liquidGL signature
+          vec2 su = uv + (q - 0.5) * 0.05;
+          float sheen = pow(clamp(sin(dot(su, vec2(1.3, 1.9)) * 3.2 + t * 0.16), 0.0, 1.0), 7.0) * 0.055
+                      + pow(clamp(sin(dot(su, vec2(-1.7, 1.1)) * 2.5 - t * 0.11), 0.0, 1.0), 9.0) * 0.04;
+          col += milky * sheen * (0.5 + 0.5 * (1.0 - edgeAmt));
           col = mix(col, mix(milky, uLine, 0.45), fres * 0.42);       // sky sheen on slopes
-          col += uLine * pow(edgeAmt, 3.0) * 0.25;                    // liquid-glass edge highlight
-          float spec = pow(max(dot(n, normalize(vec3(0.25, 0.35, 0.92))), 0.0), 90.0);
-          col += vec3(spec * 0.8);                                    // overhead sun → real glints
+          // rim light: wave crests catch thin bright edges (Apple liquid glass)
+          col += mix(uLine, vec3(1.0), 0.55) * pow(edgeAmt, 2.2) * (0.16 + 0.30 * clamp(hc * 6.0 + 0.15, 0.0, 1.0));
+          // dual specular (Prismal: key + fill) — a tight overhead sun and a
+          // wide soft fill from the side give glass its double glint
+          float specK = pow(max(dot(n, normalize(vec3(0.25, 0.35, 0.92))), 0.0), 90.0);
+          float specF = pow(max(dot(n, normalize(vec3(-0.45, 0.20, 0.87))), 0.0), 24.0);
+          col += vec3(specK * 0.8 + specF * 0.14);
+          // light enters from the top of the pane — a faint vertical glow
+          col += milky * (0.018 + 0.045 * smoothstep(0.25, 1.0, uv.y));
           return col;
         }
 
