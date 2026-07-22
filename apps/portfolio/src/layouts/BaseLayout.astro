@@ -81,11 +81,36 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
       </div>
     </footer>
 
+    <!-- DIAGNOSTIC: ?fps shows a live frame-rate meter + which components ?noshader/?noscroll/?nocursor turned off -->
+    <script is:inline>
+      (() => {
+        if (!/[?&]fps\b/.test(location.search)) return;
+        const off = ["noshader", "noscroll", "nocursor"].filter((f) => new RegExp("[?&]" + f + "\\b").test(location.search));
+        const el = document.createElement("div");
+        el.style.cssText = "position:fixed;top:8px;left:8px;z-index:2147483647;background:#000;color:#0f0;font:12px/1.35 monospace;padding:5px 9px;border-radius:5px;pointer-events:none;white-space:pre;box-shadow:0 2px 8px rgba(0,0,0,.5)";
+        el.textContent = "measuring…";
+        document.body.appendChild(el);
+        let frames = 0, last = performance.now(), lo = 999;
+        const loop = (now: number) => {
+          frames++;
+          const dd = now - last;
+          if (dd >= 500) {
+            const fps = Math.round((frames * 1000) / dd);
+            lo = Math.min(lo, fps);
+            el.textContent = fps + " fps (min " + lo + ")" + (off.length ? "\noff: " + off.join(" ") : "\nall on");
+            frames = 0; last = now;
+          }
+          requestAnimationFrame(loop);
+        };
+        requestAnimationFrame(loop);
+      })();
+    </script>
 
     <!-- smooth scroll (Lenis) + scroll-velocity skew on .velocity-type — skipped under reduced-motion -->
     <script>
       import Lenis from "lenis";
-      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      // DIAGNOSTIC: ?noscroll disables Lenis smooth-scroll (falls back to native scroll)
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches && !/[?&]noscroll\b/.test(location.search)) {
         const lenis = new Lenis({ lerp: 0.1 });
         const raf = (t: number) => {
           lenis.raf(t);
@@ -139,7 +164,8 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
       (() => {
         const fine = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
         const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-        if (!fine || reduce) return;
+        // DIAGNOSTIC: ?nocursor disables the custom-cursor rAF loop (native cursor)
+        if (!fine || reduce || /[?&]nocursor\b/.test(location.search)) return;
 
         const ring = document.querySelector(".cursor-ring");
         const label = ring && ring.querySelector(".cursor-label");

@@ -76,7 +76,9 @@ const { variant, mode = 0 } = Astro.props;
 
   const canvas = document.querySelector(".vp-canvas") as HTMLCanvasElement | null;
   const wrap = canvas?.closest(".vp") as HTMLElement | null;
-  if (canvas && wrap) {
+  // DIAGNOSTIC: ?noshader skips the hero WebGL entirely (CSS grid fallback shows).
+  // Lets us isolate whether the shader is what's causing the MacBook lag/break.
+  if (canvas && wrap && !/[?&]noshader\b/.test(location.search)) {
     const gl = canvas.getContext("webgl", { antialias: true, alpha: false, premultipliedAlpha: false });
     const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
     const fine = matchMedia("(hover: hover) and (pointer: fine)").matches;
