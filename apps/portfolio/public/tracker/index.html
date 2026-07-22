@@ -203,8 +203,10 @@
     else { localStorage.removeItem("careeros-sync-url"); setSyncCookie(""); }
   };
   if (syncUrl) saveSyncUrl(syncUrl); // re-persist to both stores on every load
-  // a saved URL means this device is connected → show "Synced ✓" on load
-  let syncTimer, syncState = syncUrl ? "synced" : "off";
+  // a saved URL starts as "syncing" — NOT "synced" — until the load-time pull
+  // actually reaches the sheet. Otherwise a dead/lost URL shows a false "Synced ✓"
+  // over an empty tracker (the bug that made it look like data was gone).
+  let syncTimer, syncState = syncUrl ? "syncing" : "off";
   // ── sync durability: remember the last VERIFIED push + alarm on silent failure ──
   const LS_OK = "careeros-sync-lastok";
   let lastSyncOk = +(localStorage.getItem(LS_OK) || 0);
@@ -301,7 +303,11 @@
     const s = document.createElement("script");
     let fired = false;
     const done = () => { if (fired) return; fired = true; try { delete window[fn]; } catch {} if (s.parentNode) s.parentNode.removeChild(s); if (after) after(); };
-    const timer = setTimeout(done, 9000);
+    // A pull that never returns (dead/renamed deployment, blocked script, access
+    // revoked) must NOT keep claiming "Synced" — flip to an honest error state and
+    // trip the stale alarm so the false-green "Synced ✓ over empty" can't happen.
+    const fail = () => { syncState = "error"; setSyncBtn(); checkStale(); done(); };
+    const timer = setTimeout(fail, 9000);
     window[fn] = (payload) => {
       clearTimeout(timer);
       try {
@@ -319,12 +325,13 @@
           render();
         }
         if (remote && (remote.updated || 0) >= (state.updated || 0)) markSyncOk(); // sheet already holds our latest → sync is healthy
-      } catch {}
+        syncState = "synced"; setSyncBtn();   // the sheet actually responded → honestly synced
+      } catch { syncState = "error"; setSyncBtn(); }
       checkStale();
       done();
     };
     s.src = syncUrl + (syncUrl.includes("?") ? "&" : "?") + "callback=" + fn;
-    s.onerror = () => { clearTimeout(timer); done(); };
+    s.onerror = () => { clearTimeout(timer); fail(); };
     document.head.appendChild(s);
   }
 
@@ -629,23 +636,50 @@
     s.onerror = () => { clearTimeout(timer); fin(false); };
     document.head.appendChild(s);
   }
+  // Inline connect panel — native prompt()/alert() are silently suppressed in
+  // some browsers (this is exactly what left the tracker empty + unfixable), so
+  // never use them here. Build the field in the DOM instead.
   document.getElementById("sync").onclick = () => {
-    const u = prompt("Google Sheet sync — paste your Apps Script web-app URL (ends in /exec).\n\nSetup: click ⧉ then follow the SHEET_SYNC guide. Leave blank to turn OFF.", syncUrl);
-    if (u === null) return;
-    saveSyncUrl(u.trim()); // persists to localStorage + the 1-year cookie
-    if (!syncUrl) { syncState = "off"; setSyncBtn(); return; }
-    syncState = "syncing"; setSyncBtn();
-    testConnection((ok) => {
-      if (ok) {
-        alert("✓ Connected. Your tracked roles now sync to your sheet and load on any computer.");
-        // download first (adopt newer remote), THEN upload — so a fresh device
-        // can't overwrite a populated sheet with its empty state
-        pullFromSheet(() => syncToSheet(true));
-      } else {
-        alert("✕ Couldn't reach your sheet.\n\nCheck the deployment:\n• 'Who has access' = Anyone\n• URL ends in /exec (not /dev)\n• the script includes the doGet function\n\nThen redeploy a New version and paste the URL again.");
-        syncState = "error"; setSyncBtn();
-      }
-    });
+    const existing = document.getElementById("syncPanel");
+    if (existing) { existing.remove(); return; }   // toggle closed
+    const panel = document.createElement("div");
+    panel.id = "syncPanel";
+    panel.style.cssText = "position:fixed;top:60px;right:14px;z-index:300;background:#15171c;border:1px solid rgba(255,255,255,.16);border-radius:11px;padding:15px;width:min(93vw,430px);box-shadow:0 14px 44px rgba(0,0,0,.55);font:13px/1.55 'Geist Mono',ui-monospace,monospace;color:#e9e9ee";
+    panel.innerHTML =
+      '<div style="font-weight:600;margin-bottom:6px">Google Sheet sync</div>' +
+      '<div style="opacity:.72;margin-bottom:9px">Paste your Apps Script web-app URL (ends in <b>/exec</b>). Leave blank to turn sync OFF.</div>' +
+      '<input id="syncInput" type="text" spellcheck="false" placeholder="https://script.google.com/macros/s/…/exec" style="width:100%;box-sizing:border-box;padding:9px;border-radius:7px;border:1px solid rgba(255,255,255,.22);background:rgba(0,0,0,.32);color:inherit;font:inherit;margin-bottom:9px">' +
+      '<div id="syncMsg" style="min-height:34px;margin-bottom:9px;opacity:.92"></div>' +
+      '<div style="display:flex;gap:8px;justify-content:flex-end">' +
+      '<button id="syncCancel" style="padding:7px 13px;border-radius:7px;border:1px solid rgba(255,255,255,.2);background:transparent;color:inherit;font:inherit;cursor:pointer">Cancel</button>' +
+      '<button id="syncGo" style="padding:7px 15px;border-radius:7px;border:0;background:#3b82f6;color:#fff;font:inherit;font-weight:600;cursor:pointer">Connect</button>' +
+      '</div>';
+    document.body.appendChild(panel);
+    const input = panel.querySelector("#syncInput");
+    const msg = panel.querySelector("#syncMsg");
+    input.value = syncUrl || "";
+    input.focus(); input.select();
+    const close = () => panel.remove();
+    panel.querySelector("#syncCancel").onclick = close;
+    const go = () => {
+      saveSyncUrl(input.value.trim()); // persists to localStorage + the 1-year cookie
+      if (!syncUrl) { syncState = "off"; setSyncBtn(); close(); return; }
+      syncState = "syncing"; setSyncBtn();
+      msg.textContent = "Testing connection…";
+      testConnection((ok) => {
+        if (ok) {
+          msg.textContent = "✓ Connected — loading your sheet…";
+          // pull first (adopt newer remote), THEN push — a fresh device can't
+          // overwrite a populated sheet with its empty state.
+          pullFromSheet(() => { syncToSheet(true); setTimeout(close, 800); });
+        } else {
+          syncState = "error"; setSyncBtn();
+          msg.innerHTML = "✕ Couldn't reach your sheet. Check: deployment <b>Who has access = Anyone</b>, URL ends in <b>/exec</b> (not /dev), the script has a <b>doGet</b>. Then redeploy a <b>New version</b> and paste the URL again.";
+        }
+      });
+    };
+    panel.querySelector("#syncGo").onclick = go;
+    input.addEventListener("keydown", (e) => { if (e.key === "Enter") go(); if (e.key === "Escape") close(); });
   };
   setSyncBtn();
   document.getElementById("imp").onclick = () => {
