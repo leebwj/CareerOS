@@ -91,18 +91,20 @@ const { variant, mode = 0 } = Astro.props;
     const lean = matchMedia("(pointer: coarse)").matches;
 
     if (gl) {
-      // Keep fwidth() for adaptive, scale-independent line AA (the crisp desktop
-      // look). BUT iOS Safari's derivatives intermittently return ~0, which
-      // collapses a line's width to the smoothstep floor and renders it DOTTED.
-      // So the floor is device-aware: desktop uses a hairline 0.001 (fully
-      // adaptive/crisp); touch devices floor at the median desktop line width
-      // (~0.02, measured) so any fwidth-zero pixels still draw a thin SOLID line
-      // — adaptive where iOS's fwidth works, solid where it doesn't. Matches
-      // desktop far better than a flat constant (which looks "watery").
-      const deriv = gl.getExtension("OES_standard_derivatives");
-      const W = deriv ? "fwidth(v)" : "0.02";
-      const GW = deriv ? "fwidth(uv.x) * 22.0" : "0.04";
-      const FLOOR = lean ? "0.02" : "0.001";
+      // Line-width (AA) model. Desktop uses fwidth() — true per-terrain, scale-
+      // independent AA. iOS Safari's derivatives are BROKEN (return ~0 / garbage
+      // / NaN intermittently), which dots BOTH the animated contour lines AND the
+      // static CAD grid — and a floor can't rescue a NaN. So on touch devices we
+      // don't use derivatives at all; we compute widths ANALYTICALLY from uRes:
+      //   • grid: fwidth(uv.x)==1/uRes.x exactly (uv.x is linear) → 22.0/uRes.x is
+      //     an EXACT, dot-free replacement — identical crisp grid to desktop.
+      //   • contour: v=7*fbm is nonlinear, so use a resolution-scaled width
+      //     (~median desktop fwidth ≈ 14/uRes.y) → uniform ~1px lines, no dots,
+      //     and not the fat "watery" look of a fixed v-space constant.
+      const deriv = !lean && gl.getExtension("OES_standard_derivatives");
+      const W = deriv ? "fwidth(v)" : (lean ? "(14.0 / uRes.y)" : "0.02");
+      const GW = deriv ? "fwidth(uv.x) * 22.0" : (lean ? "(22.0 / uRes.x)" : "0.04");
+      const FLOOR = "0.001";
 
       const vsrc = `
         attribute vec2 p; varying vec2 vUv;
