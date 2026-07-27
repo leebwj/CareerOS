@@ -91,14 +91,18 @@ const { variant, mode = 0 } = Astro.props;
     const lean = matchMedia("(pointer: coarse)").matches;
 
     if (gl) {
-      // iOS Safari's OES_standard_derivatives / fwidth() is unreliable — it can
-      // return ~0, collapsing the contour + grid line width to the 0.001 floor,
-      // so solid lines render as a DOTTED/dashed hairline. On lean (touch)
-      // devices skip derivatives and use the constant-width fallback (solid
-      // lines everywhere). Desktop keeps fwidth for crisp scale-independent AA.
-      const deriv = !lean && gl.getExtension("OES_standard_derivatives");
-      const W = deriv ? "fwidth(v)" : "0.03";
+      // Keep fwidth() for adaptive, scale-independent line AA (the crisp desktop
+      // look). BUT iOS Safari's derivatives intermittently return ~0, which
+      // collapses a line's width to the smoothstep floor and renders it DOTTED.
+      // So the floor is device-aware: desktop uses a hairline 0.001 (fully
+      // adaptive/crisp); touch devices floor at the median desktop line width
+      // (~0.02, measured) so any fwidth-zero pixels still draw a thin SOLID line
+      // — adaptive where iOS's fwidth works, solid where it doesn't. Matches
+      // desktop far better than a flat constant (which looks "watery").
+      const deriv = gl.getExtension("OES_standard_derivatives");
+      const W = deriv ? "fwidth(v)" : "0.02";
       const GW = deriv ? "fwidth(uv.x) * 22.0" : "0.04";
+      const FLOOR = lean ? "0.02" : "0.001";
 
       const vsrc = `
         attribute vec2 p; varying vec2 vUv;
@@ -142,9 +146,9 @@ const { variant, mode = 0 } = Astro.props;
           float v = field * 7.0;
           float w = ${W};
           float d = abs(fract(v) - 0.5);
-          float line = 1.0 - smoothstep(0.0, max(w * 1.4, 0.001), d);
+          float line = 1.0 - smoothstep(0.0, max(w * 1.4, ${FLOOR}), d);
           vec2 g = abs(fract(uv * vec2(22.0 * ar, 22.0)) - 0.5);
-          float grid = 1.0 - smoothstep(0.0, max(${GW}, 0.001), min(g.x, g.y));
+          float grid = 1.0 - smoothstep(0.0, max(${GW}, ${FLOOR}), min(g.x, g.y));
           vec3 col = uBg;
           col = mix(col, uDeep, grid * 0.10);
           col = mix(col, uLine, line * 0.85);
