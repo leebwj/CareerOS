@@ -91,7 +91,12 @@ const { variant, mode = 0 } = Astro.props;
     const lean = matchMedia("(pointer: coarse)").matches;
 
     if (gl) {
-      const deriv = gl.getExtension("OES_standard_derivatives");
+      // iOS Safari's OES_standard_derivatives / fwidth() is unreliable — it can
+      // return ~0, collapsing the contour + grid line width to the 0.001 floor,
+      // so solid lines render as a DOTTED/dashed hairline. On lean (touch)
+      // devices skip derivatives and use the constant-width fallback (solid
+      // lines everywhere). Desktop keeps fwidth for crisp scale-independent AA.
+      const deriv = !lean && gl.getExtension("OES_standard_derivatives");
       const W = deriv ? "fwidth(v)" : "0.03";
       const GW = deriv ? "fwidth(uv.x) * 22.0" : "0.04";
 
