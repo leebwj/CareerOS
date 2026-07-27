@@ -81,6 +81,14 @@ const { variant, mode = 0 } = Astro.props;
     const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
     const fine = matchMedia("(hover: hover) and (pointer: fine)").matches;
     const bleed = wrap.classList.contains("vp--bleed");
+    // On touch devices the mode switcher is CSS-hidden (pointer:coarse), so
+    // Water/ASCII are unreachable and only the initial mode is ever shown. iOS
+    // Safari corrupts the render through the water path — RGBA8 render-to-
+    // texture ping-pong plus the caustic's extreme 1/length & mod()-250 terms
+    // (documented to blow up to INF under a different shader optimizer). On
+    // those devices compile a LEAN program with only the light field modes:
+    // no sampler, no FBOs, no caustics — stripping every iOS-fragile element.
+    const lean = matchMedia("(pointer: coarse)").matches;
 
     if (gl) {
       const deriv = gl.getExtension("OES_standard_derivatives");
@@ -103,9 +111,10 @@ const { variant, mode = 0 } = Astro.props;
         uniform vec3  uDeep;
         uniform int   uModeA;
         uniform int   uModeB;
-        uniform float uMix;
+        uniform float uMix;` +
+        (lean ? "" : `
         uniform sampler2D uWater;  // live heightfield: REAL propagating waves (ping-pong sim)
-        uniform vec2  uWTexel;     // 1 / sim resolution
+        uniform vec2  uWTexel;     // 1 / sim resolution`) + `
 
         float hash(vec2 p){ p = fract(p * vec2(123.34, 345.45)); p += dot(p, p + 34.345); return fract(p.x * p.y); }
         float noise(vec2 p){
@@ -156,7 +165,7 @@ const { variant, mode = 0 } = Astro.props;
           float r = 0.10 + 0.36 * clamp(field, 0.0, 1.2);
           float dot = 1.0 - smoothstep(r - 0.05, r, d);
           return mix(uBg, uLine, dot * 0.9);
-        }
+        }` + (lean ? "" : `
 
         // ── mode 3 — WATER / liquid glass, rebuilt on the canon ─────────────
         // References: Evan Wallace's webgl-water (fresnel + refraction +
@@ -295,13 +304,14 @@ const { variant, mode = 0 } = Astro.props;
           vec2 cursor = floor(vec2(0.82, 0.13) * grid);       // blinking cursor, 500ms
           if (id.x == cursor.x && id.y == cursor.y && mod(uTime, 1.0) < 0.5) col = mix(col, uLine, 0.9);
           return col;
-        }
+        }`) + `
 
         vec3 pick(int mode, vec2 p, vec2 uv, float ar, float ripple, vec2 m){
           if(mode == 1) return fxFlow(p, uv, ripple);
-          else if(mode == 2) return fxDots(p, uv, ar, ripple);
+          else if(mode == 2) return fxDots(p, uv, ar, ripple);` +
+          (lean ? "" : `
           else if(mode == 3) return fxWater(p, uv, ar, ripple, m);
-          else if(mode == 4) return fxAscii(uv, ar, m);
+          else if(mode == 4) return fxAscii(uv, ar, m);`) + `
           return fxContour(p, uv, ar, ripple);
         }
 
@@ -385,7 +395,7 @@ const { variant, mode = 0 } = Astro.props;
         let sCur: WebGLUniformLocation | null = null, sPrev: WebGLUniformLocation | null = null,
             sTexel: WebGLUniformLocation | null = null, sSplat: WebGLUniformLocation | null = null,
             sAmp: WebGLUniformLocation | null = null;
-        if (simFs) {
+        if (simFs && !lean) {
           const sp = gl.createProgram()!;
           gl.attachShader(sp, vs!); gl.attachShader(sp, simFs); gl.linkProgram(sp);
           if (gl.getProgramParameter(sp, gl.LINK_STATUS)) {
@@ -418,7 +428,7 @@ const { variant, mode = 0 } = Astro.props;
           gl.bindFramebuffer(gl.FRAMEBUFFER, null);
           return { tex, fbo };
         };
-        let simCur = mkSim(), simPrev = mkSim(), simOut = mkSim();
+        let simCur = lean ? null : mkSim(), simPrev = lean ? null : mkSim(), simOut = lean ? null : mkSim();
         const simReset = () => {
           for (const s of [simCur, simPrev, simOut]) {
             gl.bindFramebuffer(gl.FRAMEBUFFER, s.fbo);
@@ -501,8 +511,10 @@ const { variant, mode = 0 } = Astro.props;
           gl.uniform1i(uModeA, modeA);
           gl.uniform1i(uModeB, modeB);
           gl.uniform1f(uMix, mixV);
-          gl.activeTexture(gl.TEXTURE0);
-          gl.bindTexture(gl.TEXTURE_2D, simCur.tex);   // freshest wave state
+          if (simCur) {                                // lean (touch) build has no sim buffers
+            gl.activeTexture(gl.TEXTURE0);
+            gl.bindTexture(gl.TEXTURE_2D, simCur.tex);  // freshest wave state
+          }
           gl.drawArrays(gl.TRIANGLES, 0, 3);
         };
 
