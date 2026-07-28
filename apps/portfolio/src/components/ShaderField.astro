@@ -93,17 +93,18 @@ const { variant, mode = 0 } = Astro.props;
     if (gl) {
       // Line-width (AA) model. Desktop uses fwidth() — true per-terrain, scale-
       // independent AA. iOS Safari's derivatives are BROKEN (return ~0 / garbage
-      // / NaN intermittently), which dots BOTH the animated contour lines AND the
-      // static CAD grid — and a floor can't rescue a NaN. So on touch devices we
-      // don't use derivatives at all; we compute widths ANALYTICALLY from uRes:
-      //   • grid: fwidth(uv.x)==1/uRes.x exactly (uv.x is linear) → 22.0/uRes.x is
-      //     an EXACT, dot-free replacement — identical crisp grid to desktop.
-      //   • contour: v=7*fbm is nonlinear, so use a resolution-scaled width
-      //     (~median desktop fwidth ≈ 14/uRes.y) → uniform ~1px lines, no dots,
-      //     and not the fat "watery" look of a fixed v-space constant.
+      // / NaN intermittently), which dots the lines; a flat constant kills the
+      // dots but loses fwidth's adaptivity so lines look "watery" (fat in smooth
+      // terrain, thin in steep). So where there's no usable fwidth we reproduce
+      // it WITHOUT the extension:
+      //   • grid: fwidth(uv.x)==1/uRes.x exactly (uv.x is linear) → 22.0/uRes.x
+      //     is an EXACT, dot-free replacement — identical crisp grid to desktop.
+      //   • contour: v=7*fbm is nonlinear → cwidth() takes a manual finite-diff
+      //     of the field over a 1px step (== what fwidth(v) computes) → adaptive,
+      //     crisp, no dots AND no watery. Costs 2 extra field taps (mobile-only).
       const deriv = !lean && gl.getExtension("OES_standard_derivatives");
-      const W = deriv ? "fwidth(v)" : (lean ? "(14.0 / uRes.y)" : "0.02");
-      const GW = deriv ? "fwidth(uv.x) * 22.0" : (lean ? "(22.0 / uRes.x)" : "0.04");
+      const W = deriv ? "fwidth(v)" : "cwidth(p, t, ripple, v)";
+      const GW = deriv ? "fwidth(uv.x) * 22.0" : "(22.0 / uRes.x)";
       const FLOOR = "0.001";
 
       const vsrc = `
@@ -140,12 +141,24 @@ const { variant, mode = 0 } = Astro.props;
           return s;
         }
 
+        // contour field, factored so the no-fwidth path can finite-difference it
+        float cfield(vec2 pp, float t, float ripple){
+          vec2 q = vec2(fbm(pp + vec2(0.0, t)), fbm(pp + vec2(5.2, -t)));
+          return (fbm(pp + 1.7 * q + ripple * 0.9) + ripple * 0.22) * 7.0;
+        }
+        // derivative-free line width: |Δv| over a 1px step in each axis (p-step is
+        // isotropic = 3/uRes.y). Equals fwidth(v) but works where iOS's is broken
+        // → adaptive, crisp, no dots, no watery. Two extra field taps.
+        float cwidth(vec2 pp, float t, float ripple, float v){
+          float px = 3.0 / uRes.y;
+          return abs(cfield(pp + vec2(px, 0.0), t, ripple) - v)
+               + abs(cfield(pp + vec2(0.0, px), t, ripple) - v);
+        }
+
         // mode 0 — topographic contour lines + faint CAD grid
         vec3 fxContour(vec2 p, vec2 uv, float ar, float ripple){
           float t = uTime * 0.05;
-          vec2 q = vec2(fbm(p + vec2(0.0, t)), fbm(p + vec2(5.2, -t)));
-          float field = fbm(p + 1.7 * q + ripple * 0.9) + ripple * 0.22;
-          float v = field * 7.0;
+          float v = cfield(p, t, ripple);
           float w = ${W};
           float d = abs(fract(v) - 0.5);
           float line = 1.0 - smoothstep(0.0, max(w * 1.4, ${FLOOR}), d);
