@@ -230,9 +230,11 @@ const linkList = [
         lb.setAttribute("aria-hidden", "false");
         document.body.style.overflow = "hidden";
       };
+      const closeBtn = lb.querySelector(".cs-lightbox__close");
       const close = () => {
         lb.classList.remove("open");
         lb.setAttribute("aria-hidden", "true");
+        if (trigger) { trigger.focus(); trigger = null; }   // hand focus back
         document.body.style.overflow = "";
         lbImg.removeAttribute("src");
       };
@@ -242,9 +244,21 @@ const linkList = [
         for (const c of ss) { const parts = c.split(/\s+/); const n = parseInt(parts[1]) || 0; if (n >= bw) { bw = n; best = parts[0]; } }
         return best || img.currentSrc || img.src;
       };
+      let trigger = null;                     // so focus returns where it came from
+      const openFrom = (img) => { trigger = img; open(bestSrc(img), img.alt); closeBtn && closeBtn.focus(); };
       document.addEventListener("click", (e) => {
         const img = e.target.closest(".cs-content img");
-        if (img) open(bestSrc(img), img.alt);
+        if (img) openFrom(img);
+      });
+      // progressive enhancement: only advertise the zoom affordance once JS can
+      // honor it — make each image a real keyboard control (was mouse-only)
+      document.querySelectorAll(".cs-content img").forEach((img) => {
+        img.tabIndex = 0;
+        img.setAttribute("role", "button");
+        img.setAttribute("aria-label", img.alt ? `Zoom: ${img.alt}` : "Zoom image");
+        img.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openFrom(img); }
+        });
       });
       lb.addEventListener("click", close);
       addEventListener("keydown", (e) => { if (e.key === "Escape" && lb.classList.contains("open")) close(); });
@@ -382,8 +396,15 @@ const linkList = [
   .cta-links-row { margin-top: 1.6rem; display: flex; flex-wrap: wrap; gap: 1.2rem 2rem; font-family: var(--font-mono); font-size: .9rem; }
 
   /* click-to-zoom lightbox */
-  .cs-zoomable { transition: filter .25s ease; }
-  .cs-content figure:hover .cs-zoomable { filter: brightness(1.05); }
+  .cs-zoomable { transition: filter .25s ease, transform .35s cubic-bezier(.2,.7,.2,1); cursor: zoom-in; }
+  .cs-content figure:hover .cs-zoomable { filter: brightness(1.05); transform: translateY(-2px); }
+  /* keyboard parity: the images are real controls (see script), so they get a
+     real focus ring — not just a mouse-only affordance */
+  .cs-content :where(img):focus-visible { outline: 2px solid var(--color-cobalt); outline-offset: 4px; border-radius: 12px; }
+  @media (prefers-reduced-motion: reduce) {
+    .cs-zoomable { transition: none; }
+    .cs-content figure:hover .cs-zoomable { transform: none; }
+  }
   .cs-lightbox { position: fixed; inset: 0; z-index: 100; display: none; place-items: center; padding: clamp(.75rem, 1.5vw, 1.5rem); background: color-mix(in oklab, #000 90%, transparent); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
   .cs-lightbox.open { display: grid; animation: cs-lb-in .22s ease; }
   @keyframes cs-lb-in { from { opacity: 0; } to { opacity: 1; } }

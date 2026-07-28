@@ -1,9 +1,46 @@
 ---
+import fs from "node:fs";
+import path from "node:path";
+import crypto from "node:crypto";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import projects from "../data/art.json";
 
-// cover + count are precomputed in art.json (image, youtube thumb, or video frame)
-const withCover = projects.map((p) => ({
+// Read real pixel dimensions at build time (zero-dep: PNG IHDR / JPEG SOF).
+// Two payoffs: every <img> ships width+height so a 46-plate set scrolls with
+// ZERO layout shift, and the true aspect drives the reader's layout rhythm
+// (wide plates run full width, uprights pair two-up) instead of one flat stack.
+function imgInfo(src: string) {
+  try {
+    const b = fs.readFileSync(path.join("public", src));
+    const id = crypto.createHash("md5").update(b).digest("hex");   // same read → free dedupe key
+    let d: { w: number; h: number } | null = null;
+    if (b[0] === 0x89 && b[1] === 0x50) d = { w: b.readUInt32BE(16), h: b.readUInt32BE(20) };
+    else if (b[0] === 0xff && b[1] === 0xd8) {
+      let o = 2;
+      while (o < b.length - 9) {
+        if (b[o] !== 0xff) { o++; continue; }
+        const m = b[o + 1];
+        if (m >= 0xc0 && m <= 0xcf && m !== 0xc4 && m !== 0xc8 && m !== 0xcc) { d = { h: b.readUInt16BE(o + 5), w: b.readUInt16BE(o + 7) }; break; }
+        o += 2 + b.readUInt16BE(o + 2);
+      }
+    }
+    return { id, ...(d || { w: 0, h: 0 }) };
+  } catch { /* missing/unreadable file → no dimensions, no dedupe key */ }
+  return null;
+}
+const sized = projects.map((p) => {
+  // dedupe by CONTENT, not filename: the original Cargo scrape saved a few
+  // plates twice under different names (odds-and-ends 01 == 02 == 10), which
+  // showed the same drawing three times in the set
+  const seen = new Set<string>();
+  const plates = (p.images || []).flatMap((src) => {
+    const d = imgInfo(src);
+    if (d?.id) { if (seen.has(d.id)) return []; seen.add(d.id); }
+    return [{ src, w: d?.w || 0, h: d?.h || 0, wide: d && d.h ? d.w / d.h >= 1.15 : true }];
+  });
+  return { ...p, plates, coverSize: p.cover ? imgInfo(p.cover) : null };
+});
+const withCover = sized.map((p) => ({
   ...p,
   count: p.images.length + p.youtube.length + (p.video ? 1 : 0) + (p.videoPending ? 1 : 0),
 }));
@@ -45,7 +82,15 @@ const withCover = projects.map((p) => ({
             aria-label={`Open ${p.title}`}
           >
             {p.cover ? (
-              <img class="ag-img" src={p.cover} alt={p.title} loading="lazy" decoding="async" />
+              <img
+                class="ag-img"
+                src={p.cover}
+                alt={p.title}
+                loading="lazy"
+                decoding="async"
+                width={p.coverSize?.w || undefined}
+                height={p.coverSize?.h || undefined}
+              />
             ) : (
               <span class="ag-ph">▶</span>
             )}
@@ -62,13 +107,24 @@ const withCover = projects.map((p) => ({
   <div class="pv" id="pv" aria-hidden="true" data-lenis-prevent>
     <button class="pv-close" id="pv-close" aria-label="Close">✕</button>
     <article class="pv-inner">
-      <h2 class="pv-title" id="pv-title"></h2>
-      <p class="pv-desc" id="pv-desc"></p>
+      <header class="pv-head">
+        <p class="pv-meta" id="pv-meta"></p>
+        <h2 class="pv-title" id="pv-title"></h2>
+        <p class="pv-desc" id="pv-desc"></p>
+      </header>
       <div class="pv-media" id="pv-media"></div>
+      <nav class="pv-walk" aria-label="Works">
+        <button class="pv-walk-b" id="pv-prev" type="button">
+          <span class="pv-walk-k">← Prev</span><span class="pv-walk-t" id="pv-prev-t"></span>
+        </button>
+        <button class="pv-walk-b pv-walk-b--next" id="pv-next" type="button">
+          <span class="pv-walk-k">Next →</span><span class="pv-walk-t" id="pv-next-t"></span>
+        </button>
+      </nav>
     </article>
   </div>
 
-  <script type="application/json" id="art-data" set:html={JSON.stringify(projects)}></script>
+  <script type="application/json" id="art-data" set:html={JSON.stringify(sized)}></script>
 </BaseLayout>
 
 <style>
@@ -119,16 +175,38 @@ const withCover = projects.map((p) => ({
   .pv { position: fixed; inset: 0; z-index: 100; display: none; overflow-y: auto; background: #0a0a0d; color: #ececf1; }
   :global([data-mode="light"]) .pv { background: #f5f5f0; color: #1b1b20; }
   .pv.open { display: block; }
-  .pv-inner { max-width: 860px; margin: 0 auto; padding: clamp(64px, 12vh, 120px) clamp(20px, 5vw, 40px) 100px; }
+  .pv-inner { max-width: 980px; margin: 0 auto; padding: clamp(64px, 12vh, 120px) clamp(20px, 5vw, 40px) 100px; }
+  /* head: a quiet mono index, the title, then a hairline before the plates —
+     the reader knows where it stands before it starts scrolling */
+  .pv-head { border-bottom: 1px solid color-mix(in srgb, currentColor 12%, transparent); margin-bottom: clamp(30px, 5vh, 52px); padding-bottom: clamp(22px, 3.5vh, 34px); }
+  .pv-meta { font-family: "Geist Mono", monospace; font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase; color: color-mix(in srgb, currentColor 42%, transparent); margin: 0 0 14px; }
   .pv-title { font-family: "Mona Sans", sans-serif; font-weight: 700; font-size: clamp(30px, 5vw, 52px); letter-spacing: -0.02em; line-height: 1.02; margin: 0 0 20px; }
-  .pv-desc { font-size: clamp(15px, 1.8vw, 17px); line-height: 1.7; color: color-mix(in srgb, currentColor 62%, transparent); white-space: pre-line; margin: 0 0 clamp(34px, 6vh, 56px); max-width: 62ch; }
-  .pv-media { display: flex; flex-direction: column; gap: clamp(18px, 3vh, 34px); }
-  .pv-media img, .pv-media .pv-embed { width: 100%; border-radius: 6px; display: block; }
-  .pv-media img { height: auto; box-shadow: 0 10px 40px rgba(0,0,0,.22); }
-  .pv-embed { aspect-ratio: 16 / 9; border: 0; }
-  .pv-embed--tall { aspect-ratio: 4 / 3; min-height: min(70vh, 640px); }  /* interactive 3D scenes get room */
-  .pv-media video.pv-embed { aspect-ratio: auto; background: #000; max-height: 82vh; }
-  .pv-pending { font-family: "Geist Mono", monospace; font-size: 12px; color: color-mix(in srgb, currentColor 50%, transparent); border: 1px dashed color-mix(in srgb, currentColor 25%, transparent); border-radius: 8px; padding: 26px; text-align: center; }
+  .pv-desc { font-size: clamp(15px, 1.8vw, 17px); line-height: 1.7; color: color-mix(in srgb, currentColor 62%, transparent); white-space: pre-line; margin: 0; max-width: 62ch; }
+  /* plates: wide work runs full width, uprights pair two-up (aspect measured at
+     build) so a long set reads as a hung wall, not a scroll dump */
+  /* NOTE: everything inside .pv-media is injected at runtime (innerHTML), so it
+     never carries Astro's scope attribute — these children MUST be :global() or
+     the rules silently don't apply (the plate styling was dead before this). */
+  .pv-media { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(14px, 2.4vw, 26px); align-items: start; }
+  .pv-media :global(.pv-fig) { margin: 0; }
+  .pv-media :global(.pv-fig--wide) { grid-column: 1 / -1; }
+  .pv-media :global(img), .pv-media :global(.pv-embed) { width: 100%; border-radius: 6px; display: block; }
+  .pv-media :global(img) { height: auto; box-shadow: 0 10px 40px rgba(0,0,0,.22); }
+  @media (max-width: 680px) { .pv-media { grid-template-columns: 1fr; } .pv-media :global(.pv-fig) { grid-column: 1 / -1; } }
+  /* walk: step to the next work without going back to the grid (mirrors the
+     prev/next on the work pages, so the site speaks one language) */
+  .pv-walk { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(12px, 2vw, 20px); margin-top: clamp(48px, 8vh, 84px); padding-top: clamp(22px, 3.5vh, 32px); border-top: 1px solid color-mix(in srgb, currentColor 12%, transparent); }
+  .pv-walk-b { display: flex; flex-direction: column; gap: 7px; align-items: flex-start; text-align: left; padding: 16px 18px; border-radius: 12px; border: 1px solid color-mix(in srgb, currentColor 12%, transparent); background: transparent; color: inherit; cursor: pointer; transition: border-color .22s ease, background-color .22s ease, transform .22s ease; }
+  .pv-walk-b--next { align-items: flex-end; text-align: right; }
+  .pv-walk-b:hover { border-color: color-mix(in srgb, currentColor 30%, transparent); background: color-mix(in srgb, currentColor 5%, transparent); transform: translateY(-1px); }
+  .pv-walk-k { font-family: "Geist Mono", monospace; font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: color-mix(in srgb, currentColor 42%, transparent); }
+  .pv-walk-t { font-family: "Mona Sans", sans-serif; font-weight: 600; font-size: clamp(15px, 2vw, 19px); letter-spacing: -0.01em; }
+  @media (prefers-reduced-motion: reduce) { .pv-walk-b { transition: none; } .pv-walk-b:hover { transform: none; } }
+  /* injected at runtime too → :global (see note above) */
+  .pv-media :global(.pv-embed) { aspect-ratio: 16 / 9; border: 0; }
+  .pv-media :global(.pv-embed--tall) { aspect-ratio: 4 / 3; min-height: min(70vh, 640px); }  /* interactive 3D scenes get room */
+  .pv-media :global(video.pv-embed) { aspect-ratio: auto; background: #000; max-height: 82vh; }
+  .pv-media :global(.pv-pending) { grid-column: 1 / -1; font-family: "Geist Mono", monospace; font-size: 12px; color: color-mix(in srgb, currentColor 50%, transparent); border: 1px dashed color-mix(in srgb, currentColor 25%, transparent); border-radius: 8px; padding: 26px; text-align: center; }
   .pv-close { position: fixed; top: 20px; right: 22px; z-index: 101; width: 42px; height: 42px; border-radius: 999px; background: rgba(128,128,128,.14); color: inherit; border: 1px solid color-mix(in srgb, currentColor 20%, transparent); font-size: 16px; cursor: pointer; display: grid; place-items: center; }
   .pv-close:hover { background: rgba(128,128,128,.26); }
 </style>
@@ -140,24 +218,49 @@ const withCover = projects.map((p) => ({
     const tEl = document.getElementById("pv-title");
     const dEl = document.getElementById("pv-desc");
     const mEl = document.getElementById("pv-media");
+    const mtEl = document.getElementById("pv-meta");
+    const prevB = document.getElementById("pv-prev"), nextB = document.getElementById("pv-next");
+    const prevT = document.getElementById("pv-prev-t"), nextT = document.getElementById("pv-next-t");
+    let cur = 0;
+    // only what the data actually knows — no invented years or mediums
+    const kindOf = (p) => {
+      const n = (p.plates || []).length;
+      if (p.spline) return "Interactive 3D";
+      if (p.video || (p.youtube || []).length) return (p.youtube || []).length > 1 ? `${p.youtube.length} videos` : "Video";
+      return n ? `${n} ${n > 1 ? "plates" : "plate"}` : "";
+    };
     const open = (i, push) => {
       const p = data[i];
+      cur = i;
+      const kind = kindOf(p);
+      mtEl.textContent = `${String(i + 1).padStart(2, "0")} / ${String(data.length).padStart(2, "0")}${kind ? "  ·  " + kind : ""}`;
       tEl.textContent = p.title;
       dEl.textContent = p.desc || "";
       dEl.style.display = p.desc ? "" : "none";
       let html = "";
-      if (p.video) html += `<video class="pv-embed" controls playsinline preload="metadata"${p.cover ? ` poster="${p.cover}"` : ""}><source src="${p.video}" type="video/mp4"></video>`;
-      (p.youtube || []).forEach((id) => (html += `<iframe class="pv-embed" src="https://www.youtube.com/embed/${id}" title="${p.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>`));
-      if (p.spline) html += `<iframe class="pv-embed pv-embed--tall" src="${p.spline}" title="${p.title} — interactive 3D" loading="lazy" allow="fullscreen"></iframe>`;
-      (p.images || []).forEach((src) => (html += `<img src="${src}" alt="" loading="lazy">`));
-      if (p.videoPending && !(p.images || []).length && !(p.youtube || []).length && !p.video) html += `<div class="pv-pending">▶ Video piece — embed coming soon.</div>`;
+      if (p.video) html += `<figure class="pv-fig pv-fig--wide"><video class="pv-embed" controls playsinline preload="metadata"${p.cover ? ` poster="${p.cover}"` : ""}><source src="${p.video}" type="video/mp4"></video></figure>`;
+      (p.youtube || []).forEach((id) => (html += `<figure class="pv-fig pv-fig--wide"><iframe class="pv-embed" src="https://www.youtube.com/embed/${id}" title="${p.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></figure>`));
+      if (p.spline) html += `<figure class="pv-fig pv-fig--wide"><iframe class="pv-embed pv-embed--tall" src="${p.spline}" title="${p.title} — interactive 3D" loading="lazy" allow="fullscreen"></iframe></figure>`;
+      // rhythm: wide plates run full width, uprights pair two-up (real aspect,
+      // measured at build) — and w/h ship with every img so nothing reflows
+      (p.plates || []).forEach((im) => {
+        const dim = im.w && im.h ? ` width="${im.w}" height="${im.h}"` : "";
+        html += `<figure class="pv-fig${im.wide ? " pv-fig--wide" : ""}"><img src="${im.src}" alt="" loading="lazy" decoding="async"${dim}></figure>`;
+      });
+      if (p.videoPending && !(p.plates || []).length && !(p.youtube || []).length && !p.video) html += `<div class="pv-pending">▶ Video piece — embed coming soon.</div>`;
       mEl.innerHTML = html;
+      const pi = (i - 1 + data.length) % data.length, ni = (i + 1) % data.length;
+      prevT.textContent = data[pi].title;
+      nextT.textContent = data[ni].title;
       pv.classList.add("open");
       pv.setAttribute("aria-hidden", "false");
       pv.scrollTop = 0;
       document.body.style.overflow = "hidden";
       if (push !== false) history.pushState({ pv: i }, "", "#" + (p.slug || i));  // browser Back now closes the view
     };
+    const step = (d) => open((cur + d + data.length) % data.length);
+    prevB.addEventListener("click", () => step(-1));
+    nextB.addEventListener("click", () => step(1));
     const doClose = () => { pv.classList.remove("open"); pv.setAttribute("aria-hidden", "true"); document.body.style.overflow = ""; mEl.innerHTML = ""; };
     const close = () => { if (history.state && history.state.pv != null) history.back(); else doClose(); };
     addEventListener("popstate", (e) => {
@@ -166,7 +269,12 @@ const withCover = projects.map((p) => ({
     });
     document.querySelectorAll(".ag-card").forEach((b) => b.addEventListener("click", () => open(+b.dataset.i)));
     document.getElementById("pv-close").addEventListener("click", close);
-    addEventListener("keydown", (e) => { if (e.key === "Escape" && pv.classList.contains("open")) close(); });
+    addEventListener("keydown", (e) => {
+      if (!pv.classList.contains("open")) return;
+      if (e.key === "Escape") close();
+      else if (e.key === "ArrowLeft") step(-1);           // walk the room with ← →
+      else if (e.key === "ArrowRight") step(1);
+    });
     // deep link: /art#slug opens that project directly
     const initial = data.findIndex((p) => "#" + (p.slug || "") === decodeURIComponent(location.hash));
     if (initial >= 0) { history.replaceState(null, "", location.pathname); open(initial); }
