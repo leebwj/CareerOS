@@ -213,6 +213,9 @@ html.lenis, html.lenis body { height: auto; }
      hovering header controls so their snap stays visible */
   .cursor-ring { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 39; display: none; }
   .cursor-ring.over-nav { z-index: 41; }
+  /* full-screen overlays (the art reader, z 100) would otherwise bury the ring —
+     and since cursor-on sets `cursor: none`, that leaves NO cursor at all */
+  html.pv-open .cursor-ring { z-index: 102; }
   html.cursor-on .cursor-ring { display: grid; place-items: center; }
   /* The white ring uses mix-blend difference so it inverts against any background. */
   .cursor-ring { width: 34px; height: 34px; margin: -17px 0 0 -17px; border: 1.5px solid #fff; border-radius: 50%; mix-blend-mode: difference; transition: width .3s cubic-bezier(.22, 1, .36, 1), height .3s cubic-bezier(.22, 1, .36, 1), margin .3s cubic-bezier(.22, 1, .36, 1), border-radius .3s cubic-bezier(.22, 1, .36, 1), background-color .3s ease, border-color .3s ease; }

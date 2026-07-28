@@ -38,7 +38,14 @@ const sized = projects.map((p) => {
     if (d?.id) { if (seen.has(d.id)) return []; seen.add(d.id); }
     return [{ src, w: d?.w || 0, h: d?.h || 0, wide: d && d.h ? d.w / d.h >= 1.15 : true }];
   });
-  return { ...p, plates, coverSize: p.cover ? imgInfo(p.cover) : null };
+  // Remote YouTube thumbnails can't be measured off disk, but hqdefault is
+  // always 480x360 — without this the card has no intrinsic size, so it starts
+  // at height 0, reflows the masonry on load, and the cursor can't snap to it.
+  const cover = p.cover || null;
+  const coverSize = !cover ? null
+    : /^https?:\/\/i\.ytimg\.com\//.test(cover) ? { w: 480, h: 360 }
+    : imgInfo(cover);
+  return { ...p, plates, coverSize };
 });
 const withCover = sized.map((p) => ({
   ...p,
@@ -256,12 +263,16 @@ const withCover = sized.map((p) => ({
       pv.setAttribute("aria-hidden", "false");
       pv.scrollTop = 0;
       document.body.style.overflow = "hidden";
+      // the custom cursor ring sits at z-index 39 (under the header); this
+      // overlay is z-index 100, so without lifting it the ring is buried and —
+      // because cursor-on sets `cursor: none` — the reader has NO cursor at all
+      document.documentElement.classList.add("pv-open");
       if (push !== false) history.pushState({ pv: i }, "", "#" + (p.slug || i));  // browser Back now closes the view
     };
     const step = (d) => open((cur + d + data.length) % data.length);
     prevB.addEventListener("click", () => step(-1));
     nextB.addEventListener("click", () => step(1));
-    const doClose = () => { pv.classList.remove("open"); pv.setAttribute("aria-hidden", "true"); document.body.style.overflow = ""; mEl.innerHTML = ""; };
+    const doClose = () => { pv.classList.remove("open"); pv.setAttribute("aria-hidden", "true"); document.body.style.overflow = ""; document.documentElement.classList.remove("pv-open"); mEl.innerHTML = ""; };
     const close = () => { if (history.state && history.state.pv != null) history.back(); else doClose(); };
     addEventListener("popstate", (e) => {
       if (e.state && e.state.pv != null) open(e.state.pv, false);

@@ -159,12 +159,15 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
           const wrap = hoverEl;
           if (wrap) {
             const r = hoverEl.getBoundingClientRect();
-            const zoom = hoverEl.classList.contains("cs-zoomable");
             // generous caps so big-screen layouts still snap (images grew past
             // the old 1000px gate after the large-desktop scale-up); the height
             // gate keeps huge vertical blocks (full cards/sections) label-only.
-            // zoom maxH 2400 covers even full-page screenshots (e.g. 1100x2034)
-            const maxW = zoom ? 1800 : 900, maxH = zoom ? 2400 : 460;
+            // zoom maxH 2400 covers even full-page screenshots (e.g. 1100x2034).
+            // .ag-card opts in too: the art masonry has portrait covers 460-600px
+            // tall (drawings/scans), which the default gate silently refused to
+            // wrap — so some artworks snapped and others didn't.
+            const big = hoverEl.classList.contains("cs-zoomable") || hoverEl.classList.contains("ag-card");
+            const maxW = big ? 1800 : 900, maxH = big ? 2400 : 460;
             if (r.width && r.width < maxW && r.height < maxH) {
               tx = r.left + r.width / 2; ty = r.top + r.height / 2; ease = 0.24;
               const pw = r.width + 18, ph = r.height + 18;   // a little roomier
