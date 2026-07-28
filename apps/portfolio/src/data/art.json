@@ -310,5 +310,15 @@
     ],
     "youtube": [],
     "cover": "/art/amplifier/01.jpg"
+  },
+  {
+    "title": "Light and Distortion (Installation Art)",
+    "slug": "light-and-distortion",
+    "desc": "",
+    "images": [],
+    "youtube": [
+      "5Rp-sjQO3Sk"
+    ],
+    "cover": "https://i.ytimg.com/vi/5Rp-sjQO3Sk/hqdefault.jpg"
   }
 ]
