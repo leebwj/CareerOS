@@ -1,216 +1,314 @@
 [
- {
-  "title": "Seoul Street 2",
-  "slug": "seoul-street-2",
-  "desc": "Recreation of the acrylic painting “Seoul Street”. Going beyond 2D, the 3D environment unveils the hidden corners of the narrow streets and its gloomy ambience. Made using Maya, Substance Painter, Photoshop, and Illustrator.",
-  "images": [
-   "/art/seoul-street-2/01.jpg",
-   "/art/seoul-street-2/02.jpg",
-   "/art/seoul-street-2/03.jpg"
-  ],
-  "youtube": [],
-  "video": null,
-  "videoPending": false,
-  "cover": "/art/seoul-street-2/01.jpg"
- },
- {
-  "title": "Passenger",
-  "slug": "passenger",
-  "desc": "A cinematic Unreal Engine 5 short: a canyon, a train swallowed by roots, and a figure who picks up something that briefly opens the world backward. Environment, lighting, character animation, and hand-written HLSL post-process shaders (an anisotropic Kuwahara filter and a cell shader) that make real-time frames feel oil-painted.\n\nMade with Unreal Engine 5, Maya, and Megascans; rendered at 2560×1080 through the Movie Render Pipeline.",
-  "cover": "https://i.ytimg.com/vi/mSnqY3R2d-E/hqdefault.jpg",
-  "images": [],
-  "youtube": [
-   "mSnqY3R2d-E"
-  ]
- },
- {
-  "title": "A Composition that brings together non-adjacent spaces",
-  "slug": "a-composition-that-brings-together-non-adjacent-spaces",
-  "desc": "Many different legends attempt to speculate how human beings had advent in this world. Even though there are numerous theories yet have been proven, one thing is clear: we all began from a united entity. While the cycle of life and death continued over millenniums, the world has been civilized in different places with different people. Like how Europeans established a distinct country in a new-found land, culture, language, and society began to segregate from one another. Through this work, I tried to convey the message of how people developed various appearances, personalities, and beliefs over time. And inspired by The Red Thread of Fate from Chinese mythology, I tried to show how our distinct individualities are all related to each other, as we all originated from a united group, tribe, matter, or being. In the end, the threads bring the society, culture, and territories together into one identity.\n\n9.44” x 9.44” x 15.74”",
-  "images": [],
-  "youtube": [
-   "qB6JYdGljIs"
-  ],
-  "video": null,
-  "videoPending": false,
-  "cover": "https://i.ytimg.com/vi/qB6JYdGljIs/hqdefault.jpg"
- },
- {
-  "title": "Windex P",
-  "slug": "windex-p",
-  "desc": "The work was done using pencils. In this work I practiced doing an observation drawing by placing random objects and sketching them. I practiced observing small details in the objects as I was sketching the book, detergent, and the charging cable.\n\n22.8” X 14.9”",
-  "images": [
-   "/art/windex-p/01.jpg"
-  ],
-  "youtube": [],
-  "video": null,
-  "videoPending": false,
-  "cover": "/art/windex-p/01.jpg"
- },
- {
-  "title": "Seoul Street",
-  "slug": "seoul-street",
-  "desc": "The work was done using acrylic paint and pencils. At night, narrow streets in Seoul light up, and people gather together to reward their day of hard work. As I painted this work, I tried to make strong contrast between the signs and the surrounding objects to emphasize the significance of light at night. On top of that, I painted the overall background in blue to depict the cold mood inherent in the city of Seoul at night, especially when its raining. \n\n20” x 15”",
-  "images": [
-   "/art/seoul-street/01.jpg"
-  ],
-  "youtube": [],
-  "video": null,
-  "videoPending": false,
-  "cover": "/art/seoul-street/01.jpg"
- },
- {
-  "title": "Dispersion",
-  "slug": "dispersion",
-  "desc": "Ordinary Nikon camera, with an unsual glass dispersion texture. Creation of a well-known object into a texture that we have never seen in reality gives the feeling of both distance and wonder. The turntable allows the object to reflect light in different angles, allowing us to find out how the texture interacts with the given lighting environment. Made using Maya, Substance Painter, and After Effect.",
-  "images": [],
-  "youtube": [],
-  "video": "/art/dispersion/video.mp4",
-  "videoPending": false,
-  "cover": "/art/dispersion/cover.jpg"
- },
- {
-  "title": "A View from Window",
-  "slug": "a-view-from-window",
-  "desc": "Self-directed Project: Depending on the intensity of the light, we encounter different moods and feelings. From the bright light, we feel energy, glamor, and excitement. From the dark light, we feel bitter, dismal, and cold. While there are various types of lights, such as traffic lights, car lights, and street lamps, when we look outside the car window, I find a contrast between two different moods from those artificial lights. On the back mirror, a bright background full of colorful jellyfishes represents the bright mood of the light. Outside the back mirror, a dim background full of glowing lanterns represents the darker mood of the light. While two different atmospheres co-exist in this piece of work, I want to express the feelings I feel that change as I watch outside the window sitting in a car.  \n 20” X 15”",
-  "images": [
-   "/art/a-view-from-window/01.jpg"
-  ],
-  "youtube": [],
-  "video": null,
-  "videoPending": false,
-  "cover": "/art/a-view-from-window/01.jpg"
- },
- {
-  "title": "Somnium",
-  "slug": "somnium",
-  "desc": "Olympus, Atlantis, Avalon, El Dorado… Whenever I came across such places as a child while reading a fiction book such as Percy Jackson, I would imagine myself at a place where I would never see or get to go in my entire lifetime. Simply fantasizing myself as a hero or a traveler from a different world kept me entertained throughout the day. Growing up, I realized that I have stopped exploring my own imaginations, and solely began to chase after realism. At one point, I was no longer innocent, naive, or pure like how I used to during childhood. Using a foamular, gesso mixture, grass powder, acrylic, and green screen, I was able to create a “sky island”, a place I used to fly around in my own imaginations years ago.",
-  "images": [],
-  "youtube": [
-   "87yMHpuJZZQ"
-  ],
-  "video": null,
-  "videoPending": false,
-  "cover": "https://i.ytimg.com/vi/87yMHpuJZZQ/hqdefault.jpg"
- },
- {
-  "title": "Playground",
-  "slug": "playground",
-  "desc": "Recreation of a childhood memory, bringing life to a character with distinctive animations through user-interactive actions with the 3D models. Using a keyboard or mouse, press the keys to make interactive animations come to life as “Boo” wakes up. Press ‘Q’ to reset the scene.\n\nMade using Maya, Substance Painter, and Spline — play with it right here.",
-  "cover": "/art/playground/cover.jpg",
-  "images": [],
-  "youtube": [],
-  "spline": "https://my.spline.design/untitled-QVRKLSCWxKCmX5aAVZUXDukV/"
- },
- {
-  "title": "Ceiling Light",
-  "slug": "ceiling-light",
-  "desc": "Note: Swipe image to view slideshow.\n\nDuring my VASE trip to Indonesia, I found no light during the night. To provide a solution, I have decided to design a ceiling light that maximizes the spread of the light in the most effective way. 16 tunnels surrounding the lightbulb in the middle of the product helps the light to spread out in 16 different directions. By using a single lightbulb, I have attempted to explore ways in which light can be used in the most efficient way possible. In the near future, I hope that such designs would eventually brighten up the island of Indonesia the next time I get to visit. \n\nThroughout the development of the product, I came up with different sketches and models of the final product, in order to explore ways in which light can be used efficiently. Through sketch, I came up with ideas and inspirations while organizing the making process of the product. By 3D modeling the final product, I was able to preview how the physical product would look like in real life. \n\n18.5’’ X 18.5’’ X 9.0’’",
-  "images": [
-   "/art/ceiling-light/01.jpg",
-   "/art/ceiling-light/02.jpg",
-   "/art/ceiling-light/03.jpg",
-   "/art/ceiling-light/04.jpg",
-   "/art/ceiling-light/05.jpg",
-   "/art/ceiling-light/06.jpg",
-   "/art/ceiling-light/07.jpg"
-  ],
-  "youtube": [],
-  "video": null,
-  "videoPending": false,
-  "cover": "/art/ceiling-light/01.jpg"
- },
- {
-  "title": "Odds and Ends",
-  "slug": "odds-and-ends",
-  "desc": "As a self-directed project, I aimed to practice my observation skills by drawing my grandparent’s study room. From this picture I found from my computer drive, I used a pen to outline the complex details I discovered, and express the perplexing feelings I found from this room. However, the feeling of peacefulness is something I also find in my grandfather’s room, which is why I decided to add a cat to the table to create a calm mood. \n\n17” X 13.7”",
-  "images": [
-   "/art/odds-and-ends/01.jpg",
-   "/art/odds-and-ends/02.jpg",
-   "/art/odds-and-ends/03.jpg",
-   "/art/odds-and-ends/04.jpg",
-   "/art/odds-and-ends/05.jpg",
-   "/art/odds-and-ends/06.jpg",
-   "/art/odds-and-ends/07.jpg",
-   "/art/odds-and-ends/08.jpg",
-   "/art/odds-and-ends/09.jpg",
-   "/art/odds-and-ends/10.jpg",
-   "/art/odds-and-ends/11.jpg",
-   "/art/odds-and-ends/12.jpg",
-   "/art/odds-and-ends/13.jpg",
-   "/art/odds-and-ends/14.jpg",
-   "/art/odds-and-ends/15.jpg",
-   "/art/odds-and-ends/16.jpg",
-   "/art/odds-and-ends/17.jpg",
-   "/art/odds-and-ends/18.png",
-   "/art/odds-and-ends/19.jpg",
-   "/art/odds-and-ends/20.jpg",
-   "/art/odds-and-ends/21.jpg",
-   "/art/odds-and-ends/22.jpg",
-   "/art/odds-and-ends/23.jpg",
-   "/art/odds-and-ends/24.jpg",
-   "/art/odds-and-ends/25.jpg",
-   "/art/odds-and-ends/26.jpg",
-   "/art/odds-and-ends/27.jpg",
-   "/art/odds-and-ends/28.jpg",
-   "/art/odds-and-ends/29.jpg",
-   "/art/odds-and-ends/30.jpg",
-   "/art/odds-and-ends/31.jpg",
-   "/art/odds-and-ends/32.jpg",
-   "/art/odds-and-ends/33.jpg",
-   "/art/odds-and-ends/34.jpg",
-   "/art/odds-and-ends/35.jpg",
-   "/art/odds-and-ends/36.jpg",
-   "/art/odds-and-ends/37.jpg",
-   "/art/odds-and-ends/38.jpg",
-   "/art/odds-and-ends/39.jpg",
-   "/art/odds-and-ends/40.jpg",
-   "/art/odds-and-ends/41.jpg",
-   "/art/odds-and-ends/42.jpg",
-   "/art/odds-and-ends/43.jpg",
-   "/art/odds-and-ends/44.jpg",
-   "/art/odds-and-ends/45.jpg",
-   "/art/odds-and-ends/46.jpg"
-  ],
-  "youtube": [],
-  "video": null,
-  "videoPending": false,
-  "cover": "/art/odds-and-ends/01.jpg"
- },
- {
-  "title": "Pick Up",
-  "slug": "pick-up",
-  "desc": "",
-  "images": [],
-  "youtube": [
-   "VjmlxtnApIA"
-  ],
-  "video": null,
-  "videoPending": false,
-  "cover": "https://i.ytimg.com/vi/VjmlxtnApIA/hqdefault.jpg"
- },
- {
-  "title": "A Self-Portrait as a Pattern",
-  "slug": "a-self-portrait-as-a-pattern",
-  "desc": "",
-  "images": [],
-  "youtube": [
-   "vP7rxgifUSE"
-  ],
-  "video": null,
-  "videoPending": false,
-  "cover": "https://i.ytimg.com/vi/vP7rxgifUSE/hqdefault.jpg"
- },
- {
-  "title": "A Sequence that shows a Shift in Behavior",
-  "slug": "a-sequence-that-shows-a-shift-in-behavior",
-  "desc": "",
-  "images": [],
-  "youtube": [
-   "pLMINe6_Utk"
-  ],
-  "video": null,
-  "videoPending": false,
-  "cover": "https://i.ytimg.com/vi/pLMINe6_Utk/hqdefault.jpg"
- }
+  {
+    "title": "Seoul Street 2",
+    "slug": "seoul-street-2",
+    "desc": "Recreation of the acrylic painting “Seoul Street”. Going beyond 2D, the 3D environment unveils the hidden corners of the narrow streets and its gloomy ambience. Made using Maya, Substance Painter, Photoshop, and Illustrator.",
+    "images": [
+      "/art/seoul-street-2/01.jpg",
+      "/art/seoul-street-2/02.jpg",
+      "/art/seoul-street-2/03.jpg"
+    ],
+    "youtube": [],
+    "video": null,
+    "videoPending": false,
+    "cover": "/art/seoul-street-2/01.jpg"
+  },
+  {
+    "title": "Passenger",
+    "slug": "passenger",
+    "desc": "A cinematic Unreal Engine 5 short: a canyon, a train swallowed by roots, and a figure who picks up something that briefly opens the world backward. Environment, lighting, character animation, and hand-written HLSL post-process shaders (an anisotropic Kuwahara filter and a cell shader) that make real-time frames feel oil-painted.\n\nMade with Unreal Engine 5, Maya, and Megascans; rendered at 2560×1080 through the Movie Render Pipeline.",
+    "cover": "https://i.ytimg.com/vi/mSnqY3R2d-E/hqdefault.jpg",
+    "images": [],
+    "youtube": [
+      "mSnqY3R2d-E"
+    ]
+  },
+  {
+    "title": "A Composition that brings together non-adjacent spaces",
+    "slug": "a-composition-that-brings-together-non-adjacent-spaces",
+    "desc": "Many different legends attempt to speculate how human beings had advent in this world. Even though there are numerous theories yet have been proven, one thing is clear: we all began from a united entity. While the cycle of life and death continued over millenniums, the world has been civilized in different places with different people. Like how Europeans established a distinct country in a new-found land, culture, language, and society began to segregate from one another. Through this work, I tried to convey the message of how people developed various appearances, personalities, and beliefs over time. And inspired by The Red Thread of Fate from Chinese mythology, I tried to show how our distinct individualities are all related to each other, as we all originated from a united group, tribe, matter, or being. In the end, the threads bring the society, culture, and territories together into one identity.\n\n9.44” x 9.44” x 15.74”",
+    "images": [],
+    "youtube": [
+      "qB6JYdGljIs"
+    ],
+    "video": null,
+    "videoPending": false,
+    "cover": "https://i.ytimg.com/vi/qB6JYdGljIs/hqdefault.jpg"
+  },
+  {
+    "title": "Windex P",
+    "slug": "windex-p",
+    "desc": "The work was done using pencils. In this work I practiced doing an observation drawing by placing random objects and sketching them. I practiced observing small details in the objects as I was sketching the book, detergent, and the charging cable.\n\n22.8” X 14.9”",
+    "images": [
+      "/art/windex-p/01.jpg"
+    ],
+    "youtube": [],
+    "video": null,
+    "videoPending": false,
+    "cover": "/art/windex-p/01.jpg"
+  },
+  {
+    "title": "Seoul Street",
+    "slug": "seoul-street",
+    "desc": "The work was done using acrylic paint and pencils. At night, narrow streets in Seoul light up, and people gather together to reward their day of hard work. As I painted this work, I tried to make strong contrast between the signs and the surrounding objects to emphasize the significance of light at night. On top of that, I painted the overall background in blue to depict the cold mood inherent in the city of Seoul at night, especially when its raining. \n\n20” x 15”",
+    "images": [
+      "/art/seoul-street/01.jpg"
+    ],
+    "youtube": [],
+    "video": null,
+    "videoPending": false,
+    "cover": "/art/seoul-street/01.jpg"
+  },
+  {
+    "title": "Dispersion",
+    "slug": "dispersion",
+    "desc": "Ordinary Nikon camera, with an unsual glass dispersion texture. Creation of a well-known object into a texture that we have never seen in reality gives the feeling of both distance and wonder. The turntable allows the object to reflect light in different angles, allowing us to find out how the texture interacts with the given lighting environment. Made using Maya, Substance Painter, and After Effect.",
+    "images": [],
+    "youtube": [],
+    "video": "/art/dispersion/video.mp4",
+    "videoPending": false,
+    "cover": "/art/dispersion/cover.jpg"
+  },
+  {
+    "title": "A View from Window",
+    "slug": "a-view-from-window",
+    "desc": "Self-directed Project: Depending on the intensity of the light, we encounter different moods and feelings. From the bright light, we feel energy, glamor, and excitement. From the dark light, we feel bitter, dismal, and cold. While there are various types of lights, such as traffic lights, car lights, and street lamps, when we look outside the car window, I find a contrast between two different moods from those artificial lights. On the back mirror, a bright background full of colorful jellyfishes represents the bright mood of the light. Outside the back mirror, a dim background full of glowing lanterns represents the darker mood of the light. While two different atmospheres co-exist in this piece of work, I want to express the feelings I feel that change as I watch outside the window sitting in a car.  \n 20” X 15”",
+    "images": [
+      "/art/a-view-from-window/01.jpg"
+    ],
+    "youtube": [],
+    "video": null,
+    "videoPending": false,
+    "cover": "/art/a-view-from-window/01.jpg"
+  },
+  {
+    "title": "Somnium",
+    "slug": "somnium",
+    "desc": "Olympus, Atlantis, Avalon, El Dorado… Whenever I came across such places as a child while reading a fiction book such as Percy Jackson, I would imagine myself at a place where I would never see or get to go in my entire lifetime. Simply fantasizing myself as a hero or a traveler from a different world kept me entertained throughout the day. Growing up, I realized that I have stopped exploring my own imaginations, and solely began to chase after realism. At one point, I was no longer innocent, naive, or pure like how I used to during childhood. Using a foamular, gesso mixture, grass powder, acrylic, and green screen, I was able to create a “sky island”, a place I used to fly around in my own imaginations years ago.",
+    "images": [],
+    "youtube": [
+      "87yMHpuJZZQ"
+    ],
+    "video": null,
+    "videoPending": false,
+    "cover": "https://i.ytimg.com/vi/87yMHpuJZZQ/hqdefault.jpg"
+  },
+  {
+    "title": "Playground",
+    "slug": "playground",
+    "desc": "Recreation of a childhood memory, bringing life to a character with distinctive animations through user-interactive actions with the 3D models. Using a keyboard or mouse, press the keys to make interactive animations come to life as “Boo” wakes up. Press ‘Q’ to reset the scene.\n\nMade using Maya, Substance Painter, and Spline — play with it right here.",
+    "cover": "/art/playground/cover.jpg",
+    "images": [],
+    "youtube": [],
+    "spline": "https://my.spline.design/untitled-QVRKLSCWxKCmX5aAVZUXDukV/"
+  },
+  {
+    "title": "Ceiling Light",
+    "slug": "ceiling-light",
+    "desc": "Note: Swipe image to view slideshow.\n\nDuring my VASE trip to Indonesia, I found no light during the night. To provide a solution, I have decided to design a ceiling light that maximizes the spread of the light in the most effective way. 16 tunnels surrounding the lightbulb in the middle of the product helps the light to spread out in 16 different directions. By using a single lightbulb, I have attempted to explore ways in which light can be used in the most efficient way possible. In the near future, I hope that such designs would eventually brighten up the island of Indonesia the next time I get to visit. \n\nThroughout the development of the product, I came up with different sketches and models of the final product, in order to explore ways in which light can be used efficiently. Through sketch, I came up with ideas and inspirations while organizing the making process of the product. By 3D modeling the final product, I was able to preview how the physical product would look like in real life. \n\n18.5’’ X 18.5’’ X 9.0’’",
+    "images": [
+      "/art/ceiling-light/01.jpg",
+      "/art/ceiling-light/02.jpg",
+      "/art/ceiling-light/03.jpg",
+      "/art/ceiling-light/04.jpg",
+      "/art/ceiling-light/05.jpg",
+      "/art/ceiling-light/06.jpg",
+      "/art/ceiling-light/07.jpg"
+    ],
+    "youtube": [],
+    "video": null,
+    "videoPending": false,
+    "cover": "/art/ceiling-light/01.jpg"
+  },
+  {
+    "title": "Odds and Ends",
+    "slug": "odds-and-ends",
+    "desc": "As a self-directed project, I aimed to practice my observation skills by drawing my grandparent’s study room. From this picture I found from my computer drive, I used a pen to outline the complex details I discovered, and express the perplexing feelings I found from this room. However, the feeling of peacefulness is something I also find in my grandfather’s room, which is why I decided to add a cat to the table to create a calm mood. \n\n17” X 13.7”",
+    "images": [
+      "/art/odds-and-ends/01.jpg",
+      "/art/odds-and-ends/02.jpg",
+      "/art/odds-and-ends/03.jpg",
+      "/art/odds-and-ends/04.jpg",
+      "/art/odds-and-ends/05.jpg",
+      "/art/odds-and-ends/06.jpg",
+      "/art/odds-and-ends/07.jpg",
+      "/art/odds-and-ends/08.jpg",
+      "/art/odds-and-ends/09.jpg",
+      "/art/odds-and-ends/10.jpg",
+      "/art/odds-and-ends/11.jpg",
+      "/art/odds-and-ends/12.jpg",
+      "/art/odds-and-ends/13.jpg",
+      "/art/odds-and-ends/14.jpg",
+      "/art/odds-and-ends/15.jpg",
+      "/art/odds-and-ends/16.jpg",
+      "/art/odds-and-ends/17.jpg",
+      "/art/odds-and-ends/18.png",
+      "/art/odds-and-ends/19.jpg",
+      "/art/odds-and-ends/20.jpg",
+      "/art/odds-and-ends/21.jpg",
+      "/art/odds-and-ends/22.jpg",
+      "/art/odds-and-ends/23.jpg",
+      "/art/odds-and-ends/24.jpg",
+      "/art/odds-and-ends/25.jpg",
+      "/art/odds-and-ends/26.jpg",
+      "/art/odds-and-ends/27.jpg",
+      "/art/odds-and-ends/28.jpg",
+      "/art/odds-and-ends/29.jpg",
+      "/art/odds-and-ends/30.jpg",
+      "/art/odds-and-ends/31.jpg",
+      "/art/odds-and-ends/32.jpg",
+      "/art/odds-and-ends/33.jpg",
+      "/art/odds-and-ends/34.jpg",
+      "/art/odds-and-ends/35.jpg",
+      "/art/odds-and-ends/36.jpg",
+      "/art/odds-and-ends/37.jpg",
+      "/art/odds-and-ends/38.jpg",
+      "/art/odds-and-ends/39.jpg",
+      "/art/odds-and-ends/40.jpg",
+      "/art/odds-and-ends/41.jpg",
+      "/art/odds-and-ends/42.jpg",
+      "/art/odds-and-ends/43.jpg",
+      "/art/odds-and-ends/44.jpg",
+      "/art/odds-and-ends/45.jpg",
+      "/art/odds-and-ends/46.jpg"
+    ],
+    "youtube": [],
+    "video": null,
+    "videoPending": false,
+    "cover": "/art/odds-and-ends/01.jpg"
+  },
+  {
+    "title": "Pick Up",
+    "slug": "pick-up",
+    "desc": "I have a friend who always loses his belongings. Not because he gets robbed, but because he simply forgets to pick up his belongings from class, restaurants, etc. Recently, he lost his AirPods, and Apple&#x27;s “Find My” service wasn’t helpful enough to locate where the Airpods was. Inspired by my friend’s repeated quest in search of his lost belongings, I decided to create a prototype of a mobile application called “Pick Up” which locates electronic devices that are registered using GPS connections. By simply connecting to this application, Pick Up can track down where the device is. The product provides a historical timestamp of where the device was last found and navigates the user to its designated area where the device was last found. By using this application, I hope to find my friend’s lost AirPods that may be venturing through the cities of Seoul until these days. \n\nThe development of this product required a deep understanding of how mobile apps worked. After creating individual pages for the app, I had to connect the pages with each other in order to find how the app interacted with different buttons, keys, and slides. Then using Photoshop, I was able to see how the prototype would look like in an actual smartphone to check if the dimensions were correct.",
+    "images": [
+      "/art/pick-up/01.jpg",
+      "/art/pick-up/02.png",
+      "/art/pick-up/03.jpg"
+    ],
+    "youtube": [
+      "VjmlxtnApIA"
+    ],
+    "video": null,
+    "videoPending": false,
+    "cover": "https://i.ytimg.com/vi/VjmlxtnApIA/hqdefault.jpg"
+  },
+  {
+    "title": "A Self-Portrait as a Pattern",
+    "slug": "a-self-portrait-as-a-pattern",
+    "desc": "Chromatic Spectrum (Self Portrait)\n\nI was born in Englewood, New Jersey. I was told by my parents that I used to dig holes during the late evenings of Summer at a playground. However, I hardly remember the stories my parents explained, since I came back to live in Korea when I was just 2 years old. Therefore, I am familiar with the culture of Korea, where no one hardly steals your belongings at a cafe and makes kimchi in Winter. But living as an international student in Korea, II never understood the thrills of wearing a Korean public uniform or preparing for the annual Korean university entrance exam like the others. However, I believe that these multicultural experiences helped me establish diverse characteristics, allowing me to manifest both cultures through this video. The spectrums of colors, presented in this video, represent my varying identities and backgrounds. The Korean traditional patterns shaded on the sculpture represents the time and influence I had from the culture of Korea, and the affection I noticed belatedly as I prepared to study abroad in the US. \n\n5.5” x 7” x 14.37”",
+    "images": [],
+    "youtube": [
+      "vP7rxgifUSE"
+    ],
+    "video": null,
+    "videoPending": false,
+    "cover": "https://i.ytimg.com/vi/vP7rxgifUSE/hqdefault.jpg"
+  },
+  {
+    "title": "A Sequence that shows a Shift in Behavior",
+    "slug": "a-sequence-that-shows-a-shift-in-behavior",
+    "desc": "For so long, light was something that existed for granted. It was something that brightened up our everyday life no matter how dark it was inside and outside. But as I grew up, an experience at Yeoju helped me notice the eccentric part of the light that I did not recognize before. It was a small, round firecracker that lit up the fields with orange rays and gleaming lights. However, it wasn’t the loud display that caught my mind; it was the intrinsic reflection of the village as it was flooded by the sudden light. Through the dancing sparks, I saw peacefulness that surrounded the fire. Under the blue moon, it seemed the entire history of the village was echoing. Over the suddenly gleaming fields, I recognized the solitude the village enjoyed. Mesmerized by the sudden epiphany, I came to understand how light can shift in behavior in order to speak to the human psyche. This experience had inspired me to explore the different behaviors light entails through this project.",
+    "images": [],
+    "youtube": [
+      "pLMINe6_Utk"
+    ],
+    "video": null,
+    "videoPending": false,
+    "cover": "https://i.ytimg.com/vi/pLMINe6_Utk/hqdefault.jpg"
+  },
+  {
+    "title": "Shades",
+    "slug": "shades",
+    "desc": "In this observation drawing, I tried to focus on the shades and contrast of the colors between different objects laid out on the table. Using a pencil, I was limited to use grayscale colors to express the different colors associated with the objects in real life. But through this work, I came to realize that it&#x27;s not only the colors, but the shades and tone also differentiate the objects that we encounter from each other. \n\n15.3” X 11.8”",
+    "images": [
+      "/art/shades/01.jpg"
+    ],
+    "youtube": [],
+    "cover": "/art/shades/01.jpg"
+  },
+  {
+    "title": "Eclipse",
+    "slug": "eclipse",
+    "desc": "While ordinary windows may be appropriate for the height of an adult, young children have a hard time peeking out the window that is installed above their height. Inspired by the way lunar eclipse changes in form, shades, and color, I have decided to use its characteristics to create a design where the size of the window gradually changed. Incorporating the visual aspects of the moon, I attempted to make the window appeal aesthetically. The stone texture on the window represents the surface of the moon, while the light on the window represents the glow of the moon. \n\nThe development of this product required extensive brainstormings of ideas. In my sketchbook, I would draw inspirations, ideas, and descriptions to plan out how my product would look like. And then I created the product into a 3D model, in order to see how the end product will look like when installed on the wall. \n\n41.3” X 0.1” X 82.6”",
+    "images": [
+      "/art/eclipse/01.jpg",
+      "/art/eclipse/02.jpg",
+      "/art/eclipse/03.jpg",
+      "/art/eclipse/04.jpg",
+      "/art/eclipse/05.jpg",
+      "/art/eclipse/06.jpg",
+      "/art/eclipse/07.png"
+    ],
+    "youtube": [],
+    "cover": "/art/eclipse/01.jpg"
+  },
+  {
+    "title": "Escritoire",
+    "slug": "escritoire",
+    "desc": "Painting is done with a brush. Writing is done with a pencil. Typing is done on a computer. However, all these exercises require the presence of a desk, as it provides the appropriate environment for us to work, study, and dream towards the future. Through this work, I wanted to express the spectrum of ambiance that waves through my mind when I sit on a desk to journey through my creativity. Sometimes I find new artistry. Sometimes I face difficulties that are beyond description. By creating a contrast between the gloomy background and the luminous subjects, I seek to share the various emotions I feel in front of the desk.\n\n20” X 15”",
+    "images": [
+      "/art/escritoire/01.jpg",
+      "/art/escritoire/02.jpg"
+    ],
+    "youtube": [],
+    "cover": "/art/escritoire/01.jpg"
+  },
+  {
+    "title": "Pen and Marker Drawings",
+    "slug": "pen-and-marker-drawings",
+    "desc": "Products have different shapes, colors, and sizes that justify their purpose of existence. And to understand its characteristics, I was able to use a marker to practice rendering the products into 3D drawings. By studying each product, I was able to understand how light differed the colors on different surfaces, where shadows were formed, and the exact purpose of minor functions I did not realize before. Through each drawing, I aimed to gain wider viewpoints of understanding the product in depth. \n\n8.3” X 11.6”",
+    "images": [
+      "/art/pen-and-marker-drawings/01.jpg",
+      "/art/pen-and-marker-drawings/02.jpg",
+      "/art/pen-and-marker-drawings/03.jpg"
+    ],
+    "youtube": [],
+    "cover": "/art/pen-and-marker-drawings/01.jpg"
+  },
+  {
+    "title": "Decrepitude",
+    "slug": "decrepitude",
+    "desc": "Self-directed Project: The amusement park was a joy for all children. But as time passed, I slowly began to distance myself from various rides, costumes, and parades as they looked so juvenile. In reality, what I found was an outdated Ferris wheel, rusted tracks of roller coasters, and a dusty merry-go-around, which all used to shine and gleam when I visited the park a decade ago. In this pen drawing, I tried to exaggerate the nostalgic feeling I felt from my childhood. The rusted lift on the left corner of the drawing represents me as an old man. On the other hand, the various rides represent the sense of separation I felt from them, and the glimpse of longing I felt as the rides continued to rust as I aged over time. \n\n14.7” x 11.2”",
+    "images": [
+      "/art/decrepitude/01.jpg"
+    ],
+    "youtube": [],
+    "cover": "/art/decrepitude/01.jpg"
+  },
+  {
+    "title": "Solitude",
+    "slug": "solitude",
+    "desc": "As a self-directed project, I was inspired by the sudden waves of loneliness I felt when I was forced to stay home due to COVID-19. Solitude is a state of mood that brings a mixture of emotions throughout time. The cracks, buildings, and tunnel, all are part of the solitude I intended to share through this work. By using a pen, I expressed the emptiness that can be felt from isolation. I placed the man sitting on the stone to stay close while all the rocks and buildings were placed further away. By doing so, I intended the viewers to put themselves in the man’s shoes and understand the complex feeling of solitude of this man.\n\n20” X 15”",
+    "images": [
+      "/art/solitude/01.jpg",
+      "/art/solitude/02.jpg"
+    ],
+    "youtube": [],
+    "cover": "/art/solitude/01.jpg"
+  },
+  {
+    "title": "Dog Stair",
+    "slug": "dog-stair",
+    "desc": "Yeondu\n\nYeondu is a 6 years old Yorkshire Terrier that never stopped running, jumping, and begging me to go for a walk. So one day when he sprained his leg, our family was in shock. Until now, our family failed to realize that the height of the couch and the slippery floor gave damage to Yeondu’s leg whenever he jumped off the couch. To solve the problem, I decided to create a dog slide for Yeondu to climb up and down instead of jumping on and off. Designed for dogs with leg joint problems, I hoped this product would give less stress to Yeondu’s legs. \n\nIt was during COVID-19, when I realized that the product should be developed for various households, including those with small living room. Thus I decided to integrate multiple functions on the lift, and decided to add a housing function to the lift. While the product needs more development for usage in various households in varying size, the product was a success for Yeondu’s current situation.  \n\n36.6” X 20” X 16.5354”",
+    "images": [
+      "/art/dog-stair/01.jpg",
+      "/art/dog-stair/02.jpg",
+      "/art/dog-stair/03.jpg",
+      "/art/dog-stair/04.jpg",
+      "/art/dog-stair/05.jpg"
+    ],
+    "youtube": [],
+    "cover": "/art/dog-stair/01.jpg"
+  },
+  {
+    "title": "Amplifier",
+    "slug": "amplifier",
+    "desc": "Description: The work was done using SketchUp, ArtCAM, CNC router, sanding machine, varnish, and PVAs. The prototype of this amplifier was designed and made for those who likes to listen to music, but cannot afford expensive speakers. This amplifier can have two distinct sounds from a single music as it has two different front lid that amplifies sound in different ways, which allows the user to choose his or her favourite type of amplification. 3D programs were used to design the structure of the amplifier, and manufacturing tools such as CNC machines were used to create the prototype of the product.\n\n8.27” x 1.96” x 2.36”",
+    "images": [
+      "/art/amplifier/01.jpg"
+    ],
+    "youtube": [],
+    "cover": "/art/amplifier/01.jpg"
+  }
 ]
