@@ -15,9 +15,36 @@ const ROOT = dirname(fileURLToPath(import.meta.url));
 const RECENT_DAYS = 30; // ROLES.md shows roles posted within this window
 const FRESH_HOURS = 48; // "fresh" section window
 const GHOST_DAYS = 45;  // postings older than this get flagged in data
-const STALE_INTERN_DAYS = 120;  // intern posts older than this + no future term → dropped (dead cycle)
-// terms that reference a still-upcoming intake (Fall 2026 onward, any 2027+)
-const FUTURE_TERM_RX = /(fall|autumn)\s*20(2[6-9])|winter\s*20(2[6-9])|spring\s*20(2[7-9])|summer\s*20(2[7-9])|\b20(2[7-9]|3[0-9])\b/i;
+const STALE_INTERN_DAYS = 120;  // intern posts older than this + no live term → dropped (dead cycle)
+
+// ── recruiting calendar, derived from TODAY (never hand-tuned) ───────────────
+// The old version hard-coded which seasons counted as "future" (Fall 2026+,
+// any 2027+). That is correct for exactly one moment in time: once the cycle
+// turns, Fall 2026 quietly stays "future" forever and dead postings stop being
+// dropped. So work it out from the date instead.
+// Month each intake BEGINS. The test is "can Brian still join this?", not "has
+// the term finished" — a Summer 2026 internship is already underway by July and
+// is dead weight in the feed even though it runs into August.
+const TERM_START = { winter: 1, spring: 3, summer: 6, fall: 9 };
+// A term string may list several ("Summer 2026 / Fall 2026") — live if ANY is.
+// Cutoff is the END of the start month, so a role isn't dropped the very week
+// its intake begins.
+function termsLive(term, now = new Date()) {
+  if (!term) return false;
+  let live = false;
+  for (const m of String(term).matchAll(/(spring|summer|fall|autumn|winter)\s*(20\d{2})/gi)) {
+    const season = m[1].toLowerCase().replace("autumn", "fall");
+    if (new Date(+m[2], TERM_START[season], 0) > now) live = true;
+  }
+  return live;
+}
+// The intake currently being recruited for. US tech opens the Summer N+1 cycle
+// around August of year N, and it runs through roughly February of N+1 — so from
+// July onward the live cycle is next summer's.
+const CYCLE_YEAR = new Date().getMonth() >= 6 ? new Date().getFullYear() + 1 : new Date().getFullYear();
+const CYCLE_LABEL = `Summer ${CYCLE_YEAR}`;
+// a role belongs to the active cycle if any of its terms names that year
+const inCycle = (r) => new RegExp(`\\b${CYCLE_YEAR}\\b`).test(r.term || "") || new RegExp(`\\b${CYCLE_YEAR}\\b`).test(r.title || "");
 
 const SOURCES = {
   simplifyIntern:
@@ -730,13 +757,20 @@ for (const r of collected) {
   // (evergreen reqs on live boards are genuinely applyable).
   if (r.level === "intern") {
     const postedT = new Date(r.posted || r.firstSeen || Date.now()).getTime();
-    if (postedT < Date.now() - STALE_INTERN_DAYS * 864e5 && !FUTURE_TERM_RX.test(r.term || "")) continue;
+    if (postedT < Date.now() - STALE_INTERN_DAYS * 864e5 && !termsLive(r.term)) continue;
   }
   // fresh = recently posted OR just entered our feed (a Google-tier listing
   // that Simplify adds late must still fire the 🔥/alert path — "new to us"
   // is what an alert means, not "new to the internet")
   const freshDays = (Date.now() - new Date(r.posted || "2000-01-01").getTime()) / 864e5;
+  // the intake actually being recruited for right now — the wave Brian is
+  // applying into. Flagged so the tracker/brief can lead with it instead of it
+  // being 1% of a ~10k-row feed.
+  if (r.level === "intern" && inCycle(r)) r.cycle = CYCLE_LABEL;
   r.hot = (freshDays <= 2 || r.isNew) && !r.closedRecently && r.level !== "full-time" && (r.target || r.fit >= 0.6);
+  // a target company opening its NEXT-cycle internship is the single most
+  // time-critical event of the season — never let it arrive quietly
+  if (r.isNew && r.cycle && r.target && !r.closedRecently) r.hot = true;
   const age = (Date.now() - new Date(r.posted || today).getTime()) / 864e5;
   // simplify exempt from age-ghosting (its bot marks dead listings inactive, so
   // active-in-feed = verified alive) — but rows Simplify itself closed within
@@ -786,6 +820,11 @@ writeFileSync(join(ROOT, "data", "brief.json"), JSON.stringify({
   hot: roles.filter((r) => r.hot).length,
   fresh: freshRows.length,
   targets: targetRows.length,
+  // the intake being recruited for right now (label rolls with the calendar)
+  cycle: CYCLE_LABEL,
+  cycleRoles: roles.filter((r) => r.cycle).length,
+  cycleTargets: roles.filter((r) => r.cycle && r.target).length,
+  cycleNew: roles.filter((r) => r.cycle && r.isNew).length,
 }));
 
 const row = (r) => `| ${r.hot ? "🔥" : ""}${tierIcon(r.fit)}${r.isNew ? " 🆕" : ""} ${r.posted} | ${r.company} | ${r.title.replace(/\|/g, "/")} | ${(r.locations[0] || "").replace(/\|/g, "/")} | ${r.level} | [link](${r.url}) |\n`;
@@ -812,4 +851,5 @@ if (errors.length) md += `\n> ⚠️ Source issues this run: ${errors.join("; ")
 writeFileSync(join(ROOT, "ROLES.md"), md);
 
 console.log(`OK — ${roles.length} US roles (${recent.length} recent, ${freshRows.length} fresh-48h, ATS direct: ${collectedATS.length}) → data + ROLES.md`);
+console.log(`   ${CYCLE_LABEL} cycle: ${roles.filter((r) => r.cycle).length} roles · ${roles.filter((r) => r.cycle && r.target).length} at target companies · ${roles.filter((r) => r.cycle && r.isNew).length} new this run`);
 if (errors.length) console.warn("source errors:", errors);

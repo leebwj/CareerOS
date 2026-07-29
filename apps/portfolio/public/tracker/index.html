@@ -131,6 +131,9 @@
     <button class="chip" id="fHot"><i class="dot dot-hot"></i>Hot</button>
     <button class="chip" id="fNew"><i class="dot dot-new"></i>New</button>
     <button class="chip" id="fTgt"><i class="dot dot-tgt"></i>Targets</button>
+    <!-- the intake being recruited for right now. Label comes from the feed, so
+         it rolls with the calendar instead of being hard-coded here. -->
+    <button class="chip" id="fCyc" hidden title="Only roles for the intake currently being recruited">🎓 <span id="fCycL">Cycle</span></button>
   </div>
   <div class="util">
     <button id="undo" title="Undo last change (Ctrl+Z)" disabled>↶ Undo</button>
@@ -151,7 +154,7 @@
   const STAGES = ["Applied", "OA / Screen", "Interview", "Offer", "Rejected", "Ghosted"];
 
   const LS_BAK = LS + "-lastgood";
-  let roles = [], state = { s: {}, hidden: {} }, view = "inbox", fNew = false, fTgt = false, fHot = false, fFit = false, fGroup = false;
+  let roles = [], state = { s: {}, hidden: {} }, view = "inbox", fNew = false, fTgt = false, fHot = false, fFit = false, fGroup = false, fCyc = false;
   const collapsedCos = new Set(); // company headers collapsed in group-by-company view
   let notifOn = localStorage.getItem("careeros-notif") === "1"; // hot-role browser alerts
   const notified = new Set(JSON.parse(localStorage.getItem("careeros-notified") || "[]"));
@@ -504,6 +507,7 @@
     const lvl = document.getElementById("lvl").value;
     const term = document.getElementById("term").value;
     document.getElementById("fFit").classList.toggle("on", fFit);
+    document.getElementById("fCyc").classList.toggle("on", fCyc);
     document.getElementById("fHot").classList.toggle("on", fHot);
     document.getElementById("fNew").classList.toggle("on", fNew);
     document.getElementById("fTgt").classList.toggle("on", fTgt);
@@ -525,6 +529,7 @@
       if (fFit && !(r.fit >= 0.6)) return false;
       if (fNew && !r.isNew) return false;
       if (fTgt && !r.target) return false;
+      if (fCyc && !r.cycle) return false;
       return true;
     });
 
@@ -643,6 +648,7 @@
   // Undo is button-only — no global Ctrl+Z (a reflex Ctrl+Z must never wipe tracked roles)
   document.getElementById("undo").onclick = doUndo;
   document.getElementById("fFit").onclick = () => { fFit = !fFit; render(); };
+  document.getElementById("fCyc").onclick = () => { fCyc = !fCyc; render(); };
   document.getElementById("fHot").onclick = () => { fHot = !fHot; render(); };
   document.getElementById("fNew").onclick = () => { fNew = !fNew; render(); };
   document.getElementById("fTgt").onclick = () => { fTgt = !fTgt; render(); };
@@ -763,6 +769,14 @@
     .then((r) => r.json())
     .then((data) => {
       roles = data;
+      // the grabber stamps r.cycle with the intake it's currently recruiting
+      // for ("Summer 2027"); show the chip only once such roles exist, and take
+      // the wording from the feed so this never needs editing each season
+      const cyc = roles.find((r) => r.cycle);
+      if (cyc) {
+        document.getElementById("fCycL").textContent = `${cyc.cycle} (${roles.filter((r) => r.cycle).length})`;
+        document.getElementById("fCyc").hidden = false;
+      }
       const cats = [...new Set(roles.map((r) => r.category))].sort();
       document.getElementById("cat").innerHTML += cats.map((c) => `<option>${esc(c)}</option>`).join("");
       // terms, chronological (year then season); compound terms split apart
