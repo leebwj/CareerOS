@@ -295,13 +295,19 @@ const withCover = sized.map((p) => ({
       // overlay is z-index 100, so without lifting it the ring is buried and —
       // because cursor-on sets `cursor: none` — the reader has NO cursor at all
       document.documentElement.classList.add("pv-open");
-      if (push !== false) history.pushState({ pv: i }, "", "#" + (p.slug || i));  // browser Back now closes the view
+      // Opening from the grid pushes one entry so browser Back closes the view.
+      // Walking with ← → REPLACES it, so browsing ten works doesn't bury the
+      // gallery ten entries deep in history.
+      if (push === "replace") history.replaceState({ pv: i }, "", "#" + (p.slug || i));
+      else if (push !== false) history.pushState({ pv: i }, "", "#" + (p.slug || i));
     };
-    const step = (d) => open((cur + d + data.length) % data.length);
+    const step = (d) => open((cur + d + data.length) % data.length, "replace");
     prevB.addEventListener("click", () => step(-1));
     nextB.addEventListener("click", () => step(1));
     const doClose = () => { pv.classList.remove("open"); pv.setAttribute("aria-hidden", "true"); document.body.style.overflow = ""; document.documentElement.classList.remove("pv-open"); closeZoom(); mEl.innerHTML = ""; };
-    const close = () => { if (history.state && history.state.pv != null) history.back(); else doClose(); };
+    // ✕ means "back to the gallery" — it closes and drops the #slug, rather than
+    // stepping back through history into whichever work was viewed before.
+    const close = () => { doClose(); history.replaceState(null, "", location.pathname); };
     addEventListener("popstate", (e) => {
       if (e.state && e.state.pv != null) open(e.state.pv, false);
       else if (pv.classList.contains("open")) doClose();

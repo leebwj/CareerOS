@@ -113,12 +113,16 @@
       "/art/ceiling-light/04.jpg",
       "/art/ceiling-light/05.jpg",
       "/art/ceiling-light/06.jpg",
-      "/art/ceiling-light/07.jpg"
+      "/art/ceiling-light/07.jpg",
+      "/art/ceiling-light/08.jpg",
+      "/art/ceiling-light/09.jpg",
+      "/art/ceiling-light/10.jpg",
+      "/art/ceiling-light/11.jpg"
     ],
     "youtube": [],
     "video": null,
     "videoPending": false,
-    "cover": "/art/ceiling-light/01.jpg"
+    "cover": "/art/ceiling-light/05.jpg"
   },
   {
     "title": "Odds and Ends",
@@ -126,51 +130,14 @@
     "desc": "As a self-directed project, I aimed to practice my observation skills by drawing my grandparent’s study room. From this picture I found from my computer drive, I used a pen to outline the complex details I discovered, and express the perplexing feelings I found from this room. However, the feeling of peacefulness is something I also find in my grandfather’s room, which is why I decided to add a cat to the table to create a calm mood. \n\n17” X 13.7”",
     "images": [
       "/art/odds-and-ends/01.jpg",
-      "/art/odds-and-ends/02.jpg",
       "/art/odds-and-ends/03.jpg",
       "/art/odds-and-ends/04.jpg",
       "/art/odds-and-ends/05.jpg",
-      "/art/odds-and-ends/06.jpg",
       "/art/odds-and-ends/07.jpg",
       "/art/odds-and-ends/08.jpg",
-      "/art/odds-and-ends/09.jpg",
-      "/art/odds-and-ends/10.jpg",
       "/art/odds-and-ends/11.jpg",
       "/art/odds-and-ends/12.jpg",
-      "/art/odds-and-ends/13.jpg",
-      "/art/odds-and-ends/14.jpg",
-      "/art/odds-and-ends/15.jpg",
-      "/art/odds-and-ends/16.jpg",
-      "/art/odds-and-ends/17.jpg",
-      "/art/odds-and-ends/18.png",
-      "/art/odds-and-ends/19.jpg",
-      "/art/odds-and-ends/20.jpg",
-      "/art/odds-and-ends/21.jpg",
-      "/art/odds-and-ends/22.jpg",
-      "/art/odds-and-ends/23.jpg",
-      "/art/odds-and-ends/24.jpg",
-      "/art/odds-and-ends/25.jpg",
-      "/art/odds-and-ends/26.jpg",
-      "/art/odds-and-ends/27.jpg",
-      "/art/odds-and-ends/28.jpg",
-      "/art/odds-and-ends/29.jpg",
-      "/art/odds-and-ends/30.jpg",
-      "/art/odds-and-ends/31.jpg",
-      "/art/odds-and-ends/32.jpg",
-      "/art/odds-and-ends/33.jpg",
-      "/art/odds-and-ends/34.jpg",
-      "/art/odds-and-ends/35.jpg",
-      "/art/odds-and-ends/36.jpg",
-      "/art/odds-and-ends/37.jpg",
-      "/art/odds-and-ends/38.jpg",
-      "/art/odds-and-ends/39.jpg",
-      "/art/odds-and-ends/40.jpg",
-      "/art/odds-and-ends/41.jpg",
-      "/art/odds-and-ends/42.jpg",
-      "/art/odds-and-ends/43.jpg",
-      "/art/odds-and-ends/44.jpg",
-      "/art/odds-and-ends/45.jpg",
-      "/art/odds-and-ends/46.jpg"
+      "/art/odds-and-ends/16.jpg"
     ],
     "youtube": [],
     "video": null,
@@ -183,8 +150,8 @@
     "desc": "I have a friend who always loses his belongings. Not because he gets robbed, but because he simply forgets to pick up his belongings from class, restaurants, etc. Recently, he lost his AirPods, and Apple&#x27;s “Find My” service wasn’t helpful enough to locate where the Airpods was. Inspired by my friend’s repeated quest in search of his lost belongings, I decided to create a prototype of a mobile application called “Pick Up” which locates electronic devices that are registered using GPS connections. By simply connecting to this application, Pick Up can track down where the device is. The product provides a historical timestamp of where the device was last found and navigates the user to its designated area where the device was last found. By using this application, I hope to find my friend’s lost AirPods that may be venturing through the cities of Seoul until these days. \n\nThe development of this product required a deep understanding of how mobile apps worked. After creating individual pages for the app, I had to connect the pages with each other in order to find how the app interacted with different buttons, keys, and slides. Then using Photoshop, I was able to see how the prototype would look like in an actual smartphone to check if the dimensions were correct.",
     "images": [
       "/art/pick-up/01.jpg",
-      "/art/pick-up/02.png",
-      "/art/pick-up/03.jpg"
+      "/art/pick-up/03.jpg",
+      "/art/pick-up/05.png"
     ],
     "youtube": [
       "VjmlxtnApIA"
@@ -236,9 +203,9 @@
       "/art/eclipse/02.jpg",
       "/art/eclipse/03.jpg",
       "/art/eclipse/04.jpg",
-      "/art/eclipse/05.jpg",
       "/art/eclipse/06.jpg",
-      "/art/eclipse/07.png"
+      "/art/eclipse/07.png",
+      "/art/eclipse/11.jpg"
     ],
     "youtube": [],
     "cover": "/art/eclipse/03.jpg"
@@ -260,7 +227,12 @@
     "images": [
       "/art/pen-and-marker-drawings/01.jpg",
       "/art/pen-and-marker-drawings/02.jpg",
-      "/art/pen-and-marker-drawings/03.jpg"
+      "/art/pen-and-marker-drawings/03.jpg",
+      "/art/pen-and-marker-drawings/04.jpg",
+      "/art/pen-and-marker-drawings/05.jpg",
+      "/art/pen-and-marker-drawings/07.jpg",
+      "/art/pen-and-marker-drawings/08.jpg",
+      "/art/pen-and-marker-drawings/09.jpg"
     ],
     "youtube": [],
     "cover": "/art/pen-and-marker-drawings/01.jpg"
@@ -280,8 +252,7 @@
     "slug": "solitude",
     "desc": "As a self-directed project, I was inspired by the sudden waves of loneliness I felt when I was forced to stay home due to COVID-19. Solitude is a state of mood that brings a mixture of emotions throughout time. The cracks, buildings, and tunnel, all are part of the solitude I intended to share through this work. By using a pen, I expressed the emptiness that can be felt from isolation. I placed the man sitting on the stone to stay close while all the rocks and buildings were placed further away. By doing so, I intended the viewers to put themselves in the man’s shoes and understand the complex feeling of solitude of this man.\n\n20” X 15”",
     "images": [
-      "/art/solitude/01.jpg",
-      "/art/solitude/02.jpg"
+      "/art/solitude/01.jpg"
     ],
     "youtube": [],
     "cover": "/art/solitude/01.jpg"
@@ -295,7 +266,9 @@
       "/art/dog-stair/02.jpg",
       "/art/dog-stair/03.jpg",
       "/art/dog-stair/04.jpg",
-      "/art/dog-stair/05.jpg"
+      "/art/dog-stair/05.jpg",
+      "/art/dog-stair/09.jpg",
+      "/art/dog-stair/12.jpg"
     ],
     "youtube": [],
     "cover": "/art/dog-stair/01.jpg"
