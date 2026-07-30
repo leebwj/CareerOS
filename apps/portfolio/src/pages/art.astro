@@ -47,26 +47,43 @@ const sized = projects.map((p) => {
     : imgInfo(cover);
   return { ...p, plates, coverSize };
 });
-// Deterministic pseudo-random so the "sandbox" scatter and the mosaic rhythm are
-// identical on every build (no layout shift between server and client, and the
-// arrangement doesn't reshuffle on reload).
+// ── sandbox placement, computed at build ─────────────────────────────────────
+// Deterministic (seeded) so the board is identical every build and reload.
+// The naive uniform scatter hid pieces behind each other; this is a JITTERED
+// GRID instead: one work per cell, jitter bounded to a fraction of the cell,
+// so neighbours can kiss at the edges but nothing can cover anything.
+// The centre 3x2 cells are reserved for the title block.
 const rnd = (n: number, salt: number) => {
   const x = Math.sin(n * 127.1 + salt * 311.7) * 43758.5453;
   return x - Math.floor(x);
 };
-const withCover = sized.map((p, i) => ({
-  ...p,
-  count: p.images.length + p.youtube.length + (p.video ? 1 : 0) + (p.videoPending ? 1 : 0),
-  // sandbox: position on a board that's larger than the window but tight enough
-  // that pieces cluster and overlap — spread over 3900x2200 they read as a few
-  // lonely images in a void
-  sx: Math.round(rnd(i, 1) * 1950),
-  sy: Math.round(rnd(i, 2) * 1020),
-  sc: (0.72 + rnd(i, 3) * 0.62).toFixed(2),
-  sr: (rnd(i, 4) * 8 - 4).toFixed(1),
-  // mosaic: a few pieces get a wider or taller cell so the grid has rhythm
-  span: rnd(i, 5) > 0.78 ? "wide" : rnd(i, 6) > 0.8 ? "tall" : "",
-}));
+const COLS = 7, ROWS = 5, CELL_W = 430, CELL_H = 360;
+const BOARD_W = COLS * CELL_W;   // 3010
+const BOARD_H = ROWS * CELL_H;   // 1800
+// Reserve only what the title block truly needs (2x2 cells): a 3x2 hole left
+// the whole first viewport empty — you landed on a void with no art in sight.
+const RESERVED = new Set<number>();
+for (const r of [1, 2]) for (const c of [3, 4]) RESERVED.add(r * COLS + c);
+const freeCells = Array.from({ length: COLS * ROWS }, (_, i) => i).filter((i) => !RESERVED.has(i));
+// seeded shuffle so works don't read in row order
+for (let i = freeCells.length - 1; i > 0; i--) {
+  const j = Math.floor(rnd(i, 9) * (i + 1));
+  [freeCells[i], freeCells[j]] = [freeCells[j], freeCells[i]];
+}
+const withCover = sized.map((p, i) => {
+  const cell = freeCells[i % freeCells.length];
+  const cx = (cell % COLS) * CELL_W, cy = Math.floor(cell / COLS) * CELL_H;
+  return {
+    ...p,
+    count: p.images.length + p.youtube.length + (p.video ? 1 : 0) + (p.videoPending ? 1 : 0),
+    // grid cards paint at ~300px — they load a 720px webp thumb, not the full plate
+    thumb: p.cover && !/^https?:/.test(p.cover) ? `/art/_thumbs/${p.slug}.webp` : p.cover,
+    sx: Math.round(cx + 24 + rnd(i, 1) * (CELL_W - 330 - 48)),
+    sy: Math.round(cy + 20 + rnd(i, 2) * 90),
+    sc: (0.82 + rnd(i, 3) * 0.3).toFixed(2),
+    sr: (rnd(i, 4) * 7 - 3.5).toFixed(1),
+  };
+});
 ---
 
 <BaseLayout
@@ -85,60 +102,52 @@ const withCover = sized.map((p, i) => ({
       </div>
     </header>
 
-    <section class="art-intro reveal">
-      <h1 class="art-title">Art</h1>
-      <p class="art-lede">
-        A quieter room — 3D renders, light installations, spatial compositions,
-        drawings, and studies made over the years.
-      </p>
-    </section>
-
-    <!-- TEMPORARY: layout comparison. The hover treatment is settled (shader);
-         this switches how the gallery is ARRANGED. Delete the switcher and the
-         losing layouts once one is chosen. -->
-    <div class="ag-styles" id="ag-styles">
-      <span>layout</span>
-      <button type="button" data-ag-layout="masonry" aria-pressed="true">Masonry</button>
-      <button type="button" data-ag-layout="mosaic" aria-pressed="false">Mosaic</button>
-      <button type="button" data-ag-layout="rail" aria-pressed="false">Rail</button>
-      <button type="button" data-ag-layout="sandbox" aria-pressed="false">Sandbox</button>
+    <!-- THE SANDBOX: the gallery is a drafting table larger than the window.
+         Drag the board to move around; drag a piece to re-hang it; click/tap a
+         piece to open it. The title lives at the centre of the board. -->
+    <div class="ag-stage" id="ag-stage" data-lenis-prevent tabindex="0" aria-label="Art board — drag to explore, arrow keys to pan" style={`--board-w:${BOARD_W}px; --board-h:${BOARD_H}px`}>
+      <section class="ag-grid" id="ag-grid" style={`width:${BOARD_W}px; height:${BOARD_H}px`}>
+        <div class="ag-center reveal" aria-hidden="false">
+          <h1 class="art-title">Art</h1>
+          <p class="art-lede">
+            A quieter room — 3D renders, light installations, spatial
+            compositions, drawings, and studies made over the years.
+          </p>
+          <p class="ag-hint" id="ag-hint">drag to explore · drag a piece to re-hang it</p>
+        </div>
+        {
+          withCover.map((p, i) => (
+            <button
+              class="ag-card reveal"
+              style={`--d:${(i % 5) * 60}ms; --sx:${p.sx}px; --sy:${p.sy}px; --sc:${p.sc}; --sr:${p.sr}deg`}
+              data-i={i}
+              data-slug={p.slug}
+              data-cursor="open"
+              data-cursor-keep
+              aria-label={`Open ${p.title}`}
+            >
+              {p.thumb ? (
+                <img
+                  class="ag-img"
+                  src={p.thumb}
+                  alt={p.title}
+                  loading="lazy"
+                  decoding="async"
+                  width={p.coverSize?.w || undefined}
+                  height={p.coverSize?.h || undefined}
+                />
+              ) : (
+                <span class="ag-ph">▶</span>
+              )}
+              <span class="ag-cap"><span class="ag-cap-t">{p.title}</span></span>
+            </button>
+          ))
+        }
+      </section>
+      <button class="ag-reset" id="ag-reset" type="button" hidden title="Put every piece back where it started">reset layout</button>
     </div>
-
-    <div class="ag-stage" id="ag-stage">
-    <section class="ag-grid" id="ag-grid" data-layout="masonry" data-style="shader">
-      {
-        withCover.map((p, i) => (
-          <button
-            class="ag-card reveal"
-            data-span={p.span}
-            style={`--d:${(i % 3) * 45}ms; --sx:${p.sx}px; --sy:${p.sy}px; --sc:${p.sc}; --sr:${p.sr}deg`}
-            data-i={i}
-            data-cursor="open"
-            data-cursor-keep
-            aria-label={`Open ${p.title}`}
-          >
-            {p.cover ? (
-              <img
-                class="ag-img"
-                src={p.cover}
-                alt={p.title}
-                loading="lazy"
-                decoding="async"
-                width={p.coverSize?.w || undefined}
-                height={p.coverSize?.h || undefined}
-              />
-            ) : (
-              <span class="ag-ph">▶</span>
-            )}
-            <span class="ag-cap"><span class="ag-cap-t">{p.title}</span></span>
-          </button>
-        ))
-      }
-    </section>
-    </div>
-    <p class="ag-hint" id="ag-hint" hidden>drag to move around</p>
-    <!-- shared WebGL layer for the hover treatment: ONE canvas for the whole grid
-         (25 canvases would be unusable), only rendering while hovering -->
+    <!-- shared WebGL layer for the ripple hover: ONE canvas for the whole board
+         (25 canvases would be unusable), rendering only while hovering -->
     <canvas class="ag-gl" id="ag-gl" aria-hidden="true"></canvas>
   </main>
 
@@ -146,7 +155,9 @@ const withCover = sized.map((p, i) => ({
        (Lenis) intercepts wheel events globally — without this the fixed
        overlay can never scroll natively. -->
   <div class="pv" id="pv" aria-hidden="true" data-lenis-prevent>
-    <button class="pv-close" id="pv-close" aria-label="Close">✕</button>
+    <button class="pv-close" id="pv-close" aria-label="Close and return to the gallery">
+      <span class="pv-close-x">✕</span><span class="pv-close-t">Close</span>
+    </button>
     <article class="pv-inner">
       <header class="pv-head">
         <p class="pv-meta" id="pv-meta"></p>
@@ -177,7 +188,10 @@ const withCover = sized.map((p, i) => ({
   .art {
     --paper: #0c0c10; --ink: #ececf1; --muted: #8b8b96; --line: rgba(255, 255, 255, 0.1);
     background: var(--paper); color: var(--ink); min-height: 100vh;
-    padding: 0 clamp(18px, 5vw, 64px) 90px;
+    /* header + stage fill the viewport exactly — bottom padding would force a
+       phantom page scroll behind the board */
+    padding: 0 clamp(18px, 5vw, 64px);
+    overflow: hidden;
   }
   :global([data-mode="light"]) .art { --paper: #f5f5f0; --ink: #1b1b20; --muted: #6a6a72; --line: rgba(0, 0, 0, 0.1); }
 
@@ -198,83 +212,75 @@ const withCover = sized.map((p, i) => ({
   :global([data-mode="light"]) .art-mode .i-sun { display: none; }
   :global([data-mode="light"]) .art-mode .i-moon { display: block; }
 
-  .art-intro { padding: clamp(46px, 11vh, 120px) 0 clamp(38px, 7vh, 74px); max-width: 640px; }
-  .art-title { font-family: "Mona Sans", sans-serif; font-weight: 700; font-size: clamp(52px, 12vw, 132px); line-height: 0.92; letter-spacing: -0.03em; margin: 0 0 22px; }
-  .art-lede { font-size: clamp(15px, 2vw, 18px); line-height: 1.6; color: var(--muted); max-width: 46ch; margin: 0; }
+  /* ── the sandbox board ─────────────────────────────────────────────────
+     The stage fills the viewport under the header; the board inside is larger
+     and pans with inertia. The board wears the site blueprint grid, so it
+     reads as the drafting table the rest of the site draws on. */
+  /* the page IS the board: html/body never scroll here (the reader overlay
+     scrolls itself); the stage is sized to the real header in JS */
+  :global(html:has(.art)), :global(html:has(.art) body) { overflow: hidden; height: 100%; overscroll-behavior: none; }
+  .ag-stage { position: relative; overflow: hidden; height: calc(100dvh - 77px); margin: 0 calc(-1 * clamp(18px, 5vw, 64px)); cursor: grab; touch-action: none; user-select: none; -webkit-user-select: none; outline: none; }
+  .ag-stage.dragging { cursor: grabbing; }
+  .ag-stage:focus-visible { box-shadow: inset 0 0 0 2px var(--ink); }
+  .ag-grid { position: relative; will-change: transform; background:
+      linear-gradient(var(--line) 1px, transparent 1px) 0 0 / 48px 48px,
+      linear-gradient(90deg, var(--line) 1px, transparent 1px) 0 0 / 48px 48px; }
 
-  /* scattered masonry of project covers — natural heights, image-first (title on hover) */
-  .ag-grid { column-count: 3; column-gap: clamp(14px, 2vw, 26px); }
-  @media (max-width: 1000px) { .ag-grid { column-count: 2; } }
-  @media (max-width: 560px) { .ag-grid { column-count: 1; } }
-  .ag-card { position: relative; display: block; width: 100%; margin: 0 0 clamp(14px, 2vw, 26px); padding: 0; border: 0; background: var(--line); border-radius: 6px; overflow: hidden; cursor: pointer; break-inside: avoid; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); color: inherit; }
-  .ag-img { display: block; width: 100%; height: auto; filter: saturate(0.97); transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1), filter 0.6s; }
-  .ag-ph { display: grid; place-items: center; aspect-ratio: 4 / 3; font-size: 34px; color: var(--muted); }
-  .ag-cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 14px 13px; background: linear-gradient(to top, rgba(0, 0, 0, 0.62), transparent); opacity: 0; transition: opacity 0.4s ease; pointer-events: none; text-align: left; }
-  .ag-cap-t { font-family: "Mona Sans", sans-serif; font-weight: 600; font-size: 14px; color: #fff; letter-spacing: -0.01em; }
-  @media (hover: hover) { .ag-card:hover .ag-img { transform: scale(1.03); filter: saturate(1.06); } .ag-card:hover .ag-cap { opacity: 1; } }
-  @media (hover: none) { .ag-cap { opacity: 1; } }
+  /* centre block: the page title lives ON the board */
+  .ag-center { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -52%); text-align: center; max-width: 560px; pointer-events: none; z-index: 1; }
+  .art-title { font-family: "Mona Sans", sans-serif; font-weight: 700; font-size: clamp(64px, 9vw, 128px); line-height: 0.92; letter-spacing: -0.03em; margin: 0 0 18px; }
+  .art-lede { font-size: clamp(14px, 1.6vw, 17px); line-height: 1.6; color: var(--muted); margin: 0 auto; max-width: 44ch; }
+  .ag-hint { margin: 20px 0 0; font-family: "Geist Mono", monospace; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); opacity: .85; transition: opacity .6s ease; }
+  .ag-hint.off { opacity: 0; }
 
-  /* ─── TEMPORARY: comparison switcher + the three candidate treatments ─────
-     Delete this whole block (and the #ag-styles markup, .ag-gl canvas and the
-     ag-style script) once one treatment is chosen. ───────────────────────── */
-  .ag-styles { position: fixed; z-index: 60; right: clamp(12px, 3vw, 28px); bottom: clamp(12px, 3vw, 24px); display: flex; align-items: center; gap: 6px; padding: 7px 9px; border-radius: 999px; background: color-mix(in srgb, var(--paper) 82%, transparent); border: 1px solid var(--line); -webkit-backdrop-filter: blur(9px); backdrop-filter: blur(9px); font-family: "Geist Mono", monospace; }
-  .ag-styles > span { font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); padding-left: 4px; }
-  .ag-styles button { font-family: inherit; font-size: 11.5px; line-height: 1; padding: 6px 11px; border-radius: 999px; border: 1px solid var(--line); background: transparent; color: var(--muted); cursor: pointer; }
-  .ag-styles button[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
-  @media (max-width: 560px) { .ag-styles > span { display: none; } }
-
-  /* A · SHADER — the img is hidden while the shared canvas draws it displaced */
-  /* always present: it costs nothing until a hover starts a draw, and it is
-     pointer-events:none so it never intercepts clicks */
-  .ag-gl { position: fixed; inset: 0; z-index: 3; pointer-events: none; display: block; }
-  .ag-card { background: transparent; }
-  .ag-img { transition: opacity .18s ease, filter .5s ease, transform .7s cubic-bezier(.2,.7,.2,1); filter: saturate(.72) brightness(.84); }
-  .ag-card.gl-active .ag-img { opacity: 0; }
-  .ag-cap { z-index: 4; }
-  @media (hover: hover) { .ag-card:hover .ag-img { filter: saturate(1) brightness(1); } }
-
-  /* ─── LAYOUTS (comparison) ────────────────────────────────────────────── */
-  .ag-stage { position: relative; }
-
-  /* 1 · MASONRY — the current CSS-columns flow (base rules above) */
-
-  /* 2 · MOSAIC — editorial grid: a few pieces claim a wider or taller cell so
-     the wall has rhythm instead of even stacking. dense packing fills the gaps. */
-  .ag-grid[data-layout="mosaic"] { column-count: initial; display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 190px; grid-auto-flow: dense; gap: clamp(10px, 1.6vw, 20px); }
-  .ag-grid[data-layout="mosaic"] .ag-card { margin: 0; height: 100%; }
-  .ag-grid[data-layout="mosaic"] .ag-img { height: 100%; object-fit: cover; }
-  .ag-grid[data-layout="mosaic"] .ag-card { grid-row: span 2; }
-  .ag-grid[data-layout="mosaic"] .ag-card[data-span="wide"] { grid-column: span 2; }
-  .ag-grid[data-layout="mosaic"] .ag-card[data-span="tall"] { grid-row: span 3; }
-  @media (max-width: 1000px) { .ag-grid[data-layout="mosaic"] { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 560px)  { .ag-grid[data-layout="mosaic"] { grid-template-columns: 1fr; } .ag-grid[data-layout="mosaic"] .ag-card[data-span="wide"] { grid-column: span 1; } }
-
-  /* 3 · RAIL — one horizontal run you scroll sideways, like walking a wall.
-     scroll-snap so each piece settles; native scrollbar hidden. */
-  .ag-grid[data-layout="rail"] { column-count: initial; display: flex; gap: clamp(12px, 2vw, 24px); overflow-x: auto; overflow-y: hidden; padding-block: 8px 26px; scroll-snap-type: x mandatory; scrollbar-width: none; }
-  .ag-grid[data-layout="rail"]::-webkit-scrollbar { display: none; }
-  .ag-grid[data-layout="rail"] .ag-card { margin: 0; flex: 0 0 auto; width: clamp(240px, 34vw, 460px); scroll-snap-align: center; }
-  .ag-grid[data-layout="rail"] .ag-img { height: min(62vh, 560px); object-fit: cover; }
-
-  /* 4 · SANDBOX — a board bigger than the window that you drag around. Finite
-     (25 works), so plain DOM transforms are enough; a true infinite canvas would
-     need chunked WebGL, which is overkill here and would cost the CSS layouts. */
-  .ag-stage[data-layout="sandbox"] { overflow: hidden; height: min(78vh, 760px); border: 1px solid var(--line); border-radius: 10px; cursor: grab; touch-action: none; }
-  .ag-stage[data-layout="sandbox"].dragging { cursor: grabbing; }
-  .ag-grid[data-layout="sandbox"] { column-count: initial; display: block; position: relative; width: 2380px; height: 1420px; will-change: transform; }
-  .ag-grid[data-layout="sandbox"] .ag-card { position: absolute; margin: 0; left: var(--sx); top: var(--sy); width: clamp(150px, 19vw, 330px); transform: scale(var(--sc)) rotate(var(--sr)); transition: transform .45s cubic-bezier(.2,.7,.2,1), box-shadow .45s ease; box-shadow: 0 10px 26px -12px rgba(0,0,0,.6); }
+  /* pieces: pinned prints, draggable */
+  .ag-card { position: absolute; left: var(--sx); top: var(--sy); width: clamp(170px, 20vw, 330px); margin: 0; padding: 0; border: 0; border-radius: 5px; overflow: hidden; cursor: pointer; color: inherit; background: transparent; box-shadow: 0 10px 26px -12px rgba(0,0,0,.55); transform: scale(var(--sc)) rotate(var(--sr)); transition: transform .45s cubic-bezier(.2,.7,.2,1), box-shadow .45s ease; }
+  .ag-card.lifted { transition: none; cursor: grabbing; z-index: 5; box-shadow: 0 34px 70px -20px rgba(0,0,0,.8); }
   @media (hover: hover) {
-    .ag-grid[data-layout="sandbox"] .ag-card:hover { transform: scale(calc(var(--sc) * 1.09)) rotate(0deg); box-shadow: 0 30px 60px -20px rgba(0,0,0,.75); z-index: 3; }
+    .ag-card:hover { transform: scale(calc(var(--sc) * 1.07)) rotate(0deg); box-shadow: 0 28px 56px -18px rgba(0,0,0,.72); z-index: 3; }
   }
-  .ag-hint { position: absolute; left: 50%; transform: translateX(-50%); margin-top: 12px; font-family: "Geist Mono", monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
-  @media (prefers-reduced-motion: reduce) { .ag-grid[data-layout="sandbox"] .ag-card { transition: none; } }
+  .ag-img { display: block; width: 100%; height: auto; -webkit-user-drag: none; user-drag: none; transition: opacity .18s ease, filter .5s ease; filter: saturate(.72) brightness(.84); }
+  .ag-card.gl-active .ag-img { opacity: 0; }
+  @media (hover: hover) { .ag-card:hover .ag-img { filter: saturate(1) brightness(1); } .ag-card:hover .ag-cap { opacity: 1; } }
+  @media (hover: none) { .ag-cap { opacity: 1; } .ag-img { filter: none; } }
+  .ag-ph { display: grid; place-items: center; aspect-ratio: 4 / 3; font-size: 34px; color: var(--muted); }
+  .ag-cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 14px 13px; background: linear-gradient(to top, rgba(0, 0, 0, 0.62), transparent); opacity: 0; transition: opacity 0.4s ease; pointer-events: none; text-align: left; z-index: 4; }
+  .ag-cap-t { font-family: "Mona Sans", sans-serif; font-weight: 600; font-size: 14px; color: #fff; letter-spacing: -0.01em; }
+
+  /* the ripple layer + controls */
+  .ag-gl { position: fixed; inset: 0; z-index: 3; pointer-events: none; display: block; }
+  .ag-reset { position: absolute; z-index: 6; right: 14px; bottom: 14px; font-family: "Geist Mono", monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; padding: 8px 13px; border-radius: 999px; border: 1px solid var(--line); background: color-mix(in srgb, var(--paper) 80%, transparent); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); color: var(--muted); cursor: pointer; }
+  .ag-reset:hover { color: var(--ink); border-color: var(--ink); }
+
+  @media (max-width: 700px) {
+    .ag-stage { height: calc(100dvh - 62px); }
+    .ag-card { width: clamp(150px, 44vw, 240px); }
+    .art-title { font-size: clamp(44px, 15vw, 72px); }
+    .ag-center { max-width: 320px; }
+    .art-lede { font-size: 13px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ag-card, .ag-img, .ag-hint { transition: none; }
+    .ag-card:hover { transform: scale(var(--sc)); }
+  }
 
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease var(--d,0ms), transform .7s cubic-bezier(.2,.7,.2,1) var(--d,0ms); }
   .reveal.is-in { opacity: 1; transform: none; }
+  /* board children carry their OWN transforms (title centering, card
+     scale/tilt) — the reveal must animate opacity only, never zero those out.
+     These outrank both .reveal states. */
+  .ag-grid .ag-center.reveal, .ag-grid .ag-center.reveal.is-in { transform: translate(-50%, -52%); }
+  .ag-grid .ag-card.reveal, .ag-grid .ag-card.reveal.is-in { transform: scale(var(--sc)) rotate(var(--sr)); }
+  @media (hover: hover) {
+    .ag-grid .ag-card.reveal:hover { transform: scale(calc(var(--sc) * 1.07)) rotate(0deg); }
+  }
+  .ag-grid .ag-card.reveal.lifted { transform: scale(calc(var(--sc) * 1.05)) rotate(0deg); }
 
   /* expanded project view */
-  .pv { position: fixed; inset: 0; z-index: 100; display: none; overflow-y: auto; background: #0a0a0d; color: #ececf1; }
-  :global([data-mode="light"]) .pv { background: #f5f5f0; color: #1b1b20; }
+  /* .pv is a SIBLING of <main class="art">, so --ink/--paper defined on .art do
+     not reach it — it carries its own pair. */
+  .pv { position: fixed; inset: 0; z-index: 100; display: none; overflow-y: auto; --pv-paper: #0a0a0d; --pv-ink: #ececf1; background: var(--pv-paper); color: var(--pv-ink); }
+  :global([data-mode="light"]) .pv { --pv-paper: #f5f5f0; --pv-ink: #1b1b20; }
   .pv.open { display: block; }
   .pv-inner { max-width: 980px; margin: 0 auto; padding: clamp(64px, 12vh, 120px) clamp(20px, 5vw, 40px) 100px; }
   /* head: a quiet mono index, the title, then a hairline before the plates —
@@ -311,13 +317,21 @@ const withCover = sized.map((p, i) => ({
   .pv-media :global(.pv-embed--tall) { aspect-ratio: 4 / 3; min-height: min(70vh, 640px); }  /* interactive 3D scenes get room */
   .pv-media :global(video.pv-embed) { aspect-ratio: auto; background: #000; max-height: 82vh; }
   .pv-media :global(.pv-pending) { grid-column: 1 / -1; font-family: "Geist Mono", monospace; font-size: 12px; color: color-mix(in srgb, currentColor 50%, transparent); border: 1px dashed color-mix(in srgb, currentColor 25%, transparent); border-radius: 8px; padding: 26px; text-align: center; }
-  .pv-close { position: fixed; top: 20px; right: 22px; z-index: 101; width: 42px; height: 42px; border-radius: 999px; background: rgba(128,128,128,.14); color: inherit; border: 1px solid color-mix(in srgb, currentColor 20%, transparent); font-size: 16px; cursor: pointer; display: grid; place-items: center; }
-  .pv-close:hover { background: rgba(128,128,128,.26); }
+  /* A faint grey circle vanished against bright artwork and got missed. This is
+     a solid, labelled pill in the reader's inverted colours, so it reads on any
+     plate underneath it, in either theme. */
+  .pv-close { position: fixed; top: 18px; right: 20px; z-index: 101; display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 16px 0 14px; border-radius: 999px; background: var(--pv-ink); color: var(--pv-paper); border: 1px solid var(--pv-ink); font-family: "Geist Mono", monospace; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; box-shadow: 0 8px 24px -10px rgba(0,0,0,.6); transition: transform .2s ease, opacity .2s ease; }
+  .pv-close-x { font-size: 15px; line-height: 1; }
+  .pv-close:hover { transform: translateY(-1px); }
+  .pv-close:focus-visible { outline: 2px solid var(--pv-ink); outline-offset: 3px; }
+  @media (max-width: 560px) { .pv-close-t { display: none; } .pv-close { padding: 0; width: 44px; justify-content: center; } }
+  @media (prefers-reduced-motion: reduce) { .pv-close { transition: none; } .pv-close:hover { transform: none; } }
   /* zoom layer — sits above the reader, below the custom cursor (z 102) */
   .pv-zoom { position: fixed; inset: 0; z-index: 101; display: none; place-items: center; padding: clamp(.75rem, 2vw, 1.5rem); background: rgba(0,0,0,.92); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
   .pv-zoom.open { display: grid; }
   .pv-zoom img { max-width: 97vw; max-height: 94vh; width: auto; height: auto; border-radius: 8px; box-shadow: 0 40px 90px -24px rgba(0,0,0,.85); }
-  .pv-zoom-x { color: #fff; border-color: rgba(255,255,255,.3); }
+  /* the zoom layer is near-black, so its close pill inverts the other way */
+  .pv-zoom-x { background: #fff; color: #111; border-color: #fff; width: 44px; padding: 0; justify-content: center; z-index: 102; }
   .pv-media :global(img[data-zoom]) { cursor: zoom-in; }
 </style>
 
@@ -421,33 +435,205 @@ const withCover = sized.map((p, i) => ({
       else if (e.key === "ArrowLeft") step(-1);           // walk the room with ← →
       else if (e.key === "ArrowRight") step(1);
     });
-    // ─── TEMPORARY: thumbnail-treatment comparison ────────────────────────
-    // Three candidate looks switchable live so Brian can judge them on the real
-    // work. Remove this block, the #ag-styles markup, the .ag-gl canvas and the
-    // style-specific CSS once one is chosen.
+    // ─── THE SANDBOX ──────────────────────────────────────────────────────
+    // One interaction system, three gestures, one render loop:
+    //   drag the board   → pan with inertia (target-velocity easing, the
+    //                      Codrops infinite-canvas input model)
+    //   drag a piece     → re-hang it; the position persists per-slug
+    //   click/tap        → open the reader (a drag past 8px never clicks)
+    // Perf: ONE rAF integrator paints the board; the ripple shader reads NO
+    // layout in its loop — card rects are cached in board space and offset by
+    // the current pan, so pointermove storms never force reflow.
     (() => {
+      const stage = document.getElementById("ag-stage");
       const grid = document.getElementById("ag-grid");
-      const bar = document.getElementById("ag-styles");
       const canvas = document.getElementById("ag-gl");
-      if (!grid || !bar || !canvas) return;
-      const KEY = "art-layout";
-      const btns = [...bar.querySelectorAll("[data-ag-layout]")];
+      const hintEl = document.getElementById("ag-hint");
+      const resetBtn = document.getElementById("ag-reset");
+      if (!stage || !grid || !canvas) return;
+      const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const fine = matchMedia("(hover: hover) and (pointer: fine)").matches;
+      const POS_KEY = "art-sandbox-pos-v1";
 
-      // ── shader treatment: one shared GL layer, drawn only while hovering ──
-      let gl = null, prog = null, tex = null, raf = 0, card = null, img = null;
+      // ── restore re-hung pieces ──
+      let savedPos = {};
+      try { savedPos = JSON.parse(localStorage.getItem(POS_KEY) || "{}"); } catch {}
+      const cards = [...grid.querySelectorAll(".ag-card")];
+      const boardW = grid.offsetWidth, boardH = grid.offsetHeight;
+      for (const c of cards) {
+        const p = savedPos[c.dataset.slug];
+        if (p && Number.isFinite(p.x) && Number.isFinite(p.y)) {
+          c.style.setProperty("--sx", Math.max(0, Math.min(boardW - 180, p.x)) + "px");
+          c.style.setProperty("--sy", Math.max(0, Math.min(boardH - 140, p.y)) + "px");
+        }
+      }
+      const savePos = () => { try { localStorage.setItem(POS_KEY, JSON.stringify(savedPos)); } catch {} };
+      resetBtn.hidden = Object.keys(savedPos).length === 0;
+      resetBtn.addEventListener("click", () => {
+        savedPos = {}; savePos();
+        for (const c of cards) { c.style.removeProperty("--sx"); c.style.removeProperty("--sy"); }
+        resetBtn.hidden = true;
+        cacheRects();
+      });
+
+      // ── board-space rect cache (kills per-frame getBoundingClientRect) ──
+      // rects are stored relative to the BOARD; viewport rect = stageOrigin +
+      // boardRect + pan. Recomputed only on resize, drop, or reset.
+      let stageRect = stage.getBoundingClientRect();
+      const rectOf = new Map();
+      const cacheRects = () => {
+        stageRect = stage.getBoundingClientRect();
+        for (const c of cards) {
+          const x = parseFloat(getComputedStyle(c).left) || 0;
+          const y = parseFloat(getComputedStyle(c).top) || 0;
+          // width is styled; height follows the image aspect
+          rectOf.set(c, { x, y, w: c.offsetWidth, h: c.offsetHeight, s: parseFloat(c.style.getPropertyValue("--sc")) || 1 });
+        }
+      };
+
+      // ── pan state: input writes a target, ONE integrator eases toward it ──
+      let px = 0, py = 0;             // painted pan
+      let vx = 0, vy = 0;             // inertia velocity
+      let panning = false, lifted = null, downCard = null, captured = false, activePointer = 0;
+      let downX = 0, downY = 0, lastX = 0, lastY = 0, moved = 0;
+      let liftDX = 0, liftDY = 0;
+      let ticking = false;
+      const maxX = () => Math.min(0, stage.clientWidth - boardW);
+      const maxY = () => Math.min(0, stage.clientHeight - boardH);
+      const clampPan = () => { px = Math.max(maxX(), Math.min(0, px)); py = Math.max(maxY(), Math.min(0, py)); };
+      const paint = () => { grid.style.transform = `translate3d(${px}px, ${py}px, 0)`; };
+      const tick = () => {
+        if (!panning && !reduce && (Math.abs(vx) > 0.12 || Math.abs(vy) > 0.12)) {
+          px += vx; py += vy; vx *= 0.93; vy *= 0.93;
+          clampPan(); paint();
+          if (card && !raf) raf = requestAnimationFrame(draw);
+          requestAnimationFrame(tick);
+        } else { ticking = false; }
+      };
+      const glideOn = () => { if (!ticking) { ticking = true; requestAnimationFrame(tick); } };
+      const dismissHint = () => { if (hintEl && !hintEl.classList.contains("off")) hintEl.classList.add("off"); };
+
+      stage.addEventListener("pointerdown", (e) => {
+        if (e.button !== undefined && e.button !== 0) return;
+        downCard = e.target.closest(".ag-card");
+        panning = !downCard;
+        lifted = null; moved = 0; vx = vy = 0; captured = false;
+        downX = lastX = e.clientX; downY = lastY = e.clientY;
+        activePointer = e.pointerId;
+        if (panning) stage.classList.add("dragging");
+      });
+      stage.addEventListener("pointermove", (e) => {
+        if (!panning && !downCard) return;
+        const dx = e.clientX - lastX, dy = e.clientY - lastY;
+        lastX = e.clientX; lastY = e.clientY;
+        // capture LATE, only once this is genuinely a drag — capturing on
+        // pointerdown retargets the eventual click to the stage, so clicking a
+        // card could never open it
+        if (!captured && moved + Math.abs(dx) + Math.abs(dy) > 8) {
+          captured = true;
+          try { stage.setPointerCapture?.(activePointer); } catch {}
+        }
+        moved += Math.abs(dx) + Math.abs(dy);
+        if (downCard) {
+          // a real drag on a piece = re-hang it
+          if (!lifted && moved > 8) {
+            lifted = downCard;
+            lifted.classList.add("lifted");
+            const r = rectOf.get(lifted) || { x: 0, y: 0 };
+            liftDX = (e.clientX - stageRect.left - px) - r.x;
+            liftDY = (e.clientY - stageRect.top - py) - r.y;
+            stopGL();
+          }
+          if (lifted) {
+            const nx = Math.max(0, Math.min(boardW - 150, e.clientX - stageRect.left - px - liftDX));
+            const ny = Math.max(0, Math.min(boardH - 120, e.clientY - stageRect.top - py - liftDY));
+            lifted.style.setProperty("--sx", nx + "px");
+            lifted.style.setProperty("--sy", ny + "px");
+          }
+          return;
+        }
+        // board pan
+        px += dx; py += dy; vx = dx; vy = dy;
+        clampPan(); paint();
+        dismissHint();
+        if (card && !raf) raf = requestAnimationFrame(draw);
+      });
+      const release = (e) => {
+        if (lifted) {
+          const x = parseFloat(lifted.style.getPropertyValue("--sx"));
+          const y = parseFloat(lifted.style.getPropertyValue("--sy"));
+          savedPos[lifted.dataset.slug] = { x, y };
+          savePos();
+          resetBtn.hidden = false;
+          lifted.classList.remove("lifted");
+          lifted = null;
+          dismissHint();
+          cacheRects();
+        } else if (panning && !reduce) glideOn();
+        panning = false; downCard = null;
+        stage.classList.remove("dragging");
+      };
+      stage.addEventListener("pointerup", release);
+      stage.addEventListener("pointercancel", release);
+      // a drag must never fire the card's click
+      stage.addEventListener("click", (e) => { if (moved > 8) { e.stopPropagation(); e.preventDefault(); } }, true);
+
+      // Tab-focusing a clipped card makes the browser scroll this overflow:hidden
+      // container internally, which would desync the transform pan — fold any
+      // native scroll straight back into the pan and zero it.
+      stage.addEventListener("scroll", () => {
+        if (!stage.scrollLeft && !stage.scrollTop) return;
+        px -= stage.scrollLeft; py -= stage.scrollTop;
+        stage.scrollLeft = 0; stage.scrollTop = 0;
+        clampPan(); paint();
+      }, { passive: true });
+
+      // wheel / trackpad pans the board (stage carries data-lenis-prevent)
+      stage.addEventListener("wheel", (e) => {
+        e.preventDefault();
+        px -= e.deltaX; py -= e.deltaY;
+        vx = vy = 0;
+        clampPan(); paint(); dismissHint();
+        if (card && !raf) raf = requestAnimationFrame(draw);
+      }, { passive: false });
+
+      // keyboard pan for the stage itself; cards stay buttons (Tab + Enter)
+      stage.addEventListener("keydown", (e) => {
+        const STEP = 140;
+        const k = e.key;
+        if (k === "ArrowLeft") px += STEP; else if (k === "ArrowRight") px -= STEP;
+        else if (k === "ArrowUp") py += STEP; else if (k === "ArrowDown") py -= STEP;
+        else return;
+        e.preventDefault();
+        clampPan(); paint(); dismissHint();
+      });
+
+      // start centred on the title block
+      const center = () => {
+        // Desktop lands on the title. A phone viewport fits INSIDE the title
+        // hole, which meant landing on a void — shift the focus down so the
+        // title peeks at the top and the row of art below it fills the screen.
+        const shiftY = stage.clientWidth < 700 ? 320 : 0;
+        px = stage.clientWidth / 2 - boardW / 2;
+        py = stage.clientHeight / 2 - (boardH / 2 + shiftY);
+        clampPan(); paint();
+      };
+      center();
+      addEventListener("resize", () => { cacheRects(); clampPan(); paint(); }, { passive: true });
+
+      // ── the ripple hover: one canvas, texture per hovered card ──
+      let gl = null, prog = null, tex = null, raf = 0, card = null;
       let mx = 0.5, my = 0.5, t0 = 0, enter = 0, gen = 0;
       const uni = {};
       const initGL = () => {
         if (gl) return !!prog;
         gl = canvas.getContext("webgl", { alpha: true, antialias: true, premultipliedAlpha: false });
         if (!gl) return false;
-        // p.y = 0 is the TOP of the card, and texImage2D puts the image's first
-        // row at t = 0, so UV is p directly — flipping it inverts the artwork.
+        // p.y = 0 is the TOP of the card and texImage2D puts the image's first
+        // row at t = 0, so UV is p directly.
         const vs = `attribute vec2 p; uniform vec4 uRect; uniform vec2 uRes; varying vec2 vUv;
           void main(){ vUv = p; vec2 px = uRect.xy + p * uRect.zw;
           vec2 cl = (px / uRes) * 2.0 - 1.0; gl_Position = vec4(cl.x, -cl.y, 0.0, 1.0); }`;
-        // a ripple that trails the cursor, with chromatic split at its crest —
-        // same visual language as the hero shader, so the gallery feels of a piece
         const fs = `precision highp float; uniform sampler2D uTex; uniform vec2 uMouse;
           uniform float uT; uniform float uEnter; varying vec2 vUv;
           void main(){
@@ -494,9 +680,15 @@ const withCover = sized.map((p, i) => ({
         if (!card || !prog) { raf = 0; return; }
         if (!t0) t0 = now;
         enter = Math.min(1, enter + 0.08);
-        const r = card.getBoundingClientRect();
+        const r = rectOf.get(card);
+        if (!r) { raf = 0; return; }
+        // viewport rect from the CACHE + live pan — zero layout reads here.
+        // scale() keeps the card's centre, so offset by the scale delta.
+        const w = r.w * r.s, h = r.h * r.s;
+        const left = stageRect.left + px + r.x - (w - r.w) / 2;
+        const top = stageRect.top + py + r.y - (h - r.h) / 2;
         gl.useProgram(prog);
-        gl.uniform4f(uni.uRect, r.left, r.top, r.width, r.height);
+        gl.uniform4f(uni.uRect, left, top, w, h);
         gl.uniform2f(uni.uRes, innerWidth, innerHeight);
         gl.uniform2f(uni.uMouse, mx, my);
         gl.uniform1f(uni.uT, (now - t0) / 1000);
@@ -507,10 +699,7 @@ const withCover = sized.map((p, i) => ({
         raf = requestAnimationFrame(draw);
       };
       const stopGL = () => {
-        gen++;                                     // invalidate any in-flight image load
-        // clear EVERY active card, not just the tracked one: a slow image that
-        // resolved after the pointer moved on would otherwise leave a card with
-        // its <img> hidden and nothing drawing it — i.e. blank.
+        gen++;
         grid.querySelectorAll(".ag-card.gl-active").forEach((c) => c.classList.remove("gl-active"));
         card = null; enter = 0; t0 = 0;
         if (raf) { cancelAnimationFrame(raf); raf = 0; }
@@ -520,18 +709,15 @@ const withCover = sized.map((p, i) => ({
         const src = el.querySelector(".ag-img")?.getAttribute("src");
         if (!src || !initGL()) return;
         const myGen = ++gen;
-        // cross-origin covers (YouTube thumbs) would taint the texture — those
-        // cards simply keep the plain CSS look instead of failing
         const im = new Image();
         im.crossOrigin = "anonymous";
         im.onload = () => {
-          // bail if the pointer has since moved to another card or left the grid
           if (myGen !== gen) return;
           try {
             gl.bindTexture(gl.TEXTURE_2D, tex);
             gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, im);
           } catch { return; }
-          img = im; card = el; enter = 0; t0 = 0;
+          card = el; enter = 0; t0 = 0;
           el.classList.add("gl-active");
           sizeCanvas();
           if (!raf) raf = requestAnimationFrame(draw);
@@ -539,92 +725,30 @@ const withCover = sized.map((p, i) => ({
         im.onerror = () => {};
         im.src = src;
       };
-
-      const fine = matchMedia("(hover: hover) and (pointer: fine)").matches;
-      if (fine) {
-        grid.addEventListener("pointerover", (e) => {
+      if (fine && !reduce) {
+        stage.addEventListener("pointerover", (e) => {
+          if (lifted || panning) return;
           const el = e.target.closest(".ag-card");
           if (el && el !== card) { stopGL(); startGL(el); }
+          else if (!el && card) stopGL();
         });
-        grid.addEventListener("pointermove", (e) => {
-          const el = e.target.closest(".ag-card");
-          if (!el) return;
-          const r = el.getBoundingClientRect();
-          mx = (e.clientX - r.left) / r.width; my = (e.clientY - r.top) / r.height;   // matches vUv = p
+        stage.addEventListener("pointermove", (e) => {
+          if (!card) return;
+          const r = rectOf.get(card);
+          if (!r) return;
+          const w = r.w * r.s, h = r.h * r.s;
+          const left = stageRect.left + px + r.x - (w - r.w) / 2;
+          const top = stageRect.top + py + r.y - (h - r.h) / 2;
+          mx = (e.clientX - left) / w; my = (e.clientY - top) / h;
         });
-        grid.addEventListener("pointerleave", stopGL);
+        stage.addEventListener("pointerleave", stopGL);
         addEventListener("resize", () => { if (card) sizeCanvas(); }, { passive: true });
-        addEventListener("scroll", () => { if (card && !raf) raf = requestAnimationFrame(draw); }, { passive: true });
       }
 
-      // ── sandbox panning: drag the board, with momentum after release ──
-      const stage = document.getElementById("ag-stage");
-      const hint = document.getElementById("ag-hint");
-      let px = 0, py = 0, vx = 0, vy = 0, dragging = false, lastX = 0, lastY = 0, moved = 0, panRaf = 0;
-      const clampPan = () => {
-        const maxX = Math.min(0, stage.clientWidth - grid.scrollWidth);
-        const maxY = Math.min(0, stage.clientHeight - grid.offsetHeight);
-        px = Math.max(maxX, Math.min(0, px));
-        py = Math.max(maxY, Math.min(0, py));
-      };
-      const paint = () => { grid.style.transform = `translate3d(${px}px, ${py}px, 0)`; };
-      const glide = () => {
-        if (dragging) { panRaf = 0; return; }
-        vx *= 0.92; vy *= 0.92;
-        if (Math.abs(vx) < 0.15 && Math.abs(vy) < 0.15) { panRaf = 0; return; }
-        px += vx; py += vy; clampPan(); paint();
-        if (card && !raf) raf = requestAnimationFrame(draw);   // keep the shader glued to its card
-        panRaf = requestAnimationFrame(glide);
-      };
-      const onDown = (e) => {
-        if (grid.dataset.layout !== "sandbox") return;
-        dragging = true; moved = 0; vx = vy = 0;
-        lastX = e.clientX; lastY = e.clientY;
-        stage.classList.add("dragging");
-        stage.setPointerCapture?.(e.pointerId);
-      };
-      const onMove = (e) => {
-        if (!dragging) return;
-        const dx = e.clientX - lastX, dy = e.clientY - lastY;
-        lastX = e.clientX; lastY = e.clientY;
-        moved += Math.abs(dx) + Math.abs(dy);
-        px += dx; py += dy; vx = dx; vy = dy;
-        clampPan(); paint();
-        if (card && !raf) raf = requestAnimationFrame(draw);
-      };
-      const onUp = () => {
-        if (!dragging) return;
-        dragging = false;
-        stage.classList.remove("dragging");
-        if (!panRaf) panRaf = requestAnimationFrame(glide);
-      };
-      stage.addEventListener("pointerdown", onDown);
-      stage.addEventListener("pointermove", onMove);
-      stage.addEventListener("pointerup", onUp);
-      stage.addEventListener("pointercancel", onUp);
-      // a drag must not also count as a click on whatever card was under the cursor
-      grid.addEventListener("click", (e) => { if (moved > 8) { e.stopPropagation(); e.preventDefault(); moved = 0; } }, true);
-
-      const apply = (layout) => {
-        grid.dataset.layout = layout;
-        stage.dataset.layout = layout;
-        hint.hidden = layout !== "sandbox";
-        stopGL();
-        if (layout === "sandbox") {
-          // start near the middle of the board rather than a corner
-          px = (stage.clientWidth - grid.scrollWidth) / 2;
-          py = (stage.clientHeight - grid.offsetHeight) / 2;
-          clampPan(); paint();
-        } else {
-          px = py = 0; grid.style.transform = "";
-        }
-        btns.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.agLayout === layout)));
-        try { localStorage.setItem(KEY, layout); } catch {}
-      };
-      btns.forEach((b) => b.addEventListener("click", () => apply(b.dataset.agLayout)));
-      let saved = "masonry";
-      try { saved = localStorage.getItem(KEY) || "masonry"; } catch {}
-      apply(saved);
+      // rect cache once images have sized themselves (heights follow aspect)
+      if (document.readyState === "complete") cacheRects();
+      addEventListener("load", cacheRects);
+      cacheRects();
     })();
 
     // deep link: /art#slug opens that project directly
