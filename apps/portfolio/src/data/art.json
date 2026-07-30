@@ -150,7 +150,7 @@
     ],
     "video": null,
     "videoPending": false,
-    "cover": "/art/pick-up/03.jpg"
+    "cover": "/art/pick-up/01.jpg"
   },
   {
     "title": "A Self-Portrait as a Pattern",
@@ -286,91 +286,24 @@
     "cover": "https://i.ytimg.com/vi/5Rp-sjQO3Sk/hqdefault.jpg"
   },
   {
-    "title": "Collage Portrait",
-    "slug": "collage-portrait",
+    "title": "Self Portrait",
+    "slug": "self-portrait",
     "desc": "",
     "images": [
-      "/art/collage-portrait/01.jpg"
+      "/art/self-portrait/01.jpg",
+      "/art/self-portrait/02.jpg"
     ],
     "youtube": [],
-    "cover": "/art/collage-portrait/01.jpg",
-    "titlePlaceholder": true
+    "cover": "/art/self-portrait/01.jpg"
   },
   {
-    "title": "Camera Study",
-    "slug": "camera-study",
+    "title": "Greyscale",
+    "slug": "greyscale",
     "desc": "",
     "images": [
-      "/art/camera-study/01.jpg"
+      "/art/greyscale/01.jpg"
     ],
     "youtube": [],
-    "cover": "/art/camera-study/01.jpg",
-    "titlePlaceholder": true
-  },
-  {
-    "title": "Portrait Study",
-    "slug": "portrait-study",
-    "desc": "",
-    "images": [
-      "/art/portrait-study/01.jpg"
-    ],
-    "youtube": [],
-    "cover": "/art/portrait-study/01.jpg",
-    "titlePlaceholder": true
-  },
-  {
-    "title": "Composition in Red and Blue",
-    "slug": "composition-red-blue",
-    "desc": "",
-    "images": [
-      "/art/composition-red-blue/01.jpg"
-    ],
-    "youtube": [],
-    "cover": "/art/composition-red-blue/01.jpg",
-    "titlePlaceholder": true
-  },
-  {
-    "title": "Skull Study",
-    "slug": "skull-study",
-    "desc": "",
-    "images": [
-      "/art/skull-study/01.jpg"
-    ],
-    "youtube": [],
-    "cover": "/art/skull-study/01.jpg",
-    "titlePlaceholder": true
-  },
-  {
-    "title": "Newsprint Portrait",
-    "slug": "newsprint-portrait",
-    "desc": "",
-    "images": [
-      "/art/newsprint-portrait/01.jpg"
-    ],
-    "youtube": [],
-    "cover": "/art/newsprint-portrait/01.jpg",
-    "titlePlaceholder": true
-  },
-  {
-    "title": "Still Life",
-    "slug": "still-life",
-    "desc": "",
-    "images": [
-      "/art/still-life/01.jpg"
-    ],
-    "youtube": [],
-    "cover": "/art/still-life/01.jpg",
-    "titlePlaceholder": true
-  },
-  {
-    "title": "Animal Studies",
-    "slug": "animal-studies",
-    "desc": "",
-    "images": [
-      "/art/animal-studies/01.jpg"
-    ],
-    "youtube": [],
-    "cover": "/art/animal-studies/01.jpg",
-    "titlePlaceholder": true
+    "cover": "/art/greyscale/01.jpg"
   }
 ]
