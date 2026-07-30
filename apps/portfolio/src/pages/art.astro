@@ -77,12 +77,23 @@ const withCover = sized.map((p) => ({
       </p>
     </section>
 
-    <section class="ag-grid">
+    <!-- TEMPORARY: three thumbnail treatments side by side so Brian can compare
+         them on the real work. Whichever wins, the other two + this switcher get
+         deleted. -->
+    <div class="ag-styles" id="ag-styles">
+      <span>thumbnail style</span>
+      <button type="button" data-ag-style="classic" aria-pressed="true">Current</button>
+      <button type="button" data-ag-style="shader" aria-pressed="false">Shader</button>
+      <button type="button" data-ag-style="wipe" aria-pressed="false">Wipe</button>
+      <button type="button" data-ag-style="wall" aria-pressed="false">Wall</button>
+    </div>
+
+    <section class="ag-grid" id="ag-grid" data-style="classic">
       {
         withCover.map((p, i) => (
           <button
             class="ag-card reveal"
-            style={`--d:${(i % 3) * 45}ms`}
+            style={`--d:${(i % 3) * 45}ms; --tilt:${[-2.2, 1.6, -1.1, 2.4, -1.8, 1.2][i % 6]}deg`}
             data-i={i}
             data-cursor="open"
             data-cursor-keep
@@ -106,6 +117,9 @@ const withCover = sized.map((p) => ({
         ))
       }
     </section>
+    <!-- shared WebGL layer for the "shader" treatment: ONE canvas for the whole
+         grid (25 canvases would be unusable), only rendering while hovering -->
+    <canvas class="ag-gl" id="ag-gl" aria-hidden="true"></canvas>
   </main>
 
   <!-- expanded project view. data-lenis-prevent: the page's smooth-scroll
@@ -179,6 +193,48 @@ const withCover = sized.map((p) => ({
   .ag-cap-t { font-family: "Mona Sans", sans-serif; font-weight: 600; font-size: 14px; color: #fff; letter-spacing: -0.01em; }
   @media (hover: hover) { .ag-card:hover .ag-img { transform: scale(1.03); filter: saturate(1.06); } .ag-card:hover .ag-cap { opacity: 1; } }
   @media (hover: none) { .ag-cap { opacity: 1; } }
+
+  /* ─── TEMPORARY: comparison switcher + the three candidate treatments ─────
+     Delete this whole block (and the #ag-styles markup, .ag-gl canvas and the
+     ag-style script) once one treatment is chosen. ───────────────────────── */
+  .ag-styles { position: fixed; z-index: 60; right: clamp(12px, 3vw, 28px); bottom: clamp(12px, 3vw, 24px); display: flex; align-items: center; gap: 6px; padding: 7px 9px; border-radius: 999px; background: color-mix(in srgb, var(--paper) 82%, transparent); border: 1px solid var(--line); -webkit-backdrop-filter: blur(9px); backdrop-filter: blur(9px); font-family: "Geist Mono", monospace; }
+  .ag-styles > span { font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); padding-left: 4px; }
+  .ag-styles button { font-family: inherit; font-size: 11.5px; line-height: 1; padding: 6px 11px; border-radius: 999px; border: 1px solid var(--line); background: transparent; color: var(--muted); cursor: pointer; }
+  .ag-styles button[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  @media (max-width: 560px) { .ag-styles > span { display: none; } }
+
+  /* A · SHADER — the img is hidden while the shared canvas draws it displaced */
+  .ag-gl { position: fixed; inset: 0; z-index: 3; pointer-events: none; display: none; }
+  .ag-grid[data-style="shader"] ~ .ag-gl, .ag-gl.on { display: block; }
+  .ag-grid[data-style="shader"] .ag-card { background: transparent; box-shadow: none; }
+  .ag-grid[data-style="shader"] .ag-img { transition: opacity .18s ease, filter .5s ease; filter: saturate(.72) brightness(.82); }
+  .ag-grid[data-style="shader"] .ag-card.gl-active .ag-img { opacity: 0; }
+  .ag-grid[data-style="shader"] .ag-cap { z-index: 4; }
+
+  /* B · WIPE — quiet duotone until a diagonal reveal floods the real colour in */
+  .ag-grid[data-style="wipe"] .ag-card { background: var(--line); }
+  .ag-grid[data-style="wipe"] .ag-img { filter: grayscale(1) contrast(1.06) brightness(.92); transition: filter .55s cubic-bezier(.2,.7,.2,1), clip-path .55s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); transform: none; }
+  @media (hover: hover) {
+    .ag-grid[data-style="wipe"] .ag-card::after { content: ""; position: absolute; inset: 0; background: var(--paper); clip-path: polygon(0 0, 0 0, 0 100%, 0 100%); transition: clip-path .5s cubic-bezier(.2,.7,.2,1); pointer-events: none; mix-blend-mode: normal; opacity: .0; }
+    .ag-grid[data-style="wipe"] .ag-card:hover .ag-img { filter: none; transform: scale(1.02); }
+  }
+  .ag-grid[data-style="wipe"] .ag-cap { background: linear-gradient(to top, color-mix(in srgb, var(--paper) 88%, transparent), transparent); padding: 46px 16px 14px; }
+  .ag-grid[data-style="wipe"] .ag-cap-t { color: var(--ink); font-family: "Mona Sans", sans-serif; font-weight: 700; letter-spacing: -.01em; font-size: 15px; transform: translateY(8px); transition: transform .45s cubic-bezier(.2,.7,.2,1); display: inline-block; }
+  .ag-grid[data-style="wipe"] .ag-card:hover .ag-cap-t { transform: none; }
+
+  /* C · WALL — prints pinned at slight angles; hover straightens and lifts */
+  .ag-grid[data-style="wall"] { padding-block: 10px; }
+  .ag-grid[data-style="wall"] .ag-card { transform: rotate(var(--tilt, 0deg)); transition: transform .5s cubic-bezier(.2,.7,.2,1), box-shadow .5s ease; box-shadow: 0 6px 18px -8px rgba(0,0,0,.5); border-radius: 3px; }
+  .ag-grid[data-style="wall"] .ag-img { border-radius: 2px; }
+  @media (hover: hover) {
+    .ag-grid[data-style="wall"] .ag-card:hover { transform: rotate(0deg) translateY(-7px) scale(1.02); box-shadow: 0 26px 50px -18px rgba(0,0,0,.7); z-index: 2; }
+    .ag-grid[data-style="wall"] .ag-card:hover .ag-img { transform: none; }
+  }
+  .ag-grid[data-style="wall"] .ag-cap { padding: 40px 13px 11px; }
+  @media (prefers-reduced-motion: reduce) {
+    .ag-grid[data-style="wall"] .ag-card, .ag-grid[data-style="wipe"] .ag-img { transition: none; }
+    .ag-grid[data-style="wall"] .ag-card { transform: none; }
+  }
 
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease var(--d,0ms), transform .7s cubic-bezier(.2,.7,.2,1) var(--d,0ms); }
   .reveal.is-in { opacity: 1; transform: none; }
@@ -332,6 +388,156 @@ const withCover = sized.map((p) => ({
       else if (e.key === "ArrowLeft") step(-1);           // walk the room with ← →
       else if (e.key === "ArrowRight") step(1);
     });
+    // ─── TEMPORARY: thumbnail-treatment comparison ────────────────────────
+    // Three candidate looks switchable live so Brian can judge them on the real
+    // work. Remove this block, the #ag-styles markup, the .ag-gl canvas and the
+    // style-specific CSS once one is chosen.
+    (() => {
+      const grid = document.getElementById("ag-grid");
+      const bar = document.getElementById("ag-styles");
+      const canvas = document.getElementById("ag-gl");
+      if (!grid || !bar || !canvas) return;
+      const KEY = "art-thumb-style";
+      const btns = [...bar.querySelectorAll("[data-ag-style]")];
+
+      // ── shader treatment: one shared GL layer, drawn only while hovering ──
+      let gl = null, prog = null, tex = null, raf = 0, card = null, img = null;
+      let mx = 0.5, my = 0.5, t0 = 0, enter = 0, gen = 0;
+      const uni = {};
+      const initGL = () => {
+        if (gl) return !!prog;
+        gl = canvas.getContext("webgl", { alpha: true, antialias: true, premultipliedAlpha: false });
+        if (!gl) return false;
+        // p.y = 0 is the TOP of the card, and texImage2D puts the image's first
+        // row at t = 0, so UV is p directly — flipping it inverts the artwork.
+        const vs = `attribute vec2 p; uniform vec4 uRect; uniform vec2 uRes; varying vec2 vUv;
+          void main(){ vUv = p; vec2 px = uRect.xy + p * uRect.zw;
+          vec2 cl = (px / uRes) * 2.0 - 1.0; gl_Position = vec4(cl.x, -cl.y, 0.0, 1.0); }`;
+        // a ripple that trails the cursor, with chromatic split at its crest —
+        // same visual language as the hero shader, so the gallery feels of a piece
+        const fs = `precision highp float; uniform sampler2D uTex; uniform vec2 uMouse;
+          uniform float uT; uniform float uEnter; varying vec2 vUv;
+          void main(){
+            vec2 uv = vUv; vec2 d = uv - uMouse; float r = length(d);
+            float w = sin(r * 22.0 - uT * 3.2) * exp(-r * 4.5) * 0.038 * uEnter;
+            vec2 off = normalize(d + 1e-6) * w;
+            float ca = 0.005 * uEnter * exp(-r * 3.0);
+            vec3 c;
+            c.r = texture2D(uTex, uv + off + vec2(ca, 0.0)).r;
+            c.g = texture2D(uTex, uv + off).g;
+            c.b = texture2D(uTex, uv + off - vec2(ca, 0.0)).b;
+            float lift = 1.0 + 0.16 * uEnter * exp(-r * 3.5);
+            gl_FragColor = vec4(c * lift, 1.0);
+          }`;
+        const sh = (type, src) => { const s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s); return gl.getShaderParameter(s, gl.COMPILE_STATUS) ? s : null; };
+        const v = sh(gl.VERTEX_SHADER, vs), f = sh(gl.FRAGMENT_SHADER, fs);
+        if (!v || !f) return false;
+        prog = gl.createProgram(); gl.attachShader(prog, v); gl.attachShader(prog, f); gl.linkProgram(prog);
+        if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) { prog = null; return false; }
+        gl.useProgram(prog);
+        const buf = gl.createBuffer();
+        gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+        gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1]), gl.STATIC_DRAW);
+        const loc = gl.getAttribLocation(prog, "p");
+        gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+        for (const n of ["uRect", "uRes", "uMouse", "uT", "uEnter"]) uni[n] = gl.getUniformLocation(prog, n);
+        tex = gl.createTexture();
+        gl.bindTexture(gl.TEXTURE_2D, tex);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+        return true;
+      };
+      const sizeCanvas = () => {
+        const dpr = Math.min(devicePixelRatio || 1, 2);
+        canvas.width = Math.round(innerWidth * dpr);
+        canvas.height = Math.round(innerHeight * dpr);
+        canvas.style.width = innerWidth + "px";
+        canvas.style.height = innerHeight + "px";
+        if (gl) gl.viewport(0, 0, canvas.width, canvas.height);
+      };
+      const draw = (now) => {
+        if (!card || !prog) { raf = 0; return; }
+        if (!t0) t0 = now;
+        enter = Math.min(1, enter + 0.08);
+        const r = card.getBoundingClientRect();
+        gl.useProgram(prog);
+        gl.uniform4f(uni.uRect, r.left, r.top, r.width, r.height);
+        gl.uniform2f(uni.uRes, innerWidth, innerHeight);
+        gl.uniform2f(uni.uMouse, mx, my);
+        gl.uniform1f(uni.uT, (now - t0) / 1000);
+        gl.uniform1f(uni.uEnter, enter);
+        gl.clearColor(0, 0, 0, 0); gl.clear(gl.COLOR_BUFFER_BIT);
+        gl.bindTexture(gl.TEXTURE_2D, tex);
+        gl.drawArrays(gl.TRIANGLES, 0, 6);
+        raf = requestAnimationFrame(draw);
+      };
+      const stopGL = () => {
+        gen++;                                     // invalidate any in-flight image load
+        // clear EVERY active card, not just the tracked one: a slow image that
+        // resolved after the pointer moved on would otherwise leave a card with
+        // its <img> hidden and nothing drawing it — i.e. blank.
+        grid.querySelectorAll(".ag-card.gl-active").forEach((c) => c.classList.remove("gl-active"));
+        card = null; enter = 0; t0 = 0;
+        if (raf) { cancelAnimationFrame(raf); raf = 0; }
+        if (gl) { gl.clearColor(0, 0, 0, 0); gl.clear(gl.COLOR_BUFFER_BIT); }
+      };
+      const startGL = (el) => {
+        if (grid.dataset.style !== "shader") return;
+        const src = el.querySelector(".ag-img")?.getAttribute("src");
+        if (!src || !initGL()) return;
+        const myGen = ++gen;
+        // cross-origin covers (YouTube thumbs) would taint the texture — those
+        // cards simply keep the plain CSS look instead of failing
+        const im = new Image();
+        im.crossOrigin = "anonymous";
+        im.onload = () => {
+          // bail if the pointer has since moved to another card or left the grid
+          if (myGen !== gen || grid.dataset.style !== "shader") return;
+          try {
+            gl.bindTexture(gl.TEXTURE_2D, tex);
+            gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, im);
+          } catch { return; }
+          img = im; card = el; enter = 0; t0 = 0;
+          el.classList.add("gl-active");
+          sizeCanvas();
+          if (!raf) raf = requestAnimationFrame(draw);
+        };
+        im.onerror = () => {};
+        im.src = src;
+      };
+
+      const fine = matchMedia("(hover: hover) and (pointer: fine)").matches;
+      if (fine) {
+        grid.addEventListener("pointerover", (e) => {
+          const el = e.target.closest(".ag-card");
+          if (el && el !== card) { stopGL(); startGL(el); }
+        });
+        grid.addEventListener("pointermove", (e) => {
+          const el = e.target.closest(".ag-card");
+          if (!el) return;
+          const r = el.getBoundingClientRect();
+          mx = (e.clientX - r.left) / r.width; my = (e.clientY - r.top) / r.height;   // matches vUv = p
+        });
+        grid.addEventListener("pointerleave", stopGL);
+        addEventListener("resize", () => { if (card) sizeCanvas(); }, { passive: true });
+        addEventListener("scroll", () => { if (card && !raf) raf = requestAnimationFrame(draw); }, { passive: true });
+      }
+
+      const apply = (style) => {
+        grid.dataset.style = style;
+        canvas.classList.toggle("on", style === "shader");
+        if (style !== "shader") stopGL();
+        btns.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.agStyle === style)));
+        try { localStorage.setItem(KEY, style); } catch {}
+      };
+      btns.forEach((b) => b.addEventListener("click", () => apply(b.dataset.agStyle)));
+      let saved = "classic";
+      try { saved = localStorage.getItem(KEY) || "classic"; } catch {}
+      apply(saved);
+    })();
+
     // deep link: /art#slug opens that project directly
     const initial = data.findIndex((p) => "#" + (p.slug || "") === decodeURIComponent(location.hash));
     if (initial >= 0) { history.replaceState(null, "", location.pathname); open(initial); }
