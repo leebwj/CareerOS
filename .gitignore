@@ -19,6 +19,10 @@ dist/
 Thumbs.db
 .idea/
 
+# Claude working docs (plans, specs, session logs) — local only, never in a
+# public repo. Nothing has ever been committed here; this keeps it that way.
+.claude/
+
 # desktop pet — third-party pet sprite packs (Pikachu/Pokémon etc.) are others' IP;
 # they install into OpenPets on your machine and must never be committed to this PUBLIC repo
 apps/secretary/pikachu.zip
