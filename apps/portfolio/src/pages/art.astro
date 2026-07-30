@@ -129,6 +129,11 @@ const withCover = sized.map((p) => ({
         </button>
       </nav>
     </article>
+    <!-- click-to-zoom, same affordance as the case-study images on /work -->
+    <div class="pv-zoom" id="pv-zoom" aria-hidden="true">
+      <button class="pv-close pv-zoom-x" id="pv-zoom-close" aria-label="Close zoom">✕</button>
+      <img id="pv-zoom-img" alt="" />
+    </div>
   </div>
 
   <script type="application/json" id="art-data" set:html={JSON.stringify(sized)}></script>
@@ -219,6 +224,12 @@ const withCover = sized.map((p) => ({
   .pv-media :global(.pv-pending) { grid-column: 1 / -1; font-family: "Geist Mono", monospace; font-size: 12px; color: color-mix(in srgb, currentColor 50%, transparent); border: 1px dashed color-mix(in srgb, currentColor 25%, transparent); border-radius: 8px; padding: 26px; text-align: center; }
   .pv-close { position: fixed; top: 20px; right: 22px; z-index: 101; width: 42px; height: 42px; border-radius: 999px; background: rgba(128,128,128,.14); color: inherit; border: 1px solid color-mix(in srgb, currentColor 20%, transparent); font-size: 16px; cursor: pointer; display: grid; place-items: center; }
   .pv-close:hover { background: rgba(128,128,128,.26); }
+  /* zoom layer — sits above the reader, below the custom cursor (z 102) */
+  .pv-zoom { position: fixed; inset: 0; z-index: 101; display: none; place-items: center; padding: clamp(.75rem, 2vw, 1.5rem); background: rgba(0,0,0,.92); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+  .pv-zoom.open { display: grid; }
+  .pv-zoom img { max-width: 97vw; max-height: 94vh; width: auto; height: auto; border-radius: 8px; box-shadow: 0 40px 90px -24px rgba(0,0,0,.85); }
+  .pv-zoom-x { color: #fff; border-color: rgba(255,255,255,.3); }
+  .pv-media :global(img[data-zoom]) { cursor: zoom-in; }
 </style>
 
 <script is:inline>
@@ -251,11 +262,25 @@ const withCover = sized.map((p) => ({
       if (p.video) html += `<figure class="pv-fig pv-fig--wide"><video class="pv-embed" controls playsinline preload="metadata"${p.cover ? ` poster="${p.cover}"` : ""}><source src="${p.video}" type="video/mp4"></video></figure>`;
       (p.youtube || []).forEach((id) => (html += `<figure class="pv-fig pv-fig--wide"><iframe class="pv-embed" src="https://www.youtube.com/embed/${id}" title="${p.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></figure>`));
       if (p.spline) html += `<figure class="pv-fig pv-fig--wide"><iframe class="pv-embed pv-embed--tall" src="${p.spline}" title="${p.title} — interactive 3D" loading="lazy" allow="fullscreen"></iframe></figure>`;
-      // rhythm: wide plates run full width, uprights pair two-up (real aspect,
-      // measured at build) — and w/h ship with every img so nothing reflows
-      (p.plates || []).forEach((im) => {
+      // Rhythm: wide plates run full width; uprights pair two-up ONLY when they
+      // actually have a partner. An upright with nothing beside it used to sit
+      // in a half-width column with dead space next to it — which is why a
+      // single-image work like Seoul Street looked small and stranded left.
+      const plates = p.plates || [];
+      const spanFull = plates.map((im, n) => {
+        if (im.wide) return true;
+        const prevUpright = n > 0 && !plates[n - 1].wide;
+        const nextUpright = n + 1 < plates.length && !plates[n + 1].wide;
+        // paired if it starts a pair (next is upright and this one didn't close
+        // a previous pair) or closes one
+        let pairIndex = 0;
+        for (let k = 0; k <= n; k++) pairIndex = plates[k].wide ? 0 : pairIndex + 1;
+        const opensPair = pairIndex % 2 === 1;
+        return opensPair ? !nextUpright : !prevUpright;   // unpaired → full width
+      });
+      plates.forEach((im, n) => {
         const dim = im.w && im.h ? ` width="${im.w}" height="${im.h}"` : "";
-        html += `<figure class="pv-fig${im.wide ? " pv-fig--wide" : ""}"><img src="${im.src}" alt="" loading="lazy" decoding="async"${dim}></figure>`;
+        html += `<figure class="pv-fig${spanFull[n] ? " pv-fig--wide" : ""}"><img src="${im.src}" alt="${p.title}" loading="lazy" decoding="async" data-zoom${dim}></figure>`;
       });
       if (p.videoPending && !(p.plates || []).length && !(p.youtube || []).length && !p.video) html += `<div class="pv-pending">▶ Video piece — embed coming soon.</div>`;
       mEl.innerHTML = html;
@@ -275,7 +300,7 @@ const withCover = sized.map((p) => ({
     const step = (d) => open((cur + d + data.length) % data.length);
     prevB.addEventListener("click", () => step(-1));
     nextB.addEventListener("click", () => step(1));
-    const doClose = () => { pv.classList.remove("open"); pv.setAttribute("aria-hidden", "true"); document.body.style.overflow = ""; document.documentElement.classList.remove("pv-open"); mEl.innerHTML = ""; };
+    const doClose = () => { pv.classList.remove("open"); pv.setAttribute("aria-hidden", "true"); document.body.style.overflow = ""; document.documentElement.classList.remove("pv-open"); closeZoom(); mEl.innerHTML = ""; };
     const close = () => { if (history.state && history.state.pv != null) history.back(); else doClose(); };
     addEventListener("popstate", (e) => {
       if (e.state && e.state.pv != null) open(e.state.pv, false);
@@ -283,8 +308,20 @@ const withCover = sized.map((p) => ({
     });
     document.querySelectorAll(".ag-card").forEach((b) => b.addEventListener("click", () => open(+b.dataset.i)));
     document.getElementById("pv-close").addEventListener("click", close);
+    // click any plate to see it full-screen (same affordance as /work images)
+    const zoom = document.getElementById("pv-zoom");
+    const zoomImg = document.getElementById("pv-zoom-img");
+    const openZoom = (src, alt) => { zoomImg.src = src; zoomImg.alt = alt || ""; zoom.classList.add("open"); zoom.setAttribute("aria-hidden", "false"); };
+    const closeZoom = () => { zoom.classList.remove("open"); zoom.setAttribute("aria-hidden", "true"); zoomImg.removeAttribute("src"); };
+    mEl.addEventListener("click", (e) => {
+      const img = e.target.closest("img[data-zoom]");
+      if (img) openZoom(img.currentSrc || img.src, img.alt);
+    });
+    zoom.addEventListener("click", closeZoom);
     addEventListener("keydown", (e) => {
       if (!pv.classList.contains("open")) return;
+      // the zoom is on top, so Escape dismisses it first
+      if (zoom.classList.contains("open")) { if (e.key === "Escape") closeZoom(); return; }
       if (e.key === "Escape") close();
       else if (e.key === "ArrowLeft") step(-1);           // walk the room with ← →
       else if (e.key === "ArrowRight") step(1);
