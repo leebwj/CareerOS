@@ -188,7 +188,10 @@ const withCover = sized.map((p) => ({
   .pv-head { border-bottom: 1px solid color-mix(in srgb, currentColor 12%, transparent); margin-bottom: clamp(30px, 5vh, 52px); padding-bottom: clamp(22px, 3.5vh, 34px); }
   .pv-meta { font-family: "Geist Mono", monospace; font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase; color: color-mix(in srgb, currentColor 42%, transparent); margin: 0 0 14px; }
   .pv-title { font-family: "Mona Sans", sans-serif; font-weight: 700; font-size: clamp(30px, 5vw, 52px); letter-spacing: -0.02em; line-height: 1.02; margin: 0 0 20px; }
-  .pv-desc { font-size: clamp(15px, 1.8vw, 17px); line-height: 1.7; color: color-mix(in srgb, currentColor 62%, transparent); white-space: pre-line; margin: 0; max-width: 62ch; }
+  /* Measure was 62ch, which left the text stopping ~250px short of the title and
+     plates above/below it — it read as misaligned rather than as a column. 76ch
+     still keeps lines readable but sits flush enough with the rest of the page. */
+  .pv-desc { font-size: clamp(15px, 1.8vw, 17px); line-height: 1.7; color: color-mix(in srgb, currentColor 62%, transparent); white-space: pre-line; margin: 0; max-width: 76ch; }
   /* plates: wide work runs full width, uprights pair two-up (aspect measured at
      build) so a long set reads as a hung wall, not a scroll dump */
   /* NOTE: everything inside .pv-media is injected at runtime (innerHTML), so it
