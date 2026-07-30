@@ -206,13 +206,20 @@ const US_CITIES = /\b(san francisco|new york|nyc|seattle|mountain view|palo alto
 // the real 50 states + DC/territories — precise, so foreign region codes
 // (German "RP", Canadian "QC") that look like US states don't sneak through.
 const US_STATE = /,\s*(AL|AK|AZ|AR|CA|CO|CT|DE|FL|GA|HI|ID|IL|IN|IA|KS|KY|LA|ME|MD|MA|MI|MN|MS|MO|MT|NE|NV|NH|NJ|NM|NY|NC|ND|OH|OK|OR|PA|RI|SC|SD|TN|TX|UT|VT|VA|WA|WV|WI|WY|DC|PR)\b/;
+// full state names too — feeds list bare "Texas" / "Ohio" with no code
+const US_STATE_NAME = /\b(alabama|alaska|arizona|arkansas|california|colorado|connecticut|delaware|florida|hawaii|idaho|illinois|indiana|iowa|kansas|kentucky|louisiana|maine|maryland|massachusetts|michigan|minnesota|mississippi|missouri|montana|nebraska|nevada|new hampshire|new jersey|new mexico|north carolina|north dakota|ohio|oklahoma|oregon|pennsylvania|rhode island|south carolina|south dakota|tennessee|texas|utah|vermont|virginia|west virginia|wisconsin|wyoming)\b/i;
+const NON_US = /\b(canada|montr[eé]al|qu[eé]bec|ontario|toronto|ottawa|vancouver|calgary|edmonton|winnipeg|uk|united kingdom|england|scotland|london|manchester|india|bangalore|bengaluru|hyderabad|pune|gurgaon|noida|singapore|germany|mainz|munich|berlin|hamburg|frankfurt|paris|france|lyon|bordeaux|ireland|dublin|australia|sydney|melbourne|japan|tokyo|osaka|korea|seoul|mexico|guadalajara|brazil|netherlands|amsterdam|zurich|switzerland|geneva|spain|barcelona|madrid|israel|tel aviv|poland|warsaw|krakow|china|shanghai|beijing|shenzhen|hong kong|taiwan|taipei|philippines|manila|vietnam|malaysia|thailand|bangkok|new zealand|sweden|stockholm|finland|helsinki|norway|denmark|copenhagen|italy|rome|milan|portugal|lisbon|romania|bucharest|belgium|brussels|austria|vienna|czech|prague|turkey|istanbul|uae|dubai|abu dhabi|argentina|colombia|chile|egypt|nigeria|south africa|kenya)\b/i;
 function isUS(locations) {
   if (!locations || locations.length === 0) return false;
   return locations.some((raw) => {
     const l = String(raw).trim();
-    // explicit non-US (global ATS boards return worldwide roles)
-    if (/\b(canada|montr[eé]al|qu[eé]bec|ontario|toronto|ottawa|vancouver|calgary|edmonton|winnipeg|uk|united kingdom|england|scotland|london|manchester|india|bangalore|bengaluru|hyderabad|pune|gurgaon|noida|singapore|germany|mainz|munich|berlin|hamburg|frankfurt|paris|france|lyon|bordeaux|ireland|dublin|australia|sydney|melbourne|japan|tokyo|osaka|korea|seoul|mexico|guadalajara|brazil|netherlands|amsterdam|zurich|switzerland|geneva|spain|barcelona|madrid|israel|tel aviv|poland|warsaw|krakow|china|shanghai|beijing|shenzhen|hong kong|taiwan|taipei|philippines|manila|vietnam|malaysia|thailand|bangkok|new zealand|sweden|stockholm|finland|helsinki|norway|denmark|copenhagen|italy|rome|milan|portugal|lisbon|romania|bucharest|belgium|brussels|austria|vienna|czech|prague|turkey|istanbul|uae|dubai|abu dhabi|argentina|colombia|chile|egypt|nigeria|south africa|kenya)\b/i.test(l)) return false;
-    return US_STATE.test(l) || /\b(usa|united states|u\.s\.)\b/i.test(l) || /^remote$/i.test(l) || /remote.*(us|usa|united states)/i.test(l) || /\b(sf bay|bay area)\b/i.test(l) || US_CITIES.test(l);
+    // An explicit US state WINS over a city name that also exists abroad —
+    // otherwise "Melbourne, FL" reads as Australia and "Dublin, OH" as Ireland,
+    // and both were being thrown away.
+    if (US_STATE.test(l) || US_STATE_NAME.test(l) || /\b(usa|united states|u\.s\.)\b/i.test(l)) return true;
+    if (NON_US.test(l)) return false;          // global ATS boards return worldwide roles
+    // bare metro shorthand the feeds use with no state at all
+    return /^remote$/i.test(l) || /remote.*(us|usa|united states)/i.test(l) || /\b(sf bay|bay area)\b/i.test(l) || /^(sf|la)$/i.test(l) || US_CITIES.test(l);
   });
 }
 
@@ -738,7 +745,12 @@ for (const r of collected) {
   // curated feed could ever admit. Raw ATS boards (all departments, global)
   // still go through both gates.
   const curated = r.source === "simplify";
-  if (!curated && !isUS(r.locations)) continue;
+  // The US gate applies to EVERY source, curated included. Exempting Simplify
+  // was meant to protect its Google-tier listings from an over-strict filter,
+  // but it let ~680 London/Toronto/Bengaluru roles into a US-only feed. isUS is
+  // now accurate enough (US state beats same-named foreign city, bare state
+  // names and SF/LA understood) that the exemption costs more than it saves.
+  if (!isUS(r.locations)) continue;
   if (!curated && EXCLUDE_RX.test(r.title)) continue; // inbox relevance gate — drop the noise
   const key = `${r.company}|${r.title}|${r.locations[0] || ""}`.toLowerCase().replace(/\s+/g, " ");
   if (seen.has(key)) continue;
