@@ -129,15 +129,7 @@
     "slug": "odds-and-ends",
     "desc": "As a self-directed project, I aimed to practice my observation skills by drawing my grandparent’s study room. From this picture I found from my computer drive, I used a pen to outline the complex details I discovered, and express the perplexing feelings I found from this room. However, the feeling of peacefulness is something I also find in my grandfather’s room, which is why I decided to add a cat to the table to create a calm mood. \n\n17” X 13.7”",
     "images": [
-      "/art/odds-and-ends/01.jpg",
-      "/art/odds-and-ends/03.jpg",
-      "/art/odds-and-ends/04.jpg",
-      "/art/odds-and-ends/05.jpg",
-      "/art/odds-and-ends/07.jpg",
-      "/art/odds-and-ends/08.jpg",
-      "/art/odds-and-ends/11.jpg",
-      "/art/odds-and-ends/12.jpg",
-      "/art/odds-and-ends/16.jpg"
+      "/art/odds-and-ends/01.jpg"
     ],
     "youtube": [],
     "video": null,
@@ -158,7 +150,7 @@
     ],
     "video": null,
     "videoPending": false,
-    "cover": "https://i.ytimg.com/vi/VjmlxtnApIA/hqdefault.jpg"
+    "cover": "/art/pick-up/03.jpg"
   },
   {
     "title": "A Self-Portrait as a Pattern",
@@ -292,5 +284,93 @@
       "5Rp-sjQO3Sk"
     ],
     "cover": "https://i.ytimg.com/vi/5Rp-sjQO3Sk/hqdefault.jpg"
+  },
+  {
+    "title": "Collage Portrait",
+    "slug": "collage-portrait",
+    "desc": "",
+    "images": [
+      "/art/collage-portrait/01.jpg"
+    ],
+    "youtube": [],
+    "cover": "/art/collage-portrait/01.jpg",
+    "titlePlaceholder": true
+  },
+  {
+    "title": "Camera Study",
+    "slug": "camera-study",
+    "desc": "",
+    "images": [
+      "/art/camera-study/01.jpg"
+    ],
+    "youtube": [],
+    "cover": "/art/camera-study/01.jpg",
+    "titlePlaceholder": true
+  },
+  {
+    "title": "Portrait Study",
+    "slug": "portrait-study",
+    "desc": "",
+    "images": [
+      "/art/portrait-study/01.jpg"
+    ],
+    "youtube": [],
+    "cover": "/art/portrait-study/01.jpg",
+    "titlePlaceholder": true
+  },
+  {
+    "title": "Composition in Red and Blue",
+    "slug": "composition-red-blue",
+    "desc": "",
+    "images": [
+      "/art/composition-red-blue/01.jpg"
+    ],
+    "youtube": [],
+    "cover": "/art/composition-red-blue/01.jpg",
+    "titlePlaceholder": true
+  },
+  {
+    "title": "Skull Study",
+    "slug": "skull-study",
+    "desc": "",
+    "images": [
+      "/art/skull-study/01.jpg"
+    ],
+    "youtube": [],
+    "cover": "/art/skull-study/01.jpg",
+    "titlePlaceholder": true
+  },
+  {
+    "title": "Newsprint Portrait",
+    "slug": "newsprint-portrait",
+    "desc": "",
+    "images": [
+      "/art/newsprint-portrait/01.jpg"
+    ],
+    "youtube": [],
+    "cover": "/art/newsprint-portrait/01.jpg",
+    "titlePlaceholder": true
+  },
+  {
+    "title": "Still Life",
+    "slug": "still-life",
+    "desc": "",
+    "images": [
+      "/art/still-life/01.jpg"
+    ],
+    "youtube": [],
+    "cover": "/art/still-life/01.jpg",
+    "titlePlaceholder": true
+  },
+  {
+    "title": "Animal Studies",
+    "slug": "animal-studies",
+    "desc": "",
+    "images": [
+      "/art/animal-studies/01.jpg"
+    ],
+    "youtube": [],
+    "cover": "/art/animal-studies/01.jpg",
+    "titlePlaceholder": true
   }
 ]
