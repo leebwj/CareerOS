@@ -196,6 +196,7 @@ const withCover = sized.map((p, i) => {
                   class="ag-img"
                   src={p.thumb}
                   alt={p.title}
+                  draggable={false}
                   loading="lazy"
                   decoding="async"
                   width={p.coverSize?.w || undefined}
@@ -585,8 +586,19 @@ const withCover = sized.map((p, i) => {
       const glideOn = () => { if (!ticking) { ticking = true; requestAnimationFrame(tick); } };
       const dismissHint = () => { if (hintEl && !hintEl.classList.contains("off")) hintEl.classList.add("off"); };
 
+      // Once ANY text is selected on the page, the browser treats a subsequent
+      // press-and-move as dragging that selection: it fires a native dragstart
+      // and hauls a ghost of the image around instead of re-hanging the piece.
+      // That is why the board only misbehaved "after a few drags" — it needed a
+      // stray selection first. Kill selections at the source, and refuse native
+      // drags outright.
+      stage.addEventListener("dragstart", (e) => e.preventDefault());
+      stage.addEventListener("selectstart", (e) => e.preventDefault());
+
       stage.addEventListener("pointerdown", (e) => {
         if (e.button !== undefined && e.button !== 0) return;
+        const sel = document.getSelection?.();
+        if (sel && !sel.isCollapsed) sel.removeAllRanges();   // clear a stray selection before it hijacks the drag
         downCard = e.target.closest(".ag-card");
         panning = !downCard;
         lifted = null; moved = 0; vx = vy = 0; captured = false;
