@@ -516,8 +516,17 @@ const { variant, mode = 0 } = Astro.props;
         // further at runtime rather than assuming a quality tier up front.
         const QUALITY_STEPS = bleed ? [1, 0.78, 0.6, 0.46, 0.34] : [1, 0.8, 0.65];
         let qStep = 0;
+        // Water is by far the heaviest mode: per pixel it runs 6 grid samples,
+        // 5 heightfield taps, 3 fbm (15 noise octaves) and a 4-step caustic loop
+        // with 16 trig calls — several times what the contour field costs, on top
+        // of a wave-sim pass. It is also a deliberately soft, out-of-focus glass
+        // effect, so it is the one mode that loses nothing by being rendered
+        // below native and upscaled. Reported to bog down weaker machines.
+        const WATER_SCALE = 0.6;
+        let waterActive = false;
         const resize = () => {
-          let dpr = Math.min(devicePixelRatio || 1, bleed ? 1.25 : 1.75) * QUALITY_STEPS[qStep];
+          let dpr = Math.min(devicePixelRatio || 1, bleed ? 1.25 : 1.75) * QUALITY_STEPS[qStep]
+                  * (waterActive ? WATER_SCALE : 1);
           const r = wrap.getBoundingClientRect();
           // hard ceiling as well, so a huge monitor can't undo the scaling
           const cap = bleed ? 2000000 : 1400000;
@@ -579,11 +588,16 @@ const { variant, mode = 0 } = Astro.props;
           setColors(); resize();                        // both write program uniforms
           return true;
         };
+        const syncWater = () => {
+          const on = modeA === 3 || modeB === 3;
+          if (on !== waterActive) { waterActive = on; resize(); }
+        };
         const setMode = (t: number) => {
           if (t === curMode && !fading) return;
           if (!ensureModes([t])) return;                    // keep showing what works
           modeA = (fading && mixV >= 0.5) ? modeB : modeA;  // current visible
           modeB = t; mixV = 0; fading = true; curMode = t;
+          syncWater();
         };
         addEventListener("shadermode", (e: any) => setMode((e && e.detail | 0) || 0));
 
@@ -649,7 +663,7 @@ const { variant, mode = 0 } = Astro.props;
             const dtMs = now - last;
             const dt = Math.min((now - last) / 1000, 0.05); last = now;
             judgeFrame(dtMs);
-            if (fading) { mixV += dt / 0.55; if (mixV >= 1) { mixV = 0; modeA = modeB; fading = false; } }
+            if (fading) { mixV += dt / 0.55; if (mixV >= 1) { mixV = 0; modeA = modeB; fading = false; syncWater(); } }
             if (idle) { tmx = 0.5 + 0.32 * Math.cos(time * 0.18); tmy = 0.5 + 0.28 * Math.sin(time * 0.23); }
             mx += (tmx - mx) * 0.06; my += (tmy - my) * 0.06;
             // ── wave-sim step (only while Water is on screen) ──
