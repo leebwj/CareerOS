@@ -49,39 +49,104 @@ const sized = projects.map((p) => {
 });
 // ── sandbox placement, computed at build ─────────────────────────────────────
 // Deterministic (seeded) so the board is identical every build and reload.
-// The naive uniform scatter hid pieces behind each other; this is a JITTERED
-// GRID instead: one work per cell, jitter bounded to a fraction of the cell,
-// so neighbours can kiss at the edges but nothing can cover anything.
-// The centre 3x2 cells are reserved for the title block.
+// Free scatter + collision relaxation (see below). Collisions are only resolved
+// where pieces actually overlap — spacing is never equalised — so the natural
+// clustering of the random seed survives and the wall looks hung, not laid out.
 const rnd = (n: number, salt: number) => {
   const x = Math.sin(n * 127.1 + salt * 311.7) * 43758.5453;
   return x - Math.floor(x);
 };
-const COLS = 7, ROWS = 5, CELL_W = 430, CELL_H = 360;
-const BOARD_W = COLS * CELL_W;   // 3010
-const BOARD_H = ROWS * CELL_H;   // 1800
-// Reserve only what the title block truly needs (2x2 cells): a 3x2 hole left
-// the whole first viewport empty — you landed on a void with no art in sight.
-const RESERVED = new Set<number>();
-for (const r of [1, 2]) for (const c of [3, 4]) RESERVED.add(r * COLS + c);
-const freeCells = Array.from({ length: COLS * ROWS }, (_, i) => i).filter((i) => !RESERVED.has(i));
-// seeded shuffle so works don't read in row order
-for (let i = freeCells.length - 1; i > 0; i--) {
-  const j = Math.floor(rnd(i, 9) * (i + 1));
-  [freeCells[i], freeCells[j]] = [freeCells[j], freeCells[i]];
+// Board is deliberately tight: a roomier board scatters beautifully but you land
+// on a void, which is the trap the first sandbox build hit. Denser packing keeps
+// several pieces in the first screen either side of the title.
+const BOARD_W = 2960, BOARD_H = 1880;
+const CARD_W = 330;                                  // cards' max CSS width
+const TITLE = { x: BOARD_W / 2 - 340, y: BOARD_H / 2 - 190, w: 680, h: 380 };
+
+// Pieces are scattered freely and then RELAXED apart, rather than jittered
+// inside grid cells. The old jittered grid only had ~50px of horizontal play in
+// a 430px cell, so columns and rows still read through it and the board looked
+// laid out rather than hung. Free placement + push-apart keeps the organic look
+// while still guaranteeing no piece can cover another.
+type Piece = { i: number; w: number; h: number; hBox: number; cx: number; cy: number; sc: number; sr: number };
+const pieces: Piece[] = sized.map((p, i) => {
+  const sc = 0.78 + rnd(i, 3) * 0.42;                        // 0.78–1.20
+  const ratio = p.coverSize && p.coverSize.w ? p.coverSize.h / p.coverSize.w : 0.72;
+  // The card renders at exactly width x ratio (img is width:100%, height auto).
+  // Clamping this to 430 underestimated tall portrait scans (ratio ~1.41 renders
+  // 466px), and every underestimate becomes a real overlap on the board.
+  const h0 = CARD_W * ratio * sc;
+  const w0 = CARD_W * sc;
+  const sr = rnd(i, 4) * 16 - 8;                             // −8°…+8°, clearly hand-hung
+  // A tilted card occupies MORE room than its box: collide on the rotated
+  // footprint, or neighbours that look 16px apart will clip corners once tilted.
+  const t = Math.abs(sr) * Math.PI / 180, c = Math.cos(t), s = Math.sin(t);
+  return {
+    i, sc, sr, h: h0,
+    w: w0 * c + h0 * s,
+    hBox: w0 * s + h0 * c,
+    cx: 120 + rnd(i, 1) * (BOARD_W - 240),
+    cy: 110 + rnd(i, 2) * (BOARD_H - 220),
+  } as Piece;
+});
+
+const PAD = 16;                                              // breathing room between pieces
+const overlapPush = (a: Piece, b: Piece) => {
+  const dx = b.cx - a.cx, dy = b.cy - a.cy;
+  const minX = (a.w + b.w) / 2 + PAD, minY = (a.hBox + b.hBox) / 2 + PAD;
+  const ox = minX - Math.abs(dx), oy = minY - Math.abs(dy);
+  if (ox <= 0 || oy <= 0) return;                             // not overlapping
+  // separate along the shallower axis — cheapest way out of the collision
+  if (ox < oy) { const s = (dx < 0 ? -1 : 1) * ox * 0.5; a.cx -= s; b.cx += s; }
+  else { const s = (dy < 0 ? -1 : 1) * oy * 0.5; a.cy -= s; b.cy += s; }
+};
+const collisions = () => {
+  let n = 0;
+  for (let a = 0; a < pieces.length; a++) for (let b = a + 1; b < pieces.length; b++) {
+    const A = pieces[a], B = pieces[b];
+    if (Math.abs(B.cx - A.cx) < (A.w + B.w) / 2 && Math.abs(B.cy - A.cy) < (A.hBox + B.hBox) / 2) n++;
+  }
+  return n;
+};
+// Relax, then VERIFY. Clamping pieces to the board edge fights separation, so a
+// board that is slightly too tight can never settle — it just trades one overlap
+// for another. Rather than hand-tuning the size until it happens to work, grow
+// the board a little and retry until the layout is provably clean.
+let boardW = BOARD_W, boardH = BOARD_H;
+for (let attempt = 0; attempt < 14; attempt++) {
+  for (let pass = 0; pass < 220; pass++) {
+    for (let a = 0; a < pieces.length; a++) {
+      for (let b = a + 1; b < pieces.length; b++) overlapPush(pieces[a], pieces[b]);
+    }
+    for (const p of pieces) {
+      // keep the centre clear for the title block
+      const tOx = (TITLE.w + p.w) / 2 + PAD - Math.abs(p.cx - boardW / 2);
+      const tOy = (TITLE.h + p.hBox) / 2 + PAD - Math.abs(p.cy - boardH / 2);
+      if (tOx > 0 && tOy > 0) {
+        if (tOx < tOy) p.cx += (p.cx < boardW / 2 ? -1 : 1) * tOx;
+        else p.cy += (p.cy < boardH / 2 ? -1 : 1) * tOy;
+      }
+      p.cx = Math.min(Math.max(p.cx, p.w / 2 + 30), boardW - p.w / 2 - 30);
+      p.cy = Math.min(Math.max(p.cy, p.hBox / 2 + 30), boardH - p.hBox / 2 - 30);
+    }
+  }
+  if (collisions() === 0) break;
+  boardW = Math.round(boardW * 1.05);
+  boardH = Math.round(boardH * 1.05);
 }
+
 const withCover = sized.map((p, i) => {
-  const cell = freeCells[i % freeCells.length];
-  const cx = (cell % COLS) * CELL_W, cy = Math.floor(cell / COLS) * CELL_H;
+  const q = pieces[i];
   return {
     ...p,
     count: p.images.length + p.youtube.length + (p.video ? 1 : 0) + (p.videoPending ? 1 : 0),
     // grid cards paint at ~300px — they load a 720px webp thumb, not the full plate
     thumb: p.cover && !/^https?:/.test(p.cover) ? `/art/_thumbs/${p.slug}.webp` : p.cover,
-    sx: Math.round(cx + 24 + rnd(i, 1) * (CELL_W - 330 - 48)),
-    sy: Math.round(cy + 20 + rnd(i, 2) * 90),
-    sc: (0.82 + rnd(i, 3) * 0.3).toFixed(2),
-    sr: (rnd(i, 4) * 7 - 3.5).toFixed(1),
+    // left/top of the unscaled box; scale+rotate happen about the card's centre
+    sx: Math.round(q.cx - CARD_W / 2),
+    sy: Math.round(q.cy - q.h / q.sc / 2),
+    sc: q.sc.toFixed(2),
+    sr: q.sr.toFixed(1),
   };
 });
 ---
@@ -105,8 +170,8 @@ const withCover = sized.map((p, i) => {
     <!-- THE SANDBOX: the gallery is a drafting table larger than the window.
          Drag the board to move around; drag a piece to re-hang it; click/tap a
          piece to open it. The title lives at the centre of the board. -->
-    <div class="ag-stage" id="ag-stage" data-lenis-prevent tabindex="0" aria-label="Art board — drag to explore, arrow keys to pan" style={`--board-w:${BOARD_W}px; --board-h:${BOARD_H}px`}>
-      <section class="ag-grid" id="ag-grid" style={`width:${BOARD_W}px; height:${BOARD_H}px`}>
+    <div class="ag-stage" id="ag-stage" data-lenis-prevent tabindex="0" aria-label="Art board — drag to explore, arrow keys to pan" style={`--board-w:${boardW}px; --board-h:${boardH}px`}>
+      <section class="ag-grid" id="ag-grid" style={`width:${boardW}px; height:${boardH}px`}>
         <div class="ag-center reveal" aria-hidden="false">
           <h1 class="art-title">Art</h1>
           <p class="art-lede">
@@ -234,7 +299,11 @@ const withCover = sized.map((p, i) => {
   .ag-hint.off { opacity: 0; }
 
   /* pieces: pinned prints, draggable */
-  .ag-card { position: absolute; left: var(--sx); top: var(--sy); width: clamp(170px, 20vw, 330px); margin: 0; padding: 0; border: 0; border-radius: 5px; overflow: hidden; cursor: pointer; color: inherit; background: transparent; box-shadow: 0 10px 26px -12px rgba(0,0,0,.55); transform: scale(var(--sc)) rotate(var(--sr)); transition: transform .45s cubic-bezier(.2,.7,.2,1), box-shadow .45s ease; }
+  /* The board's spacing is computed at build for 330px cards. At 20vw a phone
+     clamped them to 170px — half-size pieces on a board built for full-size
+     ones, which is why the wall looked empty on a phone. 62vw keeps them close
+     to the size the layout assumes, and art wants to be big on a phone anyway. */
+  .ag-card { position: absolute; left: var(--sx); top: var(--sy); width: clamp(240px, 30vw, 330px); margin: 0; padding: 0; border: 0; border-radius: 5px; overflow: hidden; cursor: pointer; color: inherit; background: transparent; box-shadow: 0 10px 26px -12px rgba(0,0,0,.55); transform: scale(var(--sc)) rotate(var(--sr)); transition: transform .45s cubic-bezier(.2,.7,.2,1), box-shadow .45s ease; }
   .ag-card.lifted { transition: none; cursor: grabbing; z-index: 5; box-shadow: 0 34px 70px -20px rgba(0,0,0,.8); }
   @media (hover: hover) {
     .ag-card:hover { transform: scale(calc(var(--sc) * 1.07)) rotate(0deg); box-shadow: 0 28px 56px -18px rgba(0,0,0,.72); z-index: 3; }
@@ -254,7 +323,10 @@ const withCover = sized.map((p, i) => {
 
   @media (max-width: 700px) {
     .ag-stage { height: calc(100dvh - 62px); }
-    .ag-card { width: clamp(150px, 44vw, 240px); }
+    /* was clamp(150px, 44vw, 240px) → 172px on a 390px phone. The board's
+       spacing is built for 330px pieces, so half-size cards made the wall look
+       empty on a phone. Art also just wants to be big on a small screen. */
+    .ag-card { width: clamp(240px, 62vw, 300px); }
     .art-title { font-size: clamp(44px, 15vw, 72px); }
     .ag-center { max-width: 320px; }
     .art-lede { font-size: 13px; }
