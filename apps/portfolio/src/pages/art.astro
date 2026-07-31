@@ -69,28 +69,19 @@ const TITLE = { x: BOARD_W / 2 - 340, y: BOARD_H / 2 - 190, w: 680, h: 380 };
 // laid out rather than hung. Free placement + push-apart keeps the organic look
 // while still guaranteeing no piece can cover another.
 type Piece = { i: number; w: number; h: number; hBox: number; cx: number; cy: number; sc: number; sr: number };
-// Cluster seeds: a real wall is not evenly spread. Pieces gather around a few
-// loose centres with gaps between, rather than each sitting in its own pocket of
-// space. Positions are drawn around a seed with a wide gaussian-ish falloff, so
-// density varies across the board instead of being uniform.
-const CLUSTERS = 5;
-const seedOf = (i: number) => {
-  const c = Math.floor(rnd(i, 21) * CLUSTERS);
-  return { x: 0.18 + rnd(c, 31) * 0.64, y: 0.18 + rnd(c, 41) * 0.64 };
-};
+// Brian picked the even spread (see the reference shot): pieces distributed
+// across the whole board with consistent gaps, not gathered into clusters.
+// Clustering was tried and rejected — it left big dead areas and made the wall
+// feel patchy rather than hung.
 const pieces: Piece[] = sized.map((p, i) => {
-  // wider size range: a wall has small studies next to big prints
-  const sc = 0.62 + Math.pow(rnd(i, 3), 1.6) * 0.78;         // 0.62–1.40, skewed small
+  const sc = 0.78 + rnd(i, 3) * 0.42;                        // 0.78–1.20, gently varied
   const ratio = p.coverSize && p.coverSize.w ? p.coverSize.h / p.coverSize.w : 0.72;
   // The card renders at exactly width x ratio (img is width:100%, height auto).
   // Clamping this to 430 underestimated tall portrait scans (ratio ~1.41 renders
   // 466px), and every underestimate becomes a real overlap on the board.
   const h0 = CARD_W * ratio * sc;
   const w0 = CARD_W * sc;
-  // most pieces hang nearly straight, a few are noticeably askew — uniform
-  // tilt reads as a pattern, this reads as a hand
-  const tilt = rnd(i, 4) * 2 - 1;
-  const sr = Math.sign(tilt) * Math.pow(Math.abs(tilt), 1.7) * 11;
+  const sr = rnd(i, 4) * 16 - 8;                             // −8°…+8°, hand-hung but calm
   // A tilted card occupies MORE room than its box: collide on the rotated
   // footprint, or neighbours that look 16px apart will clip corners once tilted.
   const t = Math.abs(sr) * Math.PI / 180, c = Math.cos(t), s = Math.sin(t);
@@ -98,13 +89,12 @@ const pieces: Piece[] = sized.map((p, i) => {
     i, sc, sr, h: h0,
     w: w0 * c + h0 * s,
     hBox: w0 * s + h0 * c,
-    // scatter around this piece's cluster seed, not uniformly over the board
-    cx: (() => { const s0 = seedOf(i); const j = (rnd(i, 1) + rnd(i, 11) + rnd(i, 12)) / 3 - 0.5; return s0.x * BOARD_W + j * BOARD_W * 0.62; })(),
-    cy: (() => { const s0 = seedOf(i); const j = (rnd(i, 2) + rnd(i, 13) + rnd(i, 14)) / 3 - 0.5; return s0.y * BOARD_H + j * BOARD_H * 0.62; })(),
+    cx: 120 + rnd(i, 1) * (BOARD_W - 240),
+    cy: 110 + rnd(i, 2) * (BOARD_H - 220),
   } as Piece;
 });
 
-const PAD = 10;                                              // tight enough that clusters read as clusters
+const PAD = 16;                                              // breathing room between pieces
 const overlapPush = (a: Piece, b: Piece) => {
   const dx = b.cx - a.cx, dy = b.cy - a.cy;
   const minX = (a.w + b.w) / 2 + PAD, minY = (a.hBox + b.hBox) / 2 + PAD;
@@ -627,6 +617,10 @@ const withCover = sized.map((p, i) => {
       const zoomAt = (next, sx, sy) => {
         const z = Math.max(ZOOM_MIN, Math.min(ZOOM_MAX, next));
         if (z === zoom) return;
+        // stageRect is cached and only refreshed on resize/drop/reset. If it is
+        // stale by even a few pixels the anchor point is wrong, and the piece
+        // under the cursor drifts away as you zoom instead of staying put.
+        stageRect = stage.getBoundingClientRect();
         const bx = (sx - stageRect.left - px) / zoom, by = (sy - stageRect.top - py) / zoom;
         zoom = z;
         px = sx - stageRect.left - bx * zoom;
