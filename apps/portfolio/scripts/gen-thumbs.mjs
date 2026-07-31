@@ -16,6 +16,11 @@ const art = JSON.parse(fs.readFileSync(path.join(ROOT, "src/data/art.json"), "ut
 const OUT = path.join(ROOT, "public/art/_thumbs");
 fs.mkdirSync(OUT, { recursive: true });
 
+// A thumb is also stale when the COVER CHANGED — which edits art.json, not the
+// image file. Comparing only against the source mtime meant picking a different
+// cover silently kept the old thumbnail on the page.
+const dataMtime = fs.statSync(path.join(ROOT, "src/data/art.json")).mtimeMs;
+
 let made = 0, skipped = 0;
 for (const p of art) {
   const cover = p.cover;
@@ -23,8 +28,8 @@ for (const p of art) {
   const src = path.join(ROOT, "public", cover);
   const dest = path.join(OUT, `${p.slug}.webp`);
   if (!fs.existsSync(src)) { console.warn(`  !! missing source: ${cover}`); continue; }
-  // skip when up to date (source not newer than the thumb)
-  if (fs.existsSync(dest) && fs.statSync(dest).mtimeMs >= fs.statSync(src).mtimeMs) { skipped++; continue; }
+  // skip when up to date (neither the source nor art.json is newer than the thumb)
+  if (fs.existsSync(dest) && fs.statSync(dest).mtimeMs >= Math.max(fs.statSync(src).mtimeMs, dataMtime)) { skipped++; continue; }
   await sharp(src).resize({ width: 720, withoutEnlargement: true }).webp({ quality: 78 }).toFile(dest);
   made++;
 }
