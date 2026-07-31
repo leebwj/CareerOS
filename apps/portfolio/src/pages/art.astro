@@ -69,15 +69,28 @@ const TITLE = { x: BOARD_W / 2 - 340, y: BOARD_H / 2 - 190, w: 680, h: 380 };
 // laid out rather than hung. Free placement + push-apart keeps the organic look
 // while still guaranteeing no piece can cover another.
 type Piece = { i: number; w: number; h: number; hBox: number; cx: number; cy: number; sc: number; sr: number };
+// Cluster seeds: a real wall is not evenly spread. Pieces gather around a few
+// loose centres with gaps between, rather than each sitting in its own pocket of
+// space. Positions are drawn around a seed with a wide gaussian-ish falloff, so
+// density varies across the board instead of being uniform.
+const CLUSTERS = 5;
+const seedOf = (i: number) => {
+  const c = Math.floor(rnd(i, 21) * CLUSTERS);
+  return { x: 0.18 + rnd(c, 31) * 0.64, y: 0.18 + rnd(c, 41) * 0.64 };
+};
 const pieces: Piece[] = sized.map((p, i) => {
-  const sc = 0.78 + rnd(i, 3) * 0.42;                        // 0.78–1.20
+  // wider size range: a wall has small studies next to big prints
+  const sc = 0.62 + Math.pow(rnd(i, 3), 1.6) * 0.78;         // 0.62–1.40, skewed small
   const ratio = p.coverSize && p.coverSize.w ? p.coverSize.h / p.coverSize.w : 0.72;
   // The card renders at exactly width x ratio (img is width:100%, height auto).
   // Clamping this to 430 underestimated tall portrait scans (ratio ~1.41 renders
   // 466px), and every underestimate becomes a real overlap on the board.
   const h0 = CARD_W * ratio * sc;
   const w0 = CARD_W * sc;
-  const sr = rnd(i, 4) * 16 - 8;                             // −8°…+8°, clearly hand-hung
+  // most pieces hang nearly straight, a few are noticeably askew — uniform
+  // tilt reads as a pattern, this reads as a hand
+  const tilt = rnd(i, 4) * 2 - 1;
+  const sr = Math.sign(tilt) * Math.pow(Math.abs(tilt), 1.7) * 11;
   // A tilted card occupies MORE room than its box: collide on the rotated
   // footprint, or neighbours that look 16px apart will clip corners once tilted.
   const t = Math.abs(sr) * Math.PI / 180, c = Math.cos(t), s = Math.sin(t);
@@ -85,12 +98,13 @@ const pieces: Piece[] = sized.map((p, i) => {
     i, sc, sr, h: h0,
     w: w0 * c + h0 * s,
     hBox: w0 * s + h0 * c,
-    cx: 120 + rnd(i, 1) * (BOARD_W - 240),
-    cy: 110 + rnd(i, 2) * (BOARD_H - 220),
+    // scatter around this piece's cluster seed, not uniformly over the board
+    cx: (() => { const s0 = seedOf(i); const j = (rnd(i, 1) + rnd(i, 11) + rnd(i, 12)) / 3 - 0.5; return s0.x * BOARD_W + j * BOARD_W * 0.62; })(),
+    cy: (() => { const s0 = seedOf(i); const j = (rnd(i, 2) + rnd(i, 13) + rnd(i, 14)) / 3 - 0.5; return s0.y * BOARD_H + j * BOARD_H * 0.62; })(),
   } as Piece;
 });
 
-const PAD = 16;                                              // breathing room between pieces
+const PAD = 10;                                              // tight enough that clusters read as clusters
 const overlapPush = (a: Piece, b: Piece) => {
   const dx = b.cx - a.cx, dy = b.cy - a.cy;
   const minX = (a.w + b.w) / 2 + PAD, minY = (a.hBox + b.hBox) / 2 + PAD;
@@ -210,6 +224,11 @@ const withCover = sized.map((p, i) => {
           ))
         }
       </section>
+      <div class="ag-zoom" aria-label="Zoom the board">
+        <button id="ag-zoom-out" type="button" aria-label="Zoom out">−</button>
+        <span id="ag-zoom-label" aria-live="polite">100%</span>
+        <button id="ag-zoom-in" type="button" aria-label="Zoom in">+</button>
+      </div>
       <button class="ag-reset" id="ag-reset" type="button" hidden title="Put every piece back where it started">reset layout</button>
     </div>
     <!-- shared WebGL layer for the ripple hover: ONE canvas for the whole board
@@ -288,7 +307,7 @@ const withCover = sized.map((p, i) => {
   .ag-stage { position: relative; overflow: hidden; height: calc(100dvh - 77px); margin: 0 calc(-1 * clamp(18px, 5vw, 64px)); cursor: grab; touch-action: none; user-select: none; -webkit-user-select: none; outline: none; }
   .ag-stage.dragging { cursor: grabbing; }
   .ag-stage:focus-visible { box-shadow: inset 0 0 0 2px var(--ink); }
-  .ag-grid { position: relative; will-change: transform; background:
+  .ag-grid { position: relative; transform-origin: 0 0; will-change: transform; background:
       linear-gradient(var(--line) 1px, transparent 1px) 0 0 / 48px 48px,
       linear-gradient(90deg, var(--line) 1px, transparent 1px) 0 0 / 48px 48px; }
 
@@ -321,6 +340,10 @@ const withCover = sized.map((p, i) => {
   .ag-gl { position: fixed; inset: 0; z-index: 3; pointer-events: none; display: block; }
   .ag-reset { position: absolute; z-index: 6; right: 14px; bottom: 14px; font-family: "Geist Mono", monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; padding: 8px 13px; border-radius: 999px; border: 1px solid var(--line); background: color-mix(in srgb, var(--paper) 80%, transparent); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); color: var(--muted); cursor: pointer; }
   .ag-reset:hover { color: var(--ink); border-color: var(--ink); }
+  .ag-zoom { position: absolute; z-index: 6; right: 14px; bottom: 52px; display: flex; align-items: center; gap: 2px; padding: 3px; border-radius: 999px; border: 1px solid var(--line); background: color-mix(in srgb, var(--paper) 80%, transparent); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
+  .ag-zoom button { width: 26px; height: 26px; border: 0; border-radius: 999px; background: transparent; color: var(--muted); font-size: 15px; line-height: 1; cursor: pointer; display: grid; place-items: center; }
+  .ag-zoom button:hover { color: var(--ink); background: color-mix(in srgb, var(--ink) 10%, transparent); }
+  .ag-zoom span { font-family: "Geist Mono", monospace; font-size: 10.5px; color: var(--muted); min-width: 38px; text-align: center; }
 
   @media (max-width: 700px) {
     .ag-stage { height: calc(100dvh - 62px); }
@@ -523,6 +546,9 @@ const withCover = sized.map((p, i) => {
       const canvas = document.getElementById("ag-gl");
       const hintEl = document.getElementById("ag-hint");
       const resetBtn = document.getElementById("ag-reset");
+      const zoomInBtn = document.getElementById("ag-zoom-in");
+      const zoomOutBtn = document.getElementById("ag-zoom-out");
+      const zoomLabel = document.getElementById("ag-zoom-label");
       if (!stage || !grid || !canvas) return;
       const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
       const fine = matchMedia("(hover: hover) and (pointer: fine)").matches;
@@ -552,6 +578,9 @@ const withCover = sized.map((p, i) => {
       resetBtn.hidden = Object.keys(savedPos).length === 0;
       resetBtn.addEventListener("click", () => {
         savedPos = {}; savePos();
+        zoom = 1;                                   // reset means the whole view, not just positions
+        if (zoomLabel) zoomLabel.textContent = "100%";
+        clampPan(); paint();                        // relabelling alone left the board still zoomed
         for (const c of cards) {
           const h = home.get(c);
           if (h) { c.style.setProperty("--sx", h.x); c.style.setProperty("--sy", h.y); }
@@ -582,10 +611,31 @@ const withCover = sized.map((p, i) => {
       let downX = 0, downY = 0, lastX = 0, lastY = 0, moved = 0;
       let liftDX = 0, liftDY = 0;
       let ticking = false;
-      const maxX = () => Math.min(0, stage.clientWidth - boardW);
-      const maxY = () => Math.min(0, stage.clientHeight - boardH);
+      // ── zoom ──────────────────────────────────────────────────────────
+      // transform-origin is 0 0 (set in CSS), so a board point b maps to screen
+      // px + b*zoom. That keeps every conversion below a single divide.
+      let zoom = 1;
+      const ZOOM_MIN = 0.4, ZOOM_MAX = 2.4;
+      const maxX = () => Math.min(0, stage.clientWidth - boardW * zoom);
+      const maxY = () => Math.min(0, stage.clientHeight - boardH * zoom);
       const clampPan = () => { px = Math.max(maxX(), Math.min(0, px)); py = Math.max(maxY(), Math.min(0, py)); };
-      const paint = () => { grid.style.transform = `translate3d(${px}px, ${py}px, 0)`; };
+      const paint = () => { grid.style.transform = `translate3d(${px}px, ${py}px, 0) scale(${zoom})`; };
+      // screen -> board space, so drags and hit-tests stay correct while zoomed
+      const toBoardX = (clientX) => (clientX - stageRect.left - px) / zoom;
+      const toBoardY = (clientY) => (clientY - stageRect.top - py) / zoom;
+      // zoom about a screen point: that point must stay under the cursor
+      const zoomAt = (next, sx, sy) => {
+        const z = Math.max(ZOOM_MIN, Math.min(ZOOM_MAX, next));
+        if (z === zoom) return;
+        const bx = (sx - stageRect.left - px) / zoom, by = (sy - stageRect.top - py) / zoom;
+        zoom = z;
+        px = sx - stageRect.left - bx * zoom;
+        py = sy - stageRect.top - by * zoom;
+        clampPan(); paint();
+        if (zoomLabel) zoomLabel.textContent = Math.round(zoom * 100) + "%";
+        resetBtn.hidden = Object.keys(savedPos).length === 0 && Math.abs(zoom - 1) < 0.01;
+      };
+      const zoomBy = (f) => zoomAt(zoom * f, stageRect.left + stage.clientWidth / 2, stageRect.top + stage.clientHeight / 2);
       const tick = () => {
         if (!panning && !reduce && (Math.abs(vx) > 0.12 || Math.abs(vy) > 0.12)) {
           px += vx; py += vy; vx *= 0.93; vy *= 0.93;
@@ -635,13 +685,13 @@ const withCover = sized.map((p, i) => {
             lifted = downCard;
             lifted.classList.add("lifted");
             const r = rectOf.get(lifted) || { x: 0, y: 0 };
-            liftDX = (e.clientX - stageRect.left - px) - r.x;
-            liftDY = (e.clientY - stageRect.top - py) - r.y;
+            liftDX = toBoardX(e.clientX) - r.x;
+            liftDY = toBoardY(e.clientY) - r.y;
             stopGL();
           }
           if (lifted) {
-            const nx = Math.max(0, Math.min(boardW - 150, e.clientX - stageRect.left - px - liftDX));
-            const ny = Math.max(0, Math.min(boardH - 120, e.clientY - stageRect.top - py - liftDY));
+            const nx = Math.max(0, Math.min(boardW - 150, toBoardX(e.clientX) - liftDX));
+            const ny = Math.max(0, Math.min(boardH - 120, toBoardY(e.clientY) - liftDY));
             lifted.style.setProperty("--sx", nx + "px");
             lifted.style.setProperty("--sy", ny + "px");
           }
@@ -683,14 +733,58 @@ const withCover = sized.map((p, i) => {
         clampPan(); paint();
       }, { passive: true });
 
-      // wheel / trackpad pans the board (stage carries data-lenis-prevent)
+      // wheel / trackpad pans the board (stage carries data-lenis-prevent).
+      // A trackpad pinch arrives as a wheel event with ctrlKey set — that, and
+      // ctrl/cmd+wheel, zoom about the pointer instead of panning.
       stage.addEventListener("wheel", (e) => {
         e.preventDefault();
+        if (e.ctrlKey || e.metaKey) {
+          zoomAt(zoom * Math.exp(-e.deltaY * 0.0022), e.clientX, e.clientY);
+          dismissHint();
+          if (card && !raf) raf = requestAnimationFrame(draw);
+          return;
+        }
         px -= e.deltaX; py -= e.deltaY;
         vx = vy = 0;
         clampPan(); paint(); dismissHint();
         if (card && !raf) raf = requestAnimationFrame(draw);
       }, { passive: false });
+
+      // two-finger pinch on touch
+      const touches = new Map();
+      let pinchStart = 0, pinchZoom = 1;
+      stage.addEventListener("pointerdown", (e) => {
+        if (e.pointerType !== "touch") return;
+        touches.set(e.pointerId, e);
+        if (touches.size === 2) {
+          const [a, b2] = [...touches.values()];
+          pinchStart = Math.hypot(a.clientX - b2.clientX, a.clientY - b2.clientY);
+          pinchZoom = zoom;
+          panning = false; downCard = null; lifted = null;     // a pinch is not a drag
+        }
+      });
+      stage.addEventListener("pointermove", (e) => {
+        if (e.pointerType !== "touch" || !touches.has(e.pointerId)) return;
+        touches.set(e.pointerId, e);
+        if (touches.size === 2 && pinchStart > 0) {
+          const [a, b2] = [...touches.values()];
+          const d = Math.hypot(a.clientX - b2.clientX, a.clientY - b2.clientY);
+          zoomAt(pinchZoom * (d / pinchStart), (a.clientX + b2.clientX) / 2, (a.clientY + b2.clientY) / 2);
+          dismissHint();
+        }
+      });
+      const dropTouch = (e) => { touches.delete(e.pointerId); if (touches.size < 2) pinchStart = 0; };
+      stage.addEventListener("pointerup", dropTouch);
+      stage.addEventListener("pointercancel", dropTouch);
+
+      // explicit controls, and keyboard for anyone not using a trackpad
+      zoomInBtn && zoomInBtn.addEventListener("click", () => { zoomBy(1.25); dismissHint(); });
+      zoomOutBtn && zoomOutBtn.addEventListener("click", () => { zoomBy(1 / 1.25); dismissHint(); });
+      stage.addEventListener("keydown", (e) => {
+        if (e.key === "+" || e.key === "=") { zoomBy(1.25); e.preventDefault(); }
+        else if (e.key === "-" || e.key === "_") { zoomBy(1 / 1.25); e.preventDefault(); }
+        else if (e.key === "0") { zoomAt(1, stageRect.left + stage.clientWidth / 2, stageRect.top + stage.clientHeight / 2); e.preventDefault(); }
+      });
 
       // keyboard pan for the stage itself; cards stay buttons (Tab + Enter)
       stage.addEventListener("keydown", (e) => {
