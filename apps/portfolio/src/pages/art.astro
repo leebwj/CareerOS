@@ -533,6 +533,14 @@ const withCover = sized.map((p, i) => {
       try { savedPos = JSON.parse(localStorage.getItem(POS_KEY) || "{}"); } catch {}
       const cards = [...grid.querySelectorAll(".ag-card")];
       const boardW = grid.offsetWidth, boardH = grid.offsetHeight;
+      // Remember where the build hung each piece BEFORE any saved position is
+      // applied. The scattered layout lives only in the inline --sx/--sy, so
+      // "reset" cannot just delete them — that leaves left/top resolving to 0
+      // and stacks every piece in the top-left corner, which reads as the art
+      // having vanished.
+      const home = new Map(cards.map((c) => [c, {
+        x: c.style.getPropertyValue("--sx"), y: c.style.getPropertyValue("--sy"),
+      }]));
       for (const c of cards) {
         const p = savedPos[c.dataset.slug];
         if (p && Number.isFinite(p.x) && Number.isFinite(p.y)) {
@@ -544,7 +552,10 @@ const withCover = sized.map((p, i) => {
       resetBtn.hidden = Object.keys(savedPos).length === 0;
       resetBtn.addEventListener("click", () => {
         savedPos = {}; savePos();
-        for (const c of cards) { c.style.removeProperty("--sx"); c.style.removeProperty("--sy"); }
+        for (const c of cards) {
+          const h = home.get(c);
+          if (h) { c.style.setProperty("--sx", h.x); c.style.setProperty("--sy", h.y); }
+        }
         resetBtn.hidden = true;
         cacheRects();
       });
