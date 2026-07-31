@@ -111,7 +111,16 @@ const { variant, mode = 0 } = Astro.props;
         attribute vec2 p; varying vec2 vUv;
         void main(){ vUv = p * 0.5 + 0.5; gl_Position = vec4(p, 0.0, 1.0); }`;
 
-      const fsrc =
+      // Compile ONLY the modes actually in use. ANGLE defers the real D3D
+      // compile to the first useProgram, and that call was blocking the main
+      // thread for 4.4s on an integrated GPU: every mode gets inlined, and fbm's
+      // 5 octaves unroll inside each one. The homepage shows a single mode at
+      // load, so compiling five is 5x the wait for nothing. Extra modes are
+      // compiled on demand the first time the switcher is used.
+      const mkFsrc = (modes: Set<number>) => {
+      const useWater = modes.has(3) && !lean;
+      const useAscii = modes.has(4) && !lean;
+      return (
         (deriv ? "#extension GL_OES_standard_derivatives : enable\n" : "") +
         `precision highp float;
         varying vec2 vUv;
@@ -124,9 +133,9 @@ const { variant, mode = 0 } = Astro.props;
         uniform int   uModeA;
         uniform int   uModeB;
         uniform float uMix;` +
-        (lean ? "" : `
+        (useWater ? `
         uniform sampler2D uWater;  // live heightfield: REAL propagating waves (ping-pong sim)
-        uniform vec2  uWTexel;     // 1 / sim resolution`) + `
+        uniform vec2  uWTexel;     // 1 / sim resolution` : "") + `
 
         float hash(vec2 p){ p = fract(p * vec2(123.34, 345.45)); p += dot(p, p + 34.345); return fract(p.x * p.y); }
         float noise(vec2 p){
@@ -170,6 +179,7 @@ const { variant, mode = 0 } = Astro.props;
           col = mix(col, uLine, ripple * 0.16);
           return col;
         }
+        ` + (modes.has(1) ? `
         // mode 1 — flowing plasma bands (domain-warped)
         vec3 fxFlow(vec2 p, vec2 uv, float ripple){
           float t = uTime * 0.04;
@@ -180,7 +190,7 @@ const { variant, mode = 0 } = Astro.props;
           vec3 col = mix(uBg, mix(uDeep, uLine, 0.65), glow * 0.5);
           col = mix(col, uLine, ripple * 0.25);
           return col;
-        }
+        }` : "") + (modes.has(2) ? `
         // mode 2 — pulsing dot matrix (field drives dot radius)
         vec3 fxDots(vec2 p, vec2 uv, float ar, float ripple){
           float field = fbm(p * 0.7 + uTime * 0.05) + ripple * 0.9;
@@ -189,7 +199,7 @@ const { variant, mode = 0 } = Astro.props;
           float r = 0.10 + 0.36 * clamp(field, 0.0, 1.2);
           float dot = 1.0 - smoothstep(r - 0.05, r, d);
           return mix(uBg, uLine, dot * 0.9);
-        }` + (lean ? "" : `
+        }` : "") + (useWater ? `
 
         // ── mode 3 — WATER / liquid glass, rebuilt on the canon ─────────────
         // References: Evan Wallace's webgl-water (fresnel + refraction +
@@ -292,7 +302,7 @@ const { variant, mode = 0 } = Astro.props;
           // light enters from the top of the pane — a faint vertical glow
           col += milky * (0.018 + 0.045 * smoothstep(0.25, 1.0, uv.y));
           return col;
-        }
+        }` : "") + (useAscii ? `
 
         // ── mode 4 — the terminal underneath (v1, Brian's pick): the field
         // quantized into character cells, each speaking its intensity through a
@@ -328,14 +338,17 @@ const { variant, mode = 0 } = Astro.props;
           vec2 cursor = floor(vec2(0.82, 0.13) * grid);       // blinking cursor, 500ms
           if (id.x == cursor.x && id.y == cursor.y && mod(uTime, 1.0) < 0.5) col = mix(col, uLine, 0.9);
           return col;
-        }`) + `
+        }` : "") + `
 
-        vec3 pick(int mode, vec2 p, vec2 uv, float ar, float ripple, vec2 m){
-          if(mode == 1) return fxFlow(p, uv, ripple);
-          else if(mode == 2) return fxDots(p, uv, ar, ripple);` +
-          (lean ? "" : `
-          else if(mode == 3) return fxWater(p, uv, ar, ripple, m);
-          else if(mode == 4) return fxAscii(uv, ar, m);`) + `
+        vec3 pick(int mode, vec2 p, vec2 uv, float ar, float ripple, vec2 m){` +
+          (modes.has(1) ? `
+          if(mode == 1) return fxFlow(p, uv, ripple);` : "") +
+          (modes.has(2) ? `
+          if(mode == 2) return fxDots(p, uv, ar, ripple);` : "") +
+          (useWater ? `
+          if(mode == 3) return fxWater(p, uv, ar, ripple, m);` : "") +
+          (useAscii ? `
+          if(mode == 4) return fxAscii(uv, ar, m);` : "") + `
           return fxContour(p, uv, ar, ripple);
         }
 
@@ -362,7 +375,8 @@ const { variant, mode = 0 } = Astro.props;
           float vig = smoothstep(1.25, 0.25, distance(uv, vec2(0.5)));
           col = mix(uBg, col, 0.4 + 0.6 * vig);
           gl_FragColor = vec4(col, 1.0);
-        }`;
+        }`);
+      };
 
       const compile = (type: number, src: string) => {
         const sh = gl.createShader(type)!;
@@ -370,25 +384,39 @@ const { variant, mode = 0 } = Astro.props;
         return gl.getShaderParameter(sh, gl.COMPILE_STATUS) ? sh : null;
       };
       const vs = compile(gl.VERTEX_SHADER, vsrc);
-      const fs = compile(gl.FRAGMENT_SHADER, fsrc);
+      // Start with only the mode this instance actually shows. Anything else is
+      // compiled the first time it is asked for.
+      const initModeEarly = parseInt(wrap.getAttribute("data-mode") || "0", 10) || 0;
+      const compiledModes = new Set<number>([initModeEarly]);
+      let fs = compile(gl.FRAGMENT_SHADER, mkFsrc(compiledModes));
 
       if (vs && fs) {
-        const prog = gl.createProgram()!;
+        let prog = gl.createProgram()!;
         gl.attachShader(prog, vs); gl.attachShader(prog, fs); gl.linkProgram(prog);
         gl.useProgram(prog);
 
         const buf = gl.createBuffer();
         gl.bindBuffer(gl.ARRAY_BUFFER, buf);
         gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
-        const loc = gl.getAttribLocation(prog, "p");
-        gl.enableVertexAttribArray(loc);
-        gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
 
+        // Uniform locations and the attribute binding belong to a PROGRAM, so
+        // they must be re-fetched whenever a mode swap swaps the program in.
         const U = (n: string) => gl.getUniformLocation(prog, n);
-        const uRes = U("uRes"), uTime = U("uTime"), uMouse = U("uMouse");
-        const uBg = U("uBg"), uLine = U("uLine"), uDeep = U("uDeep");
-        const uModeA = U("uModeA"), uModeB = U("uModeB"), uMix = U("uMix");
-        const uWater = U("uWater"), uWTexel = U("uWTexel");
+        let uRes: WebGLUniformLocation | null, uTime: WebGLUniformLocation | null, uMouse: WebGLUniformLocation | null;
+        let uBg: WebGLUniformLocation | null, uLine: WebGLUniformLocation | null, uDeep: WebGLUniformLocation | null;
+        let uModeA: WebGLUniformLocation | null, uModeB: WebGLUniformLocation | null, uMix: WebGLUniformLocation | null;
+        let uWater: WebGLUniformLocation | null, uWTexel: WebGLUniformLocation | null;
+        function rebindProgram() {
+          gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+          const loc = gl.getAttribLocation(prog, "p");
+          gl.enableVertexAttribArray(loc);
+          gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+          uRes = U("uRes"); uTime = U("uTime"); uMouse = U("uMouse");
+          uBg = U("uBg"); uLine = U("uLine"); uDeep = U("uDeep");
+          uModeA = U("uModeA"); uModeB = U("uModeB"); uMix = U("uMix");
+          uWater = U("uWater"); uWTexel = U("uWTexel");
+        }
+        rebindProgram();                       // initial bind for the first program
 
         // ── interactive water heightfield: a REAL wave simulation (Hugo Elias
         // kernel on ping-pong buffers — the jquery.ripples / webgl-water
@@ -478,13 +506,21 @@ const { variant, mode = 0 } = Astro.props;
         setColors();
         addEventListener("themechange", setColors);
 
+        // ── adaptive resolution ────────────────────────────────────────────
+        // This is a soft, out-of-focus background; it does not need one shader
+        // invocation per screen pixel. Measured on an Intel UHD (the same class
+        // of integrated GPU as a 2020 MacBook) a full-resolution field drew at
+        // ~6fps and blocked the main thread for seconds, which is what made the
+        // homepage feel slow to open and to scroll. Render below native and let
+        // the browser upscale — and if the GPU still can't keep up, step down
+        // further at runtime rather than assuming a quality tier up front.
+        const QUALITY_STEPS = bleed ? [1, 0.78, 0.6, 0.46, 0.34] : [1, 0.8, 0.65];
+        let qStep = 0;
         const resize = () => {
-          let dpr = Math.min(devicePixelRatio || 1, bleed ? 1.25 : 1.75);
+          let dpr = Math.min(devicePixelRatio || 1, bleed ? 1.25 : 1.75) * QUALITY_STEPS[qStep];
           const r = wrap.getBoundingClientRect();
-          // cap the total render area: a soft background field doesn't need
-          // more than ~2.2MP, and on large monitors an uncapped canvas
-          // (2560×1440 × dpr² ≈ 5MP+/frame) is what makes scrolling feel heavy
-          const cap = bleed ? 2200000 : 1400000;
+          // hard ceiling as well, so a huge monitor can't undo the scaling
+          const cap = bleed ? 2000000 : 1400000;
           const area = r.width * r.height * dpr * dpr;
           if (area > cap) dpr *= Math.sqrt(cap / area);
           canvas.width = Math.max(1, Math.round(r.width * dpr));
@@ -519,15 +555,57 @@ const { variant, mode = 0 } = Astro.props;
         }
         if (!bleed) wrap.addEventListener("pointerleave", () => { if (!fine) return; idle = true; });
 
+        let painted = false, prewarmed = false;
+        let onFirstPaint: null | (() => void) = null;
         // mode + crossfade state
         const initMode = parseInt(wrap.getAttribute("data-mode") || "0", 10) || 0;
         let modeA = initMode, modeB = initMode, mixV = 0, curMode = initMode, fading = false;
+        // Bring a mode into the compiled program the first time it is asked for.
+        // The driver compiles on first use, so this is costly — but it now costs
+        // on an explicit click, once per session, instead of on every page load.
+        const ensureModes = (want: number[]) => {
+          if (want.every((m) => compiledModes.has(m))) return true;
+          const next = new Set(compiledModes); for (const m of want) next.add(m);
+          const nfs = compile(gl.FRAGMENT_SHADER, mkFsrc(next));
+          if (!nfs) return false;
+          const np = gl.createProgram()!;
+          gl.attachShader(np, vs!); gl.attachShader(np, nfs); gl.linkProgram(np);
+          if (!gl.getProgramParameter(np, gl.LINK_STATUS)) return false;
+          prog = np; for (const m of want) compiledModes.add(m);
+          gl.useProgram(prog);
+          rebindProgram();
+          if (uWater) gl.uniform1i(uWater, 0);          // sim height rides unit 0
+          if (uWTexel) gl.uniform2f(uWTexel, 1 / SIMW, 1 / SIMH);
+          setColors(); resize();                        // both write program uniforms
+          return true;
+        };
         const setMode = (t: number) => {
           if (t === curMode && !fading) return;
+          if (!ensureModes([t])) return;                    // keep showing what works
           modeA = (fading && mixV >= 0.5) ? modeB : modeA;  // current visible
           modeB = t; mixV = 0; fading = true; curMode = t;
         };
         addEventListener("shadermode", (e: any) => setMode((e && e.detail | 0) || 0));
+
+        // Compiling on click moved the stall from load to the switcher (a Water
+        // switch cost ~6s). So once the page is genuinely idle, quietly compile
+        // the remaining modes so the first switch is instant. Only where a
+        // switcher exists — the work pages and 404 render one fixed mode and
+        // should never pay for modes they cannot reach.
+        // Compiling the remaining modes costs ~4s on an integrated GPU. Doing it
+        // on a timer after load meant an unsolicited multi-second freeze while
+        // the visitor was still scrolling — worse than the problem it solved. So
+        // it is bound to INTENT instead: hovering the switcher (which precedes
+        // clicking it) warms every mode, and nobody who never touches the
+        // switcher pays for modes they never see.
+        if (bleed) {
+          const pick = document.querySelector(".shader-pick");
+          if (pick) {
+            const prewarm = () => { if (!prewarmed) { prewarmed = true; ensureModes([0, 1, 2, 3, 4]); } };
+            pick.addEventListener("pointerenter", prewarm, { once: true });
+            pick.addEventListener("focusin", prewarm, { once: true });     // keyboard reaches it too
+          }
+        }
 
         const drawFrame = (time: number) => {
           gl.uniform1f(uTime, time);
@@ -540,6 +618,7 @@ const { variant, mode = 0 } = Astro.props;
             gl.bindTexture(gl.TEXTURE_2D, simCur.tex);  // freshest wave state
           }
           gl.drawArrays(gl.TRIANGLES, 0, 3);
+          if (!painted) { painted = true; const cb = onFirstPaint; onFirstPaint = null; cb && cb(); }
         };
 
         if (reduce) {
@@ -547,11 +626,29 @@ const { variant, mode = 0 } = Astro.props;
           addEventListener("shadermode", (e: any) => { const t = (e && e.detail | 0) || 0; modeA = t; modeB = t; mixV = 0; curMode = t; drawFrame(0); });
         } else {
           let running = false, looping = false, t0 = 0, last = 0, waterWasOn = false;
+          // Watch real frame cost and drop resolution if this GPU is struggling.
+          // Sampling starts after a short warm-up so shader compilation and the
+          // first paint don't get mistaken for a slow GPU.
+          let fSamples = 0, fSum = 0, settled = false;
+          const judgeFrame = (dtMs: number) => {
+            if (settled || dtMs > 200) return;                 // ignore tab-switch spikes
+            if (++fSamples <= 12) return;                      // warm-up
+            fSum += dtMs;
+            const n = fSamples - 12;
+            if (n < 24) return;
+            const avg = fSum / n;
+            if (avg > 22 && qStep < QUALITY_STEPS.length - 1) { // slower than ~45fps
+              qStep++; resize();
+              fSamples = 12; fSum = 0;                          // re-measure at the new size
+            } else settled = true;
+          };
           const loop = (now: number) => {
             if (!running) { looping = false; return; }
             if (!t0) { t0 = now; last = now; }
             const time = (now - t0) / 1000;
+            const dtMs = now - last;
             const dt = Math.min((now - last) / 1000, 0.05); last = now;
+            judgeFrame(dtMs);
             if (fading) { mixV += dt / 0.55; if (mixV >= 1) { mixV = 0; modeA = modeB; fading = false; } }
             if (idle) { tmx = 0.5 + 0.32 * Math.cos(time * 0.18); tmy = 0.5 + 0.28 * Math.sin(time * 0.23); }
             mx += (tmx - mx) * 0.06; my += (tmy - my) * 0.06;
