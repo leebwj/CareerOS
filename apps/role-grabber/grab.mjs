@@ -204,7 +204,8 @@ function levelFromTitle(t) {
   // Research fellowships (Anthropic Fellows Program, residencies) are the AI
   // labs' early-career on-ramp and often the ONLY one they run — but "Fellow"
   // read as full-time, so they sank. Guarded against senior fellow titles.
-  if (/\b(fellows? program|fellowship|residency program|\bresidency\b)\b/i.test(t) && !SENIOR_RX.test(t)) return "new-grad";
+  // NOT a bare \bresidency\b — that matches "Data Residency", a compliance term.
+  if (/\b(fellows? program|fellowship|residency program|research residency|ai residency)\b/i.test(t) && !SENIOR_RX.test(t)) return "new-grad";
   return "full-time";
 }
 
