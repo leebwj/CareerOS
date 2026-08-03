@@ -754,6 +754,89 @@ async function fromAppleJobs() {
   return out;
 }
 
+// TikTok's portal is API-driven but needs one non-obvious header: the request
+// 400s without `website-path: tiktok`, which is why every documented endpoint
+// looked dead. Found by capturing the real portal's own request. ByteDance does
+// NOT share it (400 on every website-path tried) and still arrives via Simplify.
+//
+// The board carries 3,693 roles, so it is swept by query rather than pulled
+// whole. Locations arrive as a nested city→state→country chain, and the API
+// exposes no posting date at all.
+async function fromTikTokCareers() {
+  const H = {
+    "content-type": "application/json",
+    "website-path": "tiktok",
+    referer: "https://lifeattiktok.com/",
+    "accept-language": "en-US",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120",
+  };
+  const flatLoc = (c) => { const p = []; let n = c; while (n) { if (n.en_name) p.push(n.en_name); n = n.parent; } return p.join(", "); };
+  const out = [];
+  const seen = new Set();
+  const PAGE = 20, CAP = 200;
+  for (const keyword of ["intern", "graduate", "designer", "user experience", "product manager", "software engineer"]) {
+    for (let offset = 0; offset < CAP; offset += PAGE) {
+      await new Promise((r) => setTimeout(r, 200));
+      const r = await fetch("https://api.lifeattiktok.com/api/v1/public/supplier/search/job/posts", {
+        method: "POST", headers: H,
+        body: JSON.stringify({ keyword, limit: PAGE, offset, job_category_id_list: [], location_code_list: [], recruitment_id_list: [], subject_id_list: [] }),
+      });
+      if (!r.ok) throw new Error(`${r.status} tiktok`);
+      const d = await r.json();
+      const page = d?.data?.job_post_list || [];
+      if (!page.length) break;
+      let added = 0;
+      for (const j of page) {
+        if (!j?.id || seen.has(j.id)) continue;
+        seen.add(j.id); added++;
+        if (SENIOR_RX.test(j.title || "")) continue;
+        // recruit_type is the platform's own level signal and beats the title
+        const rt = String(j.recruit_type?.en_name || "");
+        out.push({
+          company: "TikTok",
+          title: j.title,
+          category: categorize(j.title, j.job_category?.en_name || ""),
+          locations: [flatLoc(j.city_info)].filter(Boolean),
+          url: `https://lifeattiktok.com/search/${j.id}`,
+          posted: "",                                  // API exposes no post date
+          term: termFromTitle(j.title),
+          level: /intern/i.test(rt) ? "intern" : /graduate|campus/i.test(rt) ? "new-grad" : levelFromTitle(j.title),
+          source: "tiktok",
+        });
+      }
+      if (!added) break;
+    }
+  }
+  return out;
+}
+
+// GitHub runs on Jibe (jibecdn.com, tenant "githubinc") — no Eightfold, no
+// Greenhouse. Its board is small enough to come back in a single call.
+async function fromGitHubCareers() {
+  const r = await fetch("https://www.github.careers/api/jobs?keywords=&page=1&limit=100", {
+    headers: { "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120", accept: "application/json" },
+  });
+  if (!r.ok) throw new Error(`${r.status} github careers`);
+  const d = await r.json();
+  return (d.jobs || []).map((x) => x.data).filter((j) => j?.title && !SENIOR_RX.test(j.title)).map((j) => {
+    const when = j.create_date || j.posted_date || j.update_date || "";
+    const dt = when ? new Date(when) : null;
+    return {
+      company: "GitHub",
+      title: j.title,
+      // categories[] entries can be objects, and categorize() lowercases its
+      // second argument — coerce so a non-string never throws the whole source
+      category: categorize(j.title, String(j.department || (j.categories || [])[0]?.name || (j.categories || [])[0] || "")),
+      locations: [j.location_name || j.country || ""].filter(Boolean),
+      url: `https://www.github.careers/careers-home/jobs/${j.slug}`,
+      posted: dt && !isNaN(dt) ? dt.toISOString().slice(0, 10) : "",
+      term: termFromTitle(j.title),
+      level: levelFromTitle(j.title),
+      source: "github",
+    };
+  });
+}
+
 // Rippling runs its own ATS and publishes the whole board in one call — no
 // pagination, no auth. 750 rows.
 async function fromRippling() {
@@ -1080,6 +1163,12 @@ await Promise.all([
   fromAppleJobs()
     .then((rows) => { collectedATS.push(...rows); atsCounts["Apple(jobs)"] = rows.length; })
     .catch((e) => errors.push(`apple: ${e.message}`)),
+  fromGitHubCareers()
+    .then((rows) => { collectedATS.push(...rows); atsCounts["GitHub(jibe)"] = rows.length; })
+    .catch((e) => errors.push(`github: ${e.message}`)),
+  fromTikTokCareers()
+    .then((rows) => { collectedATS.push(...rows); atsCounts["TikTok(own)"] = rows.length; })
+    .catch((e) => errors.push(`tiktok: ${e.message}`)),
 ]);
 
 // stale-board tripwire (research trap: 200 + empty ≠ healthy)
