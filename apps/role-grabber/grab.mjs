@@ -201,6 +201,10 @@ function categorize(title, sourceCategory) {
 function levelFromTitle(t) {
   if (/\bintern(ship)?\b/i.test(t)) return "intern";
   if (/\b(new grad|university grad|campus|early career|entry[- ]level|graduate)\b/i.test(t)) return "new-grad";
+  // Research fellowships (Anthropic Fellows Program, residencies) are the AI
+  // labs' early-career on-ramp and often the ONLY one they run — but "Fellow"
+  // read as full-time, so they sank. Guarded against senior fellow titles.
+  if (/\b(fellows? program|fellowship|residency program|\bresidency\b)\b/i.test(t) && !SENIOR_RX.test(t)) return "new-grad";
   return "full-time";
 }
 
