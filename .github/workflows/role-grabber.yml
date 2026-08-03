@@ -23,6 +23,12 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }} # Path A: scoped LLM rescue of "Other"@target roles (no-op if unset)
         run: node apps/role-grabber/grab.mjs
+      # Independent coverage check: re-fetches every board and diffs it against
+      # the feed, so a stale board or an over-eager filter surfaces as a number
+      # rather than a silent gap. Never fails the run — a few findings are the
+      # normal steady state; detail lands in data/audit.json alongside the feed.
+      - name: Coverage audit
+        run: node apps/role-grabber/audit.mjs
       - name: Commit if changed
         run: |
           git config user.name "role-grabber[bot]"

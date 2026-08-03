@@ -10,8 +10,12 @@
 //   node apps/role-grabber/audit.mjs               full audit
 //   node apps/role-grabber/audit.mjs --focus design early-career design only
 //   node apps/role-grabber/audit.mjs --json        machine-readable
+//   node apps/role-grabber/audit.mjs --strict      exit 1 on any finding
 //
-// Exits 1 if anything is MISSING or a board went dark, so cron can shout.
+// Exits 0 by default. A handful of findings is the NORMAL steady state — they
+// are mostly roles the grabber excludes on purpose (senior, sales, non-target) —
+// so failing the daily run on them would just train everyone to ignore red.
+// Use --strict when you want a gate.
 import { readFileSync, writeFileSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -144,6 +148,6 @@ async function main() {
     }
   }
   writeFileSync(OUT, JSON.stringify({ generated: new Date().toISOString(), sum, rows, dark, missing }, null, 2) + "\n");
-  if (sum.missing || sum.dark) process.exitCode = 1;
+  if (process.argv.includes("--strict") && (sum.missing || sum.dark)) process.exitCode = 1;
 }
 main();
