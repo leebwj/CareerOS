@@ -1,0 +1,125 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { dossiers, type Dossier } from "../../data/prep";
+
+export function getStaticPaths() {
+  return dossiers.map((d) => ({ params: { company: d.slug }, props: { d } }));
+}
+const { d } = Astro.props as { d: Dossier };
+
+// Prefer what they're asking NOW; fall back to all-time only if there is no
+// recent window, and say which one is on screen so the two are never confused.
+const top = d.questions.sixMonths.length ? d.questions.sixMonths : d.questions.allTime;
+const windowLabel = d.questions.sixMonths.length ? "asked in the last 6 months" : "all-time";
+---
+
+<BaseLayout
+  title={`${d.company} interview prep — Brian Wonjun Lee`}
+  description={`Interview preparation for ${d.company}.`}
+  noindex
+>
+  <main class="wrap prep-wrap">
+    <a href="/prep" class="prep-back">← All prep</a>
+    <h1 class="font-display prep-h1">{d.company}</h1>
+    <p class="prep-summary">{d.formatIntel.summary}</p>
+
+    <h2 class="font-display prep-h2">The rounds</h2>
+    <div class="prep-stack">
+      {d.formatIntel.rounds.map((r, i) => (
+        <section class="prep-card">
+          <p class="prep-tag">{String(i + 1).padStart(2, "0")} · {r.length}</p>
+          <h3 class="font-display prep-card-t">{r.name}</h3>
+          <p class="prep-tests">{r.tests}</p>
+          <p class="prep-line"><strong>Really scoring:</strong> {r.scoring}</p>
+          <p class="prep-line prep-dim"><strong>Prep:</strong> {r.prep}</p>
+        </section>
+      ))}
+    </div>
+
+    <h2 class="font-display prep-h2">Likely questions</h2>
+    {top.length === 0 ? (
+      <p class="prep-gap">{d.questions.note}</p>
+    ) : (
+      <>
+        <p class="prep-tag prep-tag-loose">Ranked by frequency · {windowLabel}</p>
+        <ol class="prep-q">
+          {top.map((q) => (
+            <li>
+              <a href={q.link} target="_blank" rel="noopener" class="prep-q-link">{q.title}</a>
+              <span class={`prep-diff prep-diff-${q.difficulty.toLowerCase()}`}>{q.difficulty}</span>
+              <span class="prep-freq">{q.frequency}%</span>
+            </li>
+          ))}
+        </ol>
+      </>
+    )}
+
+    <h2 class="font-display prep-h2">Your stories</h2>
+    {d.behavioral.stories.length === 0 ? (
+      <p class="prep-gap">
+        No stories written yet. They map to: {d.behavioral.values.join(" · ")}
+      </p>
+    ) : (
+      <div class="prep-stack">
+        {d.behavioral.stories.map((s) => (
+          <section class="prep-card">
+            <p class="prep-tag">{s.mapsTo}</p>
+            <h3 class="font-display prep-card-t">{s.story}</h3>
+            <p class="prep-prompt">{s.prompt}</p>
+            <p class="prep-star">{s.situation} {s.task} {s.action} {s.result}</p>
+          </section>
+        ))}
+      </div>
+    )}
+
+    <h2 class="font-display prep-h2">Ask them</h2>
+    <ul class="prep-ask">{d.askThem.map((q) => <li>{q}</li>)}</ul>
+
+    <p class="prep-updated">Updated {d.updated}</p>
+  </main>
+</BaseLayout>
+
+<style>
+  .prep-wrap { padding-block: clamp(3.5rem, 9vh, 6rem); max-width: 820px; }
+  .prep-back { font-family: var(--font-mono); font-size: 0.8rem; color: var(--color-faint); text-decoration: none; }
+  .prep-back:hover { color: var(--color-cobalt); }
+  .prep-h1 { font-size: clamp(2rem, 5vw, 3rem); letter-spacing: -0.03em; margin: 0.6rem 0 1rem; }
+  .prep-summary { color: var(--color-muted); line-height: 1.75; margin: 0; max-width: 62ch; }
+  .prep-h2 { margin: 2.8rem 0 1rem; font-size: 1.3rem; letter-spacing: -0.015em; }
+
+  .prep-stack { display: grid; gap: 0.85rem; }
+  .prep-card { border: 1px solid var(--color-line); border-radius: 12px; padding: 1.1rem 1.25rem; }
+  .prep-tag {
+    font-family: var(--font-mono); font-size: 0.71rem; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--color-faint); margin: 0;
+  }
+  .prep-tag-loose { margin-bottom: 0.6rem; }
+  .prep-card-t { margin: 0.35rem 0 0.5rem; font-size: 1.05rem; }
+  .prep-tests { margin: 0 0 0.5rem; color: var(--color-muted); line-height: 1.6; }
+  .prep-line { margin: 0 0 0.4rem; line-height: 1.6; }
+  .prep-line:last-child { margin-bottom: 0; }
+  .prep-dim { color: var(--color-muted); }
+
+  /* The honest empty state. Deliberately reads as a note, not as a broken table. */
+  .prep-gap {
+    color: var(--color-muted); line-height: 1.75;
+    border-left: 2px solid var(--color-line); padding-left: 1rem; margin: 0; max-width: 62ch;
+  }
+
+  .prep-q { margin: 0; padding-left: 1.4rem; }
+  .prep-q li { line-height: 2; }
+  .prep-q-link { color: inherit; text-decoration: none; border-bottom: 1px solid var(--color-line); }
+  .prep-q-link:hover { color: var(--color-cobalt); border-bottom-color: var(--color-cobalt); }
+  .prep-diff, .prep-freq { font-family: var(--font-mono); font-size: 0.71rem; letter-spacing: 0.04em; }
+  .prep-diff { margin-left: 0.5rem; }
+  .prep-diff-easy { color: #3f9e6b; }
+  .prep-diff-medium { color: #b8862f; }
+  .prep-diff-hard { color: #c2554d; }
+  .prep-freq { margin-left: 0.4rem; color: var(--color-faint); }
+
+  .prep-prompt { margin: 0 0 0.5rem; color: var(--color-muted); font-style: italic; }
+  .prep-star { margin: 0; line-height: 1.75; }
+
+  .prep-ask { line-height: 1.95; margin: 0; padding-left: 1.4rem; color: var(--color-muted); }
+  .prep-updated { margin-top: 3rem; font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-faint); }
+</style>

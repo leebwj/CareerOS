@@ -1,0 +1,77 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { dossiers } from "../../data/prep";
+---
+
+<BaseLayout
+  title="Interview prep — Brian Wonjun Lee"
+  description="Per-company interview preparation."
+  noindex
+>
+  <main class="wrap prep-wrap">
+    <p class="kicker">Prep</p>
+    <h1 class="font-display prep-h1">Interview prep</h1>
+    <p class="prep-lede">
+      What the rounds are, what each one is actually scoring, and which of my own
+      stories to tell. One dossier per company — researched when an interview lands,
+      not guessed from a question list.
+    </p>
+
+    {dossiers.length === 0 && <p class="prep-empty">No dossiers yet.</p>}
+
+    <ul class="prep-list">
+      {dossiers.map((d) => (
+        <li>
+          <a href={`/prep/${d.slug}`} class="prep-row">
+            <span class="font-display prep-co">{d.company}</span>
+            <span class="prep-meta">
+              {d.formatIntel.rounds.length} rounds
+              {d.questions.sixMonths.length > 0 && ` · ${d.questions.sixMonths.length} questions`}
+              {" · "}{d.updated}
+            </span>
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <p class="prep-note">
+      A company not listed here hasn't been researched yet — that's an honest gap,
+      not an omission. Formats differ enough between companies that generic prep is
+      worse than none.
+    </p>
+  </main>
+</BaseLayout>
+
+<style>
+  .prep-wrap { padding-block: clamp(4rem, 10vh, 7rem); max-width: 820px; }
+  .prep-h1 { font-size: clamp(2rem, 5vw, 3rem); letter-spacing: -0.03em; margin: 0.4rem 0 0.9rem; }
+  .prep-lede { color: var(--color-muted); line-height: 1.7; margin: 0 0 2.2rem; max-width: 58ch; }
+  .prep-empty { color: var(--color-muted); }
+  .prep-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.7rem; }
+
+  .prep-row {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;
+    padding: 1.05rem 1.2rem;
+    border: 1px solid var(--color-line); border-radius: 12px;
+    text-decoration: none; color: inherit;
+    transition: border-color 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
+  }
+  .prep-row:hover, .prep-row:focus-visible {
+    border-color: var(--color-cobalt);
+    background: var(--color-card);
+    transform: translateY(-1px);
+  }
+  .prep-co { font-weight: 600; font-size: 1.05rem; }
+  .prep-meta { font-family: var(--font-mono); font-size: 0.78rem; color: var(--color-faint); white-space: nowrap; }
+
+  .prep-note {
+    margin-top: 2.4rem; padding-left: 1rem;
+    border-left: 2px solid var(--color-line);
+    color: var(--color-faint); line-height: 1.7; font-size: 0.92rem; max-width: 58ch;
+  }
+
+  @media (max-width: 560px) {
+    .prep-row { flex-direction: column; gap: 0.3rem; }
+    .prep-meta { white-space: normal; }
+  }
+</style>
