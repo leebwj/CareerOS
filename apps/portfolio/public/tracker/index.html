@@ -82,6 +82,8 @@
   .badge.cat { color:var(--cobalt-deep); border-color:rgba(111,136,207,.4); }
   .badge.term { color:var(--muted); border-color:var(--line); }
   .badge.hot { color:#ff8a5c; border-color:rgba(255,138,92,.55); background:rgba(255,138,92,.1); font-weight:700; }
+  a.badge.prep { color:var(--cobalt-deep); border-color:rgba(111,136,207,.55); text-decoration:none; }
+  a.badge.prep:hover { background:rgba(111,136,207,.12); }
   .badge.fit-s { color:#e5c06a; border-color:rgba(229,192,106,.5); }
   .badge.fit-g { color:var(--muted); border-color:var(--line); }
   .row.hot-row { border-color:rgba(255,138,92,.32); }
@@ -152,6 +154,17 @@
   // "target" is computed by the grabber (relevant role at a desirable company) → r.target
   const LS = "careeros-tracker-v1";
   const STAGES = ["Applied", "OA / Screen", "Interview", "Offer", "Rejected", "Ghosted"];
+
+  // Companies that actually have a dossier at /prep/<slug>. The badge is gated on
+  // this rather than slugifying the company name, because the feed carries ~1700
+  // companies against a handful of dossiers — a blind link would 404 almost every
+  // time. It also carries the SAME company under more than one name ("Palantir"
+  // and "Palantir Technologies" are both live), so aliases map to one slug.
+  // Add an entry here when a dossier is authored.
+  const PREP = { "palantir": "palantir", "palantir technologies": "palantir", "google": "google" };
+  const prepSlug = (company) => PREP[String(company || "").trim().toLowerCase()] || "";
+  // Stages where prep is what you need next: "OA / Screen" and "Interview".
+  const PREP_STAGES = /interview|onsite|oa|screen/i;
 
   const LS_BAK = LS + "-lastgood";
   let roles = [], state = { s: {}, hidden: {} }, view = "inbox", fNew = false, fTgt = false, fHot = false, fFit = false, fGroup = false, fCyc = false;
@@ -455,6 +468,7 @@
         <div class="r-sub">
           ${r.fit >= 0.6 ? '<span class="badge fit-s" title="Strong fit">⭐</span>' : r.fit >= 0.48 ? '<span class="badge fit-g" title="Good fit">◐</span>' : ""}
           ${isHot ? '<span class="badge hot">🔥 hot</span>' : ""}
+          ${PREP_STAGES.test(s.st || "") && prepSlug(r.company) ? `<a class="badge prep" href="https://leebrian.dev/prep/${prepSlug(r.company)}" target="_blank" rel="noopener" title="Interview prep for ${esc(r.company)}">📋 prep</a>` : ""}
           ${isNew ? '<span class="badge new">new</span>' : ""}
           ${isTgt ? '<span class="badge tgt">target</span>' : ""}
           <span class="badge cat">${esc(r.category)}</span>
