@@ -89,6 +89,10 @@ const ATS_TARGETS = {
     // trip the stale-board alarm every run)
     "Block (Square)": "block", Peloton: "peloton", Box: "boxinc", "Khan Academy": "khanacademy",
     Coursera: "coursera", Calm: "calm",
+    // v6 (2026-08-04) — found by discover.mjs and identity-verified against the
+    // board's own name; slug-squatters like greenhouse/bethesda (a physical
+    // therapy practice) and ashby/playground (a B2B SaaS co) were rejected.
+    Remedy: "remedy", "Crystal Dynamics": "crystaldynamics",
   },
   ashby: {
     OpenAI: "openai", Notion: "notion", Linear: "linear", Ramp: "ramp",
@@ -106,6 +110,9 @@ const ATS_TARGETS = {
     Speak: "speak", Abridge: "abridge", Gamma: "gamma", Poolside: "poolside", Zapier: "zapier",
     // v5 (2026-07-24)
     Granola: "granola", Quora: "quora",
+    // v6 (2026-08-04) — discover.mjs; Supercell confirmed by its own titles
+    // (Clash of Clans, Brawl Stars), Midjourney by its engineering roles
+    Supercell: "supercell", Midjourney: "midjourney",
   },
   lever: {
     Palantir: "palantir", Spotify: "spotify", Larian: "larian", Illumination: "illumination",
@@ -162,7 +169,13 @@ const ART_RX = /\b(3d artist|character artist|environment artist|concept artist|
 // design is checked FIRST and routed to Hardware, so the design bucket means
 // what Brian means by it.
 const HW_DESIGN_RX = /\b(asic|vlsi|\brtl\b|register transfer|physical design|design verification|\bdft\b|\bsoc\b|silicon|semiconductor|standard cell|floorplan|place and route|synthesis and implementation|static timing|timing analysis|analog|mixed[- ]signal|\bpcb\b|schematic|circuit design|chip design\w*|hardware design\w*|mechanical design\w*|electrical design\w*|electronic design\w*|thermal design\w*|packaging design\w*|structures design\w*|structural design\w*|harness design\w*|layout design\w*|\brfic\b|\bbaw\b|\brcdd\b|filter design\w*|\bhvac\b|piping|\bcad\b|design for manufactur\w*|\bdfm\b|test hardware|cache controller|memory controller|\bdram\b|\bhbm\b|\bpll\b|phase[- ]locked|control design|system design engineer|power design|\brf design|antenna|optical design|process design|tool design|die design|package design|verification engineer)\b/i;
-const DESIGN_RX = /\b(product design(er)?|ux|ui designer|ui\/ux|user experience|user interface|user research(er)?|interaction design|visual design|brand design|graphic design|motion design|industrial design|service design|design system|design research|content design|\bdesigner\b|design engineer|design technolog\w*|prototyper|human interface)\b/i;
+// Every big company names design differently and a generic list misses them:
+// Apple's UX org is HUMAN INTERFACE (and its "Product Design" is mechanical
+// engineering); Google ships UX Engineer, UX Writer and Design Technologist;
+// Meta uses Content Design; games use UI Artist and Level Designer. The list is
+// deliberately vocabulary-wide so a role is caught whatever its employer calls
+// it — HW_DESIGN_RX runs first, so widening here cannot pull in chip work.
+const DESIGN_RX = /\b(product design(er)?|ux|ui designer|ui\/ux|ux\/ui|user experience|user interface|user research(er)?|ux research\w*|design research\w*|interaction design\w*|visual design\w*|brand design\w*|graphic design\w*|motion design\w*|industrial design\w*|service design\w*|experience design\w*|communications? design\w*|content design\w*|conversation design\w*|design system\w*|design language|design technolog\w*|design program\w*|design ops|design operations|\bdesigner\b|design engineer|design lead|ux engineer|ui engineer|ux writer|ux content|web designer|digital designer|creative technolog\w*|prototyper|human interface|human factors|\bhci\b|usability|information architect\w*|\bui artist\b|\bux\/ui\b)\b/i;
 // Product management — was only matching "product manager", so APM/RPM/PM
 // programmes (which is how big tech actually names its intern product tracks)
 // all fell through to "Other".
