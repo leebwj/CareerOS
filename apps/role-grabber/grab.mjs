@@ -156,7 +156,17 @@ const SENIOR_RX = /\b(senior|staff|principal|director|manager|head of|vp|vice pr
 const GAME_RX = /\b(game|graphics|render(ing)?|technical artist|shader|unreal|unity|3d|gameplay|game engine|xr|augmented reality|virtual reality|mixed reality|spatial comput\w*|creative technolog\w*|creative cod\w*|creative develop\w*)\b/i;
 // pure art/creative roles Brian added to scope (2026-07-04) — niche but wanted
 const ART_RX = /\b(3d artist|character artist|environment artist|concept artist|texture artist|lighting artist|vfx artist|fx artist|cg artist|cgi artist|digital sculptor|3d modell?er|character modell?er|animator|character animator|technical animator|look[- ]?dev|\brigger\b|rigging artist|character td|creature td|compositor|matte painter|simulation artist|storyboard artist|3d generalist|game artist|game designer)\b/i;
-const DESIGN_RX = /\b(product design|ux|ui designer|user experience|user research|interaction design|visual design|brand design|graphic design|\bdesigner\b|design engineer|design technolog\w*|prototyper)\b/i;
+// "Design" is two completely different jobs and the feed conflated them: 23% of
+// the Design/UX bucket was ASIC/VLSI/mechanical work, because "design engineer"
+// matches "ASIC Design Engineer" and "Mechanical Design Engineer". Hardware
+// design is checked FIRST and routed to Hardware, so the design bucket means
+// what Brian means by it.
+const HW_DESIGN_RX = /\b(asic|vlsi|\brtl\b|register transfer|physical design|design verification|\bdft\b|\bsoc\b|silicon|semiconductor|standard cell|floorplan|place and route|synthesis and implementation|static timing|timing analysis|analog|mixed[- ]signal|\bpcb\b|schematic|circuit design|chip design|hardware design|mechanical design|electrical design|electronic design|thermal design|packaging design|\bhvac\b|piping|structural design|\bcad\b|design for manufactur\w*|\bdfm\b|test hardware|cache controller|memory controller|\bdram\b|\bhbm\b|\bpll\b|phase[- ]locked|control design|system design engineer|power design|\brf design|antenna|optical design|process design|tool design|die design|package design|verification engineer)\b/i;
+const DESIGN_RX = /\b(product design(er)?|ux|ui designer|ui\/ux|user experience|user interface|user research(er)?|interaction design|visual design|brand design|graphic design|motion design|industrial design|service design|design system|design research|content design|\bdesigner\b|design engineer|design technolog\w*|prototyper|human interface)\b/i;
+// Product management — was only matching "product manager", so APM/RPM/PM
+// programmes (which is how big tech actually names its intern product tracks)
+// all fell through to "Other".
+const PRODUCT_RX = /\b(product manager|product management|associate product manager|\bapm\b|rotational product manager|\brpm\b|technical product manager|product owner|product analyst|product strategy|product operations)\b/i;
 
 // ── inbox relevance gate — DROP wildly-unrelated roles so the inbox stays clean.
 // GUARDRAIL: exclude by SPECIFIC phrase/qualifier, NEVER by bare "engineer"/
@@ -166,12 +176,15 @@ const DESIGN_RX = /\b(product design|ux|ui designer|user experience|user researc
 // tech titles (supply chain, procurement, accounting, warehouse, solutions
 // architect) are deliberately NOT excluded — e.g. "ML Engineer - Supply Chain",
 // "Data Warehouse Software Engineer", "Software Engineer, Accounting" must survive.
-const EXCLUDE_RX = /\b(account executive|account manager|\baccountant\b|bookkeeper|sales representative|sales associate|sales manager|sales lead|sales development|sales engineer|account partner|\bsdr\b|\bbdr\b|business development representative|business development manager|pre[- ]?sales|sales operations|revenue operations|\brevops\b|revenue analyst|\brecruiter\b|recruiting|talent acquisition|\bsourcer\b|human resources|human resource|\bhr\b|business partner|people operations|people partner|people team|payroll|benefits administrator|compensation analyst|financial planning|fp&a|legal counsel|\bparalegal\b|\battorney\b|law clerk|financial analyst|finance manager|treasury|tax associate|tax analyst|\bauditor\b|\bactuary\b|marketing manager|marketing associate|marketing specialist|product marketing|developer marketing|growth marketing|brand manager|content strategist|content writer|copywriter|social media|public relations|communications manager|customer success|customer support|customer experience|support specialist|technical support|technical services|help desk|security officer|security guard|deal desk|strategic deals|deals lead|employee lifecycle|revenue transformation|marketing scientist|production assistant|\bambassador\b|order management|privacy counsel|\bcounsel\b|\bgrc\b|accounts payable|accounts receivable|marketing lead|influencer marketing|creator marketing|\brvp\b|regional vice president|inside sales|field sales|brand ambassador|grant writer|technical writer|proposal writer|executive assistant|administrative assistant|office manager|receptionist|facilities|\bbuyer\b|logistics coordinator|clinical|registered nurse|\bphysician\b|therapist|\bteacher\b|\btutor\b|\bbarista\b|\bcashier\b|retail associate|store manager|delivery driver|maintenance technician|field technician|installation technician|phlebotomist|dental|pharmac)\b/i;
+const EXCLUDE_RX = /\b(account executive|account manager|\baccountant\b|bookkeeper|sales representative|sales associate|sales manager|sales lead|sales development|sales engineer|account partner|\bsdr\b|\bbdr\b|business development representative|business development manager|pre[- ]?sales|sales operations|revenue operations|\brevops\b|revenue analyst|\brecruiter\b|recruiting|talent acquisition|\bsourcer\b|human resources|human resource|\bhr\b|business partner|people operations|people partner|people team|payroll|benefits administrator|compensation analyst|financial planning|fp&a|legal counsel|\bparalegal\b|\battorney\b|law clerk|financial analyst|finance manager|treasury|tax associate|tax analyst|\bauditor\b|\bactuary\b|marketing manager|marketing associate|marketing specialist|product marketing|developer marketing|growth marketing|brand manager|content strategist|content writer|copywriter|social media|public relations|communications manager|customer success|customer support|customer experience|support specialist|technical support|technical services|help desk|security officer|security guard|deal desk|strategic deals|deals lead|employee lifecycle|revenue transformation|marketing scientist|production assistant|\bambassador\b|order management|privacy counsel|\bcounsel\b|\bgrc\b|accounts payable|accounts receivable|marketing lead|influencer marketing|creator marketing|\brvp\b|regional vice president|inside sales|field sales|brand ambassador|grant writer|technical writer|proposal writer|executive assistant|administrative assistant|office manager|receptionist|facilities|\bbuyer\b|logistics coordinator|clinical|registered nurse|\bphysician\b|therapist|\bteacher\b|\btutor\b|\bbarista\b|\bcashier\b|retail associate|store manager|delivery driver|maintenance technician|field technician|installation technician|phlebotomist|dental|pharmac|landscape architect\w*|architectural intern|architectural design\w*|architectural draft\w*|\barchitecture intern\b|interior design|civil engineer|surveyor|estimator|cad drafter|drafting technician|fashion design|apparel design|textile design|floral design|set design|stage design|jewelry design|packaging engineer)\b/i;
 
 function categorize(title, sourceCategory) {
   if (ART_RX.test(title)) return "Art / Animation / VFX";
+  // hardware "design" before everything — an ASIC Design Engineer is not a designer
+  if (HW_DESIGN_RX.test(title)) return "Hardware";
   if (GAME_RX.test(title)) return "Graphics / Game / 3D";
   if (DESIGN_RX.test(title)) return "Design / UX";
+  if (PRODUCT_RX.test(title)) return "Product";
   const c = (sourceCategory || "").toLowerCase();
   if (c.includes("design")) return "Design / UX";
   if (c.includes("software")) return "Software Engineering";
@@ -219,7 +232,14 @@ function isUS(locations) {
     if (US_STATE.test(l) || US_STATE_NAME.test(l) || /\b(usa|united states|u\.s\.)\b/i.test(l)) return true;
     if (NON_US.test(l)) return false;          // global ATS boards return worldwide roles
     // bare metro shorthand the feeds use with no state at all
-    return /^remote$/i.test(l) || /remote.*(us|usa|united states)/i.test(l) || /\b(sf bay|bay area)\b/i.test(l) || /^(sf|la)$/i.test(l) || US_CITIES.test(l);
+    if (/^remote$/i.test(l) || /remote.*(us|usa|united states)/i.test(l) || /\b(sf bay|bay area)\b/i.test(l) || /^(sf|la)$/i.test(l) || US_CITIES.test(l)) return true;
+    // Some boards put a WORK MODE where the location goes — Cloudflare says
+    // "In-Office", SpaceX says "Flexible - Any SpaceX Site". There is no
+    // geography to test, so the filter was silently dropping real US roles
+    // (a Cloudflare SWE intern in Austin, TX was lost this way — the city was
+    // in the TITLE, not the location). No non-US signal + no geography at all
+    // means unknown, and unknown at a curated US-centric board is worth keeping.
+    return /^(in[- ]?office|on[- ]?site|onsite|hybrid|flexible|remote|various|multiple|any\b|n\/?a)/i.test(l) || !/[a-z]/i.test(l);
   });
 }
 
@@ -534,14 +554,18 @@ const TARGETS = new RegExp("\\b(" + [
 ].join("|") + ")\\b", "i");
 
 // role types Brian is targeting (product design · SWE · TA · game · graphics · data)
-const RELEVANT_RX = /\b(product design|ux|ui|interaction design|visual design|design engineer|ux engineer|software engineer|swe|full[- ]?stack|front[- ]?end|back[- ]?end|founding engineer|web develop|developer|engineer|graphics|render(ing)?|technical artist|shader|game|gameplay|3d|unreal|unity|creative technolog\w*|creative cod\w*|design technolog\w*|prototyper|member of technical staff|applied scientist|animator|\bartist\b|\bvfx\b|compositor|\brigger\b|look[- ]?dev|texture|lighting artist|environment artist)\b/i;
+// Design and product sit alongside SWE here, not below it — Brian applies to all
+// three at the same companies. Without the product-management terms, an APM/RPM
+// intern at a target company could never be flagged 🎯 (line ~777 gates on this).
+const RELEVANT_RX = /\b(product design(er)?|ux|ui|ui\/ux|user experience|user interface|user research(er)?|interaction design|visual design|motion design|industrial design|service design|design system|content design|human interface|design engineer|ux engineer|design technolog\w*|prototyper|product manager|product management|associate product manager|\bapm\b|rotational product manager|\brpm\b|technical product manager|product owner|software engineer|swe|full[- ]?stack|front[- ]?end|back[- ]?end|founding engineer|web develop|developer|engineer|graphics|render(ing)?|technical artist|shader|game|gameplay|3d|unreal|unity|creative technolog\w*|creative cod\w*|member of technical staff|applied scientist|animator|\bartist\b|\bvfx\b|compositor|\brigger\b|look[- ]?dev|texture|lighting artist|environment artist)\b/i;
 // …but NOT these — sales/marketing/support/ops roles that merely contain
 // "engineer"/"developer" (e.g. "Sales Engineer", "Salesforce Developer").
 const IRRELEVANT_RX = /\b(sales|marketing|solutions engineer|pre[- ]?sales|salesforce|account executive|\baccount\b|recruit|revenue|finance|accountant|legal|counsel|paralegal|\bgrc\b|compliance|customer success|support engineer|partnerships|go[- ]to[- ]market|\bgtm\b|talent)\b/i;
 const TITLE_TIER = [
   [1.0, /\b(graphics|render(ing)?|technical artist|shader|game|gameplay|engine|3d|unreal|unity|creative technolog|design engineer|ux engineer)\b/i],
-  [0.7, /\b(product design|ux|ui|interaction design|visual design|software engineer|swe|full[- ]?stack|front[- ]?end|founding engineer|web develop)\b/i],
-  [0.3, /\b(data|machine learning|\bml\b|\bai\b|product manager|research|mobile|ios|android|developer|engineer)\b/i],
+  // design + product rank WITH software engineering, not under it
+  [0.7, /\b(product design(er)?|ux|ui|ui\/ux|user experience|user interface|user research(er)?|interaction design|visual design|motion design|industrial design|design system|content design|human interface|product manager|product management|associate product manager|\bapm\b|rotational product manager|technical product manager|product owner|software engineer|swe|full[- ]?stack|front[- ]?end|founding engineer|web develop)\b/i],
+  [0.3, /\b(data|machine learning|\bml\b|\bai\b|research|mobile|ios|android|developer|engineer)\b/i],
 ];
 const SKILL_RX = [/c\+\+/i, /\b(opengl|webgl|glsl|hlsl|vulkan)\b/i, /\bunreal\b/i, /\bunity\b/i, /\breact\b/i, /\b(typescript|javascript)\b/i, /\bnext\.?js\b/i, /\bfigma\b/i, /\bpython\b/i, /\b(three\.?js|r3f)\b/i];
 
