@@ -493,6 +493,55 @@ async function fromNetflixEightfold() {
   });
 }
 
+// Microsoft is on the SAME Eightfold platform as Netflix, just under its own
+// domain — found by driving jobs.careers.microsoft.com in a browser and watching
+// which JSON it actually calls. Every documented Microsoft careers endpoint I
+// tried was dead (gcsservices.* no longer serves a matching TLS cert), verified
+// identical from a US runner so it is not geo-blocking. Without this, Microsoft
+// reaches the feed only if Simplify happens to carry it — which is how a
+// Software Engineer Intern - CoreAI posting went missing on 2026-08-03.
+async function fromMicrosoftCareers() {
+  const out = [];
+  const seen = new Set();
+  // The API hard-caps a page at 10 rows whatever `num` says, and reports the
+  // true total in data.count — so step by 10 and bound by that. Passing
+  // `location` over-filters badly (query=intern drops from 41 hits to 8), so
+  // it's omitted and isUS() does the filtering downstream as for every source.
+  const PAGE = 10, CAP = 400;
+  for (const query of ["intern", "university", "graduate", "designer", "user experience", "product manager"]) {
+    let count = Infinity;
+    for (let start = 0; start < Math.min(count, CAP); start += PAGE) {
+      const u = `https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com&query=${encodeURIComponent(query)}&start=${start}&num=${PAGE}&hl=en`;
+      const r = await fetch(u, { headers: { "user-agent": "Mozilla/5.0 (careeros-role-grabber)", accept: "application/json" } });
+      if (!r.ok) throw new Error(`${r.status} microsoft pcsx`);
+      const d = await r.json();
+      count = d?.data?.count ?? count;
+      const page = d?.data?.positions || d?.positions || [];
+      if (!page.length) break;
+      for (const p of page) {
+        const id = p.id || p.atsJobId || p.displayJobId;
+        if (!id || seen.has(id)) continue;
+        seen.add(id);
+        if (SENIOR_RX.test(p.name || "")) continue;
+        const loc = (p.locations && p.locations[0]) || p.location || "";
+        out.push({
+          company: "Microsoft",
+          title: p.name,
+          category: categorize(p.name, p.department || ""),
+          locations: [String(loc)].filter(Boolean),
+          url: `https://jobs.careers.microsoft.com/global/en/job/${p.atsJobId || id}`,
+          posted: p.postedTs ? new Date(p.postedTs).toISOString().slice(0, 10)
+                : p.creationTs ? new Date(p.creationTs).toISOString().slice(0, 10) : "",
+          term: termFromTitle(p.name),
+          level: levelFromTitle(p.name),
+          source: "microsoft",
+        });
+      }
+    }
+  }
+  return out;
+}
+
 async function fromWorkable(company, account) {
   const r = await fetch(`https://apply.workable.com/api/v3/accounts/${account}/jobs`, {
     method: "POST",
@@ -747,6 +796,9 @@ await Promise.all([
   fromNetflixEightfold()
     .then((rows) => { collectedATS.push(...rows); atsCounts["Netflix(eightfold)"] = rows.length; })
     .catch((e) => errors.push(`netflix: ${e.message}`)),
+  fromMicrosoftCareers()
+    .then((rows) => { collectedATS.push(...rows); atsCounts["Microsoft(pcsx)"] = rows.length; })
+    .catch((e) => errors.push(`microsoft: ${e.message}`)),
 ]);
 
 // stale-board tripwire (research trap: 200 + empty ≠ healthy)
