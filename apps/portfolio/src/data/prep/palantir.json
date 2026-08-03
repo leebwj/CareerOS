@@ -1,0 +1,78 @@
+{
+  "slug": "palantir",
+  "company": "Palantir",
+  "datasetName": "Palantir Technologies",
+  "updated": "2026-08-03",
+  "formatIntel": {
+    "summary": "Not a LeetCode loop. Palantir tests how you handle undefined scope, unfamiliar code, and unfamiliar systems. Know Foundry (commercial) from Gotham (government) — surface-level answers about 'interesting problems' get filtered at the screen.",
+    "rounds": [
+      {
+        "name": "Recruiter screen",
+        "length": "30 min",
+        "tests": "Background, motivation, culture fit",
+        "scoring": "Whether you can tell Foundry from Gotham and say something specific about why Palantir",
+        "prep": "One concrete sentence on why this company, not 'interesting problems'."
+      },
+      {
+        "name": "Online assessment",
+        "length": "60–90 min, HackerRank",
+        "tests": "Coding + SQL + sometimes an API task",
+        "scoring": "Implementation-heavy mini-projects, not abstract puzzles",
+        "prep": "Python for speed. Practice writing working code fast over clever code."
+      },
+      {
+        "name": "Decomposition",
+        "length": "60 min, CodePair",
+        "tests": "A vague real-world problem with undefined scope (chess game, parking garage, disease spread)",
+        "scoring": "Whether you CLARIFY BEFORE BUILDING — subproblem boundaries and edge cases",
+        "prep": "Practice asking scoping questions out loud before writing anything."
+      },
+      {
+        "name": "Re-engineering",
+        "length": "60 min, CodePair",
+        "tests": "Find and fix a bug in 500–1000 lines of unfamiliar code",
+        "scoring": "Explicitly NOT speed — whether your search process explains why nothing else broke",
+        "prep": "Ask what the intended behaviour is before reading. Narrate the search."
+      },
+      {
+        "name": "Learning",
+        "length": "60 min, CodePair",
+        "tests": "An unfamiliar system/API with minimal docs",
+        "scoring": "Building a mental model from little information; hypothesis testing",
+        "prep": "Narrate understanding, uncertainties and your testing plan aloud."
+      },
+      {
+        "name": "Coding",
+        "length": "60 min, CodePair",
+        "tests": "Medium/hard DS&A — plus ~20 min of behavioral",
+        "scoring": "The behavioral portion is SCORED, not a warm-up",
+        "prep": "Have stories ready in this round, not just algorithms."
+      },
+      {
+        "name": "Hiring manager final",
+        "length": "60 min, video",
+        "tests": "Project deep-dive, mission alignment, biggest failure",
+        "scoring": "'Missionaries rather than mercenaries'; exact metrics on your own projects",
+        "prep": "Know your numbers cold. Have a real failure with what you learned."
+      }
+    ]
+  },
+  "questions": {
+    "sixMonths": [],
+    "allTime": [],
+    "note": "No public question data for this company. That is expected for companies that do not run LeetCode-style rounds — work the format intel above instead."
+  },
+  "behavioral": {
+    "values": [
+      "Mission alignment",
+      "Ownership of outcomes",
+      "Working with messy real-world constraints"
+    ],
+    "stories": []
+  },
+  "askThem": [
+    "Which platform would I be closest to — Foundry or Gotham?",
+    "What does a forward-deployed engineer's first month actually look like?",
+    "How much of the work is customer-facing versus core platform?"
+  ]
+}
