@@ -512,14 +512,25 @@ async function fromMicrosoftCareers() {
   // true total in data.count — so step by 10 and bound by that. Passing
   // `location` over-filters badly (query=intern drops from 41 hits to 8), so
   // it's omitted and isUS() does the filtering downstream as for every source.
-  const PAGE = 10, CAP = 400;
-  for (const query of ["intern", "university", "graduate", "designer", "user experience", "product manager"]) {
+  // CAP is deliberately modest and requests are spaced — paginating hard across
+  // six queries earned a 429 from this API.
+  const PAGE = 10, CAP = 120;
+  for (const query of ["intern", "university graduate", "designer", "product manager"]) {
     let count = Infinity;
     for (let start = 0; start < Math.min(count, CAP); start += PAGE) {
       const u = `https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com&query=${encodeURIComponent(query)}&start=${start}&num=${PAGE}&hl=en`;
-      const r = await fetch(u, { headers: { "user-agent": "Mozilla/5.0 (careeros-role-grabber)", accept: "application/json" } });
-      if (!r.ok) throw new Error(`${r.status} microsoft pcsx`);
-      const d = await r.json();
+      // Sequentially this API is fine, but the grabber fires every source at
+      // once and it answers 429 under that load — losing the whole company for
+      // the run. Back off and retry rather than fetching less.
+      let r, d;
+      for (let attempt = 0; attempt < 4; attempt++) {
+        await new Promise((res) => setTimeout(res, attempt ? 1200 * attempt : 250));
+        r = await fetch(u, { headers: { "user-agent": "Mozilla/5.0 (careeros-role-grabber)", accept: "application/json" } });
+        if (r.ok) break;
+        if (r.status !== 429 && r.status !== 503) throw new Error(`${r.status} microsoft pcsx`);
+      }
+      if (!r.ok) throw new Error(`${r.status} microsoft pcsx (after retries)`);
+      d = await r.json();
       count = d?.data?.count ?? count;
       const page = d?.data?.positions || d?.positions || [];
       if (!page.length) break;
@@ -542,6 +553,80 @@ async function fromMicrosoftCareers() {
           source: "microsoft",
         });
       }
+    }
+  }
+  return out;
+}
+
+// Google has no usable careers API — v2 and v3 are both retired (404 from a US
+// runner too, so it is not geo-blocking). But the results page is server-
+// rendered and ships every record inside an AF_initDataCallback block, so a
+// plain fetch + parse gets the same data a browser would, with no Playwright
+// dependency in CI.
+//
+// This one matters: a Google 2027 internship opened and the feed missed it
+// entirely — Brian only found out because someone posted it on LinkedIn.
+//
+// Record shape (positional, hence the index comments):
+//   [0] jobId  [1] title  [2] apply url  [7] company  [9] locations  [12] created(epoch s)
+function parseGoogleBlock(html) {
+  const blocks = [...html.matchAll(/AF_initDataCallback\((\{.*?\})\);<\/script>/gs)];
+  for (const b of blocks) {
+    const raw = b[1];
+    const s = raw.indexOf("data:") + 5;
+    if (s < 5) continue;
+    let depth = 0, end = -1;
+    for (let i = s; i < raw.length; i++) {
+      const c = raw[i];
+      if (c === "[") depth++;
+      else if (c === "]" && --depth === 0) { end = i + 1; break; }
+    }
+    if (end < 0) continue;
+    let arr;
+    try { arr = JSON.parse(raw.slice(s, end)); } catch { continue; }
+    // There are several AF blocks and the first one (ds:0) is a filter list
+    // whose rows are ALSO arrays of strings — "typeof [1] === string" happily
+    // matches it and yields "DeepMind" as a job title. Require the shape of a
+    // real record: a long numeric id at [0] and an apply URL at [2].
+    const jobs = Array.isArray(arr?.[0]) ? arr[0] : null;
+    const looksLikeJob = (j) => Array.isArray(j) && /^\d{8,}$/.test(String(j[0] ?? "")) && typeof j[1] === "string" && /^https?:\/\//.test(String(j[2] ?? ""));
+    if (jobs && jobs.length && looksLikeJob(jobs[0])) return jobs.filter(looksLikeJob);
+  }
+  return [];
+}
+
+async function fromGoogleCareers() {
+  const out = [];
+  const seen = new Set();
+  for (const q of ["intern", "student researcher", "university graduate", "designer", "user experience", "product manager"]) {
+    for (let page = 1; page <= 10; page++) {
+      const u = `https://www.google.com/about/careers/applications/jobs/results?q=${encodeURIComponent(q)}&page=${page}`;
+      const r = await fetch(u, { headers: { "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36", "accept-language": "en-US,en;q=0.9" } });
+      if (!r.ok) throw new Error(`${r.status} google careers`);
+      const jobs = parseGoogleBlock(await r.text());
+      if (!jobs.length) break;
+      let added = 0;
+      for (const j of jobs) {
+        const id = j[0], title = j[1];
+        if (!id || !title || seen.has(id)) continue;
+        seen.add(id); added++;
+        if (SENIOR_RX.test(title)) continue;
+        // [9] is [[ "Mountain View, CA, USA", [...], "Mountain View", null, "CA" ], …]
+        const locs = (Array.isArray(j[9]) ? j[9] : []).map((L) => (Array.isArray(L) ? L[0] : L)).filter((x) => typeof x === "string");
+        const ts = Array.isArray(j[12]) ? j[12][0] : null;
+        out.push({
+          company: "Google",
+          title,
+          category: categorize(title, ""),
+          locations: locs.length ? locs : [],
+          url: `https://www.google.com/about/careers/applications/jobs/results/${id}`,
+          posted: ts ? new Date(ts * 1000).toISOString().slice(0, 10) : "",
+          term: termFromTitle(title),
+          level: levelFromTitle(title),
+          source: "google",
+        });
+      }
+      if (!added) break;                                  // pagination exhausted
     }
   }
   return out;
@@ -804,6 +889,9 @@ await Promise.all([
   fromMicrosoftCareers()
     .then((rows) => { collectedATS.push(...rows); atsCounts["Microsoft(pcsx)"] = rows.length; })
     .catch((e) => errors.push(`microsoft: ${e.message}`)),
+  fromGoogleCareers()
+    .then((rows) => { collectedATS.push(...rows); atsCounts["Google(careers)"] = rows.length; })
+    .catch((e) => errors.push(`google: ${e.message}`)),
 ]);
 
 // stale-board tripwire (research trap: 200 + empty ≠ healthy)
