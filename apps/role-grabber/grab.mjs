@@ -130,7 +130,10 @@ const ATS_TARGETS = {
     NVIDIA: { tenant: "nvidia", wd: 5, site: "NVIDIAExternalCareerSite" },
     Adobe: { tenant: "adobe", wd: 5, site: "external_experienced" },
     Intel: { tenant: "intel", wd: 1, site: "External" },
-    Disney: { tenant: "disney", wd: 5, site: "disneycareer" },
+    // Disney's board is large enough that ILM and Lucasfilm never surface in a
+    // newest-200 sample — both were counted as unsourced companies until the
+    // sweeps landed.
+    Disney: { tenant: "disney", wd: 5, site: "disneycareer", sweeps: ["Industrial Light", "Lucasfilm", "intern"] },
     Autodesk: { tenant: "autodesk", wd: 1, site: "Ext" },
     "Warner Bros Games": { tenant: "warnerbros", wd: 5, site: "global" },
     Pixar: { tenant: "pixar", wd: 501, site: "Pixar_External_Career_Site" },
@@ -139,12 +142,25 @@ const ATS_TARGETS = {
     // v4 (2026-07-24) — probe-verified; adapter samples the newest ~200/tenant
     Salesforce: { tenant: "salesforce", wd: 12, site: "External_Career_Site" },
     Micron: { tenant: "micron", wd: 1, site: "External" },
-    "Xbox Game Studios": { tenant: "xboxgaming", wd: 1, site: "External" },  // Microsoft Gaming central board (Xbox/ActiBlizz/ZeniMax)
+    // MISLABELLED until 2026-08-04: this tenant is NOT a Microsoft Gaming
+    // central board. Pulling all 57 rows shows only Activision Blizzard King
+    // studios (Treyarch, Infinity Ward, Sledgehammer, Beenox, Demonware, King);
+    // searches for Bethesda, ZeniMax, Mojang and Obsidian all return 0. The
+    // Xbox first-party studios post on Microsoft's own pcsx API instead, which
+    // fromMicrosoftCareers already covers, and ZeniMax runs a separate iCIMS
+    // portal. The old name made three separate gaps look covered.
+    "Activision Blizzard King": { tenant: "xboxgaming", wd: 1, site: "External" },
+    // v6 (2026-08-04) — 336 jobs incl. "Game Operations Intern"
+    Tencent: { tenant: "tencent", wd: 1, site: "Tencent_Careers" },
+    // Snap is Workday but on the myworkdaysite.com host, and its apply URLs
+    // sit under /recruiting/… rather than /en-US/…. Display name must be
+    // "Snapchat" — that is what the TARGETS list matches, "Snap" would not.
+    Snapchat: { tenant: "snapchat", wd: 1, site: "snap", host: "wd1.myworkdaysite.com", urlBase: "https://wd1.myworkdaysite.com/recruiting/snapchat/snap" },
     // v5 (2026-07-24)
     Zoom: { tenant: "zoom", wd: 5, site: "Zoom" },
     PayPal: { tenant: "paypal", wd: 1, site: "jobs" },
   },
-  workable: { "Square Enix": "square-enix" },
+  workable: { "Square Enix": "square-enix", "Hugging Face": "huggingface" },
   recruitee: { Framestore: "framestore" },
 };
 // every company we source directly IS a desirable target-company (curated), so
@@ -408,22 +424,34 @@ function workdayPosted(text) {
   return "";
 }
 
-async function fromWorkday(company, { tenant, wd, site }) {
-  const api = `https://${tenant}.wd${wd}.myworkdayjobs.com/wday/cxs/${tenant}/${site}/jobs`;
-  const base = `https://${tenant}.wd${wd}.myworkdayjobs.com/en-US/${site}`;
+// `host`   — some tenants live on myworkdaysite.com rather than myworkdayjobs.com
+//            (Snap), and the apply-URL base differs from the API host there.
+// `sweeps`  — a huge tenant sampled newest-first buries whole business units:
+//            Disney's board is big enough that ILM and Lucasfilm never appear
+//            in the newest 200. Extra searchText passes surface them.
+async function fromWorkday(company, { tenant, wd, site, host, urlBase, sweeps }) {
+  const h = host || `${tenant}.wd${wd}.myworkdayjobs.com`;
+  const api = `https://${h}/wday/cxs/${tenant}/${site}/jobs`;
+  const base = urlBase || `https://${h}/en-US/${site}`;
   const out = [];
-  // large tenants (NVIDIA ~2000) → cap at a sample of the newest ~200
-  for (let offset = 0; offset < 200; offset += 20) {
-    const r = await fetch(api, {
-      method: "POST",
-      headers: { "content-type": "application/json", "user-agent": "careeros-role-grabber" },
-      body: JSON.stringify({ appliedFacets: {}, limit: 20, offset, searchText: "" }),
-    });
-    if (!r.ok) throw new Error(`${r.status} workday ${company}`);
-    const d = await r.json();
-    const page = d.jobPostings || [];
-    out.push(...page);
-    if (page.length < 20) break;
+  const seen = new Set();
+  for (const searchText of ["", ...(sweeps || [])]) {
+    // large tenants (NVIDIA ~2000) → cap at a sample of the newest ~200
+    for (let offset = 0; offset < 200; offset += 20) {
+      const r = await fetch(api, {
+        method: "POST",
+        headers: { "content-type": "application/json", "user-agent": "careeros-role-grabber" },
+        body: JSON.stringify({ appliedFacets: {}, limit: 20, offset, searchText }),
+      });
+      if (!r.ok) throw new Error(`${r.status} workday ${company}`);
+      const d = await r.json();
+      const page = d.jobPostings || [];
+      for (const p of page) {
+        const k = p.externalPath || p.title;
+        if (k && !seen.has(k)) { seen.add(k); out.push(p); }
+      }
+      if (page.length < 20) break;
+    }
   }
   // some tenants (Disney) return occasional rows with no title — drop them
   return out.filter((j) => j.title && !SENIOR_RX.test(j.title)).map((j) => ({
@@ -643,6 +671,63 @@ async function fromGoogleCareers() {
     }
   }
   return out;
+}
+
+// Rippling runs its own ATS and publishes the whole board in one call — no
+// pagination, no auth. 750 rows.
+async function fromRippling() {
+  const r = await fetch("https://api.rippling.com/platform/api/ats/v1/board/rippling/jobs", {
+    headers: { "user-agent": "Mozilla/5.0 (careeros-role-grabber)", accept: "application/json" },
+  });
+  if (!r.ok) throw new Error(`${r.status} rippling`);
+  const d = await r.json();
+  return (Array.isArray(d) ? d : d.items || d.jobs || [])
+    .filter((j) => j?.name && !SENIOR_RX.test(j.name))
+    .map((j) => ({
+      company: "Rippling",
+      title: j.name,
+      category: categorize(j.name, j.department?.label || ""),
+      locations: [j.workLocation?.label || ""].filter(Boolean),
+      url: j.url || `https://ats.rippling.com/rippling/jobs/${j.uuid}`,
+      posted: "",                                  // board exposes no post date
+      term: termFromTitle(j.name),
+      level: levelFromTitle(j.name),
+      source: "rippling",
+    }));
+}
+
+// Atlassian fronts an iCIMS portal with its own JSON endpoint — one call for
+// the entire board, no auth.
+async function fromAtlassian() {
+  // Atlassian 403s on a User-Agent containing "role-grabber" — a bot-word
+  // filter. The identical request with any other UA returns 200, so this one
+  // sends a plain browser string rather than our usual identifier.
+  const r = await fetch("https://www.atlassian.com/endpoint/careers/listings", {
+    headers: {
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      accept: "application/json,text/plain,*/*",
+      referer: "https://www.atlassian.com/company/careers/all-jobs",
+    },
+  });
+  if (!r.ok) throw new Error(`${r.status} atlassian`);
+  const d = await r.json();
+  return (Array.isArray(d) ? d : d.jobs || [])
+    .filter((j) => j?.title && !SENIOR_RX.test(j.title))
+    .map((j) => {
+      const upd = j.portalJobPost?.updatedDate;                 // "2026-07-30 01:00 PM"
+      const iso = upd ? new Date(String(upd).replace(" ", "T").slice(0, 19)) : null;
+      return {
+        company: "Atlassian",
+        title: j.title,
+        category: categorize(j.title, j.category || ""),
+        locations: Array.isArray(j.locations) ? j.locations : [],
+        url: j.applyUrl || j.portalJobPost?.portalUrl || "",
+        posted: iso && !isNaN(iso) ? iso.toISOString().slice(0, 10) : "",
+        term: termFromTitle(j.title),
+        level: levelFromTitle(j.title),
+        source: "atlassian",
+      };
+    });
 }
 
 async function fromWorkable(company, account) {
@@ -905,6 +990,12 @@ await Promise.all([
   fromGoogleCareers()
     .then((rows) => { collectedATS.push(...rows); atsCounts["Google(careers)"] = rows.length; })
     .catch((e) => errors.push(`google: ${e.message}`)),
+  fromRippling()
+    .then((rows) => { collectedATS.push(...rows); atsCounts["Rippling(own)"] = rows.length; })
+    .catch((e) => errors.push(`rippling: ${e.message}`)),
+  fromAtlassian()
+    .then((rows) => { collectedATS.push(...rows); atsCounts["Atlassian(icims)"] = rows.length; })
+    .catch((e) => errors.push(`atlassian: ${e.message}`)),
 ]);
 
 // stale-board tripwire (research trap: 200 + empty ≠ healthy)
