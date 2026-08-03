@@ -182,9 +182,13 @@ const ART_RX = /\b(3d artist|character artist|environment artist|concept artist|
 // "Design" is two completely different jobs and the feed conflated them: 23% of
 // the Design/UX bucket was ASIC/VLSI/mechanical work, because "design engineer"
 // matches "ASIC Design Engineer" and "Mechanical Design Engineer". Hardware
+// NOTE "product design engineer": that is MECHANICAL engineering at Apple and
+// most hardware companies — Beats, Vision Pro, Interconnect, Core Systems are
+// all ME roles. "Product DESIGNER" (no "engineer") is the UX job. That single
+// word is the whole distinction, and it generalises well beyond Apple.
 // design is checked FIRST and routed to Hardware, so the design bucket means
 // what Brian means by it.
-const HW_DESIGN_RX = /\b(asic|vlsi|\brtl\b|register transfer|physical design|design verification|\bdft\b|\bsoc\b|silicon|semiconductor|standard cell|floorplan|place and route|synthesis and implementation|static timing|timing analysis|analog|mixed[- ]signal|\bpcb\b|schematic|circuit design|chip design\w*|hardware design\w*|mechanical design\w*|electrical design\w*|electronic design\w*|thermal design\w*|packaging design\w*|structures design\w*|structural design\w*|harness design\w*|layout design\w*|\brfic\b|\bbaw\b|\brcdd\b|filter design\w*|\bhvac\b|piping|\bcad\b|design for manufactur\w*|\bdfm\b|test hardware|cache controller|memory controller|\bdram\b|\bhbm\b|\bpll\b|phase[- ]locked|control design|system design engineer|power design|\brf design|antenna|optical design|process design|tool design|die design|package design|verification engineer)\b/i;
+const HW_DESIGN_RX = /\b(asic|vlsi|\brtl\b|register transfer|physical design|design verification|\bdft\b|\bsoc\b|silicon|semiconductor|standard cell|floorplan|place and route|synthesis and implementation|static timing|timing analysis|analog|mixed[- ]signal|\bpcb\b|schematic|circuit design|chip design\w*|hardware design\w*|mechanical design\w*|electrical design\w*|electronic design\w*|thermal design\w*|packaging design\w*|structures design\w*|structural design\w*|harness design\w*|layout design\w*|\brfic\b|\bbaw\b|\brcdd\b|filter design\w*|\bhvac\b|piping|\bcad\b|design for manufactur\w*|\bdfm\b|test hardware|cache controller|memory controller|\bdram\b|\bhbm\b|\bpll\b|phase[- ]locked|control design|system design engineer|power design|\brf design|antenna|optical design|process design|tool design|die design|package design|verification engineer|\bfpga\b|\bmechanical\b|materials engineer|interconnect|\bthermal\b|enclosure|product design engineer)\b/i;
 // Every big company names design differently and a generic list misses them:
 // Apple's UX org is HUMAN INTERFACE (and its "Product Design" is mechanical
 // engineering); Google ships UX Engineer, UX Writer and Design Technologist;
@@ -228,7 +232,10 @@ function categorize(title, sourceCategory) {
 }
 
 function levelFromTitle(t) {
-  if (/\bintern(ship)?\b/i.test(t)) return "intern";
+  // Plurals matter: "\bintern(ship)?\b" does NOT match "Internships", because
+  // the trailing s kills the word boundary. Apple posts "Product Design
+  // Undergrad Internships" and every one of them read as full-time.
+  if (/\binterns?(hips?)?\b/i.test(t)) return "intern";
   if (/\b(new grad|university grad|campus|early career|entry[- ]level|graduate)\b/i.test(t)) return "new-grad";
   // Research fellowships (Anthropic Fellows Program, residencies) are the AI
   // labs' early-career on-ramp and often the ONLY one they run — but "Fellow"
@@ -673,6 +680,80 @@ async function fromGoogleCareers() {
   return out;
 }
 
+// Apple has no callable careers API — the documented POST /api/role/search now
+// 404s and watching the real site in a browser shows it makes NO job XHR at
+// all. The search page is server-rendered and every record is embedded in the
+// HTML as escaped JSON, so plain fetch + parse gets everything.
+//
+// Two quirks drive the sweep design, both measured:
+//   · Apple's free-text search is semantic and unreliable — search=intern
+//     returns Indian retail roles ("IN-Business Expert"), search=designer
+//     returns cellular firmware. It cannot be trusted to find design roles.
+//   · The team= filter is ignored for every code (SFTWR, MLAI, HRDWR all
+//     return identical results) EXCEPT internships-STDNT-INTRN, which works.
+// So: take the internships pipeline exactly, then paginate the US board
+// newest-first and let the classifier do the filtering.
+//
+// Worth knowing when reading the output: at Apple, "Product Design" means
+// MECHANICAL engineering, and the UX org is called HUMAN INTERFACE.
+function parseAppleJobs(html) {
+  const un = html.replace(/\\"/g, '"').replace(/\\n/g, " ");
+  const out = [];
+  const rx = /"locations":(\[[^\]]*\]),"positionId":"(\d+)","postingDate":"([^"]*)","postingTitle":"([^"]*)"/g;
+  for (const m of un.matchAll(rx)) {
+    let locs = [];
+    try {
+      locs = JSON.parse(m[1]).map((L) => [L.city, L.stateProvince, L.countryName].filter(Boolean).join(", ") || L.name).filter(Boolean);
+    } catch { /* keep going — a malformed location must not lose the role */ }
+    const d = new Date(m[3]);
+    out.push({
+      id: m[2],
+      title: m[4].replace(/\\u0026/g, "&"),
+      locations: locs,
+      posted: isNaN(d) ? "" : d.toISOString().slice(0, 10),
+    });
+  }
+  return out;
+}
+
+async function fromAppleJobs() {
+  const H = { "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36", "accept-language": "en-US,en;q=0.9" };
+  const out = [];
+  const seen = new Set();
+  const sweeps = [
+    { q: "team=internships-STDNT-INTRN", pages: 5 },          // the early-career pipeline
+    { q: "location=united-states-USA&sort=newest", pages: 30 }, // newest US roles generally
+  ];
+  for (const s of sweeps) {
+    for (let page = 1; page <= s.pages; page++) {
+      await new Promise((r) => setTimeout(r, 200));
+      const r = await fetch(`https://jobs.apple.com/en-us/search?${s.q}&page=${page}`, { headers: H });
+      if (!r.ok) throw new Error(`${r.status} apple jobs`);
+      const rows = parseAppleJobs(await r.text());
+      if (!rows.length) break;
+      let added = 0;
+      for (const j of rows) {
+        if (seen.has(j.id)) continue;
+        seen.add(j.id); added++;
+        if (SENIOR_RX.test(j.title)) continue;
+        out.push({
+          company: "Apple",
+          title: j.title,
+          category: categorize(j.title, ""),
+          locations: j.locations,
+          url: `https://jobs.apple.com/en-us/details/${j.id}`,
+          posted: j.posted,
+          term: termFromTitle(j.title),
+          level: levelFromTitle(j.title),
+          source: "apple",
+        });
+      }
+      if (!added) break;                                     // page repeated → end
+    }
+  }
+  return out;
+}
+
 // Rippling runs its own ATS and publishes the whole board in one call — no
 // pagination, no auth. 750 rows.
 async function fromRippling() {
@@ -996,6 +1077,9 @@ await Promise.all([
   fromAtlassian()
     .then((rows) => { collectedATS.push(...rows); atsCounts["Atlassian(icims)"] = rows.length; })
     .catch((e) => errors.push(`atlassian: ${e.message}`)),
+  fromAppleJobs()
+    .then((rows) => { collectedATS.push(...rows); atsCounts["Apple(jobs)"] = rows.length; })
+    .catch((e) => errors.push(`apple: ${e.message}`)),
 ]);
 
 // stale-board tripwire (research trap: 200 + empty ≠ healthy)
