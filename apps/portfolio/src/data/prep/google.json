@@ -1,0 +1,654 @@
+{
+  "slug": "google",
+  "company": "Google",
+  "datasetName": "Google",
+  "updated": "2026-08-03",
+  "formatIntel": {
+    "summary": "The opposite of Palantir: a conventional DS&A loop, where the variance is in how you communicate rather than what you're asked. Google scores on four named axes — General Cognitive Ability, Role-Related Knowledge, Leadership, and 'Googleyness' — and interviewers file independent written feedback against them, so each round is judged on its own. For interns and new grads an offer is usually conditional on host/team matching after the loop passes.",
+    "rounds": [
+      {
+        "name": "Resume screen",
+        "length": "—",
+        "tests": "Fit against the req; internships are volume-filtered",
+        "scoring": "Signal density — shipped work and measurable outcomes over coursework",
+        "prep": "Apply early in the cycle. Intern reqs fill and close well before the posted deadline."
+      },
+      {
+        "name": "Online assessment",
+        "length": "~90 min",
+        "tests": "Two DS&A problems, auto-graded. Not always issued",
+        "scoring": "Correctness against hidden tests — no partial credit for approach here",
+        "prep": "The one round where only the passing test matters, so optimise for a correct brute force before a clever one."
+      },
+      {
+        "name": "Technical phone screen",
+        "length": "45 min, Meet + shared doc",
+        "tests": "One to two DS&A problems, typed in a doc with no autocomplete and no execution",
+        "scoring": "Approach and complexity stated BEFORE coding; clean code without a compiler to lean on",
+        "prep": "Practice in a plain doc, not an IDE. Say the complexity out loud before you start typing."
+      },
+      {
+        "name": "Virtual onsite — coding",
+        "length": "2–3 × 45 min, same day",
+        "tests": "DS&A: arrays/strings, hash maps, trees and graphs, dynamic programming, heaps",
+        "scoring": "General Cognitive Ability and Role-Related Knowledge. Silence scores badly even when the code is right",
+        "prep": "Narrate continuously. Clarify inputs, state the approach, then code, then walk through a real example."
+      },
+      {
+        "name": "Googleyness & Leadership",
+        "length": "45 min",
+        "tests": "Behavioral: ambiguity, collaboration, conflict, bias to action",
+        "scoring": "The Leadership and Googleyness axes — comfort with ambiguity and working without authority",
+        "prep": "Four or five STAR stories that flex. More common for new grad than intern, but do not be caught without them."
+      },
+      {
+        "name": "Host matching",
+        "length": "Varies — days to weeks",
+        "tests": "Fit conversations with teams that have headcount",
+        "scoring": "Not a rejection gate so much as an availability one — mutual interest with a specific host",
+        "prep": "Have a short, specific answer on the kind of work you want. Vagueness stalls matching."
+      }
+    ]
+  },
+  "questions": {
+    "sixMonths": [
+      {
+        "difficulty": "EASY",
+        "title": "Two Sum",
+        "frequency": 100,
+        "acceptance": 0.0057688993596459025,
+        "link": "https://leetcode.com/problems/two-sum",
+        "topics": [
+          "Array",
+          "Hash Table"
+        ]
+      },
+      {
+        "difficulty": "MEDIUM",
+        "title": "Add Two Numbers",
+        "frequency": 72.9,
+        "acceptance": 0.004870063729877811,
+        "link": "https://leetcode.com/problems/add-two-numbers",
+        "topics": [
+          "Linked List",
+          "Math",
+          "Recursion"
+        ]
+      },
+      {
+        "difficulty": "EASY",
+        "title": "Palindrome Number",
+        "frequency": 70.2,
+        "acceptance": 0.006069292450980635,
+        "link": "https://leetcode.com/problems/palindrome-number",
+        "topics": [
+          "Math"
+        ]
+      },
+      {
+        "difficulty": "EASY",
+        "title": "Longest Common Prefix",
+        "frequency": 69.7,
+        "acceptance": 0.0047781553156225984,
+        "link": "https://leetcode.com/problems/longest-common-prefix",
+        "topics": [
+          "Array",
+          "String",
+          "Trie"
+        ]
+      },
+      {
+        "difficulty": "EASY",
+        "title": "Best Time to Buy and Sell Stock",
+        "frequency": 69.7,
+        "acceptance": 0.005696316690039362,
+        "link": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock",
+        "topics": [
+          "Array",
+          "Dynamic Programming"
+        ]
+      },
+      {
+        "difficulty": "EASY",
+        "title": "Concatenation of Array",
+        "frequency": 69.7,
+        "acceptance": 0.009021893627453877,
+        "link": "https://leetcode.com/problems/concatenation-of-array",
+        "topics": [
+          "Array",
+          "Simulation"
+        ]
+      },
+      {
+        "difficulty": "MEDIUM",
+        "title": "Longest Substring Without Repeating Characters",
+        "frequency": 68.1,
+        "acceptance": 0.003929948695127628,
+        "link": "https://leetcode.com/problems/longest-substring-without-repeating-characters",
+        "topics": [
+          "Hash Table",
+          "String",
+          "Sliding Window"
+        ]
+      },
+      {
+        "difficulty": "HARD",
+        "title": "Trapping Rain Water",
+        "frequency": 67.5,
+        "acceptance": 0.006761504798961188,
+        "link": "https://leetcode.com/problems/trapping-rain-water",
+        "topics": [
+          "Array",
+          "Two Pointers",
+          "Dynamic Programming",
+          "Stack",
+          "Monotonic Stack"
+        ]
+      },
+      {
+        "difficulty": "MEDIUM",
+        "title": "Longest Palindromic Substring",
+        "frequency": 66.6,
+        "acceptance": 0.003804637344946908,
+        "link": "https://leetcode.com/problems/longest-palindromic-substring",
+        "topics": [
+          "Two Pointers",
+          "String",
+          "Dynamic Programming"
+        ]
+      },
+      {
+        "difficulty": "HARD",
+        "title": "Median of Two Sorted Arrays",
+        "frequency": 66.3,
+        "acceptance": 0.00468439397199117,
+        "link": "https://leetcode.com/problems/median-of-two-sorted-arrays",
+        "topics": [
+          "Array",
+          "Binary Search",
+          "Divide and Conquer"
+        ]
+      },
+      {
+        "difficulty": "MEDIUM",
+        "title": "3Sum",
+        "frequency": 66.3,
+        "acceptance": 0.0039301112894111895,
+        "link": "https://leetcode.com/problems/3sum",
+        "topics": [
+          "Array",
+          "Two Pointers",
+          "Sorting"
+        ]
+      },
+      {
+        "difficulty": "MEDIUM",
+        "title": "Container With Most Water",
+        "frequency": 65,
+        "acceptance": 0.006024271383816968,
+        "link": "https://leetcode.com/problems/container-with-most-water",
+        "topics": [
+          "Array",
+          "Two Pointers",
+          "Greedy"
+        ]
+      },
+      {
+        "difficulty": "MEDIUM",
+        "title": "Longest Consecutive Sequence",
+        "frequency": 64,
+        "acceptance": 0.004714857584942529,
+        "link": "https://leetcode.com/problems/longest-consecutive-sequence",
+        "topics": [
+          "Array",
+          "Hash Table",
+          "Union-Find"
+        ]
+      },
+      {
+        "difficulty": "EASY",
+        "title": "Roman to Integer",
+        "frequency": 63.3,
+        "acceptance": 0.006679187279950676,
+        "link": "https://leetcode.com/problems/roman-to-integer",
+        "topics": [
+          "Hash Table",
+          "Math",
+          "String"
+        ]
+      },
+      {
+        "difficulty": "EASY",
+        "title": "Majority Element",
+        "frequency": 62.9,
+        "acceptance": 0.006637444277253712,
+        "link": "https://leetcode.com/problems/majority-element",
+        "topics": [
+          "Array",
+          "Hash Table",
+          "Divide and Conquer",
+          "Sorting",
+          "Counting"
+        ]
+      },
+      {
+        "difficulty": "MEDIUM",
+        "title": "Reverse Integer",
+        "frequency": 61.7,
+        "acceptance": 0.003204599939265856,
+        "link": "https://leetcode.com/problems/reverse-integer",
+        "topics": [
+          "Math"
+        ]
+      },
+      {
+        "difficulty": "MEDIUM",
+        "title": "Maximum Subarray",
+        "frequency": 61.7,
+        "acceptance": 0.005347372327007454,
+        "link": "https://leetcode.com/problems/maximum-subarray",
+        "topics": [
+          "Array",
+          "Divide and Conquer",
+          "Dynamic Programming"
+        ]
+      },
+      {
+        "difficulty": "EASY",
+        "title": "Valid Parentheses",
+        "frequency": 61.7,
+        "acceptance": 0.00443654752168454,
+        "link": "https://leetcode.com/problems/valid-parentheses",
+        "topics": [
+          "String",
+          "Stack"
+        ]
+      },
+      {
+        "difficulty": "MEDIUM",
+        "title": "Merge Intervals",
+        "frequency": 60.9,
+        "acceptance": 0.005211655273418328,
+        "link": "https://leetcode.com/problems/merge-intervals",
+        "topics": [
+          "Array",
+          "Sorting"
+        ]
+      },
+      {
+        "difficulty": "MEDIUM",
+        "title": "Subarray Sum Equals K",
+        "frequency": 60.4,
+        "acceptance": 0.00475665051610676,
+        "link": "https://leetcode.com/problems/subarray-sum-equals-k",
+        "topics": [
+          "Array",
+          "Hash Table",
+          "Prefix Sum"
+        ]
+      },
+      {
+        "difficulty": "EASY",
+        "title": "Remove Duplicates from Sorted Array",
+        "frequency": 60.4,
+        "acceptance": 0.006308036368825716,
+        "link": "https://leetcode.com/problems/remove-duplicates-from-sorted-array",
+        "topics": [
+          "Array",
+          "Two Pointers"
+        ]
+      },
+      {
+        "difficulty": "EASY",
+        "title": "Merge Sorted Array",
+        "frequency": 59.5,
+        "acceptance": 0.005509624213749104,
+        "link": "https://leetcode.com/problems/merge-sorted-array",
+        "topics": [
+          "Array",
+          "Two Pointers",
+          "Sorting"
+        ]
+      },
+      {
+        "difficulty": "EASY",
+        "title": "Combine Two Tables",
+        "frequency": 59.5,
+        "acceptance": 0.007965757592567378,
+        "link": "https://leetcode.com/problems/combine-two-tables",
+        "topics": [
+          "Database"
+        ]
+      },
+      {
+        "difficulty": "EASY",
+        "title": "Create Hello World Function",
+        "frequency": 57.1,
+        "acceptance": 0.008191722901970974,
+        "link": "https://leetcode.com/problems/create-hello-world-function",
+        "topics": []
+      },
+      {
+        "difficulty": "MEDIUM",
+        "title": "Number of Islands",
+        "frequency": 56.5,
+        "acceptance": 0.006459346033141788,
+        "link": "https://leetcode.com/problems/number-of-islands",
+        "topics": [
+          "Array",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Union-Find",
+          "Matrix"
+        ]
+      }
+    ],
+    "allTime": [
+      {
+        "difficulty": "EASY",
+        "title": "Two Sum",
+        "frequency": 100,
+        "acceptance": 0.0057688993596459025,
+        "link": "https://leetcode.com/problems/two-sum",
+        "topics": [
+          "Array",
+          "Hash Table"
+        ]
+      },
+      {
+        "difficulty": "MEDIUM",
+        "title": "Add Two Numbers",
+        "frequency": 77.7,
+        "acceptance": 0.004870063729877811,
+        "link": "https://leetcode.com/problems/add-two-numbers",
+        "topics": [
+          "Linked List",
+          "Math",
+          "Recursion"
+        ]
+      },
+      {
+        "difficulty": "HARD",
+        "title": "Median of Two Sorted Arrays",
+        "frequency": 73.9,
+        "acceptance": 0.00468439397199117,
+        "link": "https://leetcode.com/problems/median-of-two-sorted-arrays",
+        "topics": [
+          "Array",
+          "Binary Search",
+          "Divide and Conquer"
+        ]
+      },
+      {
+        "difficulty": "HARD",
+        "title": "Trapping Rain Water",
+        "frequency": 73.9,
+        "acceptance": 0.006761504798961188,
+        "link": "https://leetcode.com/problems/trapping-rain-water",
+        "topics": [
+          "Array",
+          "Two Pointers",
+          "Dynamic Programming",
+          "Stack",
+          "Monotonic Stack"
+        ]
+      },
+      {
+        "difficulty": "EASY",
+        "title": "Longest Common Prefix",
+        "frequency": 73.3,
+        "acceptance": 0.0047781553156225984,
+        "link": "https://leetcode.com/problems/longest-common-prefix",
+        "topics": [
+          "Array",
+          "String",
+          "Trie"
+        ]
+      },
+      {
+        "difficulty": "EASY",
+        "title": "Palindrome Number",
+        "frequency": 72.7,
+        "acceptance": 0.006069292450980635,
+        "link": "https://leetcode.com/problems/palindrome-number",
+        "topics": [
+          "Math"
+        ]
+      },
+      {
+        "difficulty": "EASY",
+        "title": "Merge Sorted Array",
+        "frequency": 72.7,
+        "acceptance": 0.005509624213749104,
+        "link": "https://leetcode.com/problems/merge-sorted-array",
+        "topics": [
+          "Array",
+          "Two Pointers",
+          "Sorting"
+        ]
+      },
+      {
+        "difficulty": "MEDIUM",
+        "title": "Longest Substring Without Repeating Characters",
+        "frequency": 71.9,
+        "acceptance": 0.003929948695127628,
+        "link": "https://leetcode.com/problems/longest-substring-without-repeating-characters",
+        "topics": [
+          "Hash Table",
+          "String",
+          "Sliding Window"
+        ]
+      },
+      {
+        "difficulty": "MEDIUM",
+        "title": "3Sum",
+        "frequency": 71.8,
+        "acceptance": 0.0039301112894111895,
+        "link": "https://leetcode.com/problems/3sum",
+        "topics": [
+          "Array",
+          "Two Pointers",
+          "Sorting"
+        ]
+      },
+      {
+        "difficulty": "EASY",
+        "title": "Best Time to Buy and Sell Stock",
+        "frequency": 71.8,
+        "acceptance": 0.005696316690039362,
+        "link": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock",
+        "topics": [
+          "Array",
+          "Dynamic Programming"
+        ]
+      },
+      {
+        "difficulty": "EASY",
+        "title": "Create Hello World Function",
+        "frequency": 71.7,
+        "acceptance": 0.008191722901970974,
+        "link": "https://leetcode.com/problems/create-hello-world-function",
+        "topics": []
+      },
+      {
+        "difficulty": "EASY",
+        "title": "Merge Strings Alternately",
+        "frequency": 70.6,
+        "acceptance": 0.008210740203643967,
+        "link": "https://leetcode.com/problems/merge-strings-alternately",
+        "topics": [
+          "Two Pointers",
+          "String"
+        ]
+      },
+      {
+        "difficulty": "MEDIUM",
+        "title": "Longest Palindromic Substring",
+        "frequency": 70.1,
+        "acceptance": 0.003804637344946908,
+        "link": "https://leetcode.com/problems/longest-palindromic-substring",
+        "topics": [
+          "Two Pointers",
+          "String",
+          "Dynamic Programming"
+        ]
+      },
+      {
+        "difficulty": "MEDIUM",
+        "title": "Longest Consecutive Sequence",
+        "frequency": 69.1,
+        "acceptance": 0.004714857584942529,
+        "link": "https://leetcode.com/problems/longest-consecutive-sequence",
+        "topics": [
+          "Array",
+          "Hash Table",
+          "Union-Find"
+        ]
+      },
+      {
+        "difficulty": "EASY",
+        "title": "Recyclable and Low Fat Products",
+        "frequency": 67.5,
+        "acceptance": 0.008862016715202311,
+        "link": "https://leetcode.com/problems/recyclable-and-low-fat-products",
+        "topics": [
+          "Database"
+        ]
+      },
+      {
+        "difficulty": "MEDIUM",
+        "title": "Container With Most Water",
+        "frequency": 67.5,
+        "acceptance": 0.006024271383816968,
+        "link": "https://leetcode.com/problems/container-with-most-water",
+        "topics": [
+          "Array",
+          "Two Pointers",
+          "Greedy"
+        ]
+      },
+      {
+        "difficulty": "EASY",
+        "title": "Valid Parentheses",
+        "frequency": 66.2,
+        "acceptance": 0.00443654752168454,
+        "link": "https://leetcode.com/problems/valid-parentheses",
+        "topics": [
+          "String",
+          "Stack"
+        ]
+      },
+      {
+        "difficulty": "EASY",
+        "title": "Majority Element",
+        "frequency": 66.2,
+        "acceptance": 0.006637444277253712,
+        "link": "https://leetcode.com/problems/majority-element",
+        "topics": [
+          "Array",
+          "Hash Table",
+          "Divide and Conquer",
+          "Sorting",
+          "Counting"
+        ]
+      },
+      {
+        "difficulty": "EASY",
+        "title": "Roman to Integer",
+        "frequency": 66.1,
+        "acceptance": 0.006679187279950676,
+        "link": "https://leetcode.com/problems/roman-to-integer",
+        "topics": [
+          "Hash Table",
+          "Math",
+          "String"
+        ]
+      },
+      {
+        "difficulty": "MEDIUM",
+        "title": "Merge Intervals",
+        "frequency": 65.9,
+        "acceptance": 0.005211655273418328,
+        "link": "https://leetcode.com/problems/merge-intervals",
+        "topics": [
+          "Array",
+          "Sorting"
+        ]
+      },
+      {
+        "difficulty": "MEDIUM",
+        "title": "Number of Islands",
+        "frequency": 65.6,
+        "acceptance": 0.006459346033141788,
+        "link": "https://leetcode.com/problems/number-of-islands",
+        "topics": [
+          "Array",
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Union-Find",
+          "Matrix"
+        ]
+      },
+      {
+        "difficulty": "MEDIUM",
+        "title": "Maximum Subarray",
+        "frequency": 65.3,
+        "acceptance": 0.005347372327007454,
+        "link": "https://leetcode.com/problems/maximum-subarray",
+        "topics": [
+          "Array",
+          "Divide and Conquer",
+          "Dynamic Programming"
+        ]
+      },
+      {
+        "difficulty": "MEDIUM",
+        "title": "Reverse Integer",
+        "frequency": 65.2,
+        "acceptance": 0.003204599939265856,
+        "link": "https://leetcode.com/problems/reverse-integer",
+        "topics": [
+          "Math"
+        ]
+      },
+      {
+        "difficulty": "EASY",
+        "title": "Remove Duplicates from Sorted Array",
+        "frequency": 65.2,
+        "acceptance": 0.006308036368825716,
+        "link": "https://leetcode.com/problems/remove-duplicates-from-sorted-array",
+        "topics": [
+          "Array",
+          "Two Pointers"
+        ]
+      },
+      {
+        "difficulty": "MEDIUM",
+        "title": "Subarray Sum Equals K",
+        "frequency": 64.7,
+        "acceptance": 0.004756651589406008,
+        "link": "https://leetcode.com/problems/subarray-sum-equals-k",
+        "topics": [
+          "Array",
+          "Hash Table",
+          "Prefix Sum"
+        ]
+      }
+    ],
+    "note": ""
+  },
+  "behavioral": {
+    "values": [
+      "Comfort with ambiguity",
+      "Collaboration without authority",
+      "Bias to action",
+      "Intellectual humility"
+    ],
+    "stories": []
+  },
+  "askThem": [
+    "How does host matching actually work for interns this cycle — do I pick, or does the team?",
+    "What does the team ship in a quarter, and where would an intern project sit in that?",
+    "How much of the codebase would I need to understand to be useful in twelve weeks?"
+  ]
+}
