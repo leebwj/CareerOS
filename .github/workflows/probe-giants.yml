@@ -1,0 +1,24 @@
+name: probe-giants
+
+# One-off diagnostic, manual only. The four giants (Microsoft, Google, Meta,
+# Apple) are not sourced directly and their endpoints all refused a probe from
+# Brian's machine in Korea — Microsoft with a bare connection failure rather
+# than an HTTP error, which looks more like geo-blocking than a wrong URL.
+# GitHub's runners are US-based, so this re-runs the same probes from a US IP to
+# find out whether the endpoints are actually reachable and just region-locked.
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Probe from a US IP
+        run: node apps/role-grabber/probe-giants.mjs
