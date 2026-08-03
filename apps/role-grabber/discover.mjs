@@ -28,7 +28,7 @@ const PLATFORM_KEYS = ["greenhouse", "ashby", "lever", "smartrecruiters", "workd
 const sourced = [...atsBlock.matchAll(/"?([A-Za-z0-9][^":,{}]*?)"?\s*:\s*["{]/g)]
   .map((m) => m[1].trim()).filter((x) => !PLATFORM_KEYS.includes(x));
 // companies with a hand-written adapter
-const CUSTOM = ["Amazon", "Netflix", "Microsoft", "Google"];
+const CUSTOM = ["Amazon", "Netflix", "Microsoft", "Google", "Apple", "TikTok", "GitHub", "DocuSign", "Rippling", "Atlassian"];
 
 // ── the dream list ──────────────────────────────────────────────────────────
 const ti = SRC.indexOf("const TARGETS = new RegExp");
@@ -64,7 +64,32 @@ const PROBES = [
   { kind: "lever", url: (s) => `https://api.lever.co/v0/postings/${s}?mode=json`, count: (d) => (Array.isArray(d) ? d.length : 0), sample: (d) => (Array.isArray(d) ? d[0]?.text : "") },
   { kind: "smartrecruiters", url: (s) => `https://api.smartrecruiters.com/v1/companies/${s}/postings?limit=10`, count: (d) => (d.content || []).length, sample: (d) => (d.content || [])[0]?.name },
   { kind: "recruitee", url: (s) => `https://${s}.recruitee.com/api/offers/`, count: (d) => (d.offers || []).length, sample: (d) => (d.offers || [])[0]?.title },
+  // Workable and Workday were missing from this list even though grab.mjs
+  // supports both — which is exactly why Tencent (a plain Workday tenant) sat
+  // in the "unreachable" column until it was found by hand.
+  { kind: "workable", url: (s) => `https://apply.workable.com/api/v1/widget/accounts/${s}?details=true`, count: (d) => (d.jobs || []).length, sample: (d) => (d.jobs || [])[0]?.title },
 ];
+
+// Workday needs a POST and a site name we cannot guess, so it gets its own
+// probe over the handful of conventional site slugs.
+const WD_SITES = ["External", "External_Career_Site", "Careers", "careers", "External_Site"];
+async function probeWorkday(slug, want) {
+  for (const site of WD_SITES) {
+    for (const wd of [1, 5, 3]) {
+      try {
+        const r = await fetch(`https://${slug}.wd${wd}.myworkdayjobs.com/wday/cxs/${slug}/${site}/jobs`, {
+          method: "POST", headers: { ...UA, "content-type": "application/json" },
+          body: JSON.stringify({ appliedFacets: {}, limit: 5, offset: 0, searchText: "" }), signal: timeout(10000),
+        });
+        if (!r.ok) continue;
+        const d = await r.json();
+        const n = (d.jobPostings || []).length;
+        if (n > 0) return { kind: "workday", slug: `${slug} wd${wd}/${site}`, n: d.total ?? n, boardName: null, sample: String(d.jobPostings[0]?.title || "").slice(0, 46) };
+      } catch { /* next combination */ }
+    }
+  }
+  return null;
+}
 
 // A reachable board is NOT proof it is the right company. Short generic slugs
 // are squatted by unrelated firms: greenhouse/bethesda is Bethesda HEALTH and
@@ -128,6 +153,8 @@ async function discover(name) {
       if (hit.rejected) { rejects.push(hit); continue; }
       return { name, ...hit };
     }
+    const wd = await probeWorkday(s, name);
+    if (wd) return { name, ...wd };
   }
   return rejects.length ? { name, rejectedOnly: rejects } : null;
 }

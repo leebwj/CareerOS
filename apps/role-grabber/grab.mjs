@@ -810,29 +810,32 @@ async function fromTikTokCareers() {
   return out;
 }
 
-// GitHub runs on Jibe (jibecdn.com, tenant "githubinc") — no Eightfold, no
-// Greenhouse. Its board is small enough to come back in a single call.
-async function fromGitHubCareers() {
-  const r = await fetch("https://www.github.careers/api/jobs?keywords=&page=1&limit=100", {
+// Jibe (jibecdn.com) powers several bespoke career sites that look unrelated
+// from outside — GitHub and DocuSign both run it, and neither advertises an
+// ATS. One /api/jobs call returns the whole board.
+const JIBE_SITES = { GitHub: "https://www.github.careers", DocuSign: "https://careers.docusign.com" };
+
+async function fromJibe(company, host) {
+  const r = await fetch(`${host}/api/jobs?keywords=&page=1&limit=100`, {
     headers: { "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120", accept: "application/json" },
   });
-  if (!r.ok) throw new Error(`${r.status} github careers`);
+  if (!r.ok) throw new Error(`${r.status} jibe ${company}`);
   const d = await r.json();
   return (d.jobs || []).map((x) => x.data).filter((j) => j?.title && !SENIOR_RX.test(j.title)).map((j) => {
     const when = j.create_date || j.posted_date || j.update_date || "";
     const dt = when ? new Date(when) : null;
     return {
-      company: "GitHub",
+      company,
       title: j.title,
       // categories[] entries can be objects, and categorize() lowercases its
       // second argument — coerce so a non-string never throws the whole source
       category: categorize(j.title, String(j.department || (j.categories || [])[0]?.name || (j.categories || [])[0] || "")),
       locations: [j.location_name || j.country || ""].filter(Boolean),
-      url: `https://www.github.careers/careers-home/jobs/${j.slug}`,
+      url: `${host}/careers-home/jobs/${j.slug}`,
       posted: dt && !isNaN(dt) ? dt.toISOString().slice(0, 10) : "",
       term: termFromTitle(j.title),
       level: levelFromTitle(j.title),
-      source: "github",
+      source: "jibe",
     };
   });
 }
@@ -1163,9 +1166,10 @@ await Promise.all([
   fromAppleJobs()
     .then((rows) => { collectedATS.push(...rows); atsCounts["Apple(jobs)"] = rows.length; })
     .catch((e) => errors.push(`apple: ${e.message}`)),
-  fromGitHubCareers()
-    .then((rows) => { collectedATS.push(...rows); atsCounts["GitHub(jibe)"] = rows.length; })
-    .catch((e) => errors.push(`github: ${e.message}`)),
+  ...Object.entries(JIBE_SITES).map(([co, host]) =>
+    fromJibe(co, host)
+      .then((rows) => { collectedATS.push(...rows); atsCounts[`${co}(jibe)`] = rows.length; })
+      .catch((e) => errors.push(`jibe:${co}: ${e.message}`))),
   fromTikTokCareers()
     .then((rows) => { collectedATS.push(...rows); atsCounts["TikTok(own)"] = rows.length; })
     .catch((e) => errors.push(`tiktok: ${e.message}`)),
