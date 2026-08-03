@@ -161,7 +161,7 @@ const ART_RX = /\b(3d artist|character artist|environment artist|concept artist|
 // matches "ASIC Design Engineer" and "Mechanical Design Engineer". Hardware
 // design is checked FIRST and routed to Hardware, so the design bucket means
 // what Brian means by it.
-const HW_DESIGN_RX = /\b(asic|vlsi|\brtl\b|register transfer|physical design|design verification|\bdft\b|\bsoc\b|silicon|semiconductor|standard cell|floorplan|place and route|synthesis and implementation|static timing|timing analysis|analog|mixed[- ]signal|\bpcb\b|schematic|circuit design|chip design|hardware design|mechanical design|electrical design|electronic design|thermal design|packaging design|\bhvac\b|piping|structural design|\bcad\b|design for manufactur\w*|\bdfm\b|test hardware|cache controller|memory controller|\bdram\b|\bhbm\b|\bpll\b|phase[- ]locked|control design|system design engineer|power design|\brf design|antenna|optical design|process design|tool design|die design|package design|verification engineer)\b/i;
+const HW_DESIGN_RX = /\b(asic|vlsi|\brtl\b|register transfer|physical design|design verification|\bdft\b|\bsoc\b|silicon|semiconductor|standard cell|floorplan|place and route|synthesis and implementation|static timing|timing analysis|analog|mixed[- ]signal|\bpcb\b|schematic|circuit design|chip design\w*|hardware design\w*|mechanical design\w*|electrical design\w*|electronic design\w*|thermal design\w*|packaging design\w*|structures design\w*|structural design\w*|harness design\w*|layout design\w*|\brfic\b|\bbaw\b|\brcdd\b|filter design\w*|\bhvac\b|piping|\bcad\b|design for manufactur\w*|\bdfm\b|test hardware|cache controller|memory controller|\bdram\b|\bhbm\b|\bpll\b|phase[- ]locked|control design|system design engineer|power design|\brf design|antenna|optical design|process design|tool design|die design|package design|verification engineer)\b/i;
 const DESIGN_RX = /\b(product design(er)?|ux|ui designer|ui\/ux|user experience|user interface|user research(er)?|interaction design|visual design|brand design|graphic design|motion design|industrial design|service design|design system|design research|content design|\bdesigner\b|design engineer|design technolog\w*|prototyper|human interface)\b/i;
 // Product management — was only matching "product manager", so APM/RPM/PM
 // programmes (which is how big tech actually names its intern product tracks)
@@ -785,7 +785,13 @@ for (const r of collected) {
   // a "target" is a RELEVANT role (Brian's fields) AT a desirable company —
   // so a revenue analyst at a target company is NOT flagged, but a technical
   // artist at EA is. One flag, shared by the sheet, tracker, and email.
-  r.target = (TARGETS.test(r.company) || ATS_COMPANY_SET.has(r.company)) && RELEVANT_RX.test(r.title) && !IRRELEVANT_RX.test(r.title) && !SENIOR_RX.test(r.title);
+  // NO_AUTO_TARGET companies (SpaceX) are kept off 🎯 because their boards are
+  // enormous — 2,100 roles would bury everything else. But excluding them
+  // outright meant a genuine SpaceX product-design or SWE INTERNSHIP could never
+  // be flagged either, which is the opposite of what Brian wanted when he asked
+  // for SpaceX. So their early-career roles qualify; their full-time flood does not.
+  const bigBoard = NO_AUTO_TARGET.has(r.company) && (r.level === "intern" || r.level === "new-grad");
+  r.target = (TARGETS.test(r.company) || ATS_COMPANY_SET.has(r.company) || bigBoard) && RELEVANT_RX.test(r.title) && !IRRELEVANT_RX.test(r.title) && !SENIOR_RX.test(r.title);
   // dead-cycle cleanup (Brian 2026-07-24): an INTERN post older than ~4 months
   // whose term doesn't reference a future intake is recruiting for a season
   // that already started — clutter, drop it. Old rows recruiting for future
