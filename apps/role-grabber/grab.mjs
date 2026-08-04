@@ -1280,6 +1280,41 @@ for (const r of collected) {
   roles.push(r);
 }
 
+// ── collapse per-location clones ─────────────────────────────────────────────
+// Brian: "there were 4 SWE roles that was actually the same role in the same
+// company." Big employers post ONE job once PER CITY, each with its own apply
+// URL — SpaceX lists "Application Software Engineer" 8 times, L3Harris
+// "Associate Software Engineer" 9 times. URL dedupe cannot catch these because
+// the URLs genuinely differ, so ~982 rows were near-identical clutter.
+//
+// They are MERGED, not dropped: the surviving row carries every location, so no
+// city is lost — only the repetition. Grouped on company + title + level + term
+// so a Summer 2026 and a Summer 2027 posting of the same role stay separate, as
+// do intern and full-time versions. Only EXACT title matches merge; a
+// normaliser loose enough to fold "Backend" into "Frontend" would hide real
+// roles, which is far worse than showing a few extra.
+const cloneKey = (r) => [
+  r.company.toLowerCase(),
+  String(r.title).toLowerCase().replace(/\b(req|job)?\s*#?\d{4,}\b/g, " ").replace(/[^a-z0-9]+/g, " ").trim(),
+  r.level,
+  r.term || "",
+].join("|");
+const byClone = new Map();
+for (const r of roles) {
+  const k = cloneKey(r);
+  const first = byClone.get(k);
+  if (!first) { byClone.set(k, r); continue; }
+  // fold this clone's locations into the row being kept
+  for (const loc of r.locations || []) if (loc && !first.locations.includes(loc)) first.locations.push(loc);
+  first.alsoIn = (first.alsoIn || 0) + 1;   // how many clones were folded in
+  // keep the freshest date across the group so the merged row is not aged by
+  // whichever city happened to be listed first
+  if (r.posted && (!first.posted || r.posted > first.posted)) first.posted = r.posted;
+}
+const clonesMerged = roles.length - byClone.size;
+roles.length = 0;
+roles.push(...byClone.values());
+
 // Path A — LLM rescue of "Other" roles at target companies (scoped + cached; no-op without a key)
 await enrichOther(roles, errors);
 
@@ -1350,6 +1385,6 @@ for (const cat of ORDER) {
 if (errors.length) md += `\n> ⚠️ Source issues this run: ${errors.join("; ")}\n`;
 writeFileSync(join(ROOT, "ROLES.md"), md);
 
-console.log(`OK — ${roles.length} US roles (${recent.length} recent, ${freshRows.length} fresh-48h, ATS direct: ${collectedATS.length}) → data + ROLES.md`);
+console.log(`OK — ${roles.length} US roles (${recent.length} recent, ${freshRows.length} fresh-48h, ATS direct: ${collectedATS.length}, ${clonesMerged} per-location clones merged) → data + ROLES.md`);
 console.log(`   ${CYCLE_LABEL} cycle: ${roles.filter((r) => r.cycle).length} roles · ${roles.filter((r) => r.cycle && r.target).length} at target companies · ${roles.filter((r) => r.cycle && r.isNew).length} new this run`);
 if (errors.length) console.warn("source errors:", errors);
