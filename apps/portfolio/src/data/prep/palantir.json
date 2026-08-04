@@ -68,7 +68,62 @@
       "Ownership of outcomes",
       "Working with messy real-world constraints"
     ],
-    "stories": []
+    "stories": [
+      {
+        "story": "The retention win that wasn't real",
+        "prompt": "Tell me about a time you challenged something your team already believed.",
+        "situation": "At Aleph Lab, a 4-engineer YC startup, a recent push had produced a reported retention gain, and roadmap planning was starting to build on it.",
+        "task": "Rather than build on the number, I wanted to verify it first — if it was wrong, everything downstream would be wrong with it.",
+        "action": "I built a Python multi-agent tool on the Claude Agent SDK that mined production data through read-only MCP, so the analysis could never touch live systems, and reconstructed the result from raw production data rather than the existing reporting.",
+        "result": "The reported gain turned out to be a measurement artifact. I surfaced the real churn drivers instead, and the team reshaped its roadmap around those.",
+        "mapsTo": "Ownership of outcomes"
+      },
+      {
+        "story": "The outage nobody had noticed",
+        "prompt": "Walk me through the hardest bug you've debugged. How did you find it?",
+        "situation": "Aleph Lab's notification pipeline was failing silently in production. Nothing alerted, and the failure was invisible from inside the product.",
+        "task": "Find out why notifications were not being delivered, and restore the pipeline.",
+        "action": "I traced backwards from the delivery failures rather than guessing at causes, and found a JWT signing-key migration: the pipeline was still authenticating with a key that was no longer valid, so every request was being rejected. The migration itself was correct — nothing downstream had been updated to follow it.",
+        "result": "The pipeline went from failing with 401 to healthy at 200. The instructive part was that the symptom (no notifications) and the cause (an auth key rotation) lived in completely different parts of the system.",
+        "mapsTo": "Working with messy real-world constraints"
+      },
+      {
+        "story": "Checking the targeting against reality",
+        "prompt": "Tell me about a problem you found that nobody asked you to look for.",
+        "situation": "I had shipped a production retention system at Aleph Lab — targeted push via Supabase, Deno edge functions and FCM, with a treatment/holdout A/B.",
+        "task": "It worked, but nobody had asked whether it was actually reaching everyone it was supposed to reach. I wanted to know.",
+        "action": "I validated the win-back targeting against live production data and found the logic identifying eligible users was wrong, so a large share of the intended audience was never being reached at all. I corrected how eligibility was determined.",
+        "result": "Reachable users expanded roughly 2.7×, and the system recovered churned users back into paying subscribers.",
+        "mapsTo": "Ownership of outcomes"
+      },
+      {
+        "story": "Making the agent something other teams could actually use",
+        "prompt": "Tell me about something you built for other engineers rather than for users.",
+        "situation": "Aleph Lab had a production AI agent that only worked inside our own application. Other teams wanted it, but there was no way to embed it.",
+        "task": "Turn it into something another team could drop into their app without needing to understand our internals.",
+        "action": "I packaged it as a typed SDK with versioned APIs and wrote 136 automated tests. I treated the test suite as the contract: if the package was genuinely self-contained, someone with no context should be able to integrate it from the types alone.",
+        "result": "A new AI coding agent integrated it into a fresh app on the first attempt — the clearest evidence the abstraction actually held, since it had no context to fall back on.",
+        "mapsTo": "Ownership of outcomes"
+      },
+      {
+        "story": "Interpreting in a high-security, multi-agency environment",
+        "prompt": "Why this kind of work? / Tell me about somewhere the stakes were real.",
+        "situation": "I served as a Military Interpreter for the ROK Army's Capital Defense Command for 18 months, in high-security multi-agency settings with international stakeholders.",
+        "task": "Provide real-time English–Korean interpretation and translate sensitive documents and briefings, where an imprecise word changes what a partner organisation believes it agreed to.",
+        "action": "I worked in real time with no chance to revise, across organisations that each used their own vocabulary, and had to carry exact meaning rather than a good approximation of it.",
+        "result": "Coordination held across government and defense teams. It is the clearest experience I have of work where being loosely right is not a smaller version of being right — and it's a large part of why deployed, consequential software interests me.",
+        "mapsTo": "Mission alignment"
+      },
+      {
+        "story": "Owning one layer of a three-person engine",
+        "prompt": "Tell me about a technical project you're proud of.",
+        "situation": "Mini Minecraft was a from-scratch voxel engine in C++ and OpenGL built by a team of three. I owned world generation and the render pipeline; chunk streaming and player physics belonged to my teammates.",
+        "task": "Build a world that read as varied rather than noisy, and a renderer that made it legible.",
+        "action": "I built 7-biome procedural generation with Perlin, FBM and Voronoi noise using smoothstep blending, carved 3D Perlin-noise caves, and wrote the GLSL render pipeline — PCF shadow mapping, screen-space reflections, vertex ambient occlusion, a day-night cycle, and post-process water and lava overlays through a framebuffer pass.",
+        "result": "A coherent world where generation and lighting reinforced each other. Building inside someone else's streaming system also forced my generation to be correct at chunk boundaries, not just in isolation.",
+        "mapsTo": "Working with messy real-world constraints"
+      }
+    ]
   },
   "askThem": [
     "Which platform would I be closest to — Foundry or Gotham?",

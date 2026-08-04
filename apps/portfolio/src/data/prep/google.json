@@ -2,7 +2,7 @@
   "slug": "google",
   "company": "Google",
   "datasetName": "Google",
-  "updated": "2026-08-03",
+  "updated": "2026-08-04",
   "formatIntel": {
     "summary": "The opposite of Palantir: a conventional DS&A loop, where the variance is in how you communicate rather than what you're asked. Google scores on four named axes — General Cognitive Ability, Role-Related Knowledge, Leadership, and 'Googleyness' — and interviewers file independent written feedback against them, so each round is judged on its own. For interns and new grads an offer is usually conditional on host/team matching after the loop passes.",
     "rounds": [
@@ -644,7 +644,62 @@
       "Bias to action",
       "Intellectual humility"
     ],
-    "stories": []
+    "stories": [
+      {
+        "story": "Being wrong about a number in public",
+        "prompt": "Tell me about a time you realised you were wrong. / Describe a decision you changed your mind about.",
+        "situation": "At Aleph Lab, a 4-engineer YC startup, the team had a reported retention gain from a recent push, and I initially took it at face value like everyone else.",
+        "task": "Before more work was built on top of it, I wanted to reconstruct the result independently rather than trust the reporting.",
+        "action": "I built a Python multi-agent tool on the Claude Agent SDK that mined production data through read-only MCP, and rebuilt the analysis from raw production data. It showed the gain was a measurement artifact — including for me, since I'd believed it too.",
+        "result": "I surfaced the real churn drivers, and the roadmap was reshaped around them. The lesson I took is that a number everyone likes is exactly the one worth reconstructing.",
+        "mapsTo": "Intellectual humility"
+      },
+      {
+        "story": "Debugging a system with no signal",
+        "prompt": "Tell me about a time you had to work through real ambiguity.",
+        "situation": "Aleph Lab's notification pipeline had stopped delivering in production. Nothing alerted, nothing surfaced in the product, and there was no obvious starting point.",
+        "task": "Work out why, with no error surfacing and no recent change to the pipeline itself.",
+        "action": "Rather than guessing, I worked backwards from the delivery failures until the trail led somewhere unrelated: a JWT signing-key migration elsewhere in the system. The pipeline was authenticating with a key that was no longer valid, so every request was being rejected.",
+        "result": "Fixed, and the pipeline went from 401 to 200. What made it hard was that the symptom and the cause were in different subsystems, so the ambiguity was about where to even look.",
+        "mapsTo": "Comfort with ambiguity"
+      },
+      {
+        "story": "Leading fifteen people I didn't manage",
+        "prompt": "Tell me about influencing people you had no authority over.",
+        "situation": "At Penn Spark I've led a cross-functional team of 15+ designers and developers since January 2025, shipping client-facing 0-to-1 products. None of them reported to me.",
+        "task": "Get a group of volunteers with their own coursework and priorities to converge on shared decisions and actually ship within a semester.",
+        "action": "I defined end-to-end user flows, interaction patterns and reusable interface systems so that decisions were made once and then reused, rather than relitigated per person. On the club's own site redesign I led direction across 10+ designers and developers and moved it from an ageing Gatsby stack to Next.js and React.",
+        "result": "Shipped live at pennspark.org, with a scalable data-driven content system. The thing that worked was giving people a shared structure to build inside, rather than trying to direct each decision.",
+        "mapsTo": "Collaboration without authority"
+      },
+      {
+        "story": "Not waiting to be asked",
+        "prompt": "Tell me about a time you acted without being told to.",
+        "situation": "I had shipped a production retention system at Aleph Lab — targeted push via Supabase, Deno edge functions and FCM, with a treatment/holdout A/B. It was working and nobody had raised a concern.",
+        "task": "I wanted to know whether it was actually reaching everyone it should, which wasn't part of the task I'd been given.",
+        "action": "I validated the win-back targeting against live production data and found the logic identifying eligible users was wrong — a large share of the intended audience was never being reached. I corrected the eligibility determination.",
+        "result": "Reachable users expanded roughly 2.7×, and the system recovered churned users back into paying subscribers. The work only existed because I went looking after the thing already 'worked'.",
+        "mapsTo": "Bias to action"
+      },
+      {
+        "story": "Designing for a user who isn't you",
+        "prompt": "Tell me about a time user research changed what you built.",
+        "situation": "I redesigned Wikipedia's mobile experience across 5 sections — Home, Article, Search, Language and AI Chat — as a design project.",
+        "task": "Design for how people actually read Wikipedia rather than for how the site is currently organised.",
+        "action": "I grounded it in 3 distinct reader personas — quick-fact, deep-read and language-switching — drawn from structured interviews and a survey, set the information architecture with lo-fi wireframes, refined it through How-Might-We framing, then usability-tested with 4 participants.",
+        "result": "Findings changed the design: previews, search snippets and clearer AI framing all came from testing rather than from my instincts. I did the same on Path@Penn, where observational walkthroughs, student interviews and a heuristic audit drove a redesign across 4 connected surfaces.",
+        "mapsTo": "Intellectual humility"
+      },
+      {
+        "story": "Building so someone with no context could use it",
+        "prompt": "Tell me about writing code for other engineers.",
+        "situation": "Aleph Lab's production AI agent only worked inside our own application, and other teams had no way to embed it.",
+        "task": "Make it something another team could drop in without learning our internals.",
+        "action": "I packaged it as a typed SDK with versioned APIs and 136 automated tests, treating the tests as the contract — if it was genuinely self-contained, someone with no context should manage it from the types alone.",
+        "result": "A new AI coding agent integrated it into a fresh app on the first attempt. Having a consumer with zero context was a better test of the design than any review I could have asked for.",
+        "mapsTo": "Collaboration without authority"
+      }
+    ]
   },
   "askThem": [
     "How does host matching actually work for interns this cycle — do I pick, or does the team?",

@@ -66,7 +66,14 @@ const windowLabel = d.questions.sixMonths.length ? "asked in the last 6 months" 
             <p class="prep-tag">{s.mapsTo}</p>
             <h3 class="font-display prep-card-t">{s.story}</h3>
             <p class="prep-prompt">{s.prompt}</p>
-            <p class="prep-star">{s.situation} {s.task} {s.action} {s.result}</p>
+            {/* Labelled beats rather than one paragraph — the point of STAR is
+                the shape, and you rehearse the shape, not a wall of prose. */}
+            <dl class="prep-star">
+              <dt>S</dt><dd>{s.situation}</dd>
+              <dt>T</dt><dd>{s.task}</dd>
+              <dt>A</dt><dd>{s.action}</dd>
+              <dt>R</dt><dd>{s.result}</dd>
+            </dl>
           </section>
         ))}
       </div>
@@ -118,7 +125,18 @@ const windowLabel = d.questions.sixMonths.length ? "asked in the last 6 months" 
   .prep-freq { margin-left: 0.4rem; color: var(--color-faint); }
 
   .prep-prompt { margin: 0 0 0.5rem; color: var(--color-muted); font-style: italic; }
-  .prep-star { margin: 0; line-height: 1.75; }
+  .prep-star {
+    margin: 0; display: grid; grid-template-columns: 1.4rem 1fr;
+    gap: 0.35rem 0.7rem; line-height: 1.7;
+  }
+  .prep-star dt {
+    font-family: var(--font-mono); font-size: 0.72rem; font-weight: 600;
+    color: var(--color-cobalt); letter-spacing: 0.06em; padding-top: 0.22rem;
+  }
+  .prep-star dd { margin: 0; }
+  @media (max-width: 560px) {
+    .prep-star { grid-template-columns: 1rem 1fr; gap: 0.3rem 0.5rem; }
+  }
 
   .prep-ask { line-height: 1.95; margin: 0; padding-left: 1.4rem; color: var(--color-muted); }
   .prep-updated { margin-top: 3rem; font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-faint); }
