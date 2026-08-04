@@ -1299,21 +1299,48 @@ const cloneKey = (r) => [
   r.level,
   r.term || "",
 ].join("|");
+// CRITICAL: only merge ACROSS DIFFERENT CITIES. Two postings with the same
+// title in the SAME city are two separate requisitions, not one job listed
+// twice — L3Harris has two distinct "Associate Software Engineer" reqs in Palm
+// Bay and two more in Reston, Anduril has two "Systems Engineer, Battlespace"
+// in Waltham, SpaceX two "Construction Superintendent" in Starbase. Merging
+// those would hide a real opening Brian could apply to, which is far worse than
+// showing a duplicate.
+//
+// So each row is tagged with WHICH occurrence it is for its city (1st in Palm
+// Bay, 2nd in Palm Bay…), and only same-occurrence rows merge. A title open
+// once in seven cities collapses to one row; a title open twice in some of
+// those cities yields two rows, each spanning the cities that have that many
+// openings. Nothing is lost either way.
+const cityOf = (r) => String((r.locations || [])[0] || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+const occSeen = new Map();
+for (const r of roles) {
+  const ck = cloneKey(r) + "||" + cityOf(r);
+  const n = (occSeen.get(ck) || 0) + 1;
+  occSeen.set(ck, n);
+  r._occ = n;
+}
 const byClone = new Map();
 for (const r of roles) {
-  const k = cloneKey(r);
+  const k = cloneKey(r) + "||#" + r._occ;
   const first = byClone.get(k);
   if (!first) { byClone.set(k, r); continue; }
   // fold this clone's locations into the row being kept
   for (const loc of r.locations || []) if (loc && !first.locations.includes(loc)) first.locations.push(loc);
   first.alsoIn = (first.alsoIn || 0) + 1;   // how many clones were folded in
+  // Keep every folded posting's own apply link. Merging across cities assumes
+  // same-title-different-city means one role; that is right for the L3Harris /
+  // SpaceX / RTX pattern but it is still a heuristic. Carrying the links means
+  // that even when the assumption is wrong, no posting becomes unreachable —
+  // the row shows fewer entries, never fewer opportunities.
+  (first.alsoUrls ||= []).push({ loc: (r.locations || [])[0] || "", url: r.url });
   // keep the freshest date across the group so the merged row is not aged by
   // whichever city happened to be listed first
   if (r.posted && (!first.posted || r.posted > first.posted)) first.posted = r.posted;
 }
 const clonesMerged = roles.length - byClone.size;
 roles.length = 0;
-roles.push(...byClone.values());
+for (const r of byClone.values()) { delete r._occ; roles.push(r); }
 
 // Path A — LLM rescue of "Other" roles at target companies (scoped + cached; no-op without a key)
 await enrichOther(roles, errors);

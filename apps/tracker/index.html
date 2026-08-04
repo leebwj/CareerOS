@@ -476,7 +476,11 @@
           ${isTgt ? '<span class="badge tgt">target</span>' : ""}
           <span class="badge cat">${esc(r.category)}</span>
           ${r.term ? `<span class="badge term">${esc(r.term)}</span>` : ""}
-          <span>${esc(r.locations[0] || "")}${r.alsoIn ? `<span class="badge loc" title="${esc((r.locations || []).slice(1).join(" · "))}">+${r.alsoIn} more ${r.alsoIn > 1 ? "locations" : "location"}</span>` : ""}</span>
+          <span>${esc(r.locations[0] || "")}${r.alsoIn ? `<span class="badge loc" title="${esc((r.locations || []).slice(1).join(" · "))}">+${r.alsoIn} more ${r.alsoIn > 1 ? "locations" : "location"}</span>` : ""}${
+            // every folded posting keeps its own apply link, so a merged row can
+            // never make a real opening unreachable
+            (r.alsoUrls || []).map((a) => `<a class="badge loc" href="${esc(a.url)}" target="_blank" rel="noopener" title="Apply — ${esc(a.loc)}">${esc((a.loc || "").split(",")[0] || "apply")} →</a>`).join("")
+          }</span>
           <span class="mono" style="font-size:12px;color:var(--faint)">${esc(r.posted)} · ${esc(r.level)}</span>
           ${s.date ? `<span class="mono" style="font-size:12px;color:var(--green)">applied ${s.date}</span>` : ""}
           ${s.fu && s.st === "Applied" ? `<span class="mono" style="font-size:12px;color:${s.fu <= today() ? "var(--red)" : "var(--amber)"}">${s.fu <= today() ? "⏰ follow up now" : "follow-up " + s.fu}${s.fuN > 1 ? " (#2)" : ""}</span>` : ""}
