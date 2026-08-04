@@ -116,7 +116,7 @@ const ATS_TARGETS = {
   },
   lever: {
     Palantir: "palantir", Spotify: "spotify", Larian: "larian", Illumination: "illumination",
-    Skydance: "skydance", Voodoo: "voodoo", Kabam: "kabam", "Dream Games": "dreamgames",
+    Skydance: "skydance", Kabam: "kabam", "Dream Games": "dreamgames",
     Easybrain: "easybrain", Mistplay: "mistplay", "Jam City": "jamcity",
   },
   // SmartRecruiters: { Company: "companyId" } — CASE-SENSITIVE, oddly suffixed (Ubisoft2, NBCUniversal3)
@@ -188,7 +188,7 @@ const ART_RX = /\b(3d artist|character artist|environment artist|concept artist|
 // word is the whole distinction, and it generalises well beyond Apple.
 // design is checked FIRST and routed to Hardware, so the design bucket means
 // what Brian means by it.
-const HW_DESIGN_RX = /\b(asic|vlsi|\brtl\b|register transfer|physical design|design verification|\bdft\b|\bsoc\b|silicon|semiconductor|standard cell|floorplan|place and route|synthesis and implementation|static timing|timing analysis|analog|mixed[- ]signal|\bpcb\b|schematic|circuit design|chip design\w*|hardware design\w*|mechanical design\w*|electrical design\w*|electronic design\w*|thermal design\w*|packaging design\w*|structures design\w*|structural design\w*|harness design\w*|layout design\w*|\brfic\b|\bbaw\b|\brcdd\b|filter design\w*|\bhvac\b|piping|\bcad\b|design for manufactur\w*|\bdfm\b|test hardware|cache controller|memory controller|\bdram\b|\bhbm\b|\bpll\b|phase[- ]locked|control design|system design engineer|power design|\brf design|antenna|optical design|process design|tool design|die design|package design|verification engineer|\bfpga\b|\bmechanical\b|materials engineer|interconnect|\bthermal\b|enclosure|product design engineer)\b/i;
+const HW_DESIGN_RX = /\b(asic|vlsi|\brtl\b|register transfer|physical design|design verification|\bdft\b|\bsoc\b|silicon|semiconductor|standard cell|floorplan|place and route|synthesis and implementation|static timing|timing analysis|analog|mixed[- ]signal|\bpcb\b|schematic|circuit design\w*|chip design\w*|hardware design\w*|mechanical design\w*|electrical design\w*|electronic design\w*|thermal design\w*|packaging design\w*|structures design\w*|structural design\w*|harness design\w*|layout design\w*|\brfic\b|\bbaw\b|\brcdd\b|filter design\w*|\bhvac\b|piping|\bcad\b|design for manufactur\w*|\bdfm\b|test hardware|cache controller|memory controller|\bdram\b|\bhbm\b|\bpll\b|phase[- ]locked|control design|system design engineer|power design|\brf design|antenna|optical design|process design|tool design|die design|package design|verification engineer|\bfpga\b|\bmechanical\b|materials engineer|interconnect|\bthermal\b|enclosure|product design engineer)\b/i;
 // Every big company names design differently and a generic list misses them:
 // Apple's UX org is HUMAN INTERFACE (and its "Product Design" is mechanical
 // engineering); Google ships UX Engineer, UX Writer and Design Technologist;
@@ -282,6 +282,27 @@ function isUS(locations) {
     // means unknown, and unknown at a curated US-centric board is worth keeping.
     return /^(in[- ]?office|on[- ]?site|onsite|hybrid|flexible|remote|various|multiple|any\b|n\/?a)/i.test(l) || !/[a-z]/i.test(l);
   });
+}
+
+// Shared browser UA. Several bespoke career sites reject anything that reads
+// like a bot — Atlassian 403s on any User-Agent containing "role-grabber" — so
+// adapters for those sites send a plain browser string instead of identifying
+// themselves. Kept in one place so it does not drift across 14 copies.
+const BROWSER_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36";
+const JSON_HEADERS = { "user-agent": BROWSER_UA, accept: "application/json" };
+// Sources that do NOT bot-filter get an honest identifier instead.
+const IDENT_UA = "Mozilla/5.0 (careeros-role-grabber)";
+
+// Epoch timestamps arrive in BOTH units across sources and guessing wrong is
+// silent: Microsoft's postedTs is in SECONDS, and reading it as milliseconds
+// dated every Microsoft row 1970-01-21, so none could ever count as recent or
+// fire the 🔥/alert path. Anything below ~1e12 is seconds.
+function epochToISO(v) {
+  if (!v) return "";
+  const n = Number(v);
+  if (!Number.isFinite(n) || n <= 0) return "";
+  const d = new Date(n < 1e12 ? n * 1000 : n);
+  return isNaN(d) ? "" : d.toISOString().slice(0, 10);
 }
 
 // ── fetch helpers (a failed source never kills the run) ─────────────────────
@@ -489,7 +510,7 @@ async function fromAmazonJobs() {
     let offset = 0, hits = Infinity;
     while (offset < Math.min(hits, 400)) {
       const r = await fetch(`https://www.amazon.jobs/en/search.json?${q}&result_limit=100&offset=${offset}`, {
-        headers: { "user-agent": "Mozilla/5.0 (careeros-role-grabber)" },
+        headers: { "user-agent": IDENT_UA },
       });
       if (!r.ok) throw new Error(`${r.status} amazon.jobs`);
       const d = await r.json();
@@ -524,7 +545,7 @@ async function fromAmazonJobs() {
 // Netflix runs on Eightfold (explore.jobs.netflix.net) — public JSON API.
 async function fromNetflixEightfold() {
   const r = await fetch("https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com&query=intern&num=50&start=0", {
-    headers: { "user-agent": "Mozilla/5.0 (careeros-role-grabber)" },
+    headers: { "user-agent": IDENT_UA },
   });
   if (!r.ok) throw new Error(`${r.status} netflix eightfold`);
   const d = await r.json();
@@ -573,7 +594,7 @@ async function fromMicrosoftCareers() {
       let r, d;
       for (let attempt = 0; attempt < 4; attempt++) {
         await new Promise((res) => setTimeout(res, attempt ? 1200 * attempt : 250));
-        r = await fetch(u, { headers: { "user-agent": "Mozilla/5.0 (careeros-role-grabber)", accept: "application/json" } });
+        r = await fetch(u, { headers: JSON_HEADERS });
         if (r.ok) break;
         if (r.status !== 429 && r.status !== 503) throw new Error(`${r.status} microsoft pcsx`);
       }
@@ -594,8 +615,7 @@ async function fromMicrosoftCareers() {
           category: categorize(p.name, p.department || ""),
           locations: [String(loc)].filter(Boolean),
           url: `https://jobs.careers.microsoft.com/global/en/job/${p.atsJobId || id}`,
-          posted: p.postedTs ? new Date(p.postedTs).toISOString().slice(0, 10)
-                : p.creationTs ? new Date(p.creationTs).toISOString().slice(0, 10) : "",
+          posted: epochToISO(p.postedTs) || epochToISO(p.creationTs),
           term: termFromTitle(p.name),
           level: levelFromTitle(p.name),
           source: "microsoft",
@@ -649,7 +669,7 @@ async function fromGoogleCareers() {
   for (const q of ["intern", "student researcher", "university graduate", "designer", "user experience", "product manager"]) {
     for (let page = 1; page <= 10; page++) {
       const u = `https://www.google.com/about/careers/applications/jobs/results?q=${encodeURIComponent(q)}&page=${page}`;
-      const r = await fetch(u, { headers: { "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36", "accept-language": "en-US,en;q=0.9" } });
+      const r = await fetch(u, { headers: { "user-agent": BROWSER_UA, "accept-language": "en-US,en;q=0.9" } });
       if (!r.ok) throw new Error(`${r.status} google careers`);
       const jobs = parseGoogleBlock(await r.text());
       if (!jobs.length) break;
@@ -717,7 +737,7 @@ function parseAppleJobs(html) {
 }
 
 async function fromAppleJobs() {
-  const H = { "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36", "accept-language": "en-US,en;q=0.9" };
+  const H = { "user-agent": BROWSER_UA, "accept-language": "en-US,en;q=0.9" };
   const out = [];
   const seen = new Set();
   const sweeps = [
@@ -768,7 +788,7 @@ async function fromTikTokCareers() {
     "website-path": "tiktok",
     referer: "https://lifeattiktok.com/",
     "accept-language": "en-US",
-    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120",
+    "user-agent": BROWSER_UA,
   };
   const flatLoc = (c) => { const p = []; let n = c; while (n) { if (n.en_name) p.push(n.en_name); n = n.parent; } return p.join(", "); };
   const out = [];
@@ -817,7 +837,7 @@ const JIBE_SITES = { GitHub: "https://www.github.careers", DocuSign: "https://ca
 
 async function fromJibe(company, host) {
   const r = await fetch(`${host}/api/jobs?keywords=&page=1&limit=100`, {
-    headers: { "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120", accept: "application/json" },
+    headers: JSON_HEADERS,
   });
   if (!r.ok) throw new Error(`${r.status} jibe ${company}`);
   const d = await r.json();
@@ -844,7 +864,7 @@ async function fromJibe(company, host) {
 // pagination, no auth. 750 rows.
 async function fromRippling() {
   const r = await fetch("https://api.rippling.com/platform/api/ats/v1/board/rippling/jobs", {
-    headers: { "user-agent": "Mozilla/5.0 (careeros-role-grabber)", accept: "application/json" },
+    headers: JSON_HEADERS,
   });
   if (!r.ok) throw new Error(`${r.status} rippling`);
   const d = await r.json();
@@ -871,7 +891,7 @@ async function fromAtlassian() {
   // sends a plain browser string rather than our usual identifier.
   const r = await fetch("https://www.atlassian.com/endpoint/careers/listings", {
     headers: {
-      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "user-agent": BROWSER_UA,
       accept: "application/json,text/plain,*/*",
       referer: "https://www.atlassian.com/company/careers/all-jobs",
     },
@@ -1202,6 +1222,18 @@ for (const r of collected) {
   // names and SF/LA understood) that the exemption costs more than it saves.
   if (!isUS(r.locations)) continue;
   if (!curated && EXCLUDE_RX.test(r.title)) continue; // inbox relevance gate — drop the noise
+  // Dedupe on the URL FIRST — it is the posting's canonical identity. The
+  // company|title|location key alone misses cross-source duplicates, because
+  // each source words the same job differently: Simplify says "Software
+  // Engineer Intern (Creative Int…)" where TikTok's own board says "Software
+  // Engineer Intern - Creative Intelligence". Same posting, same URL, two rows
+  // in Brian's feed. Checked before shipping: of 131 shared URLs, none were
+  // genuinely distinct roles. collectedATS is merged first, so the direct-board
+  // row (fresher, better-titled) wins over the aggregator's copy.
+  if (r.url) {
+    if (seen.has(r.url)) continue;
+    seen.add(r.url);
+  }
   const key = `${r.company}|${r.title}|${r.locations[0] || ""}`.toLowerCase().replace(/\s+/g, " ");
   if (seen.has(key)) continue;
   seen.add(key);
