@@ -1280,7 +1280,33 @@ for (const r of collected) {
   roles.push(r);
 }
 
-// ── collapse per-location clones ─────────────────────────────────────────────
+// ── per-location "clones" are NOT merged — here is the evidence ─────────────
+// Tempting idea, tried and reverted 2026-08-04: fold same-title-different-city
+// postings into one row. It looked like pure decluttering (982 rows) but it was
+// merging genuinely different jobs, and Brian was right to ask for proof.
+//
+// Two independent measurements killed it:
+//   · DESCRIPTIONS. Fetching the real postings and comparing them, 8 of 14
+//     sampled merges differed substantially — Anduril "Electrical Engineer"
+//     Lexington vs McHenry scored 45% similar, Snowflake "Solution Engineer"
+//     Boston vs FL-Remote 30%. Different roles that share a title.
+//   · REQUISITION IDs. Greenhouse exposes requisition_id, and it is unique per
+//     posting: those two Anduril rows are reqs 5688 and 10889. Separate
+//     openings, each its own application.
+// Verifying by description at runtime is not affordable either — Greenhouse's
+// ?content=true is 35MB for a single board, so ~3.5GB per run across ~100.
+//
+// Brian's actual report was "roles that directed to the same application page",
+// which is the identical-URL case handled by the dedupe above and is provably
+// correct: same URL is the same posting. Anything looser hides real jobs, and
+// hiding an opening costs far more than showing a duplicate.
+//
+// If this is ever revisited, the ONLY safe signal is positive proof of sameness
+// — a shared requisition_id, or matching descriptions — never a shared title.
+
+// ── (disabled) collapse per-location clones ─────────────────────────────────
+/*
+
 // Brian: "there were 4 SWE roles that was actually the same role in the same
 // company." Big employers post ONE job once PER CITY, each with its own apply
 // URL — SpaceX lists "Application Software Engineer" 8 times, L3Harris
@@ -1341,6 +1367,9 @@ for (const r of roles) {
 const clonesMerged = roles.length - byClone.size;
 roles.length = 0;
 for (const r of byClone.values()) { delete r._occ; roles.push(r); }
+*/
+const clonesMerged = 0;   // merging disabled — see the note above
+
 
 // Path A — LLM rescue of "Other" roles at target companies (scoped + cached; no-op without a key)
 await enrichOther(roles, errors);
