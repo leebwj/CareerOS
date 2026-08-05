@@ -1,0 +1,94 @@
+{
+  "slug": "spacex",
+  "company": "SpaceX",
+  "datasetName": "SpaceX",
+  "updated": "2026-08-05",
+  "formatIntel": {
+    "summary": "The distinctive round is a PROJECT PRESENTATION to a panel of 5–10 engineers who drill into your design decisions, failure modes and testing. Depth of ownership beats polish — they are checking whether you actually built the thing you claim. Acceptance is under 2%, and the technical work is applied rather than abstract (telemetry, protocols, real math).",
+    "rounds": [
+      {
+        "name": "Recruiter / hiring-manager screen",
+        "length": "30–45 min",
+        "tests": "Background, résumé depth, why SpaceX",
+        "scoring": "Whether your technical depth survives a follow-up question, and whether 'why SpaceX' is specific",
+        "prep": "One concrete reason tied to what you'd build. 'Space is cool' is filtered here."
+      },
+      {
+        "name": "Technical assessment",
+        "length": "~4h take-home, or a shorter online challenge",
+        "tests": "Practical engineering — telemetry data, protocol implementation, applied math",
+        "scoring": "Working, defensible code on a realistic problem, not puzzle-solving",
+        "prep": "Practice reading a spec and implementing it cleanly. Abstract LeetCode drilling is the wrong prep here."
+      },
+      {
+        "name": "Technical interview",
+        "length": "60–90 min × 1–2",
+        "tests": "Coding, algorithms, some systems",
+        "scoring": "Engineering judgement on real constraints",
+        "prep": "Be able to justify data-structure and language choices out loud."
+      },
+      {
+        "name": "PROJECT PRESENTATION",
+        "length": "15–30 min + Q&A, panel of 5–10 engineers",
+        "tests": "One project of yours, in depth",
+        "scoring": "THE critical stage. Design decisions, failure modes, testing methodology, what you'd change. Ownership over polish",
+        "prep": "Pick the project you own end to end and can defend under sustained questioning. Know why you rejected the alternatives."
+      }
+    ]
+  },
+  "questions": {
+    "sixMonths": [],
+    "allTime": [],
+    "note": "No public question data for this company. That is expected for companies that do not run LeetCode-style rounds — work the format intel above instead."
+  },
+  "behavioral": {
+    "values": [
+      "Depth of ownership",
+      "Working with real-world constraints",
+      "Building rather than describing"
+    ],
+    "stories": [
+      {
+        "story": "Owning one layer of a three-person engine",
+        "prompt": "Tell me about a technical project you're proud of.",
+        "situation": "Mini Minecraft was a from-scratch voxel engine in C++ and OpenGL built by a team of three. I owned world generation and the render pipeline; chunk streaming and player physics belonged to my teammates.",
+        "task": "Build a world that read as varied rather than noisy, and a renderer that made it legible.",
+        "action": "I built 7-biome procedural generation with Perlin, FBM and Voronoi noise using smoothstep blending, carved 3D Perlin-noise caves, and wrote the GLSL render pipeline — PCF shadow mapping, screen-space reflections, vertex ambient occlusion, a day-night cycle, and post-process water and lava overlays through a framebuffer pass.",
+        "result": "A coherent world where generation and lighting reinforced each other. Building inside someone else's streaming system also forced my generation to be correct at chunk boundaries, not just in isolation.",
+        "mapsTo": "Building rather than describing"
+      },
+      {
+        "story": "The outage nobody had noticed",
+        "prompt": "Walk me through the hardest bug you've debugged. How did you find it?",
+        "situation": "Aleph Lab's notification pipeline was failing silently in production. Nothing alerted, and the failure was invisible from inside the product.",
+        "task": "Find out why notifications were not being delivered, and restore the pipeline.",
+        "action": "I traced backwards from the delivery failures rather than guessing at causes, and found a JWT signing-key migration: the pipeline was still authenticating with a key that was no longer valid, so every request was being rejected. The migration itself was correct — nothing downstream had been updated to follow it.",
+        "result": "The pipeline went from failing with 401 to healthy at 200. The instructive part was that the symptom (no notifications) and the cause (an auth key rotation) lived in completely different parts of the system.",
+        "mapsTo": "Working with real-world constraints"
+      },
+      {
+        "story": "Checking the targeting against reality",
+        "prompt": "Tell me about a problem you found that nobody asked you to look for.",
+        "situation": "I had shipped a production retention system at Aleph Lab — targeted push via Supabase, Deno edge functions and FCM, with a treatment/holdout A/B.",
+        "task": "It worked, but nobody had asked whether it was actually reaching everyone it was supposed to reach. I wanted to know.",
+        "action": "I validated the win-back targeting against live production data and found the logic identifying eligible users was wrong, so a large share of the intended audience was never being reached at all. I corrected how eligibility was determined.",
+        "result": "Reachable users expanded roughly 2.7×, and the system recovered churned users back into paying subscribers.",
+        "mapsTo": "Depth of ownership"
+      },
+      {
+        "story": "Failing an intro CS course, and what actually caused it",
+        "prompt": "Tell me about your biggest failure. (Palantir's hiring-manager round asks this directly.)",
+        "situation": "Early in my time at Penn I overloaded a semester and failed an introductory CIS course — the foundational one for everything I've built since.",
+        "task": "The honest read isn't that the material was too hard. I had taken on more than I could carry, and rather than triage early I let one course slide and told myself I'd recover it at the end. I couldn't.",
+        "action": "I then served two years as a military interpreter, which was two years of work where falling behind quietly was not an option. When I came back to Penn I retook the course and changed the thing that had actually gone wrong: I kept pace week to week instead of banking on a recovery later, and treated falling behind as something to raise immediately rather than absorb.",
+        "result": "I retook it and earned an A−, and went on to the graphics and systems coursework that the whole rest of my work depends on. The durable lesson wasn't 'work harder' — it was that problems compound silently while you're deciding not to look at them, which is the same instinct behind checking the retention targeting and reconstructing that retention number when nobody had asked me to.",
+        "mapsTo": "Depth of ownership"
+      }
+    ]
+  },
+  "askThem": [
+    "Which vehicle or programme would the work sit closest to — Starlink, Starship, Dragon?",
+    "How much of an intern's work ends up flying versus supporting ground systems?",
+    "What does the review process look like when software failure has physical consequences?"
+  ]
+}

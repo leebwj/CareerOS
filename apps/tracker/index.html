@@ -161,7 +161,19 @@
   // time. It also carries the SAME company under more than one name ("Palantir"
   // and "Palantir Technologies" are both live), so aliases map to one slug.
   // Add an entry here when a dossier is authored.
-  const PREP = { "palantir": "palantir", "palantir technologies": "palantir", "google": "google" };
+  // Keys are the company names AS THEY APPEAR IN THE FEED, lowercased — several
+  // arrive under more than one spelling, so every variant maps to one slug.
+  const PREP = {
+    "palantir": "palantir", "palantir technologies": "palantir",
+    "google": "google", "google deepmind": "google",
+    "spacex": "spacex",
+    "microsoft": "microsoft",
+    "nvidia": "nvidia",
+    "tesla": "tesla",
+    "apple": "apple",
+    // ByteDance and TikTok share a hiring pipeline — one dossier covers both
+    "tiktok": "tiktok", "bytedance": "tiktok",
+  };
   const prepSlug = (company) => PREP[String(company || "").trim().toLowerCase()] || "";
   // Stages where prep is what you need next: "OA / Screen" and "Interview".
   const PREP_STAGES = /interview|onsite|oa|screen/i;
