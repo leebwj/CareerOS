@@ -82,6 +82,13 @@
   .badge.cat { color:var(--cobalt-deep); border-color:rgba(111,136,207,.4); }
   .badge.term { color:var(--muted); border-color:var(--line); }
   .badge.hot { color:#ff8a5c; border-color:rgba(255,138,92,.55); background:rgba(255,138,92,.1); font-weight:700; }
+  /* follow-up triage verdicts — colour carries the recommendation at a glance */
+  .tri { font-family:"Geist Mono",monospace; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; padding:2px 8px; border-radius:999px; border:1px solid; cursor:help; }
+  .tri-send  { color:var(--green);  border-color:rgba(127,191,142,.55); background:rgba(127,191,142,.1); font-weight:700; }
+  .tri-skip  { color:var(--faint);  border-color:var(--line); }
+  .tri-wait  { color:var(--muted);  border-color:var(--line); }
+  .tri-stop  { color:var(--red);    border-color:rgba(201,123,123,.5); }
+  .tri-close { color:var(--red);    border-color:rgba(201,123,123,.5); }
   a.badge.prep { color:var(--cobalt-deep); border-color:rgba(111,136,207,.55); text-decoration:none; }
   a.badge.prep:hover { background:rgba(111,136,207,.12); }
   .badge.fit-s { color:#e5c06a; border-color:rgba(229,192,106,.5); }
@@ -444,6 +451,75 @@
   };
   const today = () => new Date().toISOString().slice(0, 10);
 
+  // ── follow-up triage ───────────────────────────────────────────────────────
+  // 35 follow-ups came due at once and every one looked identical, which makes
+  // the list unusable. Most are not worth sending: companies running a
+  // high-volume automated pipeline do not act on a nudge, so chasing them costs
+  // time and returns nothing. Smaller companies are the opposite — a short note
+  // reaches an actual person. This says which is which, and drafts the note.
+  const HIGH_VOLUME = /^(google|alphabet|apple|microsoft|amazon|meta|facebook|nvidia|tesla|spacex|tiktok|bytedance|intel|qualcomm|ibm|oracle|salesforce|cisco|adobe|uber|lyft|airbnb|netflix|paypal|visa|mastercard|jpmorgan|jp morgan|goldman|citi|deloitte|accenture|capital one|walmart|target|lockheed|raytheon|rtx|northrop|boeing|l3harris|ge |general electric)/i;
+  const DAYS = (from, to) => Math.floor((new Date(to + "T12:00:00") - new Date(from + "T12:00:00")) / 864e5);
+
+  // Company-level context, rebuilt each render. Two things only make sense per
+  // COMPANY rather than per application, and both were wrong without it:
+  //   · if you are already interviewing somewhere, chasing your other
+  //     applications there is counterproductive — you have a live contact
+  //   · Brian has 15 Palantir applications; following up on each would read as
+  //     spam. One note per company is the most that helps.
+  function companyContext() {
+    const ctx = {};
+    for (const [k, v] of Object.entries(state.s)) {
+      const co = k.split("|")[0];
+      const c = (ctx[co] ||= { live: false, firstDue: null });
+      if (v.st === "Interview" || v.st === "OA / Screen" || v.st === "Offer") c.live = true;
+      if (v.st === "Applied" && v.fu && v.fu <= today()) {
+        // earliest-applied row is the one worth chasing; the rest defer to it
+        if (!c.firstDue || (v.date || "") < c.firstDue.date) c.firstDue = { key: k, date: v.date || "" };
+      }
+    }
+    return ctx;
+  }
+  let COCTX = {};
+
+  // verdict: {code, label, why} — code drives colour, why is the tooltip
+  function triage(r, s, k) {
+    const applied = s.date || "";
+    const age = applied ? DAYS(applied, today()) : null;
+    const co = (r.company || "").toLowerCase();
+    const c = COCTX[co] || {};
+    if ((s.fuDone || 0) >= 2) return { code: "stop", label: "stop chasing", why: "Already followed up twice. A third note reads as pressure, and the answer is no." };
+    if (age !== null && age < 7) return { code: "wait", label: "too early", why: `Applied ${age} day${age === 1 ? "" : "s"} ago. Under a week is not silence yet — 7–14 days is the window.` };
+    if (c.live) return { code: "skip", label: "already in process", why: `You are at interview stage with ${r.company}. Chasing your other applications there goes around the person already talking to you — raise it with them instead.` };
+    if (age !== null && age > 45) return { code: "close", label: "likely closed", why: `${age} days silent. Realistically dead — mark it closed rather than spend a follow-up on it.` };
+    if (HIGH_VOLUME.test(r.company)) return { code: "skip", label: "skip — automated", why: `${r.company} runs a high-volume pipeline on rolling review. A follow-up does not reach a decision-maker and does not change the outcome.` };
+    if (c.firstDue && k && c.firstDue.key !== k) return { code: "skip", label: "one per company", why: `Following up on several roles at ${r.company} at once reads as spam. Send the one for your earliest application and let it cover the rest.` };
+    return { code: "send", label: "worth sending", why: `${age !== null ? age + " days" : "Due"} since applying, and ${r.company} is small enough that a short note reaches a person.` };
+  }
+
+  // A follow-up works when it is short, specific, and gives them a reason to
+  // reply beyond "any update?" — so it names the role, the date, and one
+  // concrete thing. Brian edits before sending; nothing is ever sent from here.
+  function draftFollowUp(r, s) {
+    const applied = s.date || "";
+    const when = applied ? new Date(applied + "T12:00:00").toLocaleDateString("en-US", { month: "long", day: "numeric" }) : "recently";
+    const second = (s.fuDone || 0) >= 1;
+    return [
+      `Subject: Following up — ${r.title} (${r.company})`,
+      ``,
+      `Hi,`,
+      ``,
+      second
+        ? `I wanted to check in once more on my application for the ${r.title} role, submitted on ${when}. I know timelines slip, so no rush — I'm still very interested and happy to wait for the right window.`
+        : `I applied for the ${r.title} role on ${when} and wanted to follow up briefly. I'm still very interested, and would be glad to share anything that would help — code samples, references, or availability for a conversation.`,
+      ``,
+      `A quick note on why this role specifically: I'm a CS + Design student at Penn heading into the Computer Graphics & Game Technology master's, currently interning at Aleph Lab (YC) where I ship production systems end to end. Recent work at leebrian.dev.`,
+      ``,
+      `Thanks for your time,`,
+      `Brian Wonjun Lee`,
+      `leebrian.dev · leebwj@sas.upenn.edu`,
+    ].join("\n");
+  }
+
   const TABS = [
     ["inbox", "Inbox"], ["starred", "Starred"], ["applied", "Tracker"], ["hidden", "Hidden"],
   ];
@@ -489,6 +565,7 @@
           <span class="mono" style="font-size:12px;color:var(--faint)">${esc(r.posted)} · ${esc(r.level)}</span>
           ${s.date ? `<span class="mono" style="font-size:12px;color:var(--green)">applied ${s.date}</span>` : ""}
           ${s.fu && s.st === "Applied" ? `<span class="mono" style="font-size:12px;color:${s.fu <= today() ? "var(--red)" : "var(--amber)"}">${s.fu <= today() ? "⏰ follow up now" : "follow-up " + s.fu}${s.fuN > 1 ? " (#2)" : ""}</span>` : ""}
+          ${s.fu && s.st === "Applied" && s.fu <= today() ? (() => { const t = triage(r, s, k); return `<span class="tri tri-${t.code}" title="${esc(t.why)}">${t.label}</span>`; })() : ""}
           ${s.fuDone ? `<span class="mono" style="font-size:12px;color:var(--faint)">followed up ×${s.fuDone} — consider closing if silent</span>` : ""}
           ${s.idate ? `<span class="mono" style="font-size:12px;color:${s.idate >= today() ? "var(--cobalt-deep)" : "var(--faint)"}">📅 interview ${s.idate}</span>` : ""}
         </div>
@@ -497,6 +574,7 @@
       <div class="r-actions">
         ${view === "applied" || s.st ? stageSel : `<a class="act primary" href="${esc(r.url)}" target="_blank" rel="noopener">Apply ↗</a>`}
         ${(s.st === "Interview" || s.st === "OA / Screen") ? `<input type="date" class="idate" data-k="${esc(k)}" value="${esc(s.idate || "")}" title="Interview / screen date">` : ""}
+        ${s.fu && s.st === "Applied" && s.fu <= today() && triage(r, s, k).code === "send" ? `<button class="act fu-draft" data-k="${esc(k)}" title="Copy a follow-up draft to the clipboard — nothing is sent">✎ Draft</button>` : ""}
         ${s.fu && s.st === "Applied" && s.fu <= today() ? `<button class="act fu-done" data-k="${esc(k)}">✉ Followed up</button>` : ""}
         ${s.st ? "" : `<button class="act mark" data-k="${esc(k)}">✓ Applied</button>`}
         <button class="act star ${s.star ? "on" : ""}" data-k="${esc(k)}">★</button>
@@ -540,6 +618,7 @@
     document.getElementById("grp").classList.toggle("on", fGroup);
     document.getElementById("notif").classList.toggle("on", notifOn);
 
+    COCTX = companyContext();
     let rows = roles.filter((r) => {
       const k = key(r), s = state.s[k];
       if (view === "inbox" && (s?.st || state.hidden[k])) return false;
@@ -626,6 +705,17 @@
       if (s.fuDone >= 2) { delete s.fu; } // 2 attempts, then move on (research consensus)
       else { s.fu = addBizDays(today(), 5); s.fuN = 2; }
       save(); render();
+    });
+    // Copies a draft to the clipboard. It never sends anything and never opens
+    // a mail client — Brian reads and edits every message himself.
+    document.querySelectorAll(".fu-draft").forEach((b) => b.onclick = async () => {
+      const k = b.dataset.k, s = state.s[k] || {};
+      const r = roles.find((x) => key(x) === k);
+      if (!r) return;
+      const text = draftFollowUp(r, s);
+      try { await navigator.clipboard.writeText(text); b.textContent = "✓ copied"; }
+      catch { /* clipboard blocked — fall back to a prompt the user can copy from */ window.prompt("Copy this follow-up:", text); b.textContent = "✎ Draft"; return; }
+      setTimeout(() => { b.textContent = "✎ Draft"; }, 1800);
     });
     document.querySelectorAll(".star").forEach((b) => b.onclick = () => {
       pushUndo();
