@@ -83,9 +83,23 @@ async function scheduleTick() {
 
 // Launch at login — the whole point is that opening the laptop is enough. Set
 // on every start so it survives the app being moved or reinstalled.
+//
+// The bare call registers electron.exe with NO arguments while running
+// unpackaged (`electron .`), which on next login opens Electron's own welcome
+// app instead of this one — verified in the registry, it really does this. So
+// pass the app directory explicitly. Once this is packaged into a real .exe,
+// process.execPath IS the app and the extra arg is harmless.
 function setLaunchOnLogin() {
   if (process.platform === "linux") return;            // no standard mechanism
-  try { app.setLoginItemSettings({ openAtLogin: true, openAsHidden: false, args: [] }); } catch {}
+  try {
+    const packaged = app.isPackaged;
+    app.setLoginItemSettings({
+      openAtLogin: true,
+      openAsHidden: false,
+      path: process.execPath,
+      args: packaged ? [] : [app.getAppPath()],
+    });
+  } catch { /* never let a startup preference stop the app running */ }
 }
 
 app.whenReady().then(() => {
