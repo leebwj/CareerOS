@@ -1,8 +1,19 @@
 # desktop-pet — CareerOS in your system tray
 
 Lives next to the clock. **Hover** the tray icon for today's headline numbers;
-**click** it for the brief with the actual roles, each linking straight to the
-application. Starts at login, so opening your laptop is enough.
+**click** it for the brief. Starts at login, so opening your laptop is enough.
+
+**The dot tells you something without being opened:**
+
+| | |
+|---|---|
+| grey ring | nothing needs you |
+| cobalt | a target role in your cycle opened since you last looked |
+| amber | follow-ups are due — the one that costs you if ignored |
+
+It also raises a desktop notification when a NEW role opens at a target company
+in your cycle. Only that — anything looser and notifications become wallpaper.
+Click the toast to open the application.
 
 ```bash
 cd apps/desktop-pet
@@ -16,10 +27,21 @@ tracker, open prep, toggle start-at-login, quit.
 
 ## How it gets its data
 
-It fetches [`brief.json`](../role-grabber/data/brief.json), which the
-role-grabber regenerates **4×/day on GitHub Actions**. That file carries the
-headline counts *and* the top 8 roles behind them, so the pet can name a role
-rather than just count them. Nothing depends on this machine being on.
+Two sources:
+
+1. [`brief.json`](../role-grabber/data/brief.json) — regenerated **4×/day on
+   GitHub Actions**, carrying the headline counts *and* the top 8 roles behind
+   them, so the pet can name a role rather than just count them. Nothing here
+   depends on this machine being on.
+2. **Your tracker sheet**, read through the same endpoint the secretary uses and
+   taken from the secretary's gitignored `config.mjs`. That is what supplies
+   live applications, follow-ups due and upcoming interviews. No secret lives in
+   this app, and with no config it degrades cleanly to feed-only.
+
+It remembers which roles it has already shown you (`seen.json` in userData), so
+it can lead with **"new since you last looked"** instead of repeating totals —
+and so a notification never fires twice for the same posting. First run seeds
+that file silently rather than toasting for a board you had simply never opened.
 
 > It used to read `apps/secretary/out/brief.md` off local disk. That file only
 > changes when someone runs the script by hand, so the pet was reporting days-old

@@ -83,20 +83,41 @@
               <div class="line" style="color:#828c99">It refreshes 4×/day — I'll have it next time you open me.</div>`;
     }
     const b = res.data;
+    const t = res.tracker;                    // may be null: feed-only fallback
+    const fresh = Array.isArray(res.fresh) ? res.fresh : [];
     const ago = b.updated ? Math.round((Date.now() - new Date(b.updated)) / 36e5) : null;
     const top = Array.isArray(b.top) ? b.top : [];
-    const rows = top.map(t => `
+
+    const row = (x) => `
       <div class="line role">
-        <a href="#" data-url="${esc(t.url)}">${t.hot ? "🔥 " : ""}${esc(t.company)} — ${esc(t.title)}</a>
-        <span style="color:#545c66"> ${esc(t.loc)}${t.cycle ? " · " + esc(b.cycle) : ""}</span>
-      </div>`).join("");
+        <a href="#" data-url="${esc(x.url)}">${x.hot ? "🔥 " : ""}${esc(x.company)} — ${esc(x.title)}</a>
+        <span style="color:#545c66"> ${esc(x.loc)}</span>
+      </div>`;
+
+    // What NEEDS him comes first — a follow-up already due costs more than a
+    // role he has not applied to. Then what is new. Then the standing board.
+    const needsYou = t && (t.due || t.soon.length) ? `
+      <h3>Needs you</h3>
+      ${t.due ? `<div class="line">⏰ <b>${t.due}</b> follow-up${t.due === 1 ? "" : "s"} due — <a href="#" data-url="https://leebrian.dev/tracker">open tracker →</a></div>` : ""}
+      ${t.soon.map((s) => `<div class="line">📅 ${esc(s.what)} — ${esc(s.when)}</div>`).join("")}` : "";
+
+    const whatsNew = fresh.length
+      ? `<h3>New since you last looked</h3>${fresh.map(row).join("")}`
+      : top.length ? `<h3>Worth a look</h3>${top.slice(0, 5).map(row).join("")}` : "";
+
+    const yours = t
+      ? `<div class="line">${t.live} live application${t.live === 1 ? "" : "s"}${t.appliedWeek ? ` · ${t.appliedWeek} sent this week` : ""}${t.interviews ? ` · <b style="color:#9aafe2">${t.interviews} interviewing</b>` : ""}</div>`
+      : "";
+
     return `
       <h2>☀️ ${esc(b.cycle || "Today")}</h2>
-      <div class="line"><b>${b.cycleRoles ?? 0}</b> roles this cycle · <b>${b.cycleTargets ?? 0}</b> at target companies${b.cycleNew ? ` · <b style="color:#7fbf8e">${b.cycleNew} new</b>` : ""}</div>
-      ${rows ? `<h3>Worth a look now</h3>${rows}` : `<div class="line" style="color:#828c99">Nothing hot right now — a good day to prep.</div>`}
+      <div class="line"><b>${b.cycleRoles ?? 0}</b> roles this cycle · <b>${b.cycleTargets ?? 0}</b> at target companies</div>
+      ${yours}
+      ${needsYou}
+      ${whatsNew}
       <h3>Board</h3>
       <div class="line">${b.hot ?? 0} hot · ${b.fresh ?? 0} posted in 48h · ${b.total ?? 0} total</div>
-      <div class="line"><a href="#" data-url="https://leebrian.dev/tracker">Open tracker →</a>  <a href="#" data-url="https://leebrian.dev/prep">Prep →</a></div>
+      <div class="line"><a href="#" data-url="https://leebrian.dev/tracker">Tracker →</a>  <a href="#" data-url="https://leebrian.dev/prep">Prep →</a></div>
       <div class="line" style="color:#545c66;font-size:11px">updated ${ago === null ? "—" : ago < 1 ? "just now" : ago + "h ago"}</div>`;
   }
 

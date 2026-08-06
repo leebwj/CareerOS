@@ -10,8 +10,10 @@
 // This is a working scaffold — swap the placeholder character in index.html
 // for your own art. Run: npm install && npm start
 
-const { app, BrowserWindow, ipcMain, screen, shell, Tray, Menu, nativeImage } = require("electron");
+const { app, BrowserWindow, ipcMain, screen, shell, Tray, Menu, nativeImage, Notification } = require("electron");
 const { join } = require("node:path");
+const { readFileSync, writeFileSync, existsSync } = require("node:fs");
+const { pathToFileURL } = require("node:url");
 
 // LIVE, not local. This used to read apps/secretary/out/brief.md off disk — but
 // the grabber and the brief both run on GitHub Actions now, so that file only
@@ -27,6 +29,63 @@ let tray;
 // instead of floating on the desktop, so the tray is the primary surface and
 // the pet only appears when summoned.
 let petVisible = false;
+
+// ── what has already been seen ───────────────────────────────────────────────
+// Totals repeat themselves; deltas do not. Remembering which role URLs have
+// been shown turns "67 hot" into "3 new since you last looked", and is also
+// what stops a notification firing twice for the same posting.
+let seenPath = "";
+let seen = { urls: [], lastOpened: null };
+function loadSeen() {
+  try { seen = JSON.parse(readFileSync(seenPath, "utf8")); }
+  catch { seen = { urls: [], lastOpened: null }; }
+  if (!Array.isArray(seen.urls)) seen.urls = [];
+}
+function saveSeen() {
+  // keep it bounded — this file is read and written on every refresh
+  seen.urls = seen.urls.slice(-400);
+  try { writeFileSync(seenPath, JSON.stringify(seen)); } catch { /* never fatal */ }
+}
+
+// ── Brian's own tracker ──────────────────────────────────────────────────────
+// The feed says what exists; only the tracker says what HE has done. Reads the
+// same Google Sheet endpoint the secretary uses, from the secretary's gitignored
+// config — so nothing secret lives in this app and it degrades to feed-only if
+// the config is absent.
+let sheetUrl = null;
+async function loadSheetUrl() {
+  const cfg = join(__dirname, "..", "secretary", "config.mjs");
+  if (!existsSync(cfg)) return null;
+  try { sheetUrl = (await import(pathToFileURL(cfg).href)).default?.sheetUrl || null; }
+  catch { sheetUrl = null; }
+  return sheetUrl;
+}
+async function readTracker() {
+  if (!sheetUrl) return null;
+  try {
+    const r = await fetch(sheetUrl, { redirect: "follow" });
+    if (!r.ok) return null;
+    const d = JSON.parse(await r.text());
+    const st = d && d.state ? JSON.parse(d.state) : null;
+    if (!st || !st.s) return null;
+    const today = new Date().toISOString().slice(0, 10);
+    const weekAgo = new Date(Date.now() - 7 * 864e5).toISOString().slice(0, 10);
+    let due = 0, interviews = 0, appliedWeek = 0, live = 0;
+    const soon = [];
+    for (const [k, v] of Object.entries(st.s)) {
+      if (!v.st) continue;
+      if (v.st === "Applied") live++;
+      if (v.st === "Applied" && v.fu && v.fu <= today) due++;
+      if (v.date && v.date >= weekAgo) appliedWeek++;
+      if ((v.st === "Interview" || v.st === "OA / Screen")) {
+        interviews++;
+        if (v.idate && v.idate >= today) soon.push({ when: v.idate, what: k.split("|")[0] });
+      }
+    }
+    soon.sort((a, b) => a.when.localeCompare(b.when));
+    return { due, interviews, appliedWeek, live, soon: soon.slice(0, 3) };
+  } catch { return null; }
+}
 
 async function readBrief() {
   try {
@@ -96,7 +155,7 @@ function createWindow() {
 ipcMain.on("set-clickthrough", (_e, ignore) => {
   if (win) win.setIgnoreMouseEvents(ignore, { forward: true });
 });
-ipcMain.handle("get-brief", () => readBrief());
+ipcMain.handle("get-brief", async () => lastState || await refreshTray({ notify: false }));
 // links open in the real browser, never inside the transparent pet window
 ipcMain.on("hide-pet", () => hidePet());
 ipcMain.on("open-url", (_e, url) => { if (/^https:\/\//.test(url)) shell.openExternal(url); });
@@ -142,25 +201,83 @@ function showPet(res) {
   petVisible = true;
   win.showInactive();                       // appear without stealing focus
   win.webContents.send("show-brief", res);
+  markSeen(res);
+  // the badge should clear the moment he has actually looked
+  setTimeout(() => refreshTray({ notify: false }), 300);
 }
 function hidePet() { petVisible = false; if (win) win.hide(); }
 
-async function refreshTray() {
-  if (!tray) return;
+const iconFor = (name) => {
+  const p = join(__dirname, "assets", name === "idle" ? "tray.png" : `tray-${name}.png`);
+  const img = nativeImage.createFromPath(p);
+  return img.isEmpty() ? nativeImage.createEmpty() : img;
+};
+
+// Only interrupt for something that is genuinely time-critical: a role at a
+// TARGET company, in the current cycle, that has not been seen before. Anything
+// looser and the notifications become wallpaper and get muted.
+function notifyNew(roles) {
+  if (!Notification.isSupported() || !roles.length) return;
+  const r = roles[0];
+  const more = roles.length - 1;
+  const n = new Notification({
+    title: more > 0 ? `${roles.length} new roles at target companies` : "New role at a target company",
+    body: `${r.company} — ${r.title}${more > 0 ? `\n…and ${more} more` : ""}`,
+    silent: false,
+  });
+  n.on("click", () => { if (r.url) shell.openExternal(r.url); });
+  n.show();
+}
+
+// One place that knows everything: the feed, Brian's tracker, and what is new
+// since he last looked. Tray icon, tooltip and bubble all render from this.
+let lastState = null;
+async function refreshTray({ notify = true } = {}) {
   const res = await readBrief();
-  if (!res.ok) { tray.setToolTip("CareerOS — offline"); return res; }
-  const b = res.data;
-  tray.setToolTip(
-    `CareerOS · ${b.cycle || "roles"}\n` +
-    `${b.cycleRoles ?? 0} this cycle · ${b.cycleTargets ?? 0} at target companies\n` +
-    `${b.hot ?? 0} hot · ${b.fresh ?? 0} posted in 48h`
-  );
-  return res;
+  const tracker = await readTracker();
+
+  let fresh = [];
+  if (res.ok) {
+    const top = Array.isArray(res.data.top) ? res.data.top : [];
+    fresh = top.filter((t) => t.url && t.cycle && !seen.urls.includes(t.url));
+  }
+
+  const due = tracker?.due || 0;
+  // amber wins: a follow-up you are already late on costs more than a role you
+  // have not applied to yet
+  const state = due > 0 ? "due" : fresh.length ? "new" : "idle";
+
+  if (tray) {
+    tray.setImage(iconFor(state));
+    if (!res.ok) tray.setToolTip("CareerOS — offline");
+    else {
+      const b = res.data;
+      tray.setToolTip([
+        `CareerOS · ${b.cycle || "roles"}`,
+        `${b.cycleRoles ?? 0} this cycle · ${b.cycleTargets ?? 0} at target companies`,
+        fresh.length ? `${fresh.length} new since you last looked` : `${b.hot ?? 0} hot · ${b.fresh ?? 0} in 48h`,
+        tracker ? `${tracker.live} live applications · ${due} follow-up${due === 1 ? "" : "s"} due` : "",
+      ].filter(Boolean).join("\n"));
+    }
+  }
+
+  if (notify && fresh.length) notifyNew(fresh);
+  lastState = { ...res, tracker, fresh };
+  console.log(`[pet] ${state} · ${fresh.length} new · ${tracker ? `${tracker.live} live, ${due} due, ${tracker.interviews} interviewing` : "tracker unavailable"}`);
+  return lastState;
+}
+
+// Called when the bubble is actually shown — only then has he "looked".
+function markSeen(st) {
+  if (!st || !st.ok) return;
+  const top = Array.isArray(st.data.top) ? st.data.top : [];
+  for (const t of top) if (t.url && !seen.urls.includes(t.url)) seen.urls.push(t.url);
+  seen.lastOpened = new Date().toISOString();
+  saveSeen();
 }
 
 function buildTray() {
-  const icon = nativeImage.createFromPath(join(__dirname, "assets", "tray.png"));
-  tray = new Tray(icon.isEmpty() ? nativeImage.createEmpty() : icon);
+  tray = new Tray(iconFor("idle"));
   tray.setToolTip("CareerOS");
   tray.setContextMenu(Menu.buildFromTemplate([
     { label: "Show today's brief", click: async () => showPet(await refreshTray()) },
@@ -185,12 +302,19 @@ function buildTray() {
 }
 
 app.whenReady().then(async () => {
+  seenPath = join(app.getPath("userData"), "seen.json");
+  loadSeen();
+  await loadSheetUrl();
+  console.log(`[pet] tracker ${sheetUrl ? "configured" : "NOT configured (feed-only — add sheetUrl to apps/secretary/config.mjs)"} · ${seen.urls.length} roles already seen`);
   setLaunchOnLogin();
   createWindow();
   buildTray();
-  await refreshTray();
+  // first run must not toast for a board he has simply never opened
+  const first = seen.urls.length === 0;
+  await refreshTray({ notify: !first });
+  if (first) { markSeen(lastState); await refreshTray({ notify: false }); }
   setInterval(scheduleTick, 5 * 60 * 1000);
-  setInterval(refreshTray, 30 * 60 * 1000);   // keep the tooltip current
+  setInterval(() => refreshTray(), 10 * 60 * 1000);   // notice new roles during the day
   app.on("activate", () => { if (BrowserWindow.getAllWindows().length === 0) createWindow(); });
 });
 // A tray app must NOT die when its window closes — that is the whole point.
