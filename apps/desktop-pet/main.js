@@ -37,7 +37,9 @@ async function readBrief() {
 
 function createWindow() {
   const { width, height } = screen.getPrimaryDisplay().workAreaSize;
-  const W = 380, H = 460;
+  // H is generous because the brief now lists real roles; the bubble caps
+  // itself at 100vh so it can never overflow whatever this is set to.
+  const W = 380, H = 560;
   win = new BrowserWindow({
     width: W,
     height: H,
@@ -57,6 +59,28 @@ function createWindow() {
     },
   });
   win.setAlwaysOnTop(true, "screen-saver");
+  // Surface renderer errors in the terminal. A transparent frameless window
+  // shows nothing when its script throws — it just sits there looking fine —
+  // so without this a runtime error is completely invisible.
+  win.webContents.on("console-message", (_e, level, message, line, source) => {
+    console.log(`[renderer${level >= 2 ? " ERROR" : ""}] ${message}${line ? ` (${String(source).split(/[\\/]/).pop()}:${line})` : ""}`);
+  });
+  win.webContents.on("render-process-gone", (_e, d) => console.log("[renderer gone]", d.reason));
+  if (process.env.PET_DEVTOOLS) win.webContents.openDevTools({ mode: "detach" });
+  // One line saying whether the bubble actually rendered. A transparent window
+  // that silently shows nothing is the failure mode here, so make it visible.
+  win.webContents.on("did-finish-load", () => {
+    setTimeout(() => win.webContents.executeJavaScript(
+      `(() => { const b = document.getElementById("bubble"), r = b.getBoundingClientRect();
+         return { shown: b.classList.contains("show"),
+                  roles: document.querySelectorAll("#content .role").length,
+                  top: Math.round(r.top), bottom: Math.round(r.bottom),
+                  clipped: r.top < 0 || r.bottom > innerHeight,
+                  scrolls: b.scrollHeight > b.clientHeight + 1 }; })()`
+    ).then((s) => console.log(
+      `[pet] bubble ${s.shown ? "SHOWN" : "hidden"} · ${s.roles} roles · top=${s.top} bottom=${s.bottom} · ${s.clipped ? "CLIPPED" : "fits"}${s.scrolls ? " (scrolls)" : ""}`
+    )).catch(() => {}), 1500);
+  });
   win.loadFile("index.html");
   // start fully click-through; the renderer toggles interactivity per-region
   win.setIgnoreMouseEvents(true, { forward: true });
