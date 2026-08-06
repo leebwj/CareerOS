@@ -3,26 +3,35 @@
 // the bottom-right corner. Only the character sprite + speech bubble are
 // interactive; the rest of the window passes clicks through to your desktop.
 //
-// It reads the secretary's brief (apps/secretary/out/brief.md) and pops it in
-// a speech bubble on launch and every morning at BRIEF_HOUR.
+// It fetches the live brief the role-grabber publishes and pops it in a speech
+// bubble on launch and every morning at BRIEF_HOUR, so opening your laptop is
+// enough to see what is new. Launches at login.
 //
 // This is a working scaffold — swap the placeholder character in index.html
 // for your own art. Run: npm install && npm start
 
-const { app, BrowserWindow, ipcMain, screen } = require("electron");
-const { readFileSync } = require("node:fs");
+const { app, BrowserWindow, ipcMain, screen, shell } = require("electron");
 const { join } = require("node:path");
 
-const BRIEF_PATH = join(__dirname, "..", "secretary", "out", "brief.md");
-const BRIEF_HOUR = 8; // 8am local
+// LIVE, not local. This used to read apps/secretary/out/brief.md off disk — but
+// the grabber and the brief both run on GitHub Actions now, so that file only
+// changes when someone runs the script by hand, and the pet was cheerfully
+// reporting days-old numbers as if they were today's. brief.json is rewritten
+// 4x/day by the bot and is ~2KB, so fetching it on every launch costs nothing.
+const BRIEF_URL = "https://raw.githubusercontent.com/leebwj/CareerOS/main/apps/role-grabber/data/brief.json";
+const BRIEF_HOUR = 8; // 8am local — the second pop of the day
 
 let win;
 
-function readBrief() {
+async function readBrief() {
   try {
-    return readFileSync(BRIEF_PATH, "utf8");
-  } catch {
-    return "# ☀️ Morning brief\n\nNo brief yet — run the secretary:\n`node apps/secretary/run.mjs`\n\nThen I'll have something to tell you!";
+    const r = await fetch(BRIEF_URL, { cache: "no-store" });
+    if (!r.ok) throw new Error("HTTP " + r.status);
+    return { ok: true, data: await r.json() };
+  } catch (e) {
+    // a laptop that just woke up is often offline for a few seconds — say so
+    // plainly rather than showing stale numbers as though they were current
+    return { ok: false, error: String(e.message || e) };
   }
 }
 
@@ -58,19 +67,29 @@ ipcMain.on("set-clickthrough", (_e, ignore) => {
   if (win) win.setIgnoreMouseEvents(ignore, { forward: true });
 });
 ipcMain.handle("get-brief", () => readBrief());
+// links open in the real browser, never inside the transparent pet window
+ipcMain.on("open-url", (_e, url) => { if (/^https:\/\//.test(url)) shell.openExternal(url); });
 
 // schedule the morning pop: check every 5 min, fire once when the hour flips
 let lastFired = "";
-function scheduleTick() {
+async function scheduleTick() {
   const now = new Date();
   const stamp = now.toISOString().slice(0, 10);
   if (now.getHours() === BRIEF_HOUR && lastFired !== stamp) {
     lastFired = stamp;
-    if (win) win.webContents.send("show-brief", readBrief());
+    if (win) win.webContents.send("show-brief", await readBrief());
   }
 }
 
+// Launch at login — the whole point is that opening the laptop is enough. Set
+// on every start so it survives the app being moved or reinstalled.
+function setLaunchOnLogin() {
+  if (process.platform === "linux") return;            // no standard mechanism
+  try { app.setLoginItemSettings({ openAtLogin: true, openAsHidden: false, args: [] }); } catch {}
+}
+
 app.whenReady().then(() => {
+  setLaunchOnLogin();
   createWindow();
   setInterval(scheduleTick, 5 * 60 * 1000);
   app.on("activate", () => { if (BrowserWindow.getAllWindows().length === 0) createWindow(); });

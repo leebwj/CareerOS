@@ -1416,6 +1416,23 @@ writeFileSync(join(ROOT, "data", "brief.json"), JSON.stringify({
   cycleRoles: roles.filter((r) => r.cycle).length,
   cycleTargets: roles.filter((r) => r.cycle && r.target).length,
   cycleNew: roles.filter((r) => r.cycle && r.isNew).length,
+  // The counts alone are not actionable — "61 hot" still means opening the
+  // tracker to find out WHICH. These are the actual roles behind the numbers,
+  // so a desktop pet or a notification can name one and link straight to it.
+  // Deliberately small: this file is fetched on every desktop launch.
+  top: roles
+    .filter((r) => r.hot || (r.isNew && r.target && r.level !== "full-time"))
+    .sort((a, b) => (b.cycle ? 1 : 0) - (a.cycle ? 1 : 0) || b.fit - a.fit)
+    .slice(0, 8)
+    .map((r) => ({
+      company: r.company,
+      title: r.title.length > 68 ? r.title.slice(0, 66) + "…" : r.title,
+      loc: (r.locations[0] || "").split(",")[0].trim(),
+      url: r.url,
+      level: r.level,
+      cycle: !!r.cycle,
+      hot: !!r.hot,
+    })),
 }));
 
 const row = (r) => `| ${r.hot ? "🔥" : ""}${tierIcon(r.fit)}${r.isNew ? " 🆕" : ""} ${r.posted} | ${r.company} | ${r.title.replace(/\|/g, "/")} | ${(r.locations[0] || "").replace(/\|/g, "/")} | ${r.level} | [link](${r.url}) |\n`;

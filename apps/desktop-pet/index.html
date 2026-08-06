@@ -60,26 +60,41 @@
   const bubble = document.getElementById("bubble");
   const content = document.getElementById("content");
 
-  // minimal markdown → html for the brief
-  function mdToHtml(md) {
-    return md.split("\n").map(l => {
-      if (/^# /.test(l)) return `<h2>${esc(l.slice(2))}</h2>`;
-      if (/^## /.test(l)) return `<h3>${esc(l.slice(3))}</h3>`;
-      if (/^- /.test(l)) return `<div class="line">• ${inline(l.slice(2))}</div>`;
-      if (!l.trim()) return "";
-      return `<div class="line">${inline(l)}</div>`;
-    }).join("");
+  const esc = s => String(s ?? "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+
+  // Renders the live brief. Leads with the ROLES, not the totals: "67 hot"
+  // tells you nothing you can act on, whereas naming the newest target role and
+  // linking straight to it means the pet can replace opening the tracker.
+  function briefToHtml(res) {
+    if (!res || !res.ok) {
+      return `<h2>☀️ Morning brief</h2><div class="line">Couldn't reach the feed just now${res && res.error ? ` <span style="color:#545c66">(${esc(res.error)})</span>` : ""}.</div>
+              <div class="line" style="color:#828c99">It refreshes 4×/day — I'll have it next time you open me.</div>`;
+    }
+    const b = res.data;
+    const ago = b.updated ? Math.round((Date.now() - new Date(b.updated)) / 36e5) : null;
+    const top = Array.isArray(b.top) ? b.top : [];
+    const rows = top.map(t => `
+      <div class="line role">
+        <a href="#" data-url="${esc(t.url)}">${t.hot ? "🔥 " : ""}${esc(t.company)} — ${esc(t.title)}</a>
+        <span style="color:#545c66"> ${esc(t.loc)}${t.cycle ? " · " + esc(b.cycle) : ""}</span>
+      </div>`).join("");
+    return `
+      <h2>☀️ ${esc(b.cycle || "Today")}</h2>
+      <div class="line"><b>${b.cycleRoles ?? 0}</b> roles this cycle · <b>${b.cycleTargets ?? 0}</b> at target companies${b.cycleNew ? ` · <b style="color:#7fbf8e">${b.cycleNew} new</b>` : ""}</div>
+      ${rows ? `<h3>Worth a look now</h3>${rows}` : `<div class="line" style="color:#828c99">Nothing hot right now — a good day to prep.</div>`}
+      <h3>Board</h3>
+      <div class="line">${b.hot ?? 0} hot · ${b.fresh ?? 0} posted in 48h · ${b.total ?? 0} total</div>
+      <div class="line"><a href="#" data-url="https://leebrian.dev/tracker">Open tracker →</a>  <a href="#" data-url="https://leebrian.dev/prep">Prep →</a></div>
+      <div class="line" style="color:#545c66;font-size:11px">updated ${ago === null ? "—" : ago < 1 ? "just now" : ago + "h ago"}</div>`;
   }
-  const esc = s => s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
-  const inline = s => esc(s)
-    .replace(/\[apply\]\((.*?)\)/g, '<a href="$1" target="_blank">apply →</a>')
-    .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank">$1</a>')
-    .replace(/\*\*(.*?)\*\*/g, "<b>$1</b>")
-    .replace(/_(.*?)_/g, '<span style="color:#828c99">$1</span>');
 
   let shown = false;
-  function showBrief(md) {
-    content.innerHTML = mdToHtml(md);
+  function showBrief(res) {
+    content.innerHTML = briefToHtml(res);
+    // links go to the real browser; the pet window is transparent and frameless
+    content.querySelectorAll("a[data-url]").forEach(a => {
+      a.onclick = (e) => { e.preventDefault(); window.pet.openUrl(a.dataset.url); };
+    });
     bubble.classList.add("show");
     pet.classList.add("talking");
     shown = true;
