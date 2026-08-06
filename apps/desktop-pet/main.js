@@ -10,7 +10,7 @@
 // This is a working scaffold — swap the placeholder character in index.html
 // for your own art. Run: npm install && npm start
 
-const { app, BrowserWindow, ipcMain, screen, shell } = require("electron");
+const { app, BrowserWindow, ipcMain, screen, shell, Tray, Menu, nativeImage } = require("electron");
 const { join } = require("node:path");
 
 // LIVE, not local. This used to read apps/secretary/out/brief.md off disk — but
@@ -22,6 +22,11 @@ const BRIEF_URL = "https://raw.githubusercontent.com/leebwj/CareerOS/main/apps/r
 const BRIEF_HOUR = 8; // 8am local — the second pop of the day
 
 let win;
+let tray;
+// The character is opt-in. Brian asked for this to live in the taskbar tray
+// instead of floating on the desktop, so the tray is the primary surface and
+// the pet only appears when summoned.
+let petVisible = false;
 
 async function readBrief() {
   try {
@@ -45,6 +50,7 @@ function createWindow() {
     height: H,
     x: width - W - 12,
     y: height - H - 12,
+    show: false,          // tray-first: summoned, not always floating
     frame: false,
     transparent: true,
     resizable: false,
@@ -92,6 +98,7 @@ ipcMain.on("set-clickthrough", (_e, ignore) => {
 });
 ipcMain.handle("get-brief", () => readBrief());
 // links open in the real browser, never inside the transparent pet window
+ipcMain.on("hide-pet", () => hidePet());
 ipcMain.on("open-url", (_e, url) => { if (/^https:\/\//.test(url)) shell.openExternal(url); });
 
 // schedule the morning pop: check every 5 min, fire once when the hour flips
@@ -101,7 +108,7 @@ async function scheduleTick() {
   const stamp = now.toISOString().slice(0, 10);
   if (now.getHours() === BRIEF_HOUR && lastFired !== stamp) {
     lastFired = stamp;
-    if (win) win.webContents.send("show-brief", await readBrief());
+    showPet(await refreshTray());
   }
 }
 
@@ -126,10 +133,65 @@ function setLaunchOnLogin() {
   } catch { /* never let a startup preference stop the app running */ }
 }
 
-app.whenReady().then(() => {
+// ── system tray ──────────────────────────────────────────────────────────────
+// Lives next to the clock rather than floating over the desktop. The tooltip
+// carries the headline numbers, so hovering answers "anything new?" without
+// opening anything at all — which is the actual ask.
+function showPet(res) {
+  if (!win) return;
+  petVisible = true;
+  win.showInactive();                       // appear without stealing focus
+  win.webContents.send("show-brief", res);
+}
+function hidePet() { petVisible = false; if (win) win.hide(); }
+
+async function refreshTray() {
+  if (!tray) return;
+  const res = await readBrief();
+  if (!res.ok) { tray.setToolTip("CareerOS — offline"); return res; }
+  const b = res.data;
+  tray.setToolTip(
+    `CareerOS · ${b.cycle || "roles"}\n` +
+    `${b.cycleRoles ?? 0} this cycle · ${b.cycleTargets ?? 0} at target companies\n` +
+    `${b.hot ?? 0} hot · ${b.fresh ?? 0} posted in 48h`
+  );
+  return res;
+}
+
+function buildTray() {
+  const icon = nativeImage.createFromPath(join(__dirname, "assets", "tray.png"));
+  tray = new Tray(icon.isEmpty() ? nativeImage.createEmpty() : icon);
+  tray.setToolTip("CareerOS");
+  tray.setContextMenu(Menu.buildFromTemplate([
+    { label: "Show today's brief", click: async () => showPet(await refreshTray()) },
+    { label: "Hide", click: hidePet },
+    { type: "separator" },
+    { label: "Open tracker", click: () => shell.openExternal("https://leebrian.dev/tracker") },
+    { label: "Open prep", click: () => shell.openExternal("https://leebrian.dev/prep") },
+    { type: "separator" },
+    {
+      label: "Start at login", type: "checkbox",
+      checked: app.getLoginItemSettings().openAtLogin,
+      click: (item) => {
+        if (item.checked) setLaunchOnLogin();
+        else app.setLoginItemSettings({ openAtLogin: false });
+      },
+    },
+    { type: "separator" },
+    { label: "Quit", click: () => app.quit() },
+  ]));
+  // left click toggles the character + bubble
+  tray.on("click", async () => { petVisible ? hidePet() : showPet(await refreshTray()); });
+}
+
+app.whenReady().then(async () => {
   setLaunchOnLogin();
   createWindow();
+  buildTray();
+  await refreshTray();
   setInterval(scheduleTick, 5 * 60 * 1000);
+  setInterval(refreshTray, 30 * 60 * 1000);   // keep the tooltip current
   app.on("activate", () => { if (BrowserWindow.getAllWindows().length === 0) createWindow(); });
 });
-app.on("window-all-closed", () => { if (process.platform !== "darwin") app.quit(); });
+// A tray app must NOT die when its window closes — that is the whole point.
+app.on("window-all-closed", () => {});

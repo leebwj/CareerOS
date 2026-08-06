@@ -114,7 +114,7 @@
   function hide() { bubble.classList.remove("show"); petEl.classList.remove("talking"); shown = false; }
 
   petEl.onclick = async () => { shown ? hide() : showBrief(await window.pet.getBrief()); };
-  document.getElementById("close").onclick = (e) => { e.stopPropagation(); hide(); };
+  document.getElementById("close").onclick = (e) => { e.stopPropagation(); hide(); window.pet.hidePet(); };
   window.pet.onShowBrief(md => showBrief(md));
 
   // click-through management: window ignores the mouse except over interactive
