@@ -891,8 +891,8 @@ export const projects: Project[] = [
     motif: "grid",
     cats: [],
     kind: "engineering",
-    date: "2026 – present",
-    years: "2026 – Now",
+    date: "Jun – Aug 2026",
+    years: "Summer 2026",
     context: "Internship · Remote",
     role: "Software Engineer Intern",
     tools: [],
@@ -906,8 +906,13 @@ export const projects: Project[] = [
       { type: "prose", label: "Company", body: [
         "Aleph Lab is a San Francisco AI startup in Y Combinator's Fall 2025 batch. Its product, Aleph Kids, is an AI language-learning companion: a voice-enabled character named “Annie” that talks and plays with children inside games they already love, like Minecraft, so they practice speaking a new language while they play.",
       ] },
+      { type: "prose", label: "What I worked on", body: [
+        "Two things, both shipped. The first was retention: the product could bring lapsed kids back with a push notification, but every send needed a person to approve it, so it went quiet whenever nobody did. I rebuilt it to run on its own — proposing, approving against safety guardrails, and sending with nobody in the loop — and it now reaches 91% of the devices it targets, the highest the channel has managed. Along the way I found the targeting logic was wrong about who was even eligible, which had been quietly excluding most of the intended audience.",
+        "The second was making Annie portable. She was hand-wired into the main codebase, so outside studios building their own game modes could not use her. I packaged her as a typed SDK with versioned APIs and 136 tests, then proved it end to end by getting her running inside a mode an external builder had authored — she loads their content pack at runtime and can reason about items she has never seen.",
+        "The rest was product surface: a Figma-driven redesign shipped behind a flag so it could go out screen by screen, and the app's first proper crash and error experience, in English and Korean.",
+      ] },
       { type: "prose", label: "Note", body: [
-        "My work here is early-stage and under wraps, but I'm happy to talk through it in more detail over a call.",
+        "Specifics about the product's internals and metrics stay with the company — happy to talk through the engineering in more depth over a call.",
       ] },
     ],
   },
