@@ -112,7 +112,7 @@ export const projects: Project[] = [
     slug: "passenger",
     order: 1,
     title: "Passenger",
-    tagline: "A cinematic Unreal Engine 5 short: a canyon, a train swallowed by roots, and hand-written painterly shaders that make real-time frames feel oil-painted.",
+    tagline: "Proof a real-time engine can look hand-painted: a canyon, a train swallowed by roots, and shaders that hide the render.",
     motif: "waves",
     cats: ["graphics"],
     kind: "engineering",
@@ -124,8 +124,7 @@ export const projects: Project[] = [
     links: { video: "https://youtu.be/mSnqY3R2d-E" },
     img: passengerImg,
     alt: "Passenger — a canyon rendered with an anisotropic Kuwahara painterly shader",
-    blurb:
-      "A cinematic Unreal Engine 5 short where a figure walks a canyon, finds a train swallowed by roots, and picks up something that briefly opens the world backward. Built in Maya + UE5 with Lumen GI, hardware ray tracing, and custom HLSL shaders, including an anisotropic Kuwahara filter for a painterly look.",
+    blurb: "A cinematic Unreal Engine 5 short that gets a game engine to output frames you would read as oil paint. A figure walks a canyon, finds a train swallowed by roots, and picks up something that briefly opens the world backward — carried by custom HLSL shaders, including an anisotropic Kuwahara filter, over Lumen GI and hardware ray tracing.",
     tech: ["Unreal 5", "Maya", "HLSL", "Megascans"],
     featured: { type: "video", embed: "mSnqY3R2d-E", alt: "Passenger — cinematic short" },
     metrics: [
@@ -262,7 +261,7 @@ export const projects: Project[] = [
     slug: "mini-minecraft",
     order: 2,
     title: "Mini Minecraft",
-    tagline: "A full 3D voxel world engine, built from first principles in C++ and OpenGL.",
+    tagline: "A voxel world that reads as a place rather than noise, with every system underneath it built from first principles in C++ and OpenGL.",
     motif: "voxel",
     cats: ["engineering", "graphics"],
     kind: "engineering",
@@ -276,8 +275,7 @@ export const projects: Project[] = [
     repoNote: "This was a university class project, so the repo is kept private, but I'm happy to walk through the code on request.",
     img: miniMinecraftImg,
     alt: "Mini Minecraft — procedurally generated terrain at dusk",
-    blurb:
-      "A 3D voxel engine built from scratch in C++/OpenGL: seven procedural biomes from layered Perlin/FBM noise, 3D caves, PCF shadow mapping, screen-space reflections, a day-night cycle, multithreaded chunk streaming, and an A*-pathfinding NPC ecosystem.",
+    blurb: "A 3D voxel engine written from scratch in C++/OpenGL, where everything that makes the world feel inhabited is hand-built: seven procedural biomes blended from layered Perlin/FBM noise, 3D caves, PCF shadow mapping, screen-space reflections, a day-night cycle, multithreaded chunk streaming, and an A*-pathfinding NPC ecosystem.",
     tech: ["C++", "OpenGL", "GLSL", "Multithreading"],
     featured: { type: "video", embed: "_NExgS0mZgM", alt: "Mini Minecraft — engine demo" },
     metrics: [
@@ -367,7 +365,7 @@ export const projects: Project[] = [
     slug: "art-of-web",
     order: 3,
     title: "Art of the Web",
-    tagline: "A semester of coursework rebuilt as one interactive Three.js world.",
+    tagline: "A semester of coursework you explore instead of scroll, rebuilt as one interactive Three.js world.",
     motif: "orbit",
     cats: ["engineering", "graphics", "design"],
     kind: "engineering",
@@ -379,8 +377,7 @@ export const projects: Project[] = [
     links: { live: "https://leebwj.github.io/1020/portfolio/", github: "https://github.com/leebwj/ArtOfTheWeb" },
     img: null,
     alt: "Art of the Web — interactive Three.js portfolio",
-    blurb:
-      "A semester-long interactive portfolio built as one Three.js 3D scene, where floating GLTF objects with custom physics and GSAP animation become the navigation for eight course projects, from CSS art and generative p5.js sketches to a browser game.",
+    blurb: "A semester's work turned into a place rather than a list: one Three.js scene where floating GLTF objects with custom physics and GSAP animation become the navigation for eight course projects, from CSS art and generative p5.js sketches to a browser game.",
     tech: ["Three.js", "GSAP", "p5.js", "Vite"],
     featured: { type: "embed", embed: "https://leebwj.github.io/1020/portfolio/", alt: "Art of the Web — live site" },
     metrics: [
@@ -447,7 +444,7 @@ export const projects: Project[] = [
     slug: "penn-spark-redesign",
     order: 4,
     title: "Penn Spark Redesign",
-    tagline: "A ground-up website redesign, from Figma to a live Next.js rebuild.",
+    tagline: "A club site the team can run without an engineer, taken from Figma to a live Next.js rebuild.",
     motif: "grid",
     cats: ["design", "engineering"],
     kind: "design",
@@ -460,8 +457,7 @@ export const projects: Project[] = [
     links: { live: "https://pennspark.org/", deck: "https://www.figma.com/deck/Smncuea22qlU67fbiESZaP" },
     img: pennSparkImg,
     alt: "Penn Spark — redesigned club website homepage",
-    blurb:
-      "Led the end-to-end redesign of Penn Spark's website as project lead: wireframes and a component system in Figma, then a rebuild from an aging Gatsby stack to Next.js + React. Shipped live at pennspark.org.",
+    blurb: "Penn Spark's website, live at pennspark.org. Led end-to-end as project lead: wireframes and a component system in Figma, then a rebuild off an ageing Gatsby stack onto Next.js + React, with a content system the team updates itself.",
     tech: ["Figma", "Next.js", "React", "Tailwind"],
     featured: { type: "image", src: pennSparkImg, alt: "Penn Spark redesigned homepage" },
     metrics: [
@@ -532,7 +528,7 @@ export const projects: Project[] = [
     slug: "path-at-penn",
     order: 5,
     title: "Path@Penn Redesign",
-    tagline: "A self-directed UX overhaul of Penn's course-planning portal.",
+    tagline: "Course registration students can plan inside of, instead of fight — a self-directed overhaul of Penn's portal.",
     motif: "path",
     cats: ["design"],
     kind: "design",
@@ -544,8 +540,7 @@ export const projects: Project[] = [
     links: { figma: "https://www.figma.com/proto/DBOeERCANozjTRaP6VYxIb/Brian-Lee---Design?node-id=47-409", deck: "https://www.figma.com/deck/KYlvDCdz7M2VCTRki5Vvag" },
     img: pathImg,
     alt: "Path@Penn — redesigned student course-planning dashboard",
-    blurb:
-      "A self-directed UX overhaul of Penn's course portal, distilling a dense, fragmented interface into four connected surfaces (Dashboard, Course, Schedule, Degree) for clearer, more guided planning.",
+    blurb: "A self-directed UX overhaul that turns Penn's dense, fragmented course portal into four connected surfaces (Dashboard, Course, Schedule, Degree), so planning a semester stops being a scavenger hunt across tools.",
     tech: ["Figma", "UX Research", "Prototyping", "User Testing"],
     featured: {
       type: "embed",
@@ -654,7 +649,7 @@ export const projects: Project[] = [
     slug: "road-rogue",
     order: 6,
     title: "Road Rogue",
-    tagline: "A 3D browser chase game built with an AI-assisted pipeline: Meshy for the 3D assets, Codex for the game logic, and Three.js to tie it together.",
+    tagline: "How far an AI-assisted pipeline can actually carry a game: Meshy for the assets, Codex for the logic, Three.js to tie it together.",
     motif: "road",
     cats: ["graphics", "engineering"],
     kind: "engineering",
@@ -666,8 +661,7 @@ export const projects: Project[] = [
     links: { live: "https://leebwj.github.io/0020/Final/index.html", github: "https://github.com/leebwj/RodeRogue" },
     img: roadRogueImg,
     alt: "Road Rogue — 3D car-chase game",
-    blurb:
-      "A 3D car-chase game (à la Smashy Road) built for a design course on AI-assisted creation: 3D assets from Meshy, logic scaffolded with Codex, assembled in Three.js. Responsive driving and a survival score that ramps the tension.",
+    blurb: "A 3D car-chase game (à la Smashy Road) built to find the limits of AI-assisted creation for a design course: 3D assets from Meshy, logic scaffolded with Codex, assembled in Three.js. It holds up as a game — responsive driving and a survival score that ramps the tension.",
     tech: ["Three.js", "JavaScript", "Meshy", "Game Design"],
     featured: { type: "image", src: roadRogueImg, alt: "Road Rogue gameplay" },
     metrics: [
@@ -717,7 +711,7 @@ export const projects: Project[] = [
     slug: "capsule",
     order: 7,
     title: "Capsule",
-    tagline: "A collaborative web app for digital time capsules: lock photos and messages until a chosen date, then open them inside an immersive 3D gallery.",
+    tagline: "Memories you walk through instead of scroll: photos and messages locked until a chosen date, then opened inside a 3D gallery.",
     motif: "orbit",
     cats: ["design", "engineering", "graphics"],
     kind: "engineering",
@@ -730,8 +724,7 @@ export const projects: Project[] = [
     links: { github: "https://github.com/leebwj/sp25-penn-time-capsule", figma: "https://www.figma.com/proto/xNLzE7NKvOo9SToBUZtaSn/Penn-Time-Capsule?node-id=913-1430" },
     img: null,
     alt: "Capsule — a 3D time-capsule reveal gallery",
-    blurb:
-      "A collaborative web app where users create digital time capsules (photos, messages, media) locked until a chosen date, then revealed through an immersive 3D gallery. Built with React Three Fiber, a Node/MongoDB API, and AWS S3.",
+    blurb: "A collaborative web app where a time capsule stops being a folder and becomes a space — photos, messages and media locked until a chosen date, then revealed through an immersive 3D gallery. Built with React Three Fiber, a Node/MongoDB API, and AWS S3.",
     tech: ["React", "R3F", "Node", "MongoDB"],
     featured: { type: "embed", embed: "https://embed.figma.com/proto/xNLzE7NKvOo9SToBUZtaSn/Penn-Time-Capsule?node-id=913-1430&scaling=contain&content-scaling=fixed&page-id=662%3A1067&embed-host=share", alt: "Capsule — prototype" },
     metrics: [
@@ -770,7 +763,7 @@ export const projects: Project[] = [
     slug: "wikipedia",
     order: 8,
     title: "Wikipedia Redesign",
-    tagline: "Redesigning the world's largest encyclopedia for how people actually read.",
+    tagline: "Redesigning the world's largest encyclopedia around how people actually read it.",
     motif: "grid",
     cats: ["design"],
     kind: "design",
@@ -782,8 +775,7 @@ export const projects: Project[] = [
     links: { figma: "https://www.figma.com/proto/vKo7ySkGZW5dliYa44yHwa/Brian-Lee---Design?node-id=103-7273" },
     img: wikiCover,
     alt: "Wikipedia mobile redesign — five redesigned sections",
-    blurb:
-      "A full research-to-prototype redesign of Wikipedia's mobile interface for DSGN 2570: interviews, a survey, insight synthesis, lo-fi wireframes, usability testing with four users, and a hi-fi prototype across five sections (Home, Article, Search, Language, AI Chat).",
+    blurb: "A research-to-prototype redesign of Wikipedia's mobile interface where testing, not taste, decided the outcome: interviews, a survey and insight synthesis produced three reader personas, then usability sessions with four users reshaped previews, search snippets and AI framing across five sections.",
     tech: ["Figma", "UX Research", "User Testing"],
     featured: { type: "embed", embed: "https://embed.figma.com/proto/vKo7ySkGZW5dliYa44yHwa/Brian-Lee---Design?node-id=103-7273&scaling=scale-down&content-scaling=fixed&page-id=27%3A377&embed-host=share", alt: "Wikipedia redesign — live prototype" },
     metrics: [
@@ -841,7 +833,7 @@ export const projects: Project[] = [
     slug: "playground",
     order: 9,
     title: "Playground",
-    tagline: "A childhood game character rebuilt in interactive 3D, modeled, textured, and rigged in Maya, then wired into the browser so it reacts to you.",
+    tagline: "A childhood game character that reacts to you in the browser — modeled, textured and rigged in Maya, then wired to live input.",
     motif: "waves",
     cats: ["graphics"],
     kind: "engineering",
@@ -853,8 +845,7 @@ export const projects: Project[] = [
     links: { live: "https://my.spline.design/untitled-QVRKLSCWxKCmX5aAVZUXDukV/" },
     img: null,
     alt: "Playground — an interactive 3D character scene",
-    blurb:
-      "An interactive 3D scene built around “Boo,” a childhood-game character: modeled in Maya, textured in Substance Painter, rigged and animated, then wired into Spline so keyboard and mouse input trigger reactions in the browser.",
+    blurb: "An interactive 3D scene that puts “Boo,” a childhood-game character, within reach: modeled in Maya, textured in Substance Painter, rigged and animated, then wired into Spline so keyboard and mouse input make it react in the browser.",
     tech: ["Maya", "Substance Painter", "Spline"],
     featured: { type: "embed", embed: "https://my.spline.design/untitled-QVRKLSCWxKCmX5aAVZUXDukV/", alt: "Playground — interactive 3D scene" },
     metrics: [
@@ -887,7 +878,7 @@ export const projects: Project[] = [
     logo: "/logos/aleph.png",
     order: 101,
     title: "Aleph Lab",
-    tagline: "Software engineering at a Y Combinator startup building an AI language buddy that lives inside the games kids already play.",
+    tagline: "Shipping to every user at a Y Combinator startup building an AI language buddy that lives inside the games kids already play.",
     motif: "grid",
     cats: [],
     kind: "engineering",
@@ -899,7 +890,7 @@ export const projects: Project[] = [
     metaExtra: { label: "Backed by", value: "Y Combinator · F25" },
     links: { live: "https://alephlab.ai" },
     img: null,
-    blurb: "Software engineering intern at a Y Combinator (F25) startup building an AI language-learning companion that lives inside the games kids already play.",
+    blurb: "Software engineering intern at a Y Combinator (F25) startup, where I put an app-wide redesign in front of every user, turned a retention channel that needed a human approver into one that runs itself, and made the company's AI character portable enough for outside studios to build on.",
     tech: [],
     metrics: [],
     blocks: [
@@ -923,7 +914,7 @@ export const projects: Project[] = [
     logo: "/logos/pennspark.png",
     order: 102,
     title: "Penn Spark",
-    tagline: "Leading cross-functional teams of 15+ designers and developers to ship client-facing 0→1 products at Penn's student product studio.",
+    tagline: "Getting client-facing 0→1 products out the door with cross-functional teams of 15+ at Penn's student product studio.",
     motif: "grid",
     cats: [],
     kind: "design",
@@ -935,7 +926,7 @@ export const projects: Project[] = [
     tools: ["Figma", "React", "TypeScript"],
     links: { live: "https://pennspark.org/" },
     img: null,
-    blurb: "Red-team project lead and product designer at Penn's student product studio, leading 15+ designers and developers to ship client-facing 0→1 products.",
+    blurb: "Red-team project lead and product designer at Penn's student product studio, where 15+ designers and developers shipped client-facing 0→1 products on every semester cycle.",
     tech: [],
     metrics: [],
     blocks: [
@@ -958,7 +949,7 @@ export const projects: Project[] = [
     logo: "/logos/bitmango.png",
     order: 103,
     title: "BitMango · Puzzle1 Studio",
-    tagline: "Maintaining and shipping live Unity mobile games at a puzzle-game studio.",
+    tagline: "Keeping 50+ live Unity mobile titles shipping and in the stores at a Korean puzzle-game studio.",
     motif: "voxel",
     cats: [],
     kind: "engineering",
@@ -971,7 +962,7 @@ export const projects: Project[] = [
     metaExtra: { label: "Reach", value: "420M+ downloads" },
     links: { live: "https://www.bitmango.com/en/homepageen/" },
     img: null,
-    blurb: "Software engineering intern maintaining 50+ live Unity mobile titles and resolving 100+ QA bugs at a Korean puzzle-game studio.",
+    blurb: "Software engineering intern who kept 50+ live Unity mobile titles shipping: 100+ QA-reported bugs cleared into production, and the whole portfolio held compliant through a platform requirement change.",
     tech: [],
     metrics: [],
     blocks: [
@@ -992,7 +983,7 @@ export const projects: Project[] = [
     logo: "/logos/itfarm.png",
     order: 104,
     title: "IT-Farm",
-    tagline: "Designing SQL database tooling over million-row semiconductor datasets at a Korean semiconductor smart-factory IT company.",
+    tagline: "Making million-row semiconductor datasets queryable for 20+ client companies at a Korean smart-factory IT company.",
     motif: "path",
     cats: [],
     kind: "engineering",
@@ -1005,7 +996,7 @@ export const projects: Project[] = [
     metaExtra: { label: "Scale", value: "1M+ data entities" },
     links: { live: "https://it-farm.co.kr/" },
     img: null,
-    blurb: "Database engineering intern building SQL tooling over million-row semiconductor datasets at a Korean smart-factory IT company.",
+    blurb: "Database engineering intern who made semiconductor data from 20+ client companies queryable, designing SQL tooling over million-row datasets in Oracle and SQLite.",
     tech: [],
     metrics: [],
     blocks: [
