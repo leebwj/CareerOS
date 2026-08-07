@@ -892,16 +892,23 @@ export const projects: Project[] = [
     img: null,
     blurb: "Software engineering intern at a Y Combinator (F25) startup, where I put an app-wide redesign in front of every user, turned a retention channel that needed a human approver into one that runs itself, and made the company's AI character portable enough for outside studios to build on.",
     tech: [],
-    metrics: [],
+    metrics: [
+      { value: "33", label: "design-system sections shipped" },
+      { value: "13", label: "flag-gated redesign PRs" },
+      { value: "3,748", label: "tests in the release gate" },
+      { value: "91%", label: "notification delivery rate" },
+    ],
     blocks: [
       { type: "prose", label: "Company", body: [
         "Aleph Lab is a San Francisco AI startup in Y Combinator's Fall 2025 batch. Its product, Aleph Kids, is an AI language-learning companion: a voice-enabled character named “Annie” that talks and plays with children inside games they already love, like Minecraft, so they practice speaking a new language while they play.",
       ] },
       { type: "prose", label: "What I worked on", body: [
+        "The largest piece was the app's redesign, where the sequencing mattered more than the styling. Structure shipped first: the home hero became a 2×2 grid, Talk with Annie and word practice moved off the home page onto a new Speaking tab, and the bottom bar went to five destinations. Style cannot ship in halves the way structure can — a half-re-skinned app just reads broken — so taking it in that order meant the layout was already familiar by the time the brand flipped, and the rebrand carried none of the “where did everything go” cost that usually comes with one.",
+        "Then the skin: a 33-section Figma system carried onto every production screen — login, onboarding, home, speaking, character, dashboard, settings — across 13 flag-gated PRs, cleared by a 3,748-test gate and byte-identical with the flag off, so there was never a redesign branch to rot and never a rollback to perform. The rollout is staged 25 → 50 → 100%, each rung held across a real class cycle, because class entrance and the post-quiz screen are only exercised when classes actually run. A partial rollout also needed experience continuity switched on: the app has an anonymous onboarding path, so a user's ID changes at login, and without it the design would have flipped between signed-out and signed-in halfway through a session.",
+        "Much of the rest was the states a design file does not draw. Growth screens had been rendering a failed request as an empty one — telling a parent their child had spoken in no classes when the network had simply failed — so I split error from empty across those surfaces. A crash got a branded recovery in warm Korean and English where there had been a blank white screen. And two pickers had each kept a private copy of their geometry, which is how they drifted together and stayed drifted, until one shared primitive replaced both.",
         "The product could win lapsed kids back with a push notification, but every send needed a person to approve it, so the channel went dark whenever nobody did — for a month at one point, with no alerting. I rebuilt it to run on its own: it proposes, checks itself against safety guardrails, and sends with nobody in the loop. It now reaches 91% of the devices it targets, the best the channel has managed, and it produced the first revenue conversion the win-back had ever generated. Along the way I found the eligibility logic was wrong about who even qualified, which had been quietly excluding most of the intended audience.",
         "Under that sat a security problem: four endpoints were public and trusted whatever user ID you handed them, so anyone could inject notifications into a children's app. The obvious fix would have broken every server-to-server caller, so I proved each caller's behaviour against live traffic first, then added bearer auth with zero changes on their side.",
         "The second project was making Annie portable. She was hand-wired into the main codebase, so outside studios building their own game modes could not use her. I packaged her as a typed SDK with versioned APIs and 136 tests, took hosted voice end to end so a builder can talk to her from a browser with no game client, and proved the whole thing by getting her running inside a mode an external builder had authored — loading their content pack at runtime and reasoning about items she had never seen.",
-        "The rest was product surface: a Figma-driven redesign shipped to production behind a flag, screen by screen, cleared against a 2,009-test regression suite and byte-identical with the flag off; and the app's first real crash and error experience, in English and Korean, where there had previously been a blank white screen.",
       ] },
       { type: "prose", label: "Note", body: [
         "Specifics about the product's internals and metrics stay with the company — happy to talk through the engineering in more depth over a call.",
