@@ -890,7 +890,7 @@ export const projects: Project[] = [
     metaExtra: { label: "Backed by", value: "Y Combinator · F25" },
     links: { live: "https://alephlab.ai" },
     img: null,
-    blurb: "Software engineering intern at a Y Combinator (F25) startup, where I put an app-wide redesign in front of every user, turned a retention channel that needed a human approver into one that runs itself, and made the company's AI character portable enough for outside studios to build on.",
+    blurb: "Software engineering intern at a Y Combinator (F25) startup, where I restructured how every user navigates the app, turned a retention channel that needed a human approver into one that runs itself, and made the company's AI character portable enough for outside studios to build on.",
     tech: [],
     metrics: [
       { value: "33", label: "design-system sections shipped" },
