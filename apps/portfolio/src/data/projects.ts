@@ -911,6 +911,8 @@ export const projects: Project[] = [
         "Proved it end to end by having an external builder author a game mode and run the agent inside it with no access to our repository, loading their content at runtime",
         "Took hosted voice end to end, so a builder can hold a spoken conversation with the character from a browser with no game client running",
         "Shipped a Claude skill that authors and validates a new mode's configuration, so integrating the agent into a mode stopped being bespoke work each time",
+        "Improved how the character behaves in the world: its defensive targeting had been starting fights with neutral creatures and bosses far above a child’s level, corrected additively so the change could only ever remove a bad target, never add an attack",
+        "Extended its perception to modded content, so it recognises the custom blocks and items a game mode adds instead of describing them with the wrong words",
         "Built an agent-based analysis tool over production data that showed a reported retention gain was a measurement artifact, and surfaced the drivers that actually mattered",
         "Gave the character a consistent presence in the app — its message-bubble system, a branded crash recovery in English and Korean, and dashboards that tell a failed request apart from an empty one",
       ] },
