@@ -77,7 +77,10 @@ const { variant, mode = 0 } = Astro.props;
   const canvas = document.querySelector(".vp-canvas") as HTMLCanvasElement | null;
   const wrap = canvas?.closest(".vp") as HTMLElement | null;
   if (canvas && wrap) {
-    const gl = canvas.getContext("webgl", { antialias: true, alpha: false, premultipliedAlpha: false });
+    // high-performance: on dual-GPU MacBooks ANGLE/Metal otherwise picks the
+    // integrated Intel GPU for WebGL, which is both the slow one and the one
+    // with the driver bug the hash above works around.
+    const gl = canvas.getContext("webgl", { antialias: true, alpha: false, premultipliedAlpha: false, powerPreference: "high-performance" });
     const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
     const fine = matchMedia("(hover: hover) and (pointer: fine)").matches;
     const bleed = wrap.classList.contains("vp--bleed");
@@ -137,9 +140,33 @@ const { variant, mode = 0 } = Astro.props;
         uniform sampler2D uWater;  // live heightfield: REAL propagating waves (ping-pong sim)
         uniform vec2  uWTexel;     // 1 / sim resolution` : "") + `
 
-        float hash(vec2 p){ p = fract(p * vec2(123.34, 345.45)); p += dot(p, p + 34.345); return fract(p.x * p.y); }
+        // Lattice hash WITHOUT fract(). Intel MacBook Pros (Chrome + Safari both
+        // go ANGLE→Metal, fast math on) return garbage from fract() for
+        // negative or large inputs (gpuweb#4144, Apple forums 747108) — and the
+        // old "hash without sine" fed it exactly that. When the blend weight
+        // fract(p) disagrees with the lattice floor(p), mix() extrapolates and
+        // every cell edge is a seam; five rotated octaves of seams read as
+        // "triangulated" noise. Permutation polynomial (Gustavson/McEwan,
+        // webgl-noise): every intermediate is an exact fp32 integer, the
+        // lattice wraps every 289 cells, and the weight comes from the SAME
+        // floor() as the lattice. scripts/noise-robustness.mjs proves the seam.
+        float mod289(float x){ return x - floor(x * (1.0 / 289.0)) * 289.0; }
+        vec2  mod289(vec2  x){ return x - floor(x * (1.0 / 289.0)) * 289.0; }
+        float permute(float x){ return mod289(((x * 34.0) + 1.0) * x); }
+        float hash(vec2 i){
+          i = mod289(i);
+          float h = permute(permute(i.x) + i.y);
+          h = permute(h + i.x);
+          h -= 289.0 * step(288.5, h);              // mod289 can land on 289.0 exactly
+          return h * (1.0 / 289.0);
+        }
         float noise(vec2 p){
-          vec2 i = floor(p), f = fract(p);
+          // +2312 (= 8 × 289, so the lattice is unchanged) keeps every floor()
+          // input positive: the rotated octaves otherwise go negative even at
+          // t = 0, which is the path the Intel driver gets wrong.
+          p += 2312.0;
+          vec2 i = floor(p);
+          vec2 f = clamp(p - i, 0.0, 1.0);
           float a = hash(i), b = hash(i + vec2(1.0, 0.0)), c = hash(i + vec2(0.0, 1.0)), d = hash(i + vec2(1.0, 1.0));
           vec2 u = f * f * (3.0 - 2.0 * f);
           return mix(mix(a, b, u.x), mix(c, d, u.x), u.y);
@@ -656,10 +683,17 @@ const { variant, mode = 0 } = Astro.props;
               fSamples = 12; fSum = 0;                          // re-measure at the new size
             } else settled = true;
           };
+          // Bounded time. Every mode adds uTime-scaled offsets to the noise
+          // coordinates, and after enough minutes those grow past what fp32
+          // can place inside a lattice cell (ulp 0.03 at 3e5). A triangle wave
+          // keeps |uTime| ≤ 30 min with no visible jump — the drift simply
+          // reverses direction at the turnaround.
+          const PERIOD = 1800;
+          const wrapTime = (t: number) => { const m = t % (2 * PERIOD); return m < PERIOD ? m : 2 * PERIOD - m; };
           const loop = (now: number) => {
             if (!running) { looping = false; return; }
             if (!t0) { t0 = now; last = now; }
-            const time = (now - t0) / 1000;
+            const time = wrapTime((now - t0) / 1000);
             const dtMs = now - last;
             const dt = Math.min((now - last) / 1000, 0.05); last = now;
             judgeFrame(dtMs);

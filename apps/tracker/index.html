@@ -717,10 +717,10 @@
     let out = "";
     for (const [grp, list] of Object.entries(MAJORS)) {
       const live = list.filter(([n]) => tally[n]).length;
-      out += `<div class="cvgrp"><b>${esc(grp)}</b> <span class="cvsum">${live}/${list.length} hiring · ${list.reduce((a, [n]) => a + (tally[n] || 0), 0)} roles</span></div><div class="cvwrap">`;
+      out += `<div class="cvgrp"><b>${esc(grp)}</b> <span class="cvsum">${live}/${list.length} with internships · ${list.reduce((a, [n]) => a + (tally[n] || 0), 0)} intern roles</span></div><div class="cvwrap">`;
       for (const [name] of list) {
         const n = tally[name] || 0;
-        out += `<button class="cv ${n ? "" : "zero"}" data-co="${esc(name)}" title="${n ? n + " open" : "nothing open right now"}">${esc(name)} <span>${n}</span></button>`;
+        out += `<button class="cv ${n ? "" : "zero"}" data-co="${esc(name)}" title="${n ? n + " internship" + (n > 1 ? "s" : "") + " open" : "no internships open right now"}">${esc(name)} <span>${n}</span></button>`;
       }
       out += "</div>";
     }
@@ -736,7 +736,7 @@
     const starred = roles.filter((r) => state.s[key(r)]?.star && !state.s[key(r)]?.st).length;
     const hidden = Object.keys(state.hidden).length;
     const inbox = roles.filter((r) => !state.s[key(r)]?.st && !state.hidden[key(r)]).length;
-    const majors = roles.filter((r) => majorOf(r.company) && !state.s[key(r)]?.st && !state.hidden[key(r)]).length;
+    const majors = roles.filter((r) => r.level === "intern" && majorOf(r.company) && !state.s[key(r)]?.st && !state.hidden[key(r)]).length;
     return { inbox, majors, starred, applied: roles.filter((r) => state.s[key(r)]?.st).length + orphanCount(), hidden };
   }
   // applied roles that fell out of the feed (closed postings) still show in Tracker
@@ -830,7 +830,7 @@
     let rows = roles.filter((r) => {
       const k = key(r), s = state.s[k];
       if (view === "inbox" && (s?.st || state.hidden[k])) return false;
-      if (view === "majors" && (!majorOf(r.company) || s?.st || state.hidden[k])) return false;
+      if (view === "majors" && (r.level !== "intern" || !majorOf(r.company) || s?.st || state.hidden[k])) return false;
       if (view === "starred" && !s?.star) return false;
       if (view === "applied" && !s?.st) return false;
       if (view === "hidden" && !state.hidden[k]) return false;
@@ -870,7 +870,7 @@
     }
 
     const list = document.getElementById("list");
-    const cvg = view === "majors" ? majorsCoverage(roles.filter((r) => !state.s[key(r)]?.st && !state.hidden[key(r)])) : "";
+    const cvg = view === "majors" ? majorsCoverage(roles.filter((r) => r.level === "intern" && !state.s[key(r)]?.st && !state.hidden[key(r)])) : "";
     if (!rows.length && !orphans) { list.innerHTML = cvg + `<div class="empty">Nothing here. ${view === "inbox" ? "All caught up 🎉" : ""}</div>`; return; }
 
     // group-by-company (if toggled) → date-grouped (inbox/newest) → flat
