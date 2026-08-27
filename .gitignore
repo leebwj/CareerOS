@@ -56,3 +56,9 @@ apps/secretary/careeros-secretary-task.xml
 
 # stray root résumé copies — canonical versions live in apps/resume/dist/
 /Brian_Lee_Resume_*.pdf
+
+# outreach: personal contact data — never commit
+apps/outreach/outreach.csv
+apps/outreach/outreach.md
+apps/outreach/.tracker-snapshot.json
+apps/outreach/*Connections*.csv
