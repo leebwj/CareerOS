@@ -242,9 +242,17 @@
   // server-side proxy (/api/sync — the sheet URL lives in a Vercel env var).
   // Nothing about the connection is stored in the browser, so clearing
   // storage / new devices / new browsers can NEVER disconnect it again.
-  // A manually-stored URL still overrides (legacy path, local use).
+  // On the live site the PROXY WINS. A stored URL used to override it, which is
+  // how a sync dies silently: any legacy /exec URL left in localStorage, in the
+  // careeros_sync cookie, or arriving via an old #sync= link takes the no-cors
+  // path, and no-cors cannot report a failure — so a dead deployment looks
+  // identical to a healthy one while the sheet quietly stops moving. The stored
+  // URL is now only consulted OFF leebrian.dev (local copies, manual testing).
   const PROXY = "/api/sync";
-  const effUrl = () => syncUrl || (location.hostname === "leebrian.dev" ? PROXY : "");
+  const onProd = () => location.hostname === "leebrian.dev";
+  const effUrl = () => (onProd() ? PROXY : syncUrl || "");
+  // retire a legacy URL on prod so it cannot come back from cookie/localStorage
+  if (onProd() && syncUrl) { try { localStorage.removeItem("careeros-sync-url"); } catch {} setSyncCookie(""); syncUrl = ""; }
   const isProxy = (u) => !!u && u.startsWith("/");
   // a connection starts as "syncing" — NOT "synced" — until the load-time pull
   // actually reaches the sheet. Otherwise a dead/lost URL shows a false "Synced ✓"
