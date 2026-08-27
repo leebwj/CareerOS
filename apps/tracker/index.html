@@ -253,6 +253,7 @@
   // ── sync durability: remember the last VERIFIED push + alarm on silent failure ──
   const LS_OK = "careeros-sync-lastok";
   let lastSyncOk = +(localStorage.getItem(LS_OK) || 0);
+  let lastSyncError = "";
   const markSyncOk = () => { lastSyncOk = Date.now(); try { localStorage.setItem(LS_OK, String(lastSyncOk)); } catch {} };
   function trackedRows() {
     const byKey = {}; roles.forEach((r) => (byKey[key(r)] = r));
@@ -282,14 +283,20 @@
       // same-origin proxy: a REAL request — the response IS the post-push sheet
       // state, so push + verify happen in one round-trip (no blind no-cors)
       fetch(u, { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body })
-        .then((r) => { if (!r.ok) throw 0; return r.json(); })
-        .then((p) => {
+        .then((r) => r.json().then((p) => ({ ok: r.ok, p })))
+        .then(({ ok, p }) => {
+          // The proxy now reports WHY a write failed (Apps Script answers 200
+          // even when doPost throws, so the reason only exists in the body).
+          if (!ok || (p && p.error)) {
+            lastSyncError = (p && (p.appsScript || p.error)) || "sync failed";
+            syncState = "error"; setSyncBtn(); checkStale(); return;
+          }
           const remote = p && p.state ? JSON.parse(p.state) : null;
-          if (remote && (remote.updated || 0) >= pushedAt - 2000) { markSyncOk(); syncState = "synced"; }
-          else syncState = "error";
+          if (remote && (remote.updated || 0) >= pushedAt - 2000) { markSyncOk(); lastSyncError = ""; syncState = "synced"; }
+          else { lastSyncError = "the sheet did not record this change"; syncState = "error"; }
           setSyncBtn(); checkStale();
         })
-        .catch(() => { syncState = "error"; setSyncBtn(); checkStale(); });
+        .catch((e) => { lastSyncError = String(e && e.message || e).slice(0, 160); syncState = "error"; setSyncBtn(); checkStale(); });
       return;
     }
     fetch(u, { method: "POST", mode: "no-cors", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body })
@@ -342,7 +349,8 @@
           if (a.dataset.act === "backup") document.getElementById("exp").click();
         });
       }
-      const reason = !effUrl() ? "NOT connected to your sheet" : syncState === "error" ? "the last sync FAILED" : "your latest changes haven't reached the sheet";
+      const why = lastSyncError ? ` (${lastSyncError.replace(/[<>]/g, "")})` : "";
+      const reason = !effUrl() ? "NOT connected to your sheet" : syncState === "error" ? `the last sync FAILED${why}` : "your latest changes haven't reached the sheet";
       staleBar.innerHTML = `⚠ ${nJobs} tracked job${nJobs > 1 ? "s" : ""} — ${reason}. <a href="#" data-act="reconnect" style="color:#fff;text-decoration:underline">Reconnect</a> · <a href="#" data-act="backup" style="color:#fff;text-decoration:underline">Download backup</a>`;
       staleBar.style.display = "";
     } else if (staleBar) staleBar.style.display = "none";
