@@ -70,7 +70,7 @@ const ATS_TARGETS = {
     Discord: "discord", Reddit: "reddit", Twitch: "twitch", Cloudflare: "cloudflare", MongoDB: "mongodb",
     Twilio: "twilio", Pinterest: "pinterest", Coinbase: "coinbase", Robinhood: "robinhood", Dropbox: "dropbox", GitLab: "gitlab",
     // v2b (research-verified 2026-07-05)
-    Scopely: "scopely", "Digital Extremes": "digitalextremes", "Singularity 6": "singularity6", Wooga: "wooga",
+    Scopely: "scopely", "Digital Extremes": "digitalextremes",
     "Wildlife Studios": "wildlifestudios", "Hasbro (WotC)": "hasbro", "Tripwire": "tripwireinteractive",
     Airbnb: "airbnb", Waymo: "waymo", Samsara: "samsara", Verkada: "verkada", Remote: "remotecom", Brex: "brex",
     Elastic: "elastic", Affirm: "affirm", Instacart: "instacart", Lyft: "lyft", Asana: "asana", Fivetran: "fivetran",
@@ -506,6 +506,17 @@ async function fromAmazonJobs() {
   const seenPaths = new Set();
   // two sweeps: the official student-programs bucket (interns + Jr/new-grad
   // programs, ~260 rows) + a full-text intern query for stragglers outside it
+  // Two sweeps: the official student-programs bucket (interns + Jr/new-grad
+  // programs) + a full-text intern query for stragglers outside it.
+  // MEASURED 2026-08-27, do not "improve" this without re-measuring: adding
+  // cycle-phrase sweeps ("May 2027", "Summer 2027", "intern 2027") and
+  // category-scoped ones yields EXACTLY ZERO extra US intern rows — everything
+  // they return is already in these two. The job_type[]=Intern facet is ignored
+  // by this endpoint (it returns Senior SDEs), so it is not usable either.
+  // The real gap is outside our reach: some Amazon intern reqs are UNLISTED —
+  // live by direct URL but absent from every search response (verified: req
+  // 10513277, "SDE Intern - May 2027", HTTP 200 direct, zero search hits).
+  // amazon.jobs search is not a complete index of Amazon's own openings.
   for (const q of ["business_category[]=studentprograms", "base_query=intern"]) {
     let offset = 0, hits = Infinity;
     while (offset < Math.min(hits, 400)) {

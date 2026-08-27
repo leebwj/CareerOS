@@ -114,6 +114,18 @@
     .r-actions { justify-content:flex-end; }
     input[type=search] { width:100%; }
   }
+
+  .cvbox { border:1px solid var(--line); border-radius:10px; padding:12px 14px; margin:0 0 14px; background:rgba(255,255,255,.02); }
+  .cvgrp { font:700 11px/1.6 'Geist Mono',monospace; letter-spacing:.08em; text-transform:uppercase; color:var(--dim); margin:10px 0 6px; }
+  .cvgrp:first-child { margin-top:0; }
+  .cvsum { font-weight:500; text-transform:none; letter-spacing:0; opacity:.75; }
+  .cvwrap { display:flex; flex-wrap:wrap; gap:5px; }
+  .cv { font:600 11px/1 'Geist Mono',monospace; padding:5px 7px; border-radius:6px; cursor:pointer;
+        border:1px solid var(--line); background:transparent; color:var(--fg); }
+  .cv span { opacity:.6; margin-left:3px; }
+  .cv:hover { border-color:var(--fg); }
+  .cv.zero { opacity:.34; }
+  .cv.zero span { color:var(--dim); }
 </style>
 </head>
 <body>
@@ -536,8 +548,187 @@
     ].join("\n");
   }
 
+
+  // ── MAJORS ────────────────────────────────────────────────────────────────
+  // An EXPLICIT roster of the big-tech and game companies worth watching. It is
+  // written out by hand rather than inferred from a fit score or the board list
+  // because the Majors tab renders EVERY name on it, including the ones with
+  // nothing open. A company with no roles today shows a 0; it does not vanish.
+  // That is the guarantee: Riot cannot appear while Blizzard silently doesn't,
+  // because Blizzard has a row either way and an empty one is visible.
+  // Each entry: [display, ...patterns]. Patterns are matched WHOLE-WORD.
+  const MAJORS = {
+    "Big Tech": [
+      ["Google","Google","Alphabet","DeepMind"],
+      ["Meta","Meta","Meta Platforms","Facebook"],
+      ["Apple","Apple"],
+      ["Amazon","Amazon","AWS"],
+      ["Microsoft","Microsoft"],
+      ["Netflix","Netflix"],
+      ["NVIDIA","NVIDIA"],
+      ["Tesla","Tesla"],
+      ["SpaceX","SpaceX"],
+      ["OpenAI","OpenAI"],
+      ["Anthropic","Anthropic"],
+      ["Palantir","Palantir"],
+      ["Adobe","Adobe"],
+      ["Salesforce","Salesforce"],
+      ["Oracle","Oracle"],
+      ["IBM","IBM"],
+      ["Intel","Intel"],
+      ["AMD","AMD","Advanced Micro Devices"],
+      ["Qualcomm","Qualcomm"],
+      ["Broadcom","Broadcom"],
+      ["Cisco","Cisco"],
+      ["Samsung","Samsung"],
+      ["Sony","Sony"],
+      ["Snap","Snap","Snapchat"],
+      ["Pinterest","Pinterest"],
+      ["Reddit","Reddit"],
+      ["Uber","Uber"],
+      ["Lyft","Lyft"],
+      ["Airbnb","Airbnb"],
+      ["Stripe","Stripe"],
+      ["Figma","Figma"],
+      ["Notion","Notion"],
+      ["Databricks","Databricks"],
+      ["Datadog","Datadog"],
+      ["Snowflake","Snowflake"],
+      ["MongoDB","MongoDB"],
+      ["Cloudflare","Cloudflare"],
+      ["Twilio","Twilio"],
+      ["Zoom","Zoom"],
+      ["PayPal","PayPal"],
+      ["Block","Block"],
+      ["Coinbase","Coinbase"],
+      ["Robinhood","Robinhood"],
+      ["DoorDash","DoorDash"],
+      ["Instacart","Instacart"],
+      ["Discord","Discord"],
+      ["Spotify","Spotify"],
+      ["LinkedIn","LinkedIn"],
+      ["TikTok","TikTok"],
+      ["ByteDance","ByteDance"],
+      ["Dropbox","Dropbox"],
+      ["Atlassian","Atlassian"],
+      ["GitHub","GitHub"],
+      ["Waymo","Waymo"],
+      ["Anduril","Anduril"],
+      ["xAI","xAI"],
+      ["Scale AI","Scale AI"],
+      ["Perplexity","Perplexity"],
+      ["Cursor","Cursor","Anysphere"],
+      ["Bloomberg","Bloomberg"],
+      ["Unity","Unity","Unity Technologies"],
+    ],
+    "Games": [
+      ["Riot Games","Riot Games"],
+      ["Blizzard","Blizzard","Activision","Activision Blizzard King"],
+      ["Electronic Arts","Electronic Arts","EA","EA Sports"],
+      ["Epic Games","Epic Games"],
+      ["Valve","Valve"],
+      ["Bungie","Bungie"],
+      ["Naughty Dog","Naughty Dog"],
+      ["Insomniac Games","Insomniac"],
+      ["Rockstar Games","Rockstar"],
+      ["Take-Two","Take-Two","Take Two"],
+      ["2K","2K"],
+      ["Ubisoft","Ubisoft"],
+      ["Nintendo","Nintendo"],
+      ["PlayStation (SIE)","PlayStation","Sony Interactive"],
+      ["Respawn","Respawn"],
+      ["Bethesda","Bethesda"],
+      ["ZeniMax","ZeniMax"],
+      ["Square Enix","Square Enix"],
+      ["Capcom","Capcom"],
+      ["Konami","Konami"],
+      ["Bandai Namco","Bandai Namco"],
+      ["Sega","Sega"],
+      ["Niantic","Niantic"],
+      ["Supercell","Supercell"],
+      ["Scopely","Scopely"],
+      ["Krafton","Krafton"],
+      ["NetEase Games","NetEase"],
+      ["Tencent","Tencent"],
+      ["HoYoverse","HoYoverse","miHoYo"],
+      ["CD Projekt Red","CD Projekt"],
+      ["Larian","Larian"],
+      ["Gearbox","Gearbox"],
+      ["Remedy","Remedy"],
+      ["Crystal Dynamics","Crystal Dynamics"],
+      ["Obsidian","Obsidian"],
+      ["Mojang","Mojang"],
+      ["Sucker Punch","Sucker Punch"],
+      ["Santa Monica Studio","Santa Monica Studio"],
+      ["Guerrilla","Guerrilla"],
+      ["Firaxis","Firaxis"],
+      ["id Software","id Software"],
+      ["Arkane","Arkane"],
+      ["MachineGames","MachineGames"],
+      ["343 Industries","343 Industries"],
+      ["Double Fine","Double Fine"],
+      ["Playground Games","Playground Games"],
+      ["Rare","Rare Ltd"],
+      ["Wizards of the Coast","Wizards of the Coast","WotC","Hasbro"],
+      ["Jagex","Jagex"],
+      ["Paradox Interactive","Paradox Interactive"],
+      ["Devolver","Devolver"],
+      ["Annapurna Interactive","Annapurna"],
+      ["Thatgamecompany","That Game Company","Thatgamecompany"],
+      ["Second Dinner","Second Dinner"],
+      ["Digital Extremes","Digital Extremes"],
+      ["Gameloft","Gameloft"],
+      ["Wildlife Studios","Wildlife Studios"],
+      ["Jam City","Jam City"],
+      ["Kabam","Kabam"],
+      ["People Can Fly","People Can Fly"],
+      ["Keywords Studios","Keywords Studios"],
+      ["Warner Bros Games","Warner Bros"],
+      ["Zynga","Zynga"],
+      ["Dream Games","Dream Games"],
+      ["Easybrain","Easybrain"],
+      ["Mistplay","Mistplay"],
+      ["Roblox","Roblox"],
+      ["Tripwire","Tripwire"],
+    ],
+  };
+  const cnorm = (s) => String(s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+  // Whole-word matching, never substring. Substring was tried and is actively
+  // dangerous here: "ea" swallowed Eaton, CVS Health and ~100 others, "riot"
+  // took Rio Tinto and Riot Platforms, "unity" took Ivy Tech Community College,
+  // "meta" took Primetals and KoBold Metals. Longest pattern first, so
+  // "Activision Blizzard King" lands on Blizzard rather than a shorter hit.
+  const rxEsc = (t) => t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const MAJOR_INDEX = Object.entries(MAJORS).flatMap(([grp, list]) =>
+    list.flatMap(([name, ...pats]) => (pats.length ? pats : [name]).map((p) => ({
+      grp, name, p, n: cnorm(p),
+      re: new RegExp("(^|[^A-Za-z0-9])" + rxEsc(p) + "([^A-Za-z0-9]|$)", "i"),
+    })))
+  ).sort((x, y) => y.p.length - x.p.length);
+  const majorOf = (company) => {
+    const c = String(company || ""); if (!c) return null;
+    const n = cnorm(c);
+    for (const e of MAJOR_INDEX) if (n === e.n || e.re.test(c)) return e;
+    return null;
+  };
+  function majorsCoverage(open) {
+    const tally = {};
+    for (const r of open) { const m = majorOf(r.company); if (m) tally[m.name] = (tally[m.name] || 0) + 1; }
+    let out = "";
+    for (const [grp, list] of Object.entries(MAJORS)) {
+      const live = list.filter(([n]) => tally[n]).length;
+      out += `<div class="cvgrp"><b>${esc(grp)}</b> <span class="cvsum">${live}/${list.length} hiring · ${list.reduce((a, [n]) => a + (tally[n] || 0), 0)} roles</span></div><div class="cvwrap">`;
+      for (const [name] of list) {
+        const n = tally[name] || 0;
+        out += `<button class="cv ${n ? "" : "zero"}" data-co="${esc(name)}" title="${n ? n + " open" : "nothing open right now"}">${esc(name)} <span>${n}</span></button>`;
+      }
+      out += "</div>";
+    }
+    return `<div class="cvbox">${out}</div>`;
+  }
+
   const TABS = [
-    ["inbox", "Inbox"], ["starred", "Starred"], ["applied", "Tracker"], ["hidden", "Hidden"],
+    ["inbox", "Inbox"], ["majors", "Majors"], ["starred", "Starred"], ["applied", "Tracker"], ["hidden", "Hidden"],
   ];
 
   function counts() {
@@ -545,7 +736,8 @@
     const starred = roles.filter((r) => state.s[key(r)]?.star && !state.s[key(r)]?.st).length;
     const hidden = Object.keys(state.hidden).length;
     const inbox = roles.filter((r) => !state.s[key(r)]?.st && !state.hidden[key(r)]).length;
-    return { inbox, starred, applied: roles.filter((r) => state.s[key(r)]?.st).length + orphanCount(), hidden };
+    const majors = roles.filter((r) => majorOf(r.company) && !state.s[key(r)]?.st && !state.hidden[key(r)]).length;
+    return { inbox, majors, starred, applied: roles.filter((r) => state.s[key(r)]?.st).length + orphanCount(), hidden };
   }
   // applied roles that fell out of the feed (closed postings) still show in Tracker
   function orphanCount() {
@@ -638,6 +830,7 @@
     let rows = roles.filter((r) => {
       const k = key(r), s = state.s[k];
       if (view === "inbox" && (s?.st || state.hidden[k])) return false;
+      if (view === "majors" && (!majorOf(r.company) || s?.st || state.hidden[k])) return false;
       if (view === "starred" && !s?.star) return false;
       if (view === "applied" && !s?.st) return false;
       if (view === "hidden" && !state.hidden[k]) return false;
@@ -677,7 +870,8 @@
     }
 
     const list = document.getElementById("list");
-    if (!rows.length && !orphans) { list.innerHTML = `<div class="empty">Nothing here. ${view === "inbox" ? "All caught up 🎉" : ""}</div>`; return; }
+    const cvg = view === "majors" ? majorsCoverage(roles.filter((r) => !state.s[key(r)]?.st && !state.hidden[key(r)])) : "";
+    if (!rows.length && !orphans) { list.innerHTML = cvg + `<div class="empty">Nothing here. ${view === "inbox" ? "All caught up 🎉" : ""}</div>`; return; }
 
     // group-by-company (if toggled) → date-grouped (inbox/newest) → flat
     let html = "";
@@ -701,7 +895,7 @@
       html = rows.map((r) => rowHTML(r, key(r), state.s[key(r)])).join("") + orphans;
     }
     if (capped) html += `<div class="more">Showing ${ROW_LIMIT} of ${totalRows.toLocaleString()} — search or use the filters to see the rest.</div>`;
-    list.innerHTML = html;
+    list.innerHTML = cvg + html;
     wire();
   }
 
@@ -771,6 +965,12 @@
     document.querySelectorAll(".cohead").forEach((h) => h.onclick = () => {
       const co = h.dataset.co;
       collapsedCos.has(co) ? collapsedCos.delete(co) : collapsedCos.add(co);
+      render();
+    });
+    // a roster chip searches for that company (clicking the active one clears)
+    document.querySelectorAll(".cv").forEach((b) => b.onclick = () => {
+      const box = document.getElementById("q");
+      box.value = box.value.toLowerCase() === b.dataset.co.toLowerCase() ? "" : b.dataset.co;
       render();
     });
   }
