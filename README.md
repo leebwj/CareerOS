@@ -33,12 +33,11 @@ The core loop: **grabber finds roles → tracker manages them → apply-helper s
 
 ## The portfolio
 
-An intentionally motion-forward site, built from scratch:
+Built from scratch on **Astro 5 + Tailwind 4**, fully static. Two designs ship side by side behind a small switch in the corner:
 
-- **Astro 5 + Tailwind 4**, fully static — no framework runtime on the page
-- **Hand-written WebGL shaders** (GLSL) as a full-bleed, cursor-reactive hero with three switchable modes — DPR- and pixel-area-capped so it stays smooth on any screen
-- **Custom interaction system** — a morphing snap cursor, cursor-tracked kinetic type, magnetic buttons, a pointer-tilted holo trading card, smooth scroll
-- **Performance-minded** — non-blocking fonts, idle-deferred shader compile, hover prefetch, responsive images, reduced-motion support throughout
+- **Polished (default, `/`)** — the original design with a few things changed. Three intro styles sit behind a switch in the hero (the name in the logo face over the field, a film-credit caption, a spec sheet with the shader's real frame time and GPU). The audience switch (`/`, `/graphics`, `/engineering`, `/design`) reorders the work in place and updates the URL, so one link can be pasted into a studio application and another into a design one; the résumé link follows. Hovering a company on the holo card swaps the About text for that job's brief without moving the page; clicking opens the full page. Tags are squared outlined labels instead of pills; the grain is gone. Card thumbnails morph into case-study heroes through cross-document View Transitions (no router; unsupported browsers just load the page).
+- **Original (`/classic/`)** — the earlier version, kept whole for comparison: statement-wall hero, duotone thumbnails, Mona Sans.
+- Shared: the shaders (`ShaderField`, `CardShader`) use a fract-free permutation lattice hash so they render correctly on Intel MacBooks, where Metal's fast-math `fract()` used to tear the noise into triangles. `scripts/noise-robustness.mjs` proves the seam; `scripts/shader-smoke.mjs` compiles every mode in headless Chrome; `scripts/shot.mjs` screenshots any page; `scripts/copy-lint.mjs` keeps boilerplate out of the polished pages; `scripts/behaviour-check.mjs` exercises the audience switch, the row-filling grid and the About hover in headless Chrome.
 
 ### Run it
 
