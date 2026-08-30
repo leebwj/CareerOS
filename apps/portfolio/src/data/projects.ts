@@ -236,7 +236,7 @@ export const projects: Project[] = [
         type: "prose",
         label: "Maya pipeline",
         body: [
-          "The stylised low-poly passenger was modelled, rigged, textured, and animated in Maya. The rig uses IK limb chains, a spline-IK spine, and foot orient constraints, driven by NURBS control curves. Core cycles (idle, walk, jump, sit, push-up, pickup) export as FBX clips into an Unreal Animation Blueprint that blends between them with a locomotion blend space and procedural secondary motion.",
+          "The passenger is the protagonist of the game Gris — the mesh is zcythe's free public model of the character, and everything that makes it move here is mine. The rig, built in Maya, uses IK limb chains, a spline-IK spine, and foot orient constraints, driven by NURBS control curves. Core cycles (idle, walk, jump, sit, push-up, pickup) export as FBX clips into an Unreal Animation Blueprint that blends between them with a locomotion blend space and procedural secondary motion.",
         ],
       },
       { type: "media", label: "Character", layout: "full", items: [{ src: pgCharEngine, alt: "Character rendered in the canyon", caption: "The stylised passenger rendered in-engine with Lumen GI" }] },
@@ -264,6 +264,9 @@ export const projects: Project[] = [
           "Writing the shaders by hand, rather than reaching for a plugin, is what made the look feel like mine, and reading the GBuffer directly taught me more about the deferred pipeline than any tutorial. The lesson that stuck: a real-time engine gives you a filmmaker's iteration speed, but only if you understand what it's actually computing each frame.",
         ],
       },
+    ],
+    credits: [
+      { name: "zcythe", contribution: "Free public model of the Gris character, used as the passenger's mesh" },
     ],
   },
 
