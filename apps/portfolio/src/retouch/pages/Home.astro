@@ -127,7 +127,15 @@ const viewCfg = views.map((v) => ({ id: v.id, path: v.path, order: v.order, resu
                 <div class="proj-media" data-cursor="View" data-cursor-keep style={`view-transition-name: thumb-${p.slug}`}>
                   <div class="proj-cats">{p.cats.map((c) => <span class="proj-cat">{catLabels[c]}</span>)}</div>
                   {(p.thumb ?? p.img)
-                    ? <Image src={(p.thumb ?? p.img)!} alt={p.alt} width={1000} style={p.thumbPos ? `object-position:${p.thumbPos}` : undefined} />
+                    ? <Image
+                        src={(p.thumb ?? p.img)!}
+                        alt={p.alt}
+                        width={660}
+                        height={495}
+                        fit="cover"
+                        position={p.thumbPos?.startsWith("left") ? "left" : "centre"}
+                        densities={[1, 2]}
+                      />
                     : <div class="proj-cover-live">{p.title}</div>}
                 </div>
                 <div class="proj-head">

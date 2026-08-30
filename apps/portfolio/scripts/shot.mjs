@@ -19,7 +19,7 @@ const args = process.argv.slice(2);
 const url = args[0]; const out = args[1];
 if (!url || !out) { console.error("usage: shot.mjs <url> <out.png> [--full] [--w=] [--h=] [--to=] [--light] [--wait=]"); process.exit(2); }
 const opt = Object.fromEntries(args.slice(2).map((a) => { const m = a.match(/^--([^=]+)=?(.*)$/); return m ? [m[1], m[2] === "" ? true : m[2]] : [a, true]; }));
-const W = +(opt.w || 1440), H = +(opt.h || 900), WAIT = +(opt.wait || 2500);
+const W = +(opt.w || 1440), H = +(opt.h || 900), WAIT = +(opt.wait || 2500), DPR = +(opt.dpr || 1);
 const PORT = 9300 + Math.floor(Math.random() * 90);
 
 const chrome = [process.env.CHROME, "C:/Program Files/Google/Chrome/Application/chrome.exe", "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe", "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome", "/usr/bin/google-chrome"].filter(Boolean).find((p) => existsSync(p));
@@ -41,7 +41,7 @@ const send = (method, params = {}) => new Promise((r) => { const i = ++id; pendi
 const evaluate = async (expression) => (await send("Runtime.evaluate", { expression, awaitPromise: true, returnByValue: true }))?.result?.value;
 
 await send("Page.enable"); await send("Runtime.enable");
-await send("Emulation.setDeviceMetricsOverride", { width: W, height: H, deviceScaleFactor: 1, mobile: false });
+await send("Emulation.setDeviceMetricsOverride", { width: W, height: H, deviceScaleFactor: DPR, mobile: false });
 if (opt.light) await send("Page.addScriptToEvaluateOnNewDocument", { source: `try{localStorage.setItem("bl-mode","light")}catch(e){}` });
 if (opt.dark) await send("Page.addScriptToEvaluateOnNewDocument", { source: `try{localStorage.setItem("bl-mode","dark")}catch(e){}` });
 if (opt.font) await send("Page.addScriptToEvaluateOnNewDocument", { source: `try{localStorage.setItem("bl-font",${JSON.stringify(opt.font)})}catch(e){}` });
@@ -77,7 +77,7 @@ if (opt.to || opt.y !== undefined) {
   // freeze vh-sized heroes at their current height, then grow the viewport to the document
   await evaluate(`document.querySelectorAll(".hero, .cs-hero").forEach(e => { const h = e.getBoundingClientRect().height; e.style.minHeight = h + "px"; e.style.height = h + "px"; }); true`);
   const docH = Math.min(8000, await evaluate(`Math.max(document.documentElement.scrollHeight, document.body.scrollHeight)`));
-  await send("Emulation.setDeviceMetricsOverride", { width: W, height: docH, deviceScaleFactor: 1, mobile: false });
+  await send("Emulation.setDeviceMetricsOverride", { width: W, height: docH, deviceScaleFactor: DPR, mobile: false });
   await evaluate(showReveals);
   await sleep(1200);
   clip = { x: 0, y: 0, width: W, height: docH, scale: 1 };
