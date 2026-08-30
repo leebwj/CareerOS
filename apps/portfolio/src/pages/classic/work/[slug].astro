@@ -1,0 +1,12 @@
+---
+// /classic/work/[slug] — case studies in the 2026-08 design.
+import Work from "../../../classic/pages/Work.astro";
+import { projects } from "../../../data/projects";
+
+export function getStaticPaths() {
+  return projects.map((p) => ({ params: { slug: p.slug }, props: { project: p } }));
+}
+const { project } = Astro.props;
+---
+
+<Work project={project} />

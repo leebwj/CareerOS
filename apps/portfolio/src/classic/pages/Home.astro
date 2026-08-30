@@ -1,10 +1,12 @@
 ---
+// The 2026-08 "classic" landing page, frozen verbatim and served at /classic/.
+// It only differs from the original in its import paths and /classic link prefixes.
 import BaseLayout from "../layouts/BaseLayout.astro";
-import ShaderField from "../components/ShaderField.astro";
+import ShaderField from "../../components/ShaderField.astro";
 import ProjectCover from "../components/ProjectCover.astro";
-import ProfileCard from "../components/ProfileCard.astro";
+import ProfileCard from "../../components/ProfileCard.astro";
 import { Image } from "astro:assets";
-import { projectsOnly as projects, filters, catLabels } from "../data/projects";
+import { projectsOnly as projects, filters, catLabels } from "../../data/projects";
 
 const capabilities = [
   "Graphics & shaders",
@@ -115,7 +117,7 @@ const capabilities = [
         {
           projects.map((p, i) => (
             <article class="reveal" data-categories={p.cats.join(" ")} style={`--d:${(i % 2) * 0.08}s`}>
-              <a href={`/work/${p.slug}`} class="proj">
+              <a href={`/classic/work/${p.slug}`} class="proj">
                 <div class="proj-media" data-cursor="View" data-cursor-keep>
                   <div class="proj-cats">{p.cats.map((c) => <span class="proj-cat">{catLabels[c]}</span>)}</div>
                   <ProjectCover motif={p.motif} seed={i} />

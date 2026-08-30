@@ -1,14 +1,14 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
+// The 2026-08 "classic" case-study page, frozen verbatim and served at
+// /classic/work/[slug]. Differs from the original only in import paths and
+// /classic link prefixes; the route file owns getStaticPaths.
+import BaseLayout from "../layouts/BaseLayout.astro";
 import ShaderField from "../../components/ShaderField.astro";
 import { Image } from "astro:assets";
 import { projects, experiences, catLabels, type CatId } from "../../data/projects";
 
-export function getStaticPaths() {
-  return projects.map((p) => ({ params: { slug: p.slug }, props: { project: p } }));
-}
 const { project: p } = Astro.props;
-const backHref = p.type === "experience" ? "/#experience" : "/#work";
+const backHref = p.type === "experience" ? "/classic/#experience" : "/classic/#work";
 const backLabel = p.type === "experience" ? "Experience" : "All Work";
 
 // distribute media items round-robin into N columns → true masonry (no crop, no gap, no overlap)
@@ -37,7 +37,7 @@ const linkList = [
   <header class="cs-nav">
     <div class="wrap cs-nav__row">
       <a href={backHref} class="cs-back nav-link" data-cursor="Back">← {backLabel}</a>
-      <a href="/#top" class="font-display text-lg font-bold tracking-tight">Brian&nbsp;Lee<span class="text-cobalt">.</span></a>
+      <a href="/classic/#top" class="font-display text-lg font-bold tracking-tight">Brian&nbsp;Lee<span class="text-cobalt">.</span></a>
       <button id="mode-toggle" class="mode-toggle" type="button" aria-label="Toggle light and dark mode" data-cursor="Theme">
         <svg class="ico ico-sun" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5 5l1.7 1.7M17.3 17.3 19 19M19 5l-1.7 1.7M6.7 17.3 5 19" stroke-linecap="round"/></svg>
         <svg class="ico ico-moon" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" stroke-linejoin="round" stroke-linecap="round"/></svg>
@@ -90,7 +90,7 @@ const linkList = [
             <ul>
               {experiences.map((e) => (
                 <li>
-                  <a href={`/work/${e.slug}`} class={e.slug === p.slug ? "is-current" : ""} aria-current={e.slug === p.slug ? "page" : undefined} data-cursor="View">
+                  <a href={`/classic/work/${e.slug}`} class={e.slug === p.slug ? "is-current" : ""} aria-current={e.slug === p.slug ? "page" : undefined} data-cursor="View">
                     <img src={e.logo} alt="" width="22" height="22" loading="lazy" />
                     <span class="cs-switch__co">{e.title}</span>
                     <span class="cs-switch__yr">{e.years}</span>
@@ -188,10 +188,10 @@ const linkList = [
 
     <!-- ── prev / next ── -->
     <nav class="cs-pn wrap">
-      <a href={`/work/${prev.slug}`} class="cs-pn__item cs-pn__prev" data-cursor="Prev">
+      <a href={`/classic/work/${prev.slug}`} class="cs-pn__item cs-pn__prev" data-cursor="Prev">
         <span class="cs-pn__dir">← Prev</span><span class="cs-pn__title">{prev.title}</span>
       </a>
-      <a href={`/work/${next.slug}`} class="cs-pn__item cs-pn__next" data-cursor="Next">
+      <a href={`/classic/work/${next.slug}`} class="cs-pn__item cs-pn__next" data-cursor="Next">
         <span class="cs-pn__dir">Next →</span><span class="cs-pn__title">{next.title}</span>
       </a>
     </nav>
