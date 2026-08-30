@@ -3,11 +3,13 @@
 // visible, wait for fonts, and capture the full page — which is what a site
 // built on IntersectionObserver reveals needs.
 //
-//   node scripts/shot.mjs <url> <out.png> [--full] [--w=1440] [--h=900] [--to=#about] [--light] [--wait=2500]
+//   node scripts/shot.mjs <url> <out.png> [--full] [--w=1440] [--h=900] [--to=#about] [--y=1200] [--light|--dark] [--font=instrument] [--wait=2500]
 //
 // --full   capture the whole document height (max 8000px)
-// --to     scroll to a CSS selector before capturing
-// --light  set localStorage bl-mode=light before load
+// --to     clip the capture to start at a CSS selector (no scrolling involved)
+// --y      clip the capture to start at a document y offset
+// --light / --dark   set localStorage bl-mode before load
+// --font   set localStorage bl-font before load (schibsted | instrument)
 // Chrome path: CHROME env var or the default install locations.
 
 import { spawn } from "node:child_process";
@@ -41,27 +43,44 @@ const evaluate = async (expression) => (await send("Runtime.evaluate", { express
 await send("Page.enable"); await send("Runtime.enable");
 await send("Emulation.setDeviceMetricsOverride", { width: W, height: H, deviceScaleFactor: 1, mobile: false });
 if (opt.light) await send("Page.addScriptToEvaluateOnNewDocument", { source: `try{localStorage.setItem("bl-mode","light")}catch(e){}` });
+if (opt.dark) await send("Page.addScriptToEvaluateOnNewDocument", { source: `try{localStorage.setItem("bl-mode","dark")}catch(e){}` });
+if (opt.font) await send("Page.addScriptToEvaluateOnNewDocument", { source: `try{localStorage.setItem("bl-font",${JSON.stringify(opt.font)})}catch(e){}` });
+// --set=key:value  any localStorage entry before load (e.g. --set=bl-intro:name)
+if (opt.set) { const [k, ...v] = String(opt.set).split(":"); await send("Page.addScriptToEvaluateOnNewDocument", { source: `try{localStorage.setItem(${JSON.stringify(k)},${JSON.stringify(v.join(":"))})}catch(e){}` }); }
 await send("Page.navigate", { url });
 await sleep(WAIT);
 await evaluate(`document.fonts ? document.fonts.ready.then(() => true) : true`);
 // force scroll-reveal content visible, then let transitions settle
 await evaluate(`document.querySelectorAll(".reveal").forEach(e => e.classList.add("is-in")); document.querySelector(".hero")?.classList.add("lines-open"); true`);
+// --hide=selector,selector : make elements invisible before capture (e.g. to photograph the shader alone)
+if (opt.hide) await evaluate(`document.querySelectorAll(${JSON.stringify(String(opt.hide))}).forEach(e => e.style.visibility = "hidden"); true`);
 await sleep(900);
 // Scrolling is unreliable on pages that run a smooth-scroll library, so any
 // region capture (--full / --to / --y) grows the viewport to the whole
 // document and clips the region out of it instead of scrolling to it.
 let clip;
-if (opt.full || opt.to || opt.y !== undefined) {
+const showReveals = `document.querySelectorAll(".reveal").forEach(e => e.classList.add("is-in")); true`;
+if (opt.to || opt.y !== undefined) {
+  // a real scroll at the real viewport: resizing the viewport would inflate
+  // vh-sized sections and move the target. Smooth scrolling (CSS or a
+  // smooth-scroll library) is switched off first so the jump is immediate.
+  await evaluate(showReveals);
+  await evaluate(`document.documentElement.style.scrollBehavior = "auto"; document.documentElement.classList.remove("lenis-smooth"); true`);
+  const y = opt.to
+    ? await evaluate(`(() => { const el = document.querySelector(${JSON.stringify(opt.to)}); return el ? Math.max(0, Math.round(el.getBoundingClientRect().top + window.scrollY) - 24) : 0; })()`)
+    : +opt.y;
+  await evaluate(`window.scrollTo(0, ${y}); true`);
+  await sleep(300);
+  await evaluate(`window.scrollTo(0, ${y}); ${showReveals}`);   // again, in case a scroll library re-synced
+  await sleep(900);
+} else if (opt.full) {
+  // freeze vh-sized heroes at their current height, then grow the viewport to the document
+  await evaluate(`document.querySelectorAll(".hero, .cs-hero").forEach(e => { const h = e.getBoundingClientRect().height; e.style.minHeight = h + "px"; e.style.height = h + "px"; }); true`);
   const docH = Math.min(8000, await evaluate(`Math.max(document.documentElement.scrollHeight, document.body.scrollHeight)`));
   await send("Emulation.setDeviceMetricsOverride", { width: W, height: docH, deviceScaleFactor: 1, mobile: false });
-  await evaluate(`document.querySelectorAll(".reveal").forEach(e => e.classList.add("is-in")); true`);
+  await evaluate(showReveals);
   await sleep(1200);
-  let y = 0, h = docH;
-  if (opt.to) {
-    y = await evaluate(`(() => { const el = document.querySelector(${JSON.stringify(opt.to)}); return el ? Math.max(0, Math.round(el.getBoundingClientRect().top + window.scrollY) - 24) : 0; })()`);
-    h = Math.min(H, docH - y);
-  } else if (opt.y !== undefined) { y = +opt.y; h = Math.min(H, docH - y); }
-  clip = { x: 0, y, width: W, height: h, scale: 1 };
+  clip = { x: 0, y: 0, width: W, height: docH, scale: 1 };
 }
 const shot = await send("Page.captureScreenshot", { format: "png", captureBeyondViewport: !!opt.full, ...(clip ? { clip } : {}) });
 writeFileSync(out, Buffer.from(shot.data, "base64"));
