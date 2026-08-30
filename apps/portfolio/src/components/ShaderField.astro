@@ -5,10 +5,12 @@
 // (uModeA/uModeB/uMix blend). Lazy, paused offscreen, DPR-capped, static frame
 // under reduced-motion. variant="bleed" → full-bleed page surface (cursor reacts
 // across the whole hero); variant="band" → wide short strip.
-const { variant, mode = 0 } = Astro.props;
+// variant="tile" → a bounded, framed specimen (the 2026 landing page); bg/line/deep
+// override the CSS-derived palette so the tile can stay a dark "screen" on a light page.
+const { variant, mode = 0, bg, line, deep } = Astro.props;
 ---
 
-<div class:list={["vp", variant === "band" && "vp--band", variant === "bleed" && "vp--bleed"]} data-mode={mode} data-cursor="Poke">
+<div class:list={["vp", variant === "band" && "vp--band", variant === "bleed" && "vp--bleed", variant === "tile" && "vp--tile"]} data-mode={mode} data-bg={bg} data-line={line} data-deep={deep} data-cursor="Poke">
   <canvas class="vp-canvas"></canvas>
   <div class="vp-hud" aria-hidden="true">
     <span class="vp-tick tl"></span><span class="vp-tick tr"></span>
@@ -38,6 +40,11 @@ const { variant, mode = 0 } = Astro.props;
   .vp--bleed { position: absolute; inset: 0; width: 100%; height: 100%; aspect-ratio: auto; border: 0; border-radius: 0; box-shadow: none; background: transparent; z-index: 0; }
   .vp--bleed .vp-hud { display: none; }
   .vp--bleed::before { opacity: .22; }
+  /* specimen tile: framed, no HUD, 4:3 (16:9 on phones) */
+  .vp--tile { aspect-ratio: 4 / 3; border-radius: 6px; border: 1px solid var(--line, var(--color-line)); box-shadow: none; background: #0f1115; }
+  @media (max-width: 639px) { .vp--tile { aspect-ratio: 16 / 9; } }
+  .vp--tile .vp-hud { display: none; }
+  .vp--tile::before { opacity: .35; }
 
   .vp-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
   /* CSS blueprint grid is the no-WebGL / pre-paint fallback */
@@ -526,9 +533,10 @@ const { variant, mode = 0 } = Astro.props;
         };
         const setColors = () => {
           const css = getComputedStyle(document.documentElement);
-          gl.uniform3fv(uBg, hex(css.getPropertyValue("--color-card") || "#161412"));
-          gl.uniform3fv(uLine, hex(css.getPropertyValue("--color-cobalt") || "#e8b15a"));
-          gl.uniform3fv(uDeep, hex(css.getPropertyValue("--color-cobalt-deep") || "#eebb6a"));
+          const d = wrap.dataset;   // per-instance palette override (the 2026 specimen tile)
+          gl.uniform3fv(uBg, hex(d.bg || css.getPropertyValue("--color-card") || "#161412"));
+          gl.uniform3fv(uLine, hex(d.line || css.getPropertyValue("--color-cobalt") || "#e8b15a"));
+          gl.uniform3fv(uDeep, hex(d.deep || css.getPropertyValue("--color-cobalt-deep") || "#eebb6a"));
         };
         setColors();
         addEventListener("themechange", setColors);
@@ -543,6 +551,27 @@ const { variant, mode = 0 } = Astro.props;
         // further at runtime rather than assuming a quality tier up front.
         const QUALITY_STEPS = bleed ? [1, 0.78, 0.6, 0.46, 0.34] : [1, 0.8, 0.65];
         let qStep = 0;
+        // GPU tier from the browser's renderer string. Discrete NVIDIA/AMD, Apple
+        // M-series and Intel Arc can carry native resolution; integrated Intel,
+        // mobile GPUs and anything masked keep the caps measured on an Intel UHD;
+        // software renderers (SwiftShader) go lower still. The runtime step-down
+        // below remains the safety net if a "high" GPU still can't keep up.
+        const renderer = (() => { try { const d = gl.getExtension("WEBGL_debug_renderer_info"); return d ? String(gl.getParameter(d.UNMASKED_RENDERER_WEBGL)) : ""; } catch { return ""; } })();
+        const tier: "software" | "high" | "low" | "mid" =
+          /swiftshader|llvmpipe|software/i.test(renderer) ? "software"
+          : /nvidia|geforce|rtx|gtx|quadro|radeon (rx|pro|vii)|apple m\d|intel.*arc/i.test(renderer) ? "high"
+          : /intel|iris|uhd|hd graphics|mali|adreno|powervr|apple gpu|radeon\(tm\) graphics|vega/i.test(renderer) ? "low"
+          : "mid";
+        // The name only sets the starting tier. Measured frame cost moves it:
+        // down when frames are slow (below), up when they are clearly fast, so
+        // a mislabelled or unknown GPU still ends up at the resolution it can carry.
+        let tierNow: "software" | "low" | "mid" | "high" = tier;
+        const DPR_CAPS = { high: 2, mid: 1.5, low: bleed ? 1.25 : 1.75, software: 0.75 };
+        const AREA_CAPS = bleed
+          ? { high: 4600000, mid: 3000000, low: 2000000, software: 700000 }
+          : { high: 2600000, mid: 1800000, low: 1400000, software: 600000 };
+        const promote = () => { tierNow = tierNow === "low" ? "mid" : "high"; wrap.dataset.gpuTier = tierNow; };
+        wrap.dataset.gpuTier = tierNow;
         // Water is by far the heaviest mode: per pixel it runs 6 grid samples,
         // 5 heightfield taps, 3 fbm (15 noise octaves) and a 4-step caustic loop
         // with 16 trig calls — several times what the contour field costs, on top
@@ -552,11 +581,11 @@ const { variant, mode = 0 } = Astro.props;
         const WATER_SCALE = 0.6;
         let waterActive = false;
         const resize = () => {
-          let dpr = Math.min(devicePixelRatio || 1, bleed ? 1.25 : 1.75) * QUALITY_STEPS[qStep]
+          let dpr = Math.min(devicePixelRatio || 1, DPR_CAPS[tierNow]) * QUALITY_STEPS[qStep]
                   * (waterActive ? WATER_SCALE : 1);
           const r = wrap.getBoundingClientRect();
           // hard ceiling as well, so a huge monitor can't undo the scaling
-          const cap = bleed ? 2000000 : 1400000;
+          const cap = AREA_CAPS[tierNow];
           const area = r.width * r.height * dpr * dpr;
           if (area > cap) dpr *= Math.sqrt(cap / area);
           canvas.width = Math.max(1, Math.round(r.width * dpr));
@@ -639,7 +668,7 @@ const { variant, mode = 0 } = Astro.props;
         // it is bound to INTENT instead: hovering the switcher (which precedes
         // clicking it) warms every mode, and nobody who never touches the
         // switcher pays for modes they never see.
-        if (bleed) {
+        if (bleed || wrap.classList.contains("vp--tile")) {
           const pick = document.querySelector(".shader-pick");
           if (pick) {
             const prewarm = () => { if (!prewarmed) { prewarmed = true; ensureModes([0, 1, 2, 3, 4]); } };
@@ -681,6 +710,9 @@ const { variant, mode = 0 } = Astro.props;
             if (avg > 22 && qStep < QUALITY_STEPS.length - 1) { // slower than ~45fps
               qStep++; resize();
               fSamples = 12; fSum = 0;                          // re-measure at the new size
+            } else if (avg < 9 && qStep === 0 && (tierNow === "low" || tierNow === "mid")) {
+              promote(); resize();                              // clearly fast: one tier up, then re-measure
+              fSamples = 12; fSum = 0;
             } else settled = true;
           };
           // Bounded time. Every mode adds uTime-scaled offsets to the noise
@@ -690,10 +722,17 @@ const { variant, mode = 0 } = Astro.props;
           // reverses direction at the turnaround.
           const PERIOD = 1800;
           const wrapTime = (t: number) => { const m = t % (2 * PERIOD); return m < PERIOD ? m : 2 * PERIOD - m; };
+          // frame stats for anything on the page that wants to show them (twice a second)
+          let statN = 0, statT = 0, statLast = 0;
           const loop = (now: number) => {
             if (!running) { looping = false; return; }
             if (!t0) { t0 = now; last = now; }
             const time = wrapTime((now - t0) / 1000);
+            statN++; statT += now - last;
+            if (now - statLast > 500 && statN > 0) {
+              dispatchEvent(new CustomEvent("shaderstats", { detail: { fps: 1000 * statN / Math.max(1, statT), ms: statT / statN, tier: tierNow, scale: QUALITY_STEPS[qStep], px: canvas.width * canvas.height } }));
+              statN = 0; statT = 0; statLast = now;
+            }
             const dtMs = now - last;
             const dt = Math.min((now - last) / 1000, 0.05); last = now;
             judgeFrame(dtMs);
