@@ -1,0 +1,532 @@
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────────────────────────
+   CareerOS portfolio — Direction A.
+   Warm paper · one accent · 2 fonts + mono · one motif (numbered
+   sections) · whitespace rhythm. Purposeful motion: smooth scroll,
+   a magnetic cursor, and one live shader. Thumbnails unified by a
+   cobalt duotone wash.
+   ───────────────────────────────────────────────────────────── */
+@theme {
+  /* Slate Blue — cool near-black ground + a muted greyish-blue accent (the default).
+     The switcher offers Periwinkle, Indigo + other 2026 systems; nav sun/moon toggles light mode. */
+  --color-canvas: #0b0c0e;       /* cool near-black ground (not pure #000) */
+  --color-card: #15171a;         /* raised surface */
+  --color-ink: #f4f5f7;          /* off-white text */
+  --color-muted: #828c99;
+  --color-faint: #545c66;
+  --color-line: #23262b;         /* hairlines */
+  --color-cobalt: #6f88cf;       /* Deep Cobalt Indigo — the locked dark accent */
+  --color-cobalt-deep: #9aafe2;  /* lighter cobalt-indigo — accent text / links on dark */
+  --color-on-accent: #0a0d12;    /* dark text that sits ON the accent fill */
+
+  --font-display: "Mona Sans", ui-sans-serif, sans-serif;          /* headlines — Mona Sans (switchable) */
+  --font-sans: "Mona Sans", ui-sans-serif, system-ui, sans-serif;  /* body */
+  --font-mono: "Geist Mono", ui-monospace, monospace;              /* labels / HUD */
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  /* kill the squared tap-flash on touch: must be on EVERY element — some
+     engines don't propagate it from html to the tapped anchor itself */
+  *, *::before, *::after { -webkit-tap-highlight-color: transparent; }
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3 { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.045em; line-height: 1.06; }
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: color-mix(in oklab, var(--color-cobalt) 22%, transparent); }
+  :focus-visible { outline: 2px solid var(--color-cobalt); outline-offset: 3px; border-radius: 3px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  /* hide native cursor only once the custom cursor is live */
+  html.cursor-on, html.cursor-on a, html.cursor-on button, html.cursor-on [data-shader] { cursor: none; }
+}
+
+/* lenis smooth scroll */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: clip; }
+
+@layer components {
+  .wrap { width: 100%; max-width: 1080px; margin-inline: auto; padding-inline: 1.5rem; }
+  @media (min-width: 768px) { .wrap { padding-inline: 2rem; } }
+
+  /* large-desktop scale-up: on big monitors, grow the root font (all rem-based
+     type + spacing scales with it) and widen the containers proportionally,
+     instead of leaving a centered column in a sea of empty canvas */
+  @media (min-width: 1800px) {
+    html { font-size: 18px; }
+    .wrap { max-width: 1340px; }
+  }
+  @media (min-width: 2300px) {
+    html { font-size: 20px; }
+    .wrap { max-width: 1580px; }
+  }
+
+  /* the ONE repeating motif: numbered section kicker */
+  .kicker { font-family: var(--font-mono); font-size: 13.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-muted); }
+  .kicker .num { color: var(--color-cobalt-deep); margin-right: .5rem; }
+
+  /* pill buttons */
+  .btn { display: inline-flex; align-items: center; gap: .5rem; font-weight: 500; font-size: .95rem; line-height: 1; padding: .8rem 1.3rem; border-radius: 100px; transition: background-color .25s ease, color .25s ease, border-color .25s ease; }
+  .btn-primary { background: var(--color-ink); color: var(--color-canvas); }
+  .btn-primary:hover { background: var(--color-cobalt); color: var(--color-on-accent); }
+  .btn-ghost { border: 1px solid var(--color-line); color: var(--color-ink); }
+  .btn-ghost:hover { border-color: var(--color-ink); }
+
+  .nav-link { position: relative; color: var(--color-muted); transition: color .2s ease; }
+  .nav-link:hover { color: var(--color-ink); }
+
+  /* light/dark mode toggle (nav) — shows the icon for the mode you'll switch TO */
+  .mode-toggle { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 999px; border: 1px solid var(--color-line); color: var(--color-muted); background: transparent; cursor: pointer; transition: color .2s ease, border-color .2s ease; }
+  .mode-toggle:hover { color: var(--color-ink); border-color: var(--color-ink); }
+
+  .scroll-progress { position: fixed; top: 0; left: 0; right: 0; height: 2px; z-index: 60; pointer-events: none; }
+  .scroll-progress span { display: block; height: 100%; transform-origin: 0 50%; transform: scaleX(0); background: linear-gradient(90deg, var(--color-cobalt), var(--color-cobalt-deep)); will-change: transform; }
+
+  .site-footer { border-top: 1px solid var(--color-line); padding: 1.5rem 0; }
+  .site-footer__row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem; font-family: var(--font-mono); font-size: 12px; color: var(--color-muted); }
+
+  .nav-burger { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 8px; border: 1px solid var(--color-line); color: var(--color-muted); background: transparent; cursor: pointer; transition: color .2s ease, border-color .2s ease; }
+  .nav-burger:hover, .nav-burger.is-open { color: var(--color-ink); border-color: var(--color-ink); }
+  .nav-menu { border-top: 1px solid var(--color-line); background: color-mix(in oklab, var(--color-canvas) 97%, transparent); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); padding: .35rem 1.5rem 1rem; }
+  .nav-menu__link { display: block; padding: .9rem .2rem; font-size: 1.05rem; color: var(--color-ink); border-bottom: 1px solid var(--color-line); transition: color .2s ease; }
+  .nav-menu__link:last-child { border-bottom: 0; }
+  .nav-menu__link:hover { color: var(--color-cobalt-deep); }
+  .mode-toggle .ico { grid-area: 1 / 1; }
+  .mode-toggle .ico-moon { display: none; }
+  html[data-mode="light"] .mode-toggle .ico-sun { display: none; }
+  html[data-mode="light"] .mode-toggle .ico-moon { display: block; }
+  /* scroll-spy active state */
+  .nav-link.is-active { color: var(--color-ink); }
+  .nav-link.is-active::after { content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 2px; border-radius: 2px; background: var(--color-cobalt); }
+
+  /* tags — single source of truth so every chip aligns identically */
+  .tag { display: inline-flex; align-items: center; height: 28px; padding: 0 .8rem; font-family: var(--font-mono); font-size: 12.5px; line-height: 1; white-space: nowrap; color: var(--color-muted); border: 1px solid var(--color-line); border-radius: 100px; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: .5rem; }
+
+  /* filter chips */
+  .chip { display: inline-flex; align-items: center; height: 34px; padding: 0 .9rem; font-family: var(--font-mono); font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: var(--color-muted); border: 1px solid var(--color-line); border-radius: 100px; cursor: pointer; transition: color .2s ease, border-color .2s ease, background-color .2s ease; }
+  .chip:hover { color: var(--color-ink); border-color: var(--color-ink); }
+  .chip[aria-pressed="true"] { background: var(--color-cobalt); color: var(--color-on-accent); border-color: var(--color-cobalt); }
+
+  /* ── project cards: one matted frame, duotone unifies every image ── */
+  .proj-media { position: relative; aspect-ratio: 4 / 3; border-radius: 14px; background: var(--color-card); overflow: hidden; isolation: isolate; container-type: inline-size; box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--color-cobalt) 14%, transparent); transition: box-shadow .4s ease; }
+  /* DEFAULT = a designed cover (no screenshot); screenshot treatments toggle in via [data-thumb] */
+  .proj-media :where(img) { width: 100%; height: 100%; object-fit: cover; display: none; transition: filter .6s ease, transform .6s cubic-bezier(.22, 1, .36, 1); }
+  html[data-thumb] .proj-media:has(img) :where(img) { display: block; }
+  html[data-thumb] .proj-media .proj-cover { display: none; }
+  html[data-thumb] .proj-media .proj-cover-live { display: grid; }   /* screenshot modes: no-image card shows the text cover */
+  /* faint grain + scrim — applies in every mode */
+  .proj-media::after { content: ""; position: absolute; inset: 0; z-index: 3; pointer-events: none; background: linear-gradient(to top, color-mix(in oklab, var(--color-canvas) 78%, transparent) 0%, transparent 42%), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E"); background-size: cover, 160px 160px; opacity: .4; mix-blend-mode: overlay; transition: opacity .55s ease; }
+  .proj:hover .proj-media { box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--color-cobalt) 30%, transparent); }
+  .proj:hover .proj-media :where(img) { transform: scale(1.04); }
+  .proj:hover .proj-media::after { opacity: .22; }
+
+  /* ── designed project cover (the default thumbnail): blueprint grid + glow + corner ticks + ghost index + glyph ── */
+  .proj-cover { position: absolute; inset: 0; overflow: hidden; color: var(--color-cobalt); background: linear-gradient(color-mix(in oklab, var(--color-line) 70%, transparent) 1px, transparent 1px) 0 0 / 22px 22px, linear-gradient(90deg, color-mix(in oklab, var(--color-line) 70%, transparent) 1px, transparent 1px) 0 0 / 22px 22px, var(--color-card); }
+  .pc-glow { position: absolute; inset: 0; background: radial-gradient(120% 130% at var(--gx, 30%) var(--gy, 30%), color-mix(in oklab, var(--color-cobalt) 24%, transparent), transparent 68%); }
+  .proj-cover::before { content: ""; position: absolute; inset: 12px; z-index: 2; pointer-events: none; color: color-mix(in oklab, var(--color-cobalt) 50%, transparent); background: linear-gradient(currentColor 0 0) left top/14px 1.5px no-repeat, linear-gradient(currentColor 0 0) left top/1.5px 14px no-repeat, linear-gradient(currentColor 0 0) right top/14px 1.5px no-repeat, linear-gradient(currentColor 0 0) right top/1.5px 14px no-repeat, linear-gradient(currentColor 0 0) left bottom/14px 1.5px no-repeat, linear-gradient(currentColor 0 0) left bottom/1.5px 14px no-repeat, linear-gradient(currentColor 0 0) right bottom/14px 1.5px no-repeat, linear-gradient(currentColor 0 0) right bottom/1.5px 14px no-repeat; transition: color .4s ease; }
+  .pc-idx { position: absolute; top: -0.14em; right: 0.08em; z-index: 0; font-family: var(--font-mono); font-weight: 700; font-size: clamp(4rem, 30cqw, 9rem); line-height: 1; letter-spacing: -0.04em; color: color-mix(in oklab, var(--color-cobalt) 14%, transparent); }
+  .pc-motif { position: absolute; inset: 0; z-index: 1; display: grid; place-items: center; color: var(--color-cobalt-deep); transition: transform .6s cubic-bezier(.22, 1, .36, 1); }
+  .pc-motif svg { width: 46%; height: auto; }
+  .proj:hover .proj-cover::before { color: var(--color-cobalt); }
+  .proj:hover .pc-motif { transform: scale(1.05); }
+  /* text-in-middle cover for projects with no screenshot (the previous default; matches the B&W set). Hidden in "Cover" mode. */
+  .proj-cover-live { position: absolute; inset: 0; display: none; place-items: center; text-align: center; padding: 1.3rem; background: radial-gradient(125% 130% at 30% 20%, color-mix(in oklab, var(--color-card) 84%, var(--color-cobalt)), var(--color-card) 78%); color: var(--color-ink); font-family: var(--font-display); font-weight: 700; font-size: clamp(1.5rem, 7cqw, 2.2rem); letter-spacing: -0.035em; line-height: 1.1; }
+  .proj-cover-live::after { content: ""; position: absolute; inset: 0; pointer-events: none; box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--color-cobalt) 22%, transparent); }
+
+  /* ── screenshot treatments (toggle in via [data-thumb]; only when a real screenshot exists) ── */
+  /* "bw" = refined B&W where blacks lean into the accent → colour on hover */
+  html[data-thumb="bw"] .proj-media :where(img) { filter: grayscale(1) contrast(1.06) brightness(.97); }
+  html[data-thumb="bw"] .proj-media:has(img)::before { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(to top, var(--color-cobalt) 0%, color-mix(in oklab, var(--color-cobalt) 55%, transparent) 58%, color-mix(in oklab, var(--color-cobalt) 30%, transparent) 100%); mix-blend-mode: color; opacity: .2; transition: opacity .55s ease; }
+  html[data-thumb="bw"] .proj:hover .proj-media :where(img) { filter: none; }
+  html[data-thumb="bw"] .proj:hover .proj-media:has(img)::before { opacity: 0; }
+  .proj-cats { position: absolute; top: .85rem; left: .85rem; z-index: 4; display: flex; flex-wrap: wrap; gap: .35rem; max-width: calc(100% - 1.7rem); }
+  .proj-cat { display: inline-flex; align-items: center; height: 24px; padding: 0 .7rem; font-family: var(--font-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; color: var(--color-cobalt-deep); background: color-mix(in oklab, var(--color-canvas) 84%, transparent); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); border: 1px solid var(--color-line); border-radius: 100px; }
+  .proj-head { margin-top: 1rem; display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+  .proj-title { font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; letter-spacing: -0.035em; line-height: 1.2; }
+  .proj:hover .proj-title { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; text-decoration-color: var(--color-cobalt); }
+  .proj-no { font-family: var(--font-mono); font-size: 12.5px; color: var(--color-muted); white-space: nowrap; }
+  .proj-blurb { margin-top: .6rem; color: var(--color-muted); font-size: .94rem; line-height: 1.55; }
+
+
+  .load-more { padding: .6rem 1.5rem; font-family: var(--font-mono); font-size: 12px; letter-spacing: .05em; }
+
+  /* ── about: two columns + a spec rail so the copy doesn't float in whitespace ── */
+  .about-grid { display: grid; gap: 2.5rem; }
+  @media (min-width: 768px) { .about-grid { grid-template-columns: 1.55fr 1fr; gap: 3.75rem; align-items: center; } .about-card { margin-top: 1rem; } }
+  .about-statement { max-width: 28ch; font-family: var(--font-display); font-weight: 700; font-size: clamp(1.5rem, 3.2vw, 2.25rem); line-height: 1.18; letter-spacing: -0.03em; text-wrap: balance; }
+  .about-body { margin-top: 1.5rem; max-width: 58ch; color: var(--color-muted); line-height: 1.65; text-wrap: pretty; }
+  .about-side { display: grid; gap: 2rem; align-content: start; }
+  .about-side__label { font-family: var(--font-mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--color-faint); margin-bottom: .35rem; }
+  /* aligned spec table: fixed label column + left-aligned values */
+  .about-facts .fact { display: grid; grid-template-columns: 52px 1fr; gap: 1rem; align-items: baseline; padding: .62rem 0; border-top: 1px solid var(--color-line); }
+  .about-facts .fact:first-child { border-top: 0; padding-top: 0; }
+  .about-facts dt { font-family: var(--font-mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--color-faint); white-space: nowrap; }
+  .about-facts dd { font-size: .95rem; color: var(--color-ink); }
+  .about-facts dd .dim { color: var(--color-muted); }
+  /* experience rows: small brand logo + company + external arrow */
+  .about-exp__list li { border-top: 1px solid var(--color-line); }
+  .about-exp__list a { display: flex; align-items: center; gap: .65rem; padding: .58rem 0; font-size: .96rem; color: var(--color-ink); transition: color .2s ease; }
+  .about-exp__list img { width: 20px; height: 20px; border-radius: 5px; object-fit: cover; flex-shrink: 0; }
+  .about-exp__list .co { flex: 1; }
+  .about-exp__list a::after { content: "↗"; font-family: var(--font-mono); font-size: .78rem; color: var(--color-faint); opacity: .4; transition: opacity .2s ease, color .2s ease; }
+  .about-exp__list a:hover { color: var(--color-cobalt-deep); }
+  .about-exp__list a:hover::after { opacity: 1; color: var(--color-cobalt-deep); }
+
+  /* ── live shader hero ── */
+  .shader-hero { position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: 16px; overflow: hidden; border: 1px solid var(--color-line); background: var(--color-card); --mx: -500px; --my: -500px; }
+  .shader-canvas, .shader-orig { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .shader-canvas { display: block; }
+  .shader-orig { object-fit: cover; pointer-events: none; -webkit-mask-image: radial-gradient(circle 130px at var(--mx) var(--my), #000 52%, transparent 100%); mask-image: radial-gradient(circle 130px at var(--mx) var(--my), #000 52%, transparent 100%); -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; }
+  .shader-hero.no-webgl .shader-canvas { display: none; }
+  .shader-hero.no-webgl .shader-orig { -webkit-mask-image: none; mask-image: none; }
+  .shader-cap { position: absolute; inset: auto 0 0 0; display: flex; justify-content: space-between; gap: 1rem; padding: .85rem 1rem; font-family: var(--font-mono); font-size: 11px; color: color-mix(in oklab, #fff 88%, transparent); background: linear-gradient(transparent, color-mix(in oklab, #000 55%, transparent)); pointer-events: none; }
+  .shader-cap-hint { color: color-mix(in oklab, var(--color-cobalt) 50%, #fff); }
+
+  /* scroll reveal — fade-up once; --d staggers grouped items */
+  .reveal { opacity: 0; transform: translateY(14px); transition: opacity .7s cubic-bezier(.22, 1, .36, 1), transform .7s cubic-bezier(.22, 1, .36, 1); transition-delay: var(--d, 0s); }
+  .reveal.is-in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1 !important; transform: none !important; transition: none !important; } }
+
+  /* hero entrance — each .line clips an element that rises in (the "render-in") */
+  .hero.reveal { opacity: 1; transform: none; transition: none; }
+  .hero .line { display: block; overflow: hidden; padding-bottom: .12em; }
+  /* after the entrance finishes, stop clipping so magnetic buttons aren't cut off when they move */
+  .hero.lines-open .line { overflow: visible; }
+  .hero .line > * { display: block; transform: translateY(118%); opacity: 0; transition: transform 1s cubic-bezier(.16, 1, .3, 1) var(--d, 0s), opacity .8s ease var(--d, 0s); }
+  .hero.is-in .line > * { transform: none; opacity: 1; }
+  @media (prefers-reduced-motion: reduce) { .hero .line > * { transform: none !important; opacity: 1 !important; transition: none !important; } }
+
+  /* magnetic interactive elements — elastic pull toward the cursor (set via JS) */
+  [data-magnetic] { transition: transform .35s cubic-bezier(.22, 1, .36, 1), background-color .25s ease, color .25s ease, border-color .25s ease; will-change: transform; }
+
+  /* ── custom cursor: dot tracks 1:1, ring eases behind, morphs to a label on intent ── */
+  /* z 39 = one below the sticky header (40): a wrapped ring slides smoothly
+     BEHIND the nav instead of drawing over it; .over-nav lifts it while
+     hovering header controls so their snap stays visible */
+  .cursor-ring { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 39; display: none; }
+  .cursor-ring.over-nav { z-index: 41; }
+  /* full-screen overlays (the art reader, z 100) would otherwise bury the ring —
+     and since cursor-on sets `cursor: none`, that leaves NO cursor at all */
+  html.pv-open .cursor-ring { z-index: 102; }
+  html.cursor-on .cursor-ring { display: grid; place-items: center; }
+  /* The white ring uses mix-blend difference so it inverts against any background. */
+  .cursor-ring { width: 34px; height: 34px; margin: -17px 0 0 -17px; border: 1.5px solid #fff; border-radius: 50%; mix-blend-mode: difference; transition: width .3s cubic-bezier(.22, 1, .36, 1), height .3s cubic-bezier(.22, 1, .36, 1), margin .3s cubic-bezier(.22, 1, .36, 1), border-radius .3s cubic-bezier(.22, 1, .36, 1), background-color .3s ease, border-color .3s ease; }
+  /* hover: the ring wraps the target (JS sets the size); the white+difference border stays
+     adaptive so it's visible on ANY background — including the same-colour accent block */
+  .cursor-ring.is-hover { background: transparent; }
+  .cursor-label { font-family: var(--font-mono); font-weight: 700; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; opacity: 0; transform: scale(.55); transition: opacity .2s ease, transform .28s cubic-bezier(.22, 1, .36, 1); }
+  /* labelled target: bordered wrap + accent label over the image */
+  .cursor-ring.is-label { mix-blend-mode: normal; background: transparent; border-color: var(--color-cobalt); }
+  .cursor-ring.is-label .cursor-label { opacity: 1; transform: none; color: var(--color-cobalt); text-shadow: 0 1px 4px rgba(0, 0, 0, .55); }
+  /* text targets (no keep) → wrap stays adaptive white+difference so it never disappears on the accent block; label hidden */
+  .cursor-ring.quiet { mix-blend-mode: difference; border-color: #fff; }
+  .cursor-ring.quiet .cursor-label { opacity: 0; }
+
+  /* ── statement-wall hero (Direction 1): one left edge · one big scale jump · type leads ── */
+  .hero-wall { width: 100%; max-width: min(1480px, 94vw); margin-inline: auto; padding-inline: clamp(1.5rem, 4vw, 3rem); }
+  @media (min-width: 1800px) { .hero-wall { max-width: min(1840px, 92vw); } }
+  .hero-spec { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: .35rem 1.5rem; font-family: var(--font-mono); font-size: 13.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-muted); }
+  .hero-spec .hl { color: var(--color-cobalt-deep); }
+  .hero-h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(2.6rem, 9vw, 7.5rem); line-height: .94; letter-spacing: -0.025em; }
+  .hero-band { width: 100%; max-width: min(1480px, 94vw); margin-inline: auto; margin-top: clamp(2.5rem, 6vw, 4.5rem); padding-inline: clamp(1.5rem, 4vw, 3rem); }
+
+  /* ── full-bleed shader hero: the live field IS the page surface (not a strip) ── */
+  .hero { position: relative; overflow: hidden; }
+  .hero-wall { position: relative; z-index: 1; }
+  .hero-shade { position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background:
+      linear-gradient(100deg, var(--color-canvas) 0%, color-mix(in oklab, var(--color-canvas) 85%, transparent) 36%, color-mix(in oklab, var(--color-canvas) 28%, transparent) 64%, transparent 90%),
+      linear-gradient(to top, var(--color-canvas) 2%, transparent 34%); }
+  /* shader mode switcher (Field / Flow / Dots) */
+  .shader-pick { position: absolute; z-index: 2; right: clamp(1.25rem, 4vw, 3rem); bottom: clamp(1.1rem, 3vw, 2rem); display: flex; align-items: center; gap: 6px; font-family: var(--font-mono); }
+  .shader-pick > span { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--color-faint); margin-right: 2px; }
+  .shader-pick button { font-family: var(--font-mono); font-size: 12.5px; line-height: 1; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--color-line); background: color-mix(in oklab, var(--color-card) 45%, transparent); color: var(--color-muted); cursor: pointer; -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); transition: color .2s ease, border-color .2s ease, background-color .2s ease; }
+  .shader-pick button:hover { color: var(--color-ink); border-color: var(--color-ink); }
+  .shader-pick button[aria-pressed="true"] { color: var(--color-on-accent); background: var(--color-cobalt); border-color: var(--color-cobalt); }
+  /* monitor tiers: pills are fixed-px so they need their own bump (placed
+     after the base rules so the cascade actually applies them) */
+  @media (min-width: 1800px) {
+    .shader-pick button { font-size: 14px; padding: 8px 15px; }
+    .shader-pick > span { font-size: 12.5px; }
+  }
+  @media (min-width: 2300px) {
+    .shader-pick button { font-size: 15.5px; padding: 9px 17px; }
+    .shader-pick > span { font-size: 13.5px; }
+  }
+
+  /* the accent line of the headline carries the highlight colour statically */
+  .kinetic .kw-accent, .kinetic-line .kw-accent { color: var(--color-cobalt-deep); }
+
+  /* ── kinetic type: each letter lifts + lights toward the cursor (hyperlunatic-style wave).
+     Applied to the hero headline (.kinetic .line-i) AND select section headings (.kinetic-line). ── */
+  /* words are wrapped in .kw so a line never breaks mid-word (fixes "und/erneath") */
+  .kinetic .kw, .kinetic-line .kw { white-space: nowrap; }
+  .kinetic .ch, .kinetic-line .ch { display: inline-block; transform: translateY(calc(var(--w, 0) * -0.08em)) scale(calc(1 + var(--w, 0) * 0.04)); color: color-mix(in oklab, currentColor, var(--color-cobalt) calc(var(--w, 0) * 55%)); transition: transform .4s cubic-bezier(.165, .84, .44, 1), color .35s ease; will-change: transform; }
+  @media (prefers-reduced-motion: reduce) { .kinetic .ch, .kinetic-line .ch { transform: none !important; color: inherit !important; transition: none !important; } }
+
+  /* ── scroll-velocity skew on big headings (driven by Lenis velocity → --vskew) ── */
+  .velocity-type { transform: skewY(var(--vskew, 0deg)); transition: transform .3s ease-out; transform-origin: left center; will-change: transform; }
+  @media (prefers-reduced-motion: reduce) { .velocity-type { transform: none !important; } }
+
+  /* ── contact CTA: the one full accent block per page (carries the identity colour).
+     Textured like the rest of the system — faint drawing grid + light entering
+     top-left + film grain — a blueprint surface, not a flat rectangle. ── */
+  .cta-block {
+    position: relative; overflow: hidden;
+    background:
+      radial-gradient(120% 140% at 10% -12%, rgba(255, 255, 255, .17), transparent 52%),
+      linear-gradient(rgba(255, 255, 255, .05) 1px, transparent 1px) 0 0 / 26px 26px,
+      linear-gradient(90deg, rgba(255, 255, 255, .05) 1px, transparent 1px) 0 0 / 26px 26px,
+      var(--color-cobalt);
+    color: var(--color-on-accent); border-radius: 22px; padding: clamp(2rem, 4.5vw, 3.2rem);
+  }
+  .cta-block::before {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+    background-size: 160px 160px; mix-blend-mode: overlay; opacity: .45;
+  }
+  .cta-block > * { position: relative; }
+  .cta-link { color: var(--color-on-accent); opacity: .82; transition: opacity .2s ease; }
+  .cta-link:hover { opacity: 1; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1.5px; }
+  .cta-grid { display: grid; gap: 2rem; }
+  @media (min-width: 768px) { .cta-grid { grid-template-columns: 1.5fr 1fr; gap: 3rem; align-items: center; } }
+  .cta-links { display: flex; flex-direction: column; gap: .7rem; font-family: var(--font-mono); font-size: .95rem; }
+  .copy-email { transition: color .2s ease, opacity .2s ease; }
+  .copy-email.is-copied { opacity: 1; color: #fff; }
+  @media (min-width: 768px) { .cta-links { align-items: flex-end; text-align: right; } }
+
+}
+
+/* LIGHT MODE — warm "Paper" twin, toggled via the nav sun/moon → [data-mode="light"]. */
+html[data-mode="light"] {
+  /* warm "Paper" light mode (Brian's pick) — toned-down cream ground, warm ink, deep-cobalt accent */
+  --color-canvas: #ece7dc; --color-card: #f5f0e7; --color-ink: #1a1714; --color-muted: #6f675c;
+  --color-faint: #a89f90; --color-line: #ddd6c8;
+  --color-cobalt: #4c6fa5;       /* the "Paper" blue — a muted steel-blue on cream (Brian's pick) */
+  --color-cobalt-deep: #3a577f;  /* deeper — accent text on paper */
+  --color-on-accent: #f5f0e7;
+}
+
+
+/* design switch chip (new ↔ classic) — the one addition to the frozen classic tree */
+.dchip { position: fixed; right: 14px; bottom: 14px; z-index: 50; display: flex; align-items: center; gap: 6px; padding: 6px 10px; font-family: var(--font-mono); font-size: 12px; color: var(--color-muted); background: color-mix(in oklab, var(--color-canvas) 92%, transparent); border: 1px solid var(--color-line); border-radius: 6px; -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+.dchip__opt { color: var(--color-muted); }
+.dchip__opt:hover { color: var(--color-ink); }
+.dchip__opt[aria-current="true"] { color: var(--color-ink); font-weight: 700; }
+.dchip__sep { color: var(--color-line); }
+@media (max-width: 639px) { .dchip { right: 10px; bottom: 10px; } }
+
+/* dev-only design switcher (palette / type / cursor / thumb) — remove once locked */
+
+/* ── unlayered on purpose: must outrank Tailwind's layered utilities ──
+   work grid goes three-up on large desktops (pairs with the root-font scale-up) */
+@media (min-width: 1800px) {
+  #grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* ── mobile-only hero fit (≤767px; desktop untouched). Unlayered so it wins
+   over Tailwind utility classes. One clean screen: tighter display type,
+   readable lede, pills tucked at the bottom. ── */
+@media (max-width: 767px) {
+  /* one clean first screen: full small-viewport height minus the sticky
+     header (h-16 + 1px border). With the shader pills hidden, the statement
+     is vertically centered (slightly high of true center) over the field —
+     text stays left-aligned, that's the site's voice. */
+  /* symmetric padding + centered alignment = equal empty space above and
+     below the statement on every phone (the container spans the full area
+     under the sticky header, so flex-center lands at true visual center) */
+  .hero { min-height: calc(100svh - 4rem - 1px); align-items: center; padding-top: 2rem; padding-bottom: 2rem; }
+  /* the header already says "Brian Lee." — drop the name from the kicker so
+     it reads as ONE clean line (role · city) instead of two wrapped ones */
+  .hero-spec > span:first-child { display: none; }
+  .hero-spec { font-size: 11px; letter-spacing: .08em; }
+  .hero-h1 { font-size: clamp(2.05rem, 8.4vw, 2.6rem); line-height: 1.02; margin-top: 1.1rem; }
+  .hero-wall p { font-size: 1rem; line-height: 1.62; max-width: 40ch; margin-top: 1.4rem; }
+  .shader-pick { display: none; } /* mode switcher is a desktop toy — hide on phones */
+}
+/* small phones (SE-class): a notch smaller so the headline keeps its 3-line flow */
+@media (max-width: 379px) {
+  .hero-h1 { font-size: clamp(1.85rem, 8vw, 2.05rem); }
+}
+/* tablets (portrait iPad band): trim the display size just enough that
+   "experiences, and the" holds one line; desktop ≥1024 untouched */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero-h1 { font-size: clamp(3rem, 8vw, 4.6rem); }
+}
+/* tablets + landscape handhelds (TOUCH devices ≥768px — desktops have fine
+   pointers and are untouched at any width): equalize the hero's vertical
+   padding so the statement centers with equal space above and below,
+   same as phones. Covers iPad mini → iPad Pro 13" and landscape phones. */
+@media (pointer: coarse) and (min-width: 768px) {
+  .hero { padding-top: 5rem; padding-bottom: 5rem; }
+}
+
+/* touch devices: mobile Safari fires :focus-visible on TAPS (desktop only
+   does keyboard), which flashed the squared cobalt focus ring around tapped
+   thumbnails/images. Touch users don't keyboard-navigate — suppress there;
+   desktop keyboard focus rings are untouched. */
+@media (pointer: coarse) {
+  :focus-visible { outline: none; }
+  /* mobile GPU quirk: when the tapped thumbnail's filter/scale transition
+     promotes the image to its own layer, WebKit momentarily DROPS the
+     parent's overflow+border-radius clip → the image flashes as a square.
+     Belt and braces: hardware clip-path on the frame AND rounded corners on
+     the image itself, so nothing square can ever paint. */
+  .proj-media { clip-path: inset(0 round 14px); }
+  .proj-media :where(img) { border-radius: 14px; }
+}
+
+/* landscape handhelds (touch + short viewport): the portrait sizes render a
+   giant cropped headline sideways — compact the intro so it still lands as
+   one composed screen. Desktop windows (fine pointer) are never affected. */
+@media (pointer: coarse) and (max-height: 520px) {
+  .hero { min-height: calc(100svh - 4rem - 1px); align-items: center; padding-top: 1.5rem; padding-bottom: 1.5rem; }
+  .hero-spec > span:first-child { display: none; }
+  .hero-spec { font-size: 10.5px; }
+  .hero-h1 { font-size: clamp(1.7rem, 9vh, 2.4rem); line-height: 1.03; margin-top: .9rem; }
+  .hero-wall p { font-size: .92rem; line-height: 1.5; max-width: 52ch; margin-top: 1rem; }
+  .shader-pick { display: none; }
+}
+/* landscape tablets (touch, 1024-1366 wide, sub-900 tall): trim the display
+   size so the full intro fits the shorter viewport */
+@media (pointer: coarse) and (min-height: 521px) and (max-height: 900px) and (min-width: 1024px) {
+  .hero { min-height: calc(100svh - 4rem - 1px); padding-top: 3rem; padding-bottom: 3rem; }
+  .hero-h1 { font-size: clamp(2.6rem, 9vh, 5.2rem); }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   polished: the original design, with these differences.
+   Unlayered on purpose, so it wins over the @layer rules above.
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* no grain anywhere: the noise textures never sat right on the field */
+.proj-media::after { background: linear-gradient(to top, color-mix(in oklab, var(--color-canvas) 78%, transparent) 0%, transparent 42%); opacity: .5; mix-blend-mode: normal; }
+.proj:hover .proj-media::after { opacity: .25; }
+.cta-block::before { display: none; }
+
+/* a notch larger for reading */
+body { font-size: 17px; }
+.proj-blurb { font-size: 1rem; }
+.about-body { font-size: 1.02rem; }
+
+/* tags: squared, outlined labels — not pills, not body text */
+.tag { height: 24px; padding: 0 .5rem; font-size: 11.5px; letter-spacing: .04em; text-transform: uppercase; border-radius: 3px; border-color: color-mix(in oklab, var(--color-line) 60%, var(--color-muted)); }
+.tag-row { gap: .4rem; }
+.proj-cat { height: 22px; padding: 0 .5rem; font-size: 11px; letter-spacing: .04em; border-radius: 3px; }
+
+/* the audience switch is the filter row, with no label; reordering the cards must not move the page */
+#filters { gap: .5rem; }
+#grid { overflow-anchor: none; }
+
+/* ── intro styles: name (default) · credit · spec ── */
+.intro { display: none; }
+html:not([data-intro]) .intro--name, html[data-intro="name"] .intro--name, html[data-intro="spec"] .intro--spec { display: flex; flex-direction: column; align-items: center; text-align: center; }
+html[data-intro="credit"] .intro--credit { display: block; }
+html:not([data-intro]) .hero-shade, html[data-intro="name"] .hero-shade, html[data-intro="spec"] .hero-shade { background: radial-gradient(55% 55% at 50% 52%, color-mix(in oklab, var(--color-canvas) 72%, transparent), transparent 72%), linear-gradient(to top, var(--color-canvas) 2%, transparent 34%); }
+html[data-intro="credit"] .hero-shade { background: linear-gradient(to top, var(--color-canvas) 4%, color-mix(in oklab, var(--color-canvas) 70%, transparent) 40%, transparent 70%); }
+/* the name is set in the logo face; the field shows through the letters */
+.hero-name { font-family: var(--font-display); font-weight: 700; font-size: clamp(3.4rem, 11vw, 9rem); line-height: .92; letter-spacing: -0.045em; color: #fff; mix-blend-mode: difference; }
+.hero-sub { margin-top: 1.5rem; max-width: 46ch; font-size: 1.15rem; line-height: 1.5; color: var(--color-muted); text-wrap: balance; }
+.hero-actions { margin-top: 1.8rem; display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem 1rem; }
+.intro--credit { position: absolute; z-index: 1; left: clamp(1.5rem, 4vw, 3rem); bottom: clamp(5.5rem, 9vw, 7rem); max-width: 44ch; }
+.credit__name { font-family: var(--font-display); font-weight: 700; font-size: clamp(2.2rem, 3.6vw, 3rem); letter-spacing: -0.045em; line-height: 1; color: var(--color-ink); }
+.intro--credit .hero-sub { margin-top: .9rem; font-size: 1.05rem; text-wrap: pretty; }
+.intro--credit .hero-actions { justify-content: flex-start; margin-top: 1.3rem; }
+html[data-intro="spec"] .intro--spec { position: static; }
+.spec { position: absolute; z-index: 2; top: 1.4rem; display: grid; gap: .25rem; font-family: var(--font-mono); font-size: 12px; line-height: 1.45; color: var(--color-faint); text-align: left; }
+.spec b { font-weight: 500; color: var(--color-muted); }
+.spec--tl { left: clamp(1.25rem, 4vw, 3rem); }
+.spec--tr { right: clamp(1.25rem, 4vw, 3rem); text-align: right; }
+.intro-pick { position: absolute; z-index: 2; left: clamp(1.25rem, 4vw, 3rem); bottom: clamp(1.1rem, 3vw, 2rem); display: flex; align-items: center; gap: 6px; font-family: var(--font-mono); }
+.intro-pick > span { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--color-faint); margin-right: 2px; }
+.intro-pick button { font-family: var(--font-mono); font-size: 12.5px; line-height: 1; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--color-line); background: color-mix(in oklab, var(--color-card) 45%, transparent); color: var(--color-muted); cursor: pointer; -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); transition: color .2s ease, border-color .2s ease, background-color .2s ease; }
+.intro-pick button:hover { color: var(--color-ink); border-color: var(--color-ink); }
+.intro-pick button[aria-pressed="true"] { color: var(--color-on-accent); background: var(--color-cobalt); border-color: var(--color-cobalt); }
+@media (min-width: 1800px) { .intro-pick button { font-size: 14px; padding: 8px 15px; } .intro-pick > span { font-size: 12.5px; } }
+@media (max-width: 767px) {
+  .hero-name { font-size: clamp(2.8rem, 15vw, 4rem); }
+  .hero-sub { font-size: 1rem; }
+  .hero-actions { margin-top: 1.4rem; }
+  .intro--credit { bottom: 2.5rem; max-width: 34ch; }
+  .credit__name { font-size: 2.1rem; }
+  .spec, .intro-pick { display: none; }
+}
+@media (pointer: coarse) and (max-height: 520px) { .intro-pick, .spec { display: none; } .hero-name { font-size: clamp(2rem, 9vh, 2.6rem); } }
+
+/* ── about: a shorter header; the description or a company brief, in one grid cell so the page never moves ── */
+.about-statement { max-width: 20ch; }
+.about-swap { display: grid; margin-top: 1.5rem; }
+.about-swap > * { grid-area: 1 / 1; }
+.about-swap .about-body:first-child { margin-top: 0; }
+.about-default { transition: opacity .22s ease .05s, visibility 0s; }
+.about-default.is-off { opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .16s ease, visibility 0s linear .16s; }
+.about-brief { opacity: 0; visibility: hidden; pointer-events: none; transform: translateY(6px); transition: opacity .2s ease, transform .2s ease, visibility 0s linear .2s; }
+.about-brief.is-on { opacity: 1; visibility: visible; pointer-events: auto; transform: none; transition: opacity .24s ease .08s, transform .3s cubic-bezier(.22, 1, .36, 1) .08s, visibility 0s; }
+.about-brief__head { display: flex; align-items: center; gap: .9rem; }
+.about-brief__head img { width: 40px; height: 40px; border-radius: 10px; background: #fff; padding: 5px; object-fit: contain; flex: none; box-shadow: 0 0 0 1px color-mix(in oklab, var(--color-cobalt) 20%, transparent); }
+.about-brief__title { font-family: var(--font-display); font-weight: 700; font-size: 1.35rem; letter-spacing: -0.035em; }
+.about-brief__sub { font-family: var(--font-mono); font-size: 11.5px; letter-spacing: .04em; text-transform: uppercase; color: var(--color-faint); margin-top: .3rem; }
+.about-brief__line { margin-top: 1.1rem; color: var(--color-ink); font-size: 1.05rem; line-height: 1.55; max-width: 56ch; text-wrap: pretty; }
+.about-brief__points { list-style: none; margin: 1rem 0 0; padding: 0; display: grid; gap: .5rem; max-width: 56ch; }
+.about-brief__points li { position: relative; padding-left: 1.1rem; color: var(--color-muted); font-size: 1rem; line-height: 1.5; }
+.about-brief__points li::before { content: "▸"; position: absolute; left: 0; color: var(--color-cobalt-deep); }
+.about-brief__more { display: inline-block; margin-top: 1.2rem; font-family: var(--font-mono); font-size: 12.5px; letter-spacing: .04em; color: var(--color-cobalt-deep); }
+.about-brief__more:hover { text-decoration: underline; text-underline-offset: 4px; }
+.about-card a.is-hot { color: var(--color-cobalt-deep); }
+@media (hover: none), (max-width: 899px) { .about-brief { display: none; } }
+
+/* ── page transitions: cross-document View Transitions, no router. A card's
+   thumbnail and title morph into the case-study hero; the header stays put;
+   browsers without support simply load the page. ── */
+@view-transition { navigation: auto; }
+::view-transition-group(*) { animation-duration: .45s; animation-timing-function: cubic-bezier(.22, 1, .36, 1); }
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: .22s; }
+::view-transition-old(site-header), ::view-transition-new(site-header) { animation: none; mix-blend-mode: normal; }
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
+}
+
+/* ── type, sizes, tags, corners ──
+   The type set is rigid: Mona Sans for display and body, Geist Mono for
+   labels, dates, tags and the HUD. Nothing else is loaded. */
+
+/* reading sizes: the original 16px base; descriptions one notch above the old .94rem */
+body { font-size: 16px; }
+.proj-blurb { font-size: 1rem; }
+.about-body { font-size: 1rem; }
+.hero-sub { font-size: 1.1rem; }
+
+/* the name keeps its cobalt dot in every intro */
+.hero-dot { display: inline-block; color: var(--color-cobalt-deep); }
+
+/* tags: a mono spec line, not boxes */
+.tag { height: auto; padding: 0; border: 0; border-radius: 0; font-family: var(--font-mono); font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--color-muted); white-space: nowrap; }
+.tag:not(:last-child)::after { content: "/"; margin-left: .7rem; color: var(--color-faint); }
+.tag-row { gap: .3rem .7rem; }
+.proj-cat { height: 22px; padding: 0 .5rem; border-radius: 4px; font-size: 11px; letter-spacing: .08em; }
+
+/* buttons and chips: 6px corners, not ovals */
+.btn { border-radius: 6px; padding: .75rem 1.15rem; }
+.btn-ghost { border-color: color-mix(in oklab, var(--color-ink) 22%, transparent); }
+.chip, .load-more { border-radius: 6px; }
+.shader-pick button, .intro-pick button { border-radius: 6px; }
+
+/* the name's full stop is the wordmark's cobalt dot: the last letter of the split name */
+.hero-name .kw:last-child .ch:last-child, .credit__name .kw:last-child .ch:last-child { color: var(--color-cobalt-deep); }
+/* light mode: solid ink, no blend (white-on-cream would wash out) */
+html[data-mode="light"] .hero-name { color: var(--color-ink); mix-blend-mode: normal; }
+
+/* the subtitle holds one line on desktop and wraps naturally on phones */
+.hero-sub { max-width: 64ch; }
+
+/* the About statement is one short line */
+.about-statement { max-width: none; }
+@media (min-width: 640px) { .about-statement { white-space: nowrap; } }

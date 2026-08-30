@@ -1,0 +1,12 @@
+---
+// /work/[slug] — case studies and experience pages in the polished design.
+import Work from "../../retouch/pages/Work.astro";
+import { projects } from "../../data/projects";
+
+export function getStaticPaths() {
+  return projects.map((p) => ({ params: { slug: p.slug }, props: { project: p } }));
+}
+const { project } = Astro.props;
+---
+
+<Work project={project} />

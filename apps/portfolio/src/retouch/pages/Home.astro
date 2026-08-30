@@ -1,0 +1,423 @@
+---
+// The polished landing page (served at / and the role views). The original
+// design, with four changes: the intro (three switchable styles, the logo
+// typeface), the audience switch that reorders the grid in place, a shorter
+// About whose text swaps to an experience brief when a company on the card
+// is hovered, and the tag treatment.
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ShaderField from "../../components/ShaderField.astro";
+import ProfileCard from "../../components/ProfileCard.astro";
+import ExperienceBriefs from "../components/ExperienceBriefs.astro";
+import { Image } from "astro:assets";
+import { catLabels } from "../../data/projects";
+import { views, getView, projectsForView, experiencesForView, type ViewId } from "../../data/views";
+
+interface Props { view: ViewId }
+const { view: id } = Astro.props;
+const view = getView(id);
+const projects = projectsForView(id);
+const exp = experiencesForView("all");
+// what the in-page audience switch needs: order and résumé
+const viewCfg = views.map((v) => ({ id: v.id, path: v.path, order: v.order, resume: v.resume }));
+---
+
+<BaseLayout title={view.title} description={view.description}>
+  <!-- ───────────── Nav ───────────── -->
+  <header
+    class="sticky top-0 z-40 border-b border-line"
+    style="background: color-mix(in oklab, var(--color-canvas) 82%, transparent); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); view-transition-name: site-header;"
+  >
+    <div class="wrap flex h-16 items-center justify-between">
+      <a href="#top" class="font-display text-lg font-bold tracking-tight">
+        Brian&nbsp;Lee<span class="text-cobalt">.</span>
+      </a>
+      <div class="flex items-center gap-4 sm:gap-6 text-sm">
+        <a href="#work" class="nav-link hidden sm:inline">Work</a>
+        <a href="#about" class="nav-link hidden sm:inline">About</a>
+        <a href="#contact" class="nav-link hidden sm:inline">Contact</a>
+        <!-- Art sits last: it's the side room, not the main line of the site -->
+        <a href="/art" class="nav-link hidden sm:inline">Art</a>
+        <a href={view.resume} class="btn btn-ghost !px-4 !py-2 text-xs hidden sm:inline-flex" data-magnetic="0.35" target="_blank" rel="noopener" data-resume>Résumé</a>
+        <button id="mode-toggle" class="mode-toggle" type="button" aria-label="Toggle light and dark mode" data-cursor="Theme">
+          <svg class="ico ico-sun" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5 5l1.7 1.7M17.3 17.3 19 19M19 5l-1.7 1.7M6.7 17.3 5 19" stroke-linecap="round"/></svg>
+          <svg class="ico ico-moon" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" stroke-linejoin="round" stroke-linecap="round"/></svg>
+        </button>
+        <button id="nav-burger" class="nav-burger sm:hidden" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu" data-cursor="Menu">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav id="nav-menu" class="nav-menu sm:hidden" hidden aria-label="Mobile navigation">
+      <a href="#work" class="nav-menu__link">Work</a>
+      <a href="#about" class="nav-menu__link">About</a>
+      <a href="#contact" class="nav-menu__link">Contact</a>
+      <a href="/art" class="nav-menu__link">Art</a>
+      <a href={view.resume} class="nav-menu__link" data-resume>Résumé ↓</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- ───────────── Hero (full-bleed shader) ───────────── -->
+    <section class="hero reveal relative flex min-h-[82vh] md:min-h-[88vh] items-start md:items-center overflow-hidden pb-16 md:pb-20 pt-12 md:pt-28">
+      <ShaderField variant="bleed" />
+      <div class="hero-shade"></div>
+      <!-- intro styles: all rendered, one shown by html[data-intro]; the switch bottom-left is remembered -->
+      <div class="hero-wall w-full intro intro--name" data-intro="name">
+        <h1 class="kinetic hero-name"><span class="line"><span class="line-i" style="--d:.1s">Brian Lee.</span></span></h1>
+        <div class="line"><p class="hero-sub" style="--d:.26s">Graphics Engineer &amp; Product Designer at Penn</p></div>
+        <div class="line"><div class="hero-actions" style="--d:.38s">
+          <a href="#work" class="btn btn-primary" data-magnetic="0.4">See work</a>
+          <a href="#contact" class="btn btn-ghost" data-magnetic="0.4">Get in touch</a>
+        </div></div>
+      </div>
+      <div class="intro intro--credit" data-intro="credit">
+        <p class="kinetic credit__name"><span class="line-i">Brian Lee.</span></p>
+        <p class="hero-sub">Graphics Engineer &amp; Product Designer at Penn</p>
+        <div class="hero-actions">
+          <a href="#work" class="btn btn-primary" data-magnetic="0.4">See work</a>
+          <a href="#contact" class="btn btn-ghost" data-magnetic="0.4">Get in touch</a>
+        </div>
+      </div>
+      <div class="hero-wall w-full intro intro--spec" data-intro="spec">
+        <h1 class="kinetic hero-name"><span class="line"><span class="line-i" style="--d:.1s">Brian Lee.</span></span></h1>
+        <div class="line"><p class="hero-sub" style="--d:.26s">Graphics Engineer &amp; Product Designer at Penn</p></div>
+        <div class="line"><div class="hero-actions" style="--d:.38s">
+          <a href="#work" class="btn btn-primary" data-magnetic="0.4">See work</a>
+          <a href="#contact" class="btn btn-ghost" data-magnetic="0.4">Get in touch</a>
+        </div></div>
+        <p class="spec spec--tl"><span>field.glsl</span><span>mode <b data-spec-mode>Field</b> · <b data-spec-tier>··</b> quality</span><span>v3 · 2026.08</span></p>
+        <p class="spec spec--tr"><span><b data-spec-fps>··</b> fps · <b data-spec-ms>··</b> ms</span><span data-spec-gpu>webgl</span><span>Philadelphia · <span data-clock>··:··</span></span></p>
+      </div>
+      <div class="intro-pick" role="group" aria-label="Intro style">
+        <span>intro</span>
+        <button type="button" data-intro-mode="name" aria-pressed="true">Name</button>
+        <button type="button" data-intro-mode="credit" aria-pressed="false">Credit</button>
+        <button type="button" data-intro-mode="spec" aria-pressed="false">Spec</button>
+      </div>
+      <div class="shader-pick">
+        <span>shader</span>
+        <button type="button" data-shader-mode="0" aria-pressed="true">Field</button>
+        <button type="button" data-shader-mode="1" aria-pressed="false">Flow</button>
+        <button type="button" data-shader-mode="2" aria-pressed="false">Dots</button>
+        <button type="button" data-shader-mode="3" aria-pressed="false">Water</button>
+        <button type="button" data-shader-mode="4" aria-pressed="false">ASCII</button>
+      </div>
+    </section>
+
+    <!-- ───────────── Work ───────────── -->
+    <section id="work" class="wrap border-t border-line py-20 md:py-28">
+      <div class="reveal">
+        <p class="kicker"><span class="num">(01)</span>Selected Work</p>
+        <h2 class="velocity-type kinetic-line mt-5 text-[clamp(1.9rem,4vw,3rem)] font-bold">Things I've built.</h2>
+      </div>
+
+      <!-- audience switch: /, /graphics, /engineering, /design. With JS it reorders the grid in place
+           and updates the URL; without JS it is a plain link to that view. -->
+      <div class="reveal mt-9 flex flex-wrap gap-2.5" id="filters" role="group" aria-label="Audience">
+        {views.map((v) => (
+          <a href={v.path} class="chip" data-view={v.id} aria-pressed={v.id === id ? "true" : "false"}>{v.label}</a>
+        ))}
+      </div>
+
+      <div class="mt-12 grid gap-x-8 gap-y-14 sm:grid-cols-2" id="grid">
+        {
+          projects.map((p, i) => (
+            <article class="reveal" data-slug={p.slug} data-categories={p.cats.join(" ")} style={`--d:${(i % 2) * 0.08}s`}>
+              <a href={`/work/${p.slug}`} class="proj">
+                <div class="proj-media" data-cursor="View" data-cursor-keep style={`view-transition-name: thumb-${p.slug}`}>
+                  <div class="proj-cats">{p.cats.map((c) => <span class="proj-cat">{catLabels[c]}</span>)}</div>
+                  {(p.thumb ?? p.img)
+                    ? <Image src={(p.thumb ?? p.img)!} alt={p.alt} width={1000} style={p.thumbPos ? `object-position:${p.thumbPos}` : undefined} />
+                    : <div class="proj-cover-live">{p.title}</div>}
+                </div>
+                <div class="proj-head">
+                  <h3 class="proj-title" style={`view-transition-name: title-${p.slug}`}>{p.title}</h3>
+                  <span class="proj-no">{p.date}</span>
+                </div>
+                <p class="proj-blurb">{p.blurb}</p>
+                <ul class="tag-row mt-4">
+                  {p.tech.map((t) => (
+                    <li class="tag">{t}</li>
+                  ))}
+                </ul>
+              </a>
+            </article>
+          ))
+        }
+      </div>
+
+      <div class="reveal mt-14 flex flex-wrap items-center justify-center gap-3">
+        <button id="load-more" type="button" class="chip load-more" hidden aria-controls="grid" data-cursor="More" data-magnetic="0.2">Show more</button>
+        <button id="load-less" type="button" class="chip load-more" hidden aria-controls="grid" data-cursor="Less" data-magnetic="0.2">Show less</button>
+        <p id="grid-status" class="sr-only" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- ───────────── About ───────────── -->
+    <section id="about" class="wrap border-t border-line py-20 md:py-28">
+      <p class="kicker reveal"><span class="num">(02)</span>About</p>
+      <div class="about-grid reveal mt-7">
+        <div>
+          <p class="about-statement velocity-type kinetic-line">
+            Half designer, half engineer.
+          </p>
+          <!-- the description, or the brief of the company being hovered on the card; both share one grid cell so the page never moves -->
+          <div class="about-swap" data-about-swap>
+            <div class="about-default">
+              <p class="about-body">
+                I'm Brian. I got here through games and drawing, and I still like
+                the same thing I liked then: making something on a screen feel
+                alive, whether that's a shader, a small engine, or an interface.
+                I'm at Penn for CS&nbsp;+&nbsp;Design and staying for the Computer
+                Graphics&nbsp;&amp; Game Technology master's.
+              </p>
+              <p class="about-body mt-4">
+                I spent two years between semesters as an interpreter in the
+                Korean army. Mostly it taught me to stay calm in a room where
+                nobody agrees, and to say things plainly.
+              </p>
+              <p class="about-body mt-4">
+                Off the computer: volleyball, soccer, and Pokémon TCG (the card
+                here is that habit leaking into the site). Lately I've been on
+                League (ARAM with augments), TFT, Overwatch&nbsp;2, and Pragmata.
+              </p>
+            </div>
+            <ExperienceBriefs items={exp} />
+          </div>
+        </div>
+        <div id="card" class="about-card reveal scroll-mt-24"><ProfileCard /></div>
+      </div>
+    </section>
+
+    <!-- ───────────── Contact / footer ───────────── -->
+    <footer id="contact" class="wrap border-t border-line py-20 md:py-28">
+      <p class="kicker reveal"><span class="num">(03)</span>Contact</p>
+      <div class="cta-block reveal mt-6">
+        <div class="cta-grid">
+          <div>
+            <h2 class="velocity-type text-[clamp(2rem,5vw,3.4rem)] font-bold leading-[1.05]">
+              Let's work together.
+            </h2>
+            <p class="mt-4 max-w-[42ch] text-lg leading-relaxed" style="opacity:.85">
+              I'm open to new opportunities across design and engineering, and
+              always happy to talk graphics, games, or product.
+            </p>
+          </div>
+          <div class="cta-links">
+            <a href="mailto:leebwj@sas.upenn.edu" class="cta-link copy-email" data-email="leebwj@sas.upenn.edu">leebwj@sas.upenn.edu</a>
+            <a href="https://www.linkedin.com/in/brian-lee-0b706b225/" target="_blank" rel="noopener" data-cursor="LinkedIn" class="cta-link">LinkedIn ↗</a>
+            <a href="https://github.com/leebwj" target="_blank" rel="noopener" data-cursor="GitHub" class="cta-link">GitHub ↗</a>
+            <a href="/art" data-cursor="Art" class="cta-link">Art ↗</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- intro style switch: sets html[data-intro], remembered across visits -->
+  <script is:inline>
+    (() => {
+      const pick = document.querySelector(".intro-pick");
+      if (!pick) return;
+      const root = document.documentElement;
+      const btns = pick.querySelectorAll("[data-intro-mode]");
+      const sync = () => { const cur = root.getAttribute("data-intro") || "name"; btns.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.introMode === cur))); };
+      btns.forEach((b) => b.addEventListener("click", () => {
+        root.setAttribute("data-intro", b.dataset.introMode);
+        try { localStorage.setItem("bl-intro", b.dataset.introMode); } catch (e) {}
+        sync();
+        document.querySelector(".hero")?.classList.add("lines-open");
+      }));
+      sync();
+
+      // live details for the Spec style: the running shader's frame rate, its
+      // active mode, the GPU it is on, and the local time
+      const fps = document.querySelector("[data-spec-fps]"), ms = document.querySelector("[data-spec-ms]"), tierEl = document.querySelector("[data-spec-tier]");
+      addEventListener("shaderstats", (e) => {
+        if (fps) fps.textContent = String(Math.round(e.detail.fps));
+        if (ms) ms.textContent = e.detail.ms.toFixed(1);
+        if (tierEl && e.detail.tier) tierEl.textContent = ({ high: "high", mid: "standard", low: "standard", software: "software" })[e.detail.tier] || "standard";
+      });
+      const modeEl = document.querySelector("[data-spec-mode]");
+      const names = ["Field", "Flow", "Dots", "Water", "ASCII"];
+      addEventListener("shadermode", (e) => { if (modeEl) modeEl.textContent = names[e.detail] || "Field"; });
+      // the visitor's own GPU, read from the browser and trimmed to a name:
+      // "ANGLE (NVIDIA, NVIDIA GeForce RTX 3070 (0x…) Direct3D11 vs_5_0 ps_5_0, D3D11)" → "NVIDIA GeForce RTX 3070"
+      // "ANGLE (Apple, ANGLE Metal Renderer: Apple M2, Unspecified Version)" → "Apple M2"
+      // "ANGLE (Intel, Intel(R) Iris(TM) Plus Graphics, OpenGL 4.1)" → "Intel Iris Plus Graphics"
+      const gpu = document.querySelector("[data-spec-gpu]");
+      if (gpu) try {
+        const c = document.createElement("canvas"); const gl = c.getContext("webgl");
+        const dbg = gl && gl.getExtension("WEBGL_debug_renderer_info");
+        const raw = dbg ? String(gl.getParameter(dbg.UNMASKED_RENDERER_WEBGL)) : "";
+        let r = raw;
+        if (/swiftshader|llvmpipe|software/i.test(raw)) r = "software renderer";
+        else {
+          const m = r.match(/^ANGLE \((.*)\)$/); if (m) r = m[1];
+          const parts = r.split(",").map((s) => s.trim());
+          r = parts.length > 1 ? parts[1] : parts[0];
+          r = r.replace(/^ANGLE Metal Renderer:\s*/i, "").replace(/\((0x[0-9a-f]+|R|TM|C)\)/gi, "").replace(/\s*\([^()]*\)\s*/g, " ")
+               .replace(/\b(Direct3D\d*|D3D\d*|vs_\d_\d|ps_\d_\d|OpenGL Engine|Vulkan.*|Mesa|\/PCIe\/SSE2)\b/gi, "")
+               .replace(/[()]/g, "").replace(/\s{2,}/g, " ").trim();
+        }
+        gpu.textContent = r ? (r.length > 40 ? r.slice(0, 39) + "…" : r) : "GPU masked by the browser";
+      } catch (e) {}
+      const clocks = document.querySelectorAll("[data-clock]");
+      if (clocks.length) {
+        const tick = () => { const s = new Date().toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", timeZone: "America/New_York" }); clocks.forEach((c) => (c.textContent = s)); };
+        tick(); setInterval(tick, 15000);
+      }
+    })();
+  </script>
+
+  <!-- shader mode switch: dispatch to ShaderField (it crossfades) -->
+  <script is:inline>
+    (() => {
+      const pick = document.querySelector(".shader-pick");
+      if (!pick) return;
+      const btns = pick.querySelectorAll("[data-shader-mode]");
+      btns.forEach((b) =>
+        b.addEventListener("click", () => {
+          const m = parseInt(b.getAttribute("data-shader-mode")) || 0;
+          btns.forEach((x) => x.setAttribute("aria-pressed", x === b ? "true" : "false"));
+          dispatchEvent(new CustomEvent("shadermode", { detail: m }));
+        })
+      );
+    })();
+  </script>
+
+  <!-- work grid: audience switch (reorders in place, no reload) + show-more that fills whole rows -->
+  <script is:inline define:vars={{ viewCfg }}>
+    (() => {
+      const grid = document.getElementById("grid");
+      if (!grid) return;
+      const cards = () => [...grid.querySelectorAll("article[data-slug]")];
+      const cols = () => (getComputedStyle(grid).gridTemplateColumns.split(" ").filter(Boolean).length || 1);
+      const rows = 2;                                   // the first batch fills this many rows
+      const moreBtn = document.querySelector("#load-more");
+      const lessBtn = document.querySelector("#load-less");
+      const status = document.querySelector("#grid-status");
+      const chips = [...document.querySelectorAll("#filters [data-view]")];
+      let limit = cols() * rows;
+      let first = true;
+
+      const apply = () => {
+        const list = cards();
+        const shown = Math.min(limit, list.length);
+        list.forEach((card, i) => {
+          const visible = i < limit;
+          card.toggleAttribute("hidden", !visible);
+          if (visible && !first) card.classList.add("is-in");   // interaction → show immediately
+        });
+        if (moreBtn) { const rest = list.length - shown; moreBtn.toggleAttribute("hidden", rest <= 0); moreBtn.textContent = `Show more (${rest})`; }
+        if (lessBtn) lessBtn.toggleAttribute("hidden", shown <= cols() * rows);
+        if (status) status.textContent = `Showing ${shown} of ${list.length} projects`;
+      };
+
+      // switching audience: reorder the cards, swap the focus phrase + résumé, update the URL — no reload, no scroll
+      chips.forEach((chip) => chip.addEventListener("click", (e) => {
+        const cfg = viewCfg.find((v) => v.id === chip.dataset.view);
+        if (!cfg) return;
+        e.preventDefault();
+        const all = cards();
+        const ordered = cfg.order.map((s) => all.find((c) => c.dataset.slug === s)).filter(Boolean);
+        const rest = all.filter((c) => !ordered.includes(c));
+        [...ordered, ...rest].forEach((c) => grid.appendChild(c));
+        chips.forEach((c) => c.setAttribute("aria-pressed", String(c === chip)));
+        document.querySelectorAll("[data-resume]").forEach((a) => { a.href = cfg.resume; });
+        try { history.replaceState(null, "", cfg.path); } catch (err) {}
+        limit = cols() * rows;
+        apply();
+      }));
+
+      if (moreBtn) moreBtn.addEventListener("click", () => {
+        const firstNew = cards().find((c) => c.hasAttribute("hidden"));
+        limit += cols() * rows;
+        apply();
+        const link = firstNew && firstNew.querySelector("a");
+        if (link) link.focus({ preventScroll: true });   // land keyboard users on new content
+      });
+      if (lessBtn) lessBtn.addEventListener("click", () => {
+        limit = cols() * rows;
+        apply();
+        document.getElementById("work")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+
+      apply();
+      first = false;
+    })();
+  </script>
+
+  <!-- about: hovering a company on the card swaps the text for that job's brief; leaving brings the description back.
+       Both live in one grid cell, so nothing on the page moves. -->
+  <script is:inline>
+    (() => {
+      const swap = document.querySelector("[data-about-swap]");
+      if (!swap || !window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+      const def = swap.querySelector(".about-default");
+      const briefs = [...swap.querySelectorAll("[data-brief]")];
+      const links = [...document.querySelectorAll(".about-card a[href^='/work/']")];
+      const slugOf = (a) => (a.getAttribute("href") || "").split("/work/")[1]?.replace(/\/$/, "") || "";
+      let showT = null;
+      const show = (slug) => {
+        const b = briefs.find((x) => x.dataset.brief === slug);
+        if (!b) return;
+        def.classList.add("is-off");
+        briefs.forEach((x) => x.classList.toggle("is-on", x === b));
+        links.forEach((l) => l.classList.toggle("is-hot", slugOf(l) === slug));
+      };
+      // leaving a company brings the description back at once
+      const reset = () => {
+        clearTimeout(showT);
+        def.classList.remove("is-off");
+        briefs.forEach((x) => x.classList.remove("is-on"));
+        links.forEach((l) => l.classList.remove("is-hot"));
+      };
+      links.forEach((l) => {
+        // a short intent delay, so passing the pointer across the list does not flicker
+        l.addEventListener("pointerenter", () => { clearTimeout(showT); showT = setTimeout(() => show(slugOf(l)), 80); });
+        l.addEventListener("focus", () => show(slugOf(l)));
+        l.addEventListener("pointerleave", reset);
+        l.addEventListener("blur", reset);
+      });
+    })();
+  </script>
+
+  <!-- copy email on click (inline feedback — never native dialogs) -->
+  <script is:inline>
+    (() => {
+      document.querySelectorAll(".copy-email").forEach((a) => {
+        const email = a.getAttribute("data-email") || "";
+        let timer = null;
+        const restore = () => { a.textContent = email; a.classList.remove("is-copied"); };
+        a.addEventListener("click", (e) => {
+          if (!navigator.clipboard) return;            // no clipboard API → plain mailto
+          e.preventDefault();
+          navigator.clipboard.writeText(email).then(() => {
+            a.textContent = "copied ✓";
+            a.classList.add("is-copied");
+            clearTimeout(timer);
+            timer = setTimeout(restore, 1400);         // always returns to the address
+          }).catch(() => { location.href = "mailto:" + email; });
+        });
+        a.addEventListener("pointerleave", () => { if (a.classList.contains("is-copied")) { clearTimeout(timer); timer = setTimeout(restore, 500); } });
+      });
+    })();
+  </script>
+
+  <!-- mobile nav menu -->
+  <script is:inline>
+    (() => {
+      const burger = document.getElementById("nav-burger");
+      const menu = document.getElementById("nav-menu");
+      if (!burger || !menu) return;
+      const setOpen = (open) => {
+        menu.toggleAttribute("hidden", !open);
+        burger.setAttribute("aria-expanded", String(open));
+        burger.classList.toggle("is-open", open);
+      };
+      burger.addEventListener("click", () => setOpen(menu.hasAttribute("hidden")));
+      menu.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setOpen(false)));
+    })();
+  </script>
+</BaseLayout>

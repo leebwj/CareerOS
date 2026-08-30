@@ -1,0 +1,32 @@
+---
+// Hidden briefs for the About column: one per experience, derived from the
+// same data the experience pages render (role, dates, the one-liner, the
+// first three "what I worked on" points clipped to their first clause).
+// Hovering a company on the holo card swaps the About text for its brief.
+import type { Project } from "../../data/projects";
+interface Props { items: Project[] }
+const { items } = Astro.props;
+
+const highlights = (p: Project) => {
+  const list = p.blocks.find((b) => b.type === "list" && /what i/i.test(("label" in b && b.label) || ""));
+  return list && list.type === "list" ? list.items.slice(0, 3) : [];
+};
+const clip = (s: string) => {
+  const cut = s.split(/ — |: | – /)[0];
+  return cut.length > 110 ? cut.slice(0, 107).replace(/\s+\S*$/, "") + "…" : cut;
+};
+---
+
+{items.map((p) => (
+  <article class="about-brief" data-brief={p.slug}>
+    <header class="about-brief__head">
+      {p.logo && <img src={p.logo} alt="" width="40" height="40" loading="lazy" />}
+      <div>
+        <p class="about-brief__title">{p.title}</p>
+        <p class="about-brief__sub">{p.role}{p.context ? ` · ${p.context}` : ""} · {p.date}</p>
+      </div>
+    </header>
+    <p class="about-brief__line">{p.line}</p>
+    {highlights(p).length > 0 && <ul class="about-brief__points">{highlights(p).map((pt) => <li>{clip(pt)}</li>)}</ul>}
+  </article>
+))}

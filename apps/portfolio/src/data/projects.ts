@@ -4,6 +4,8 @@ import miniMinecraftImg from "../assets/work/mini-minecraft.png";
 import pennSparkImg from "../assets/work/penn-spark.png";
 import pathImg from "../assets/work/path-at-penn.png";
 import roadRogueImg from "../assets/work/road-rogue.png";
+import artOfWebImg from "../assets/work/art-of-web.png";
+import playgroundImg from "../assets/work/playground.jpg";
 import pathDashboard from "../assets/work/path-at-penn/dashboard.png";
 import pathCourse from "../assets/work/path-at-penn/course.png";
 import pathSchedule from "../assets/work/path-at-penn/schedule.png";
@@ -97,8 +99,13 @@ export interface Project {
   repoNote?: string; // e.g. private university repo — shown as a disabled affordance + note
   // grid card
   img: ImageMetadata | null;
+  thumb?: ImageMetadata; // 2026 card image where it differs from the classic one
+  thumbPos?: string; // object-position for the 3:2 crop, e.g. "left center"
   alt?: string;
   blurb: string;
+  line: string; // 2026 card one-liner, ≤ 20 words
+  who: string; // role/team in one phrase: "Solo", "Team of 3; I owned …"
+  short?: string; // ≤ 8 words, for the hero ledger
   tech: string[];
   // detail page
   featured?: { type: "image" | "video" | "embed"; src?: ImageMetadata; embed?: string; alt?: string };
@@ -125,6 +132,9 @@ export const projects: Project[] = [
     img: passengerImg,
     alt: "Passenger — a canyon rendered with an anisotropic Kuwahara painterly shader",
     blurb: "A cinematic Unreal Engine 5 short that gets a game engine to output frames you would read as oil paint. A figure walks a canyon, finds a train swallowed by roots, and picks up something that briefly opens the world backward — carried by custom HLSL shaders, including an anisotropic Kuwahara filter, over Lumen GI and hardware ray tracing.",
+    line: "A cinematic short in Unreal 5 with a hand-written anisotropic Kuwahara post-process over Lumen GI.",
+    who: "Solo",
+    short: "an Unreal 5 short with a hand-written Kuwahara shader",
     tech: ["Unreal 5", "Maya", "HLSL", "Megascans"],
     featured: { type: "video", embed: "mSnqY3R2d-E", alt: "Passenger — cinematic short" },
     metrics: [
@@ -276,6 +286,9 @@ export const projects: Project[] = [
     img: miniMinecraftImg,
     alt: "Mini Minecraft — procedurally generated terrain at dusk",
     blurb: "A 3D voxel engine written from scratch in C++/OpenGL, where everything that makes the world feel inhabited is hand-built: seven procedural biomes blended from layered Perlin/FBM noise, 3D caves, PCF shadow mapping, screen-space reflections, a day-night cycle, multithreaded chunk streaming, and an A*-pathfinding NPC ecosystem.",
+    line: "A voxel engine from scratch in C++/OpenGL: 7 procedural biomes, 3D caves, PCF shadow maps, SSR, day–night.",
+    who: "Team of 3; I owned terrain and the render pipeline",
+    short: "a voxel engine in C++/OpenGL, team of 3",
     tech: ["C++", "OpenGL", "GLSL", "Multithreading"],
     featured: { type: "video", embed: "_NExgS0mZgM", alt: "Mini Minecraft — engine demo" },
     metrics: [
@@ -376,8 +389,12 @@ export const projects: Project[] = [
     metaExtra: { label: "Output", value: "Interactive 3D portfolio" },
     links: { live: "https://leebwj.github.io/1020/portfolio/", github: "https://github.com/leebwj/ArtOfTheWeb" },
     img: null,
+    thumb: artOfWebImg,
     alt: "Art of the Web — interactive Three.js portfolio",
     blurb: "A semester's work turned into a place rather than a list: one Three.js scene where floating GLTF objects with custom physics and GSAP animation become the navigation for eight course projects, from CSS art and generative p5.js sketches to a browser game.",
+    line: "A semester of web experiments, navigated through one Three.js scene of floating objects.",
+    who: "Solo",
+    short: "web experiments inside one Three.js scene",
     tech: ["Three.js", "GSAP", "p5.js", "Vite"],
     featured: { type: "embed", embed: "https://leebwj.github.io/1020/portfolio/", alt: "Art of the Web — live site" },
     metrics: [
@@ -456,8 +473,13 @@ export const projects: Project[] = [
     metaExtra: { label: "Outcome", value: "Shipped · pennspark.org" },
     links: { live: "https://pennspark.org/", deck: "https://www.figma.com/deck/Smncuea22qlU67fbiESZaP" },
     img: pennSparkImg,
+    thumb: psHome,
+    thumbPos: "left center",
     alt: "Penn Spark — redesigned club website homepage",
     blurb: "Penn Spark's website, live at pennspark.org. Led end-to-end as project lead: wireframes and a component system in Figma, then a rebuild off an ageing Gatsby stack onto Next.js + React, with a content system the team updates itself.",
+    line: "The club's site, taken from Figma to a Next.js rebuild the team updates without an engineer. Live at pennspark.org.",
+    who: "Project lead, team of 10+",
+    short: "the club site, Figma to Next.js, live",
     tech: ["Figma", "Next.js", "React", "Tailwind"],
     featured: { type: "image", src: pennSparkImg, alt: "Penn Spark redesigned homepage" },
     metrics: [
@@ -533,7 +555,7 @@ export const projects: Project[] = [
     cats: ["design"],
     kind: "design",
     date: "Mar 2026",
-    context: "Solo · Self-directed",
+    context: "Personal project",
     role: "Solo designer & UX researcher",
     tools: ["Figma", "UX Research", "Prototyping", "User Testing"],
     metaExtra: { label: "Deliverable", value: "Hi-fi prototype · 4 surfaces" },
@@ -541,6 +563,9 @@ export const projects: Project[] = [
     img: pathImg,
     alt: "Path@Penn — redesigned student course-planning dashboard",
     blurb: "A self-directed UX overhaul that turns Penn's dense, fragmented course portal into four connected surfaces (Dashboard, Course, Schedule, Degree), so planning a semester stops being a scavenger hunt across tools.",
+    line: "Penn's course portal rebuilt as four connected surfaces, so planning a semester takes one tool.",
+    who: "Solo",
+    short: "Penn's course portal rebuilt as four surfaces",
     tech: ["Figma", "UX Research", "Prototyping", "User Testing"],
     featured: {
       type: "embed",
@@ -662,6 +687,9 @@ export const projects: Project[] = [
     img: roadRogueImg,
     alt: "Road Rogue — 3D car-chase game",
     blurb: "A 3D car-chase game (à la Smashy Road) built to find the limits of AI-assisted creation for a design course: 3D assets from Meshy, logic scaffolded with Codex, assembled in Three.js. It holds up as a game — responsive driving and a survival score that ramps the tension.",
+    line: "A browser car-chase game built to see how far Meshy and Codex can carry a playable game.",
+    who: "Solo",
+    short: "a browser car-chase game in Three.js",
     tech: ["Three.js", "JavaScript", "Meshy", "Game Design"],
     featured: { type: "image", src: roadRogueImg, alt: "Road Rogue gameplay" },
     metrics: [
@@ -725,6 +753,9 @@ export const projects: Project[] = [
     img: null,
     alt: "Capsule — a 3D time-capsule reveal gallery",
     blurb: "A collaborative web app where a time capsule stops being a folder and becomes a space — photos, messages and media locked until a chosen date, then revealed through an immersive 3D gallery. Built with React Three Fiber, a Node/MongoDB API, and AWS S3.",
+    line: "A time-capsule web app with a 3D reveal gallery in React Three Fiber over a Node/MongoDB API.",
+    who: "Team of 4; I owned the UI and the 3D gallery",
+    short: "a time-capsule app with a 3D reveal gallery",
     tech: ["React", "R3F", "Node", "MongoDB"],
     featured: { type: "embed", embed: "https://embed.figma.com/proto/xNLzE7NKvOo9SToBUZtaSn/Penn-Time-Capsule?node-id=913-1430&scaling=contain&content-scaling=fixed&page-id=662%3A1067&embed-host=share", alt: "Capsule — prototype" },
     metrics: [
@@ -768,7 +799,7 @@ export const projects: Project[] = [
     cats: ["design"],
     kind: "design",
     date: "Apr 2026",
-    context: "Solo · Course (DSGN 2570)",
+    context: "Personal project",
     role: "Solo designer & UX researcher",
     tools: ["Figma", "UX Research", "User Testing", "Prototyping"],
     metaExtra: { label: "Deliverable", value: "Hi-fi prototype" },
@@ -776,6 +807,9 @@ export const projects: Project[] = [
     img: wikiCover,
     alt: "Wikipedia mobile redesign — five redesigned sections",
     blurb: "A research-to-prototype redesign of Wikipedia's mobile interface where testing, not taste, decided the outcome: interviews, a survey and insight synthesis produced three reader personas, then usability sessions with four users reshaped previews, search snippets and AI framing across five sections.",
+    line: "A mobile redesign shaped by interviews and four usability sessions: search-first home, a section strip, article snippets.",
+    who: "Solo",
+    short: "a research-led mobile redesign",
     tech: ["Figma", "UX Research", "User Testing"],
     featured: { type: "embed", embed: "https://embed.figma.com/proto/vKo7ySkGZW5dliYa44yHwa/Brian-Lee---Design?node-id=103-7273&scaling=scale-down&content-scaling=fixed&page-id=27%3A377&embed-host=share", alt: "Wikipedia redesign — live prototype" },
     metrics: [
@@ -786,7 +820,7 @@ export const projects: Project[] = [
     blocks: [
       { type: "prose", label: "Overview", heading: "Redesigning Wikipedia for how people actually read", body: [
         "Wikipedia is where most research begins, but its mobile experience hasn't kept pace with how people consume information: scanning rather than reading, jumping between sections, expecting summaries before committing to depth.",
-        "For DSGN 2570, Penn's User Experience (UX) and User Interface (UI) Design course, I ran a complete research-to-prototype redesign of Wikipedia's mobile interface: structured interviews, a survey, insight and How-Might-We synthesis, lo-fi wireframes, usability testing with four participants, and a hi-fi prototype across five sections: Home, Article, Search, Language, and an AI Chat feature.",
+        "This was a personal project: a complete research-to-prototype redesign of Wikipedia's mobile interface. Structured interviews, a survey, insight and How-Might-We synthesis, lo-fi wireframes, usability testing with four participants, and a hi-fi prototype across five sections: Home, Article, Search, Language, and an AI Chat feature.",
       ] },
       { type: "media", label: "Concept", layout: "full", bare: true, items: [{ src: wikiCover, alt: "Wikipedia mobile redesign — concept mockup", caption: "The redesigned mobile experience" }] },
       { type: "prose", label: "Problem", heading: "Built for encyclopedias, not for people in a hurry", body: [
@@ -844,8 +878,12 @@ export const projects: Project[] = [
     metaExtra: { label: "Runtime", value: "Interactive · browser (Spline)" },
     links: { live: "https://my.spline.design/untitled-QVRKLSCWxKCmX5aAVZUXDukV/" },
     img: null,
+    thumb: playgroundImg,
     alt: "Playground — an interactive 3D character scene",
     blurb: "An interactive 3D scene that puts “Boo,” a childhood-game character, within reach: modeled in Maya, textured in Substance Painter, rigged and animated, then wired into Spline so keyboard and mouse input make it react in the browser.",
+    line: "Boo, modeled and rigged in Maya, reacting to keyboard and mouse in the browser through Spline.",
+    who: "Solo",
+    short: "Boo, rigged in Maya, live in the browser",
     tech: ["Maya", "Substance Painter", "Spline"],
     featured: { type: "embed", embed: "https://my.spline.design/untitled-QVRKLSCWxKCmX5aAVZUXDukV/", alt: "Playground — interactive 3D scene" },
     metrics: [
@@ -891,6 +929,8 @@ export const projects: Project[] = [
     links: { live: "https://alephlab.ai" },
     img: null,
     blurb: "Software engineering intern at a Y Combinator (F25) startup, where I shipped an app-wide redesign, built the product's lifecycle notification system and then made it run unattended, and packaged the company's AI character as an SDK outside studios can build on.",
+    line: "Shipped an app-wide React Native redesign, built the lifecycle notification system and made it run unattended, and packaged the in-game AI agent as an SDK.",
+    who: "Software engineer intern",
     tech: [],
     metrics: [
       { value: "3", label: "production systems shipped" },
@@ -940,6 +980,8 @@ export const projects: Project[] = [
     links: { live: "https://pennspark.org/" },
     img: null,
     blurb: "Red-team project lead and product designer at Penn's student product studio, where 15+ designers and developers shipped client-facing 0→1 products on every semester cycle.",
+    line: "Lead a team of 15+ designers and developers shipping client products each semester.",
+    who: "Project lead, product designer",
     tech: [],
     metrics: [],
     blocks: [
@@ -976,6 +1018,8 @@ export const projects: Project[] = [
     links: { live: "https://www.bitmango.com/en/homepageen/" },
     img: null,
     blurb: "Software engineering intern who kept 50+ live Unity mobile titles shipping: 100+ QA-reported bugs cleared into production, and the whole portfolio held compliant through a platform requirement change.",
+    line: "Kept 50+ live Unity titles shipping; 100+ QA-reported bugs fixed in production.",
+    who: "Software engineer intern",
     tech: [],
     metrics: [],
     blocks: [
@@ -1010,6 +1054,8 @@ export const projects: Project[] = [
     links: { live: "https://it-farm.co.kr/" },
     img: null,
     blurb: "Database engineering intern who made semiconductor data from 20+ client companies queryable, designing SQL tooling over million-row datasets in Oracle and SQLite.",
+    line: "SQL tooling over 1M+ semiconductor records from 20+ client companies.",
+    who: "Database engineer intern",
     tech: [],
     metrics: [],
     blocks: [
