@@ -76,7 +76,8 @@ export type Block =
   | { type: "list"; label?: string; heading?: string; items: string[] }
   | { type: "stats"; label?: string; items: { value: string; label: string }[] }
   | { type: "quote"; text: string; cite?: string }
-  | { type: "media"; label?: string; layout?: "full" | "half" | "third"; ratio?: string; bare?: boolean; items: MediaItem[] };
+  | { type: "media"; label?: string; layout?: "full" | "half" | "third"; ratio?: string; bare?: boolean; items: MediaItem[] }
+  | { type: "code"; label?: string; heading?: string; file?: string; code: string; note?: string };
 
 export interface Project {
   slug: string;
@@ -314,12 +315,21 @@ export const projects: Project[] = [
       },
       {
         type: "prose",
-        label: "Milestone 01",
-        heading: "Generating an infinite world across biomes",
+        label: "Terrain",
+        heading: "Terrain that reads as a place, not as noise",
         body: [
-          "The world blends 7 biomes seamlessly from large-scale noise. Grassland and forest use a Voronoi-based hill field for soft rolling terrain; mountain and rocky variants use fractal Brownian motion over Perlin with an abs() warp for sharp STONE peaks capped in SNOW above Y=200; desert and snowland use low-amplitude Perlin fields surfaced with SAND or SNOW.",
-          "Biomes blend via a large-scale Perlin value remapped to [0,1] through smoothstep(0.25, 0.75), used as the interpolation weight between adjacent height fields: clear zones, smooth transitions. Columns fill STONE from Y=0–128, biome surface Y=128–255, and empty columns between Y=128–138 fill with WATER for lakes and coastlines.",
+          "Raw noise makes convincing hills and unconvincing worlds: everything undulates the same way everywhere. The terrain here works in two layers. Per-biome height fields give each region its own character (a Voronoi F2−F1 hill field for soft cellular grassland, cubed ridge noise for sharp rocky peaks, 4-octave FBM for texture), and a large-scale selector field decides which biomes own a given column.",
+          "Each biome claims a lobe of the selector axis, a smoothstep tent centered at its own position, modulated by independent relief and ridge masks and normalized so the weights always sum to one. Where lobes overlap, biomes blend; where one dominates, the terrain commits to it.",
         ],
+      },
+      {
+        type: "code",
+        file: "src/scene/terrain.cpp",
+        code: `static float lobe(float x, float center, float halfWidth) {
+    float d = glm::abs(x - center);
+    return 1.0f - glm::smoothstep(0.0f, halfWidth, d);
+}`,
+        note: "A column's height is then the weight-blended sum of every biome's height field, pulled 82% toward the blend so the base terrain still anchors the world, then re-flattened in lowlands and carved by a basin mask of up to 34 blocks, which is where the lakes come from (water fills empty columns up to Y=138).",
       },
       {
         type: "media",
@@ -327,17 +337,31 @@ export const projects: Project[] = [
         layout: "half",
         items: [
           { src: mcGrassland, alt: "Grassland coast", caption: "Grassland · coastline, beach, and distant mountains under distance fog" },
-          { src: mcBiomeBorder, alt: "Biome border", caption: "Stone mountain meeting grassland via smoothstep interpolation" },
+          { src: mcBiomeBorder, alt: "Biome border", caption: "Stone mountain meeting grassland where selector lobes overlap" },
         ],
       },
       {
         type: "prose",
-        label: "Milestone 02",
-        heading: "3D noise caves, fluid physics, and a post-process pipeline",
+        label: "Caves",
+        heading: "Caves from a negative threshold",
         body: [
-          "3D Perlin noise (8 surflet contributions per grid cell, trilinear interpolation) carves every block below Y=128 where the value goes negative; caves below Y=25 fill with LAVA and all Y=0 blocks become unbreakable BEDROCK.",
-          "WATER and LAVA are non-solid: the player moves at 0.8× speed inside fluid and swims up on Spacebar, with immersion read from both body and camera position. A post-process pass renders the scene to a framebuffer, then draws it on a fullscreen quad with a blue (water) or red (lava) tint based on camera position.",
+          "Underground, a hand-rolled 3D Perlin (eight surflet contributions with a quintic falloff) is sampled at two anisotropic scales, with Y compressed twice as hard as X and Z, blended 85/15. That compression is why the caves read as winding tunnels instead of spherical bubbles.",
+          "Every block below Y=128 where the blended noise goes negative is carved. Below Y=25 the void fills with LAVA, Y=0 stays BEDROCK, and under lakes the carve ceiling drops so a cave can never breach a lake floor. Ore spawns only on carved cave surfaces: a stone block must have an exposed face before a hash decides whether it becomes coal, iron, gold, or (below Y=22, at odds of 0.24%) diamond.",
         ],
+      },
+      {
+        type: "code",
+        file: "src/scene/terrain.cpp",
+        code: `for (int y = 1; y <= 128 && y <= caveTop; ++y) {
+    float caveNoise = getCaveNoise(worldX, y, worldZ);
+    if (caveNoise < 0.0f) {
+        if (y < 25) {
+            chunk->setLocalBlockAt(localX, y, localZ, LAVA);
+        } else {
+            chunk->setLocalBlockAt(localX, y, localZ, EMPTY);
+        }
+    }
+}`,
       },
       {
         type: "media",
@@ -347,11 +371,55 @@ export const projects: Project[] = [
       },
       {
         type: "prose",
-        label: "Milestone 03",
-        heading: "Shadow mapping, SSR, ambient occlusion, and more",
+        label: "Shadows",
+        heading: "Shadow mapping is a war on three artifacts",
         body: [
-          "The final milestone was a full render-pipeline upgrade. PCF shadow mapping renders the scene from the light's orthographic view into a depth buffer; terrain fragments compare depth with a 7×7 PCF kernel and slope-scaled bias (with texel snapping) to kill acne and Peter-Panning.",
-          "Screen-space reflections ray-march water rays against a view-space position buffer, blending with Fresnel weights and shoreline masking. Vertex ambient occlusion bakes per-face occupancy into the 64-byte interleaved vertex layout. A unified day-night cycle drives sun position, light color, fog, and sky gradient together, with Blinn-Phong specular tuned per material.",
+          "The sun renders opaque terrain into a 4096² depth map over a 320-block orthographic volume. Naive depth comparison then produces the classic trio: acne (self-shadow stripes), Peter-Panning (shadows detaching from their casters), and shimmer (edges crawling as the player walks). Each gets its own counter-measure.",
+          "Acne dies to a slope-scaled bias, 0.0015 · tan(acos(N·L)), clamped so it can never grow into Peter-Panning. Shimmer dies to texel snapping: the light frustum's center moves in whole shadow-map texels (about 0.078 blocks) in a fixed-orientation light space, so walking never sub-pixel-shifts the map. Hard edges die to a 7×7 PCF kernel, 49 depth tests per fragment; shadow depth itself follows the day, shallow at night and deep at noon.",
+        ],
+      },
+      {
+        type: "code",
+        file: "glsl/lambert.frag.glsl",
+        code: `float bias = clamp(0.0015 * tan(acos(cosTheta)), 0.00025, 0.0015); // fix value to avoid peter panning
+vec2 texelSize = vec2(1.0 / 4096.0);
+float shadow = 0.0;
+for (int x = -3; x <= 3; ++x) {
+    for (int y = -3; y <= 3; ++y) {
+        float closestDepth = texture(u_ShadowMap, shadowCoord.xy + vec2(x, y) * texelSize).r;
+        if (closestDepth < currentDepth - bias) {
+            shadow += 1.0;
+        }
+    }
+}
+shadow /= 49.0;`,
+      },
+      {
+        type: "prose",
+        label: "SSR",
+        heading: "Making water reflect what is actually on screen",
+        body: [
+          "The first water shader faked reflections with a fresnel sky tint, and it read as gray plastic. The fix was real screen-space reflections: a separate pass writes view-space positions into an RGBA32F buffer, and every water fragment marches its reflected ray against that buffer.",
+          "The march runs as a DDA in pixel space, one pixel per step along the dominant screen axis for up to 384 iterations, then a 5-step binary refinement pins the hit. Four fade terms (hit quality, travel distance, screen edge, grazing-angle fresnel) suppress the artifacts SSR is infamous for, and masks restrict the whole effect to up-facing water surfaces.",
+        ],
+      },
+      {
+        type: "code",
+        file: "glsl/lambert.frag.glsl",
+        code: `float dx = endPixel.x - startPixel.x;
+float dy = endPixel.y - startPixel.y;
+// step one pixel at a time along larger screen space axis
+float moreHorizontal = abs(dx) > abs(dy) ? 1.0 : 0.0;
+float maxDelta = mix(abs(dy), abs(dx), moreHorizontal);
+vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
+      },
+      {
+        type: "prose",
+        label: "Light & air",
+        heading: "The cheap tricks that sell the frame",
+        body: [
+          "Vertex ambient occlusion is computed on the CPU at mesh build: three neighbor tests per vertex (two edges, one corner), the both-edges case short-circuiting straight to the darkest value, packed into the spare .w of the UV attribute. Soft contact shadows, free at render time.",
+          "The 240-second day-night cycle keeps two sun vectors: the visual sun, which sets, and a lighting sun whose elevation never drops below 0.08, so night shading stays plausible instead of lighting the world from underground. Sky, fog, sun color, and shadow depth all derive from the same daylight scalar; swimming into water or lava adds an animated UV wobble and tint in the post-process pass (stronger for lava).",
         ],
       },
       {
@@ -848,14 +916,28 @@ export const projects: Project[] = [
         "Most Wikipedia features (language, TOC, discussion) are effectively hidden: they exist but go unused.",
         "Mobile is notably worse than desktop: smaller targets, more scrolling, a harder-to-reach table of contents.",
       ] },
+      { type: "prose", label: "Personas", heading: "Three readers, one scope", body: [
+        "The interviews and survey collapsed into three reader personas and a set of How-Might-We questions that fixed the redesign's scope before any screens were drawn: five sections, each answering a documented need rather than a feature wishlist.",
+      ] },
+      { type: "media", label: "Personas", layout: "third", items: [
+        { placeholder: "Persona 01 · from the research file" },
+        { placeholder: "Persona 02 · from the research file" },
+        { placeholder: "Persona 03 · from the research file" },
+      ] },
       { type: "prose", label: "Structure", heading: "Mapping the redesign before the visuals", body: [
         "Lo-fi screens set the information architecture before any visual design: a search-first Home with trending keywords and the featured article up front; a persistent, scrollable section-header strip replacing the buried TOC, plus a floating action menu; Language separated and relabeled “Article Language”; and an AI Chat tab as a quick-summary layer over the knowledge base.",
       ] },
       { type: "media", label: "Lo-fi", layout: "full", items: [{ src: wikiLofi, alt: "Lo-fi wireframes", caption: "Lo-fi screens set the information architecture before any visual design" }] },
       { type: "prose", label: "Testing", heading: "Four users, five tasks, one prototype", body: [
-        "Mid-fi prototypes were tested with four participants from different Penn schools, each running five task-based prompts while thinking aloud. The home page was understood immediately; but users wanted section previews before committing, article snippets in search results, and clearer framing that Language changes the article and that AI Chat produces summaries, not full answers; each fed directly into the final design.",
+        "Mid-fi prototypes were tested with four participants from different Penn schools, each running five task-based prompts while thinking aloud. The home page was understood immediately; the rest of the design earned its changes the hard way.",
       ] },
       { type: "media", label: "Testing", layout: "full", items: [{ src: wikiTesting, alt: "User testing", caption: "Task-based sessions with four participants across different Penn schools" }] },
+      { type: "list", label: "Iterations", heading: "What testing changed", items: [
+        "Section previews: nobody would open a section blind, so headers in the strip gained short previews.",
+        "Search snippets: title-only results forced guessing, so every result now carries an article snippet.",
+        "AI Chat framing: participants expected full answers, so the copy reframes it as summaries that link back into the article.",
+        "Article Language: the toggle read as an app setting, so it was separated from Settings and relabeled.",
+      ] },
       { type: "media", label: "Final design", layout: "half", items: [
         { src: wikiHome, alt: "Redesigned home", caption: "Home · search-first, with trending keywords and the featured article" },
         { src: wikiArticle, alt: "Redesigned article", caption: "Article · a persistent section-header strip replaces the buried TOC" },

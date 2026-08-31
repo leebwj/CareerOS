@@ -136,6 +136,16 @@ const linkList = [
             {b.type === "quote" && (
               <blockquote class="cs-quote"><p>“{b.text}”</p>{b.cite && <cite>{b.cite}</cite>}</blockquote>
             )}
+            {b.type === "code" && (
+              <div class="cs-prose">
+                {b.heading && <h2 class="cs-block__heading">{b.heading}</h2>}
+                <figure class="cs-code">
+                  {b.file && <figcaption>{b.file}</figcaption>}
+                  <pre><code>{b.code}</code></pre>
+                </figure>
+                {b.note && <p>{b.note}</p>}
+              </div>
+            )}
             {b.type === "stats" && (
               <div class="cs-stats">{b.items.map((s) => <div class="cs-stat"><span class="cs-stat__n">{s.value}</span><span class="cs-stat__l">{s.label}</span></div>)}</div>
             )}
