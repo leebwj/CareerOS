@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tailor</title>
+<style>
+  :root { --bg:#0b0c0e; --card:#15171a; --card2:#101215; --ink:#f4f5f7; --muted:#828c99; --faint:#545c66; --line:#23262b; --cobalt:#6f88cf; --deep:#9aafe2; }
+  * { box-sizing:border-box; margin:0; }
+  body { background:var(--bg); color:var(--ink); font:15px/1.55 "Segoe UI", system-ui, sans-serif; padding:40px 20px; }
+  .wrap { max-width:860px; margin:0 auto; }
+  h1 { font-size:22px; letter-spacing:-.01em; }
+  h1 span { color:var(--cobalt); }
+  p.sub { color:var(--muted); font-size:14px; margin:6px 0 24px; }
+  label { display:block; font-size:12px; text-transform:uppercase; letter-spacing:.1em; color:var(--faint); margin:16px 0 6px; }
+  input, textarea { width:100%; background:var(--card); border:1px solid var(--line); border-radius:8px; color:var(--ink); padding:10px 12px; font:inherit; outline:none; }
+  input:focus, textarea:focus { border-color:var(--cobalt); }
+  textarea { min-height:220px; resize:vertical; }
+  .row { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  button { margin-top:18px; background:var(--ink); color:var(--bg); border:0; border-radius:8px; padding:11px 18px; font:600 14px/1 inherit; cursor:pointer; }
+  button:hover { background:var(--cobalt); }
+  button:disabled { opacity:.5; cursor:wait; }
+  button.ghost { background:none; border:1px solid var(--line); color:var(--ink); }
+  button.ghost:hover { border-color:var(--ink); }
+  .out { margin-top:26px; border-top:1px solid var(--line); padding-top:20px; display:none; }
+  .files a { display:inline-block; margin:6px 10px 0 0; color:var(--deep); font-weight:600; text-decoration:none; border:1px solid var(--line); border-radius:8px; padding:9px 13px; }
+  .files a:hover { border-color:var(--cobalt); }
+  .why { background:var(--card2); border:1px solid var(--line); border-radius:8px; padding:12px 14px; color:var(--muted); font-size:14px; margin-top:12px; }
+  .warn { color:#e2b45a; font-size:13.5px; margin-top:10px; white-space:pre-wrap; }
+  .err { color:#e05c5c; font-size:14px; margin-top:14px; white-space:pre-wrap; }
+  .letter textarea { min-height:180px; margin-top:6px; }
+  .meta { color:var(--faint); font-size:13px; margin-top:8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Tailor<span>.</span></h1>
+  <p class="sub">Paste the job, get a one-page résumé and a cover letter aligned to it. The résumé is composed only from my real content; the letter's numbers are checked against it.</p>
+
+  <div class="row">
+    <div><label>Company</label><input id="company" placeholder="Riot Games" /></div>
+    <div><label>Role</label><input id="role" placeholder="Software Engineer Intern — Graphics" /></div>
+  </div>
+  <label>Job description</label>
+  <textarea id="jd" placeholder="Paste the full job description here…"></textarea>
+  <button id="run">Tailor it</button>
+  <div class="err" id="err"></div>
+
+  <div class="out" id="out">
+    <div class="files" id="files"></div>
+    <div class="meta" id="pages"></div>
+    <div class="why" id="why"></div>
+    <div class="warn" id="warn"></div>
+    <div class="letter">
+      <label>Cover letter (edit, then rebuild the PDF)</label>
+      <textarea id="letter"></textarea>
+      <button class="ghost" id="rebuild">Rebuild letter PDF</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const $ = (id) => document.getElementById(id);
+  let last = null;
+
+  const showFiles = (slug, files) => {
+    $("files").innerHTML = files.map((f) => `<a href="/out/${encodeURIComponent(slug)}/${encodeURIComponent(f)}">${f}</a>`).join("");
+  };
+  const showPages = (pages) => {
+    const parts = Object.entries(pages || {}).map(([n, p]) => `${n.includes("Cover") ? "letter" : "résumé"}: ${p} page${p > 1 ? "s" : ""}`);
+    $("pages").textContent = parts.join(" · ");
+  };
+
+  $("run").onclick = async () => {
+    $("err").textContent = ""; $("out").style.display = "none";
+    $("run").disabled = true; $("run").textContent = "Working (30–90s)…";
+    try {
+      const r = await fetch("/api/tailor", { method: "POST", headers: { "content-type": "application/json" },
+        body: JSON.stringify({ jd: $("jd").value, company: $("company").value, role: $("role").value }) });
+      const data = await r.json();
+      if (!r.ok || data.error) throw new Error(data.error || r.status);
+      last = data;
+      showFiles(data.slug, data.files);
+      showPages(data.pages);
+      $("why").textContent = `Base: ${data.composition.base} · ${data.composition.whyFit || ""}`;
+      $("warn").textContent = (data.warnings || []).join("\n");
+      $("letter").value = [data.composition.cover.greeting, "", ...data.composition.cover.paragraphs].join("\n\n").replace(/\n{3,}/g, "\n\n");
+      $("out").style.display = "block";
+    } catch (e) { $("err").textContent = String(e.message || e); }
+    $("run").disabled = false; $("run").textContent = "Tailor it";
+  };
+
+  $("rebuild").onclick = async () => {
+    if (!last) return;
+    $("rebuild").disabled = true; $("rebuild").textContent = "Rebuilding…";
+    try {
+      const lines = $("letter").value.split(/\n\s*\n/).map((s) => s.trim()).filter(Boolean);
+      const cover = { greeting: lines[0] || "Dear Hiring Team,", paragraphs: lines.slice(1) };
+      const r = await fetch("/api/letter", { method: "POST", headers: { "content-type": "application/json" },
+        body: JSON.stringify({ slug: last.slug, cover, jd: $("jd").value, company: $("company").value, role: $("role").value }) });
+      const data = await r.json();
+      if (!r.ok || data.error) throw new Error(data.error || r.status);
+      $("warn").textContent = (data.warnings || []).join("\n");
+      showPages({ ...last.pages, ...data.pages });
+    } catch (e) { $("err").textContent = String(e.message || e); }
+    $("rebuild").disabled = false; $("rebuild").textContent = "Rebuild letter PDF";
+  };
+</script>
+</body>
+</html>
