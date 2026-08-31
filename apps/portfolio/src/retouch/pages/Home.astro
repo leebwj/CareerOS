@@ -64,7 +64,7 @@ const viewCfg = views.map((v) => ({ id: v.id, path: v.path, order: v.order, resu
       <!-- intro styles: all rendered, one shown by html[data-intro]; the switch bottom-left is remembered -->
       <div class="hero-wall w-full intro intro--name" data-intro="name">
         <h1 class="kinetic hero-name"><span class="line"><span class="line-i" style="--d:.1s">Brian Lee.</span></span></h1>
-        <div class="line"><p class="hero-sub" style="--d:.26s">Engineer &amp; designer</p></div>
+        <div class="line"><p class="hero-sub" style="--d:.26s">Engineer &amp; Designer · I design what people see, and engineer what runs underneath</p></div>
         <div class="line"><div class="hero-actions" style="--d:.38s">
           <a href="#work" class="btn btn-primary" data-magnetic="0.4">See work</a>
           <a href="#contact" class="btn btn-ghost" data-magnetic="0.4">Get in touch</a>
@@ -72,7 +72,7 @@ const viewCfg = views.map((v) => ({ id: v.id, path: v.path, order: v.order, resu
       </div>
       <div class="intro intro--credit" data-intro="credit">
         <p class="kinetic credit__name"><span class="line-i">Brian Lee.</span></p>
-        <p class="hero-sub">Engineer &amp; designer</p>
+        <p class="hero-sub">Engineer &amp; Designer · I design what people see, and engineer what runs underneath</p>
         <div class="hero-actions">
           <a href="#work" class="btn btn-primary" data-magnetic="0.4">See work</a>
           <a href="#contact" class="btn btn-ghost" data-magnetic="0.4">Get in touch</a>
@@ -80,7 +80,7 @@ const viewCfg = views.map((v) => ({ id: v.id, path: v.path, order: v.order, resu
       </div>
       <div class="hero-wall w-full intro intro--spec" data-intro="spec">
         <h1 class="kinetic hero-name"><span class="line"><span class="line-i" style="--d:.1s">Brian Lee.</span></span></h1>
-        <div class="line"><p class="hero-sub" style="--d:.26s">Engineer &amp; designer</p></div>
+        <div class="line"><p class="hero-sub" style="--d:.26s">Engineer &amp; Designer · I design what people see, and engineer what runs underneath</p></div>
         <div class="line"><div class="hero-actions" style="--d:.38s">
           <a href="#work" class="btn btn-primary" data-magnetic="0.4">See work</a>
           <a href="#contact" class="btn btn-ghost" data-magnetic="0.4">Get in touch</a>
@@ -93,13 +93,6 @@ const viewCfg = views.map((v) => ({ id: v.id, path: v.path, order: v.order, resu
         <button type="button" data-intro-mode="name" aria-pressed="true">Name</button>
         <button type="button" data-intro-mode="credit" aria-pressed="false">Credit</button>
         <button type="button" data-intro-mode="spec" aria-pressed="false">Spec</button>
-      </div>
-      <div class="intro-pick sub-pick" role="group" aria-label="Subtitle">
-        <span>sub</span>
-        <button type="button" data-sub-mode="base" aria-pressed="true">Base</button>
-        <button type="button" data-sub-mode="build" aria-pressed="false">Build</button>
-        <button type="button" data-sub-mode="sketch" aria-pressed="false">Sketch</button>
-        <button type="button" data-sub-mode="endtoend" aria-pressed="false">End to end</button>
       </div>
       <div class="shader-pick">
         <span>shader</span>
@@ -229,34 +222,9 @@ const viewCfg = views.map((v) => ({ id: v.id, path: v.path, order: v.order, resu
     </footer>
   </main>
 
-  <!-- subtitle trial: candidate lines behind the dev switch, remembered like the intro -->
-  <script is:inline>
-    (() => {
-      const SUBS = {
-        base: "Engineer & designer",
-        build: "Engineer & designer — I build what I design",
-        sketch: "Engineer & designer — from first sketch to shipped product",
-        endtoend: "Engineer & designer — design and code, end to end",
-      };
-      const apply = (id) => document.querySelectorAll(".hero-sub").forEach((p) => (p.textContent = SUBS[id] || SUBS.base));
-      let cur = "base";
-      try { cur = localStorage.getItem("bl-sub") || "base"; } catch (e) {}
-      if (cur !== "base") apply(cur);
-      const pick = document.querySelector(".sub-pick");
-      if (!pick) return;
-      const btns = pick.querySelectorAll("[data-sub-mode]");
-      const sync = () => btns.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.subMode === cur)));
-      btns.forEach((b) => b.addEventListener("click", () => {
-        cur = b.dataset.subMode;
-        try { localStorage.setItem("bl-sub", cur); } catch (e) {}
-        apply(cur); sync();
-      }));
-      sync();
-    })();
-  </script>
-
   <!-- intro style switch: sets html[data-intro], remembered across visits -->
   <script is:inline>
+    try { localStorage.removeItem("bl-sub"); } catch (e) {}
     (() => {
       const pick = document.querySelector(".intro-pick");
       if (!pick) return;

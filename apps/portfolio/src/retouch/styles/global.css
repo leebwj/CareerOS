@@ -525,7 +525,7 @@ body { font-size: 16px; }
 html[data-mode="light"] .hero-name { color: var(--color-ink); mix-blend-mode: normal; }
 
 /* the subtitle holds one line on desktop and wraps naturally on phones */
-.hero-sub { max-width: 64ch; }
+.hero-sub { max-width: 88ch; }
 
 /* the About statement is one short line */
 .about-statement { max-width: none; }
@@ -536,6 +536,3 @@ html[data-mode="light"] .hero-name { color: var(--color-ink); mix-blend-mode: no
 html[data-dev] .dchip { display: flex; }
 html[data-dev] .intro-pick { display: flex; }
 @media (max-width: 767px) { html[data-dev] .intro-pick { display: none; } }
-
-/* subtitle trial sits one row above the intro picker */
-.sub-pick { bottom: calc(clamp(1.1rem, 3vw, 2rem) + 46px); }
