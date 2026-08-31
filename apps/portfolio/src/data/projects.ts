@@ -48,6 +48,18 @@ import psHome from "../assets/work/penn-spark/home.png";
 import psClient from "../assets/work/penn-spark/client-projects.png";
 import psCommunity from "../assets/work/penn-spark/community.png";
 import psJoin from "../assets/work/penn-spark/join.png";
+import deweyThumb from "../assets/work/dewey.png";
+import dwBrand from "../assets/work/dewey/brand.png";
+import dwWebBefore from "../assets/work/dewey/web-before.png";
+import dwLofiA from "../assets/work/dewey/lofi-feed-a.jpg";
+import dwLofiB from "../assets/work/dewey/lofi-feed-b.jpg";
+import dwLofiRecs from "../assets/work/dewey/lofi-recs.jpg";
+import dwSignin from "../assets/work/dewey/hifi-signin.png";
+import dwFeed from "../assets/work/dewey/hifi-feed.png";
+import dwSearch from "../assets/work/dewey/hifi-search.png";
+import dwRecs from "../assets/work/dewey/hifi-recs.png";
+import dwShelf from "../assets/work/dewey/hifi-shelf.png";
+import dwAppRecs from "../assets/work/dewey/app-recs.png";
 
 // ── shared taxonomy (single source of truth for the grid filters + the pills) ──
 export type CatId = "design" | "engineering" | "graphics";
@@ -67,6 +79,7 @@ export const filters: { id: string; label: string }[] = [
 export type MediaItem = {
   src?: ImageMetadata;
   embed?: string; // youtube id, or a full iframe URL
+  video?: string; // local mp4 under public/, shown with controls
   alt?: string;
   caption?: string;
   placeholder?: string; // shown when no real media yet
@@ -947,6 +960,98 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
       { type: "prose", label: "Reflection", heading: "What habituation hides from usability", body: [
         "The biggest lesson was how much habituation masks: people had stopped noticing Wikipedia's friction because they'd built workarounds (Ctrl+F, jumping to Google) into muscle memory. Good usability work means designing for what people actually do, not the coping strategies they've normalised.",
       ] },
+    ],
+  },
+
+  {
+    slug: "dewey",
+    order: 9,
+    title: "Dewey",
+    tagline: "Taking a book-discovery startup from web MVP to a working iOS app, as design lead of the Penn Spark client team.",
+    motif: "grid",
+    cats: ["design"],
+    kind: "design",
+    date: "Jan – Apr 2026",
+    context: "Client project · Penn Spark",
+    role: "Design Lead · Project Co-Lead",
+    team: "Team of 8, with Dewey's founding team",
+    tools: ["Figma", "Design Systems", "Prototyping", "React Native"],
+    metaExtra: { label: "Client", value: "Dewey · joindewey.com" },
+    links: { live: "https://joindewey.com/" },
+    repoNote: "The code and design files belong to the client, so they stay private; the demo below is the working build.",
+    img: deweyThumb,
+    alt: "Dewey iOS app — feed, recommendations, and shelf screens",
+    blurb: "A semester-long client build at Penn Spark: Dewey's social book-discovery web MVP translated into a working iOS app. I led design (and co-led the project): the mobile design system inside the client's brand, five core flows from wireframes to hi-fi, and the handoff the developers built from.",
+    line: "Client work: a book-discovery web MVP turned into a working iOS app; I led the design end.",
+    who: "Design lead & project co-lead; team of 8",
+    short: "a client iOS app, design lead",
+    tech: ["Figma", "Design Systems", "React Native"],
+    reel: { mp4: "/reels/dewey.mp4" },
+    featured: { type: "image", src: deweyThumb, alt: "Dewey iOS app screens" },
+    metrics: [
+      { value: "5", label: "core flows designed" },
+      { value: "14", label: "weeks, kickoff to showcase" },
+      { value: "8", label: "designers & developers" },
+    ],
+    blocks: [
+      { type: "prose", label: "Overview", heading: "A real client, a real backend, a real deadline", body: [
+        "Dewey is a social book-discovery startup founded by two Wharton MBAs: Goodreads-style tracking, taste-based comparative ranking (log a book and it asks whether you liked it more than the last one you loved), short-form reader reactions, and a recommendation algorithm in active development. They came to Penn Spark with a live web MVP, real early users, and one ask: turn it into a production-ready iOS app.",
+        "I led design and co-led the project: scoping the design work, owning the UX architecture, running the design side of the weekly client meetings, and carrying the system from wireframes through developer handoff. Two designers worked with me; the developer half of the team built against our specs on Dewey's existing Supabase backend.",
+      ] },
+      { type: "media", label: "Before", layout: "full", items: [
+        { src: dwWebBefore, alt: "Dewey's web MVP", caption: "The starting point · Dewey's live web MVP at joindewey.com" },
+      ] },
+      { type: "prose", label: "The task", heading: "Translate, don't reinvent", body: [
+        "The brief sounds simple: get the website into app form. The constraints made it design work. Every existing feature had to survive the move to a phone; the visual identity was the client's, not ours to change; the backend and its data model already existed; and the one genuinely new surface, the recommendations experience, had no web version to translate at all.",
+        "The process ran in five stages: discovery (web audit, brand review), UX architecture (user journeys, flow charts), lo-fi wireframes for every core screen, hi-fidelity design inside Dewey's brand system, and developer handoff with full Figma specs and prototypes.",
+      ] },
+      { type: "media", label: "Brand", layout: "full", bare: true, items: [
+        { src: dwBrand, alt: "Dewey brand system", caption: "The client's identity, kept: Margin and Playfair Display over Inter, sage and cream" },
+      ] },
+      { type: "list", label: "Architecture", heading: "Five flows carry the whole product", items: [
+        "Feed: friend posts, trending books, create post, like and comment.",
+        "Search: books and users in one place, book detail, add to shelf, rate and review.",
+        "Recs: daily picks, swipe to accept, calendar history.",
+        "Shelf: browse, create and rename shelves, track reading by status.",
+        "Profile: bio, reading goals, posts, follow and unfollow.",
+      ] },
+      { type: "prose", label: "Lo-fi", heading: "Decisions made cheap, in grayscale", body: [
+        "The wireframe round existed to settle arguments before they got expensive. Should search live on the feed or in its own tab? We drew both, benchmarked how Instagram and Spotify structure their home surfaces, checked with the developers that a merged book-and-user search was feasible, and picked the dedicated tab. Should recommendations be a scroll or a swipe? The swipe deck won: it matches the one-decision-at-a-time nature of Dewey's comparative ranking.",
+      ] },
+      { type: "media", label: "Lo-fi", layout: "third", items: [
+        { src: dwLofiA, alt: "Feed wireframe without search", caption: "Feed A · search as its own tab" },
+        { src: dwLofiB, alt: "Feed wireframe with search bar", caption: "Feed B · search bar on the feed" },
+        { src: dwLofiRecs, alt: "Recommendations wireframe", caption: "Recs · the swipe deck, tested in grayscale" },
+      ] },
+      { type: "prose", label: "Hi-fi", heading: "Mobile composition inside someone else's brand", body: [
+        "The hi-fi round rebuilt every screen in Dewey's system: Margin for the wordmark, Playfair Display for page titles, Inter for everything readable, the sage-and-cream palette carried from the website. Web features were recomposed for one-handed use rather than shrunk to fit: the feed's trending row became a horizontal shelf, navigation collapsed to four tabs, and the recommendation deck got the swipe-and-flip motion the web never had.",
+      ] },
+      { type: "media", label: "Hi-fi", layout: "third", items: [
+        { src: dwSignin, alt: "Sign in screen", caption: "Sign in" },
+        { src: dwFeed, alt: "Feed screen", caption: "Feed · trending shelf, then friends" },
+        { src: dwSearch, alt: "Search screen", caption: "Search · books and users, one surface" },
+      ] },
+      { type: "media", layout: "third", items: [
+        { src: dwRecs, alt: "Recommendations screen", caption: "Recs · one pick at a time" },
+        { src: dwShelf, alt: "Shelf screen", caption: "Shelf · reading tracked by status" },
+      ] },
+      { type: "prose", label: "Shipped", heading: "The build is real and people use it", body: [
+        "The developers built the app in React Native with Expo on Dewey's existing Supabase backend, wired the recommendation surface to the algorithm the client was developing (embeddings plus LLM-based tagging on their side), and distributed the working build through Expo Go, with the client's founding team and beta testers on it. Designs were iterated weekly against both developer constraints and client feedback until the two stopped disagreeing.",
+      ] },
+      { type: "media", label: "Demo", layout: "half", items: [
+        { video: "/reels/dewey-demo.mp4", alt: "Dewey app demo", caption: "The working build · feed, search, recommendations, shelf" },
+        { src: dwAppRecs, alt: "Recommendations in the shipped app", caption: "The shipped recs surface: real daily pick, real data" },
+      ] },
+      { type: "prose", label: "Reflection", heading: "Client design is mostly constraint navigation", body: [
+        "This project was less about inventing an interface and more about holding one steady: a brand that wasn't mine, a backend that already existed, two designers to direct, four developers consuming the specs, and founders with opinions and users. The design lead job was keeping all of that coherent, and the weekly rhythm of adjusting hi-fis to what the build and the client actually needed taught me more than the screens did.",
+      ] },
+    ],
+    credits: [
+      { name: "Brian Lee", contribution: "Design lead & project co-lead: UX architecture, wireframes, hi-fi system, client communication, dev handoff." },
+      { name: "Nond Phokasub · Eve Fan", contribution: "Designers: wireframes, hi-fi screens, and the design kit across the five flows." },
+      { name: "Meiling Mathur", contribution: "Developer lead & project co-lead: React Native/Expo build, backend integration, recommendations wiring." },
+      { name: "Penn Spark developers", contribution: "Justin, Gordon, Evan, Sylvia, Olivia: screens, endpoints, debugging, deployment." },
+      { name: "Dewey", contribution: "Angela Malinovitch, Doris Wang, Ceylin Erkan: the product, the brand, the backend, and the algorithm." },
     ],
   },
 

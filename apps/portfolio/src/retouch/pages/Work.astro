@@ -157,7 +157,8 @@ const linkList = [
                       <figure>
                         {m.src && <Image src={m.src} alt={m.alt || ""} widths={[480, 1000, 1600]} sizes="(min-width:900px) 380px, 100vw" class="cs-zoomable" data-cursor="Zoom" data-cursor-keep />}
                         {m.embed && <div class="cs-embed"><iframe src={m.embed} title={m.alt} loading="lazy"></iframe></div>}
-                        {!m.src && !m.embed && <div class="cs-ph"><span>{m.placeholder}</span></div>}
+                        {m.video && <video src={m.video} controls playsinline preload="metadata" title={m.alt}></video>}
+                        {!m.src && !m.embed && !m.video && <div class="cs-ph"><span>{m.placeholder}</span></div>}
                         {m.caption && <figcaption>{m.caption}</figcaption>}
                       </figure>
                     ))}
@@ -171,7 +172,8 @@ const linkList = [
                   <figure>
                     {m.src && <Image src={m.src} alt={m.alt || ""} widths={[720, 1280, 1920]} sizes="(min-width:900px) 720px, 100vw" class="cs-zoomable" data-cursor="Zoom" data-cursor-keep />}
                     {m.embed && <div class="cs-embed"><iframe src={m.embed} title={m.alt} loading="lazy"></iframe></div>}
-                    {!m.src && !m.embed && <div class="cs-ph"><span>{m.placeholder}</span></div>}
+                    {m.video && <video src={m.video} controls playsinline preload="metadata" title={m.alt}></video>}
+                    {!m.src && !m.embed && !m.video && <div class="cs-ph"><span>{m.placeholder}</span></div>}
                     {m.caption && <figcaption>{m.caption}</figcaption>}
                   </figure>
                 ))}

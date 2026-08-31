@@ -50,7 +50,7 @@ console.log("  scrollY timeline (ms, y):", timeline.filter((_, i) => i % 6 === 0
 const after = await ev(`({ y: scrollY, first: document.querySelector("#grid article[data-slug]").dataset.slug, path: location.pathname, pressed: document.querySelector('#filters [aria-pressed="true"]').dataset.view, resume: document.querySelector("[data-resume]").getAttribute("href") })`);
 check("switch did not navigate", navs === navsAfterLoad, `navigations: ${navs - navsAfterLoad}`);
 check("switch kept the scroll position", Math.abs(after.y - before.y) < 4, `y ${before.y} → ${after.y}`);
-check("switch reordered the grid", before.first !== after.first && after.first === "wikipedia", `${before.first} → ${after.first}`);
+check("switch reordered the grid", before.first !== after.first && after.first === "dewey", `${before.first} → ${after.first}`);
 check("switch updated the URL", after.path === "/design", after.path);
 check("switch updated the résumé link", /Design/.test(after.resume), after.resume);
 
