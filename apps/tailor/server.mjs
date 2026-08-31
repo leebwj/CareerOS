@@ -34,8 +34,8 @@ createServer(async (req, res) => {
       return createReadStream(file).pipe(res);
     }
     if (req.method === "POST" && url.pathname === "/api/tailor") {
-      const { jd, company, role } = await readBody(req);
-      const r = await runTailor({ jd, company, role });
+      const { jd, company, role, pass } = await readBody(req);
+      const r = await runTailor({ jd, company, role, pass });
       return json(res, 200, r);
     }
     if (req.method === "POST" && url.pathname === "/api/letter") {

@@ -118,25 +118,40 @@ export function composeLetter(cover) {
 }
 
 // ── the model call (or MOCK) ────────────────────────────────────────────────
-export async function callModel({ jd, company, role }) {
+// direct API call with a local key, or relayed through the deployed
+// /api/tailor (which holds the key) using the /apply passphrase
+export async function callModel({ jd, company, role, pass }) {
   if (process.env.MOCK) return mockComposition({ jd, company });
   const key = process.env.ANTHROPIC_API_KEY;
-  if (!key) throw new Error("No API key. Create apps/tailor/.env with ANTHROPIC_API_KEY=<the same key the Vercel project uses>.");
+  const relayPass = pass || process.env.APPLY_KEY;
+  if (!key && !relayPass) throw new Error("Enter the apply passphrase (the APPLY_SECRET from Vercel — same as /apply), or put ANTHROPIC_API_KEY in apps/tailor/.env for direct calls.");
   const model = process.env.ANTHROPIC_MODEL || "claude-opus-4-8";
+  const relay = process.env.TAILOR_RELAY || "https://leebrian.dev/api/tailor";
   const user = buildUser({ jd, company, role, catalogJson: JSON.stringify(catalog()) });
-  let lastErr = "";
-  for (let attempt = 0; attempt < 2; attempt++) {
-    const r = await fetch("https://api.anthropic.com/v1/messages", {
-      method: "POST",
-      headers: { "content-type": "application/json", "x-api-key": key, "anthropic-version": "2023-06-01" },
-      body: JSON.stringify({
-        model, max_tokens: 3500, system: SYSTEM,
-        messages: [{ role: "user", content: attempt === 0 ? user : `${user}\n\nYour previous reply failed to parse: ${lastErr}. Reply with ONLY the JSON object.` }],
-      }),
-    });
+
+  const send = async (content) => {
+    const r = key
+      ? await fetch("https://api.anthropic.com/v1/messages", {
+          method: "POST",
+          headers: { "content-type": "application/json", "x-api-key": key, "anthropic-version": "2023-06-01" },
+          body: JSON.stringify({ model, max_tokens: 3500, system: SYSTEM, messages: [{ role: "user", content }] }),
+        })
+      : await fetch(relay, {
+          method: "POST",
+          headers: { "content-type": "application/json", "x-apply-key": relayPass },
+          body: JSON.stringify({ system: SYSTEM, user: content, maxTokens: 3500 }),
+        });
+    if (r.status === 401) throw new Error("Wrong passphrase.");
     if (!r.ok) throw new Error(`Claude API error ${r.status}: ${(await r.text()).slice(0, 300)}`);
     const data = await r.json();
-    const text = (data.content || []).filter((b) => b.type === "text").map((b) => b.text).join("").trim();
+    return key
+      ? (data.content || []).filter((b) => b.type === "text").map((b) => b.text).join("").trim()
+      : String(data.text || "").trim();
+  };
+
+  let lastErr = "";
+  for (let attempt = 0; attempt < 2; attempt++) {
+    const text = await send(attempt === 0 ? user : `${user}\n\nYour previous reply failed to parse: ${lastErr}. Reply with ONLY the JSON object.`);
     try {
       return JSON.parse(text.replace(/^```(?:json)?\s*/i, "").replace(/\s*```$/, ""));
     } catch (e) { lastErr = String(e).slice(0, 200); }
@@ -195,9 +210,9 @@ $word.Quit()`;
 
 const clean = (s, fallback) => (String(s || "").replace(/[^A-Za-z0-9]+/g, "_").replace(/^_+|_+$/g, "") || fallback);
 
-export async function runTailor({ jd, company, role }) {
+export async function runTailor({ jd, company, role, pass }) {
   if (!jd || !String(jd).trim()) throw new Error("Paste a job description first.");
-  const composition = await callModel({ jd, company, role });
+  const composition = await callModel({ jd, company, role, pass });
   const { spec, errors } = composeResume(composition);
   const badNumbers = coverGuard(composition.cover, jd, `${company} ${role}`);
   if (badNumbers.length) errors.push(`cover letter contains numbers not found in my content or the job description: ${badNumbers.join(", ")}`);

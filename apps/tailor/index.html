@@ -44,6 +44,10 @@
   <label>Job description</label>
   <textarea id="jd" placeholder="Paste the full job description here…"></textarea>
   <button id="run">Tailor it</button>
+  <div id="keybox" style="display:none">
+    <label>Apply passphrase — the same one /apply uses (asked once per browser)</label>
+    <input type="password" id="pass" placeholder="passphrase" autocomplete="off" />
+  </div>
   <div class="err" id="err"></div>
 
   <div class="out" id="out">
@@ -61,6 +65,7 @@
 
 <script>
   const $ = (id) => document.getElementById(id);
+  const PASS_KEY = "careeros-apply-key";
   let last = null;
 
   const showFiles = (slug, files) => {
@@ -73,12 +78,14 @@
 
   $("run").onclick = async () => {
     $("err").textContent = ""; $("out").style.display = "none";
+    const pass = localStorage.getItem(PASS_KEY) || $("pass").value.trim();
     $("run").disabled = true; $("run").textContent = "Working (30–90s)…";
     try {
       const r = await fetch("/api/tailor", { method: "POST", headers: { "content-type": "application/json" },
-        body: JSON.stringify({ jd: $("jd").value, company: $("company").value, role: $("role").value }) });
+        body: JSON.stringify({ jd: $("jd").value, company: $("company").value, role: $("role").value, pass }) });
       const data = await r.json();
       if (!r.ok || data.error) throw new Error(data.error || r.status);
+      if (pass) { localStorage.setItem(PASS_KEY, pass); $("keybox").style.display = "none"; }
       last = data;
       showFiles(data.slug, data.files);
       showPages(data.pages);
@@ -86,7 +93,10 @@
       $("warn").textContent = (data.warnings || []).join("\n");
       $("letter").value = [data.composition.cover.greeting, "", ...data.composition.cover.paragraphs].join("\n\n").replace(/\n{3,}/g, "\n\n");
       $("out").style.display = "block";
-    } catch (e) { $("err").textContent = String(e.message || e); }
+    } catch (e) {
+      $("err").textContent = String(e.message || e);
+      if (/passphrase/i.test(String(e.message || e))) { localStorage.removeItem(PASS_KEY); $("keybox").style.display = "block"; $("pass").focus(); }
+    }
     $("run").disabled = false; $("run").textContent = "Tailor it";
   };
 

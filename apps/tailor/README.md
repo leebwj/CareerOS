@@ -16,13 +16,14 @@ cd apps/tailor
 node server.mjs        # → http://localhost:5177
 ```
 
-Needs `../resume/resume-data.mjs` (private, gitignored), Word on Windows for the PDF
-export and page check (docx still builds without it), and a `.env`:
+or double-click `start.cmd`, which starts the server and opens the page.
 
-```
-ANTHROPIC_API_KEY=sk-ant-…
-# ANTHROPIC_MODEL=claude-sonnet-5   (optional; defaults to the apply-helper's model)
-```
+Needs `../resume/resume-data.mjs` (private, gitignored) and Word on Windows for the PDF
+export and page check (docx still builds without it). No API key needed on the machine:
+the page asks once for the apply passphrase (the same one `/apply` uses) and the model
+call is relayed through `leebrian.dev/api/tailor`, where the key lives. A local `.env`
+with `ANTHROPIC_API_KEY=sk-ant-…` switches to direct API calls (`ANTHROPIC_MODEL`
+optional).
 
 `MOCK=1 node server.mjs` runs the whole pipeline with a canned composition (no API
 calls); `node tailor-core.mjs --selftest` does the same end-to-end from the terminal.
