@@ -1,19 +1,30 @@
 // Tailor — compose a job-targeted résumé from the real résumé blocks, write a
 // fact-guarded cover letter, and render both through the same pipeline as the
-// real résumés (docx-gen → docx → Word COM → PDF, one-page check).
+// real résumés (docx-gen → docx → Word COM → PDF, one-page check). The
+// composition logic lives in the shared lib so the web page runs the same code.
 //
 //   node tailor-core.mjs --selftest     (MOCK end-to-end run, no model call)
 
 import { buildDocx } from "../resume/docx-gen.mjs";
-import { variants, blocks } from "../resume/resume-data.mjs";
+import {
+  SYSTEM, buildUser,
+  catalog as catalogOf, composeResume as composeResumeOf,
+  coverGuard as coverGuardOf, composeLetter as composeLetterOf,
+} from "../portfolio/public/tailor/lib.js";
+import { buildData } from "./data.mjs";
 import { mkdirSync, rmSync, existsSync, readFileSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { execSync } from "node:child_process";
-import { SYSTEM, buildUser } from "./prompt.mjs";
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 export const OUT = join(ROOT, "out");
+const DATA = buildData();
+
+export const catalog = () => catalogOf(DATA);
+export const composeResume = (c) => composeResumeOf(DATA, c);
+export const coverGuard = (cover, jd, extra = "") => coverGuardOf(DATA, cover, jd, extra);
+export const composeLetter = (cover) => composeLetterOf(DATA, cover);
 
 export function loadEnv() {
   try {
@@ -22,99 +33,6 @@ export function loadEnv() {
       if (m && !process.env[m[1]]) process.env[m[1]] = m[2];
     }
   } catch {}
-}
-
-// ── catalog: a plain-text view of the blocks for the model ──────────────────
-const textOf = (runs) => runs.map((r) => r.t).join("");
-const entryView = (paras) => ({
-  head: textOf(paras[0].left),
-  when: textOf(paras[0].right),
-  bullets: paras.slice(1).map((p) => textOf(p.runs)),
-});
-const lastHeadingIndex = (paras) => paras.reduce((a, p, i) => (p.kind === "heading" ? i : a), -1);
-export const skillLinesOf = (v) => variants[v].paras.slice(lastHeadingIndex(variants[v].paras) + 1);
-export const skillsHeadingOf = (v) => variants[v].paras[lastHeadingIndex(variants[v].paras)].text;
-
-export function catalog() {
-  const map = (obj) => Object.fromEntries(Object.entries(obj).map(([k, v]) => [k, entryView(v)]));
-  return {
-    variants: Object.keys(variants),
-    alephAngles: Object.fromEntries(Object.entries(blocks.ALEPH).map(([k, v]) => [k, entryView(v).bullets])),
-    experience: map(blocks.SHARED),
-    projects: map(blocks.PROJECTS),
-    skills: Object.fromEntries(Object.keys(variants).map((v) => [v, { heading: skillsHeadingOf(v), lines: skillLinesOf(v).map((p) => textOf(p.runs)) }])),
-    coursework: blocks.COURSES,
-  };
-}
-
-// ── composition → résumé spec (verbatim blocks only, so it cannot lie) ──────
-export function composeResume(c) {
-  const errors = [];
-  const aleph = blocks.ALEPH[c.aleph] || (errors.push(`unknown internship angle "${c.aleph}"`), blocks.ALEPH.ENG);
-  const course = blocks.COURSES[c.coursework] || (errors.push(`unknown coursework "${c.coursework}"`), blocks.COURSES.ENG);
-  const seen = new Set();
-  const expParas = (Array.isArray(c.experience) ? c.experience : []).flatMap((id) => {
-    if (seen.has(id)) return [];
-    seen.add(id);
-    if (!blocks.SHARED[id]) { errors.push(`unknown experience "${id}"`); return []; }
-    return blocks.SHARED[id];
-  });
-  const projParas = [];
-  for (const p of Array.isArray(c.projects) ? c.projects.slice(0, 3) : []) {
-    const B = blocks.PROJECTS[p?.id];
-    if (!B) { errors.push(`unknown project "${p?.id}"`); continue; }
-    const bullets = B.slice(1);
-    const idxs = (Array.isArray(p.bullets) && p.bullets.length ? p.bullets : bullets.map((_, i) => i)).filter((i) => Number.isInteger(i) && bullets[i]);
-    projParas.push(B[0], ...idxs.map((i) => bullets[i]));
-  }
-  if (!projParas.length) errors.push("no valid projects chosen");
-  const sLines = (Array.isArray(c.skills) ? c.skills.slice(0, 5) : []).flatMap((s) => {
-    const lines = variants[s?.variant] ? skillLinesOf(s.variant) : null;
-    if (!lines || !lines[s.index]) { errors.push(`unknown skills line ${JSON.stringify(s)}`); return []; }
-    return [lines[s.index]];
-  }).map((p, i) => (i === 0 ? { ...p, before: 2 } : p));
-  if (sLines.length < 3) errors.push("fewer than 3 skills lines chosen");
-  const spec = {
-    font: "Calibri", sizePt: blocks.SIZES, marginIn: 0.45,
-    paras: [
-      ...blocks.NAME_CONTACT,
-      ...blocks.education(course),
-      { kind: "heading", text: "Experience" },
-      ...aleph,
-      ...expParas,
-      { kind: "heading", text: "Projects" },
-      ...projParas,
-      { kind: "heading", text: String(c.skillsHeading || "Technical Skills").slice(0, 40) },
-      ...sLines,
-    ],
-  };
-  return { spec, errors };
-}
-
-// ── cover letter: generated text, but its numbers must come from somewhere real ──
-const digits = (s) => (String(s).match(/\d[\d,.]*/g) || []).map((n) => n.replace(/\D/g, "")).filter(Boolean);
-export function coverGuard(cover, jd, extra = "") {
-  const source = new Set(digits(JSON.stringify(catalog()) + " " + jd + " " + extra + " " + new Date().getFullYear()));
-  const bad = [];
-  for (const p of [cover?.greeting || "", ...(cover?.paragraphs || [])])
-    for (const n of digits(p)) if (!source.has(n)) bad.push(n);
-  return [...new Set(bad)];
-}
-
-export function composeLetter(cover) {
-  const date = new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
-  return {
-    font: "Calibri", sizePt: { body: 11, name: 18, heading: 12, contact: 10 }, marginIn: 0.9,
-    paras: [
-      ...blocks.NAME_CONTACT,
-      { kind: "gap", pts: 10 },
-      { kind: "plain", runs: [{ t: date }] },
-      { kind: "plain", runs: [{ t: String(cover.greeting || "Dear Hiring Team,").slice(0, 90) }], before: 10 },
-      ...(cover.paragraphs || []).slice(0, 4).map((t) => ({ kind: "plain", runs: [{ t: String(t).slice(0, 1200) }], before: 8 })),
-      { kind: "plain", runs: [{ t: "Sincerely," }], before: 12 },
-      { kind: "plain", runs: [{ t: "Brian Wonjun Lee", b: true }], before: 2 },
-    ],
-  };
 }
 
 // ── the model call (or MOCK) ────────────────────────────────────────────────
@@ -168,8 +86,8 @@ function mockComposition({ jd = "", company = "Company" }) {
     base, coursework: base === "Design" ? "DES" : "ENG", aleph,
     experience: ["BITMANGO", "PENNSPARK", "MILITARY", "ITFARM"],
     projects: projIds.map((id) => ({ id })),
-    skillsHeading: skillsHeadingOf(base),
-    skills: skillLinesOf(base).map((_, i) => ({ variant: base, index: i })),
+    skillsHeading: DATA.skills[base].heading,
+    skills: DATA.skills[base].lines.map((_, i) => ({ variant: base, index: i })),
     whyFit: "Mock run — pipeline check without a model call.",
     cover: { greeting: `Dear ${company} team,`, paragraphs: ["Mock paragraph one.", "Mock paragraph two.", "Mock paragraph three."] },
   };

@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Tailor</title>
+<style>
+  :root { --bg:#0b0c0e; --card:#15171a; --card2:#101215; --ink:#f4f5f7; --muted:#828c99; --faint:#545c66; --line:#23262b; --cobalt:#6f88cf; --deep:#9aafe2; }
+  * { box-sizing:border-box; margin:0; }
+  body { background:var(--bg); color:var(--ink); font:15px/1.55 "Segoe UI", system-ui, sans-serif; padding:40px 20px; }
+  .wrap { max-width:860px; margin:0 auto; }
+  h1 { font-size:22px; letter-spacing:-.01em; }
+  h1 span { color:var(--cobalt); }
+  p.sub { color:var(--muted); font-size:14px; margin:6px 0 24px; }
+  label { display:block; font-size:12px; text-transform:uppercase; letter-spacing:.1em; color:var(--faint); margin:16px 0 6px; }
+  input, textarea { width:100%; background:var(--card); border:1px solid var(--line); border-radius:8px; color:var(--ink); padding:10px 12px; font:inherit; outline:none; }
+  input:focus, textarea:focus { border-color:var(--cobalt); }
+  textarea { min-height:220px; resize:vertical; }
+  .row { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  button { margin-top:18px; background:var(--ink); color:var(--bg); border:0; border-radius:8px; padding:11px 18px; font:600 14px/1 inherit; cursor:pointer; }
+  button:hover { background:var(--cobalt); }
+  button:disabled { opacity:.5; cursor:wait; }
+  button.ghost { background:none; border:1px solid var(--line); color:var(--ink); }
+  button.ghost:hover { border-color:var(--ink); }
+  .out { margin-top:26px; border-top:1px solid var(--line); padding-top:20px; display:none; }
+  .files { display:flex; flex-wrap:wrap; gap:10px; }
+  .files a, .files button.doc { display:inline-block; margin:0; color:var(--deep); font-weight:600; text-decoration:none; background:none; border:1px solid var(--line); border-radius:8px; padding:9px 13px; font-size:14px; cursor:pointer; }
+  .files a:hover, .files button.doc:hover { border-color:var(--cobalt); background:none; color:var(--deep); }
+  .why { background:var(--card2); border:1px solid var(--line); border-radius:8px; padding:12px 14px; color:var(--muted); font-size:14px; margin-top:12px; }
+  .warn { color:#e2b45a; font-size:13.5px; margin-top:10px; white-space:pre-wrap; }
+  .err { color:#e05c5c; font-size:14px; margin-top:14px; white-space:pre-wrap; }
+  .letter textarea { min-height:180px; margin-top:6px; }
+  .meta { color:var(--faint); font-size:13px; margin-top:8px; }
+  #gate { max-width:420px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Tailor<span>.</span></h1>
+  <p class="sub">Paste the job, get a one-page résumé and a cover letter aligned to it. The résumé is composed only from my real content; the letter's numbers are checked against it.</p>
+
+  <div id="gate">
+    <label>Apply passphrase — the same one /apply uses (asked once per browser)</label>
+    <input type="password" id="pass" placeholder="passphrase" autocomplete="off" />
+    <button id="unlock">Unlock</button>
+  </div>
+
+  <div id="tool" style="display:none">
+    <div class="row">
+      <div><label>Company</label><input id="company" placeholder="Riot Games" /></div>
+      <div><label>Role</label><input id="role" placeholder="Software Engineer Intern — Graphics" /></div>
+    </div>
+    <label>Job description</label>
+    <textarea id="jd" placeholder="Paste the full job description here…"></textarea>
+    <button id="run">Tailor it</button>
+  </div>
+  <div class="err" id="err"></div>
+
+  <div class="out" id="out">
+    <div class="files" id="files"></div>
+    <div class="meta" id="pages"></div>
+    <div class="why" id="why"></div>
+    <div class="warn" id="warn"></div>
+    <div class="letter">
+      <label>Cover letter (edit, then rebuild)</label>
+      <textarea id="letter"></textarea>
+      <button class="ghost" id="rebuild">Rebuild letter</button>
+    </div>
+  </div>
+</div>
+
+<script type="module">
+  import { SYSTEM, buildUser, catalog, composeResume, coverGuard, composeLetter } from "/tailor/lib.js";
+  import { buildDocxBytes } from "/tailor/docx.js";
+
+  const $ = (id) => document.getElementById(id);
+  const PASS_KEY = "careeros-apply-key";
+  let pass = null, data = null, last = null;
+  const urls = [];
+
+  const err = (m) => { $("err").textContent = m; };
+  const escapeHtml = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  const clean = (s, fb) => (String(s || "").replace(/[^A-Za-z0-9]+/g, "_").replace(/^_+|_+$/g, "") || fb);
+
+  async function fetchData(p) {
+    const r = await fetch("/api/tailor-data", { headers: { "x-apply-key": p } });
+    const body = await r.json();
+    if (!r.ok || body.error) throw new Error(body.error || r.status);
+    return body;
+  }
+
+  async function unlock(p, silent) {
+    try {
+      data = await fetchData(p);
+      pass = p;
+      try { localStorage.setItem(PASS_KEY, p); } catch (e) {}
+      $("gate").style.display = "none";
+      $("tool").style.display = "block";
+      err("");
+    } catch (e) {
+      try { localStorage.removeItem(PASS_KEY); } catch (e2) {}
+      if (!silent) err(String(e.message || e));
+    }
+  }
+
+  $("unlock").onclick = () => unlock($("pass").value.trim(), false);
+  $("pass").addEventListener("keydown", (e) => { if (e.key === "Enter") $("unlock").click(); });
+  try { const saved = localStorage.getItem(PASS_KEY); if (saved) unlock(saved, true); } catch (e) {}
+
+  async function callModel({ jd, company, role }) {
+    const user = buildUser({ jd, company, role, catalogJson: JSON.stringify(catalog(data)) });
+    let lastErr = "";
+    for (let attempt = 0; attempt < 2; attempt++) {
+      const r = await fetch("/api/tailor", {
+        method: "POST",
+        headers: { "content-type": "application/json", "x-apply-key": pass },
+        body: JSON.stringify({ system: SYSTEM, user: attempt === 0 ? user : `${user}\n\nYour previous reply failed to parse: ${lastErr}. Reply with ONLY the JSON object.`, maxTokens: 3500 }),
+      });
+      const body = await r.json();
+      if (!r.ok || body.error) throw new Error(body.error || r.status);
+      try {
+        return JSON.parse(String(body.text || "").trim().replace(/^```(?:json)?\s*/i, "").replace(/\s*```$/, ""));
+      } catch (e) { lastErr = String(e).slice(0, 200); }
+    }
+    throw new Error(`The model did not return valid JSON (${lastErr}).`);
+  }
+
+  // print-view of a spec: an approximation of the Word layout for the browser's
+  // save-as-PDF; the docx download stays the exact ATS artifact
+  function runsHtml(runs, basePt) {
+    return runs.map((r) => {
+      let t = escapeHtml(r.t);
+      if (r.pt && r.pt !== basePt) t = `<span style="font-size:${r.pt}pt">${t}</span>`;
+      if (r.i) t = `<i>${t}</i>`;
+      if (r.b) t = `<b>${t}</b>`;
+      if (r.link) t = `<a href="${escapeHtml(r.link)}">${t}</a>`;
+      return t;
+    }).join("");
+  }
+
+  function specHtml(spec, title) {
+    const S = spec.sizePt, B = S.body, m = spec.marginIn;
+    const paras = spec.paras.map((p) => {
+      const before = p.before != null ? `margin-top:${p.before}pt;` : "";
+      switch (p.kind) {
+        case "name": return `<p class="name">${escapeHtml(p.text)}</p>`;
+        case "contact": return `<p class="contact">${runsHtml(p.runs, S.contact)}</p>`;
+        case "heading": return `<p class="heading" style="margin-top:${p.before ?? 3}pt">${escapeHtml(p.text)}</p>`;
+        case "twocol": return `<p class="twocol" style="margin-top:${p.before ?? 4}pt"><span>${runsHtml(p.left, B)}</span><span class="right">${runsHtml(p.right, B)}</span></p>`;
+        case "bullet": return `<p class="bullet">${runsHtml(p.runs, B)}</p>`;
+        case "plain": return `<p style="${before}${p.after != null ? `margin-bottom:${p.after}pt;` : ""}">${runsHtml(p.runs, B)}</p>`;
+        case "gap": return `<p style="margin-bottom:${p.pts ?? 2}pt">&nbsp;</p>`;
+      }
+    }).join("\n");
+    return `<!doctype html><html><head><meta charset="utf-8"><title>${escapeHtml(title)}</title><style>
+      @page { size: Letter; margin: 0 }
+      html, body { margin:0; padding:0 }
+      body { font-family: Calibri, Carlito, "Segoe UI", sans-serif; font-size:${B}pt; line-height:1.09; color:#000; background:#fff; width:8.5in; padding:${m}in; }
+      p { margin:0 }
+      a { color:#1155cc }
+      .name { text-align:center; font-weight:700; font-size:${S.name}pt; margin-bottom:1pt }
+      .contact { text-align:center; font-size:${S.contact}pt; margin-bottom:2pt }
+      .heading { font-weight:700; font-variant:small-caps; letter-spacing:.3pt; font-size:${S.heading}pt; border-bottom:.75pt solid #000; margin-bottom:2pt }
+      .twocol { display:flex; justify-content:space-between; gap:12pt }
+      .twocol .right { white-space:nowrap }
+      .bullet { padding-left:.25in; text-indent:-.15in }
+      .bullet::before { content:"•\\00a0\\00a0" }
+    </style></head><body>${paras}</body></html>`;
+  }
+
+  function printSpec(spec, title) {
+    const w = window.open("", "_blank");
+    if (!w) { err("Allow pop-ups to print — or use the docx download."); return; }
+    w.document.write(specHtml(spec, title));
+    w.document.close();
+    w.addEventListener("load", () => setTimeout(() => w.print(), 150));
+  }
+
+  function overflowEstimate(spec) {
+    const holder = document.createElement("div");
+    holder.style.cssText = "position:absolute;left:-9999px;top:0;background:#fff";
+    holder.innerHTML = specHtml(spec, "measure").replace(/^[\s\S]*<body>/, "<div>").replace(/<\/body>[\s\S]*$/, "</div>");
+    document.body.appendChild(holder);
+    const inner = holder.firstElementChild;
+    inner.style.cssText = `font-family:Calibri,Carlito,'Segoe UI',sans-serif;font-size:${spec.sizePt.body}pt;line-height:1.09;color:#000;width:${8.5 - 2 * spec.marginIn}in`;
+    const px = inner.getBoundingClientRect().height;
+    holder.remove();
+    return px / (96 * (11 - 2 * spec.marginIn));
+  }
+
+  const DOCX_MIME = "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
+  function docxUrl(spec) {
+    const url = URL.createObjectURL(new Blob([buildDocxBytes(spec)], { type: DOCX_MIME }));
+    urls.push(url);
+    return url;
+  }
+
+  function showOutputs() {
+    urls.splice(0).forEach((u) => URL.revokeObjectURL(u));
+    const co = clean($("company").value, "Job");
+    const rName = `Brian_Lee_Resume_${co}`, lName = `Brian_Lee_Cover_Letter_${co}`;
+    $("files").innerHTML =
+      `<a href="${docxUrl(last.resumeSpec)}" download="${rName}.docx">${rName}.docx</a>` +
+      `<button class="doc" id="printResume">résumé → PDF</button>` +
+      `<a href="${docxUrl(last.letterSpec)}" download="${lName}.docx">${lName}.docx</a>` +
+      `<button class="doc" id="printLetter">letter → PDF</button>`;
+    $("printResume").onclick = () => printSpec(last.resumeSpec, rName);
+    $("printLetter").onclick = () => printSpec(last.letterSpec, lName);
+    const est = overflowEstimate(last.resumeSpec);
+    $("pages").textContent = est > 1.02 ? "résumé looks longer than one page — trim bullets or entries, or check in Word" : "résumé fits one page (browser estimate — the docx in Word is the reference)";
+  }
+
+  $("run").onclick = async () => {
+    err(""); $("out").style.display = "none";
+    $("run").disabled = true; $("run").textContent = "Working (30–90s)…";
+    try {
+      const jd = $("jd").value, company = $("company").value, role = $("role").value;
+      if (!jd.trim()) throw new Error("Paste a job description first.");
+      const composition = await callModel({ jd, company, role });
+      const { spec, errors } = composeResume(data, composition);
+      const badNumbers = coverGuard(data, composition.cover, jd, `${company} ${role}`);
+      if (badNumbers.length) errors.push(`cover letter contains numbers not found in my content or the job description: ${badNumbers.join(", ")}`);
+      if (errors.length) throw new Error("Rejected the model's composition:\n- " + errors.join("\n- "));
+      last = { composition, resumeSpec: spec, letterSpec: composeLetter(data, composition.cover) };
+      $("why").textContent = `Base: ${composition.base} · ${composition.whyFit || ""}`;
+      $("warn").textContent = "";
+      $("letter").value = [composition.cover.greeting, "", ...composition.cover.paragraphs].join("\n\n").replace(/\n{3,}/g, "\n\n");
+      showOutputs();
+      $("out").style.display = "block";
+    } catch (e) {
+      err(String(e.message || e));
+      if (/passphrase/i.test(String(e.message || e))) {
+        try { localStorage.removeItem(PASS_KEY); } catch (e2) {}
+        $("tool").style.display = "none"; $("gate").style.display = "block"; $("pass").focus();
+      }
+    }
+    $("run").disabled = false; $("run").textContent = "Tailor it";
+  };
+
+  $("rebuild").onclick = () => {
+    if (!last) return;
+    const lines = $("letter").value.split(/\n\s*\n/).map((s) => s.trim()).filter(Boolean);
+    const cover = { greeting: lines[0] || "Dear Hiring Team,", paragraphs: lines.slice(1) };
+    const badNumbers = coverGuard(data, cover, $("jd").value, `${$("company").value} ${$("role").value}`);
+    $("warn").textContent = badNumbers.length ? `numbers not found in my content or the job description: ${badNumbers.join(", ")} — double-check them.` : "";
+    last.letterSpec = composeLetter(data, cover);
+    showOutputs();
+  };
+</script>
+</body>
+</html>

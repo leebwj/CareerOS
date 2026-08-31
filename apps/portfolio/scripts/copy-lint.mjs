@@ -12,7 +12,7 @@ import { join } from "node:path";
 
 const ROOT = "dist";
 // frozen / out-of-scope trees: the classic design, the private tools, the art board, 404
-const SKIP = /^dist\/(classic|prep|tracker|apply|art)(\/|$)/;
+const SKIP = /^dist\/(classic|prep|tracker|apply|tailor|art)(\/|$)/;
 const norm = (p) => p.replace(/\\/g, "/");
 const files = [];
 const walk = (dir) => {
