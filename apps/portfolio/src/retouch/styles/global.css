@@ -536,3 +536,6 @@ html[data-mode="light"] .hero-name { color: var(--color-ink); mix-blend-mode: no
 html[data-dev] .dchip { display: flex; }
 html[data-dev] .intro-pick { display: flex; }
 @media (max-width: 767px) { html[data-dev] .intro-pick { display: none; } }
+
+/* subtitle trial sits one row above the intro picker */
+.sub-pick { bottom: calc(clamp(1.1rem, 3vw, 2rem) + 46px); }
