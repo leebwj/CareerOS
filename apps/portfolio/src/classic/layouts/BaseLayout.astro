@@ -86,8 +86,9 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
       </div>
     </footer>
 
-    <!-- design switch: this is the original tree; "polished" maps to the same page in the retouched design -->
-    <div class="dchip" role="group" aria-label="Design switch">
+    <!-- design switch: this is the original tree; "polished" maps to the same page in the
+         retouched design. Shown only on my own browsers (?dev turns it on, ?dev=0 off). -->
+    <div class="dchip" role="group" aria-label="Design switch" hidden>
       <span>Design</span>
       <a href="/" class="dchip__opt" data-design="new">polished</a>
       <span class="dchip__sep">·</span>
@@ -96,6 +97,11 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
     <script is:inline>
       (() => {
         const chip = document.querySelector(".dchip"); if (!chip) return;
+        try {
+          const q = new URLSearchParams(location.search);
+          if (q.has("dev")) { if (q.get("dev") === "0") localStorage.removeItem("bl-dev"); else localStorage.setItem("bl-dev", "1"); }
+          if (localStorage.getItem("bl-dev")) chip.removeAttribute("hidden");
+        } catch (e) {}
         const p = location.pathname;
         const m = p.match(/^\/classic(\/work\/[^/]+\/?)$/);
         chip.querySelector('[data-design="new"]').href = m ? m[1] : "/";
