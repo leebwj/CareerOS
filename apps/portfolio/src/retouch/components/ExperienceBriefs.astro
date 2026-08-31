@@ -15,6 +15,7 @@ const clip = (s: string) => {
   const cut = s.split(/ — |: | – /)[0];
   return cut.length > 110 ? cut.slice(0, 107).replace(/\s+\S*$/, "") + "…" : cut;
 };
+const points = (p: Project) => p.briefPoints ?? highlights(p).map(clip);
 ---
 
 {items.map((p) => (
@@ -27,6 +28,6 @@ const clip = (s: string) => {
       </div>
     </header>
     <p class="about-brief__line">{p.line}</p>
-    {highlights(p).length > 0 && <ul class="about-brief__points">{highlights(p).map((pt) => <li>{clip(pt)}</li>)}</ul>}
+    {points(p).length > 0 && <ul class="about-brief__points">{points(p).map((pt) => <li>{pt}</li>)}</ul>}
   </article>
 ))}

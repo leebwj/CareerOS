@@ -105,6 +105,7 @@ export interface Project {
   blurb: string;
   line: string; // 2026 card one-liner, ≤ 20 words
   who: string; // role/team in one phrase: "Solo", "Team of 3; I owned …"
+  briefPoints?: string[]; // About-hover brief bullets; falls back to clipped "what I worked on" items
   short?: string; // ≤ 8 words, for the hero ledger
   tech: string[];
   // detail page
@@ -934,6 +935,11 @@ export const projects: Project[] = [
     blurb: "Software engineering intern at a Y Combinator (F25) startup, where I shipped an app-wide redesign, built the product's lifecycle notification system and then made it run unattended, and packaged the company's AI character as an SDK outside studios can build on.",
     line: "Shipped an app-wide React Native redesign, built the lifecycle notification system and made it run unattended, and packaged the in-game AI agent as an SDK.",
     who: "Software engineer intern",
+    briefPoints: [
+      "App-wide React Native redesign from Figma to production, carrying a 33-section design system",
+      "A lifecycle notification system that clears its own guardrails and sends unattended",
+      "The in-game AI agent packaged as an SDK: 1,301 tests, proven by an outside builder shipping on it",
+    ],
     tech: [],
     metrics: [
       { value: "3", label: "production systems shipped" },
@@ -985,6 +991,11 @@ export const projects: Project[] = [
     blurb: "Red-team project lead and product designer at Penn's student product studio, where 15+ designers and developers shipped client-facing 0→1 products on every semester cycle.",
     line: "Lead a team of 15+ designers and developers shipping client products each semester.",
     who: "Project lead, product designer",
+    briefPoints: [
+      "Red team lead: 15+ designers and developers shipping a client product every semester",
+      "End-to-end user flows, interaction patterns, and the interface system that keeps them consistent",
+      "Also rebuilt pennspark.org itself; the case study is in Selected Work",
+    ],
     tech: [],
     metrics: [],
     blocks: [
@@ -1023,6 +1034,11 @@ export const projects: Project[] = [
     blurb: "Software engineering intern who kept 50+ live Unity mobile titles shipping: 100+ QA-reported bugs cleared into production, and the whole portfolio held compliant through a platform requirement change.",
     line: "Kept 50+ live Unity titles shipping; 100+ QA-reported bugs fixed in production.",
     who: "Software engineer intern",
+    briefPoints: [
+      "50+ live Unity puzzle titles kept shipping across a 420M-download portfolio",
+      "100+ QA-reported bugs fixed in production prefabs and C# scripts",
+      "SDK and platform-module upgrades that kept every title compliant in the stores",
+    ],
     tech: [],
     metrics: [],
     blocks: [
@@ -1059,6 +1075,11 @@ export const projects: Project[] = [
     blurb: "Database engineering intern who made semiconductor data from 20+ client companies queryable, designing SQL tooling over million-row datasets in Oracle and SQLite.",
     line: "SQL tooling over 1M+ semiconductor records from 20+ client companies.",
     who: "Database engineer intern",
+    briefPoints: [
+      "A SQL prototype managing 1M+ semiconductor data entities in Oracle and SQLite",
+      "Datasets from 20+ client companies made queryable, including Samsung, SK, and LG",
+      "Query optimization for faster retrieval across million-row tables",
+    ],
     tech: [],
     metrics: [],
     blocks: [
