@@ -536,3 +536,7 @@ html[data-mode="light"] .hero-name { color: var(--color-ink); mix-blend-mode: no
 html[data-dev] .dchip { display: flex; }
 html[data-dev] .intro-pick { display: flex; }
 @media (max-width: 767px) { html[data-dev] .intro-pick { display: none; } }
+
+/* card reels sit over the still and fade in once playing */
+.proj-reel { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .35s ease; pointer-events: none; }
+.proj-reel.on { opacity: 1; }

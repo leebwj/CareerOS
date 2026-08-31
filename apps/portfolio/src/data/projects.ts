@@ -106,6 +106,7 @@ export interface Project {
   line: string; // 2026 card one-liner, ≤ 20 words
   who: string; // role/team in one phrase: "Solo", "Team of 3; I owned …"
   briefPoints?: string[]; // About-hover brief bullets; falls back to clipped "what I worked on" items
+  reel?: { mp4: string; webm?: string }; // short muted loop that plays over the card thumbnail
   short?: string; // ≤ 8 words, for the hero ledger
   tech: string[];
   // detail page

@@ -137,6 +137,12 @@ const viewCfg = views.map((v) => ({ id: v.id, path: v.path, order: v.order, resu
                         densities={[1, 2]}
                       />
                     : <div class="proj-cover-live">{p.title}</div>}
+                  {p.reel && (
+                    <video class="proj-reel" muted playsinline loop preload="metadata" width="660" height="495" aria-hidden="true">
+                      {p.reel.webm && <source src={p.reel.webm} type="video/webm" />}
+                      <source src={p.reel.mp4} type="video/mp4" />
+                    </video>
+                  )}
                 </div>
                 <div class="proj-head">
                   <h3 class="proj-title" style={`view-transition-name: title-${p.slug}`}>{p.title}</h3>
@@ -221,6 +227,26 @@ const viewCfg = views.map((v) => ({ id: v.id, path: v.path, order: v.order, resu
       </div>
     </footer>
   </main>
+
+  <!-- card reels: hover-play on fine pointers, in-view play on touch; stills under reduced motion -->
+  <script is:inline>
+    (() => {
+      const vids = Array.from(document.querySelectorAll(".proj-reel"));
+      if (!vids.length || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      const start = (v) => v.play().then(() => v.classList.add("on")).catch(() => {});
+      const stop = (v) => { v.classList.remove("on"); v.pause(); };
+      if (matchMedia("(pointer: fine)").matches) {
+        vids.forEach((v) => {
+          const card = v.closest(".proj");
+          card.addEventListener("pointerenter", () => start(v));
+          card.addEventListener("pointerleave", () => { stop(v); v.currentTime = 0; });
+        });
+      } else {
+        const io = new IntersectionObserver((es) => es.forEach((e) => (e.isIntersecting ? start(e.target) : stop(e.target))), { threshold: 0.55 });
+        vids.forEach((v) => io.observe(v));
+      }
+    })();
+  </script>
 
   <!-- intro style switch: sets html[data-intro], remembered across visits -->
   <script is:inline>
