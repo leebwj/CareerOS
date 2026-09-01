@@ -38,7 +38,7 @@
 <body>
 <div class="wrap">
   <h1>Tailor<span>.</span></h1>
-  <p class="sub">Paste the job, get a one-page résumé and a cover letter aligned to it. The résumé is composed only from my real content; the letter's numbers are checked against it.</p>
+  <p class="sub">Paste the job, get a one-page résumé and a cover letter aligned to it, then log the application to the tracker. The résumé is composed only from my real content; the letter's numbers are checked against it.</p>
 
   <div id="gate">
     <label>Apply passphrase — the same one /apply uses (asked once per browser)</label>
@@ -50,6 +50,10 @@
     <div class="row">
       <div><label>Company</label><input id="company" placeholder="Riot Games" /></div>
       <div><label>Role</label><input id="role" placeholder="Software Engineer Intern — Graphics" /></div>
+    </div>
+    <div class="row">
+      <div><label>Job posting URL — used by the tracker</label><input id="jobUrl" placeholder="https://…" /></div>
+      <div><label>Location</label><input id="loc" placeholder="Los Angeles, CA" /></div>
     </div>
     <label>Job description</label>
     <textarea id="jd" placeholder="Paste the full job description here…"></textarea>
@@ -67,11 +71,15 @@
       <textarea id="letter"></textarea>
       <button class="ghost" id="rebuild">Rebuild letter</button>
     </div>
+    <div style="margin-top:18px; border-top:1px solid var(--line); padding-top:6px">
+      <button class="ghost" id="logTrk">Submitted it? Log to the tracker as Applied</button>
+      <div class="meta" id="trkMsg"></div>
+    </div>
   </div>
 </div>
 
 <script type="module">
-  import { SYSTEM, buildUser, catalog, composeResume, coverGuard, composeLetter } from "/tailor/lib.js";
+  import { SYSTEM, buildUser, catalog, composeResume, coverGuard, composeLetter, viewForBase } from "/tailor/lib.js";
   import { buildDocxBytes } from "/tailor/docx.js";
 
   const $ = (id) => document.getElementById(id);
@@ -222,8 +230,9 @@
       const badNumbers = coverGuard(data, composition.cover, jd, `${company} ${role}`);
       if (badNumbers.length) errors.push(`cover letter contains numbers not found in my content or the job description: ${badNumbers.join(", ")}`);
       if (errors.length) throw new Error("Rejected the model's composition:\n- " + errors.join("\n- "));
-      last = { composition, resumeSpec: spec, letterSpec: composeLetter(data, composition.cover) };
-      $("why").textContent = `Base: ${composition.base} · ${composition.whyFit || ""}`;
+      const view = viewForBase(composition.base);
+      last = { composition, resumeSpec: spec, letterSpec: composeLetter(data, composition.cover, view) };
+      $("why").textContent = `Base: ${composition.base} · portfolio view for this application: leebrian.dev/${view} (the résumé's link already points there) · ${composition.whyFit || ""}`;
       $("warn").textContent = "";
       $("letter").value = [composition.cover.greeting, "", ...composition.cover.paragraphs].join("\n\n").replace(/\n{3,}/g, "\n\n");
       showOutputs();
@@ -244,8 +253,75 @@
     const cover = { greeting: lines[0] || "Dear Hiring Team,", paragraphs: lines.slice(1) };
     const badNumbers = coverGuard(data, cover, $("jd").value, `${$("company").value} ${$("role").value}`);
     $("warn").textContent = badNumbers.length ? `numbers not found in my content or the job description: ${badNumbers.join(", ")} — double-check them.` : "";
-    last.letterSpec = composeLetter(data, cover);
+    last.letterSpec = composeLetter(data, cover, viewForBase(last.composition.base));
     showOutputs();
+  };
+
+  // ── tracker logging — the same state the tracker itself keeps ─────────────
+  // /tailor and /tracker share the leebrian.dev origin, so this writes the
+  // tracker's own localStorage AND pushes through the same /api/sync proxy.
+  // Pull-merge-push: a fresh browser must never clobber the sheet, so the
+  // remote state is adopted first (the tracker's own union rule) and only then
+  // does the new job go in.
+  const TRK = "careeros-tracker-v1";
+  const ROLES_URL = "https://raw.githubusercontent.com/leebwj/CareerOS/main/apps/role-grabber/data/roles.json";
+  const jobKey = (co, title, loc) => (co + "|" + title + "|" + (loc || "")).toLowerCase().replace(/\s+/g, " ");
+  const addBizDays = (iso, n) => {
+    const d = new Date(iso + "T12:00:00");
+    for (let left = n; left > 0; ) { d.setDate(d.getDate() + 1); const w = d.getDay(); if (w !== 0 && w !== 6) left--; }
+    return d.toISOString().slice(0, 10);
+  };
+
+  async function logToTracker() {
+    const company = $("company").value.trim(), role = $("role").value.trim();
+    const loc = $("loc").value.trim(), url = $("jobUrl").value.trim();
+    if (!company || !role) throw new Error("Company and role are needed to log the job.");
+
+    let state = { s: {}, hidden: {} };
+    try { state = { s: {}, hidden: {}, ...JSON.parse(localStorage.getItem(TRK) || "{}") }; } catch (e) {}
+    try {
+      const p = await (await fetch("/api/sync")).json();
+      const remote = p && p.state ? JSON.parse(p.state) : null;
+      const remoteN = remote ? Object.keys(remote.s || {}).length : 0;
+      if (remoteN && (Object.keys(state.s).length === 0 || (remote.updated || 0) > (state.updated || 0))) {
+        const localOnly = Object.fromEntries(Object.entries(state.s).filter(([k]) => !(remote.s || {})[k]));
+        state = { s: { ...(remote.s || {}), ...localOnly }, hidden: { ...(state.hidden || {}), ...(remote.hidden || {}) }, updated: remote.updated || Date.now() };
+      }
+    } catch (e) { /* sheet unreachable — still log locally; the tracker pushes later */ }
+
+    const today = new Date().toISOString().slice(0, 10);
+    const k = jobKey(company, role, loc);
+    const prev = state.s[k] || {};
+    state.s[k] = { ...prev, st: prev.st || "Applied", date: prev.date || today, url: url || prev.url,
+      fu: prev.fu || addBizDays(today, 8), fuN: prev.fuN || 1 };
+    state.updated = Date.now();
+    try { localStorage.setItem(TRK, JSON.stringify(state)); } catch (e) {}
+
+    // readable rows, same shape the tracker pushes (feed metadata where a key matches)
+    let roles = [];
+    try { roles = await (await fetch(ROLES_URL)).json(); } catch (e) {}
+    const byKey = {}; roles.forEach((r) => { byKey[jobKey(r.company, r.title, (r.locations || [])[0])] = r; });
+    const rows = Object.entries(state.s).map(([kk, s]) => {
+      const r = byKey[kk] || {}; const [co, title, lc] = kk.split("|");
+      return [r.company || co, r.title || title, r.category || "", r.level || "", r.term || "",
+        (r.locations && r.locations[0]) || lc || "", s.st || (s.star ? "Starred" : ""),
+        s.date || "", s.fu || "", s.notes || "", r.fit ?? "", r.url || s.url || ""];
+    });
+    const body = "payload=" + encodeURIComponent(JSON.stringify({ state: JSON.stringify(state), rows }));
+    const r2 = await fetch("/api/sync", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body });
+    const p2 = await r2.json().catch(() => ({}));
+    if (!r2.ok || p2.error) throw new Error(p2.appsScript || p2.error || "sheet write failed — the job is saved in this browser; open /tracker to retry the sync");
+    return { key: k, prev: !!prev.st };
+  }
+
+  $("logTrk").onclick = async () => {
+    $("logTrk").disabled = true; $("trkMsg").textContent = "Logging…";
+    try {
+      const { prev } = await logToTracker();
+      $("trkMsg").innerHTML = (prev ? "Already tracked — kept its stage and details. " : "Logged as Applied, follow-up date set. ")
+        + `<a href="/tracker" style="color:var(--deep)">Open the tracker</a>`;
+    } catch (e) { $("trkMsg").textContent = String(e.message || e); }
+    $("logTrk").disabled = false;
   };
 </script>
 </body>
