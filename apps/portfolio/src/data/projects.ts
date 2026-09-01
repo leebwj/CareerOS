@@ -90,7 +90,10 @@ export type Block =
   | { type: "stats"; label?: string; items: { value: string; label: string }[] }
   | { type: "quote"; text: string; cite?: string }
   | { type: "media"; label?: string; layout?: "full" | "half" | "third"; ratio?: string; bare?: boolean; items: MediaItem[] }
-  | { type: "code"; label?: string; heading?: string; file?: string; code: string; note?: string };
+  | { type: "code"; label?: string; heading?: string; file?: string; code: string; note?: string }
+  // inline SVG: technical diagrams live in the page rather than as raster assets so
+  // they stay crisp at any zoom and follow the viewer's theme via currentColor
+  | { type: "svg"; label?: string; heading?: string; svg: string; caption?: string };
 
 export interface Project {
   slug: string;
@@ -461,8 +464,90 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
   },
 
   {
-    slug: "art-of-web",
+    slug: "mini-maya",
     order: 3,
+    title: "Mini Maya",
+    tagline: "A mesh editor built from pointers up — half-edge topology, live editing, and Catmull–Clark subdivision in C++ and OpenGL.",
+    motif: "grid",
+    cats: ["graphics", "engineering"],
+    kind: "engineering",
+    date: "Feb – Mar 2026",
+    context: "CIS 4600 · Interactive Computer Graphics, Penn",
+    role: "Solo · data structure, topology operations, subdivision, Qt GUI",
+    tools: ["C++", "OpenGL", "GLSL", "Qt", "GLM"],
+    metaExtra: { label: "Course", value: "CIS 4600 · Adam Mally" },
+    links: { github: "https://github.com/CIS4600-Spring-2026/homework-06-half-edge-mesh-leebwj" },
+    repoNote: "University repository — private per course policy. Happy to walk through the code directly.",
+    img: null,
+    blurb:
+      "A Maya-style mesh editor written from scratch in C++ and OpenGL. An indexed vertex buffer can draw a mesh but cannot answer \"what is next to this?\" — so the mesh is stored as a half-edge graph instead, which makes every neighbour a pointer hop away and turns edge splits, face triangulation and Catmull–Clark subdivision into local operations rather than full rebuilds.",
+    tech: ["C++", "OpenGL", "Qt", "GLSL"],
+    metrics: [
+      { value: "3", label: "interlinked pointer classes" },
+      { value: "253", label: "lines of Catmull–Clark" },
+      { value: "8→98", label: "cube vertices, 2 subdivisions" },
+      { value: "6", label: "traversal debug keys" },
+    ],
+    blocks: [
+      { type: "prose", label: "Overview", body: [
+        "Mini Maya is a mesh editor in the mould of Autodesk Maya or Blender: load an OBJ, click any vertex, edge or face, edit it, and subdivide the whole surface into something smooth. It was built over two assignments for Penn's CIS 4600 — the first laid down the data structure and the renderer, the second added the editing operations and Catmull–Clark subdivision.",
+        "The interesting part is not the UI. It is that the mesh is not stored the way a renderer wants it. A GPU wants a flat array of vertices and an index buffer; that is enough to draw triangles and useless for anything else. Ask an index buffer which faces touch this vertex, or which face is on the other side of this edge, and it has no answer — you would have to scan the whole buffer. Every operation in this editor depends on being able to answer exactly those questions.",
+      ] },
+      { type: "media", label: "The editor", layout: "full", items: [
+        { placeholder: "GIF 1 — loading an OBJ and orbiting the mesh", caption: "Mini Maya with a mesh loaded; the three Qt lists on the right hold every vertex, half-edge and face in the mesh." },
+      ] },
+      { type: "prose", heading: "Why a half-edge graph", body: [
+        "The half-edge structure splits every edge into two directed halves, one belonging to each of the two faces that share it. That sounds like bookkeeping and it is, but it buys a property that matters: from any half-edge, every neighbour is one pointer away. No search, no scan, and the cost does not grow with the size of the mesh.",
+        "Each half-edge stores four pointers, and those four are enough to reconstruct the entire neighbourhood of anything you can click on.",
+      ] },
+      { type: "code", file: "meshcomponents.h", code: "class HalfEdge : public QListWidgetItem {\nprivate:\n    static int s_nextId;   // shared counter for unique ids\n    int    m_id;\n    HalfEdge* mp_next;     // next half-edge in this face's loop\n    HalfEdge* mp_sym;      // the opposite half-edge, in the adjacent face\n    Face*     mp_face;     // the face this half-edge lies on\n    Vertex*   mp_vert;     // the vertex between this half-edge and mp_next\n    ...\n};", note: "Vertex and Face are symmetric — each keeps a position or colour, a unique id, and a pointer to one half-edge that touches it. All three inherit QListWidgetItem, so the mesh IS the GUI list: selecting a row selects the component." },
+      { type: "svg", svg: "<svg viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"Two adjacent faces sharing an edge. The highlighted half-edge stores four pointers: next, sym, vert and face.\">\n  <defs>\n    <marker id=\"mmAr\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\">\n      <path d=\"M0 0 L10 5 L0 10 z\" fill=\"currentColor\"/>\n    </marker>\n    <marker id=\"mmArD\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M0 0 L10 5 L0 10 z\" fill=\"currentColor\" opacity=\".45\"/>\n    </marker>\n  </defs>\n  <g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" opacity=\".28\">\n    <path d=\"M90 60 L370 60 L370 240 L90 240 Z\"/>\n    <path d=\"M370 60 L650 60 L650 240 L370 240 Z\"/>\n  </g>\n  <g font-family=\"ui-monospace, monospace\" font-size=\"12\" fill=\"currentColor\">\n    <text x=\"200\" y=\"150\" opacity=\".45\">FACE A</text>\n    <text x=\"487\" y=\"150\" opacity=\".45\">FACE B</text>\n  </g>\n  <!-- the highlighted half-edge: up the shared edge, inset into face A -->\n  <path d=\"M356 232 L356 68\" stroke=\"currentColor\" stroke-width=\"3\" fill=\"none\" marker-end=\"url(#mmAr)\"/>\n  <!-- its next, along the top of face A -->\n  <path d=\"M348 68 L104 68\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#mmAr)\" opacity=\".75\"/>\n  <!-- its sym: down the shared edge, inset into face B -->\n  <path d=\"M384 68 L384 232\" stroke=\"currentColor\" stroke-width=\"2\" stroke-dasharray=\"5 4\" fill=\"none\" marker-end=\"url(#mmArD)\" opacity=\".6\"/>\n  <g fill=\"currentColor\">\n    <circle cx=\"370\" cy=\"60\" r=\"5\"/>\n    <circle cx=\"370\" cy=\"240\" r=\"3.5\" opacity=\".4\"/>\n  </g>\n  <g font-family=\"ui-monospace, monospace\" font-size=\"12.5\" fill=\"currentColor\">\n    <text x=\"300\" y=\"160\" font-weight=\"700\">he</text>\n    <text x=\"188\" y=\"56\">he-&gt;next()</text>\n    <text x=\"396\" y=\"160\" opacity=\".7\">he-&gt;sym()</text>\n    <text x=\"384\" y=\"44\" font-weight=\"700\">he-&gt;vert()</text>\n    <text x=\"196\" y=\"176\" opacity=\".7\">he-&gt;face()</text>\n  </g>\n  <g stroke=\"currentColor\" stroke-width=\"1\" opacity=\".35\" fill=\"none\">\n    <path d=\"M232 170 L232 150\"/>\n  </g>\n  <text x=\"90\" y=\"285\" font-family=\"ui-monospace, monospace\" font-size=\"11\" fill=\"currentColor\" opacity=\".55\">one half-edge = one direction along one edge, belonging to exactly one face</text>\n</svg>", caption: "One half-edge, and the four pointers it stores. Walking next repeatedly circles a face; hopping sym crosses into the neighbouring one." },
+      { type: "prose", heading: "Making the invisible clickable", body: [
+        "A pointer graph is hard to debug because you cannot see it. So the editor draws it: the selected vertex, half-edge or face renders on top of the mesh with depth testing switched off, so it is visible even through geometry, and the keyboard walks the graph directly.",
+        "This turned out to be the most useful thing in the project. Every topology bug I hit — a sym pointer left dangling, a next loop that never closed — was found by selecting a component and pressing keys until the highlight went somewhere it should not have.",
+      ] },
+      { type: "list", heading: "Traversal keys", items: [
+        "N — move to this half-edge's next, walking around the face",
+        "M — jump to its sym, crossing into the adjacent face",
+        "F — select the face this half-edge lies on",
+        "V — select the vertex it points to",
+        "H — from a selected vertex, jump to one of its half-edges",
+        "Shift+H — from a selected face, jump to one of its half-edges",
+      ] },
+      { type: "media", label: "Traversal and debugging", layout: "half", items: [
+        { placeholder: "GIF 2 — pressing N, N, N then M", caption: "Walking a face loop with next, then crossing the shared edge with sym." },
+        { placeholder: "GIF 3 — vertex → H, face → Shift+H", caption: "Selection overlays draw through geometry with depth testing disabled." },
+      ] },
+      { type: "prose", heading: "Editing topology, not just geometry", body: [
+        "Moving a vertex is easy — it is one position. Changing what the mesh is made of is the harder problem, because every operation has to leave the pointer graph consistent or everything downstream breaks.",
+        "Splitting an edge inserts a midpoint vertex and has to create two new half-edges, rewire four next pointers and re-pair two syms. Triangulating a face fans it into triangles, each of which needs its own face record and its own closed loop of half-edges. Both were written so the mesh is never left half-updated: the new components are built first, then linked in.",
+      ] },
+      { type: "media", label: "Topology operations", layout: "full", items: [
+        { placeholder: "GIF 4 — splitting a half-edge, then triangulating a face", caption: "Split inserts a midpoint and rewires the loop; triangulate fans an n-gon into triangles. Both update the Qt lists live." },
+      ] },
+      { type: "prose", heading: "Catmull–Clark subdivision", body: [
+        "Subdivision is where the data structure pays for itself. Catmull–Clark smooths a mesh by replacing every face with a grid of smaller quads, and every step of it is a neighbourhood query — exactly what the half-edge graph makes cheap.",
+        "It runs in four passes. Each face gets a centroid. Each edge gets a point averaged from its two endpoints and the two centroids beside it. Each original vertex is pulled inward toward its neighbours. Then every face is quadrangulated: one new quad per original corner, stitched to the centroid and the two adjacent edge points.",
+      ] },
+      { type: "svg", svg: "<svg viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"The four steps of Catmull-Clark subdivision: face points, edge points, vertex smoothing, and quadrangulation.\">\n  \n  <g transform=\"translate(0 0)\">\n    <text x=\"0\" y=\"16\" font-family=\"ui-monospace, monospace\" font-size=\"11\" fill=\"currentColor\" opacity=\".55\">1 · FACE POINT</text>\n    <path d=\"M20 44 L140 44 L140 164 L20 164 Z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" opacity=\"1\"/><circle cx=\"20\" cy=\"44\" r=\"4\" fill=\"currentColor\" opacity=\"1\"/><circle cx=\"140\" cy=\"44\" r=\"4\" fill=\"currentColor\" opacity=\"1\"/><circle cx=\"140\" cy=\"164\" r=\"4\" fill=\"currentColor\" opacity=\"1\"/><circle cx=\"20\" cy=\"164\" r=\"4\" fill=\"currentColor\" opacity=\"1\"/><circle cx=\"80\" cy=\"104\" r=\"5\" fill=\"currentColor\"/><text x=\"88\" y=\"108\" font-family=\"ui-monospace, monospace\" font-size=\"10\" fill=\"currentColor\" opacity=\".6\">centroid</text>\n  </g>\n  \n  <g transform=\"translate(195 0)\">\n    <text x=\"0\" y=\"16\" font-family=\"ui-monospace, monospace\" font-size=\"11\" fill=\"currentColor\" opacity=\".55\">2 · EDGE POINTS</text>\n    <path d=\"M20 44 L140 44 L140 164 L20 164 Z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" opacity=\"0.5\"/><circle cx=\"20\" cy=\"44\" r=\"4\" fill=\"currentColor\" opacity=\"0.5\"/><circle cx=\"140\" cy=\"44\" r=\"4\" fill=\"currentColor\" opacity=\"0.5\"/><circle cx=\"140\" cy=\"164\" r=\"4\" fill=\"currentColor\" opacity=\"0.5\"/><circle cx=\"20\" cy=\"164\" r=\"4\" fill=\"currentColor\" opacity=\"0.5\"/><circle cx=\"80\" cy=\"104\" r=\"4\" fill=\"currentColor\" opacity=\".5\"/><circle cx=\"80\" cy=\"44\" r=\"4.5\" fill=\"currentColor\"/><circle cx=\"140\" cy=\"104\" r=\"4.5\" fill=\"currentColor\"/><circle cx=\"80\" cy=\"164\" r=\"4.5\" fill=\"currentColor\"/><circle cx=\"20\" cy=\"104\" r=\"4.5\" fill=\"currentColor\"/>\n  </g>\n  \n  <g transform=\"translate(390 0)\">\n    <text x=\"0\" y=\"16\" font-family=\"ui-monospace, monospace\" font-size=\"11\" fill=\"currentColor\" opacity=\".55\">3 · SMOOTH ORIGINALS</text>\n    <path d=\"M20 44 L140 44 L140 164 L20 164 Z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" opacity=\"0.25\"/><path d=\"M34 58 L126 58 L126 150 L34 150 Z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><circle cx=\"34\" cy=\"58\" r=\"4\" fill=\"currentColor\"/><circle cx=\"126\" cy=\"58\" r=\"4\" fill=\"currentColor\"/><circle cx=\"126\" cy=\"150\" r=\"4\" fill=\"currentColor\"/><circle cx=\"34\" cy=\"150\" r=\"4\" fill=\"currentColor\"/><circle cx=\"20\" cy=\"44\" r=\"3\" fill=\"currentColor\" opacity=\".22\"/><circle cx=\"140\" cy=\"44\" r=\"3\" fill=\"currentColor\" opacity=\".22\"/><circle cx=\"140\" cy=\"164\" r=\"3\" fill=\"currentColor\" opacity=\".22\"/><circle cx=\"20\" cy=\"164\" r=\"3\" fill=\"currentColor\" opacity=\".22\"/>\n  </g>\n  \n  <g transform=\"translate(585 0)\">\n    <text x=\"0\" y=\"16\" font-family=\"ui-monospace, monospace\" font-size=\"11\" fill=\"currentColor\" opacity=\".55\">4 · QUADRANGULATE</text>\n    <g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M20 44 L140 44 L140 164 L20 164 Z\"/><path d=\"M80 44 L80 164\"/><path d=\"M20 104 L140 104\"/></g><circle cx=\"20\" cy=\"44\" r=\"3.5\" fill=\"currentColor\"/><circle cx=\"140\" cy=\"44\" r=\"3.5\" fill=\"currentColor\"/><circle cx=\"140\" cy=\"164\" r=\"3.5\" fill=\"currentColor\"/><circle cx=\"20\" cy=\"164\" r=\"3.5\" fill=\"currentColor\"/><circle cx=\"80\" cy=\"44\" r=\"3.5\" fill=\"currentColor\"/><circle cx=\"140\" cy=\"104\" r=\"3.5\" fill=\"currentColor\"/><circle cx=\"80\" cy=\"164\" r=\"3.5\" fill=\"currentColor\"/><circle cx=\"20\" cy=\"104\" r=\"3.5\" fill=\"currentColor\"/><circle cx=\"80\" cy=\"104\" r=\"3.5\" fill=\"currentColor\"/>\n  </g>\n  <text x=\"0\" y=\"205\" font-family=\"ui-monospace, monospace\" font-size=\"11\" fill=\"currentColor\" opacity=\".55\">one quad becomes four; every new vertex has valence 4, which is why repeated subdivision converges</text>\n</svg>", caption: "The four passes. After one round every vertex has four edges, which is why repeated subdivision converges toward a smooth surface instead of wandering." },
+      { type: "prose", body: [
+        "The mesh grows fast — a cube goes from 8 vertices and 6 faces to 26 and 24 after one round, then 98 and 96 after two, and the assignment's benchmark was subdividing a cow model in under ten seconds. Because the vertex, edge and face passes each read the mesh before any of them writes to it, the new positions are computed into hash maps keyed on the original components and only applied once the whole mesh is rebuilt. Smoothing in place would feed half-updated positions into the next vertex's average.",
+      ] },
+      { type: "media", label: "Subdivision", layout: "full", items: [
+        { placeholder: "GIF 5 — cube subdivided three times, Qt counts visible", caption: "A cube converging toward a sphere. The vertex, half-edge and face lists update after every pass." },
+      ] },
+      { type: "prose", heading: "What I would change", body: [
+        "The components are raw interlinked pointers held alive by vectors of unique_ptr, which is the shape the assignment asks for and the shape that makes the traversal read clearly. It also means a wrong rewire is a dangling pointer rather than a caught error. If I built this again I would put an index-based handle in front of the pointers — the traversal reads the same, but a stale handle is checkable and a stale pointer is a crash.",
+        "The renderer also rebuilds and re-uploads the entire vertex buffer after every edit, because each face duplicates its vertices to keep per-face colour and flat normals. That is fine at homework scale and wrong at any other: a real editor would upload only the touched range.",
+      ] },
+      { type: "prose", label: "Note", body: [
+        "Coursework for CIS 4600 (Interactive Computer Graphics) at Penn, taught by Adam Mally. The repository is private under course policy — I am glad to walk through the half-edge implementation or the subdivision code directly.",
+      ] },
+    ],
+  },
+  {
+    slug: "art-of-web",
+    order: 4,
     title: "Art of the Web",
     tagline: "A semester of coursework you explore instead of scroll, rebuilt as one interactive Three.js world.",
     motif: "orbit",
@@ -545,7 +630,7 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
 
   {
     slug: "penn-spark-redesign",
-    order: 4,
+    order: 5,
     title: "Penn Spark Redesign",
     tagline: "A club site the team can run without an engineer, taken from Figma to a live Next.js rebuild.",
     motif: "grid",
@@ -634,7 +719,7 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
 
   {
     slug: "path-at-penn",
-    order: 5,
+    order: 6,
     title: "Path@Penn Redesign",
     tagline: "Course registration students can plan inside of, instead of fight — a self-directed overhaul of Penn's portal.",
     motif: "path",
@@ -758,7 +843,7 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
 
   {
     slug: "road-rogue",
-    order: 6,
+    order: 7,
     title: "Road Rogue",
     tagline: "How far an AI-assisted pipeline can actually carry a game: Meshy for the assets, Codex for the logic, Three.js to tie it together.",
     motif: "road",
@@ -823,7 +908,7 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
 
   {
     slug: "capsule",
-    order: 7,
+    order: 8,
     title: "Capsule",
     tagline: "Memories you walk through instead of scroll: photos and messages locked until a chosen date, then opened inside a 3D gallery.",
     motif: "orbit",
@@ -878,7 +963,7 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
 
   {
     slug: "wikipedia",
-    order: 8,
+    order: 9,
     title: "Wikipedia Redesign",
     tagline: "Redesigning the world's largest encyclopedia around how people actually read it.",
     motif: "grid",
@@ -965,7 +1050,7 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
 
   {
     slug: "dewey",
-    order: 9,
+    order: 10,
     title: "Dewey",
     tagline: "Taking a book-discovery startup from web MVP to a working iOS app, as design lead of the Penn Spark client team.",
     motif: "grid",
@@ -1057,7 +1142,7 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
 
   {
     slug: "playground",
-    order: 9,
+    order: 10,
     title: "Playground",
     tagline: "A childhood game character that reacts to you in the browser — modeled, textured and rigged in Maya, then wired to live input.",
     motif: "waves",

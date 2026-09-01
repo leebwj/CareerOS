@@ -146,6 +146,13 @@ const linkList = [
                 {b.note && <p>{b.note}</p>}
               </div>
             )}
+            {b.type === "svg" && (
+              <figure class="cs-diagram">
+                {b.heading && <h2 class="cs-block__heading">{b.heading}</h2>}
+                <div class="cs-diagram__art" set:html={b.svg} />
+                {b.caption && <figcaption>{b.caption}</figcaption>}
+              </figure>
+            )}
             {b.type === "stats" && (
               <div class="cs-stats">{b.items.map((s) => <div class="cs-stat"><span class="cs-stat__n">{s.value}</span><span class="cs-stat__l">{s.label}</span></div>)}</div>
             )}
@@ -390,6 +397,12 @@ const linkList = [
     .cs-media-row--third { grid-template-columns: repeat(3, 1fr); }
   }
   .cs-media--bare :where(img) { box-shadow: none; border-radius: 0; }
+   /* inline technical diagrams — drawn with currentColor so they invert with the
+      theme, and capped in width so a wide schematic stays readable on mobile */
+   .cs-diagram { margin: 2.25rem 0; }
+   .cs-diagram__art { width: 100%; overflow-x: auto; }
+   .cs-diagram__art :where(svg) { display: block; width: 100%; height: auto; max-width: 780px; margin-inline: auto; color: var(--ink); }
+   .cs-diagram :where(figcaption) { margin-top: 0.85rem; font-size: 0.85rem; line-height: 1.6; color: var(--faint); text-align: center; text-wrap: pretty; }
   .cs-media figure { margin: 0; }
   .cs-media :where(img) { width: 100%; height: auto; border-radius: 12px; display: block; box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--color-cobalt) 14%, transparent); }
   .cs-media figcaption, .cs-featured figcaption { margin-top: .6rem; font-family: var(--font-mono); font-size: 12.5px; letter-spacing: .02em; color: var(--color-faint); line-height: 1.45; }
