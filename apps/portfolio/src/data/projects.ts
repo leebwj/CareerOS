@@ -4,8 +4,16 @@ import miniMinecraftImg from "../assets/work/mini-minecraft.png";
 import pennSparkImg from "../assets/work/penn-spark.png";
 import pathImg from "../assets/work/path-at-penn.png";
 import roadRogueImg from "../assets/work/road-rogue.png";
-import artOfWebImg from "../assets/work/art-of-web.png";
-import playgroundImg from "../assets/work/playground.jpg";
+import thPassenger from "../assets/work/thumbs/passenger.webp";
+import thMinecraft from "../assets/work/thumbs/mini-minecraft.webp";
+import thArtOfWeb from "../assets/work/thumbs/art-of-web.webp";
+import thSpark from "../assets/work/thumbs/penn-spark.webp";
+import thPath from "../assets/work/thumbs/path-at-penn.webp";
+import thRogue from "../assets/work/thumbs/road-rogue.webp";
+import thCapsule from "../assets/work/thumbs/capsule.webp";
+import thWiki from "../assets/work/thumbs/wikipedia.webp";
+import thDewey from "../assets/work/thumbs/dewey.webp";
+import thPlayground from "../assets/work/thumbs/playground.webp";
 import pathDashboard from "../assets/work/path-at-penn/dashboard.png";
 import pathCourse from "../assets/work/path-at-penn/course.png";
 import pathSchedule from "../assets/work/path-at-penn/schedule.png";
@@ -40,6 +48,17 @@ import pgTrainExtOn from "../assets/work/passenger/train-ext-on.png";
 import pgTrainIntOff from "../assets/work/passenger/train-int-off.png";
 import pgTrainIntOn from "../assets/work/passenger/train-int-on.png";
 import miniMayaImg from "../assets/work/mini-maya.png";
+import mmEditorCow from "../assets/work/mini-maya/editor-cow.png";
+import mmSelectHe from "../assets/work/mini-maya/select-halfedge.png";
+import mmTraverseNext from "../assets/work/mini-maya/traverse-next.png";
+import mmSelectFace from "../assets/work/mini-maya/select-face.png";
+import mmSelectVert from "../assets/work/mini-maya/select-vertex.png";
+import mmTriangulate from "../assets/work/mini-maya/triangulate.png";
+import mmSplit from "../assets/work/mini-maya/split-edge.png";
+import mmSub0 from "../assets/work/mini-maya/sub-0.png";
+import mmSub1 from "../assets/work/mini-maya/sub-1.png";
+import mmSub3 from "../assets/work/mini-maya/sub-3.png";
+import mmCowSub from "../assets/work/mini-maya/cow-subdivided.png";
 import mcGrassland from "../assets/work/mini-minecraft/grassland.png";
 import mcBiomeBorder from "../assets/work/mini-minecraft/biome-border.png";
 import mcWaterLake from "../assets/work/mini-minecraft/water-lake.png";
@@ -150,6 +169,7 @@ export const projects: Project[] = [
     metaExtra: { label: "Output", value: "Cinematic · 2560×1080" },
     links: { video: "https://youtu.be/mSnqY3R2d-E" },
     img: passengerImg,
+    thumb: thPassenger,
     alt: "Passenger — a canyon rendered with an anisotropic Kuwahara painterly shader",
     blurb: "A cinematic Unreal Engine 5 short that gets a game engine to output frames you would read as oil paint. A figure walks a canyon, finds a train swallowed by roots, and picks up something that briefly opens the world backward — carried by custom HLSL shaders, including an anisotropic Kuwahara filter, over Lumen GI and hardware ray tracing.",
     line: "A cinematic short in Unreal 5 with a hand-written anisotropic Kuwahara post-process over Lumen GI.",
@@ -307,6 +327,7 @@ export const projects: Project[] = [
     links: { video: "https://www.youtube.com/watch?v=_NExgS0mZgM" },
     repoNote: "This was a university class project, so the repo is kept private, but I'm happy to walk through the code on request.",
     img: miniMinecraftImg,
+    thumb: thMinecraft,
     alt: "Mini Minecraft — procedurally generated terrain at dusk",
     blurb: "A 3D voxel engine written from scratch in C++/OpenGL, where everything that makes the world feel inhabited is hand-built: seven procedural biomes blended from layered Perlin/FBM noise, 3D caves, PCF shadow mapping, screen-space reflections, a day-night cycle, multithreaded chunk streaming, and an A*-pathfinding NPC ecosystem.",
     line: "A voxel engine from scratch in C++/OpenGL: 7 procedural biomes, 3D caves, PCF shadow maps, SSR, day–night.",
@@ -497,7 +518,7 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
         "The interesting part is not the UI. It is that the mesh is not stored the way a renderer wants it. A GPU wants a flat array of vertices and an index buffer; that is enough to draw triangles and useless for anything else. Ask an index buffer which faces touch this vertex, or which face is on the other side of this edge, and it has no answer — you would have to scan the whole buffer. Every operation in this editor depends on being able to answer exactly those questions.",
       ] },
       { type: "media", label: "The editor", layout: "full", items: [
-        { placeholder: "GIF 1 — loading an OBJ and orbiting the mesh", caption: "Mini Maya with a mesh loaded; the three Qt lists on the right hold every vertex, half-edge and face in the mesh." },
+        { src: mmEditorCow, alt: "Mini Maya with the cow model loaded, its 2,903 vertices listed on the right", caption: "The cow model loaded from OBJ, face-coloured. The three lists on the right hold every vertex, half-edge and face — 2,903 vertices and 5,804 faces, each one clickable." },
       ] },
       { type: "prose", heading: "Why a half-edge graph", body: [
         "The half-edge structure splits every edge into two directed halves, one belonging to each of the two faces that share it. That sounds like bookkeeping and it is, but it buys a property that matters: from any half-edge, every neighbour is one pointer away. Walking a face is a loop over next; crossing into the neighbouring face is a single sym. Neither cost depends on how big the mesh is.",
@@ -518,15 +539,18 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
         "Shift+H — from a selected face, jump to one of its half-edges",
       ] },
       { type: "media", label: "Traversal and debugging", layout: "half", items: [
-        { placeholder: "GIF 2 — pressing N, N, N then M", caption: "Walking a face loop with next, then crossing the shared edge with sym." },
-        { placeholder: "GIF 3 — vertex → H, face → Shift+H", caption: "Selection overlays draw through geometry with depth testing disabled." },
+        { src: mmSelectHe, alt: "A half-edge selected in the list and highlighted on the mesh", caption: "HalfEdge 10 selected: the list row and the edge itself light up together." },
+        { src: mmTraverseNext, alt: "The selection after pressing N twice, two edges further around the face", caption: "After N, N — two hops around the same face loop." },
+        { src: mmSelectFace, alt: "A face selected and outlined on the mesh", caption: "A face, outlined through the geometry." },
+        { src: mmSelectVert, alt: "A single vertex selected and marked on the mesh", caption: "A single vertex. Depth testing is off, so the marker shows even when the surface is in front of it." },
       ] },
       { type: "prose", heading: "Editing topology, not just geometry", body: [
         "Moving a vertex is easy — it is one position. Changing what the mesh is made of is the harder problem, because every operation has to leave the pointer graph consistent or everything downstream breaks.",
         "Splitting an edge inserts a midpoint vertex and has to create two new half-edges, rewire four next pointers and re-pair two syms. Triangulating a face fans it into triangles, each of which needs its own face record and its own closed loop of half-edges. Both were written so the mesh is never left half-updated: the new components are built first, then linked in.",
       ] },
-      { type: "media", label: "Topology operations", layout: "full", items: [
-        { placeholder: "GIF 4 — splitting a half-edge, then triangulating a face", caption: "Split inserts a midpoint and rewires the loop; triangulate fans an n-gon into triangles. Both update the Qt lists live." },
+      { type: "media", label: "Topology operations", layout: "half", items: [
+        { src: mmSplit, alt: "The dodecahedron after splitting a half-edge", caption: "Split: a midpoint vertex inserted, two new half-edges created and the loop rewired around it." },
+        { src: mmTriangulate, alt: "A pentagonal face fanned into triangles", caption: "Triangulate: a pentagon fanned into triangles, each with its own face record and closed half-edge loop." },
       ] },
       { type: "prose", heading: "Catmull–Clark subdivision", body: [
         "Subdivision is where the data structure pays for itself. Catmull–Clark smooths a mesh by replacing every face with a grid of smaller quads, and every step of it is a neighbourhood query — exactly what the half-edge graph makes cheap.",
@@ -539,8 +563,13 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
       { type: "prose", body: [
         "The mesh grows fast — a cube goes from 8 vertices and 6 faces to 26 and 24 after one round, then 98 and 96 after two, and the assignment's benchmark was subdividing a cow model in under ten seconds. Because the vertex, edge and face passes each read the mesh before any of them writes to it, the new positions are computed into hash maps keyed on the original components and only applied once the whole mesh is rebuilt. Smoothing in place would feed half-updated positions into the next vertex's average.",
       ] },
-      { type: "media", label: "Subdivision", layout: "full", items: [
-        { placeholder: "GIF 5 — cube subdivided three times, Qt counts visible", caption: "A cube converging toward a sphere. The vertex, half-edge and face lists update after every pass." },
+      { type: "media", label: "Subdivision", layout: "third", items: [
+        { src: mmSub0, alt: "A cube before subdivision", caption: "The cube: 8 vertices, 6 faces." },
+        { src: mmSub1, alt: "The cube after one round of Catmull-Clark", caption: "One round: 26 vertices, 24 faces." },
+        { src: mmSub3, alt: "The cube after three rounds, nearly a sphere", caption: "Three rounds — converged. The lists grow with it." },
+      ] },
+      { type: "media", label: "On a real model", layout: "full", items: [
+        { src: mmCowSub, alt: "The cow model after one round of Catmull-Clark subdivision", caption: "The cow after one subdivision — the assignment's benchmark was doing this in under ten seconds." },
       ] },
       { type: "prose", heading: "What I would change", body: [
         "The components are raw interlinked pointers held alive by vectors of unique_ptr, which is the shape the assignment asks for and the shape that makes the traversal read clearly. It also means a wrong rewire is a dangling pointer rather than a caught error. If I built this again I would put an index-based handle in front of the pointers — the traversal reads the same, but a stale handle is checkable and a stale pointer is a crash.",
@@ -567,7 +596,7 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
     metaExtra: { label: "Output", value: "Interactive 3D portfolio" },
     links: { live: "https://leebwj.github.io/1020/portfolio/", github: "https://github.com/leebwj/ArtOfTheWeb" },
     img: null,
-    thumb: artOfWebImg,
+    thumb: thArtOfWeb,
     alt: "Art of the Web — interactive Three.js portfolio",
     blurb: "A semester's work turned into a place rather than a list: one Three.js scene where floating GLTF objects with custom physics and GSAP animation become the navigation for eight course projects, from CSS art and generative p5.js sketches to a browser game.",
     line: "A semester of web experiments, navigated through one Three.js scene of floating objects.",
@@ -651,8 +680,7 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
     metaExtra: { label: "Outcome", value: "Shipped · pennspark.org" },
     links: { live: "https://pennspark.org/", deck: "https://www.figma.com/deck/Smncuea22qlU67fbiESZaP" },
     img: pennSparkImg,
-    thumb: psHome,
-    thumbPos: "left center",
+    thumb: thSpark,
     alt: "Penn Spark — redesigned club website homepage",
     blurb: "Penn Spark's website, live at pennspark.org. Led end-to-end as project lead: wireframes and a component system in Figma, then a rebuild off an ageing Gatsby stack onto Next.js + React, with a content system the team updates itself.",
     line: "The club's site, taken from Figma to a Next.js rebuild the team updates without an engineer. Live at pennspark.org.",
@@ -739,6 +767,7 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
     metaExtra: { label: "Deliverable", value: "Hi-fi prototype · 4 surfaces" },
     links: { figma: "https://www.figma.com/proto/DBOeERCANozjTRaP6VYxIb/Brian-Lee---Design?node-id=47-409", deck: "https://www.figma.com/deck/KYlvDCdz7M2VCTRki5Vvag" },
     img: pathImg,
+    thumb: thPath,
     alt: "Path@Penn — redesigned student course-planning dashboard",
     blurb: "A self-directed UX overhaul that turns Penn's dense, fragmented course portal into four connected surfaces (Dashboard, Course, Schedule, Degree), so planning a semester stops being a scavenger hunt across tools.",
     line: "Penn's course portal rebuilt as four connected surfaces, so planning a semester takes one tool.",
@@ -863,6 +892,7 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
     metaExtra: { label: "Platform", value: "HTML · playable" },
     links: { live: "https://leebwj.github.io/0020/Final/index.html", github: "https://github.com/leebwj/RodeRogue" },
     img: roadRogueImg,
+    thumb: thRogue,
     alt: "Road Rogue — 3D car-chase game",
     blurb: "A 3D car-chase game (à la Smashy Road) built to find the limits of AI-assisted creation for a design course: 3D assets from Meshy, logic scaffolded with Codex, assembled in Three.js. It holds up as a game — responsive driving and a survival score that ramps the tension.",
     line: "A browser car-chase game built to see how far Meshy and Codex can carry a playable game.",
@@ -929,6 +959,7 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
     metaExtra: { label: "Stack", value: "Full-stack + 3D web app" },
     links: { github: "https://github.com/leebwj/sp25-penn-time-capsule", figma: "https://www.figma.com/proto/xNLzE7NKvOo9SToBUZtaSn/Penn-Time-Capsule?node-id=913-1430" },
     img: null,
+    thumb: thCapsule,
     alt: "Capsule — a 3D time-capsule reveal gallery",
     blurb: "A collaborative web app where a time capsule stops being a folder and becomes a space — photos, messages and media locked until a chosen date, then revealed through an immersive 3D gallery. Built with React Three Fiber, a Node/MongoDB API, and AWS S3.",
     line: "A time-capsule web app with a 3D reveal gallery in React Three Fiber over a Node/MongoDB API.",
@@ -983,6 +1014,7 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
     metaExtra: { label: "Deliverable", value: "Hi-fi prototype" },
     links: { figma: "https://www.figma.com/proto/vKo7ySkGZW5dliYa44yHwa/Brian-Lee---Design?node-id=103-7273" },
     img: wikiCover,
+    thumb: thWiki,
     alt: "Wikipedia mobile redesign — five redesigned sections",
     blurb: "A research-to-prototype redesign of Wikipedia's mobile interface where testing, not taste, decided the outcome: interviews, a survey and insight synthesis produced three reader personas, then usability sessions with four users reshaped previews, search snippets and AI framing across five sections.",
     line: "A mobile redesign shaped by interviews and four usability sessions: search-first home, a section strip, article snippets.",
@@ -1072,6 +1104,7 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
     links: { live: "https://joindewey.com/" },
     repoNote: "The code and design files belong to the client, so they stay private; the demo below is the working build.",
     img: deweyThumb,
+    thumb: thDewey,
     alt: "Dewey iOS app — feed, recommendations, and shelf screens",
     blurb: "A semester-long client build at Penn Spark: Dewey's social book-discovery web MVP translated into a working iOS app. I led design (and co-led the project): the mobile design system inside the client's brand, five core flows from wireframes to hi-fi, and the handoff the developers built from.",
     line: "Client work: a book-discovery web MVP turned into a working iOS app; I led the design end.",
@@ -1162,7 +1195,7 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
     metaExtra: { label: "Runtime", value: "Interactive · browser (Spline)" },
     links: { live: "https://my.spline.design/untitled-QVRKLSCWxKCmX5aAVZUXDukV/" },
     img: null,
-    thumb: playgroundImg,
+    thumb: thPlayground,
     alt: "Playground — an interactive 3D character scene",
     blurb: "An interactive 3D scene that puts “Boo,” a childhood-game character, within reach: modeled in Maya, textured in Substance Painter, rigged and animated, then wired into Spline so keyboard and mouse input make it react in the browser.",
     line: "Boo, modeled and rigged in Maya, reacting to keyboard and mouse in the browser through Spline.",
