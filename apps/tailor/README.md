@@ -37,3 +37,6 @@ application history.
 Needs `../resume/resume-data.mjs` (private, gitignored) and Word on Windows for the
 PDF export. `MOCK=1 node server.mjs` runs the pipeline with a canned composition;
 `node tailor-core.mjs --selftest` does the same end-to-end from the terminal.
+`node compose.mjs <spec.json>` renders a hand-picked composition (same validation
+and Word pipeline, no model call) — spec is `{ company, role, jd?, composition,
+cover? }`.

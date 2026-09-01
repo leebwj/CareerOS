@@ -97,7 +97,7 @@ function mockComposition({ jd = "", company = "Company" }) {
 const zipDocx = (pkg, docx) =>
   execSync(`powershell -NoProfile -Command "Add-Type -AssemblyName System.IO.Compression.FileSystem; [System.IO.Compression.ZipFile]::CreateFromDirectory('${pkg.replace(/\\/g, "/")}', '${docx.replace(/\\/g, "/")}')"`);
 
-function buildOne(dir, name, spec) {
+export function buildOne(dir, name, spec) {
   const pkg = join(dir, `pkg-${name}`);
   const docx = join(dir, `${name}.docx`);
   if (existsSync(pkg)) rmSync(pkg, { recursive: true });
@@ -108,7 +108,7 @@ function buildOne(dir, name, spec) {
   return docx;
 }
 
-function exportPdfs(dir) {
+export function exportPdfs(dir) {
   const script = `
 $word = New-Object -ComObject Word.Application; $word.Visible = $false
 Get-ChildItem '${dir.replace(/\\/g, "/")}' -Filter *.docx | ForEach-Object {
