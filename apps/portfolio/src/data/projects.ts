@@ -41,6 +41,10 @@ import pgTrainIntOff from "../assets/work/passenger/train-int-off.png";
 import pgTrainIntOn from "../assets/work/passenger/train-int-on.png";
 import miniMayaImg from "../assets/work/mini-maya.png";
 import capsuleImg from "../assets/work/capsule.png";
+import wikiFit from "../assets/work/thumbs/wikipedia-fit.png";
+import deweyFit from "../assets/work/thumbs/dewey-fit.png";
+import playgroundFit from "../assets/work/thumbs/playground-fit.png";
+import pathFit from "../assets/work/thumbs/path-at-penn-fit.png";
 import mmEditorCow from "../assets/work/mini-maya/editor-cow.png";
 import mmDiagHe from "../assets/work/mini-maya/diagram-halfedge.png";
 import mmDiagCC from "../assets/work/mini-maya/diagram-catmull.png";
@@ -765,6 +769,7 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
     metaExtra: { label: "Deliverable", value: "Hi-fi prototype · 4 surfaces" },
     links: { figma: "https://www.figma.com/proto/DBOeERCANozjTRaP6VYxIb/Brian-Lee---Design?node-id=47-409", deck: "https://www.figma.com/deck/KYlvDCdz7M2VCTRki5Vvag" },
     img: pathImg,
+    thumb: pathFit,
     alt: "Path@Penn — redesigned student course-planning dashboard",
     blurb: "A self-directed UX overhaul that turns Penn's dense, fragmented course portal into four connected surfaces (Dashboard, Course, Schedule, Degree), so planning a semester stops being a scavenger hunt across tools.",
     line: "Penn's course portal rebuilt as four connected surfaces, so planning a semester takes one tool.",
@@ -1009,6 +1014,7 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
     metaExtra: { label: "Deliverable", value: "Hi-fi prototype" },
     links: { figma: "https://www.figma.com/proto/vKo7ySkGZW5dliYa44yHwa/Brian-Lee---Design?node-id=103-7273" },
     img: wikiCover,
+    thumb: wikiFit,
     alt: "Wikipedia mobile redesign — five redesigned sections",
     blurb: "A research-to-prototype redesign of Wikipedia's mobile interface where testing, not taste, decided the outcome: interviews, a survey and insight synthesis produced three reader personas, then usability sessions with four users reshaped previews, search snippets and AI framing across five sections.",
     line: "A mobile redesign shaped by interviews and four usability sessions: search-first home, a section strip, article snippets.",
@@ -1098,6 +1104,7 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
     links: { live: "https://joindewey.com/" },
     repoNote: "The code and design files belong to the client, so they stay private; the demo below is the working build.",
     img: deweyThumb,
+    thumb: deweyFit,
     alt: "Dewey iOS app — feed, recommendations, and shelf screens",
     blurb: "A semester-long client build at Penn Spark: Dewey's social book-discovery web MVP translated into a working iOS app. I led design (and co-led the project): the mobile design system inside the client's brand, five core flows from wireframes to hi-fi, and the handoff the developers built from.",
     line: "Client work: a book-discovery web MVP turned into a working iOS app; I led the design end.",
@@ -1188,7 +1195,7 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
     metaExtra: { label: "Runtime", value: "Interactive · browser (Spline)" },
     links: { live: "https://my.spline.design/untitled-QVRKLSCWxKCmX5aAVZUXDukV/" },
     img: null,
-    thumb: playgroundImg,
+    thumb: playgroundFit,
     alt: "Playground — an interactive 3D character scene",
     blurb: "An interactive 3D scene that puts “Boo,” a childhood-game character, within reach: modeled in Maya, textured in Substance Painter, rigged and animated, then wired into Spline so keyboard and mouse input make it react in the browser.",
     line: "Boo, modeled and rigged in Maya, reacting to keyboard and mouse in the browser through Spline.",
