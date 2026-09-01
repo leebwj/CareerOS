@@ -4,16 +4,8 @@ import miniMinecraftImg from "../assets/work/mini-minecraft.png";
 import pennSparkImg from "../assets/work/penn-spark.png";
 import pathImg from "../assets/work/path-at-penn.png";
 import roadRogueImg from "../assets/work/road-rogue.png";
-import thPassenger from "../assets/work/thumbs/passenger.webp";
-import thMinecraft from "../assets/work/thumbs/mini-minecraft.webp";
-import thArtOfWeb from "../assets/work/thumbs/art-of-web.webp";
-import thSpark from "../assets/work/thumbs/penn-spark.webp";
-import thPath from "../assets/work/thumbs/path-at-penn.webp";
-import thRogue from "../assets/work/thumbs/road-rogue.webp";
-import thCapsule from "../assets/work/thumbs/capsule.webp";
-import thWiki from "../assets/work/thumbs/wikipedia.webp";
-import thDewey from "../assets/work/thumbs/dewey.webp";
-import thPlayground from "../assets/work/thumbs/playground.webp";
+import artOfWebImg from "../assets/work/art-of-web.png";
+import playgroundImg from "../assets/work/playground.jpg";
 import pathDashboard from "../assets/work/path-at-penn/dashboard.png";
 import pathCourse from "../assets/work/path-at-penn/course.png";
 import pathSchedule from "../assets/work/path-at-penn/schedule.png";
@@ -169,7 +161,6 @@ export const projects: Project[] = [
     metaExtra: { label: "Output", value: "Cinematic · 2560×1080" },
     links: { video: "https://youtu.be/mSnqY3R2d-E" },
     img: passengerImg,
-    thumb: thPassenger,
     alt: "Passenger — a canyon rendered with an anisotropic Kuwahara painterly shader",
     blurb: "A cinematic Unreal Engine 5 short that gets a game engine to output frames you would read as oil paint. A figure walks a canyon, finds a train swallowed by roots, and picks up something that briefly opens the world backward — carried by custom HLSL shaders, including an anisotropic Kuwahara filter, over Lumen GI and hardware ray tracing.",
     line: "A cinematic short in Unreal 5 with a hand-written anisotropic Kuwahara post-process over Lumen GI.",
@@ -327,7 +318,6 @@ export const projects: Project[] = [
     links: { video: "https://www.youtube.com/watch?v=_NExgS0mZgM" },
     repoNote: "This was a university class project, so the repo is kept private, but I'm happy to walk through the code on request.",
     img: miniMinecraftImg,
-    thumb: thMinecraft,
     alt: "Mini Minecraft — procedurally generated terrain at dusk",
     blurb: "A 3D voxel engine written from scratch in C++/OpenGL, where everything that makes the world feel inhabited is hand-built: seven procedural biomes blended from layered Perlin/FBM noise, 3D caves, PCF shadow mapping, screen-space reflections, a day-night cycle, multithreaded chunk streaming, and an A*-pathfinding NPC ecosystem.",
     line: "A voxel engine from scratch in C++/OpenGL: 7 procedural biomes, 3D caves, PCF shadow maps, SSR, day–night.",
@@ -596,7 +586,7 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
     metaExtra: { label: "Output", value: "Interactive 3D portfolio" },
     links: { live: "https://leebwj.github.io/1020/portfolio/", github: "https://github.com/leebwj/ArtOfTheWeb" },
     img: null,
-    thumb: thArtOfWeb,
+    thumb: artOfWebImg,
     alt: "Art of the Web — interactive Three.js portfolio",
     blurb: "A semester's work turned into a place rather than a list: one Three.js scene where floating GLTF objects with custom physics and GSAP animation become the navigation for eight course projects, from CSS art and generative p5.js sketches to a browser game.",
     line: "A semester of web experiments, navigated through one Three.js scene of floating objects.",
@@ -680,7 +670,8 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
     metaExtra: { label: "Outcome", value: "Shipped · pennspark.org" },
     links: { live: "https://pennspark.org/", deck: "https://www.figma.com/deck/Smncuea22qlU67fbiESZaP" },
     img: pennSparkImg,
-    thumb: thSpark,
+    thumb: psHome,
+    thumbPos: "left center",
     alt: "Penn Spark — redesigned club website homepage",
     blurb: "Penn Spark's website, live at pennspark.org. Led end-to-end as project lead: wireframes and a component system in Figma, then a rebuild off an ageing Gatsby stack onto Next.js + React, with a content system the team updates itself.",
     line: "The club's site, taken from Figma to a Next.js rebuild the team updates without an engineer. Live at pennspark.org.",
@@ -767,7 +758,6 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
     metaExtra: { label: "Deliverable", value: "Hi-fi prototype · 4 surfaces" },
     links: { figma: "https://www.figma.com/proto/DBOeERCANozjTRaP6VYxIb/Brian-Lee---Design?node-id=47-409", deck: "https://www.figma.com/deck/KYlvDCdz7M2VCTRki5Vvag" },
     img: pathImg,
-    thumb: thPath,
     alt: "Path@Penn — redesigned student course-planning dashboard",
     blurb: "A self-directed UX overhaul that turns Penn's dense, fragmented course portal into four connected surfaces (Dashboard, Course, Schedule, Degree), so planning a semester stops being a scavenger hunt across tools.",
     line: "Penn's course portal rebuilt as four connected surfaces, so planning a semester takes one tool.",
@@ -892,7 +882,6 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
     metaExtra: { label: "Platform", value: "HTML · playable" },
     links: { live: "https://leebwj.github.io/0020/Final/index.html", github: "https://github.com/leebwj/RodeRogue" },
     img: roadRogueImg,
-    thumb: thRogue,
     alt: "Road Rogue — 3D car-chase game",
     blurb: "A 3D car-chase game (à la Smashy Road) built to find the limits of AI-assisted creation for a design course: 3D assets from Meshy, logic scaffolded with Codex, assembled in Three.js. It holds up as a game — responsive driving and a survival score that ramps the tension.",
     line: "A browser car-chase game built to see how far Meshy and Codex can carry a playable game.",
@@ -959,7 +948,6 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
     metaExtra: { label: "Stack", value: "Full-stack + 3D web app" },
     links: { github: "https://github.com/leebwj/sp25-penn-time-capsule", figma: "https://www.figma.com/proto/xNLzE7NKvOo9SToBUZtaSn/Penn-Time-Capsule?node-id=913-1430" },
     img: null,
-    thumb: thCapsule,
     alt: "Capsule — a 3D time-capsule reveal gallery",
     blurb: "A collaborative web app where a time capsule stops being a folder and becomes a space — photos, messages and media locked until a chosen date, then revealed through an immersive 3D gallery. Built with React Three Fiber, a Node/MongoDB API, and AWS S3.",
     line: "A time-capsule web app with a 3D reveal gallery in React Three Fiber over a Node/MongoDB API.",
@@ -1014,7 +1002,6 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
     metaExtra: { label: "Deliverable", value: "Hi-fi prototype" },
     links: { figma: "https://www.figma.com/proto/vKo7ySkGZW5dliYa44yHwa/Brian-Lee---Design?node-id=103-7273" },
     img: wikiCover,
-    thumb: thWiki,
     alt: "Wikipedia mobile redesign — five redesigned sections",
     blurb: "A research-to-prototype redesign of Wikipedia's mobile interface where testing, not taste, decided the outcome: interviews, a survey and insight synthesis produced three reader personas, then usability sessions with four users reshaped previews, search snippets and AI framing across five sections.",
     line: "A mobile redesign shaped by interviews and four usability sessions: search-first home, a section strip, article snippets.",
@@ -1104,7 +1091,6 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
     links: { live: "https://joindewey.com/" },
     repoNote: "The code and design files belong to the client, so they stay private; the demo below is the working build.",
     img: deweyThumb,
-    thumb: thDewey,
     alt: "Dewey iOS app — feed, recommendations, and shelf screens",
     blurb: "A semester-long client build at Penn Spark: Dewey's social book-discovery web MVP translated into a working iOS app. I led design (and co-led the project): the mobile design system inside the client's brand, five core flows from wireframes to hi-fi, and the handoff the developers built from.",
     line: "Client work: a book-discovery web MVP turned into a working iOS app; I led the design end.",
@@ -1195,7 +1181,7 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
     metaExtra: { label: "Runtime", value: "Interactive · browser (Spline)" },
     links: { live: "https://my.spline.design/untitled-QVRKLSCWxKCmX5aAVZUXDukV/" },
     img: null,
-    thumb: thPlayground,
+    thumb: playgroundImg,
     alt: "Playground — an interactive 3D character scene",
     blurb: "An interactive 3D scene that puts “Boo,” a childhood-game character, within reach: modeled in Maya, textured in Substance Painter, rigged and animated, then wired into Spline so keyboard and mouse input make it react in the browser.",
     line: "Boo, modeled and rigged in Maya, reacting to keyboard and mouse in the browser through Spline.",
