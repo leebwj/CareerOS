@@ -1239,7 +1239,7 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
     links: { live: "https://alephlab.ai" },
     img: null,
     blurb: "Software engineering intern at a Y Combinator (F25) startup, where I shipped an app-wide redesign, built the product's lifecycle notification system and then made it run unattended, and packaged the company's AI character as an SDK outside studios can build on.",
-    line: "Shipped an app-wide React Native redesign, built the lifecycle notification system and made it run unattended, and packaged the in-game AI agent as an SDK.",
+    line: "Shipped an app-wide React Native redesign, built the lifecycle notification system and made it run unattended, and packaged the AI agent that plays with kids inside Minecraft as an SDK.",
     who: "Software engineer intern",
     briefPoints: [
       "App-wide React Native redesign from Figma to production, carrying a 33-section design system",
