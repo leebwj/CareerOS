@@ -9,7 +9,7 @@ const W = 1320, H = 990;                    // 2x of the 660x495 card slot
 const ekey = (i, j) => (i < j ? `${i}_${j}` : `${j}_${i}`);
 
 // uv hemisphere: rings from the rim toward the pole, cap closed with triangles
-function hemisphere(sign, meridians = 12, rings = 4) {
+function hemisphere(sign, meridians = 10, rings = 3) {
   const p = [], rows = [];
   for (let r = 0; r < rings; r++) {
     const phi = (r / rings) * (Math.PI / 2);
@@ -57,7 +57,7 @@ const merge = (...parts) => {
 const GAP = 0.05;
 const bowl = xform(hemisphere(-1), ([x, y, z]) => [x, y - GAP, z]);
 const lid = (tilt, [tx, ty, tz]) => xform(xform(hemisphere(1), rotX(tilt)), ([x, y, z]) => [x + tx, y + ty + GAP, z + tz]);
-const memory = xform(xform(cube(), rotY(0.45)), scaleTo(0.38, [-0.52, 0.5, 0.55]));
+const memory = xform(xform(cube(), rotY(0.45)), scaleTo(0.38, [-0.62, 0.62, 0.5]));
 
 const stages = [
   merge(bowl, lid(0, [0, 0, 0])),
@@ -94,14 +94,19 @@ const project = (m) => m.p.map(([x, y, z]) => {
   return [X*persp, -Y*persp, Z];
 });
 const SLOT = W * 0.285;
+const f0 = project(stages[0]);
+const K = SLOT / Math.max(
+  Math.max(...f0.map((v) => v[0])) - Math.min(...f0.map((v) => v[0])),
+  Math.max(...f0.map((v) => v[1])) - Math.min(...f0.map((v) => v[1])),
+);
 stages.forEach((m, si) => {
   const flat = project(m);
   const xs = flat.map((v) => v[0]), ys = flat.map((v) => v[1]);
-  const w = Math.max(...xs) - Math.min(...xs), h = Math.max(...ys) - Math.min(...ys);
-  const k = SLOT / Math.max(w, h);
-  const cx = (Math.max(...xs) + Math.min(...xs)) / 2, cy = (Math.max(...ys) + Math.min(...ys)) / 2;
-  const CX = W * (0.185 + si * 0.315), CY = H * 0.5;
-  const proj = flat.map(([x, y, z]) => [CX + (x - cx) * k, CY + (y - cy) * k, z]);
+  const k = K;
+  const cx = (Math.max(...xs) + Math.min(...xs)) / 2;
+  // one baseline for the ball across all three beats; only the lid rises
+  const CX = W * (0.185 + si * 0.315), CY = H * 0.6;
+  const proj = flat.map(([x, y, z]) => [CX + (x - cx) * k, CY + y * k, z]);
   const edges = new Map();
   m.f.forEach((face) => face.forEach((vi, kk2) => {
     const vj = face[(kk2+1)%face.length], kk = ekey(vi, vj);
@@ -109,7 +114,7 @@ stages.forEach((m, si) => {
   }));
   [...edges.values()]
     .sort((p1, p2) => (proj[p1[0]][2]+proj[p1[1]][2]) - (proj[p2[0]][2]+proj[p2[1]][2]))
-    .forEach(([i, j]) => line(proj[i][0], proj[i][1], proj[j][0], proj[j][1], 1));
+    .forEach(([i, j]) => line(proj[i][0], proj[i][1], proj[j][0], proj[j][1], 2));
 });
 
 // ── PNG ─────────────────────────────────────────────────────────────────────
