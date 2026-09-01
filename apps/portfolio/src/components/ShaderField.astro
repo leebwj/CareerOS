@@ -88,6 +88,8 @@ const { variant, mode = 0, bg, line, deep } = Astro.props;
     // integrated Intel GPU for WebGL, which is both the slow one and the one
     // with the driver bug the hash above works around.
     const gl = canvas.getContext("webgl", { antialias: true, alpha: false, premultipliedAlpha: false, powerPreference: "high-performance" });
+    // lets compile/link run on driver threads; status is polled before first use
+    const par = gl && gl.getExtension("KHR_parallel_shader_compile");
     const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
     const fine = matchMedia("(hover: hover) and (pointer: fine)").matches;
     const bleed = wrap.classList.contains("vp--bleed");
@@ -415,7 +417,9 @@ const { variant, mode = 0, bg, line, deep } = Astro.props;
       const compile = (type: number, src: string) => {
         const sh = gl.createShader(type)!;
         gl.shaderSource(sh, src); gl.compileShader(sh);
-        return gl.getShaderParameter(sh, gl.COMPILE_STATUS) ? sh : null;
+        // reading COMPILE_STATUS forces a sync wait; with parallel compile the
+        // link-status check below catches a bad shader instead
+        return par || gl.getShaderParameter(sh, gl.COMPILE_STATUS) ? sh : null;
       };
       const vs = compile(gl.VERTEX_SHADER, vsrc);
       // Start with only the mode this instance actually shows. Anything else is
@@ -424,9 +428,18 @@ const { variant, mode = 0, bg, line, deep } = Astro.props;
       const compiledModes = new Set<number>([initModeEarly]);
       let fs = compile(gl.FRAGMENT_SHADER, mkFsrc(compiledModes));
 
+      let prog0: WebGLProgram | null = null;
       if (vs && fs) {
-        let prog = gl.createProgram()!;
-        gl.attachShader(prog, vs); gl.attachShader(prog, fs); gl.linkProgram(prog);
+        prog0 = gl.createProgram()!;
+        gl.attachShader(prog0, vs); gl.attachShader(prog0, fs); gl.linkProgram(prog0);
+        if (par) await new Promise<void>((res) => {
+          const poll = () => (gl.getProgramParameter(prog0!, par.COMPLETION_STATUS_KHR) ? res() : requestAnimationFrame(poll));
+          poll();
+        });
+        if (!gl.getProgramParameter(prog0, gl.LINK_STATUS)) prog0 = null;
+      }
+      if (prog0) {
+        let prog = prog0;
         gl.useProgram(prog);
 
         const buf = gl.createBuffer();

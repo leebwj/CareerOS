@@ -15,7 +15,10 @@
     const n = c.length === 3 ? c.split("").map((x) => x + x).join("") : c;
     return [parseInt(n.slice(0, 2), 16) / 255, parseInt(n.slice(2, 4), 16) / 255, parseInt(n.slice(4, 6), 16) / 255];
   };
-  document.querySelectorAll<HTMLCanvasElement>(".cshader").forEach((canvas) => {
+  // the card is below the fold; creating the context + compiling during page
+  // load was a measurable chunk of startup main-thread time for pixels nobody
+  // can see yet. Boot when the card gets near the viewport instead.
+  const boot = (canvas: HTMLCanvasElement) => {
     const gl = canvas.getContext("webgl", { antialias: true, alpha: false });
     if (!gl) return;
     const wrap = canvas.parentElement as HTMLElement;
@@ -77,5 +80,11 @@
     const start = () => { if (!looping) { looping = true; requestAnimationFrame(loop); } };
     const io = new IntersectionObserver((es) => { for (const e of es) { if (e.isIntersecting) { running = true; start(); } else running = false; } }, { threshold: 0.01 });
     io.observe(wrap);
+  };
+  document.querySelectorAll<HTMLCanvasElement>(".cshader").forEach((canvas) => {
+    const near = new IntersectionObserver((es) => {
+      if (es.some((e) => e.isIntersecting)) { near.disconnect(); boot(canvas); }
+    }, { rootMargin: "600px" });
+    near.observe(canvas);
   });
 </script>
