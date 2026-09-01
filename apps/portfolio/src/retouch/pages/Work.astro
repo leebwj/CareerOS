@@ -113,7 +113,7 @@ const linkList = [
               <div class="cs-embed cs-embed--site"><iframe src={p.featured.embed} title={p.featured.alt} loading="lazy"></iframe></div>
             )}
             {p.featured.type === "image" && p.featured.src && (
-              <Image src={p.featured.src} alt={p.featured.alt || p.title} widths={[720, 1280, 1920]} sizes="(min-width:900px) 720px, 100vw" class="cs-zoomable" data-cursor="Zoom" data-cursor-keep />
+              <Image src={p.featured.src} alt={p.featured.alt || p.title} widths={[760, 1120, 1600, 2240]} sizes="(min-width:2300px) 1120px, (min-width:1800px) 960px, (min-width:900px) 760px, 100vw" class="cs-zoomable" data-cursor="Zoom" data-cursor-keep />
             )}
           </figure>
         )}
@@ -162,7 +162,7 @@ const linkList = [
                   <div class:list={["cs-media", "cs-media--full", b.bare && "cs-media--bare"]}>
                     {col.map((m) => (
                       <figure>
-                        {m.src && <Image src={m.src} alt={m.alt || ""} widths={[480, 1000, 1600]} sizes="(min-width:900px) 380px, 100vw" class="cs-zoomable" data-cursor="Zoom" data-cursor-keep />}
+                        {m.src && <Image src={m.src} alt={m.alt || ""} widths={[480, 760, 1104, 1600]} sizes="(min-width:2300px) 552px, (min-width:1800px) 472px, (min-width:900px) 372px, 100vw" class="cs-zoomable" data-cursor="Zoom" data-cursor-keep />}
                         {m.embed && <div class="cs-embed"><iframe src={m.embed} title={m.alt} loading="lazy"></iframe></div>}
                         {m.video && <video src={m.video} controls playsinline preload="metadata" title={m.alt}></video>}
                         {!m.src && !m.embed && !m.video && <div class="cs-ph"><span>{m.placeholder}</span></div>}
@@ -177,7 +177,7 @@ const linkList = [
               <div class:list={["cs-media", "cs-media--full", b.bare && "cs-media--bare"]}>
                 {b.items.map((m) => (
                   <figure>
-                    {m.src && <Image src={m.src} alt={m.alt || ""} widths={[720, 1280, 1920]} sizes="(min-width:900px) 720px, 100vw" class="cs-zoomable" data-cursor="Zoom" data-cursor-keep />}
+                    {m.src && <Image src={m.src} alt={m.alt || ""} widths={[760, 1120, 1600, 2240]} sizes="(min-width:2300px) 1120px, (min-width:1800px) 960px, (min-width:900px) 760px, 100vw" class="cs-zoomable" data-cursor="Zoom" data-cursor-keep />}
                     {m.embed && <div class="cs-embed"><iframe src={m.embed} title={m.alt} loading="lazy"></iframe></div>}
                     {m.video && <video src={m.video} controls playsinline preload="metadata" title={m.alt}></video>}
                     {!m.src && !m.embed && !m.video && <div class="cs-ph"><span>{m.placeholder}</span></div>}
