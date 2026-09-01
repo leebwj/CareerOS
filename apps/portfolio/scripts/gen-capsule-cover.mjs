@@ -57,12 +57,12 @@ const merge = (...parts) => {
 const GAP = 0.05;
 const bowl = xform(hemisphere(-1), ([x, y, z]) => [x, y - GAP, z]);
 const lid = (tilt, [tx, ty, tz]) => xform(xform(hemisphere(1), rotX(tilt)), ([x, y, z]) => [x + tx, y + ty + GAP, z + tz]);
-const memory = xform(xform(cube(), rotY(0.45)), scaleTo(0.46, [-0.1, 1.05, 0.05]));
+const memory = xform(xform(cube(), rotY(0.45)), scaleTo(0.38, [-0.52, 0.5, 0.55]));
 
 const stages = [
   merge(bowl, lid(0, [0, 0, 0])),
   merge(bowl, lid(-0.22, [0, 0.4, 0])),
-  merge(bowl, lid(-0.6, [0.95, 0.7, -0.1]), memory),
+  merge(bowl, lid(0, [0, 1.45, 0]), memory),
 ];
 
 // ── project + draw ──────────────────────────────────────────────────────────

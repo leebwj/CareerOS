@@ -40,6 +40,7 @@ import pgTrainExtOn from "../assets/work/passenger/train-ext-on.png";
 import pgTrainIntOff from "../assets/work/passenger/train-int-off.png";
 import pgTrainIntOn from "../assets/work/passenger/train-int-on.png";
 import miniMayaImg from "../assets/work/mini-maya.png";
+import capsuleImg from "../assets/work/capsule.png";
 import mmEditorCow from "../assets/work/mini-maya/editor-cow.png";
 import mmDiagHe from "../assets/work/mini-maya/diagram-halfedge.png";
 import mmDiagCC from "../assets/work/mini-maya/diagram-catmull.png";
@@ -953,7 +954,7 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
     tools: ["React", "React Three Fiber", "Node.js", "MongoDB", "AWS S3", "Blender"],
     metaExtra: { label: "Stack", value: "Full-stack + 3D web app" },
     links: { github: "https://github.com/leebwj/sp25-penn-time-capsule", figma: "https://www.figma.com/proto/xNLzE7NKvOo9SToBUZtaSn/Penn-Time-Capsule?node-id=913-1430" },
-    img: null,
+    img: capsuleImg,
     alt: "Capsule — a 3D time-capsule reveal gallery",
     blurb: "A collaborative web app where a time capsule stops being a folder and becomes a space — photos, messages and media locked until a chosen date, then revealed through an immersive 3D gallery. Built with React Three Fiber, a Node/MongoDB API, and AWS S3.",
     line: "A time-capsule web app with a 3D reveal gallery in React Three Fiber over a Node/MongoDB API.",
