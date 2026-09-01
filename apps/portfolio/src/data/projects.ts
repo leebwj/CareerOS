@@ -41,6 +41,15 @@ import pgTrainIntOff from "../assets/work/passenger/train-int-off.png";
 import pgTrainIntOn from "../assets/work/passenger/train-int-on.png";
 import miniMayaImg from "../assets/work/mini-maya.png";
 import capsuleImg from "../assets/work/capsule.png";
+import capHero from "../assets/work/capsule/hero.jpg";
+import capCameraRoll from "../assets/work/capsule/camera-roll.jpg";
+import capInspiration from "../assets/work/capsule/inspiration.jpg";
+import capThreeD from "../assets/work/capsule/three-d.jpg";
+import capToggle from "../assets/work/capsule/toggle-view.jpg";
+import capOpening from "../assets/work/capsule/opening.jpg";
+import capCustomizing from "../assets/work/capsule/customizing.jpg";
+import capUserFlow from "../assets/work/capsule/user-flow.png";
+import capTechStack from "../assets/work/capsule/tech-stack.png";
 import wikiFit from "../assets/work/thumbs/wikipedia-fit.png";
 import deweyFit from "../assets/work/thumbs/dewey-fit.png";
 import playgroundFit from "../assets/work/thumbs/playground-fit.png";
@@ -950,52 +959,83 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
     title: "Capsule",
     tagline: "Memories you walk through instead of scroll: photos and messages locked until a chosen date, then opened inside a 3D gallery.",
     motif: "orbit",
-    cats: ["design", "engineering", "graphics"],
-    kind: "engineering",
-    date: "Spring 2025",
+    cats: ["design", "graphics"],
+    kind: "design",
+    date: "Jan – Apr 2025",
     context: "Team project",
-    role: "Design & full-stack · UI, 3D gallery, API",
-    team: "Team project",
-    tools: ["React", "React Three Fiber", "Node.js", "MongoDB", "AWS S3", "Blender"],
-    metaExtra: { label: "Stack", value: "Full-stack + 3D web app" },
+    role: "Designer — 3D visual language, UI",
+    team: "Team of 8: four designers, four developers",
+    tools: ["Figma", "Blender", "Spline"],
+    metaExtra: { label: "Team built it in", value: "React, React Three Fiber, Node, MongoDB, S3" },
     links: { github: "https://github.com/leebwj/sp25-penn-time-capsule", figma: "https://www.figma.com/proto/xNLzE7NKvOo9SToBUZtaSn/Penn-Time-Capsule?node-id=913-1430" },
     img: capsuleImg,
-    alt: "Capsule — a 3D time-capsule reveal gallery",
-    blurb: "A collaborative web app where a time capsule stops being a folder and becomes a space — photos, messages and media locked until a chosen date, then revealed through an immersive 3D gallery. Built with React Three Fiber, a Node/MongoDB API, and AWS S3.",
-    line: "A time-capsule web app with a 3D reveal gallery in React Three Fiber over a Node/MongoDB API.",
-    who: "Team of 4; I owned the UI and the 3D gallery",
-    short: "a time-capsule app with a 3D reveal gallery",
-    tech: ["React", "R3F", "Node", "MongoDB"],
-    featured: { type: "embed", embed: "https://embed.figma.com/proto/xNLzE7NKvOo9SToBUZtaSn/Penn-Time-Capsule?node-id=913-1430&scaling=contain&content-scaling=fixed&page-id=662%3A1067&embed-host=share", alt: "Capsule — prototype" },
+    alt: "Capsule — gachapon machines rendered in 3D, capsule toys spilling out of them",
+    blurb: "A time capsule you open instead of scroll through: photos and messages locked until a chosen date, then revealed in a 3D gallery. One of four designers on a team of eight — I made the 3D visual language, modelling the gachapon machines in Blender and animating the capsule in Spline for the team to embed.",
+    line: "A time-capsule app whose contents open into a 3D gallery instead of a grid.",
+    who: "Team of 8; I was one of four designers, on the 3D visual language and UI",
+    short: "a time-capsule app with a 3D reveal",
+    tech: ["Figma", "Blender", "Spline"],
+    featured: { type: "image", src: capHero, alt: "Capsule title slide — three gachapon machines rendered in 3D" },
     metrics: [
-      { value: "React · R3F", label: "3D front end" },
-      { value: "Node · Mongo · S3", label: "back end" },
-      { value: "Team", label: "collaborative capsules" },
+      { value: "8", label: "on the team" },
+      { value: "Blender · Spline", label: "3D I made" },
+      { value: "6 weeks", label: "concept to MVP" },
     ],
     blocks: [
       { type: "prose", label: "Overview", heading: "Memories, locked in 3D, revealed in time", body: [
-        "Capsule is a collaborative web app where users create digital time capsules, containers for photos, messages, and media, locked until a chosen date. When the date arrives, the capsule opens and its contents are revealed through an immersive 3D gallery.",
-        "The concept was inspired by Japanese gachapon machines: turning a dial, receiving a capsule, opening it to discover what's inside. That anticipation-and-reveal shaped both the interaction design and the 3D visual language.",
+        "Capsule is a time capsule you open rather than scroll through. You fill it with photos and messages, pick a date, and it stays sealed until then. When it opens, the contents do not appear as a grid — they arrive in a 3D gallery you move through.",
+      ] },
+      { type: "media", layout: "full", items: [
+        { src: capCameraRoll, alt: "Pitch slide: a phone showing an endless camera roll, captioned with the question does anyone's camera roll look like this", caption: "The slide we opened the pitch with. Nobody needed it explained." },
+      ] },
+      { type: "prose", label: "The problem", heading: "A filing cabinet nobody reopens", body: [
+        "We started from a question everyone answers badly: when did you last look at a photo more than a year old? Phones store everything and surface almost none of it. A camera roll grows faster than anyone can read it, so the memories with the most weight end up buried deepest.",
+        "Today's memories are stored like files. We wanted them stored like stories — something with a beginning, a wait, and an opening. That reframe became the brief: how might we turn digital memories into something playful and emotional, worth reliving and worth sharing?",
+      ] },
+      { type: "media", layout: "full", items: [
+        { src: capInspiration, alt: "Moodboard of gachapon machines, capsule toys and blind boxes", caption: "Moodboard. Gachapon machines, capsule toys, blind boxes — objects whose entire appeal is not knowing yet." },
       ] },
       { type: "prose", label: "Design", heading: "Designing around the moment of reveal", body: [
-        "The UI and flows were designed in Figma first, built around a specific emotional arc (creation, anticipation, reveal), each phase with its own visual and interaction language.",
+        "The answer we kept circling back to was the gachapon machine. You turn a dial, a capsule drops, and you have no idea what is inside until it cracks. The value sits in the delay, not the contents. That gave us an interaction model and a visual language at once, and it is where my part of the project started.",
+        "I designed the product around one moment — the opening — and worked backwards from it, so each phase had to earn the next.",
       ] },
       { type: "list", items: [
-        "Creation: a clean, form-driven flow for uploading media and writing messages; lightweight, so the weight goes into the content.",
-        "Waiting: a 3D gallery where locked capsules float and rotate, tactile but inaccessible, their look hinting at the contents inside.",
-        "Reveal: on unlock, an animation plays: the capsule opens and its contents spill into the gallery, like a gift being unwrapped.",
+        "Creating: a plain, form-driven flow. Deliberately quiet, so the weight sits in what you put in rather than the interface around it.",
+        "Waiting: the capsule exists as an object you can see and turn but not open — visible and withheld at the same time.",
+        "Opening: the capsule cracks and its contents spill out into the gallery.",
       ] },
-      { type: "prose", label: "Development", heading: "Full-stack, with 3D at the center", body: [
-        "The front end is React + React Three Fiber (a React renderer for Three.js), so the 3D gallery is composable with app state: capsules fetched from the database appear in the scene, and clicks on 3D objects trigger app logic. The back end is a Node.js API over MongoDB, with media in AWS S3 via pre-signed URLs to keep large binaries out of the database.",
+      { type: "media", layout: "full", items: [
+        { src: capThreeD, alt: "The 3D design process: gachapon machines modelled in Blender, and a single capsule rebuilt in Spline", caption: "The 3D pass. Machines and capsules modelled in Blender, then the hero capsule rebuilt in Spline so it could be animated and embedded." },
       ] },
-      { type: "list", label: "Hard parts", items: [
-        "Date-gated content: capsule contents are encrypted at rest and only served after the unlock date, verified server-side on every request.",
-        "Collaborative access: multiple contributors per capsule before it locks, which meant careful permission and notification design.",
-        "3D performance: GLTF compression + level-of-detail logic keep the gallery smooth as it fills with models.",
+      { type: "prose", label: "3D", heading: "Modelled in Blender, animated in Spline", body: [
+        "The 3D was mine to make. I modelled the machines and capsules in Blender, then rebuilt the hero capsule in Spline so it could be animated and handed over as something the developers could embed directly rather than a spec they had to reimplement from a video.",
+        "Designing in the tool the build would actually consume changed what I could propose. The reveal animation was drawn against what the runtime could afford, instead of being thrown over a wall and quietly cut down later.",
       ] },
-      { type: "prose", label: "Reflection", heading: "When design and code reinforce each other", body: [
-        "Because I owned both the Figma and the React Three Fiber build, design decisions and technical constraints could push on each other in real time: the reveal animation was designed knowing exactly what the runtime could afford, and vice versa. That tight loop is where the project felt most like my own.",
+      { type: "media", label: "The product", layout: "half", items: [
+        { src: capToggle, alt: "The dashboard, showing a user's capsules with their names and opening dates", caption: "The dashboard: your capsules, their names, and the date each one opens. The 3D here is the Spline scene running live." },
+        { src: capOpening, alt: "A capsule being opened, playing back its contents as a timelapse", caption: "Opening. The contents play back as a timelapse rather than landing as a grid." },
       ] },
+      { type: "media", layout: "full", items: [
+        { src: capCustomizing, alt: "Four screens showing a capsule being customised and decorated", caption: "Customising. Decorating a capsule before it seals is what makes it feel like an object rather than an upload form." },
+      ] },
+      { type: "media", label: "Structure", layout: "full", items: [
+        { src: capUserFlow, alt: "The user flow, from login through creating, contributing to and sharing a capsule", caption: "The flow. Capsules are collaborative — an invite code lets several people contribute before the thing locks." },
+      ] },
+      { type: "media", layout: "full", items: [
+        { src: capTechStack, alt: "The team stack: React, Tailwind, React Three Fiber, Node.js, MongoDB, AWS S3, Blender, Spline", caption: "What the team built it on. My Blender and Spline work fed the React Three Fiber front end; the developers owned everything behind it." },
+      ] },
+      { type: "prose", label: "Reflection", heading: "Restraint is what makes the reveal land", body: [
+        "The decision I would defend hardest is the quiet one. It would have been easy to make every screen as loud as the gachapon render, and the pull to do it was constant. Keeping the creation flow plain is what makes the opening land — a payoff stops reading as a payoff if everything before it is already one.",
+      ] },
+    ],
+    credits: [
+      { name: "Emmi", contribution: "Design lead" },
+      { name: "Bryan", contribution: "Designer" },
+      { name: "Nond", contribution: "Designer" },
+      { name: "Shaurya", contribution: "Developer lead" },
+      { name: "Lori", contribution: "Developer" },
+      { name: "Luka", contribution: "Developer" },
+      { name: "Ximing", contribution: "Developer" },
     ],
   },
 
@@ -1233,7 +1273,7 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
     logo: "/logos/aleph.png",
     order: 101,
     title: "Aleph Lab",
-    tagline: "Software engineering at a Y Combinator startup building an AI language buddy that lives inside the games kids already play.",
+    tagline: "Software engineering at a Y Combinator startup building Annie, an AI character who plays Minecraft alongside kids while they learn English.",
     motif: "grid",
     cats: [],
     kind: "engineering",
@@ -1245,13 +1285,13 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
     metaExtra: { label: "Backed by", value: "Y Combinator · F25" },
     links: { live: "https://alephlab.ai" },
     img: null,
-    blurb: "Software engineering intern at a Y Combinator (F25) startup, where I shipped an app-wide redesign, built the product's lifecycle notification system and then made it run unattended, and packaged the company's AI character as an SDK outside studios can build on.",
-    line: "Shipped an app-wide React Native redesign, built the lifecycle notification system and made it run unattended, and packaged the AI agent that plays with kids inside Minecraft as an SDK.",
+    blurb: "Software engineering intern at a Y Combinator (F25) startup, where I packaged the AI character that plays Minecraft with kids as an SDK other game studios can build on, fixed how she picks fights and sees modded content, shipped an app-wide redesign, and built the lifecycle notification system that runs unattended.",
+    line: "Packaged the AI character that plays Minecraft with kids as a game-mode SDK, fixed her combat targeting and modded-content perception, and shipped an app-wide redesign.",
     who: "Software engineer intern",
     briefPoints: [
-      "App-wide React Native redesign from Figma to production, carrying a 33-section design system",
-      "A lifecycle notification system that clears its own guardrails and sends unattended",
-      "The in-game AI agent packaged as an SDK: 1,301 tests, proven by an outside builder shipping on it",
+      "The in-game AI character packaged as a game-mode SDK: 47 event types, 16 in-game verbs, 1,301 tests — a mode authored outside the repo merged as first-party",
+      "Her combat targeting and modded-content perception fixed with game-design reasoning, additively",
+      "App-wide React Native redesign from Figma to production, plus a lifecycle notification system that sends unattended",
     ],
     tech: [],
     metrics: [
@@ -1261,20 +1301,20 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
     ],
     blocks: [
       { type: "prose", label: "Company", body: [
-        "Aleph Lab is a San Francisco AI startup in Y Combinator's Fall 2025 batch. Its product, Aleph Kids, is an AI language-learning companion: a voice-enabled character named “Annie” that talks and plays with children inside games they already love, like Minecraft, so they practice speaking a new language while they play.",
+        "Aleph Lab is a San Francisco AI startup in Y Combinator's Fall 2025 batch. Its product, Aleph Kids, teaches English through Minecraft: “Annie,” a voice-enabled AI character, is a co-playable character — she plays alongside children inside the game rather than at them, so they practice speaking a new language while they play.",
       ] },
       { type: "list", label: "What I worked on", items: [
+        "Packaged the in-game AI character as a versioned SDK that studios outside the company can build on — a game mode becomes data: 47 in-world event types, a 16-verb action surface, capability negotiation per world, and server-side allowlist enforcement so a mode can never make her do something its world didn't declare — behind 1,301 tests over a hosted multi-tenant service",
+        "Proved the SDK end to end: a game mode authored outside the repository, from the handover docs alone, came back valid, loaded its own content at runtime, and merged as a first-party mode",
+        "Fixed the character picking fights she shouldn't: her threat check keyed on a hostility flag that is behaviorally wrong for provoke-only mobs (endermen, piglins — hit one and the group swarms) and lethal bosses, corrected additively so the change could only ever remove a bad target, never drop her defense against real threats",
+        "Taught her to see modded content — a registry bridge regenerated at every server start, so on a partner studio's mode she learned 44 custom block states and 152 items and names what a kid is holding instead of reading back a raw id",
+        "Took hosted voice end to end, so a builder can hold a spoken conversation with the character from a browser with no game client running",
+        "Shipped a Claude skill that authors and validates a new mode's configuration, so integrating the agent into a mode stopped being bespoke work each time",
         "Delivered an app-wide React Native redesign from Figma to production — sequencing the information architecture ahead of the visual system, so the layout stayed familiar and users kept their bearings before the new look arrived",
         "Built the product's lifecycle notification system end to end: re-engagement, streak reminders and class-completion alerts, with per-stage copy, back-off so message types cannot pile onto the same family, and a holdout group so the effect could be measured rather than assumed",
         "Then made it autonomous — it proposes sends, clears its own safety guardrails and delivers unattended, where every send had previously needed a person to approve it",
         "Widened notification eligibility after validating the targeting against production data, substantially increasing the number of families the system could reach",
         "Hardened public endpoints that trusted whatever user ID they were handed, adding bearer authentication with no changes required from existing server-to-server callers",
-        "Packaged the in-game AI agent as a versioned SDK that studios outside the company can build on — typed APIs, per-session isolation, and capability enforcement at a boundary the mode author cannot cross — published as versioned packages over a hosted multi-tenant service",
-        "Proved it end to end by having an external builder author a game mode and run the agent inside it with no access to our repository, loading their content at runtime",
-        "Took hosted voice end to end, so a builder can hold a spoken conversation with the character from a browser with no game client running",
-        "Shipped a Claude skill that authors and validates a new mode's configuration, so integrating the agent into a mode stopped being bespoke work each time",
-        "Improved how the character behaves in the world: its defensive targeting had been starting fights with neutral creatures and bosses far above a child’s level, corrected additively so the change could only ever remove a bad target, never add an attack",
-        "Extended its perception to modded content, so it recognises the custom blocks and items a game mode adds instead of describing them with the wrong words",
         "Built an agent-based analysis tool over production data that showed a reported retention gain was a measurement artifact, and surfaced the drivers that actually mattered",
         "Gave the character a consistent presence in the app — its message-bubble system, a branded crash recovery in English and Korean, and dashboards that tell a failed request apart from an empty one",
       ] },
@@ -1344,24 +1384,24 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
     metaExtra: { label: "Reach", value: "420M+ downloads" },
     links: { live: "https://www.bitmango.com/en/homepageen/" },
     img: null,
-    blurb: "Software engineering intern who kept 50+ live Unity mobile titles shipping: 100+ QA-reported bugs cleared into production, and the whole portfolio held compliant through a platform requirement change.",
-    line: "Kept 50+ live Unity titles shipping; 100+ QA-reported bugs fixed in production.",
+    blurb: "Software engineering intern on live games: 50+ Unity puzzle titles in production, 100+ QA-reported bugs fixed and shipped to players, and the whole portfolio held compliant through platform requirement changes.",
+    line: "Live-ops across 50+ Unity titles in a 420M-download portfolio; 100+ bugs fixed in production.",
     who: "Software engineer intern",
     briefPoints: [
-      "50+ live Unity puzzle titles kept shipping across a 420M-download portfolio",
-      "100+ QA-reported bugs fixed in production prefabs and C# scripts",
-      "SDK and platform-module upgrades that kept every title compliant in the stores",
+      "Live-ops across 50+ Unity puzzle titles in a 420M-download portfolio",
+      "100+ QA-reported bugs fixed in Unity prefabs and C# scripts and shipped to players in production updates",
+      "SDK and platform-module upgrades that kept every title live and compliant in the stores",
     ],
     tech: [],
     metrics: [],
     blocks: [
       { type: "prose", label: "Company", body: [
-        "BitMango is a South Korean mobile-game company (founded 2011) behind casual puzzle hits like Roll the Ball, Word Cookies, and Block! Hexa Puzzle, with over 420 million downloads. Its development team spun out in 2019 as Puzzle1 Studio, which builds the games while BitMango publishes.",
+        "BitMango is a South Korean mobile-game company (founded 2011) behind casual puzzle hits with over 420 million combined downloads: Roll the Ball alone has passed 170 million, and Word Cookies made Apple's most-popular list for 2017. Its development team spun out in 2019 as Puzzle1 Studio, which builds the games while BitMango publishes.",
       ] },
       { type: "list", label: "What I worked on", items: [
-        "Maintained 50+ live Unity mobile titles, improving UI/UX and core gameplay stability across deployments",
-        "Upgraded SDKs and platform modules to keep titles compliant with evolving app-store requirements",
-        "Resolved 100+ QA-report bugs by modifying Unity prefabs and C# scripts",
+        "Worked on 50+ Unity titles that were live the whole time — gameplay stability and UI/UX fixes on updates that had to land without breaking a game people were in the middle of playing",
+        "Resolved 100+ QA-reported bugs in Unity prefabs and C# scripts, shipped in production updates that went straight to players",
+        "Upgraded SDKs and platform modules fleet-wide so every title stayed compliant and available as app-store requirements changed",
       ] },
       { type: "prose", label: "Note", body: ["The titles I worked on are live on the App Store and Google Play, and I'm happy to point you to the specific games and fixes on request."] },
     ],
