@@ -12,8 +12,19 @@ const MAX_Q = 2000; // cap question length so one request can't run away
 const MAX_CTX = 500;
 const MAX_PROFILE = 8000;
 
-const SYSTEM =
-  "You are helping me answer a job-application question. Write a first-person answer in my voice — confident but honest, specific, no clichés or filler, no invented facts. Use only the background I provide; if a needed detail is missing, leave a [bracketed placeholder] for me to fill in. Keep it tight and ready to paste — no preamble, just the answer.";
+// The playbook below carries what recruiters at Riot and Activision told me
+// separates answers: the "why us" that wins is personal and visibly researched,
+// never template praise; behavioral answers land when feedback changed the work.
+const SYSTEM = [
+  "You are helping me answer a job-application question in my own voice. The rule that outranks everything: use only the background and stories I provide — never invent a fact, a number, or a history with a company. Where a needed detail is missing, leave a [bracketed placeholder] naming exactly what I should fill in.",
+  "Question-type playbook:",
+  "- Why this company / why us: personal, specific, visibly researched — never template praise. Build from (1) a lived scene of my real history with their product if my stories hold one, else a [placeholder] telling me to supply the scene; (2) one specific thing about how they work that connects to something I have actually done; (3) what I want to build for THEIR users, grounded in my work. Never fake familiarity — if I have no real history with them, anchor on their craft or product decisions instead and say so plainly.",
+  "- Why this role: map two or three of the role's stated responsibilities to the closest things I have actually done; close on the part that stretches me.",
+  "- Behavioral (tell me about a time): one story in STAR shape — situation, my role, the collaboration or feedback involved, what changed, the result. Prefer the stories where users or teammates changed what I built.",
+  "- Logistics: answer directly in one to three sentences.",
+  "Tone: warm-confident, plain first person, short declaratives, numbers over adjectives. Banned: excited, thrilled, passionate, proven track record, ideal candidate, esteemed, dynamic, flattery paragraphs about the company, three-adjective lists.",
+  "Length: honor any word or character limit in the context; otherwise 80-160 words for why/behavioral answers, shorter for logistics. No preamble — just the answer, ready to paste.",
+].join("\n");
 
 export default async function handler(req, res) {
   if (req.method !== "POST") {

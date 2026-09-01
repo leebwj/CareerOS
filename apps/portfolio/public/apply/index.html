@@ -105,16 +105,24 @@
   const esc = (s) => String(s ?? "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
 
   // ── your background (feeds the "Draft new" prompt; edit freely) ──
-  const PROFILE = `Brian Wonjun Lee — CS & Design double major at UPenn (Benjamin Franklin Scholars, expected May 2027). US-Korean dual citizen, authorized to work in the US with no sponsorship needed.
-SWE Intern at Aleph Lab (a Y Combinator startup, summer 2026): built a push-notification retention engine (Supabase, Deno, FCM) with an A/B holdout framework; a typed game-AI integration SDK (zod, JSON Schema, 128+ tests); shipped 15+ PRs across React Native, Next.js, Deno incl. a security fix.
-Past: SWE Intern at BitMango (50+ live Unity mobile titles, 100+ QA bugs fixed in C#); Database Intern at IT-Farm (SQL, 1M+ entities, clients incl. Samsung/SK/LG); Project Lead & Product Designer at Penn Spark (led 15+ designers/devs); Military Interpreter, ROK Army (English-Korean).
-Projects: Mini Minecraft (C++/OpenGL voxel engine — 7 biomes, PCF shadows, SSR); Passenger (Unreal 5 real-time short, 2 custom HLSL shaders); Path@Penn & Wikipedia UX redesigns (Figma, user research, usability testing).
-Identity: a designer who builds what he designs — from C++/OpenGL rendering to Figma-to-production React. Seeking a US tech/design role; especially drawn to graphics/game/technical-art, product design, and general SWE at big tech, design-forward companies, and game studios.`;
+  const PROFILE = `Brian Wonjun Lee — CS & Design double major at UPenn (Benjamin Franklin Scholars, BA expected May 2027) with submatriculation into the Computer Graphics & Game Technology master's (MSE expected May 2028). US-Korean dual citizen, authorized to work in the US with no sponsorship needed. Seeking Summer 2027 internships.
+SWE Intern at Aleph Lab (Y Combinator startup, summer 2026): delivered an app-wide React Native redesign from Figma to production (33-section design system, staged 25→50→100% rollout); built the company's lifecycle notification system end to end, then made it autonomous — it clears its own guardrails and delivers unattended at 91% device reach, and widening eligibility reached ~2.7x more families and its first paid conversion; packaged the in-game AI agent as an SDK outside studios build on (1,301 tests, proven by an external builder shipping a Minecraft mode with no repository access); closed two child-safety gaps.
+Past: SWE Intern at BitMango (live-ops across 50+ shipped Unity mobile titles; shipped fixes for 100+ QA-reported bugs to production); Database Intern at IT-Farm (SQL, 1M+ entities, clients incl. Samsung/SK/LG); Project Lead & Product Designer at Penn Spark (leading 15+ designers/devs; most recently shipped Dewey, a book-discovery iOS app, for a client); Military Interpreter, ROK Army (English-Korean, high-security multi-agency settings).
+Projects: Mini Minecraft (team of 3, C++/OpenGL voxel engine — my share: 7 procedural biomes, 3D caves, and the render pipeline with PCF shadows and SSR); Mini Maya (solo — a Maya-style mesh editor in C++/Qt: half-edge topology, Catmull-Clark subdivision); Passenger (Unreal 5 real-time short with custom HLSL shader work); CareerOS (a job-search platform I run daily — checks 191 career sites, ranks 11,000+ roles); Capsule (one of four designers on a team of 8 — 3D visual language in Blender/Spline plus UI); Path@Penn & Wikipedia UX redesigns (Figma, user research, usability testing).
+Identity: a designer who builds what he designs — from C++/OpenGL rendering to Figma-to-production React. Portfolio: leebrian.dev (use /engineering, /graphics, or /design per role).`;
+
+  // ── personal stories the "why us" and behavioral drafts draw on (true; use only where relevant) ──
+  const STORIES = `PERSONAL STORIES (raw material for "why this company" and behavioral answers — never claim a history I do not list here):
+- Riot / League of Legends: LoL and ARAM are how my friends and I stay close; during my Korean military service I played TFT in the barracks. Things my friends and I complained about while playing showed up fixed in later patches — I felt a real player-feedback loop from the outside years before I built one at work.
+- Games as connection: what pulls me toward game companies is games as the way people stay close. My Aleph work was literally that — an AI companion that lives inside Minecraft for kids.
+- Patch culture from the inside: at BitMango I lived the other side of the loop — live-ops on 50+ shipped Unity titles, correcting what QA and players surfaced, release after release.
+- Users overruled me: on my Wikipedia redesign, usability testing overruled my own design instincts and the shipped version is better for it. At Aleph, trial data I segmented showed mobile activating at roughly half the desktop rate, which redirected where the team looked next.
+- Initiative past the assignment: at Aleph I built an analysis tool nobody asked for; it showed a reported retention gain was a measurement artifact and changed the team's roadmap.`;
 
   // ── seed answers (editable; grounded in real facts, [brackets] = personalize) ──
   const SEED = [
     { c:"About you", q:"Tell me about yourself", a:"I'm a Computer Science and Design double major at Penn who builds across the whole stack — from C++/OpenGL rendering engines to Figma-to-production React. This past summer I was a software engineering intern at Aleph Lab, a Y Combinator startup, where I built a push-notification retention engine and a typed game-AI integration SDK. What ties my work together is real-time, interactive experiences — a voxel engine, an Unreal short film, product redesigns. I'm looking for a role at that intersection of engineering and design." },
-    { c:"About you", q:"Why do you want to work here?", a:"[Company] stands out to me because [specific product / mission / team you admire — name something concrete you've used or read about]. I'm drawn to [the problem they solve / their craft bar / their design-engineering culture], and it lines up with my own work in [relevant area — e.g. real-time graphics / product design / full-stack]. I'd bring [the specific thing you'd contribute]." },
+    { c:"About you", q:"Why do you want to work here?", a:"The strong version of this answer has three parts, in order: a real scene with [company]'s product ([when, where, with whom — for Riot: TFT in the army barracks, ARAM with friends, the patch that fixed what we complained about]); one specific thing about how they work that connects to my own work ([their patch culture / craft bar / design-engineering pairing]); and what I want to build for their users, grounded in what I've already built. If I have no real history with the company, anchor on their product decisions instead — never fake familiarity." },
     { c:"About you", q:"Why this role?", a:"This role is a strong fit because it sits exactly where my strengths are — [name the 2–3 core responsibilities from the JD]. At Aleph Lab and on my own projects I've already done [the closest analog], and I'm excited to go deeper on [the part of the role that stretches you]." },
     { c:"About you", q:"Greatest strength", a:"I build what I design and design what I build — I can take something from a Figma prototype to shipped, performant code without a handoff in between. At Aleph Lab I did exactly that, wiring a Figma-to-React-Native pipeline. That end-to-end ownership means I catch issues early and move fast." },
     { c:"About you", q:"Greatest weakness", a:"I used to over-polish — spending too long perfecting a prototype before getting feedback. I've been deliberately shipping earlier and letting real usage guide the next iteration; on my Penn Spark work I now put rough versions in front of users within days instead of weeks, and the work is better for it." },
@@ -122,7 +130,7 @@ Identity: a designer who builds what he designs — from C++/OpenGL rendering to
 
     { c:"Logistics", q:"Are you authorized to work in the US?", a:"Yes. I'm a US–Korean dual citizen and authorized to work in the United States with no restrictions." },
     { c:"Logistics", q:"Do you require sponsorship, now or in the future?", a:"No — I'm a US citizen and do not require visa sponsorship now or in the future." },
-    { c:"Logistics", q:"When are you available to start?", a:"[e.g. Available for Summer 2026 (May–Aug); open to part-time during the school year.] Flexible around your ideal start date." },
+    { c:"Logistics", q:"When are you available to start?", a:"Available for Summer 2027 (May–Aug); open to part-time during the school year. Flexible around your ideal start date." },
     { c:"Logistics", q:"Salary expectations", a:"I'm flexible and would defer to your standard [intern / new-grad] range for the role and location. My priority is the work and the team; I'm confident we can find a number that works. [Optional: research the market range for the role/city and give a range.]" },
     { c:"Logistics", q:"Are you willing to relocate?", a:"Yes — I'm open to relocating anywhere in the US for the right role, and I'm comfortable with in-office, hybrid, or remote." },
     { c:"Logistics", q:"How did you hear about us?", a:"[Personalize — via your careers page / a specific person / a project or talk of yours I follow. Avoid a generic 'job board' answer where you can.]" },
@@ -274,7 +282,7 @@ Identity: a designer who builds what he designs — from C++/OpenGL rendering to
         const r = await fetch("/api/draft", {
           method: "POST",
           headers: { "content-type": "application/json", "x-apply-key": applyKey },
-          body: JSON.stringify({ question: dq, context: ctx, profile: PROFILE }),
+          body: JSON.stringify({ question: dq, context: ctx, profile: PROFILE + "\n\n" + STORIES }),
         });
         const data = await r.json().catch(() => ({}));
         if (!r.ok) {
@@ -355,7 +363,7 @@ Identity: a designer who builds what he designs — from C++/OpenGL rendering to
       const dq = document.getElementById("dq").value.trim();
       const ctx = document.getElementById("dctx").value.trim();
       if (!dq) { document.getElementById("dq").focus(); setStatus("Type a question first ↑", "error"); return; }
-      const p = `You are helping me answer a job-application question. Write a first-person answer in my voice — confident but honest, specific, no clichés or filler, no invented facts (use only what's below; leave a [bracket] if you'd need a detail I didn't give). ${ctx ? "Context: " + ctx + ". " : ""}Keep it tight.\n\nMY BACKGROUND:\n${PROFILE}\n\nTHE QUESTION:\n${dq}\n\nWrite the answer:`;
+      const p = `You are helping me answer a job-application question. Write a first-person answer in my voice — confident but honest, specific, no clichés or filler, no invented facts (use only what's below; leave a [bracket] if you'd need a detail I didn't give). ${ctx ? "Context: " + ctx + ". " : ""}For "why this company" questions: personal and visibly researched, built from a real scene in my stories if one fits (never fake familiarity), one specific thing about how they work that connects to my experience, and what I want to build for their users. Keep it tight.\n\nMY BACKGROUND:\n${PROFILE}\n\n${STORIES}\n\nTHE QUESTION:\n${dq}\n\nWrite the answer:`;
       const out = document.getElementById("dout");
       out.textContent = p; out.style.display = "block";
       document.getElementById("dresult").style.display = "none";
