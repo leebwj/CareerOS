@@ -62,7 +62,7 @@ export function composeResume(data, c) {
     return data.shared[id];
   });
   const projParas = [];
-  for (const p of Array.isArray(c.projects) ? c.projects.slice(0, 3) : []) {
+  for (const p of Array.isArray(c.projects) ? c.projects.slice(0, 4) : []) {
     const B = data.projects[p?.id];
     if (!B) { errors.push(`unknown project "${p?.id}"`); continue; }
     const bullets = B.slice(1);
