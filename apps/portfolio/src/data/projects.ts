@@ -986,7 +986,7 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
         "Capsule is a time capsule you open rather than scroll through. You fill it with photos and messages, pick a date, and it stays sealed until then. When it opens, the contents do not appear as a grid — they arrive in a 3D gallery you move through.",
       ] },
       { type: "media", layout: "full", items: [
-        { src: capCameraRoll, alt: "Pitch slide: a phone showing an endless camera roll, captioned with the question does anyone's camera roll look like this", caption: "The slide we opened the pitch with. Nobody needed it explained." },
+        { src: capCameraRoll, alt: "Pitch slide: a phone showing an endless camera roll, captioned with the question does anyone's camera roll look like this", caption: "The starting point: a scroll with no end and no reason to stop. Everyone we showed it to recognised their own phone in it." },
       ] },
       { type: "prose", label: "The problem", heading: "A filing cabinet nobody reopens", body: [
         "We started from a question everyone answers badly: when did you last look at a photo more than a year old? Phones store everything and surface almost none of it. A camera roll grows faster than anyone can read it, so the memories with the most weight end up buried deepest.",
@@ -1005,7 +1005,7 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
         "Opening: the capsule cracks and its contents spill out into the gallery.",
       ] },
       { type: "media", layout: "full", items: [
-        { src: capThreeD, alt: "The 3D design process: gachapon machines modelled in Blender, and a single capsule rebuilt in Spline", caption: "The 3D pass. Machines and capsules modelled in Blender, then the hero capsule rebuilt in Spline so it could be animated and embedded." },
+        { src: capThreeD, alt: "The 3D design process: gachapon machines modelled in Blender, and a single capsule rebuilt in Spline", caption: "Modelled in Blender, left, then the hero capsule rebuilt in Spline, right, so it could be animated and dropped straight into the front end." },
       ] },
       { type: "prose", label: "3D", heading: "Modelled in Blender, animated in Spline", body: [
         "The 3D was mine to make. I modelled the machines and capsules in Blender, then rebuilt the hero capsule in Spline so it could be animated and handed over as something the developers could embed directly rather than a spec they had to reimplement from a video.",
