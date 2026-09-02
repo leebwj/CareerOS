@@ -17,8 +17,11 @@ const { view: id } = Astro.props;
 const view = getView(id);
 const projects = projectsForView(id);
 const exp = experiencesForView("all");
-// what the in-page audience switch needs: order and résumé
-const viewCfg = views.map((v) => ({ id: v.id, path: v.path, order: v.order, resume: v.resume }));
+// the hero subline re-headlines per audience view (the "all" line stays as written)
+const DEFAULT_SUB = "Engineer & Designer · I design what people see, and engineer what runs underneath";
+const heroSub = id === "all" ? DEFAULT_SUB : view.h1;
+// what the in-page audience switch needs: order, résumé, and the subline
+const viewCfg = views.map((v) => ({ id: v.id, path: v.path, order: v.order, resume: v.resume, heroSub: v.id === "all" ? DEFAULT_SUB : v.h1 }));
 ---
 
 <BaseLayout title={view.title} description={view.description}>
@@ -64,7 +67,7 @@ const viewCfg = views.map((v) => ({ id: v.id, path: v.path, order: v.order, resu
       <!-- intro styles: all rendered, one shown by html[data-intro]; the switch bottom-left is remembered -->
       <div class="hero-wall w-full intro intro--name" data-intro="name">
         <h1 class="kinetic hero-name"><span class="line"><span class="line-i" style="--d:.1s">Brian Lee.</span></span></h1>
-        <div class="line"><p class="hero-sub" style="--d:.26s">Engineer &amp; Designer · I design what people see, and engineer what runs underneath</p></div>
+        <div class="line"><p class="hero-sub" style="--d:.26s">{heroSub}</p></div>
         <div class="line"><div class="hero-actions" style="--d:.38s">
           <a href="#work" class="btn btn-primary" data-magnetic="0.4">See work</a>
           <a href="#contact" class="btn btn-ghost" data-magnetic="0.4">Get in touch</a>
@@ -72,7 +75,7 @@ const viewCfg = views.map((v) => ({ id: v.id, path: v.path, order: v.order, resu
       </div>
       <div class="intro intro--credit" data-intro="credit">
         <p class="kinetic credit__name"><span class="line-i">Brian Lee.</span></p>
-        <p class="hero-sub">Engineer &amp; Designer · I design what people see, and engineer what runs underneath</p>
+        <p class="hero-sub">{heroSub}</p>
         <div class="hero-actions">
           <a href="#work" class="btn btn-primary" data-magnetic="0.4">See work</a>
           <a href="#contact" class="btn btn-ghost" data-magnetic="0.4">Get in touch</a>
@@ -80,7 +83,7 @@ const viewCfg = views.map((v) => ({ id: v.id, path: v.path, order: v.order, resu
       </div>
       <div class="hero-wall w-full intro intro--spec" data-intro="spec">
         <h1 class="kinetic hero-name"><span class="line"><span class="line-i" style="--d:.1s">Brian Lee.</span></span></h1>
-        <div class="line"><p class="hero-sub" style="--d:.26s">Engineer &amp; Designer · I design what people see, and engineer what runs underneath</p></div>
+        <div class="line"><p class="hero-sub" style="--d:.26s">{heroSub}</p></div>
         <div class="line"><div class="hero-actions" style="--d:.38s">
           <a href="#work" class="btn btn-primary" data-magnetic="0.4">See work</a>
           <a href="#contact" class="btn btn-ghost" data-magnetic="0.4">Get in touch</a>
@@ -360,6 +363,7 @@ const viewCfg = views.map((v) => ({ id: v.id, path: v.path, order: v.order, resu
         [...ordered, ...rest].forEach((c) => grid.appendChild(c));
         chips.forEach((c) => c.setAttribute("aria-pressed", String(c === chip)));
         document.querySelectorAll("[data-resume]").forEach((a) => { a.href = cfg.resume; });
+        document.querySelectorAll(".hero-sub").forEach((p) => { p.textContent = cfg.heroSub; });
         try { history.replaceState(null, "", cfg.path); } catch (err) {}
         limit = cols() * rows;
         apply();

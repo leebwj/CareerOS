@@ -130,7 +130,7 @@ const linkList = [
             {b.type === "list" && (
               <div class="cs-prose">
                 {b.heading && <h2 class="cs-block__heading">{b.heading}</h2>}
-                <ul class="cs-list">{b.items.map((it) => <li>{it}</li>)}</ul>
+                <ul class="cs-list">{b.items.map((it) => <li>{typeof it === "string" ? it : it.href ? <a href={it.href} target="_blank" rel="noopener" class="cs-inline-link">{it.text} ↗</a> : it.text}</li>)}</ul>
               </div>
             )}
             {b.type === "quote" && (
@@ -191,7 +191,7 @@ const linkList = [
 
         {p.metrics.length > 0 && (
           <section class="cs-block reveal">
-            <p class="cs-block__label">Outcome</p>
+            <p class="cs-block__label">By the numbers</p>
             <div class="cs-stats">{p.metrics.map((s) => <div class="cs-stat"><span class="cs-stat__n">{s.value}</span><span class="cs-stat__l">{s.label}</span></div>)}</div>
           </section>
         )}

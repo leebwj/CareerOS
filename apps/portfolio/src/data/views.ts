@@ -46,7 +46,7 @@ export const views: View[] = [
     order: ["mini-minecraft", "passenger", "mini-maya", "art-of-web", "road-rogue", "capsule", "playground"],
     featured: ["mini-minecraft", "passenger", "mini-maya"],
     expOrder: ["bitmango", "aleph-lab", "penn-spark", "it-farm"],
-    resume: "/Brian_Lee_Resume_Engineer.pdf",
+    resume: "/Brian_Lee_Resume_Graphics.pdf",
     title: "Brian Lee · graphics & games",
     description: "Graphics programming and engine work: Unreal shaders, a C++/OpenGL voxel engine, Maya rigs, Three.js. Penn CS + Design, then the CGGT master's.",
   },

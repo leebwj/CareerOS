@@ -9,7 +9,7 @@ const { items } = Astro.props;
 
 const highlights = (p: Project) => {
   const list = p.blocks.find((b) => b.type === "list" && /what i/i.test(("label" in b && b.label) || ""));
-  return list && list.type === "list" ? list.items.slice(0, 3) : [];
+  return list && list.type === "list" ? list.items.filter((x): x is string => typeof x === "string").slice(0, 3) : [];
 };
 const clip = (s: string) => {
   const cut = s.split(/ — |: | – /)[0];

@@ -4,8 +4,8 @@ import miniMinecraftImg from "../assets/work/mini-minecraft.png";
 import pennSparkImg from "../assets/work/penn-spark.png";
 import pathImg from "../assets/work/path-at-penn.png";
 import roadRogueImg from "../assets/work/road-rogue.png";
+import roadRogueFit from "../assets/work/thumbs/road-rogue-fit.png";
 import artOfWebImg from "../assets/work/art-of-web.png";
-import playgroundImg from "../assets/work/playground.jpg";
 import pathDashboard from "../assets/work/path-at-penn/dashboard.png";
 import pathCourse from "../assets/work/path-at-penn/course.png";
 import pathSchedule from "../assets/work/path-at-penn/schedule.png";
@@ -41,7 +41,7 @@ import pgTrainIntOff from "../assets/work/passenger/train-int-off.png";
 import pgTrainIntOn from "../assets/work/passenger/train-int-on.png";
 import miniMayaImg from "../assets/work/mini-maya.png";
 import capsuleImg from "../assets/work/capsule.png";
-import capHero from "../assets/work/capsule/hero.jpg";
+import capHero2 from "../assets/work/capsule/hero.jpg";
 import capCameraRoll from "../assets/work/capsule/camera-roll.jpg";
 import capInspiration from "../assets/work/capsule/inspiration.jpg";
 import capThreeD from "../assets/work/capsule/three-d.jpg";
@@ -114,7 +114,7 @@ export type MediaItem = {
 };
 export type Block =
   | { type: "prose"; label?: string; heading?: string; body: string[] }
-  | { type: "list"; label?: string; heading?: string; items: string[] }
+  | { type: "list"; label?: string; heading?: string; items: (string | { text: string; href?: string })[] }
   | { type: "stats"; label?: string; items: { value: string; label: string }[] }
   | { type: "quote"; text: string; cite?: string }
   | { type: "media"; label?: string; layout?: "full" | "half" | "third"; ratio?: string; bare?: boolean; items: MediaItem[] }
@@ -335,7 +335,7 @@ export const projects: Project[] = [
     repoNote: "This was a university class project, so the repo is kept private, but I'm happy to walk through the code on request.",
     img: miniMinecraftImg,
     alt: "Mini Minecraft — procedurally generated terrain at dusk",
-    blurb: "A 3D voxel engine written from scratch in C++/OpenGL, where everything that makes the world feel inhabited is hand-built: seven procedural biomes blended from layered Perlin/FBM noise, 3D caves, PCF shadow mapping, screen-space reflections, a day-night cycle, multithreaded chunk streaming, and an A*-pathfinding NPC ecosystem.",
+    blurb: "A 3D voxel engine written from scratch in C++/OpenGL by a team of three. My share: seven procedural biomes blended from layered Perlin/FBM noise, 3D cave generation with post-process fluid overlays, and the render pipeline — PCF shadow mapping, screen-space reflections, vertex ambient occlusion, distance fog, and a day–night cycle.",
     line: "A voxel engine from scratch in C++/OpenGL: 7 procedural biomes, 3D caves, PCF shadow maps, SSR, day–night.",
     who: "Team of 3; I owned terrain and the render pipeline",
     short: "a voxel engine in C++/OpenGL, team of 3",
@@ -367,15 +367,6 @@ export const projects: Project[] = [
         ],
       },
       {
-        type: "code",
-        file: "src/scene/terrain.cpp",
-        code: `static float lobe(float x, float center, float halfWidth) {
-    float d = glm::abs(x - center);
-    return 1.0f - glm::smoothstep(0.0f, halfWidth, d);
-}`,
-        note: "A column's height is then the weight-blended sum of every biome's height field, pulled 82% toward the blend so the base terrain still anchors the world, then re-flattened in lowlands and carved by a basin mask of up to 34 blocks, which is where the lakes come from (water fills empty columns up to Y=138).",
-      },
-      {
         type: "media",
         label: "Terrain",
         layout: "half",
@@ -394,20 +385,6 @@ export const projects: Project[] = [
         ],
       },
       {
-        type: "code",
-        file: "src/scene/terrain.cpp",
-        code: `for (int y = 1; y <= 128 && y <= caveTop; ++y) {
-    float caveNoise = getCaveNoise(worldX, y, worldZ);
-    if (caveNoise < 0.0f) {
-        if (y < 25) {
-            chunk->setLocalBlockAt(localX, y, localZ, LAVA);
-        } else {
-            chunk->setLocalBlockAt(localX, y, localZ, EMPTY);
-        }
-    }
-}`,
-      },
-      {
         type: "media",
         label: "Caves",
         layout: "full",
@@ -423,22 +400,6 @@ export const projects: Project[] = [
         ],
       },
       {
-        type: "code",
-        file: "glsl/lambert.frag.glsl",
-        code: `float bias = clamp(0.0015 * tan(acos(cosTheta)), 0.00025, 0.0015); // fix value to avoid peter panning
-vec2 texelSize = vec2(1.0 / 4096.0);
-float shadow = 0.0;
-for (int x = -3; x <= 3; ++x) {
-    for (int y = -3; y <= 3; ++y) {
-        float closestDepth = texture(u_ShadowMap, shadowCoord.xy + vec2(x, y) * texelSize).r;
-        if (closestDepth < currentDepth - bias) {
-            shadow += 1.0;
-        }
-    }
-}
-shadow /= 49.0;`,
-      },
-      {
         type: "prose",
         label: "SSR",
         heading: "Making water reflect what is actually on screen",
@@ -446,16 +407,6 @@ shadow /= 49.0;`,
           "The first water shader faked reflections with a fresnel sky tint, and it read as gray plastic. The fix was real screen-space reflections: a separate pass writes view-space positions into an RGBA32F buffer, and every water fragment marches its reflected ray against that buffer.",
           "The march runs as a DDA in pixel space, one pixel per step along the dominant screen axis for up to 384 iterations, then a 5-step binary refinement pins the hit. Four fade terms (hit quality, travel distance, screen edge, grazing-angle fresnel) suppress the artifacts SSR is infamous for, and masks restrict the whole effect to up-facing water surfaces.",
         ],
-      },
-      {
-        type: "code",
-        file: "glsl/lambert.frag.glsl",
-        code: `float dx = endPixel.x - startPixel.x;
-float dy = endPixel.y - startPixel.y;
-// step one pixel at a time along larger screen space axis
-float moreHorizontal = abs(dx) > abs(dy) ? 1.0 : 0.0;
-float maxDelta = mix(abs(dy), abs(dx), moreHorizontal);
-vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
       },
       {
         type: "prose",
@@ -507,10 +458,12 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
     links: { github: "https://github.com/CIS4600-Spring-2026/homework-06-half-edge-mesh-leebwj" },
     repoNote: "University repository — private per course policy. Happy to walk through the code directly.",
     img: miniMayaImg,
-    alt: "A cube, then the same cube after one and two rounds of Catmull–Clark subdivision, converging toward a sphere",
+    alt: "The Mini Maya editor with the subdivided cow model in its viewport",
     thumbPos: "centre",
     blurb:
       "A Maya-style mesh editor written from scratch in C++ and OpenGL. An indexed vertex buffer can draw a mesh but cannot answer \"what is next to this?\" — so the mesh is stored as a half-edge graph instead, which makes every neighbour a pointer hop away and turns edge splits, face triangulation and Catmull–Clark subdivision into local operations rather than full rebuilds.",
+    line: "A Maya-style mesh editor in C++/OpenGL: half-edge topology, live editing, Catmull–Clark subdivision.",
+    who: "Solo",
     tech: ["C++", "OpenGL", "Qt", "GLSL"],
     metrics: [
       { value: "3", label: "interlinked pointer classes" },
@@ -653,14 +606,14 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
         label: "Inside",
         heading: "Eight projects, each a different medium",
         items: [
-          "F1 ASCII Animation: a Formula 1 race animated in pure CSS/HTML with ASCII characters.",
-          "CSS Still Life: an 800×600 still life built entirely from divs, gradients, and keyframes. No images.",
-          "Blue Mixtape: a multi-page music zine as a navigable site (HTML + CSS grid/flex).",
-          "Data Footprints: an interactive site on personal data and web tracking, in vanilla JS.",
-          "p5.js Clock: a generative clock where seconds, minutes, and hours each drive their own visual system.",
-          "Tame the Cat: a scripted browser game with a state machine and chance elements.",
-          "QuadTree Painter: a generative Mondrian-style painter (Canvas API) from recursive quadtree splits.",
-          "API Tool Pitch: a team single-page pitch for an IFTTT-linked assistive tool.",
+          { text: "F1 ASCII Animation: a Formula 1 race animated in pure CSS/HTML with ASCII characters.", href: "https://codepen.io/Brian-Lee-the-styleful/pen/vENzaBO" },
+          { text: "CSS Still Life: an 800×600 still life built entirely from divs, gradients, and keyframes. No images.", href: "https://codepen.io/Brian-Lee-the-styleful/pen/ByoGepb" },
+          { text: "Blue Mixtape: a multi-page music zine as a navigable site (HTML + CSS grid/flex).", href: "https://leebwj.github.io/1020/S1FP/start.html" },
+          { text: "Data Footprints: an interactive site on personal data and web tracking, in vanilla JS.", href: "https://leebwj.github.io/1020/S2P2/" },
+          { text: "p5.js Clock: a generative clock where seconds, minutes, and hours each drive their own visual system.", href: "https://editor.p5js.org/leebwj/full/H0GIyhJEJ" },
+          { text: "Tame the Cat: a scripted browser game with a state machine and chance elements.", href: "https://leebwj.github.io/1020/S3P1/start.html" },
+          { text: "QuadTree Painter: a generative Mondrian-style painter (Canvas API) from recursive quadtree splits.", href: "https://leebwj.github.io/1020/S3P3/" },
+          { text: "API Tool Pitch: a team single-page pitch for an IFTTT-linked assistive tool.", href: "https://artofthewebfall2025.github.io/s3a2/" },
         ],
       },
       {
@@ -903,7 +856,8 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
     metaExtra: { label: "Platform", value: "HTML · playable" },
     links: { live: "https://leebwj.github.io/0020/Final/index.html", github: "https://github.com/leebwj/RodeRogue" },
     img: roadRogueImg,
-    alt: "Road Rogue — 3D car-chase game",
+    thumb: roadRogueFit,
+    alt: "Road Rogue — the getaway car crossing an intersection ahead of a police car",
     blurb: "A 3D car-chase game (à la Smashy Road) built to find the limits of AI-assisted creation for a design course: 3D assets from Meshy, logic scaffolded with Codex, assembled in Three.js. It holds up as a game — responsive driving and a survival score that ramps the tension.",
     line: "A browser car-chase game built to see how far Meshy and Codex can carry a playable game.",
     who: "Solo",
@@ -967,7 +921,8 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
     team: "Team of 8: four designers, four developers",
     tools: ["Figma", "Blender", "Spline"],
     metaExtra: { label: "Team built it in", value: "React, React Three Fiber, Node, MongoDB, S3" },
-    links: { github: "https://github.com/leebwj/sp25-penn-time-capsule", figma: "https://www.figma.com/proto/xNLzE7NKvOo9SToBUZtaSn/Penn-Time-Capsule?node-id=913-1430" },
+    links: { video: "https://youtu.be/VcS-ikD9YmM" },
+    repoNote: "This was a class team project, so the repository is kept private — I'm happy to walk through my design work on request.",
     img: capsuleImg,
     alt: "Capsule — gachapon machines rendered in 3D, capsule toys spilling out of them",
     blurb: "A time capsule you open instead of scroll through: photos and messages locked until a chosen date, then revealed in a 3D gallery. One of four designers on a team of eight — I made the 3D visual language, modelling the gachapon machines in Blender and animating the capsule in Spline for the team to embed.",
@@ -975,7 +930,7 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
     who: "Team of 8; I was one of four designers, on the 3D visual language and UI",
     short: "a time-capsule app with a 3D reveal",
     tech: ["Figma", "Blender", "Spline"],
-    featured: { type: "image", src: capHero, alt: "Capsule title slide — three gachapon machines rendered in 3D" },
+    featured: { type: "video", embed: "VcS-ikD9YmM", alt: "Capsule — demo video" },
     metrics: [
       { value: "8", label: "on the team" },
       { value: "Blender · Spline", label: "3D I made" },
@@ -984,6 +939,9 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
     blocks: [
       { type: "prose", label: "Overview", heading: "Memories, locked in 3D, revealed in time", body: [
         "Capsule is a time capsule you open rather than scroll through. You fill it with photos and messages, pick a date, and it stays sealed until then. When it opens, the contents do not appear as a grid — they arrive in a 3D gallery you move through.",
+      ] },
+      { type: "media", layout: "full", items: [
+        { src: capHero2, alt: "The gachapon machine that anchors Capsule's visual language, on its gradient", caption: "The machine at the centre of the visual language — turn the dial, and a capsule of memories drops." },
       ] },
       { type: "media", layout: "full", items: [
         { src: capCameraRoll, alt: "Pitch slide: a phone showing an endless camera roll, captioned with the question does anyone's camera roll look like this", caption: "The starting point: a scroll with no end and no reason to stop. Everyone we showed it to recognised their own phone in it." },
@@ -1095,11 +1053,6 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
       ] },
       { type: "prose", label: "Personas", heading: "Three readers, one scope", body: [
         "The interviews and survey collapsed into three reader personas and a set of How-Might-We questions that fixed the redesign's scope before any screens were drawn: five sections, each answering a documented need rather than a feature wishlist.",
-      ] },
-      { type: "media", label: "Personas", layout: "third", items: [
-        { placeholder: "Persona 01 · from the research file" },
-        { placeholder: "Persona 02 · from the research file" },
-        { placeholder: "Persona 03 · from the research file" },
       ] },
       { type: "prose", label: "Structure", heading: "Mapping the redesign before the visuals", body: [
         "Lo-fi screens set the information architecture before any visual design: a search-first Home with trending keywords and the featured article up front; a persistent, scrollable section-header strip replacing the buried TOC, plus a floating action menu; Language separated and relabeled “Article Language”; and an AI Chat tab as a quick-summary layer over the knowledge base.",
@@ -1310,7 +1263,7 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
         "Taught her to see modded content — a registry bridge regenerated at every server start, so on a partner studio's mode she learned 44 custom block states and 152 items and names what a kid is holding instead of reading back a raw id",
         "Took hosted voice end to end, so a builder can hold a spoken conversation with the character from a browser with no game client running",
         "Shipped a Claude skill that authors and validates a new mode's configuration, so integrating the agent into a mode stopped being bespoke work each time",
-        "Delivered an app-wide React Native redesign from Figma to production — sequencing the information architecture ahead of the visual system, so the layout stayed familiar and users kept their bearings before the new look arrived",
+        "Delivered an app-wide React Native redesign from Figma to production — shipped the reorganized screens first so users kept their bearings, then rolled the 33-section design system onto every screen",
         "Built the product's lifecycle notification system end to end: re-engagement, streak reminders and class-completion alerts, with per-stage copy, back-off so message types cannot pile onto the same family, and a holdout group so the effect could be measured rather than assumed",
         "Then made it autonomous — it proposes sends, clears its own safety guardrails and delivers unattended, where every send had previously needed a person to approve it",
         "Widened notification eligibility after validating the targeting against production data, substantially increasing the number of families the system could reach",
@@ -1329,7 +1282,7 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
     logo: "/logos/pennspark.png",
     order: 102,
     title: "Penn Spark",
-    tagline: "Getting client-facing 0→1 products out the door with cross-functional teams of 15+ at Penn's student product studio.",
+    tagline: "Shipping new client products from first concept to launch with teams of 15+ at Penn's student product studio.",
     motif: "grid",
     cats: [],
     kind: "design",
@@ -1341,8 +1294,8 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
     tools: ["Figma", "React", "TypeScript"],
     links: { live: "https://pennspark.org/" },
     img: null,
-    blurb: "Red-team project lead and product designer at Penn's student product studio, where 15+ designers and developers shipped client-facing 0→1 products on every semester cycle.",
-    line: "Lead a team of 15+ designers and developers shipping client products each semester.",
+    blurb: "Red-team project lead and product designer at Penn's student product studio, where teams of 15+ designers and developers ship a new client product every semester.",
+    line: "Leading a team of 15+ designers and developers shipping client products each semester.",
     who: "Project lead, product designer",
     briefPoints: [
       "Red team lead: 15+ designers and developers shipping a client product every semester",
@@ -1356,9 +1309,9 @@ vec2 stepDir = vec2(dx, dy) / max(maxDelta, 0.001);`,
         "Penn Spark is the University of Pennsylvania's student-run design and development community, where cross-functional teams of designers and developers partner with organizations and non-profits to build software from 0 to 1. I lead a “Red” team as Project Lead and Product Designer.",
       ] },
       { type: "list", label: "What I worked on", items: [
-        "Led cross-functional teams of 15+ designers and developers to ship client-facing 0→1 products",
-        "Defined end-to-end user flows, interaction patterns, and scalable interface systems",
-        "Shipped polished, user-centered features across semester-long project cycles",
+        "Led a team of 15+ designers and developers shipping new products for real clients, from first concept to launch",
+        "Defined the end-to-end user flows and the reusable interface systems the team shipped across client deliverables",
+        "Shipped a client product every semester cycle — most recently Dewey, a book-discovery iOS app (in Selected Work)",
       ] },
       { type: "prose", label: "Note", body: [
         "I also led Penn Spark's own website redesign; that case study is in Selected Work. Some client-project details are kept private.",
