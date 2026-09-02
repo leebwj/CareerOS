@@ -52,42 +52,56 @@ await src("slide-title").extract({ left: 760, top: 180, width: 1160, height: 773
 
 // -- 3D pass -----------------------------------------------------------------
 // The slide lays this out as two cards with a lot of internal padding, which
-// left the Spline capsule stranded in white space. The two renders are lifted
-// out of their cards and set on a shared ground instead. Rects are 2x.
+// left the Spline capsule stranded in white space. Both renders are lifted out
+// and recomposed. Three rules learned the hard way: the machines crop insets
+// past the card's rounded corners so no white notches reach the edges; the
+// capsule keeps a margin of its own card ground around it instead of being cut
+// at its bounding box; and nothing is upscaled — the machines scale DOWN to
+// meet the capsule, not the other way. Rects are 2x.
 {
-  const machines = await src("slide-3dprocess@2x").extract({ left: 256, top: 492, width: 1592, height: 1436 }).toBuffer();
-  const capsule = await src("slide-3dprocess@2x").extract({ left: 2558, top: 864, width: 442, height: 762 })
+  const machines = await src("slide-3dprocess@2x").extract({ left: 288, top: 524, width: 1528, height: 1372 })
     .resize({ height: 1100 }).toBuffer();
-  const cw = (await sharp(capsule).metadata()).width;
-  const GAP = 180, W = 1592 + GAP + cw, H = 1436;
-  // composite first: sharp applies resize before composite within one pipeline
+  const mw = (await sharp(machines).metadata()).width;
+  const capsule = await src("slide-3dprocess@2x").extract({ left: 2488, top: 794, width: 582, height: 902 }).toBuffer();
+  const M = 60, GAP = 150, W = M + mw + GAP + 582 + M, H = 1100 + 2 * M;
   const sheet = await sharp({ create: { width: W, height: H, channels: 3, background: GROUND } })
     .composite([
-      { input: machines, left: 0, top: 0 },
-      { input: capsule, left: 1592 + GAP, top: Math.round((H - 1100) / 2) },
+      { input: machines, left: M, top: M },
+      { input: capsule, left: M + mw + GAP, top: Math.round((H - 902) / 2) },
     ]).png().toBuffer();
   await sharp(sheet).resize({ width: 1700 }).jpeg(jpg()).toFile(`${OUT}/three-d.jpg`);
 }
 
-// -- feature shots: the phone alone, from the 2x exports ---------------------
+// -- feature shots: inset past the card's rounded corners, so the frame is a
+// clean full-bleed rectangle instead of gradient with notched white corners ---
 for (const [s, name] of [["slide-toggleview@2x", "toggle-view"], ["slide-opening@2x", "opening"]])
-  await src(s).extract({ left: 486, top: 260, width: 950, height: 1640 }).jpeg(jpg(92)).toFile(`${OUT}/${name}.jpg`);
+  await src(s).extract({ left: 538, top: 312, width: 846, height: 1536 }).jpeg(jpg(92)).toFile(`${OUT}/${name}.jpg`);
 
+// customizing keeps its four rounded tiles whole and frames them in a definite
+// border of the slide's own ground, rather than cutting through the corners
 await src("slide-customizing").extract({ left: 178, top: 300, width: 1563, height: 654 })
+  .extend({ top: 48, bottom: 48, left: 48, right: 48, background: GROUND })
   .jpeg(jpg()).toFile(`${OUT}/customizing.jpg`);
 await src("slide-inspiration").extract({ left: 128, top: 282, width: 1664, height: 686 })
   .jpeg(jpg()).toFile(`${OUT}/inspiration.jpg`);
 
 // -- diagrams: the user-flow heading sits inside the diagram's own bounds, so
 // it is painted out rather than cropped; both then trim to content ------------
+// both diagrams: trim to their actual content, then pad an even margin — this
+// centres them optically and gives the border breathing space in one move
 {
   const patch = await sharp({ create: { width: 340, height: 120, channels: 3, background: { r: 255, g: 255, b: 255 } } }).png().toBuffer();
-  const masked = await src("slide-userflow").composite([{ input: patch, left: 100, top: 110 }]).toBuffer();
-  await sharp(masked).extract({ left: 90, top: 70, width: 1740, height: 940 })
+  const masked = await src("slide-userflow").composite([{ input: patch, left: 100, top: 110 }]).png().toBuffer();
+  const trimmed = await sharp(masked).trim({ threshold: 3 }).toBuffer();
+  await sharp(trimmed).extend({ top: 72, bottom: 72, left: 72, right: 72, background: { r: 255, g: 255, b: 255 } })
     .png({ compressionLevel: 9 }).toFile(`${OUT}/user-flow.png`);
 }
-await src("slide-techstack").extract({ left: 220, top: 270, width: 1480, height: 600 })
-  .png({ compressionLevel: 9 }).toFile(`${OUT}/tech-stack.png`);
+{
+  const trimmed = await src("slide-techstack").extract({ left: 100, top: 260, width: 1720, height: 640 })
+    .png().toBuffer().then((b) => sharp(b).trim({ threshold: 3 }).toBuffer());
+  await sharp(trimmed).extend({ top: 64, bottom: 64, left: 64, right: 64, background: { r: 255, g: 255, b: 255 } })
+    .png({ compressionLevel: 9 }).toFile(`${OUT}/tech-stack.png`);
+}
 
 const cov = await sharp("src/assets/work/capsule.png").metadata();
 console.log(`capsule.png  ${cov.width}x${cov.height}  ${(fs.statSync("src/assets/work/capsule.png").size / 1024).toFixed(0)} KB`);
