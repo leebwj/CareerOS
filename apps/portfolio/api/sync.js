@@ -18,7 +18,9 @@ export default async function handler(req, res) {
   if (!EXEC) return res.status(500).json({ error: "Not configured — set SHEET_EXEC_URL in Vercel" });
 
   const readState = async () => {
-    const r = await fetch(EXEC + (EXEC.includes("?") ? "&" : "?") + "callback=cb", { redirect: "follow" });
+    // unique callback per read: a fixed one lets any cache between here and
+    // Apps Script serve yesterday's state, which reads back as a failed write
+    const r = await fetch(EXEC + (EXEC.includes("?") ? "&" : "?") + "callback=cb_" + Date.now(), { redirect: "follow", cache: "no-store" });
     const t = await r.text();
     const m = t.match(/^\s*[\w$]+\(([\s\S]*)\)\s*;?\s*$/); // unwrap JSONP if present
     return JSON.parse(m ? m[1] : t);
