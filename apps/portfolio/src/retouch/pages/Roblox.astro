@@ -7,7 +7,7 @@ import ShaderField from "../../components/ShaderField.astro";
 import ProfileCard from "../../components/ProfileCard.astro";
 import { Image } from "astro:assets";
 import { getProject, catLabels } from "../../data/projects";
-import { studies, steps, why, ROBLOX_RESUME } from "../../data/roblox";
+import { studies, steps, why, PROCESS_SUB, ROBLOX_RESUME } from "../../data/roblox";
 
 const featured = studies.map((s) => ({ ...s, p: getProject(s.slug)! }));
 ---
@@ -55,7 +55,7 @@ const featured = studies.map((s) => ({ ...s, p: getProject(s.slug)! }));
       <div class="hero-shade"></div>
       <div class="hero-wall w-full intro intro--name rb-intro">
         <h1 class="kinetic hero-name"><span class="line"><span class="line-i" style="--d:.1s">Brian Lee.</span></span></h1>
-        <div class="line"><p class="hero-sub" style="--d:.26s">Product designer who builds what he designs. CS + Design at Penn, looking for a Summer 2027 product design internship.</p></div>
+        <div class="line"><p class="hero-sub" style="--d:.26s">Product designer who builds what he designs. CS + Design at Penn, applying for the Product Design Intern role at Roblox, Summer 2027.</p></div>
         <div class="line"><div class="hero-actions" style="--d:.38s">
           <a href="#work" class="btn btn-primary" data-magnetic="0.4">See work</a>
           <a href="#contact" class="btn btn-ghost" data-magnetic="0.4">Get in touch</a>
@@ -78,7 +78,7 @@ const featured = studies.map((s) => ({ ...s, p: getProject(s.slug)! }));
       </div>
 
       <div class="rb-studies mt-12">
-        {featured.map(({ p, line, blurb, outcome, thumb, team }, i) => (
+        {featured.map(({ p, line, blurb, outcome, thumb, team, role }, i) => (
           <article class="rb-study reveal" style={`--d:${(i % 2) * 0.06}s`}>
             <a href={`/work/${p.slug}`} class="proj rb-study__media" data-cursor="View" data-cursor-keep>
               <div class="proj-media" style={`view-transition-name: thumb-${p.slug}`}>
@@ -98,12 +98,12 @@ const featured = studies.map((s) => ({ ...s, p: getProject(s.slug)! }));
               <h3 class="rb-study__title"><a href={`/work/${p.slug}`} style={`view-transition-name: title-${p.slug}`}>{p.title}</a></h3>
               <p class="rb-study__line">{line ?? p.line}</p>
               <dl class="rb-facts">
-                <div><dt>Role</dt><dd>{p.role}</dd></div>
+                <div><dt>Role</dt><dd>{role ?? p.role}</dd></div>
                 <div><dt>Team</dt><dd>{team ?? p.team ?? p.who}</dd></div>
                 <div><dt>Timeline</dt><dd>{p.date}</dd></div>
                 <div><dt>Outcome</dt><dd>{outcome}</dd></div>
               </dl>
-              <p class="rb-study__blurb">{blurb ?? p.blurb}</p>
+              <p class="rb-study__blurb">{blurb}</p>
               <ul class="tag-row mt-5">{(p.tools.length ? p.tools : p.tech).map((t) => <li class="tag">{t}</li>)}</ul>
               <a href={`/work/${p.slug}`} class="rb-study__more" data-cursor="View">Read case study →</a>
             </div>
@@ -118,6 +118,7 @@ const featured = studies.map((s) => ({ ...s, p: getProject(s.slug)! }));
         <div class="reveal rb-split__head">
           <p class="kicker"><span class="num">(02)</span>Process</p>
           <h2 class="velocity-type kinetic-line mt-5 text-[clamp(1.9rem,4vw,3rem)] font-bold">How I work.</h2>
+          <p class="rb-split__sub">{PROCESS_SUB}</p>
         </div>
         <ol class="rb-steps">
           {steps.map((s, i) => (
@@ -177,9 +178,9 @@ const featured = studies.map((s) => ({ ...s, p: getProject(s.slug)! }));
       <div class="cta-block reveal mt-6">
         <div class="cta-grid">
           <div>
-            <h2 class="velocity-type text-[clamp(2rem,5vw,3.4rem)] font-bold leading-[1.05]">Let's work together.</h2>
+            <h2 class="velocity-type text-[clamp(2rem,5vw,3.4rem)] font-bold leading-[1.05]">Let's talk about the Product Design Intern role.</h2>
             <p class="mt-4 max-w-[42ch] text-lg leading-relaxed" style="opacity:.85">
-              Happy to walk through any of this work on a call. The full site, with the graphics and engineering projects, is at leebrian.dev.
+              Summer 2027, San Mateo. Happy to walk through any of this work on a call. The full site, with the graphics and engineering projects, is at leebrian.dev.
             </p>
           </div>
           <div class="cta-links">
@@ -269,6 +270,7 @@ const featured = studies.map((s) => ({ ...s, p: getProject(s.slug)! }));
   /* heading column on the left, content on the right, so the text block fills the page width */
   .rb-split { display: grid; gap: 2.5rem; }
   @media (min-width: 900px) { .rb-split { grid-template-columns: 5fr 7fr; gap: 3rem; align-items: start; } .rb-split__head { position: sticky; top: 5.5rem; } }
+  .rb-split__sub { margin-top: 1.1rem; color: var(--color-muted); line-height: 1.65; max-width: 36ch; text-wrap: pretty; }
 
   .rb-steps { list-style: none; margin: 0; padding: 0; display: grid; }
   .rb-step { display: grid; grid-template-columns: 3rem 1fr; gap: 1rem; padding: 1.5rem 0; border-top: 1px solid var(--color-line); }

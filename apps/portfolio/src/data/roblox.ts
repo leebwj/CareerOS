@@ -1,7 +1,6 @@
 // The Roblox view of the portfolio (/roblox): the same case studies the rest
 // of the site renders, in the order and framing for one reader. Kept out of
 // projects.ts so the shared data stays audience-neutral.
-
 import type { ImageMetadata } from "astro";
 import alephThumb from "../assets/work/aleph-lab.png";
 
@@ -10,25 +9,47 @@ export const ROBLOX_RESUME = "/Brian_Lee_Resume_Roblox.pdf";
 export interface RobloxStudy {
   slug: string;
   outcome: string; // what exists at the end, in a recruiter's terms
+  blurb: string; // the story in three beats: the problem, what I did, what came out
   thumb?: ImageMetadata; // for an entry whose project has no card image
+  role?: string; // for an experience, whose title is the job title
   team?: string; // for an experience, which carries no team field
   line?: string; // replaces the card one-liner where the project's own is engineering-first
-  blurb?: string; // replaces the card description for the same reason
 }
 
 export const studies: RobloxStudy[] = [
-  { slug: "dewey", outcome: "Working iOS build, in beta with the client" },
-  { slug: "wikipedia", outcome: "Hi-fi prototype, 5 sections, usability tested" },
-  { slug: "path-at-penn", outcome: "Hi-fi prototype, 4 surfaces, usability tested" },
-  { slug: "penn-spark-redesign", outcome: "Live at pennspark.org" },
-  { slug: "capsule", outcome: "Working MVP, 6 weeks" },
+  {
+    slug: "dewey",
+    outcome: "Working iOS build, in beta with the client",
+    blurb: "Dewey came to Penn Spark with a live web MVP, real early users, and one ask: turn it into an iOS app. I led design for a team of eight. We audited the site, kept the client's brand, settled the big calls in grayscale with the developers, and handed off specs they built from. The app now runs on Dewey's backend with the founders and beta testers on it.",
+  },
+  {
+    slug: "wikipedia",
+    outcome: "Hi-fi prototype, 5 sections, usability tested",
+    blurb: "People scan Wikipedia and Ctrl+F their way through it, but the mobile app assumes they read. Three interviews and a survey became three reader personas and a five-section scope. Four usability sessions then changed four parts of the design before the final prototype, and the page lists each change and why.",
+  },
+  {
+    slug: "path-at-penn",
+    outcome: "Hi-fi prototype, 4 surfaces, usability tested",
+    blurb: "Students plan their semester in four other apps and come to Path@Penn only to click enroll. Walkthroughs, interviews, and an audit of the live portal turned that into four connected surfaces that follow how students actually plan, tested mid-fi with think-aloud sessions that simplified the navigation and made the enrollment result explicit.",
+  },
+  {
+    slug: "penn-spark-redesign",
+    outcome: "Live at pennspark.org",
+    blurb: "The club's site did not match the quality of the club's work. I led ten-plus designers and developers from wireframes and a Figma component system to a Next.js rebuild, with content stored as data so the team updates the site without an engineer. It has been live at pennspark.org since December 2025.",
+  },
+  {
+    slug: "capsule",
+    outcome: "Working MVP, 6 weeks",
+    blurb: "Camera rolls bury the memories that matter most. Our team of eight designed a time capsule that seals photos and messages until a chosen date, then opens them in a 3D gallery. I made the 3D visual language in Blender and Spline and kept the creation flow deliberately quiet so the reveal is the loud part.",
+  },
   {
     slug: "aleph-lab",
     outcome: "Redesign live to 100% of users",
     thumb: alephThumb,
+    role: "Engineer & designer, intern",
     team: "Y Combinator startup (F25), remote",
     line: "The app around a set of Roblox-style game modes for children, redesigned end to end and shipped to every user.",
-    blurb: "Software engineering intern at a Y Combinator startup whose game modes for kids were designed to feel like Roblox games. On the design side: an app-wide redesign that shipped its information architecture first so nobody had to relearn the app, then a 33-section visual system rolled out in stages; a Figma-to-React-Native pipeline; and the AI character's voice in the interface, written in English and Korean for a reader who is a child.",
+    blurb: "A Y Combinator startup whose game modes for kids were designed to feel like Roblox games. On the design side I shipped an app-wide redesign that landed its information architecture first, so no family had to relearn the app, then rolled a 33-section visual system out in stages. I also built the Figma-to-React-Native pipeline the team hands off through, and wrote the AI character's voice in the interface in English and Korean for a reader who is a child.",
   },
 ];
 
@@ -37,6 +58,8 @@ export interface Step {
   body: string;
   link: { text: string; slug: string };
 }
+
+export const PROCESS_SUB = "The same five steps on every project above. Each one names the case study where it happened, so the process is something you can check rather than something I claim.";
 
 export const steps: Step[] = [
   {
@@ -69,5 +92,5 @@ export const steps: Step[] = [
 export const why: string[] = [
   "This summer at Aleph Lab we built game modes for children inside a sandbox world, with an AI character who plays alongside them. The reference that settled our design arguments was to make it feel like a Roblox game. The app around those modes was mine to redesign, and the people on the other side were children and their parents.",
   "That is where I learned to treat optimism and civility as design constraints rather than policy. The crash recovery and error states are written in warm English and Korean because the reader is a child. The character's fight-refusal fix was a decision about what a kid's afternoon feels like. Shipping the information architecture before the visual system was a decision about not making families relearn something they used every day.",
-  "I came to Roblox as a player late. I have played enough to find my way around and I have not opened Studio yet. The fluency I do have is designing for the kids who are already there.",
+  "I came to Roblox as a player late. I have played enough to find my way around and I have not opened Studio yet. The fluency I do have is designing for the kids who are already there, and the Product Design Intern role is where I would like to learn the rest.",
 ];

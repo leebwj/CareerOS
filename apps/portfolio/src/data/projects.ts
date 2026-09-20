@@ -694,6 +694,18 @@ export const projects: Project[] = [
         ],
       },
       {
+        type: "list",
+        label: "Decisions",
+        heading: "Each choice, and the reason it won",
+        items: [
+          "Figma before code: wireframes settled the structure and hierarchy of five pages with the whole team before anyone wrote a component.",
+          "A component system, not page mockups: type, spacing, color tokens, and reusable patterns, so ten-plus people produced one consistent site.",
+          "Next.js over Gatsby: faster for a marketing site, and a component model that maps one to one onto the Figma structure.",
+          "Content as data: case studies, team members, and events live in data files, so the club updates the site without touching component code.",
+          "A case-study section the old site never had: the club's client work was its best argument and was invisible.",
+        ],
+      },
+      {
         type: "media",
         label: "Screens",
         layout: "full",
@@ -726,7 +738,7 @@ export const projects: Project[] = [
     kind: "design",
     date: "Mar 2026",
     context: "Personal project",
-    role: "Solo designer & UX researcher",
+    role: "Designer & UX researcher",
     tools: ["Figma", "UX Research", "Prototyping", "User Testing"],
     metaExtra: { label: "Deliverable", value: "Hi-fi prototype · 4 surfaces" },
     links: { figma: "https://www.figma.com/proto/DBOeERCANozjTRaP6VYxIb/Brian-Lee---Design?node-id=47-409", deck: "https://www.figma.com/deck/KYlvDCdz7M2VCTRki5Vvag" },
@@ -845,6 +857,14 @@ export const projects: Project[] = [
         label: "Outcome",
         body: [
           "The final prototype is a fundamentally different experience, not by adding features but by reorganizing what already exists into a structure that matches how students plan. It reduces clicks to complete core tasks, surfaces registration feedback at the point of action, and gives students one trustworthy place to see where they stand toward graduation, without a separate app.",
+        ],
+      },
+      {
+        type: "prose",
+        label: "Reflection",
+        heading: "The portal was missing structure, not features",
+        body: [
+          "Every feature students needed already existed somewhere in Path@Penn. What the research showed was that none of it sat where a student would look for it at the moment they needed it. The redesign's biggest wins came from sequencing and placement, which is a cheaper lesson than adding features and one I now check for first.",
         ],
       },
     ],
@@ -1016,7 +1036,7 @@ export const projects: Project[] = [
     kind: "design",
     date: "Apr 2026",
     context: "Personal project",
-    role: "Solo designer & UX researcher",
+    role: "Designer & UX researcher",
     tools: ["Figma", "UX Research", "User Testing", "Prototyping"],
     metaExtra: { label: "Deliverable", value: "Hi-fi prototype" },
     links: { figma: "https://www.figma.com/proto/vKo7ySkGZW5dliYa44yHwa/Brian-Lee---Design?node-id=103-7273" },
@@ -1128,7 +1148,7 @@ export const projects: Project[] = [
       { type: "media", label: "Before", layout: "full", items: [
         { src: dwWebBefore, alt: "Dewey's web MVP", caption: "The starting point · Dewey's live web MVP at joindewey.com" },
       ] },
-      { type: "prose", label: "The task", heading: "Translate, don't reinvent", body: [
+      { type: "prose", label: "Problem", heading: "Translate, don't reinvent", body: [
         "The brief sounds simple: get the website into app form. The constraints made it design work. Every existing feature had to survive the move to a phone; the visual identity was the client's, not ours to change; the backend and its data model already existed; and the one genuinely new surface, the recommendations experience, had no web version to translate at all.",
         "The process ran in five stages: discovery (web audit, brand review), UX architecture (user journeys, flow charts), lo-fi wireframes for every core screen, hi-fidelity design inside Dewey's brand system, and developer handoff with full Figma specs and prototypes.",
       ] },
