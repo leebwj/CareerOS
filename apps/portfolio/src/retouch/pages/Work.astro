@@ -6,10 +6,18 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import ShaderField from "../../components/ShaderField.astro";
 import { Image } from "astro:assets";
 import { projects, experiences, catLabels, type CatId } from "../../data/projects";
+import { studies as robloxStudies, forRoblox } from "../../data/roblox";
 
-const { project: p } = Astro.props;
-const backHref = p.type === "experience" ? "/#about" : "/#work";
-const backLabel = p.type === "experience" ? "About" : "All Work";
+// base = "/roblox" renders the same study inside the Roblox view: its nav, back
+// link, prev/next and footer stay within that view instead of leading to the
+// main site, and the Roblox-only blocks are added to the body
+const { project: given, base = "" } = Astro.props as { project: (typeof projects)[number]; base?: "" | "/roblox" };
+const roblox = base === "/roblox";
+const p = roblox ? forRoblox(given) : given;
+const home = base || "/";
+const work = (slug: string) => `${base}/work/${slug}`;
+const backHref = roblox ? `${base}#work` : p.type === "experience" ? "/#about" : "/#work";
+const backLabel = roblox ? "Work" : p.type === "experience" ? "About" : "All Work";
 
 // distribute media items round-robin into N columns → true masonry (no crop, no gap, no overlap)
 const toCols = (items: any[], n: number) => {
@@ -18,11 +26,13 @@ const toCols = (items: any[], n: number) => {
   return out;
 };
 
-const pool = projects.filter((x) => (x.type ?? "project") === (p.type ?? "project"));
-const sorted = [...pool].sort((a, b) => a.order - b.order);
-const idx = sorted.findIndex((x) => x.slug === p.slug);
-const prev = sorted[(idx - 1 + sorted.length) % sorted.length];
-const next = sorted[(idx + 1) % sorted.length];
+// prev/next walk the Roblox reading order inside that view, otherwise the projects of the same type
+const pool = roblox
+  ? robloxStudies.map((s) => projects.find((x) => x.slug === s.slug)!)
+  : [...projects.filter((x) => (x.type ?? "project") === (p.type ?? "project"))].sort((a, b) => a.order - b.order);
+const idx = pool.findIndex((x) => x.slug === p.slug);
+const prev = idx < 0 ? null : pool[(idx - 1 + pool.length) % pool.length];
+const next = idx < 0 ? null : pool[(idx + 1) % pool.length];
 
 const linkList = [
   p.links.live && { label: p.type === "experience" ? "Visit website" : "View live", href: p.links.live },
@@ -37,7 +47,7 @@ const linkList = [
   <header class="cs-nav" style="view-transition-name: site-header;">
     <div class="wrap cs-nav__row">
       <a href={backHref} class="cs-back nav-link" data-cursor="Back">← {backLabel}</a>
-      <a href="/#top" class="font-display text-lg font-bold tracking-tight">Brian&nbsp;Lee<span class="text-cobalt">.</span></a>
+      <a href={`${home}#top`} class="font-display text-lg font-bold tracking-tight">Brian&nbsp;Lee<span class="text-cobalt">.</span></a>
       <button id="mode-toggle" class="mode-toggle" type="button" aria-label="Toggle light and dark mode" data-cursor="Theme">
         <svg class="ico ico-sun" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5 5l1.7 1.7M17.3 17.3 19 19M19 5l-1.7 1.7M6.7 17.3 5 19" stroke-linecap="round"/></svg>
         <svg class="ico ico-moon" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" stroke-linejoin="round" stroke-linecap="round"/></svg>
@@ -84,7 +94,7 @@ const linkList = [
           {p.metaExtra && <div><dt>{p.metaExtra.label}</dt><dd>{p.metaExtra.value}</dd></div>}
           {p.tools.length > 0 && <div class="cs-meta__tools"><dt>Tools</dt><dd><ul class="tag-row">{p.tools.map((t) => <li class="tag">{t}</li>)}</ul></dd></div>}
         </dl>
-        {p.type === "experience" && (
+        {p.type === "experience" && !roblox && (
           <nav class="cs-switch" aria-label="Experience">
             <p class="cs-switch__label">All experience</p>
             <ul>
@@ -206,14 +216,16 @@ const linkList = [
     </section>
 
     <!-- ── prev / next ── -->
-    <nav class="cs-pn wrap">
-      <a href={`/work/${prev.slug}`} class="cs-pn__item cs-pn__prev" data-cursor="Prev">
-        <span class="cs-pn__dir">← Prev</span><span class="cs-pn__title">{prev.title}</span>
-      </a>
-      <a href={`/work/${next.slug}`} class="cs-pn__item cs-pn__next" data-cursor="Next">
-        <span class="cs-pn__dir">Next →</span><span class="cs-pn__title">{next.title}</span>
-      </a>
-    </nav>
+    {prev && next && (
+      <nav class="cs-pn wrap">
+        <a href={work(prev.slug)} class="cs-pn__item cs-pn__prev" data-cursor="Prev">
+          <span class="cs-pn__dir">← Prev</span><span class="cs-pn__title">{prev.title}</span>
+        </a>
+        <a href={work(next.slug)} class="cs-pn__item cs-pn__next" data-cursor="Next">
+          <span class="cs-pn__dir">Next →</span><span class="cs-pn__title">{next.title}</span>
+        </a>
+      </nav>
+    )}
 
     <!-- ── CTA ── -->
     <footer class="wrap cs-foot">
@@ -240,7 +252,7 @@ const linkList = [
     // "← All Work" returns to the role view the visitor came from (/, /graphics, /engineering, /design)
     (() => {
       const back = document.querySelector(".cs-back");
-      if (!back) return;
+      if (!back || location.pathname.startsWith("/roblox/")) return;
       try {
         const ref = new URL(document.referrer);
         if (ref.origin === location.origin && ["/", "/graphics", "/engineering", "/design", "/roblox"].includes(ref.pathname))

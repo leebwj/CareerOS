@@ -92,3 +92,83 @@ export const why: string[] = [
   "That is where I learned to treat optimism and civility as design constraints rather than policy. The crash recovery and error states are written in warm English and Korean because the reader is a child. The character's fight-refusal fix was a decision about what a kid's afternoon feels like. Shipping the information architecture before the visual system was a decision about not making families relearn something they used every day.",
   "I came to Roblox as a player late. I have played enough to find my way around and I have not opened Studio yet. The fluency I do have is designing for the kids who are already there, and the Product Design Intern role is where I would like to learn the rest.",
 ];
+
+// Case-study additions that exist only under /roblox/work: the shared pages
+// stay exactly as Brian wrote them. Blocks are inserted after the block whose
+// label matches; a missing label appends at the end.
+import type { Block, Project } from "./projects";
+
+type PageOverride = { role?: string; relabel?: Record<string, string>; insert?: { after: string; block: Block }[] };
+
+const overrides: Record<string, PageOverride> = {
+  dewey: {
+    relabel: { "The task": "Problem" },
+    insert: [
+      { after: "Brand", block: { type: "list", label: "Research", heading: "What we learned before drawing", items: [
+        "A web audit of the live MVP, so every existing feature had a place on the phone before anything new was drawn.",
+        "A brand review: Margin, Playfair Display, Inter, sage and cream, carried over rather than restyled.",
+        "Benchmarks of how Instagram and Spotify structure their home surfaces, used to settle where search lives.",
+        "The client's own open questions from their requirements document: whether recommendations should swipe, and whether the brand should change at all.",
+      ] } },
+      { after: "Lo-fi", block: { type: "list", label: "Decisions", heading: "Each choice, and the reason it won", items: [
+        "Search as its own tab, not a bar on the feed: books and users share one search, and the developers confirmed the existing routes could serve it.",
+        "Recommendations as a swipe deck, not a scroll: one decision at a time matches Dewey's comparative ranking, and it was the client's own open question.",
+        "Four tabs: the web navigation collapsed to what a thumb reaches.",
+        "The trending row as a horizontal shelf: the web's trending block recomposed for a phone instead of shrunk to fit.",
+        "The brand kept as it was: the client's document asked whether to rebrand, and the answer was no; the identity was theirs, and the app had to read as the same product as the website.",
+        "Expo Go instead of TestFlight for the beta: the brief said TestFlight, which needs a paid developer account; Expo Go got the same build onto the founders' phones and the client accepted the change.",
+      ] } },
+    ],
+  },
+  wikipedia: { role: "Designer & UX researcher" },
+  "path-at-penn": {
+    role: "Designer & UX researcher",
+    insert: [
+      { after: "Process", block: { type: "list", label: "Iterations", heading: "What testing changed", items: [
+        "Navigation: simplified after the think-aloud sessions with peers doing the three core tasks (find a course, add it, check degree progress).",
+        "Registration feedback: the state after enrolling became explicit (succeeded, failed, or waitlisted, and why), because testers could not tell which had happened.",
+      ] } },
+      { after: "Outcome", block: { type: "prose", label: "Reflection", heading: "The portal was missing structure, not features", body: [
+        "Every feature students needed already existed somewhere in Path@Penn. What the research showed was that none of it sat where a student would look for it at the moment they needed it. The redesign's biggest wins came from sequencing and placement, which is a cheaper lesson than adding features and one I now check for first.",
+      ] } },
+    ],
+  },
+  "penn-spark-redesign": {
+    insert: [
+      { after: "Process", block: { type: "list", label: "Decisions", heading: "Each choice, and the reason it won", items: [
+        "Figma before code: wireframes settled the structure and hierarchy of five pages with the whole team before anyone wrote a component.",
+        "A component system, not page mockups: type, spacing, color tokens, and reusable patterns, so ten-plus people produced one consistent site.",
+        "Next.js over Gatsby: faster for a marketing site, and a component model that maps one to one onto the Figma structure.",
+        "Content as data: case studies, team members, and events live in data files, so the club updates the site without touching component code.",
+        "A case-study section the old site never had: the club's client work was its best argument and was invisible.",
+      ] } },
+    ],
+  },
+  "aleph-lab": {
+    role: "Engineer & designer, intern",
+    insert: [
+      { after: "Company", block: { type: "list", label: "Design", heading: "The design half of the summer", items: [
+        "Delivered a full rebrand users did not have to relearn: the information architecture shipped first, live to 100% of users, so the layout stayed familiar before the 33-section visual system followed, staged 25, 50, then 100% across real usage cycles",
+        "Cut the designer-to-engineer handoff out of the loop with a pipeline that turns Figma designs into React Native components as drawn, packaged so any engineer on the team can run it",
+        "Gave the AI character a consistent voice in the interface: her message-bubble system across the home experience, plus a branded crash recovery and shared error states in warm, kid-appropriate English and Korean",
+        "Reset onboarding priorities by surfacing a mobile drop-off at roughly half the desktop activation rate in trial data nobody had segmented that way, which redirected where the team looked next",
+      ] } },
+    ],
+  },
+};
+
+const labelOf = (b: Block) => ("label" in b && b.label) || "";
+
+export const forRoblox = (p: Project): Project => {
+  const o = overrides[p.slug];
+  if (!o) return p;
+  let blocks = p.blocks.map((b) => {
+    const to = o.relabel?.[labelOf(b)];
+    return to && "label" in b ? { ...b, label: to } : b;
+  });
+  for (const { after, block } of o.insert ?? []) {
+    const i = blocks.findIndex((b) => labelOf(b) === after);
+    blocks = i < 0 ? [...blocks, block] : [...blocks.slice(0, i + 1), block, ...blocks.slice(i + 1)];
+  }
+  return { ...p, role: o.role ?? p.role, blocks };
+};

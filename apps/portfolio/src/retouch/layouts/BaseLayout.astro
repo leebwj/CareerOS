@@ -106,6 +106,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
       (() => {
         const chip = document.querySelector(".dchip"); if (!chip) return;
         const p = location.pathname;
+        if (p.startsWith("/roblox")) { chip.remove(); return; }   // the Roblox view has no classic twin
         chip.querySelector('[data-design="classic"]').href = p.startsWith("/work/") ? "/classic" + p : "/classic/";
         chip.querySelectorAll("[data-design]").forEach((a) => a.addEventListener("click", () => { try { localStorage.setItem("bl-design", a.dataset.design); } catch (e) {} }));
         try { localStorage.removeItem("bl-font"); } catch (e) {}   // the type trial is over: Mona Sans stays

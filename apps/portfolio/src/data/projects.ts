@@ -694,18 +694,6 @@ export const projects: Project[] = [
         ],
       },
       {
-        type: "list",
-        label: "Decisions",
-        heading: "Each choice, and the reason it won",
-        items: [
-          "Figma before code: wireframes settled the structure and hierarchy of five pages with the whole team before anyone wrote a component.",
-          "A component system, not page mockups: type, spacing, color tokens, and reusable patterns, so ten-plus people produced one consistent site.",
-          "Next.js over Gatsby: faster for a marketing site, and a component model that maps one to one onto the Figma structure.",
-          "Content as data: case studies, team members, and events live in data files, so the club updates the site without touching component code.",
-          "A case-study section the old site never had: the club's client work was its best argument and was invisible.",
-        ],
-      },
-      {
         type: "media",
         label: "Screens",
         layout: "full",
@@ -738,7 +726,7 @@ export const projects: Project[] = [
     kind: "design",
     date: "Mar 2026",
     context: "Personal project",
-    role: "Designer & UX researcher",
+    role: "Solo designer & UX researcher",
     tools: ["Figma", "UX Research", "Prototyping", "User Testing"],
     metaExtra: { label: "Deliverable", value: "Hi-fi prototype · 4 surfaces" },
     links: { figma: "https://www.figma.com/proto/DBOeERCANozjTRaP6VYxIb/Brian-Lee---Design?node-id=47-409", deck: "https://www.figma.com/deck/KYlvDCdz7M2VCTRki5Vvag" },
@@ -824,15 +812,6 @@ export const projects: Project[] = [
       },
       {
         type: "list",
-        label: "Iterations",
-        heading: "What testing changed",
-        items: [
-          "Navigation: simplified after the think-aloud sessions with peers doing the three core tasks (find a course, add it, check degree progress).",
-          "Registration feedback: the state after enrolling became explicit (succeeded, failed, or waitlisted, and why), because testers could not tell which had happened.",
-        ],
-      },
-      {
-        type: "list",
         label: "The four surfaces",
         items: [
           "Dashboard: a personalized home with deadlines, semester progress, and quick actions up front.",
@@ -857,14 +836,6 @@ export const projects: Project[] = [
         label: "Outcome",
         body: [
           "The final prototype is a fundamentally different experience, not by adding features but by reorganizing what already exists into a structure that matches how students plan. It reduces clicks to complete core tasks, surfaces registration feedback at the point of action, and gives students one trustworthy place to see where they stand toward graduation, without a separate app.",
-        ],
-      },
-      {
-        type: "prose",
-        label: "Reflection",
-        heading: "The portal was missing structure, not features",
-        body: [
-          "Every feature students needed already existed somewhere in Path@Penn. What the research showed was that none of it sat where a student would look for it at the moment they needed it. The redesign's biggest wins came from sequencing and placement, which is a cheaper lesson than adding features and one I now check for first.",
         ],
       },
     ],
@@ -1036,7 +1007,7 @@ export const projects: Project[] = [
     kind: "design",
     date: "Apr 2026",
     context: "Personal project",
-    role: "Designer & UX researcher",
+    role: "Solo designer & UX researcher",
     tools: ["Figma", "UX Research", "User Testing", "Prototyping"],
     metaExtra: { label: "Deliverable", value: "Hi-fi prototype" },
     links: { figma: "https://www.figma.com/proto/vKo7ySkGZW5dliYa44yHwa/Brian-Lee---Design?node-id=103-7273" },
@@ -1148,18 +1119,12 @@ export const projects: Project[] = [
       { type: "media", label: "Before", layout: "full", items: [
         { src: dwWebBefore, alt: "Dewey's web MVP", caption: "The starting point · Dewey's live web MVP at joindewey.com" },
       ] },
-      { type: "prose", label: "Problem", heading: "Translate, don't reinvent", body: [
+      { type: "prose", label: "The task", heading: "Translate, don't reinvent", body: [
         "The brief sounds simple: get the website into app form. The constraints made it design work. Every existing feature had to survive the move to a phone; the visual identity was the client's, not ours to change; the backend and its data model already existed; and the one genuinely new surface, the recommendations experience, had no web version to translate at all.",
         "The process ran in five stages: discovery (web audit, brand review), UX architecture (user journeys, flow charts), lo-fi wireframes for every core screen, hi-fidelity design inside Dewey's brand system, and developer handoff with full Figma specs and prototypes.",
       ] },
       { type: "media", label: "Brand", layout: "full", bare: true, items: [
         { src: dwBrand, alt: "Dewey brand system", caption: "The client's identity, kept: Margin and Playfair Display over Inter, sage and cream" },
-      ] },
-      { type: "list", label: "Research", heading: "What we learned before drawing", items: [
-        "A web audit of the live MVP, so every existing feature had a place on the phone before anything new was drawn.",
-        "A brand review: Margin, Playfair Display, Inter, sage and cream, carried over rather than restyled.",
-        "Benchmarks of how Instagram and Spotify structure their home surfaces, used to settle where search lives.",
-        "The client's own open questions from their requirements document: whether recommendations should swipe, and whether the brand should change at all.",
       ] },
       { type: "list", label: "Architecture", heading: "Five flows carry the whole product", items: [
         "Feed: friend posts, trending books, create post, like and comment.",
@@ -1175,14 +1140,6 @@ export const projects: Project[] = [
         { src: dwLofiA, alt: "Feed wireframe without search", caption: "Feed A · search as its own tab" },
         { src: dwLofiB, alt: "Feed wireframe with search bar", caption: "Feed B · search bar on the feed" },
         { src: dwLofiRecs, alt: "Recommendations wireframe", caption: "Recs · the swipe deck, tested in grayscale" },
-      ] },
-      { type: "list", label: "Decisions", heading: "Each choice, and the reason it won", items: [
-        "Search as its own tab, not a bar on the feed: books and users share one search, and the developers confirmed the existing routes could serve it.",
-        "Recommendations as a swipe deck, not a scroll: one decision at a time matches Dewey's comparative ranking, and it was the client's own open question.",
-        "Four tabs: the web navigation collapsed to what a thumb reaches.",
-        "The trending row as a horizontal shelf: the web's trending block recomposed for a phone instead of shrunk to fit.",
-        "The brand kept as it was: the client's document asked whether to rebrand, and the answer was no; the identity was theirs, and the app had to read as the same product as the website.",
-        "Expo Go instead of TestFlight for the beta: the brief said TestFlight, which needs a paid developer account; Expo Go got the same build onto the founders' phones and the client accepted the change.",
       ] },
       { type: "prose", label: "Hi-fi", heading: "Mobile composition inside someone else's brand", body: [
         "The hi-fi round rebuilt every screen in Dewey's system: Margin for the wordmark, Playfair Display for page titles, Inter for everything readable, the sage-and-cream palette carried from the website. Web features were recomposed for one-handed use rather than shrunk to fit: the feed's trending row became a horizontal shelf, navigation collapsed to four tabs, and the recommendation deck got the swipe-and-flip motion the web never had.",
@@ -1298,12 +1255,6 @@ export const projects: Project[] = [
     blocks: [
       { type: "prose", label: "Company", body: [
         "Aleph Lab is a San Francisco AI startup in Y Combinator's Fall 2025 batch. Its product, Aleph Kids, teaches English through Minecraft: “Annie,” a voice-enabled AI character, is a co-playable character — she plays alongside children inside the game rather than at them, so they practice speaking a new language while they play.",
-      ] },
-      { type: "list", label: "Design", heading: "The design half of the summer", items: [
-        "Delivered a full rebrand users did not have to relearn: the information architecture shipped first, live to 100% of users, so the layout stayed familiar before the 33-section visual system followed, staged 25, 50, then 100% across real usage cycles",
-        "Cut the designer-to-engineer handoff out of the loop with a pipeline that turns Figma designs into React Native components as drawn, packaged so any engineer on the team can run it",
-        "Gave the AI character a consistent voice in the interface: her message-bubble system across the home experience, plus a branded crash recovery and shared error states in warm, kid-appropriate English and Korean",
-        "Reset onboarding priorities by surfacing a mobile drop-off at roughly half the desktop activation rate in trial data nobody had segmented that way, which redirected where the team looked next",
       ] },
       { type: "list", label: "What I worked on", items: [
         "Packaged the in-game AI character as a versioned SDK that studios outside the company can build on — a game mode becomes data: 47 in-world event types, a 16-verb action surface, capability negotiation per world, and server-side allowlist enforcement so a mode can never make her do something its world didn't declare — behind 1,301 tests over a hosted multi-tenant service",

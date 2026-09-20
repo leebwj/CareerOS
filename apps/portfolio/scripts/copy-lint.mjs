@@ -47,7 +47,7 @@ for (const file of lintable) {
   const html = readFileSync(file, "utf8");
   // the case-study bodies are the project data, which Brian chose to keep as
   // written; lint only the page chrome + landing pages for vocabulary
-  const isCaseStudy = /^dist\/work\//.test(norm(file));
+  const isCaseStudy = /^dist\/(roblox\/)?work\//.test(norm(file));
   const text = stripTags(html);
   if (!isCaseStudy) {
     const w = text.match(BANNED_WORDS);

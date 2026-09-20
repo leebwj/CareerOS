@@ -55,7 +55,7 @@ const featured = studies.map((s) => ({ ...s, p: getProject(s.slug)! }));
       <div class="hero-shade"></div>
       <div class="hero-wall w-full intro intro--name rb-intro">
         <h1 class="kinetic hero-name"><span class="line"><span class="line-i" style="--d:.1s">Brian Lee.</span></span></h1>
-        <div class="line"><p class="hero-sub" style="--d:.26s">Product designer who builds what he designs. CS + Design at Penn, applying for the Product Design Intern role at Roblox, Summer 2027.</p></div>
+        <div class="line"><p class="hero-sub" style="--d:.26s">Product designer who builds what he designs. CS + Design at Penn, hoping to spend Summer 2027 designing at Roblox.</p></div>
         <div class="line"><div class="hero-actions" style="--d:.38s">
           <a href="#work" class="btn btn-primary" data-magnetic="0.4">See work</a>
           <a href="#contact" class="btn btn-ghost" data-magnetic="0.4">Get in touch</a>
@@ -80,7 +80,7 @@ const featured = studies.map((s) => ({ ...s, p: getProject(s.slug)! }));
       <div class="rb-studies mt-12">
         {featured.map(({ p, line, blurb, outcome, thumb, team, role }, i) => (
           <article class="rb-study reveal" style={`--d:${(i % 2) * 0.06}s`}>
-            <a href={`/work/${p.slug}`} class="proj rb-study__media" data-cursor="View" data-cursor-keep>
+            <a href={`/roblox/work/${p.slug}`} class="proj rb-study__media" data-cursor="View" data-cursor-keep>
               <div class="proj-media" style={`view-transition-name: thumb-${p.slug}`}>
                 {p.type !== "experience" && <div class="proj-cats">{p.cats.map((c) => <span class="proj-cat">{catLabels[c]}</span>)}</div>}
                 {(thumb ?? p.thumb ?? p.img)
@@ -95,7 +95,7 @@ const featured = studies.map((s) => ({ ...s, p: getProject(s.slug)! }));
               </div>
             </a>
             <div class="rb-study__body">
-              <h3 class="rb-study__title"><a href={`/work/${p.slug}`} style={`view-transition-name: title-${p.slug}`}>{p.title}</a></h3>
+              <h3 class="rb-study__title"><a href={`/roblox/work/${p.slug}`} style={`view-transition-name: title-${p.slug}`}>{p.title}</a></h3>
               <p class="rb-study__line">{line ?? p.line}</p>
               <dl class="rb-facts">
                 <div><dt>Role</dt><dd>{role ?? p.role}</dd></div>
@@ -105,7 +105,7 @@ const featured = studies.map((s) => ({ ...s, p: getProject(s.slug)! }));
               </dl>
               <p class="rb-study__blurb">{blurb}</p>
               <ul class="tag-row mt-5">{(p.tools.length ? p.tools : p.tech).map((t) => <li class="tag">{t}</li>)}</ul>
-              <a href={`/work/${p.slug}`} class="rb-study__more" data-cursor="View">Read case study →</a>
+              <a href={`/roblox/work/${p.slug}`} class="rb-study__more" data-cursor="View">Read case study →</a>
             </div>
           </article>
         ))}
@@ -125,7 +125,7 @@ const featured = studies.map((s) => ({ ...s, p: getProject(s.slug)! }));
               <span class="rb-step__n">0{i + 1}</span>
               <div>
                 <h3 class="rb-step__title">{s.title}</h3>
-                <p class="rb-step__body">{s.body} <a href={`/work/${s.link.slug}`} class="rb-step__link" data-cursor="View">{s.link.text} ↗</a></p>
+                <p class="rb-step__body">{s.body} <a href={`/roblox/work/${s.link.slug}`} class="rb-step__link" data-cursor="View">{s.link.text} ↗</a></p>
               </div>
             </li>
           ))}
@@ -168,7 +168,7 @@ const featured = studies.map((s) => ({ ...s, p: getProject(s.slug)! }));
             </div>
           </div>
         </div>
-        <div id="card" class="about-card reveal scroll-mt-24"><ProfileCard /></div>
+        <div id="card" class="about-card reveal scroll-mt-24"><ProfileCard base="/roblox" /></div>
       </div>
     </section>
 
@@ -177,9 +177,9 @@ const featured = studies.map((s) => ({ ...s, p: getProject(s.slug)! }));
       <div class="cta-block reveal mt-6">
         <div class="cta-grid">
           <div>
-            <h2 class="velocity-type text-[clamp(2rem,5vw,3.4rem)] font-bold leading-[1.05]">Let's talk about the Product Design Intern role.</h2>
+            <h2 class="velocity-type text-[clamp(2rem,5vw,3.4rem)] font-bold leading-[1.05]">Let's work together.</h2>
             <p class="mt-4 max-w-[42ch] text-lg leading-relaxed" style="opacity:.85">
-              Summer 2027, San Mateo. Happy to walk through any of this work on a call. The full site, with the graphics and engineering projects, is at leebrian.dev.
+              I'd like to spend Summer 2027 designing at Roblox. Happy to walk through any of this work on a call. The full site, with the graphics and engineering projects, is at leebrian.dev.
             </p>
           </div>
           <div class="cta-links">

@@ -1,0 +1,13 @@
+---
+// /roblox/work/[slug]: every case study and experience page, rendered inside
+// the Roblox view so its links never leave that view.
+import Work from "../../../retouch/pages/Work.astro";
+import { projects } from "../../../data/projects";
+
+export function getStaticPaths() {
+  return projects.map((p) => ({ params: { slug: p.slug }, props: { project: p } }));
+}
+const { project } = Astro.props;
+---
+
+<Work project={project} base="/roblox" />
