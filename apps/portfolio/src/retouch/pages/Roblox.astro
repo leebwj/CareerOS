@@ -7,7 +7,7 @@ import ShaderField from "../../components/ShaderField.astro";
 import ProfileCard from "../../components/ProfileCard.astro";
 import { Image } from "astro:assets";
 import { getProject, catLabels } from "../../data/projects";
-import { studies, steps, why, PROCESS_SUB, ROBLOX_RESUME } from "../../data/roblox";
+import { studies, steps, why, ROBLOX_RESUME } from "../../data/roblox";
 
 const featured = studies.map((s) => ({ ...s, p: getProject(s.slug)! }));
 ---
@@ -118,7 +118,6 @@ const featured = studies.map((s) => ({ ...s, p: getProject(s.slug)! }));
         <div class="reveal rb-split__head">
           <p class="kicker"><span class="num">(02)</span>Process</p>
           <h2 class="velocity-type kinetic-line mt-5 text-[clamp(1.9rem,4vw,3rem)] font-bold">How I work.</h2>
-          <p class="rb-split__sub">{PROCESS_SUB}</p>
         </div>
         <ol class="rb-steps">
           {steps.map((s, i) => (
@@ -270,7 +269,6 @@ const featured = studies.map((s) => ({ ...s, p: getProject(s.slug)! }));
   /* heading column on the left, content on the right, so the text block fills the page width */
   .rb-split { display: grid; gap: 2.5rem; }
   @media (min-width: 900px) { .rb-split { grid-template-columns: 5fr 7fr; gap: 3rem; align-items: start; } .rb-split__head { position: sticky; top: 5.5rem; } }
-  .rb-split__sub { margin-top: 1.1rem; color: var(--color-muted); line-height: 1.65; max-width: 36ch; text-wrap: pretty; }
 
   .rb-steps { list-style: none; margin: 0; padding: 0; display: grid; }
   .rb-step { display: grid; grid-template-columns: 3rem 1fr; gap: 1rem; padding: 1.5rem 0; border-top: 1px solid var(--color-line); }

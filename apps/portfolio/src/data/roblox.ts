@@ -59,8 +59,6 @@ export interface Step {
   link: { text: string; slug: string };
 }
 
-export const PROCESS_SUB = "The same five steps on every project above. Each one names the case study where it happened, so the process is something you can check rather than something I claim.";
-
 export const steps: Step[] = [
   {
     title: "Find the problem in what people do",
