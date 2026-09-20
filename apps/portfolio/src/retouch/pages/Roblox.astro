@@ -1,30 +1,20 @@
 ---
-// The Roblox view (/roblox): the same site, arranged for one reader. The
-// assessment asks for organization, a visible process, and justified
-// execution, so the page states how it is organized, walks each case study
-// through the same five-line ledger, and points at the live prototypes.
+// The Roblox view (/roblox): the site's landing page arranged for one reader.
+// Design work first, in a row layout that gives each study room, then the
+// process in five short steps, then why Roblox, in prose.
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ShaderField from "../../components/ShaderField.astro";
 import ProfileCard from "../../components/ProfileCard.astro";
 import { Image } from "astro:assets";
 import { getProject, catLabels } from "../../data/projects";
-import { studies, alsoSlugs, steps, values, ROBLOX_RESUME, type Ledger } from "../../data/roblox";
+import { studies, steps, why, ROBLOX_RESUME } from "../../data/roblox";
 
 const featured = studies.map((s) => ({ ...s, p: getProject(s.slug)! }));
-const also = alsoSlugs.map((slug) => getProject(slug)!);
-const totalMinutes = studies.reduce((n, s) => n + s.minutes, 0);
-const ledgerRows: { key: keyof Ledger; label: string }[] = [
-  { key: "problem", label: "Problem" },
-  { key: "research", label: "Research" },
-  { key: "decisions", label: "Decisions" },
-  { key: "changed", label: "What changed" },
-  { key: "shipped", label: "Shipped" },
-];
 ---
 
 <BaseLayout
-  title="Brian Lee · for Roblox"
-  description="Product design portfolio prepared for the Roblox Product Design Intern assessment, Summer 2027: four case studies walked from problem to research to what testing changed."
+  title="Brian Lee · product design"
+  description="Product design portfolio: a client iOS app led end to end, two research-led redesigns, and a production app redesign at a startup building for children."
   noindex
 >
   <header
@@ -38,7 +28,6 @@ const ledgerRows: { key: keyof Ledger; label: string }[] = [
       <div class="flex items-center gap-4 sm:gap-6 text-sm">
         <a href="#work" class="nav-link hidden sm:inline">Work</a>
         <a href="#process" class="nav-link hidden sm:inline">Process</a>
-        <a href="#roblox" class="nav-link hidden sm:inline">Why Roblox</a>
         <a href="#about" class="nav-link hidden sm:inline">About</a>
         <a href="#contact" class="nav-link hidden sm:inline">Contact</a>
         <a href={ROBLOX_RESUME} class="btn btn-ghost !px-4 !py-2 text-xs hidden sm:inline-flex" data-magnetic="0.35" target="_blank" rel="noopener">Résumé</a>
@@ -54,7 +43,6 @@ const ledgerRows: { key: keyof Ledger; label: string }[] = [
     <nav id="nav-menu" class="nav-menu sm:hidden" hidden aria-label="Mobile navigation">
       <a href="#work" class="nav-menu__link">Work</a>
       <a href="#process" class="nav-menu__link">Process</a>
-      <a href="#roblox" class="nav-menu__link">Why Roblox</a>
       <a href="#about" class="nav-menu__link">About</a>
       <a href="#contact" class="nav-menu__link">Contact</a>
       <a href={ROBLOX_RESUME} class="nav-menu__link">Résumé ↓</a>
@@ -66,12 +54,11 @@ const ledgerRows: { key: keyof Ledger; label: string }[] = [
       <ShaderField variant="bleed" />
       <div class="hero-shade"></div>
       <div class="hero-wall w-full intro intro--name rb-intro">
-        <p class="rb-for line"><span class="line-i" style="--d:.02s">Prepared for Roblox · Product Design Intern · Summer 2027</span></p>
         <h1 class="kinetic hero-name"><span class="line"><span class="line-i" style="--d:.1s">Brian Lee.</span></span></h1>
-        <div class="line"><p class="hero-sub" style="--d:.26s">Product designer who builds what he designs. Four case studies, each walked from the problem to the research to what testing changed.</p></div>
+        <div class="line"><p class="hero-sub" style="--d:.26s">Product designer who builds what he designs. CS + Design at Penn, looking for a Summer 2027 product design internship.</p></div>
         <div class="line"><div class="hero-actions" style="--d:.38s">
-          <a href="#work" class="btn btn-primary" data-magnetic="0.4">Start with Dewey</a>
-          <a href="#guide" class="btn btn-ghost" data-magnetic="0.4">How this is organized</a>
+          <a href="#work" class="btn btn-primary" data-magnetic="0.4">See work</a>
+          <a href="#contact" class="btn btn-ghost" data-magnetic="0.4">Get in touch</a>
         </div></div>
       </div>
       <div class="shader-pick">
@@ -84,34 +71,16 @@ const ledgerRows: { key: keyof Ledger; label: string }[] = [
       </div>
     </section>
 
-    <section id="guide" class="wrap border-t border-line py-16 md:py-20 scroll-mt-16">
-      <p class="kicker reveal"><span class="num">(00)</span>How this is organized</p>
-      <div class="rb-guide reveal mt-7">
-        <div>
-          <p class="rb-guide__label">Reading order</p>
-          <p class="rb-guide__text">Four case studies, newest first, about {totalMinutes} minutes in total. Each opens with my role, the team, and the timeline, and closes with what shipped. Two more projects sit below them for range.</p>
-        </div>
-        <div>
-          <p class="rb-guide__label">Process</p>
-          <p class="rb-guide__text">Every study is summarized here in the same five lines: problem, research, decisions, what changed, shipped. Where testing or a client overruled my first design, the case study says what changed and why.</p>
-        </div>
-        <div>
-          <p class="rb-guide__label">Execution</p>
-          <p class="rb-guide__text">The Figma prototypes are embedded live on their pages, the Dewey build runs in a video, and every screen carries the reason it looks the way it does. Click any image to see it at full size.</p>
-        </div>
-      </div>
-    </section>
-
     <section id="work" class="wrap border-t border-line py-20 md:py-28 scroll-mt-16">
       <div class="reveal">
-        <p class="kicker"><span class="num">(01)</span>Case studies</p>
-        <h2 class="velocity-type kinetic-line mt-5 text-[clamp(1.9rem,4vw,3rem)] font-bold">Four projects, one process.</h2>
+        <p class="kicker"><span class="num">(01)</span>Selected Work</p>
+        <h2 class="velocity-type kinetic-line mt-5 text-[clamp(1.9rem,4vw,3rem)] font-bold">Things I've built.</h2>
       </div>
 
       <div class="rb-studies mt-12">
-        {featured.map(({ p, line, reason, ledger, minutes }, i) => (
+        {featured.map(({ p, line, blurb, outcome }, i) => (
           <article class="rb-study reveal" style={`--d:${(i % 2) * 0.06}s`}>
-            <a href={`/work/${p.slug}`} class="proj rb-study__media" data-cursor="Read" data-cursor-keep>
+            <a href={`/work/${p.slug}`} class="proj rb-study__media" data-cursor="View" data-cursor-keep>
               <div class="proj-media" style={`view-transition-name: thumb-${p.slug}`}>
                 {p.type !== "experience" && <div class="proj-cats">{p.cats.map((c) => <span class="proj-cat">{catLabels[c]}</span>)}</div>}
                 {(p.thumb ?? p.img)
@@ -126,63 +95,36 @@ const ledgerRows: { key: keyof Ledger; label: string }[] = [
               </div>
             </a>
             <div class="rb-study__body">
-              <p class="rb-study__meta"><span class="rb-study__idx">0{i + 1}</span>{p.date} · {p.role} · {minutes} min read</p>
               <h3 class="rb-study__title"><a href={`/work/${p.slug}`} style={`view-transition-name: title-${p.slug}`}>{p.title}</a></h3>
               <p class="rb-study__line">{line ?? p.line}</p>
-              <p class="rb-study__reason">{reason}</p>
-              <dl class="rb-ledger">
-                {ledgerRows.map((r) => (
-                  <div><dt>{r.label}</dt><dd>{ledger[r.key]}</dd></div>
-                ))}
+              <dl class="rb-facts">
+                <div><dt>Role</dt><dd>{p.role}</dd></div>
+                <div><dt>Team</dt><dd>{p.team ?? p.who}</dd></div>
+                <div><dt>Timeline</dt><dd>{p.date}</dd></div>
+                <div><dt>Outcome</dt><dd>{outcome}</dd></div>
               </dl>
-              <a href={`/work/${p.slug}`} class="rb-study__more" data-cursor="Read">Read the case study →</a>
+              <p class="rb-study__blurb">{blurb ?? p.blurb}</p>
+              <ul class="tag-row mt-5">{(p.tools.length ? p.tools : p.tech).map((t) => <li class="tag">{t}</li>)}</ul>
+              <a href={`/work/${p.slug}`} class="rb-study__more" data-cursor="View">Read case study →</a>
             </div>
           </article>
         ))}
       </div>
 
-      <div class="reveal mt-20">
-        <p class="kicker">More work, for range</p>
-        <div class="mt-8 grid gap-x-8 gap-y-12 sm:grid-cols-2">
-          {also.map((p) => (
-            <article data-slug={p.slug}>
-              <a href={`/work/${p.slug}`} class="proj">
-                <div class="proj-media" data-cursor="View" data-cursor-keep style={`view-transition-name: thumb-${p.slug}`}>
-                  <div class="proj-cats">{p.cats.map((c) => <span class="proj-cat">{catLabels[c]}</span>)}</div>
-                  {(p.thumb ?? p.img)
-                    ? <Image src={(p.thumb ?? p.img)!} alt={p.alt ?? p.title} width={660} height={495} fit="cover" position={p.thumbPos?.startsWith("left") ? "left" : "centre"} densities={[1, 2]} />
-                    : <div class="proj-cover-live">{p.title}</div>}
-                </div>
-                <div class="proj-head">
-                  <h3 class="proj-title" style={`view-transition-name: title-${p.slug}`}>{p.title}</h3>
-                  <span class="proj-no">{p.date}</span>
-                </div>
-                <p class="proj-blurb">{p.line}</p>
-                <p class="proj-blurb rb-also__why">{p.slug === "capsule" ? "A 3D product designed around one moment, the reveal. The 3D visual language was mine, in Blender and Spline." : "Leading 10+ designers and developers from Figma to a Next.js rebuild the club runs without an engineer."}</p>
-                <ul class="tag-row mt-4">{p.tech.map((t) => <li class="tag">{t}</li>)}</ul>
-              </a>
-            </article>
-          ))}
-        </div>
-      </div>
     </section>
 
     <section id="process" class="wrap border-t border-line py-20 md:py-28 scroll-mt-16">
       <div class="reveal">
         <p class="kicker"><span class="num">(02)</span>Process</p>
-        <h2 class="velocity-type kinetic-line mt-5 text-[clamp(1.9rem,4vw,3rem)] font-bold">How I work, with receipts.</h2>
-        <p class="rb-lede mt-5">The same five steps on every project above. Each step names the page where it happened, so nothing here is a claim without a case study behind it.</p>
+        <h2 class="velocity-type kinetic-line mt-5 text-[clamp(1.9rem,4vw,3rem)] font-bold">How I work.</h2>
       </div>
-      <ol class="rb-steps mt-12">
+      <ol class="rb-steps mt-10">
         {steps.map((s, i) => (
           <li class="rb-step reveal" style={`--d:${(i % 3) * 0.05}s`}>
             <span class="rb-step__n">0{i + 1}</span>
             <div>
               <h3 class="rb-step__title">{s.title}</h3>
-              <p class="rb-step__body">{s.body}</p>
-              <ul class="rb-step__ev">
-                {s.evidence.map((e) => <li><a href={`/work/${e.slug}`} data-cursor="Read">{e.text} ↗</a></li>)}
-              </ul>
+              <p class="rb-step__body">{s.body} <a href={`/work/${s.link.slug}`} class="rb-step__link" data-cursor="View">{s.link.text} ↗</a></p>
             </div>
           </li>
         ))}
@@ -192,26 +134,10 @@ const ledgerRows: { key: keyof Ledger; label: string }[] = [
     <section id="roblox" class="wrap border-t border-line py-20 md:py-28 scroll-mt-16">
       <div class="reveal">
         <p class="kicker"><span class="num">(03)</span>Why Roblox</p>
-        <h2 class="velocity-type kinetic-line mt-5 text-[clamp(1.9rem,4vw,3rem)] font-bold">The shorthand my team used was yours.</h2>
-        <p class="rb-lede mt-5">
-          At Aleph Lab this summer we built game modes for children inside a sandbox world, with an AI character who plays alongside them.
-          The reference that settled our design arguments was "make it feel like a Roblox game." The app around those modes was mine to redesign,
-          and the people on the other side were children and their parents.
-        </p>
+        <div class="rb-why mt-7">
+          {why.map((para) => <p class="about-body">{para}</p>)}
+        </div>
       </div>
-      <div class="rb-values reveal mt-12">
-        {values.map((v) => (
-          <div class="rb-value">
-            <p class="rb-value__name">{v.name}</p>
-            <p class="rb-value__quote">"{v.quote}"</p>
-            <p class="rb-value__mine">{v.mine}</p>
-          </div>
-        ))}
-      </div>
-      <p class="rb-honest reveal mt-10">
-        I came to Roblox as a player late. I have played enough to find my way around, and I have not opened Studio yet.
-        The fluency I do have is designing for the kids who are already there, and I would like to spend twelve weeks learning the rest.
-      </p>
     </section>
 
     <section id="about" class="wrap border-t border-line py-20 md:py-28 scroll-mt-16">
@@ -224,16 +150,15 @@ const ledgerRows: { key: keyof Ledger; label: string }[] = [
               <p class="about-body">
                 I'm Brian. I got here through games and drawing, and I still like the same thing I liked then: making something on a
                 screen feel alive, whether that's an interface, a shader, or a small engine. I'm at Penn for CS&nbsp;+&nbsp;Design (BA '27)
-                and staying for the Computer Graphics&nbsp;&amp; Game Technology master's ('28), which lines up with a Summer 2027 internship.
+                and staying for the Computer Graphics&nbsp;&amp; Game Technology master's ('28).
               </p>
               <p class="about-body mt-4">
-                I build what I design: the Penn Spark site went from my Figma to my Next.js, and at Aleph the Figma-to-React-Native
-                pipeline was mine. It changes what I propose, because I know what the runtime can afford.
+                I build what I design. The Penn Spark site went from my Figma to my Next.js, and at Aleph the Figma-to-React-Native
+                pipeline was mine. Knowing what the runtime can afford changes what I propose.
               </p>
               <p class="about-body mt-4">
                 I spent two years between semesters as an interpreter in the Korean army. Mostly it taught me to stay calm in a room
-                where nobody agrees, and to say things plainly. Off the computer: volleyball, soccer, and Pokémon TCG (the card here is
-                that habit leaking into the site).
+                where nobody agrees, and to say things plainly. Off the computer: volleyball, soccer, and Pokémon TCG.
               </p>
             </div>
           </div>
@@ -247,10 +172,9 @@ const ledgerRows: { key: keyof Ledger; label: string }[] = [
       <div class="cta-block reveal mt-6">
         <div class="cta-grid">
           <div>
-            <h2 class="velocity-type text-[clamp(2rem,5vw,3.4rem)] font-bold leading-[1.05]">Happy to walk through any of it.</h2>
+            <h2 class="velocity-type text-[clamp(2rem,5vw,3.4rem)] font-bold leading-[1.05]">Let's work together.</h2>
             <p class="mt-4 max-w-[42ch] text-lg leading-relaxed" style="opacity:.85">
-              The Dewey Figma file and the Aleph work beyond what is public here are available on a call.
-              The full site, with the graphics and engineering work, is at leebrian.dev.
+              Happy to walk through any of this work on a call. The full site, with the graphics and engineering projects, is at leebrian.dev.
             </p>
           </div>
           <div class="cta-links">
@@ -317,51 +241,33 @@ const ledgerRows: { key: keyof Ledger; label: string }[] = [
 <style>
   /* the intro is the site's Name style regardless of the visitor's saved pick */
   .rb-intro { display: flex !important; flex-direction: column; align-items: center; text-align: center; }
-  .rb-for { font-family: var(--font-mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--color-muted); margin-bottom: 1.4rem; }
-  .rb-for .line-i { display: inline-block; }
-
-  .rb-guide { display: grid; gap: 2rem; }
-  @media (min-width: 768px) { .rb-guide { grid-template-columns: repeat(3, 1fr); gap: 2.5rem; } }
-  .rb-guide__label { font-family: var(--font-mono); font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-cobalt-deep); }
-  .rb-guide__text { margin-top: .7rem; color: var(--color-muted); line-height: 1.65; text-wrap: pretty; }
 
   .rb-studies { display: grid; gap: clamp(3.5rem, 7vw, 5.5rem); }
-  .rb-study { display: grid; gap: 1.6rem; align-items: start; }
-  @media (min-width: 900px) { .rb-study { grid-template-columns: 5fr 7fr; gap: 3rem; } .rb-study__media { position: sticky; top: 5.5rem; } }
+  .rb-study { display: grid; gap: 1.4rem; align-items: start; }
+  @media (min-width: 900px) { .rb-study { grid-template-columns: 6fr 6fr; gap: 3rem; } }
   .rb-study__media { display: block; }
   .rb-cover-exp { display: grid; place-items: center; gap: .9rem; grid-auto-flow: row; align-content: center; }
   .rb-cover-exp img { width: 56px; height: 56px; border-radius: 14px; background: #fff; padding: 7px; object-fit: contain; box-shadow: 0 0 0 1px color-mix(in oklab, var(--color-cobalt) 20%, transparent); }
-  .rb-study__meta { font-family: var(--font-mono); font-size: 12px; letter-spacing: .04em; color: var(--color-faint); display: flex; flex-wrap: wrap; gap: .6rem; align-items: baseline; }
-  .rb-study__idx { color: var(--color-cobalt-deep); font-weight: 700; }
-  .rb-study__title { margin-top: .6rem; font-family: var(--font-display); font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.1rem); letter-spacing: -0.035em; line-height: 1.1; }
-  .rb-study__title a:hover { color: var(--color-cobalt-deep); }
-  .rb-study__line { margin-top: .7rem; color: var(--color-ink); font-size: 1.05rem; line-height: 1.55; text-wrap: pretty; max-width: 60ch; }
-  .rb-study__reason { margin-top: .7rem; color: var(--color-muted); line-height: 1.6; text-wrap: pretty; max-width: 60ch; }
-  .rb-ledger { margin-top: 1.4rem; display: grid; border-top: 1px solid var(--color-line); }
-  .rb-ledger > div { display: grid; grid-template-columns: 7.5rem 1fr; gap: .5rem 1rem; padding: .75rem 0; border-bottom: 1px solid var(--color-line); }
-  @media (max-width: 480px) { .rb-ledger > div { grid-template-columns: 1fr; gap: .25rem; } }
-  .rb-ledger dt { font-family: var(--font-mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-cobalt-deep); padding-top: .2rem; }
-  .rb-ledger dd { margin: 0; color: var(--color-muted); font-size: .95rem; line-height: 1.6; text-wrap: pretty; }
-  .rb-study__more { display: inline-block; margin-top: 1.1rem; font-family: var(--font-mono); font-size: 12.5px; letter-spacing: .04em; color: var(--color-cobalt-deep); }
+  .rb-study__title { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.5rem, 3vw, 2rem); letter-spacing: -0.035em; line-height: 1.1; }
+  .rb-study__title a:hover { text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1px; text-decoration-color: var(--color-cobalt); }
+  .rb-study__line { margin-top: .8rem; color: var(--color-ink); font-size: 1.05rem; line-height: 1.55; text-wrap: pretty; max-width: 58ch; }
+  .rb-facts { margin: 1.1rem 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: .8rem 1.5rem; padding: 1rem 0; border-top: 1px solid var(--color-line); border-bottom: 1px solid var(--color-line); max-width: 58ch; }
+  .rb-facts dt { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-faint); margin-bottom: .25rem; }
+  .rb-facts dd { margin: 0; font-size: .92rem; color: var(--color-ink); line-height: 1.4; }
+  .rb-study__blurb { margin-top: 1.1rem; color: var(--color-muted); line-height: 1.65; text-wrap: pretty; max-width: 58ch; }
+  .rb-study__more { display: inline-block; margin-top: 1.3rem; font-family: var(--font-mono); font-size: 12.5px; letter-spacing: .04em; color: var(--color-cobalt-deep); }
   .rb-study__more:hover { text-decoration: underline; text-underline-offset: 4px; }
-  .rb-also__why { color: var(--color-ink); opacity: .85; }
 
-  .rb-lede { color: var(--color-muted); font-size: 1.1rem; line-height: 1.65; max-width: 64ch; text-wrap: pretty; }
   .rb-steps { list-style: none; margin: 0; padding: 0; display: grid; }
-  .rb-step { display: grid; grid-template-columns: 3.2rem 1fr; gap: 1rem; padding: 1.6rem 0; border-top: 1px solid var(--color-line); }
+  .rb-step { display: grid; grid-template-columns: 3rem 1fr; gap: 1rem; padding: 1.5rem 0; border-top: 1px solid var(--color-line); }
   .rb-step:last-child { border-bottom: 1px solid var(--color-line); }
-  .rb-step__n { font-family: var(--font-mono); font-size: 13px; font-weight: 700; color: var(--color-cobalt-deep); padding-top: .35rem; }
-  .rb-step__title { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.15rem, 2.2vw, 1.45rem); letter-spacing: -0.03em; line-height: 1.2; }
-  .rb-step__body { margin-top: .6rem; color: var(--color-muted); line-height: 1.65; max-width: 64ch; text-wrap: pretty; }
-  .rb-step__ev { list-style: none; margin: .8rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: .4rem 1.4rem; }
-  .rb-step__ev a { font-family: var(--font-mono); font-size: 12px; letter-spacing: .03em; color: var(--color-cobalt-deep); }
-  .rb-step__ev a:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .rb-step__n { font-family: var(--font-mono); font-size: 12.5px; color: var(--color-cobalt-deep); padding-top: .3rem; }
+  .rb-step__title { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.1rem, 2vw, 1.3rem); letter-spacing: -0.025em; line-height: 1.25; }
+  .rb-step__body { margin-top: .5rem; color: var(--color-muted); line-height: 1.65; max-width: 64ch; text-wrap: pretty; }
+  .rb-step__link { color: var(--color-cobalt-deep); white-space: nowrap; }
+  .rb-step__link:hover { text-decoration: underline; text-underline-offset: 4px; }
 
-  .rb-values { display: grid; gap: 1rem; }
-  @media (min-width: 768px) { .rb-values { grid-template-columns: repeat(3, 1fr); } }
-  .rb-value { padding: 1.3rem 1.35rem; border: 1px solid var(--color-line); border-radius: 14px; }
-  .rb-value__name { font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; letter-spacing: -0.03em; }
-  .rb-value__quote { margin-top: .35rem; font-family: var(--font-mono); font-size: 11.5px; letter-spacing: .02em; color: var(--color-faint); line-height: 1.5; }
-  .rb-value__mine { margin-top: .9rem; color: var(--color-muted); font-size: .95rem; line-height: 1.6; text-wrap: pretty; }
-  .rb-honest { color: var(--color-ink); font-size: 1.05rem; line-height: 1.65; max-width: 64ch; padding-left: 1.2rem; border-left: 2px solid var(--color-cobalt); text-wrap: pretty; }
+  .rb-why { max-width: 64ch; }
+  .rb-why .about-body { margin-top: 0; max-width: none; }
+  .rb-why .about-body + .about-body { margin-top: 1.1rem; }
 </style>
