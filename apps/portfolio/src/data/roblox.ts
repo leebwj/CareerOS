@@ -2,11 +2,16 @@
 // of the site renders, in the order and framing for one reader. Kept out of
 // projects.ts so the shared data stays audience-neutral.
 
+import type { ImageMetadata } from "astro";
+import alephThumb from "../assets/work/aleph-lab.png";
+
 export const ROBLOX_RESUME = "/Brian_Lee_Resume_Roblox.pdf";
 
 export interface RobloxStudy {
   slug: string;
   outcome: string; // what exists at the end, in a recruiter's terms
+  thumb?: ImageMetadata; // for an entry whose project has no card image
+  team?: string; // for an experience, which carries no team field
   line?: string; // replaces the card one-liner where the project's own is engineering-first
   blurb?: string; // replaces the card description for the same reason
 }
@@ -20,6 +25,8 @@ export const studies: RobloxStudy[] = [
   {
     slug: "aleph-lab",
     outcome: "Redesign live to 100% of users",
+    thumb: alephThumb,
+    team: "Y Combinator startup (F25), remote",
     line: "The app around a set of Roblox-style game modes for children, redesigned end to end and shipped to every user.",
     blurb: "Software engineering intern at a Y Combinator startup whose game modes for kids were designed to feel like Roblox games. On the design side: an app-wide redesign that shipped its information architecture first so nobody had to relearn the app, then a 33-section visual system rolled out in stages; a Figma-to-React-Native pipeline; and the AI character's voice in the interface, written in English and Korean for a reader who is a child.",
   },

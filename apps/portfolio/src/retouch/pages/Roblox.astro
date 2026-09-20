@@ -78,14 +78,14 @@ const featured = studies.map((s) => ({ ...s, p: getProject(s.slug)! }));
       </div>
 
       <div class="rb-studies mt-12">
-        {featured.map(({ p, line, blurb, outcome }, i) => (
+        {featured.map(({ p, line, blurb, outcome, thumb, team }, i) => (
           <article class="rb-study reveal" style={`--d:${(i % 2) * 0.06}s`}>
             <a href={`/work/${p.slug}`} class="proj rb-study__media" data-cursor="View" data-cursor-keep>
               <div class="proj-media" style={`view-transition-name: thumb-${p.slug}`}>
                 {p.type !== "experience" && <div class="proj-cats">{p.cats.map((c) => <span class="proj-cat">{catLabels[c]}</span>)}</div>}
-                {(p.thumb ?? p.img)
-                  ? <Image src={(p.thumb ?? p.img)!} alt={p.alt ?? p.title} width={660} height={495} fit="cover" position={p.thumbPos?.startsWith("left") ? "left" : "centre"} densities={[1, 2]} />
-                  : <div class="proj-cover-live rb-cover-exp">{p.logo && <img src={p.logo} alt="" width="56" height="56" loading="lazy" />}<span>{p.title}</span></div>}
+                {(thumb ?? p.thumb ?? p.img)
+                  ? <Image src={(thumb ?? p.thumb ?? p.img)!} alt={p.alt ?? p.title} width={660} height={495} fit="cover" position={p.thumbPos?.startsWith("left") ? "left" : "centre"} densities={[1, 2]} />
+                  : <div class="proj-cover-live">{p.title}</div>}
                 {p.reel && (
                   <video class="proj-reel" muted playsinline loop preload="metadata" width="660" height="495" aria-hidden="true">
                     {p.reel.webm && <source src={p.reel.webm} type="video/webm" />}
@@ -99,7 +99,7 @@ const featured = studies.map((s) => ({ ...s, p: getProject(s.slug)! }));
               <p class="rb-study__line">{line ?? p.line}</p>
               <dl class="rb-facts">
                 <div><dt>Role</dt><dd>{p.role}</dd></div>
-                <div><dt>Team</dt><dd>{p.team ?? p.who}</dd></div>
+                <div><dt>Team</dt><dd>{team ?? p.team ?? p.who}</dd></div>
                 <div><dt>Timeline</dt><dd>{p.date}</dd></div>
                 <div><dt>Outcome</dt><dd>{outcome}</dd></div>
               </dl>
@@ -114,27 +114,32 @@ const featured = studies.map((s) => ({ ...s, p: getProject(s.slug)! }));
     </section>
 
     <section id="process" class="wrap border-t border-line py-20 md:py-28 scroll-mt-16">
-      <div class="reveal">
-        <p class="kicker"><span class="num">(02)</span>Process</p>
-        <h2 class="velocity-type kinetic-line mt-5 text-[clamp(1.9rem,4vw,3rem)] font-bold">How I work.</h2>
+      <div class="rb-split">
+        <div class="reveal rb-split__head">
+          <p class="kicker"><span class="num">(02)</span>Process</p>
+          <h2 class="velocity-type kinetic-line mt-5 text-[clamp(1.9rem,4vw,3rem)] font-bold">How I work.</h2>
+        </div>
+        <ol class="rb-steps">
+          {steps.map((s, i) => (
+            <li class="rb-step reveal" style={`--d:${(i % 3) * 0.05}s`}>
+              <span class="rb-step__n">0{i + 1}</span>
+              <div>
+                <h3 class="rb-step__title">{s.title}</h3>
+                <p class="rb-step__body">{s.body} <a href={`/work/${s.link.slug}`} class="rb-step__link" data-cursor="View">{s.link.text} ↗</a></p>
+              </div>
+            </li>
+          ))}
+        </ol>
       </div>
-      <ol class="rb-steps mt-10">
-        {steps.map((s, i) => (
-          <li class="rb-step reveal" style={`--d:${(i % 3) * 0.05}s`}>
-            <span class="rb-step__n">0{i + 1}</span>
-            <div>
-              <h3 class="rb-step__title">{s.title}</h3>
-              <p class="rb-step__body">{s.body} <a href={`/work/${s.link.slug}`} class="rb-step__link" data-cursor="View">{s.link.text} ↗</a></p>
-            </div>
-          </li>
-        ))}
-      </ol>
     </section>
 
     <section id="roblox" class="wrap border-t border-line py-20 md:py-28 scroll-mt-16">
-      <div class="reveal">
-        <p class="kicker"><span class="num">(03)</span>Why Roblox</p>
-        <div class="rb-why mt-7">
+      <div class="rb-split reveal">
+        <div class="rb-split__head">
+          <p class="kicker"><span class="num">(03)</span>Why Roblox</p>
+          <h2 class="velocity-type kinetic-line mt-5 text-[clamp(1.9rem,4vw,3rem)] font-bold">Designing for kids, already.</h2>
+        </div>
+        <div class="rb-why">
           {why.map((para) => <p class="about-body">{para}</p>)}
         </div>
       </div>
@@ -242,6 +247,9 @@ const featured = studies.map((s) => ({ ...s, p: getProject(s.slug)! }));
   /* the intro is the site's Name style regardless of the visitor's saved pick */
   .rb-intro { display: flex !important; flex-direction: column; align-items: center; text-align: center; }
 
+  /* thumbnails sit flush on the canvas here: no hairline ring */
+  .rb-study .proj-media, .rb-study .proj:hover .proj-media { box-shadow: none; }
+
   .rb-studies { display: grid; gap: clamp(3.5rem, 7vw, 5.5rem); }
   .rb-study { display: grid; gap: 1.4rem; align-items: start; }
   @media (min-width: 900px) { .rb-study { grid-template-columns: 6fr 6fr; gap: 3rem; } }
@@ -258,8 +266,13 @@ const featured = studies.map((s) => ({ ...s, p: getProject(s.slug)! }));
   .rb-study__more { display: inline-block; margin-top: 1.3rem; font-family: var(--font-mono); font-size: 12.5px; letter-spacing: .04em; color: var(--color-cobalt-deep); }
   .rb-study__more:hover { text-decoration: underline; text-underline-offset: 4px; }
 
+  /* heading column on the left, content on the right, so the text block fills the page width */
+  .rb-split { display: grid; gap: 2.5rem; }
+  @media (min-width: 900px) { .rb-split { grid-template-columns: 5fr 7fr; gap: 3rem; align-items: start; } .rb-split__head { position: sticky; top: 5.5rem; } }
+
   .rb-steps { list-style: none; margin: 0; padding: 0; display: grid; }
   .rb-step { display: grid; grid-template-columns: 3rem 1fr; gap: 1rem; padding: 1.5rem 0; border-top: 1px solid var(--color-line); }
+  .rb-step:first-child { padding-top: 0; border-top: 0; }
   .rb-step:last-child { border-bottom: 1px solid var(--color-line); }
   .rb-step__n { font-family: var(--font-mono); font-size: 12.5px; color: var(--color-cobalt-deep); padding-top: .3rem; }
   .rb-step__title { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.1rem, 2vw, 1.3rem); letter-spacing: -0.025em; line-height: 1.25; }
@@ -267,7 +280,7 @@ const featured = studies.map((s) => ({ ...s, p: getProject(s.slug)! }));
   .rb-step__link { color: var(--color-cobalt-deep); white-space: nowrap; }
   .rb-step__link:hover { text-decoration: underline; text-underline-offset: 4px; }
 
-  .rb-why { max-width: 64ch; }
-  .rb-why .about-body { margin-top: 0; max-width: none; }
+  .rb-why { max-width: 62ch; }
+  .rb-why .about-body { margin-top: 0; max-width: none; font-size: 1.05rem; }
   .rb-why .about-body + .about-body { margin-top: 1.1rem; }
 </style>
