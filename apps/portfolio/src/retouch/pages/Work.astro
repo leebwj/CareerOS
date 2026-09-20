@@ -243,7 +243,7 @@ const linkList = [
       if (!back) return;
       try {
         const ref = new URL(document.referrer);
-        if (ref.origin === location.origin && ["/", "/graphics", "/engineering", "/design"].includes(ref.pathname))
+        if (ref.origin === location.origin && ["/", "/graphics", "/engineering", "/design", "/roblox"].includes(ref.pathname))
           back.href = ref.pathname + back.getAttribute("href").slice(back.getAttribute("href").indexOf("#"));
       } catch (e) {}
     })();
