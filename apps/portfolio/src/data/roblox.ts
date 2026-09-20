@@ -46,7 +46,7 @@ export const studies: RobloxStudy[] = [
     slug: "aleph-lab",
     outcome: "Redesign live to 100% of users",
     thumb: alephThumb,
-    role: "Engineer & designer, intern",
+    role: "Engineering & design intern",
     team: "Y Combinator startup (F25), remote",
     line: "The app around a set of Roblox-style game modes for children, redesigned end to end and shipped to every user.",
     blurb: "A Y Combinator startup whose game modes for kids were designed to feel like Roblox games. On the design side I shipped an app-wide redesign that landed its information architecture first, so no family had to relearn the app, then rolled a 33-section visual system out in stages. I also built the Figma-to-React-Native pipeline the team hands off through, and wrote the AI character's voice in the interface in English and Korean for a reader who is a child.",
@@ -90,7 +90,7 @@ export const steps: Step[] = [
 export const why: string[] = [
   "This summer at Aleph Lab we built game modes for children inside a sandbox world, with an AI character who plays alongside them. The reference that settled our design arguments was to make it feel like a Roblox game. The app around those modes was mine to redesign, and the people on the other side were children and their parents.",
   "That is where I learned to treat optimism and civility as design constraints rather than policy. The crash recovery and error states are written in warm English and Korean because the reader is a child. The character's fight-refusal fix was a decision about what a kid's afternoon feels like. Shipping the information architecture before the visual system was a decision about not making families relearn something they used every day.",
-  "I came to Roblox as a player late. I have played enough to find my way around and I have not opened Studio yet. The fluency I do have is designing for the kids who are already there, and the Product Design Intern role is where I would like to learn the rest.",
+  "I came to Roblox as a player late. I have played enough to find my way around and I have not opened Studio yet. The fluency I do have is designing for the kids who are already there, and Roblox is where I would like to learn the rest.",
 ];
 
 // Case-study additions that exist only under /roblox/work: the shared pages
@@ -98,7 +98,7 @@ export const why: string[] = [
 // label matches; a missing label appends at the end.
 import type { Block, Project } from "./projects";
 
-type PageOverride = { role?: string; relabel?: Record<string, string>; insert?: { after: string; block: Block }[] };
+type PageOverride = { role?: string; tagline?: string; dropLinks?: ("deck" | "figma" | "github" | "video" | "live")[]; relabel?: Record<string, string>; insert?: { after: string; block: Block }[] };
 
 const overrides: Record<string, PageOverride> = {
   dewey: {
@@ -123,6 +123,7 @@ const overrides: Record<string, PageOverride> = {
   wikipedia: { role: "Designer & UX researcher" },
   "path-at-penn": {
     role: "Designer & UX researcher",
+    dropLinks: ["deck"], // the deck is not publicly viewable at the time of writing
     insert: [
       { after: "Process", block: { type: "list", label: "Iterations", heading: "What testing changed", items: [
         "Navigation: simplified after the think-aloud sessions with peers doing the three core tasks (find a course, add it, check degree progress).",
@@ -145,7 +146,8 @@ const overrides: Record<string, PageOverride> = {
     ],
   },
   "aleph-lab": {
-    role: "Engineer & designer, intern",
+    role: "Engineering & design intern",
+    tagline: "Engineering and design at a Y Combinator startup building Annie, an AI character who plays alongside kids while they learn English.",
     insert: [
       { after: "Company", block: { type: "list", label: "Design", heading: "The design half of the summer", items: [
         "Delivered a full rebrand users did not have to relearn: the information architecture shipped first, live to 100% of users, so the layout stayed familiar before the 33-section visual system followed, staged 25, 50, then 100% across real usage cycles",
@@ -170,5 +172,7 @@ export const forRoblox = (p: Project): Project => {
     const i = blocks.findIndex((b) => labelOf(b) === after);
     blocks = i < 0 ? [...blocks, block] : [...blocks.slice(0, i + 1), block, ...blocks.slice(i + 1)];
   }
-  return { ...p, role: o.role ?? p.role, blocks };
+  const links = { ...p.links };
+  for (const k of o.dropLinks ?? []) delete links[k];
+  return { ...p, role: o.role ?? p.role, tagline: o.tagline ?? p.tagline, links, blocks };
 };

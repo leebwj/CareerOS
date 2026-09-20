@@ -7,9 +7,9 @@ import ShaderField from "../../components/ShaderField.astro";
 import ProfileCard from "../../components/ProfileCard.astro";
 import { Image } from "astro:assets";
 import { getProject, catLabels } from "../../data/projects";
-import { studies, steps, why, ROBLOX_RESUME } from "../../data/roblox";
+import { studies, steps, why, forRoblox, ROBLOX_RESUME } from "../../data/roblox";
 
-const featured = studies.map((s) => ({ ...s, p: getProject(s.slug)! }));
+const featured = studies.map((s) => ({ ...s, p: forRoblox(getProject(s.slug)!) }));
 ---
 
 <BaseLayout
