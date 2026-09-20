@@ -80,8 +80,8 @@ const featured = studies.map((s) => ({ ...s, p: forRoblox(getProject(s.slug)!) }
       <div class="rb-studies mt-12">
         {featured.map(({ p, line, blurb, outcome, thumb, team, role }, i) => (
           <article class="rb-study reveal" style={`--d:${(i % 2) * 0.06}s`}>
-            <a href={`/roblox/work/${p.slug}`} class="proj rb-study__media" data-cursor="View" data-cursor-keep>
-              <div class="proj-media" style={`view-transition-name: thumb-${p.slug}`}>
+            <a href={`/roblox/work/${p.slug}`} class="proj rb-study__media">
+              <div class="proj-media" data-cursor="View" data-cursor-keep data-cursor-big style={`view-transition-name: thumb-${p.slug}`}>
                 {p.type !== "experience" && <div class="proj-cats">{p.cats.map((c) => <span class="proj-cat">{catLabels[c]}</span>)}</div>}
                 {(thumb ?? p.thumb ?? p.img)
                   ? <Image src={(thumb ?? p.thumb ?? p.img)!} alt={p.alt ?? p.title} width={660} height={495} fit="cover" position={p.thumbPos?.startsWith("left") ? "left" : "centre"} densities={[1, 2]} />

@@ -205,7 +205,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
             // .ag-card opts in too: the art masonry has portrait covers 460-600px
             // tall (drawings/scans), which the default gate silently refused to
             // wrap — so some artworks snapped and others didn't.
-            const big = hoverEl.classList.contains("cs-zoomable") || hoverEl.classList.contains("ag-card");
+            const big = hoverEl.classList.contains("cs-zoomable") || hoverEl.classList.contains("ag-card") || hoverEl.hasAttribute("data-cursor-big");
             const maxW = big ? 1800 : 900, maxH = big ? 2400 : 460;
             if (r.width && r.width < maxW && r.height < maxH) {
               tx = r.left + r.width / 2; ty = r.top + r.height / 2; ease = 0.24;
