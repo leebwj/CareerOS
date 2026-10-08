@@ -1,22 +1,12 @@
-// The Roblox view of the portfolio (/roblox): the same case studies the rest
-// of the site renders, in the order and framing for one reader. Kept out of
-// projects.ts so the shared data stays audience-neutral.
-import type { ImageMetadata } from "astro";
+// The Roblox view of the portfolio (/roblox). Kept out of projects.ts so the
+// shared data stays audience-neutral.
 import alephThumb from "../assets/work/aleph-lab.png";
+import { applyOverride, type PageOverride, type Step, type Study, type TailoredView } from "./tailored";
+import type { Project } from "./projects";
 
 export const ROBLOX_RESUME = "/Brian_Lee_Resume_Roblox.pdf";
 
-export interface RobloxStudy {
-  slug: string;
-  outcome: string; // what exists at the end, in a recruiter's terms
-  blurb: string; // the story in three beats: the problem, what I did, what came out
-  thumb?: ImageMetadata; // for an entry whose project has no card image
-  role?: string; // for an experience, whose title is the job title
-  team?: string; // for an experience, which carries no team field
-  line?: string; // replaces the card one-liner where the project's own is engineering-first
-}
-
-export const studies: RobloxStudy[] = [
+export const studies: Study[] = [
   {
     slug: "dewey",
     outcome: "Working iOS build, in beta with the client",
@@ -53,12 +43,6 @@ export const studies: RobloxStudy[] = [
   },
 ];
 
-export interface Step {
-  title: string;
-  body: string;
-  link: { text: string; slug: string };
-}
-
 export const steps: Step[] = [
   {
     title: "Find the problem in what people do",
@@ -93,14 +77,9 @@ export const why: string[] = [
   "I came to Roblox as a player late. I have played enough to find my way around and I have not opened Studio yet. The fluency I do have is designing for the kids who are already there, and Roblox is where I would like to learn the rest.",
 ];
 
-// Case-study additions that exist only under /roblox/work: the shared pages
-// stay exactly as Brian wrote them. Blocks are inserted after the block whose
-// label matches; a missing label appends at the end.
-import type { Block, Project } from "./projects";
-
-type PageOverride = { role?: string; tagline?: string; dropLinks?: ("deck" | "figma" | "github" | "video" | "live")[]; relabel?: Record<string, string>; insert?: { after: string; block: Block }[] };
-
-const overrides: Record<string, PageOverride> = {
+// Case-study additions that exist only under the company views: the shared
+// pages stay exactly as Brian wrote them.
+export const overrides: Record<string, PageOverride> = {
   dewey: {
     relabel: { "The task": "Problem" },
     insert: [
@@ -159,20 +138,18 @@ const overrides: Record<string, PageOverride> = {
   },
 };
 
-const labelOf = (b: Block) => ("label" in b && b.label) || "";
+export const forRoblox = (p: Project): Project => applyOverride(p, overrides[p.slug]);
 
-export const forRoblox = (p: Project): Project => {
-  const o = overrides[p.slug];
-  if (!o) return p;
-  let blocks = p.blocks.map((b) => {
-    const to = o.relabel?.[labelOf(b)];
-    return to && "label" in b ? { ...b, label: to } : b;
-  });
-  for (const { after, block } of o.insert ?? []) {
-    const i = blocks.findIndex((b) => labelOf(b) === after);
-    blocks = i < 0 ? [...blocks, block] : [...blocks.slice(0, i + 1), block, ...blocks.slice(i + 1)];
-  }
-  const links = { ...p.links };
-  for (const k of o.dropLinks ?? []) delete links[k];
-  return { ...p, role: o.role ?? p.role, tagline: o.tagline ?? p.tagline, links, blocks };
+export const robloxView: TailoredView = {
+  base: "/roblox",
+  company: "Roblox",
+  description: "Product design portfolio: a client iOS app led end to end, two research-led redesigns, and a production app redesign at a startup building for children.",
+  resume: ROBLOX_RESUME,
+  heroSub: "Product designer who builds what he designs. CS + Design at Penn, hoping to spend Summer 2027 designing at Roblox.",
+  groups: [{ kicker: "Selected Work", heading: "Things I've built.", studies }],
+  steps,
+  why: { kicker: "Why Roblox", heading: "Designing for kids, already.", paras: why },
+  contactLine: "I'd like to spend Summer 2027 designing at Roblox. Happy to walk through any of this work on a call. The full site, with the graphics and engineering projects, is at leebrian.dev.",
+  footLine: "I'd like to spend Summer 2027 designing at Roblox. Happy to walk through this work on a call.",
+  apply: forRoblox,
 };

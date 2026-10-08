@@ -6,18 +6,20 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import ShaderField from "../../components/ShaderField.astro";
 import { Image } from "astro:assets";
 import { projects, experiences, catLabels, type CatId } from "../../data/projects";
-import { studies as robloxStudies, forRoblox } from "../../data/roblox";
+import { robloxView } from "../../data/roblox";
+import { doordashView } from "../../data/doordash";
 
-// base = "/roblox" renders the same study inside the Roblox view: its nav, back
-// link, prev/next and footer stay within that view instead of leading to the
-// main site, and the Roblox-only blocks are added to the body
-const { project: given, base = "" } = Astro.props as { project: (typeof projects)[number]; base?: "" | "/roblox" };
-const roblox = base === "/roblox";
-const p = roblox ? forRoblox(given) : given;
+// a company base renders the same study inside that view: its nav, back link,
+// prev/next and footer stay within the view instead of leading to the main
+// site, and the view's own blocks are added to the body
+const views = { "/roblox": robloxView, "/doordash": doordashView };
+const { project: given, base = "" } = Astro.props as { project: (typeof projects)[number]; base?: "" | keyof typeof views };
+const view = base ? views[base] : null;
+const p = view ? view.apply(given) : given;
 const home = base || "/";
 const work = (slug: string) => `${base}/work/${slug}`;
-const backHref = roblox ? `${base}#work` : p.type === "experience" ? "/#about" : "/#work";
-const backLabel = roblox ? "Work" : p.type === "experience" ? "About" : "All Work";
+const backHref = view ? `${base}#work` : p.type === "experience" ? "/#about" : "/#work";
+const backLabel = view ? "Work" : p.type === "experience" ? "About" : "All Work";
 
 // distribute media items round-robin into N columns → true masonry (no crop, no gap, no overlap)
 const toCols = (items: any[], n: number) => {
@@ -26,9 +28,9 @@ const toCols = (items: any[], n: number) => {
   return out;
 };
 
-// prev/next walk the Roblox reading order inside that view, otherwise the projects of the same type
-const pool = roblox
-  ? robloxStudies.map((s) => projects.find((x) => x.slug === s.slug)!)
+// prev/next walk the view's reading order inside that view, otherwise the projects of the same type
+const pool = view
+  ? view.groups.flatMap((g) => g.studies).map((s) => projects.find((x) => x.slug === s.slug)!)
   : [...projects.filter((x) => (x.type ?? "project") === (p.type ?? "project"))].sort((a, b) => a.order - b.order);
 const idx = pool.findIndex((x) => x.slug === p.slug);
 const prev = idx < 0 ? null : pool[(idx - 1 + pool.length) % pool.length];
@@ -43,7 +45,7 @@ const linkList = [
 ].filter(Boolean) as { label: string; href: string }[];
 ---
 
-<BaseLayout title={`${p.title} · Brian Wonjun Lee`} noindex={roblox}>
+<BaseLayout title={`${p.title} · Brian Wonjun Lee`} noindex={!!view}>
   <header class="cs-nav" style="view-transition-name: site-header;">
     <div class="wrap cs-nav__row">
       <a href={backHref} class="cs-back nav-link" data-cursor="Back">← {backLabel}</a>
@@ -94,7 +96,7 @@ const linkList = [
           {p.metaExtra && <div><dt>{p.metaExtra.label}</dt><dd>{p.metaExtra.value}</dd></div>}
           {p.tools.length > 0 && <div class="cs-meta__tools"><dt>Tools</dt><dd><ul class="tag-row">{p.tools.map((t) => <li class="tag">{t}</li>)}</ul></dd></div>}
         </dl>
-        {p.type === "experience" && !roblox && (
+        {p.type === "experience" && !view && (
           <nav class="cs-switch" aria-label="Experience">
             <p class="cs-switch__label">All experience</p>
             <ul>
@@ -230,8 +232,8 @@ const linkList = [
     <!-- ── CTA ── -->
     <footer class="wrap cs-foot">
       <div class="cta-block">
-        <h2 class="text-[clamp(1.7rem,4vw,2.6rem)] font-bold leading-[1.08]">{roblox ? "Let's work together." : "Building something? Let's talk."}</h2>
-        <p class="mt-3 text-lg" style="opacity:.85">{roblox ? "I'd like to spend Summer 2027 designing at Roblox. Happy to walk through this work on a call." : "Open to new opportunities across design and engineering."}</p>
+        <h2 class="text-[clamp(1.7rem,4vw,2.6rem)] font-bold leading-[1.08]">{view ? "Let's work together." : "Building something? Let's talk."}</h2>
+        <p class="mt-3 text-lg" style="opacity:.85">{view ? view.footLine : "Open to new opportunities across design and engineering."}</p>
         <div class="cta-links-row">
           <a href="mailto:leebwj@sas.upenn.edu" class="cta-link copy-email" data-email="leebwj@sas.upenn.edu">leebwj@sas.upenn.edu</a>
           <a href="https://www.linkedin.com/in/brian-lee-0b706b225/" target="_blank" rel="noopener" data-cursor="LinkedIn" class="cta-link">LinkedIn ↗</a>
@@ -252,10 +254,10 @@ const linkList = [
     // "← All Work" returns to the role view the visitor came from (/, /graphics, /engineering, /design)
     (() => {
       const back = document.querySelector(".cs-back");
-      if (!back || location.pathname.startsWith("/roblox/")) return;
+      if (!back || /^\/(roblox|doordash)\//.test(location.pathname)) return;
       try {
         const ref = new URL(document.referrer);
-        if (ref.origin === location.origin && ["/", "/graphics", "/engineering", "/design", "/roblox"].includes(ref.pathname))
+        if (ref.origin === location.origin && ["/", "/graphics", "/engineering", "/design", "/roblox", "/doordash"].includes(ref.pathname))
           back.href = ref.pathname + back.getAttribute("href").slice(back.getAttribute("href").indexOf("#"));
       } catch (e) {}
     })();

@@ -2,7 +2,7 @@
 // "Trading card" for Brian's info — Simey-style holo interaction (pointer-tracked 3D tilt +
 // glare + a pointer-driven iridescent holo foil over a live GLSL shader "screen").
 import CardShader from "./CardShader.astro";
-// base = "/roblox" keeps the experience links inside the Roblox view
+// a company base ("/roblox") keeps the experience links inside that view
 const { base = "" } = Astro.props as { base?: string };
 const exp = [
   { name: "Aleph Lab", href: `${base}/work/aleph-lab`, logo: "/logos/aleph.png" },
