@@ -46,6 +46,8 @@ export type PageOverride = {
   tagline?: string;
   dropLinks?: ("deck" | "figma" | "github" | "video" | "live")[];
   relabel?: Record<string, string>;
+  drop?: string[]; // block labels to leave out
+  metrics?: Project["metrics"];
   insert?: { after: string; block: Block }[];
 };
 
@@ -54,7 +56,7 @@ const labelOf = (b: Block) => ("label" in b && b.label) || "";
 // blocks are inserted after the block whose label matches; a missing label appends at the end
 export const applyOverride = (p: Project, o: PageOverride | undefined): Project => {
   if (!o) return p;
-  let blocks = p.blocks.map((b) => {
+  let blocks = p.blocks.filter((b) => !o.drop?.includes(labelOf(b))).map((b) => {
     const to = o.relabel?.[labelOf(b)];
     return to && "label" in b ? { ...b, label: to } : b;
   });
@@ -64,5 +66,5 @@ export const applyOverride = (p: Project, o: PageOverride | undefined): Project 
   }
   const links = { ...p.links };
   for (const k of o.dropLinks ?? []) delete links[k];
-  return { ...p, role: o.role ?? p.role, tagline: o.tagline ?? p.tagline, links, blocks };
+  return { ...p, role: o.role ?? p.role, tagline: o.tagline ?? p.tagline, metrics: o.metrics ?? p.metrics, links, blocks };
 };

@@ -6,6 +6,12 @@ import homeBefore from "../assets/work/doordash/aleph-home-before.jpg";
 import homeAfter from "../assets/work/doordash/aleph-home-after.jpg";
 import speakingAfter from "../assets/work/doordash/aleph-speaking-after.jpg";
 import popupAfter from "../assets/work/doordash/aleph-popup-after.jpg";
+import finalHome from "../assets/work/doordash/final-home.png";
+import finalEnglish from "../assets/work/doordash/final-english.png";
+import finalAnnie from "../assets/work/doordash/final-annie.png";
+import finalStats from "../assets/work/doordash/final-stats.png";
+import finalSettings from "../assets/work/doordash/final-settings.png";
+import finalWords from "../assets/work/doordash/final-words.png";
 import { applyOverride, type PageOverride, type Step, type Study, type TailoredView } from "./tailored";
 import { overrides as robloxOverrides, studies as robloxStudies } from "./roblox";
 import type { Project } from "./projects";
@@ -34,7 +40,7 @@ const aiStudies: Study[] = [
     outcome: "Live, 8 course projects in one scene",
     role: "Solo designer & developer",
     team: "Solo",
-    blurb: "A course portfolio I wanted people to explore, not scroll. Claude and Codex wrote the Three.js scene, the physics, and the project modal from my descriptions. My part was how it should feel: hand-set scale for the objects that looked wrong next to the others, a bounce tuned until the drift read as calm, and a last day spent only on the title. It is live as one scene holding eight projects.",
+    blurb: "A course portfolio I wanted people to explore, not scroll. I built it as one Three.js scene, with Claude and Codex writing most of the scene, physics, and modal code from my descriptions. My part was how it should feel: hand-set scale for the objects that looked wrong next to the others, a bounce tuned until the drift read as calm, and a last day spent only on the title. It is live as one scene holding eight projects.",
   },
   {
     slug: "road-rogue",
@@ -45,7 +51,7 @@ const aiStudies: Study[] = [
   },
 ];
 
-const designStudies: Study[] = ["dewey", "path-at-penn", "penn-spark-redesign", "capsule"].map(shared);
+const designStudies: Study[] = ["dewey", "penn-spark-redesign", "path-at-penn", "capsule"].map(shared);
 
 const steps: Step[] = [
   {
@@ -76,7 +82,8 @@ const steps: Step[] = [
 ];
 
 const why: string[] = [
-  "I order from DoorDash regularly, mostly restaurant delivery around campus. What brought me to the design team is what it has been writing. How Designers at DoorDash Are Becoming Builders describes how I worked this summer: I worked out a Figma system with our designer and then built it into the production React Native app myself, small reviewed changes first, instead of handing it off.",
+  "I order from DoorDash regularly, mostly restaurant delivery around campus. What brought me to the design team is what it has been writing. How Designers at DoorDash Are Becoming Builders describes how I worked this summer: I worked out a Figma system with our designer and then built it into the production React Native app myself, instead of handing it off.",
+  "Dream Big, Start Small is also how that redesign shipped. The new structure went to every user first, behind one flag that could switch it off, and the visual system followed at 25, 50, and 100%. Each step was small enough to undo, which is what let it go out quickly.",
   "Two Teams, One Shift says that when building is fast, direction becomes the bottleneck. That matched what I saw. The AI tools I used wrote most of the code, and my job was deciding what to keep. The Aleph case study lists the calls I made against the tools, because that part does not show up in a screenshot.",
   "Your evals post asks who gets to decide what is good. My closest experience is small: four readers overruled the wording of my Wikipedia AI Chat because they expected full answers, and they were right. I would like to work on that question at DoorDash's scale.",
 ];
@@ -85,6 +92,12 @@ const overrides: Record<string, PageOverride> = {
   ...robloxOverrides,
   "aleph-lab": {
     role: "Engineering & design intern",
+    drop: ["What I worked on"],
+    metrics: [
+      { value: "100%", label: "of users on the redesign" },
+      { value: "33", label: "design-system sections" },
+      { value: "16", label: "mode cards wired and checked" },
+    ],
     tagline: "Designing and building the app around Annie, an AI character who plays alongside kids while they learn English.",
     insert: [
       { after: "Company", block: { type: "prose", label: "Problem", heading: "A redesign families should not have to relearn", body: [
@@ -105,7 +118,15 @@ const overrides: Record<string, PageOverride> = {
         { src: speakingAfter, alt: "The new Speaking tab with call-with-Annie and word-practice cards", caption: "Talking with Annie and word practice moved off Home into their own Speaking tab." },
         { src: popupAfter, alt: "A class popup with the time card inside it", caption: "Class length moved into each class popup, where the parent decides to start." },
       ] } },
-      { after: "Where things went", block: { type: "list", label: "Decisions", heading: "Building the system, and where it changed on a phone", items: [
+      { after: "Where things went", block: { type: "media", label: "Final look", layout: "third", items: [
+        { src: finalHome, alt: "Home in the new visual system: Annie greets the child by name above a featured adventure and a grid of modes", caption: "Home: Annie greets the child by name and suggests one adventure, above the grid of modes." },
+        { src: finalEnglish, alt: "The English Training tab with a word-practice card and a phone-English card", caption: "English Training, the tab that took practice off Home: today's words first, then talking with Annie." },
+        { src: finalAnnie, alt: "Annie's tab showing her tier, her character, and time, words, and sessions together", caption: "Annie's own tab: her tier, and the time, words, and sessions the child has spent with her." },
+        { src: finalStats, alt: "The Stats tab with minutes spoken, words mastered, a weekly streak, and learning feedback", caption: "Stats for parents: minutes spoken, words mastered, the week's streak, and feedback from class." },
+        { src: finalSettings, alt: "Settings with word practice, Minecraft class with a subtitle preview, general, and notifications", caption: "Settings in one place, with a preview of how Annie's subtitles look during Minecraft class." },
+        { src: finalWords, alt: "A word-practice question asking for the Korean translation of an English word", caption: "Word practice: one English word, four answers in Korean." },
+      ] } },
+      { after: "Final look", block: { type: "list", label: "Decisions", heading: "Building the system, and where it changed on a phone", items: [
         "Cyan is reserved for Annie's surfaces and cobalt for accents, so a child can tell the character from the app.",
         "No gradients anywhere, so the system stays flat enough to build from tokens.",
         "The brand green was tested live at 15, 35, 55, 65 and 100% strength. 55% stayed: the others failed WCAG contrast or stopped reading as the brand.",
@@ -133,12 +154,17 @@ const overrides: Record<string, PageOverride> = {
         "A divider that looked a little heavy: pinned to exactly two device pixels.",
         "A duplicate section added on its own: reverted.",
       ] } },
+      { after: "Judgment", block: { type: "list", label: "Also at Aleph", heading: "The engineering side of the same summer", items: [
+        "Packaged Annie as a versioned SDK so studios outside the company can build game modes on her, then wrote a full mode from the handover docs alone to prove it worked. It merged as a first-party mode.",
+        "Built the app's lifecycle notifications end to end: streak reminders, re-engagement and class-completion alerts, with back-off so one family never gets a pile of them, and a holdout group so the effect was measured.",
+        "Built an analysis tool on production data that showed a reported retention gain came from how it was measured, not from the product.",
+      ] } },
     ],
   },
   "art-of-web": {
     insert: [
       { after: "Overview", block: { type: "prose", label: "AI workflow", heading: "Directing the build", body: [
-        "Claude and Codex wrote the Three.js scene, the physics, and the project modal from my descriptions. I spent my time on how the scene should feel.",
+        "I built the scene with Claude and Codex writing most of the Three.js, physics, and modal code from my descriptions, and spent my own time on how it should feel.",
         "Every object is scaled from its bounding box, which made the clock, the tape, and the cube look out of scale next to the rest, so they carry hand-set multipliers. The bounce settled at 0.9 restitution with 0.998 friction per frame, slow enough to read each object as it passes. The last day before submission went to the title alone: a run of changes to its size and to the buttons around it.",
       ] } },
     ],
@@ -153,10 +179,10 @@ export const doordashView: TailoredView = {
   company: "DoorDash",
   description: "Product design portfolio: designing and building the app around an AI character, AI in my own process, and research-led design work.",
   resume: DOORDASH_RESUME,
-  heroSub: "Product designer who builds what he designs. CS + Design at Penn, hoping to spend Summer 2027 designing at DoorDash.",
+  heroSub: "Product designer who ships what he designs, in code. CS + Design at Penn, hoping to spend Summer 2027 designing at DoorDash.",
   groups: [
     { kicker: "AI in my work", heading: "Designing with AI, and for it.", studies: aiStudies },
-    { kicker: "Design work", heading: "More case studies.", studies: designStudies },
+    { kicker: "Design work", heading: "From research to shipped code.", studies: designStudies },
   ],
   steps,
   why: { kicker: "Why DoorDash", heading: "Designers who build.", paras: why },
