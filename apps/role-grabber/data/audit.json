@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-17T11:41:04.335Z",
+  "generated": "2026-10-17T16:31:24.971Z",
   "sum": {
     "boards": 142,
     "dark": 10,
@@ -15,9 +15,9 @@
       "missing": 0
     },
     {
-      "co": "Gearbox",
+      "co": "Bungie",
       "kind": "greenhouse",
-      "total": 1,
+      "total": 4,
       "early": 0,
       "missing": 0
     },
@@ -29,16 +29,9 @@
       "missing": 0
     },
     {
-      "co": "Bungie",
+      "co": "Gearbox",
       "kind": "greenhouse",
-      "total": 4,
-      "early": 0,
-      "missing": 0
-    },
-    {
-      "co": "Sony Pictures Animation",
-      "kind": "greenhouse",
-      "total": 6,
+      "total": 1,
       "early": 0,
       "missing": 0
     },
@@ -50,66 +43,10 @@
       "missing": 0
     },
     {
-      "co": "Naughty Dog",
+      "co": "Sony Pictures Animation",
       "kind": "greenhouse",
-      "total": 13,
+      "total": 6,
       "early": 0,
-      "missing": 0
-    },
-    {
-      "co": "Take-Two",
-      "kind": "greenhouse",
-      "total": 34,
-      "early": 0,
-      "missing": 0
-    },
-    {
-      "co": "Twitch",
-      "kind": "greenhouse",
-      "total": 46,
-      "early": 0,
-      "missing": 0
-    },
-    {
-      "co": "Discord",
-      "kind": "greenhouse",
-      "total": 47,
-      "early": 0,
-      "missing": 0
-    },
-    {
-      "co": "Sony Pictures Imageworks",
-      "kind": "greenhouse",
-      "total": 49,
-      "early": 0,
-      "missing": 0
-    },
-    {
-      "co": "NetEase Games",
-      "kind": "greenhouse",
-      "total": 29,
-      "early": 0,
-      "missing": 0
-    },
-    {
-      "co": "Vercel",
-      "kind": "greenhouse",
-      "total": 93,
-      "early": 2,
-      "missing": 0
-    },
-    {
-      "co": "Nintendo",
-      "kind": "greenhouse",
-      "total": 50,
-      "early": 0,
-      "missing": 0
-    },
-    {
-      "co": "Duolingo",
-      "kind": "greenhouse",
-      "total": 63,
-      "early": 1,
       "missing": 0
     },
     {
@@ -118,13 +55,6 @@
       "total": 16,
       "early": 1,
       "missing": 1
-    },
-    {
-      "co": "2K",
-      "kind": "greenhouse",
-      "total": 113,
-      "early": 0,
-      "missing": 0
     },
     {
       "co": "Digital Extremes",
@@ -141,16 +71,44 @@
       "missing": 0
     },
     {
-      "co": "Figma",
+      "co": "Take-Two",
       "kind": "greenhouse",
-      "total": 139,
-      "early": 7,
+      "total": 34,
+      "early": 0,
+      "missing": 0
+    },
+    {
+      "co": "Naughty Dog",
+      "kind": "greenhouse",
+      "total": 13,
+      "early": 0,
+      "missing": 0
+    },
+    {
+      "co": "NetEase Games",
+      "kind": "greenhouse",
+      "total": 29,
+      "early": 0,
+      "missing": 0
+    },
+    {
+      "co": "Twitch",
+      "kind": "greenhouse",
+      "total": 46,
+      "early": 0,
       "missing": 0
     },
     {
       "co": "Dropbox",
       "kind": "greenhouse",
-      "total": 20,
+      "total": 18,
+      "early": 0,
+      "missing": 0
+    },
+    {
+      "co": "Netlify",
+      "kind": "greenhouse",
+      "total": 5,
       "early": 0,
       "missing": 0
     },
@@ -162,13 +120,6 @@
       "missing": 0
     },
     {
-      "co": "Cockroach Labs",
-      "kind": "greenhouse",
-      "total": 18,
-      "early": 0,
-      "missing": 0
-    },
-    {
       "co": "PlanetScale",
       "kind": "greenhouse",
       "total": 10,
@@ -176,16 +127,16 @@
       "missing": 0
     },
     {
-      "co": "Twilio",
+      "co": "Sony Pictures Imageworks",
       "kind": "greenhouse",
-      "total": 133,
+      "total": 49,
       "early": 0,
       "missing": 0
     },
     {
-      "co": "Krafton",
+      "co": "Discord",
       "kind": "greenhouse",
-      "total": 54,
+      "total": 47,
       "early": 0,
       "missing": 0
     },
@@ -204,16 +155,16 @@
       "missing": 0
     },
     {
-      "co": "Netlify",
+      "co": "Watershed",
       "kind": "greenhouse",
-      "total": 5,
+      "total": 8,
       "early": 0,
       "missing": 0
     },
     {
-      "co": "Khan Academy",
+      "co": "Cockroach Labs",
       "kind": "greenhouse",
-      "total": 6,
+      "total": 18,
       "early": 0,
       "missing": 0
     },
@@ -221,6 +172,13 @@
       "co": "Coursera",
       "kind": "greenhouse",
       "total": 20,
+      "early": 0,
+      "missing": 0
+    },
+    {
+      "co": "Khan Academy",
+      "kind": "greenhouse",
+      "total": 6,
       "early": 0,
       "missing": 0
     },
@@ -246,10 +204,31 @@
       "missing": 0
     },
     {
-      "co": "Watershed",
+      "co": "Vercel",
       "kind": "greenhouse",
-      "total": 8,
+      "total": 93,
+      "early": 2,
+      "missing": 0
+    },
+    {
+      "co": "Duolingo",
+      "kind": "greenhouse",
+      "total": 63,
+      "early": 1,
+      "missing": 0
+    },
+    {
+      "co": "Nintendo",
+      "kind": "greenhouse",
+      "total": 50,
       "early": 0,
+      "missing": 0
+    },
+    {
+      "co": "Faire",
+      "kind": "greenhouse",
+      "total": 79,
+      "early": 1,
       "missing": 0
     },
     {
@@ -260,9 +239,16 @@
       "missing": 0
     },
     {
-      "co": "LaunchDarkly",
+      "co": "Together AI",
       "kind": "greenhouse",
-      "total": 51,
+      "total": 78,
+      "early": 4,
+      "missing": 0
+    },
+    {
+      "co": "Squarespace",
+      "kind": "greenhouse",
+      "total": 30,
       "early": 0,
       "missing": 0
     },
@@ -274,31 +260,31 @@
       "missing": 0
     },
     {
-      "co": "Squarespace",
+      "co": "2K",
       "kind": "greenhouse",
-      "total": 30,
+      "total": 113,
       "early": 0,
       "missing": 0
     },
     {
-      "co": "Scale AI",
+      "co": "LaunchDarkly",
       "kind": "greenhouse",
-      "total": 182,
-      "early": 3,
-      "missing": 0
-    },
-    {
-      "co": "Chime",
-      "kind": "greenhouse",
-      "total": 72,
+      "total": 51,
       "early": 0,
       "missing": 0
     },
     {
-      "co": "Faire",
+      "co": "Figma",
       "kind": "greenhouse",
-      "total": 79,
-      "early": 1,
+      "total": 139,
+      "early": 7,
+      "missing": 0
+    },
+    {
+      "co": "Twilio",
+      "kind": "greenhouse",
+      "total": 133,
+      "early": 0,
       "missing": 0
     },
     {
@@ -316,51 +302,16 @@
       "missing": 0
     },
     {
-      "co": "Together AI",
+      "co": "Krafton",
       "kind": "greenhouse",
-      "total": 78,
-      "early": 4,
-      "missing": 0
-    },
-    {
-      "co": "Pinterest",
-      "kind": "greenhouse",
-      "total": 156,
-      "early": 8,
+      "total": 54,
+      "early": 0,
       "missing": 0
     },
     {
       "co": "Robinhood",
       "kind": "greenhouse",
       "total": 153,
-      "early": 0,
-      "missing": 0
-    },
-    {
-      "co": "Glean",
-      "kind": "greenhouse",
-      "total": 136,
-      "early": 1,
-      "missing": 0
-    },
-    {
-      "co": "Epic Games",
-      "kind": "greenhouse",
-      "total": 134,
-      "early": 11,
-      "missing": 0
-    },
-    {
-      "co": "Gusto",
-      "kind": "greenhouse",
-      "total": 103,
-      "early": 0,
-      "missing": 0
-    },
-    {
-      "co": "Second Dinner",
-      "kind": "ashby",
-      "total": 2,
       "early": 0,
       "missing": 0
     },
@@ -372,6 +323,20 @@
       "missing": 0
     },
     {
+      "co": "Glean",
+      "kind": "greenhouse",
+      "total": 136,
+      "early": 1,
+      "missing": 0
+    },
+    {
+      "co": "Chime",
+      "kind": "greenhouse",
+      "total": 72,
+      "early": 0,
+      "missing": 0
+    },
+    {
       "co": "Asana",
       "kind": "greenhouse",
       "total": 103,
@@ -379,37 +344,9 @@
       "missing": 0
     },
     {
-      "co": "Box",
+      "co": "Gusto",
       "kind": "greenhouse",
-      "total": 128,
-      "early": 0,
-      "missing": 0
-    },
-    {
-      "co": "Ideogram",
-      "kind": "ashby",
-      "total": 2,
-      "early": 0,
-      "missing": 0
-    },
-    {
-      "co": "Poolside",
-      "kind": "ashby",
-      "total": 2,
-      "early": 0,
-      "missing": 0
-    },
-    {
-      "co": "Fivetran",
-      "kind": "greenhouse",
-      "total": 180,
-      "early": 0,
-      "missing": 0
-    },
-    {
-      "co": "Airbnb",
-      "kind": "greenhouse",
-      "total": 173,
+      "total": 103,
       "early": 0,
       "missing": 0
     },
@@ -421,9 +358,58 @@
       "missing": 0
     },
     {
-      "co": "Runway",
+      "co": "Fivetran",
+      "kind": "greenhouse",
+      "total": 180,
+      "early": 0,
+      "missing": 0
+    },
+    {
+      "co": "Box",
+      "kind": "greenhouse",
+      "total": 128,
+      "early": 0,
+      "missing": 0
+    },
+    {
+      "co": "Poolside",
       "kind": "ashby",
-      "total": 3,
+      "total": 2,
+      "early": 0,
+      "missing": 0
+    },
+    {
+      "co": "Scale AI",
+      "kind": "greenhouse",
+      "total": 182,
+      "early": 3,
+      "missing": 0
+    },
+    {
+      "co": "Pinterest",
+      "kind": "greenhouse",
+      "total": 156,
+      "early": 8,
+      "missing": 0
+    },
+    {
+      "co": "Airbnb",
+      "kind": "greenhouse",
+      "total": 173,
+      "early": 0,
+      "missing": 0
+    },
+    {
+      "co": "Ideogram",
+      "kind": "ashby",
+      "total": 2,
+      "early": 0,
+      "missing": 0
+    },
+    {
+      "co": "Second Dinner",
+      "kind": "ashby",
+      "total": 2,
       "early": 0,
       "missing": 0
     },
@@ -435,13 +421,6 @@
       "missing": 0
     },
     {
-      "co": "GitLab",
-      "kind": "greenhouse",
-      "total": 232,
-      "early": 0,
-      "missing": 0
-    },
-    {
       "co": "Affirm",
       "kind": "greenhouse",
       "total": 214,
@@ -449,9 +428,23 @@
       "missing": 0
     },
     {
-      "co": "Reddit",
+      "co": "Runway",
+      "kind": "ashby",
+      "total": 3,
+      "early": 0,
+      "missing": 0
+    },
+    {
+      "co": "Epic Games",
       "kind": "greenhouse",
-      "total": 146,
+      "total": 134,
+      "early": 11,
+      "missing": 0
+    },
+    {
+      "co": "GitLab",
+      "kind": "greenhouse",
+      "total": 232,
       "early": 0,
       "missing": 0
     },
@@ -463,6 +456,27 @@
       "missing": 0
     },
     {
+      "co": "Samsara",
+      "kind": "greenhouse",
+      "total": 259,
+      "early": 3,
+      "missing": 0
+    },
+    {
+      "co": "Dream Games",
+      "kind": "lever",
+      "total": 20,
+      "early": 0,
+      "missing": 0
+    },
+    {
+      "co": "Easybrain",
+      "kind": "lever",
+      "total": 9,
+      "early": 0,
+      "missing": 0
+    },
+    {
       "co": "Scopely",
       "kind": "greenhouse",
       "total": 173,
@@ -470,21 +484,7 @@
       "missing": 0
     },
     {
-      "co": "Coinbase",
-      "kind": "greenhouse",
-      "total": 226,
-      "early": 8,
-      "missing": 0
-    },
-    {
       "co": "Reka",
-      "kind": "ashby",
-      "total": 9,
-      "early": 0,
-      "missing": 0
-    },
-    {
-      "co": "Browserbase",
       "kind": "ashby",
       "total": 9,
       "early": 0,
@@ -498,25 +498,18 @@
       "missing": 0
     },
     {
-      "co": "Samsara",
-      "kind": "greenhouse",
-      "total": 260,
-      "early": 3,
+      "co": "Browserbase",
+      "kind": "ashby",
+      "total": 9,
+      "early": 0,
       "missing": 0
     },
     {
-      "co": "Riot Games",
+      "co": "Coinbase",
       "kind": "greenhouse",
-      "total": 174,
-      "early": 1,
+      "total": 226,
+      "early": 8,
       "missing": 0
-    },
-    {
-      "co": "Roblox",
-      "kind": "greenhouse",
-      "total": 262,
-      "early": 7,
-      "missing": 2
     },
     {
       "co": "Verkada",
@@ -524,6 +517,27 @@
       "total": 319,
       "early": 8,
       "missing": 2
+    },
+    {
+      "co": "Jam City",
+      "kind": "lever",
+      "total": 17,
+      "early": 0,
+      "missing": 0
+    },
+    {
+      "co": "Skydance",
+      "kind": "lever",
+      "total": 10,
+      "early": 0,
+      "missing": 0
+    },
+    {
+      "co": "Reddit",
+      "kind": "greenhouse",
+      "total": 146,
+      "early": 0,
+      "missing": 0
     },
     {
       "co": "Krea",
@@ -540,10 +554,17 @@
       "missing": 0
     },
     {
-      "co": "Cloudflare",
+      "co": "Roblox",
       "kind": "greenhouse",
-      "total": 435,
-      "early": 3,
+      "total": 263,
+      "early": 7,
+      "missing": 2
+    },
+    {
+      "co": "Riot Games",
+      "kind": "greenhouse",
+      "total": 174,
+      "early": 1,
       "missing": 0
     },
     {
@@ -554,9 +575,23 @@
       "missing": 0
     },
     {
+      "co": "Waymo",
+      "kind": "greenhouse",
+      "total": 362,
+      "early": 35,
+      "missing": 0
+    },
+    {
       "co": "PlayStation (SIE)",
       "kind": "greenhouse",
       "total": 208,
+      "early": 0,
+      "missing": 0
+    },
+    {
+      "co": "Pika",
+      "kind": "ashby",
+      "total": 15,
       "early": 0,
       "missing": 0
     },
@@ -568,30 +603,30 @@
       "missing": 0
     },
     {
-      "co": "Waymo",
-      "kind": "greenhouse",
-      "total": 362,
-      "early": 35,
-      "missing": 0
-    },
-    {
-      "co": "Pika",
-      "kind": "ashby",
-      "total": 15,
+      "co": "Kabam",
+      "kind": "lever",
+      "total": 22,
       "early": 0,
       "missing": 0
     },
     {
-      "co": "Anthropic",
-      "kind": "greenhouse",
-      "total": 656,
+      "co": "Mistplay",
+      "kind": "lever",
+      "total": 12,
       "early": 0,
+      "missing": 0
+    },
+    {
+      "co": "Cloudflare",
+      "kind": "greenhouse",
+      "total": 435,
+      "early": 3,
       "missing": 0
     },
     {
       "co": "Stripe",
       "kind": "greenhouse",
-      "total": 731,
+      "total": 732,
       "early": 5,
       "missing": 1
     },
@@ -603,17 +638,17 @@
       "missing": 0
     },
     {
-      "co": "Gamma",
-      "kind": "ashby",
-      "total": 21,
+      "co": "Anthropic",
+      "kind": "greenhouse",
+      "total": 655,
       "early": 0,
       "missing": 0
     },
     {
-      "co": "Datadog",
-      "kind": "greenhouse",
-      "total": 433,
-      "early": 2,
+      "co": "Gamma",
+      "kind": "ashby",
+      "total": 21,
+      "early": 0,
       "missing": 0
     },
     {
@@ -628,6 +663,13 @@
       "kind": "ashby",
       "total": 11,
       "early": 0,
+      "missing": 0
+    },
+    {
+      "co": "Datadog",
+      "kind": "greenhouse",
+      "total": 433,
+      "early": 2,
       "missing": 0
     },
     {
@@ -673,13 +715,6 @@
       "missing": 0
     },
     {
-      "co": "Databricks",
-      "kind": "greenhouse",
-      "total": 898,
-      "early": 5,
-      "missing": 0
-    },
-    {
       "co": "Cartesia",
       "kind": "ashby",
       "total": 27,
@@ -701,9 +736,16 @@
       "missing": 0
     },
     {
-      "co": "MongoDB",
+      "co": "Databricks",
       "kind": "greenhouse",
-      "total": 401,
+      "total": 898,
+      "early": 5,
+      "missing": 0
+    },
+    {
+      "co": "Spotify",
+      "kind": "lever",
+      "total": 82,
       "early": 0,
       "missing": 0
     },
@@ -715,6 +757,13 @@
       "missing": 0
     },
     {
+      "co": "MongoDB",
+      "kind": "greenhouse",
+      "total": 401,
+      "early": 0,
+      "missing": 0
+    },
+    {
       "co": "Sardine",
       "kind": "ashby",
       "total": 44,
@@ -722,14 +771,14 @@
       "missing": 0
     },
     {
-      "co": "Synthesia",
+      "co": "Writer",
       "kind": "ashby",
       "total": 47,
       "early": 0,
       "missing": 0
     },
     {
-      "co": "Writer",
+      "co": "Synthesia",
       "kind": "ashby",
       "total": 47,
       "early": 0,
@@ -750,6 +799,20 @@
       "missing": 0
     },
     {
+      "co": "Larian",
+      "kind": "lever",
+      "total": 79,
+      "early": 0,
+      "missing": 0
+    },
+    {
+      "co": "Lovable",
+      "kind": "ashby",
+      "total": 82,
+      "early": 0,
+      "missing": 0
+    },
+    {
       "co": "DoorDash",
       "kind": "greenhouse",
       "total": 456,
@@ -760,13 +823,6 @@
       "co": "Abridge",
       "kind": "ashby",
       "total": 43,
-      "early": 0,
-      "missing": 0
-    },
-    {
-      "co": "Lovable",
-      "kind": "ashby",
-      "total": 82,
       "early": 0,
       "missing": 0
     },
@@ -792,6 +848,13 @@
       "missing": 0
     },
     {
+      "co": "Cursor",
+      "kind": "ashby",
+      "total": 133,
+      "early": 1,
+      "missing": 0
+    },
+    {
       "co": "Perplexity",
       "kind": "ashby",
       "total": 133,
@@ -799,9 +862,9 @@
       "missing": 1
     },
     {
-      "co": "Cursor",
+      "co": "Mercor",
       "kind": "ashby",
-      "total": 133,
+      "total": 112,
       "early": 1,
       "missing": 0
     },
@@ -813,30 +876,9 @@
       "missing": 0
     },
     {
-      "co": "Mercor",
-      "kind": "ashby",
-      "total": 112,
-      "early": 1,
-      "missing": 0
-    },
-    {
       "co": "Vanta",
       "kind": "ashby",
       "total": 85,
-      "early": 0,
-      "missing": 0
-    },
-    {
-      "co": "Dream Games",
-      "kind": "lever",
-      "total": 20,
-      "early": 0,
-      "missing": 0
-    },
-    {
-      "co": "Easybrain",
-      "kind": "lever",
-      "total": 9,
       "early": 0,
       "missing": 0
     },
@@ -892,7 +934,7 @@
     {
       "co": "SpaceX",
       "kind": "greenhouse",
-      "total": 2773,
+      "total": 2771,
       "early": 7,
       "missing": 1
     },
@@ -925,20 +967,6 @@
       "missing": 0
     },
     {
-      "co": "Kabam",
-      "kind": "lever",
-      "total": 22,
-      "early": 0,
-      "missing": 0
-    },
-    {
-      "co": "Jam City",
-      "kind": "lever",
-      "total": 17,
-      "early": 0,
-      "missing": 0
-    },
-    {
       "co": "Harvey",
       "kind": "ashby",
       "total": 345,
@@ -960,30 +988,9 @@
       "missing": 0
     },
     {
-      "co": "Mistplay",
-      "kind": "lever",
-      "total": 12,
-      "early": 0,
-      "missing": 0
-    },
-    {
       "co": "OpenAI",
       "kind": "ashby",
-      "total": 815,
-      "early": 0,
-      "missing": 0
-    },
-    {
-      "co": "Spotify",
-      "kind": "lever",
-      "total": 82,
-      "early": 0,
-      "missing": 0
-    },
-    {
-      "co": "Skydance",
-      "kind": "lever",
-      "total": 10,
+      "total": 814,
       "early": 0,
       "missing": 0
     },
@@ -993,13 +1000,6 @@
       "total": 310,
       "early": 55,
       "missing": 3
-    },
-    {
-      "co": "Larian",
-      "kind": "lever",
-      "total": 79,
-      "early": 0,
-      "missing": 0
     }
   ],
   "dark": [
