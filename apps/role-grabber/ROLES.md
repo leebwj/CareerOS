@@ -1,38 +1,37 @@
 # 📋 Open Roles — auto-updated twice daily
 
-_Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since last run) · sources: Simplify + jobright + 181 company boards direct · ⭐ strong fit ◐ good fit · dashboard: [leebrian.dev/tracker](https://leebrian.dev/tracker) · full data: [`data/roles.csv`](data/roles.csv)_
+_Last updated: 2026-11-15 07:56 UTC · 14056 active US roles (🆕 173 since last run) · sources: Simplify + jobright + 181 company boards direct · ⭐ strong fit ◐ good fit · dashboard: [leebrian.dev/tracker](https://leebrian.dev/tracker) · full data: [`data/roles.csv`](data/roles.csv)_
 
 | Category | Active total |
 |---|---|
-| Graphics / Game / 3D | 93 |
+| Graphics / Game / 3D | 94 |
 | Art / Animation / VFX | 74 |
-| Design / UX | 359 |
-| Software Engineering | 4579 |
-| Data / AI / ML | 3031 |
-| Product | 455 |
-| Quant | 195 |
-| Hardware | 1914 |
-| Other | 3254 |
+| Design / UX | 363 |
+| Software Engineering | 4609 |
+| Data / AI / ML | 3015 |
+| Product | 454 |
+| Quant | 208 |
+| Hardware | 1939 |
+| Other | 3300 |
 
 ## 🔥 Fresh — posted in the last 48h (120)
 
 | Posted | Company | Role | Location | Level · Term | Apply |
 |---|---|---|---|---|---|
-| 🔥⭐ 2026-11-13 | Meta | UX Research Scientist Intern, Contextual AI (PhD) | Redmond, WA, United States | intern | [link](https://jobright.ai/jobs/info/6af600328cc703bba47aed5e?utm_campaign=1049&utm_source=git) |
+| ⭐ 2026-11-13 | Meta | UX Research Scientist Intern, Contextual AI (PhD) | Redmond, WA, United States | intern | [link](https://jobright.ai/jobs/info/6af600328cc703bba47aed5e?utm_campaign=1049&utm_source=git) |
 | 🔥⭐ 2026-11-14 | The Minnesota Star Tribune | Data, Graphics & Design Internship – Summer 2027 | Minneapolis, MN, United States | intern | [link](https://jobright.ai/jobs/info/6abecff0d9621c5b28391b84?utm_campaign=1049&utm_source=git) |
-| 🔥⭐ 2026-11-13 | Reliable Robotics | FPGA Design Engineer Intern | Mountain View, CA | intern | [link](https://jobs.ashbyhq.com/reliable-robotics/131987a0-ede9-4291-9cd2-1aaadabd2a54/application?embed=true) |
-| 🔥⭐ 2026-11-13 | Texas Instruments | Analog Design Engineer Intern - Power | Dallas, TX | intern | [link](https://edbz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/25019495) |
-| 🔥⭐ 2026-11-13 | Texas Instruments | Analog Design Engineer Intern - High-speed/RF/mm-wave | Dallas, TX | intern | [link](https://edbz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/25016349) |
-| 🔥⭐ 2026-11-13 | Texas Instruments | Analog Design Engineer Intern - High-Speed/RF | Santa Clara, CA | intern | [link](https://edbz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/25016352) |
-| 🔥⭐ 2026-11-13 | Texas Instruments | Analog Design Engineer Intern - GaN Device | Santa Clara, CA | intern | [link](https://edbz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/25016345) |
-| ⭐ 2026-11-12 | KLA Corporation | Electrical Design Engineer Intern | Ann Arbor, MI | intern | [link](https://kla.wd1.myworkdayjobs.com/UR/job/Ann-Arbor-MI/Electrical-Design-Engineering-Intern_2641709) |
-| 🔥⭐ 🆕 2026-11-14 | ICE | Summer Internship Program 2027 - User Experience (UX) Designer Intern | New York, NY, United States | intern | [link](https://jobright.ai/jobs/info/6adbc32e0a4cc7090f974965?utm_campaign=1049&utm_source=git) |
-| 🔥⭐ 🆕 2026-11-14 | ICE | Summer Internship Program 2027 - Enterprise UX Intern | Atlanta, GA, United States | intern | [link](https://jobright.ai/jobs/info/6adbc3260a4cc7090f97495e?utm_campaign=1049&utm_source=git) |
-| 🔥⭐ 🆕 2026-11-14 | Tractian | Product Design Intern | Atlanta, GA, United States | intern | [link](https://jobright.ai/jobs/info/6abed9e68ff3fb9b3bc764a0?utm_campaign=1049&utm_source=git) |
-| 🔥⭐ 2026-11-14 | Vermilion | Graphic Design Intern (UX/UI) | New York, NY, United States | intern | [link](https://jobright.ai/jobs/info/6af8780234e2d29dcb75565f?utm_campaign=1049&utm_source=git) |
+| ⭐ 2026-11-13 | Reliable Robotics | FPGA Design Engineer Intern | Mountain View, CA | intern | [link](https://jobs.ashbyhq.com/reliable-robotics/131987a0-ede9-4291-9cd2-1aaadabd2a54/application?embed=true) |
+| ⭐ 2026-11-13 | Texas Instruments | Analog Design Engineer Intern - Power | Dallas, TX | intern | [link](https://edbz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/25019495) |
+| ⭐ 2026-11-13 | Texas Instruments | Analog Design Engineer Intern - High-speed/RF/mm-wave | Dallas, TX | intern | [link](https://edbz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/25016349) |
+| ⭐ 2026-11-13 | Texas Instruments | Analog Design Engineer Intern - High-Speed/RF | Santa Clara, CA | intern | [link](https://edbz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/25016352) |
+| ⭐ 2026-11-13 | Texas Instruments | Analog Design Engineer Intern - GaN Device | Santa Clara, CA | intern | [link](https://edbz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/25016345) |
+| 🔥⭐ 2026-11-14 | ICE | Summer Internship Program 2027 - User Experience (UX) Designer Intern | New York, NY, United States | intern | [link](https://jobright.ai/jobs/info/6adbc32e0a4cc7090f974965?utm_campaign=1049&utm_source=git) |
+| 🔥⭐ 2026-11-14 | ICE | Summer Internship Program 2027 - Enterprise UX Intern | Atlanta, GA, United States | intern | [link](https://jobright.ai/jobs/info/6adbc3260a4cc7090f97495e?utm_campaign=1049&utm_source=git) |
+| 🔥⭐ 2026-11-14 | Tractian | Product Design Intern | Atlanta, GA, United States | intern | [link](https://jobright.ai/jobs/info/6abed9e68ff3fb9b3bc764a0?utm_campaign=1049&utm_source=git) |
 | 🔥⭐ 2026-11-14 | Newell Brands | 2027 Newell Brands Intern- User Experience Research | Sandy Springs, GA, United States | intern | [link](https://jobright.ai/jobs/info/6af8495386a9b19681af879a?utm_campaign=1049&utm_source=git) |
 | 🔥⭐ 2026-11-14 | SeatGeek | UX Design - Internship | New York, NY, United States | intern | [link](https://jobright.ai/jobs/info/6ada50ae54bbabbab0714c70?utm_campaign=1049&utm_source=git) |
 | 🔥⭐ 2026-11-14 | Union Home Mortgage Corp. | UX/UI Design Intern | Strongsville, OH, United States | intern | [link](https://jobright.ai/jobs/info/6a872f7e25fc4e7ae3dabc8d?utm_campaign=1049&utm_source=git) |
+| ◐ 2026-11-13 | Micron | Intern - IT Software Engineer | Boise, ID - Main Site | intern | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---IT-Software-Engineer_JR111582) |
 | ◐ 2026-11-13 | Zoox | Industrial Design Intern [Summer 2027 | Foster City, CA, United States | intern | [link](https://jobright.ai/jobs/info/6af7ccb234e2d29dcb751910?utm_campaign=1049&utm_source=git) |
 | ◐ 2026-11-13 | IBM | UX Designer Intern 2027 | Yorktown Heights, NY, United States | intern | [link](https://jobright.ai/jobs/info/6af63042a4a5218a07e84271?utm_campaign=1049&utm_source=git) |
 | ◐ 2026-11-13 | Nominal | Product Designer - Internship (Summer 2027) | New York, NY, United States | intern | [link](https://jobright.ai/jobs/info/6ad019aa12303667b98a1f4c?utm_campaign=1049&utm_source=git) |
@@ -49,44 +48,22 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ◐ 2026-11-13 | Camping World | Software Engineer Intern | Chicago, IL | intern | [link](https://campingworld.wd5.myworkdayjobs.com/en-US/Jobs/job/Lincolnshire-IL/Software-Engineering-Intern_26_09080) |
 | 🔥◐ 2026-11-14 | Amazon | Data Center Infrastructure Engineer Intern, Summer 2027 - East | Herndon, VA | intern | [link](https://www.amazon.jobs/en/jobs/10605141/data-center-infrastructure-engineer-intern-summer-2027-east) |
 | 🔥◐ 2026-11-14 | Amazon | Data Center Infrastructure Engineer Intern, Summer 2027 - West Coast | Umatilla, OR | intern | [link](https://www.amazon.jobs/en/jobs/10605132/data-center-infrastructure-engineer-intern-summer-2027-west-coast) |
-| 🔥◐ 🆕 2026-11-12 | Micron | Intern - IT Software Engineer | Boise, ID - Main Site | intern | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---IT-Software-Engineer_JR111582) |
-| ◐ 2026-11-12 | SK hynix | Embedded Software Engineer Intern | San Jose, CA | intern | [link](https://job-boards.greenhouse.io/skhynixmemorysolutionsamericainc/jobs/4504499009) |
-| ◐ 2026-11-12 | Bask Health | Frontend Engineer Intern - Frontend Engineering | Remote in USA | intern | [link](https://apply.workable.com/bask-health-1/j/9C2964C7CD/apply) |
-| ◐ 2026-11-12 | Entegris | Embedded Software Engineer Intern | Bloomington, MN | intern | [link](https://entegris.wd1.myworkdayjobs.com/entegriscareers/job/Bloomington-MN/Embedded-Software-Engineering-Intern_REQ-15870) |
-| ◐ 2026-11-12 | Wolters Kluwer | Product Software Engineer Intern | Waltham, MA | intern | [link](https://wk.wd3.myworkdayjobs.com/en-US/External/job/USA---Waltham-MA/Product-Software-Engineer_R0061394) |
-| ◐ 2026-11-12 | Leidos | Junior Software Engineer / Data Scientist Intern | Tucson, AZ | intern | [link](https://leidos.wd5.myworkdayjobs.com/External/job/Tucson-AZ/Junior-Software-Engineer---Data-Scientist-Intern_R-00196510) |
-| ◐ 2026-11-12 | Muon Space | Software Engineer Intern - Information Systems | San Jose, CA | intern | [link](https://job-boards.greenhouse.io/muonspace/jobs/5293973007) |
-| ◐ 2026-11-12 | North Atlantic Industries | Embedded Software Engineer Intern | Bohemia, NY | intern | [link](https://recruiting.paylocity.com/Recruiting/Jobs/Details/4663112) |
-| ◐ 2026-11-12 | Atalanta | Software Engineer Intern | Washington, DC | intern | [link](https://jobs.ashbyhq.com/atalanta/52011b21-df9a-4304-81a9-005a79f55335/application?embed=true) |
-| ◐ 2026-11-12 | Cintas | IT OT Software Engineer Intern | Mason, OH | intern | [link](https://careers.cintas.com/job/Mason-IT-Intern-OT-Software-Engineer-OH-45040/1450367200/?ats=successfactors) |
-| ◐ 2026-11-12 | Entegris | Product Management Intern | Colorado Springs, CO | intern | [link](https://entegris.wd1.myworkdayjobs.com/entegriscareers/job/Rockrimmon-Colorado-Springs-CO/Product-Management-Intern_REQ-15838) |
-| ◐ 2026-11-12 | CareSource | Software Engineer Intern | Remote in USA | intern | [link](https://caresource.wd1.myworkdayjobs.com/caresource/job/Remote/XMLNAME-2027-Summer-Internship-Program---Software-Engineer_R14136) |
-| ◐ 2026-11-12 | Vital Lyfe | Software Engineer Intern | Torrance, CA | intern | [link](https://jobs.ashbyhq.com/vital-lyfe/5b5e7e6d-d59e-410b-9a7f-619717c3c942/application?embed=true) |
-| ◐ 2026-11-12 | ServiceNow | Senior Outbound Product Manager Intern | San Diego, CA | intern | [link](https://jobs.smartrecruiters.com/ServiceNow/744000161362293) |
-| ◐ 2026-11-12 | ServiceNow | Senior Inbound Product Manager Intern | San Diego, CA | intern | [link](https://jobs.smartrecruiters.com/ServiceNow/744000161364609) |
-| ◐ 2026-11-12 | RTX | Software Engineer Intern | Melbourne, FL | intern | [link](https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-FL-MELBOURNE-312--795-W-Nasa-Blvd--BLDG-312/Software-Engineering-Intern--Summer-2027-_01885543) |
-| 🔥◐ 🆕 2026-11-13 | Intel | Power Integrity Intern Worker Engineer | Costa Rica, San Jose | intern | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/Costa-Rica-San-Jose/Power-Integrity-Intern-Worker-Engineer_JR0289171) |
-| ◐ 🆕 2026-11-13 | Microsoft | Research Intern - AI Coding Agents | United States, Washington, Redmond | intern | [link](https://jobs.careers.microsoft.com/global/en/job/200067371) |
-| ◐ 🆕 2026-11-13 | Microsoft | Research Intern - MSR Software-Hardware Co-design | United States, Washington, Redmond | intern | [link](https://jobs.careers.microsoft.com/global/en/job/200067399) |
+| 🔥◐ 2026-11-14 | Intel | Power Integrity Intern Worker Engineer | Costa Rica, San Jose | intern | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/Costa-Rica-San-Jose/Power-Integrity-Intern-Worker-Engineer_JR0289171) |
 | ◐ 2026-11-13 | TikTok | Research Scientist Intern - Content Ecology - Local Services | San Jose, CA | intern | [link](https://lifeattiktok.com/search/7707222170826623285) |
 | ◐ 2026-11-13 | TikTok | Machine Learning Scientist Intern - Local Services | San Jose, CA | intern | [link](https://lifeattiktok.com/search/7703925583541979445) |
 | ◐ 2026-11-13 | Meta | Research Scientist Intern - Materials Architecture & Device Integration | Redmond, WA | intern | [link](https://www.metacareers.com/jobs/1674297360998408) |
 | ◐ 2026-11-13 | Meta | Research Scientist Intern - Diffractive Optics | Redmond, WA | intern | [link](https://www.metacareers.com/jobs/1158829233342350) |
 | ◐ 2026-11-13 | Microsoft | Research Intern - Microsoft Research Software-Hardware Co-design | Redmond, WA | intern | [link](https://apply.careers.microsoft.com/careers/job/1970393557073455) |
 | ◐ 2026-11-13 | Microsoft | Research Intern - AI Coding Agents | Redmond, WA | intern | [link](https://apply.careers.microsoft.com/careers/job/1970393557073416) |
-| ◐ 2026-11-12 | Microsoft | Data Scientist Intern - CoreAI | Redmond, WA | intern | [link](https://apply.careers.microsoft.com/careers/job/1970393557027390) |
-| ◐ 🆕 2026-11-14 | Microsoft | Marketing MBA Internship Opportunities, United States | United States, Washington, Redmond | intern | [link](https://jobs.careers.microsoft.com/global/en/job/200048816) |
-| ◐ 2026-11-13 | Robinhood | Corporate Finance Intern (Summer 2027) | New York, NY | intern | [link](https://boards.greenhouse.io/robinhood/jobs/8357464?t=gh_src=&gh_jid=8357464) |
-| ◐ 2026-11-13 | Ramp | Risk Strategy Intern | New York, NY (HQ) | intern | [link](https://jobs.ashbyhq.com/ramp/b87e898f-8d8b-447d-b3d5-9073ccf7d109) |
-| ◐ 🆕 2026-11-13 | Intel | PnP Lab Eng. Intern Worker | Costa Rica, San Jose | intern | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/Costa-Rica-San-Jose/PnP-Lab-Eng-Intern-Worker_JR0289168) |
-| ◐ 🆕 2026-11-13 | Microsoft | Electrical Engineering INTERN (PhD) | United States, Washington, Redmond | intern | [link](https://jobs.careers.microsoft.com/global/en/job/200053353) |
-| 🔥◐ 2026-11-13 | Amazon | Robotics Applied Scientist 2 Intern - Robotics | Seattle, WA | intern | [link](https://amazon.jobs/en/jobs/10604778/2027-applied-science-internship-robotics-united-states) |
+| ◐ 2026-11-14 | Intel | PnP Lab Eng. Intern Worker | Costa Rica, San Jose | intern | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/Costa-Rica-San-Jose/PnP-Lab-Eng-Intern-Worker_JR0289168) |
+| ◐ 🆕 2026-11-14 | TikTok | Creative Design Intern (TikTok-Design) - 2027 Summer | Los Angeles, United States | intern | [link](https://jobright.ai/jobs/info/6a750ba5b17cba569035903b?utm_campaign=1049&utm_source=git) |
+|  2026-11-13 | Robinhood | Corporate Finance Intern (Summer 2027) | New York, NY | intern | [link](https://boards.greenhouse.io/robinhood/jobs/8357464?t=gh_src=&gh_jid=8357464) |
+|  2026-11-13 | Ramp | Risk Strategy Intern | New York, NY (HQ) | intern | [link](https://jobs.ashbyhq.com/ramp/b87e898f-8d8b-447d-b3d5-9073ccf7d109) |
+|  2026-11-13 | Amazon | Robotics Applied Scientist 2 Intern - Robotics | Seattle, WA | intern | [link](https://amazon.jobs/en/jobs/10604778/2027-applied-science-internship-robotics-united-states) |
+| 🔥 2026-11-14 | Micron | Intern -  AI Engineer Platform | Boise, ID - Main Site | intern | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern----AI-Engineer-Platform_JR115934) |
+| 🔥 2026-11-14 | Micron | Intern - DRAM Device Engineer | Boise, ID - ID1 | intern | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---ID1/Intern---DRAM-Device-Engineer_JR114109) |
 |  2026-11-14 | Tesla | Electrical Engineer Intern - High Speed Hardware Design | Palo Alto, CA | intern | [link](https://www.tesla.com/careers/search/job/289951) |
 |  2026-11-14 | SAS | Software Developer Intern - Go/Golang Experience | Cary, NC | intern | [link](https://careers-sas.icims.com/jobs/42797/job?mobile=true&needsRedirect=false) |
-|  2026-11-12 | Pinterest | Sales Analytics Intern 2027 (USA) | San Francisco, CA, US; Remote, US | intern | [link](https://www.pinterestcareers.com/jobs/?gh_jid=8214783) |
-|  🆕 2026-11-12 | Microsoft | Applied Science: Internship Opportunities - Redmond | United States, Washington, Redmond | intern | [link](https://jobs.careers.microsoft.com/global/en/job/200053346) |
-| 🔥 🆕 2026-11-13 | Micron | Intern -  AI Engineer Platform | Boise, ID - Main Site | intern | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern----AI-Engineer-Platform_JR115934) |
-| 🔥 🆕 2026-11-13 | Micron | Intern - DRAM Device Engineer | Boise, ID - ID1 | intern | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---ID1/Intern---DRAM-Device-Engineer_JR114109) |
 |  2026-11-13 | Navy Federal Credit Union | Summer Associate Internship (Data Storytelling & Visual Communications) | Pensacola, FL, United States | intern | [link](https://jobright.ai/jobs/info/6aa17973ef23570cae244037?utm_campaign=1049&utm_source=git) |
 |  2026-11-13 | Zoox | Data Scientist Intern | Foster City, CA | intern | [link](https://jobs.lever.co/zoox/0f42ac76-3821-4805-8b59-446477d1e1db/apply) |
 |  2026-11-13 | Samsung | Compiler Engineer Intern | San Jose, CA | intern | [link](https://job-boards.greenhouse.io/samsungsemiconductor/jobs/8202902003) |
@@ -107,39 +84,62 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-13 | Nexus Cognitive Technologies | Data Engineer Intern | Atlanta, GA | intern | [link](https://jobs.ashbyhq.com/nexus-cognitive/22c64819-67fc-48d0-b206-5b41d370f6a5/application?embed=true) |
 |  2026-11-13 | Lightmatter | Hardware Test Engineer Intern | Mountain View, CA | intern | [link](https://boards.greenhouse.io/lightmatter/jobs/5473869008) |
 |  2026-11-13 | Carnegie Mellon University | Cyber AI Engineer Intern | Pittsburgh, PA | intern | [link](https://cmu.wd115.myworkdayjobs.com/SEI/job/Pittsburgh-PA/Cyber-AI-Engineering-Intern--Spring-2027-_2025346-2) |
-|  🆕 2026-11-13 | Shield AI | Engineer 1 New Grad - Software | Arlington County, Arlington, VA | intern | [link](https://jobs.ashbyhq.com/f7d8749a-72d6-407c-bf98-292ea630c73a/7e0ae8a3-4872-431c-a04a-2f2b8988b527/application?embed=true) |
 |  2026-11-13 | Postman | AI Engineer Intern | SF | intern | [link](https://postman.wd108.myworkdayjobs.com/careers/job/San-Francisco-CA-US/AI-Engineer--Intern_JR1000055) |
 |  2026-11-13 | Camping World | Data Engineering Intern | Chicago, IL | intern | [link](https://campingworld.wd5.myworkdayjobs.com/en-US/Jobs/job/Chicago-IL/Data-Engineering-Intern_26_09297) |
 |  2026-11-13 | Camping World | Data Analyst Intern - AI & Machine Learning Focus | Chicago, IL | intern | [link](https://campingworld.wd5.myworkdayjobs.com/en-US/Jobs/job/Chicago-IL/Data-Analyst-Intern_26_09300) |
 |  2026-11-13 | Martin Marietta | Software Data Integration Engineer Intern | Raleigh, NC | intern | [link](https://martinmarietta.wd5.myworkdayjobs.com/Martin_Marietta_Careers/job/Raleigh-NC/Intern--Software-Data-Integration-Engineer_JR024146) |
 |  2026-11-13 | Martin Marietta | Data Scientist Intern | Raleigh, NC | intern | [link](https://martinmarietta.wd5.myworkdayjobs.com/Martin_Marietta_Careers/job/Raleigh-NC/Intern--Data-Scientist_JR024144-1) |
 |  2026-11-13 | Daimler Truck | IT Developer Analyst Intern | Mt Holly, NC | intern | [link](https://dtna.wd5.myworkdayjobs.com/dtna_affiliate/job/Mount-Holly-NC-US/IT-Developer-Analyst-Intern_DT-20681-1) |
-|  2026-11-12 | Haworth | Design Research Intern | Holland, MI, United States | intern | [link](https://jobright.ai/jobs/info/6af861e386a9b19681af9817?utm_campaign=1049&utm_source=git) |
-|  2026-11-12 | InsCipher | AI Product Intern | Pleasant Grove, UT | intern | [link](https://ats.rippling.com/inscipher-careers/jobs/a79113bc-e11e-47a3-9d4e-8847e5ff4c9c) |
-|  2026-11-12 | AMAX | R&D Engineer Intern | Fremont, CA | intern | [link](https://apply.workable.com/amax-1/j/19B39953E1/apply) |
-|  2026-11-12 | Rhoda AI | Research Intern | Mountain View, CA | intern | [link](https://jobs.ashbyhq.com/rhoda-ai/20056166-79de-420b-8569-d0b15ee83599/application?embed=true) |
-|  2026-11-12 | SharkNinja | Data Science Intern | Needham, MA | intern | [link](https://job-boards.greenhouse.io/sharkninjaoperatingllc/jobs/4727539006) |
-|  2026-11-12 | Fresenius Medical Care | Agentic AI Analytics Co-op | Lawrence, MA | intern | [link](https://freseniusmedicalcare.wd3.myworkdayjobs.com/fme/job/Lawrence-MA-USA/Agentic-AI-Analytics-Co-op_R0277797) |
-|  2026-11-12 | Toyota Research Institute | Robotics Intern - Prototyping and Research Operations | Cambridge, MA | intern | [link](https://jobs.lever.co/tri/4f1efb39-385b-4ff9-8e82-1459a6b22628/apply) |
-|  2026-11-12 | StackAV | Research Intern - Autonomy | Remote in USA | intern | [link](https://job-boards.greenhouse.io/stackav/jobs/5287594007) |
-|  2026-11-12 | T-Mobile | Data Product Intern | Bellevue, WA | intern | [link](https://tmobile.wd1.myworkdayjobs.com/External/job/Bellevue-Washington/Summer-2027-Data-Product-Internship_REQ381212) |
-|  2026-11-12 | Lightmatter | Data & AI Platform Intern | Boston, MA | intern | [link](https://boards.greenhouse.io/lightmatter/jobs/5474807008) |
-|  2026-11-12 | Shield AI | Hardware Test Engineer Co-op | Dallas, TX | intern | [link](https://jobs.lever.co/shieldai/3cfe5522-856e-4216-a5f7-c9188bebf12a/apply) |
-|  2026-11-12 | Auburn University | Student Machine Learning Engineer Intern | Auburn, AL | intern | [link](https://jobs.auburn.edu/jobs/11612?icims=1&lang=en-us) |
-|  2026-11-12 | Moderna | Investigator Site Budgets & Contracts Co-op - Data Integration & Reporting | Cambridge, MA | intern | [link](https://modernatx.wd1.myworkdayjobs.com/en-US/M_tx/job/Cambridge-Massachusetts/XMLNAME-2027-Co-Op--Investigator-Site-Budgets---Contracts-and-Data-Integration---Reporting_R20170) |
-|  2026-11-12 | Robert Bosch Venture Capital | AI Research Intern - Time Series Foundation Models | Sunnyvale, CA | intern | [link](https://jobs.smartrecruiters.com/BoschGroup/744000161339309) |
-|  2026-11-12 | National Laboratory of the Rockies | Year-Round Graduate Internship - AI/Machine Learning Time Series Modeling | Remote in USA | intern | [link](https://nrel.wd5.myworkdayjobs.com/NLR/job/Remote-Site/Year-Round-Graduate-Internship---AI-Machine-Learning-Time-Series-Modeling_R14589) |
-|  2026-11-12 | KION Group | AI Engineer Intern | Grand Rapids, MI | intern | [link](https://kiongroup.wd3.myworkdayjobs.com/kiongroup/job/Grand-Rapids-MI-United-States/AI-Engineering-Intern_JR-0096963) |
-|  2026-11-12 | Stanley Black & Decker | Data Analyst Intern | Towson, MD | intern | [link](https://sbdinc.wd1.myworkdayjobs.com/en-US/Stanley_Black_Decker_Career_Site/job/Towson-MD-United-States/Intern--Data-Analyst---BI--Summer-2027_REQ-1000052481) |
-|  2026-11-12 | Atalanta | Forward Deployed Engineer Intern | Washington, DC | intern | [link](https://jobs.ashbyhq.com/atalanta/732425ff-3461-49e6-9022-5b0cd732e6c1/application?embed=true) |
-|  2026-11-12 | Intermountain Healthcare | Machine Learning Operations Intern | Remote in USA | intern | [link](https://imh.wd108.myworkdayjobs.com/IntermountainCareers/job/Key-Bank-Tower/Machine-Learning-Operations--MLOps--Intern_R188318) |
-|  2026-11-12 | Intermountain Healthcare | AI/ML Engineer Intern | Remote in USA | intern | [link](https://imh.wd108.myworkdayjobs.com/IntermountainCareers/job/Key-Bank-Tower/AI-ML-Engineer-Intern_R188835) |
-|  2026-11-12 | Entegris | Data Engineering Intern | Aurora, IL | intern | [link](https://entegris.wd1.myworkdayjobs.com/entegriscareers/job/Aurora-IL/Data-Engineering-Intern---Summer-2027_REQ-15839) |
-|  2026-11-12 | Bask Health | Machine Learning Engineer Intern | Remote in USA | intern | [link](https://apply.workable.com/bask-health-1/j/71AEBBCADE/apply) |
-|  2026-11-12 | Bask Health | AI Engineering Intern | Remote in USA | intern | [link](https://apply.workable.com/bask-health-1/j/F0E122E877/apply) |
-|  2026-11-12 | CareSource | Summer Internship Program – Provider Analytics AI Intern | Remote in USA | intern | [link](https://caresource.wd1.myworkdayjobs.com/caresource/job/Remote/XMLNAME-2027-Summer-Internship-Program----Provider-Analytics-AI-Intern_R14481) |
+|  2026-11-14 | Micron | Intern - Enterprise SSD Architecture | Boise, ID - Main Site | intern | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Enterprise-SSD-Architecture_JR114108) |
+|  2026-11-14 | Salesforce | Summer 2027 Intern - Sales Immersion, Financial Services | New York - New York | intern | [link](https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/job/New-York---New-York/Summer-2027-Intern---Sales-Immersion--Financial-Services_JR368293-1) |
+|  2026-11-14 | Ilitch Companies | Graphic Design Intern | Detroit, MI, United States | intern | [link](https://jobright.ai/jobs/info/6af87c5786a9b19681afa1a0?utm_campaign=1049&utm_source=git) |
+|  2026-11-14 | Federal Home Loan Bank of Dallas | 2027 Summer Digital & Graphic Design Intern | Irving, TX, United States | intern | [link](https://jobright.ai/jobs/info/6ac00b47372c01f6cd72a440?utm_campaign=1049&utm_source=git) |
+|  2026-11-14 | Camping World | Conversational Design Intern | Chicago, IL, United States | intern | [link](https://jobright.ai/jobs/info/6af787e641166cab7564c85b?utm_campaign=1049&utm_source=git) |
+|  2026-11-14 | Progressive Companies | Summer 2027 Urban Design Intern | Detroit, MI, United States | intern | [link](https://jobright.ai/jobs/info/6abfbb71064da25272e05991?utm_campaign=1049&utm_source=git) |
+|  2026-11-14 | Baird | Internship – Graphic Design (Year-Round) | Milwaukee, WI, United States | intern | [link](https://jobright.ai/jobs/info/6aa378946b9ea4538f92893e?utm_campaign=1049&utm_source=git) |
+|  2026-11-14 | Tillamook County Creamery Association | Graphic Design Intern | Portland, OR, United States | intern | [link](https://jobright.ai/jobs/info/6adbd4c25dc7953215a35093?utm_campaign=1049&utm_source=git) |
+|  2026-11-14 | VerdeGo | Landscape Internship | Bunnell, FL, United States | intern | [link](https://jobright.ai/jobs/info/6a640aa5e8d8d22e3292bcf1?utm_campaign=1049&utm_source=git) |
+|  2026-11-14 | The Minnesota Star Tribune | Visual Producer Internship – Summer 2027 | Minneapolis, MN, United States | intern | [link](https://jobright.ai/jobs/info/6abeb7dc064da25272e0242e?utm_campaign=1049&utm_source=git) |
+|  2026-11-14 | Pratt Industries | Design Intern | Rockwall, TX, United States | intern | [link](https://jobright.ai/jobs/info/6ac7d54044d6e65604a0492a?utm_campaign=1049&utm_source=git) |
+|  🆕 2026-11-14 | SAS | IoT Product Strategy Intern | Cary, NC | intern | [link](https://careers-sas.icims.com/jobs/43309/job?mobile=true&needsRedirect=false) |
+|  🆕 2026-11-14 | Eight Sleep | Firmware Intern | Washington, DC | intern | [link](https://jobs.ashbyhq.com/eightsleep/8da94996-2820-4964-b2b8-0ed151dd4f1b/application?embed=true) |
+|  2026-11-13 | Anduril | 2027 Brand Marketing Intern | Costa Mesa, California, United States | intern | [link](https://boards.greenhouse.io/andurilindustries/jobs/5261731007?gh_jid=5261731007) |
+|  2026-11-13 | Micron | Physical Failure Analysis Technician - 6 Month Intern 2027 | Boise, ID - ID1 | intern | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---ID1/Physical-Failure-Analysis-Technician---6-Month-Intern-2027_JR114535) |
+|  2026-11-13 | Chernoff Newman | Creative Intern – Art Director | Charlotte, NC, United States | intern | [link](https://jobright.ai/jobs/info/6af814ab42ae65e2c8f3acaf?utm_campaign=1049&utm_source=git) |
+|  2026-11-13 | Texell Credit Union | Marketing Graphic Design Intern | Temple, TX, United States | intern | [link](https://jobright.ai/jobs/info/6af804aa86a9b19681af76a0?utm_campaign=1049&utm_source=git) |
+|  2026-11-13 | Corgan | Student Architectural Internship / Summer 2027 | Dallas, TX, United States | intern | [link](https://jobright.ai/jobs/info/6a9b4dcafe45b8490f607ef5?utm_campaign=1049&utm_source=git) |
+|  2026-11-13 | Trihydro Corporation | Graphic Design Intern | Laramie, WY, United States | intern | [link](https://jobright.ai/jobs/info/6a74ce9c7b3417772ade1aa9?utm_campaign=1049&utm_source=git) |
+|  2026-11-13 | BMW Group | Intern, Automotive Design - Spring 2027 | Santa Monica, CA, United States | intern | [link](https://jobright.ai/jobs/info/6af7e9114ddfc50167b94c60?utm_campaign=1049&utm_source=git) |
+|  2026-11-13 | CHA Consulting, Inc. | Architecture Internships - Summer 2027 | Albany, NY, United States | intern | [link](https://jobright.ai/jobs/info/6a9b0c6413883870605965b2?utm_campaign=1049&utm_source=git) |
+|  2026-11-13 | Southern Poverty Law Center | Intern, Design (Summer 2027) | Atlanta, GA, United States | intern | [link](https://jobright.ai/jobs/info/6af7981f8242286400647105?utm_campaign=1049&utm_source=git) |
+|  2026-11-13 | Tesla | Internship, Coordinator, People Content (Winter/Spring 2027) | Austin, TX, United States | intern | [link](https://jobright.ai/jobs/info/6af7b01a41166cab7564dfa7?utm_campaign=1049&utm_source=git) |
+|  2026-11-13 | Mead & Hunt | Architectural Summer Intern | Portland, Oregon, United States | intern | [link](https://jobright.ai/jobs/info/6af774b2d0eefb7d11b8c90f?utm_campaign=1049&utm_source=git) |
+|  2026-11-13 | Farmers Coop Society | Graphic Design Intern | Sioux Center, IA, United States | intern | [link](https://jobright.ai/jobs/info/6af795888242286400646f9d?utm_campaign=1049&utm_source=git) |
+|  2026-11-13 | Community Food Co-op - Bozeman | Co-op Design Intern | Bozeman, MT, United States | intern | [link](https://jobright.ai/jobs/info/6af793a58242286400646ee2?utm_campaign=1049&utm_source=git) |
+|  2026-11-13 | The Aerospace Corporation | 2027 MP SkillBridge Multimedia Specialist | Colorado Springs, CO, United States | intern | [link](https://jobright.ai/jobs/info/6af77be98242286400645d65?utm_campaign=1049&utm_source=git) |
+|  2026-11-13 | Zoë Feldman Design | Spring - Design Intern | Washington, DC, United States | intern | [link](https://jobright.ai/jobs/info/6af78d0a824228640064674e?utm_campaign=1049&utm_source=git) |
+|  2026-11-13 | Blue Highway Records | Graphic Design Intern | Nashville, TN, United States | intern | [link](https://jobright.ai/jobs/info/6af78d083ba46d7b6c167e70?utm_campaign=1049&utm_source=git) |
+|  2026-11-13 | Tarte Cosmetics | Spring 2027 Intern to Founder & CEO - Graphic Design | New York, NY, United States | intern | [link](https://jobright.ai/jobs/info/6af77d6b3ba46d7b6c167665?utm_campaign=1049&utm_source=git) |
+|  2026-11-13 | Tarte Cosmetics | Spring 2027 Creative - Print Internship | New York, NY, United States | intern | [link](https://jobright.ai/jobs/info/6af77d62d0eefb7d11b8d236?utm_campaign=1049&utm_source=git) |
+|  2026-11-13 | Zoë Feldman Design | Summer - Design Intern | Washington, DC, United States | intern | [link](https://jobright.ai/jobs/info/6af771933ba46d7b6c166bd8?utm_campaign=1049&utm_source=git) |
+|  2026-11-13 | Tarte Cosmetics | Spring 2027 Content - Photo Internship | New York, NY, United States | intern | [link](https://jobright.ai/jobs/info/6af77d62c7349029d709668c?utm_campaign=1049&utm_source=git) |
+|  2026-11-13 | Tarte Cosmetics | Spring 2027 Content - Photo Still Internship | New York, NY, United States | intern | [link](https://jobright.ai/jobs/info/6af78b76e3d8d612bf4248f5?utm_campaign=1049&utm_source=git) |
+|  2026-11-13 | The New York Times | Editorial Design Intern, Wirecutter | New York, NY, United States | intern | [link](https://jobright.ai/jobs/info/6ae4e9a2eab1f9673097e13a?utm_campaign=1049&utm_source=git) |
+|  2026-11-13 | The New York Times | Creative Development Intern, Wirecutter | New York, NY, United States | intern | [link](https://jobright.ai/jobs/info/6ae4e146d7424a2a828e98e7?utm_campaign=1049&utm_source=git) |
+|  2026-11-13 | Imagine | Summer 2027 Creative Intern | Charlotte, NC, United States | intern | [link](https://jobright.ai/jobs/info/6af70c8d824228640064181d?utm_campaign=1049&utm_source=git) |
+|  2026-11-13 | Navy Federal Credit Union | Summer Associate Internship (Enterprise Risk - Communications) | Vienna, VA, United States | intern | [link](https://jobright.ai/jobs/info/6aa1683a0ffb3d4fea6b48ee?utm_campaign=1049&utm_source=git) |
+|  2026-11-13 | Sandhills Global | Graphic Design Output Intern | Lincoln, NE, United States | intern | [link](https://jobright.ai/jobs/info/68cf47a0fb49c96ca6ea6a3c?utm_campaign=1049&utm_source=git) |
+|  2026-11-13 | Rocket | Art Director Intern - Summer 2027 | Detroit, MI, United States | intern | [link](https://jobright.ai/jobs/info/6af73e868242286400643137?utm_campaign=1049&utm_source=git) |
+|  2026-11-13 | Rocket | Creative Designer Intern - Summer 2027 | Detroit, MI, United States | intern | [link](https://jobright.ai/jobs/info/6af73e803ba46d7b6c164851?utm_campaign=1049&utm_source=git) |
+|  2026-11-13 | Rocket | Graphic Design Intern - 3 Consecutive Terms (Winter, Summer and Fall 2027) | Detroit, MI, United States | intern | [link](https://jobright.ai/jobs/info/6af73e823ba46d7b6c164855?utm_campaign=1049&utm_source=git) |
+|  2026-11-13 | KHAITE | Digital Intern, Spring 2027 | New York, NY, United States | intern | [link](https://jobright.ai/jobs/info/6adb677946a8cabdc1ff2ab1?utm_campaign=1049&utm_source=git) |
+|  2026-11-13 | Pacvue | Graphic Design Intern | United States | intern | [link](https://jobright.ai/jobs/info/6af734f73ba46d7b6c164171?utm_campaign=1049&utm_source=git) |
+|  2026-11-13 | NTH Consultants, Ltd. | Graphic Design Intern | Northville, MI, United States | intern | [link](https://jobright.ai/jobs/info/6af7224441166cab756483d7?utm_campaign=1049&utm_source=git) |
+|  2026-11-13 | DLR Group | Theater Planning Intern / Summer  2027 | Los Angeles, CA, United States | intern | [link](https://jobright.ai/jobs/info/6ad15ff0a4f99fef81944261?utm_campaign=1049&utm_source=git) |
+|  2026-11-13 | ASM Global | Digital Workplace Experience Intern | West Conshohocken, PA, United States of America | intern | [link](https://jobright.ai/jobs/info/6a52cafd8a74e077472f6211?utm_campaign=1049&utm_source=git) |
+|  2026-11-13 | Thomas Jefferson University | Graphic Design Intern | Philadelphia, PA, United States | intern | [link](https://jobright.ai/jobs/info/6ada7ad24c3adc437cecd979?utm_campaign=1049&utm_source=git) |
 
-## 🎯 Target companies (1048 recent)
+## 🎯 Target companies (1088 recent)
 
 | Posted | Company | Role | Location | Level · Term | Apply |
 |---|---|---|---|---|---|
@@ -152,7 +152,7 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ⭐ 2026-10-30 | Nintendo | Intern - Software Engineer, Graphics (NTD) | Redmond, WA | intern | [link](https://careers.nintendo.com/?gh_jid=4473550009) |
 | ⭐ 2026-10-30 | Obsidian Entertainment | Gameplay Engineer Intern | Irvine, CA | intern | [link](https://obsidian.applytojob.com/apply/zxhj1ePGcR/Gameplay-Engineer-2027-Summer-Internship) |
 | ⭐ 2026-10-30 | Epic Games | Tools Programmer Intern - Graphics | Cary, NC | intern | [link](https://epicgames.com/careers/jobs/6239259004?gh_jid=6239259004) |
-| 🔥⭐ 2026-11-13 | Meta | UX Research Scientist Intern, Contextual AI (PhD) | Redmond, WA, United States | intern | [link](https://jobright.ai/jobs/info/6af600328cc703bba47aed5e?utm_campaign=1049&utm_source=git) |
+| ⭐ 2026-11-13 | Meta | UX Research Scientist Intern, Contextual AI (PhD) | Redmond, WA, United States | intern | [link](https://jobright.ai/jobs/info/6af600328cc703bba47aed5e?utm_campaign=1049&utm_source=git) |
 | ⭐ 2026-10-26 | Crystal Dynamics | Game Design Intern [Spring 2027] | Remote/Flexible - United States | intern | [link](https://job-boards.greenhouse.io/crystaldynamics/jobs/4747682005) |
 | ⭐ 2026-11-11 | Brex | Software Engineer Intern | SF | intern | [link](https://www.brex.com/careers/8936403002?gh_jid=8936403002) |
 | ⭐ 2026-10-22 | Crystal Dynamics | 3D Art Intern [Spring 2027] | Remote/Flexible - United States | intern | [link](https://job-boards.greenhouse.io/crystaldynamics/jobs/4746886005) |
@@ -164,6 +164,7 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ⭐ 2026-10-20 | Amazon | Industrial Design Engineer Intern , Summer 2027 | Bellevue, WA | intern | [link](https://www.amazon.jobs/en/jobs/10584122/industrial-design-engineer-intern-summer-2027) |
 | ⭐ 2026-11-10 | Notion | Product Design Intern (Summer 2027) | New York, New York | intern | [link](https://jobs.ashbyhq.com/notion/ea6f01b1-dda2-4b0f-b351-d3e7c5e9c9e9) |
 | ⭐ 2026-11-10 | Palantir | Software Engineer, Intern - Connectivity Platform and Product | Denver, CO | intern | [link](https://jobs.lever.co/palantir/eb496d6a-a960-43d3-a09b-e3843052f54e) |
+| ⭐ 2026-11-10 | NVIDIA | Product Management Space Compute MBA Intern - Summer 2027 | US, CA, Santa Clara | intern | [link](https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Product-Management-Space-Compute-MBA-Intern---Summer-2027_JR2029628) |
 | ⭐ 2026-11-10 | Palantir | Software Engineer Intern - Connectivity Platform - Product | Denver, CO | intern | [link](https://jobs.lever.co/palantir/eb496d6a-a960-43d3-a09b-e3843052f54e/apply) |
 | ⭐ 2026-11-10 | Palantir | Software Engineer Intern - Connectivity Platform and Product | NYC | intern | [link](https://jobs.lever.co/palantir/130ee501-bd22-4d44-b651-39581ef97743/apply) |
 | ⭐ 2026-11-10 | Palantir | Software Engineer Intern - Data Connectors | NYC | intern | [link](https://jobs.lever.co/palantir/45e4617d-d658-4b30-8dc9-378ca84a027a/apply) |
@@ -174,26 +175,23 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ⭐ 2026-11-09 | Pinterest | Product Design Intern (USA) | San Francisco, CA, US; Remote, US | intern | [link](https://www.pinterestcareers.com/jobs/?gh_jid=8350814) |
 | ⭐ 2026-11-09 | NBCUniversal (DreamWorks) | Streaming Platforms, Product Management Internships – Summer 2027 | New York, NY | intern | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000160661249) |
 | ⭐ 2026-11-09 | NBCUniversal (DreamWorks) | Product Design Internships – Summer 2027 | New York, NY | intern | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000160655850) |
-| ⭐ 2026-11-09 | NVIDIA | Product Management Space Compute MBA Intern - Summer 2027 | US, CA, Santa Clara | intern | [link](https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Product-Management-Space-Compute-MBA-Intern---Summer-2027_JR2029628) |
 | ⭐ 2026-11-09 | Amazon | Software Engineer Intern | Boston, MA | intern | [link](https://amazon.jobs/en/jobs/10597379/software-development-engineer-intern-summer-2027) |
 | ⭐ 2026-11-09 | Warner Bros. | Software Engineer Co-op | Needham, MA | intern | [link](https://warnerbros.wd5.myworkdayjobs.com/global/job/MA-Needham-117-Kendrick-St/WB-Games-Engineering-Co-op--Needham--MA---January-May-2027_R000109901) |
 | ⭐ 2026-11-09 | Warner Bros. | Product Management Co-op | Needham, MA | intern | [link](https://warnerbros.wd5.myworkdayjobs.com/global/job/MA-Needham-117-Kendrick-St/WB-Games-Product-Management-Co-op--Needham--MA---January-May-2027_R000109850) |
 | ⭐ 2026-11-09 | NVIDIA | Product Management Space Compute MBA Intern | Canada | intern | [link](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Product-Management-Space-Compute-MBA-Intern---Summer-2027_JR2029628) |
 | ⭐ 2026-11-09 | DreamWorks Animation | Software Engineer Intern | Universal City, LA | intern | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000160659379) |
-| ⭐ 2026-10-15 | Tencent | Game Research & Development Intern, Engine Research | US-California-Los Angeles | intern | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-California-Los-Angeles/Game-Research---Development-Intern--Engine-Research_R107344-1) |
-| ⭐ 2026-10-15 | Tencent | Game Research & Development Intern, Engine Research | US-Washington-Bellevue | intern | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-Washington-Bellevue/Game-Research---Development-Intern--Engine-Research_R107363-1) |
+| ⭐ 2026-10-16 | Tencent | Game Research & Development Intern, Engine Research | US-California-Los Angeles | intern | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-California-Los-Angeles/Game-Research---Development-Intern--Engine-Research_R107344-1) |
+| ⭐ 2026-10-16 | Tencent | Game Research & Development Intern, Engine Research | US-Washington-Bellevue | intern | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-Washington-Bellevue/Game-Research---Development-Intern--Engine-Research_R107363-1) |
 | ⭐ 2026-11-06 | Notion | Software Engineering Intern, Frontend (Summer 2027) | New York, New York | intern | [link](https://jobs.ashbyhq.com/notion/43ffba97-b64a-4c6a-ac13-c803253c9413) |
 | ⭐ 2026-11-06 | Notion | Software Engineer Intern - iOS | NYC | intern | [link](https://jobs.ashbyhq.com/notion/27090d0f-07d3-419b-adaa-837b5e22f947/application?embed=true) |
 | ⭐ 2026-11-06 | Notion | Software Engineer Intern - Frontend | NYC | intern | [link](https://jobs.ashbyhq.com/notion/43ffba97-b64a-4c6a-ac13-c803253c9413/application?embed=true) |
 | ⭐ 2026-11-05 | Stripe | Product Design Intern | San Francisco, Seattle, New York City | intern | [link](https://stripe.com/jobs/search?gh_jid=8332681) |
 | ⭐ 2026-11-05 | Palantir | Software Engineer, Internship - Sovereign AI Systems | New York, NY | intern | [link](https://jobs.lever.co/palantir/cd64bcd4-50bb-4aeb-a135-4e0487ffd312) |
-| 🔥⭐ 🆕 2026-11-05 | Microsoft | Software Engineer: Security & Identity Intern Opportunities for University Students, Redmond | United States, Washington, Redmond | intern | [link](https://jobs.careers.microsoft.com/global/en/job/200042199) |
 | ⭐ 2026-11-05 | Palantir | Software Engineer Intern - Sovereign AI Systems | NYC | intern | [link](https://jobs.lever.co/palantir/cd64bcd4-50bb-4aeb-a135-4e0487ffd312/apply) |
 | ⭐ 2026-11-04 | Figma | PhD Intern, Software Engineer - Interaction Design (2027) | San Francisco, CA • New York, NY | intern | [link](https://boards.greenhouse.io/figma/jobs/6241542004?gh_jid=6241542004) |
 | ⭐ 2026-11-04 | Palantir | Software Engineer, Intern - Connectivity Platform and Product | New York, NY | intern | [link](https://jobs.lever.co/palantir/130ee501-bd22-4d44-b651-39581ef97743) |
 | ⭐ 2026-11-04 | Palantir | Software Engineer, Internship - Data Connectors | New York, NY | intern | [link](https://jobs.lever.co/palantir/45e4617d-d658-4b30-8dc9-378ca84a027a) |
 | ⭐ 2026-11-04 | Figma | PhD Intern - Software Engineer - Interaction Design | SF | intern | [link](https://boards.greenhouse.io/figma/jobs/6241542004) |
-| 🔥⭐ 🆕 2026-11-03 | Microsoft | Software Engineer, Teamwork Experiences Internship Opportunities | United States, Washington, Redmond | intern | [link](https://jobs.careers.microsoft.com/global/en/job/200061280) |
 | ⭐ 2026-11-02 | Microsoft | Software Engineer Intern | United States | intern | [link](https://apply.careers.microsoft.com/careers/job/1970393557044764) |
 | ⭐ 2026-10-30 | Nintendo | Intern - Software Engineer, Performance Tools (NTD) | Redmond, WA | intern | [link](https://careers.nintendo.com/?gh_jid=4473568009) |
 | ⭐ 2026-10-30 | Amazon | Software Engineer Intern - Machine Learning/Automated Reasoning | Boston, MA | intern | [link](https://amazon.jobs/en/jobs/10593521/software-development-engineer-intern-machine-learning-automated-reasoning-summer-2027) |
@@ -209,26 +207,24 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ⭐ 2026-10-23 | Amazon | Software Engineer Intern - AWS Database | United States | intern | [link](https://amazon.jobs/en/jobs/10565667/software-development-engineer-intern-aws-database-2027-us) |
 | ⭐ 2026-10-23 | Amazon | Software Engineer Intern - Embedded Systems | United States | intern | [link](https://amazon.jobs/en/jobs/10567914/software-development-engineer-intern-embedded-systems-summer-2027-usa) |
 | ⭐ 2026-10-23 | Amazon | Software Engineer Intern | Redmond, WA | intern | [link](https://amazon.jobs/en/jobs/10587999/software-development-engineer-intern-amazon-leo-summer-2027-usa) |
-| ◐ 2026-10-22 | Palantir | Forward Deployed Software Engineer, Internship - Warp Speed | New York, NY | intern | [link](https://jobs.lever.co/palantir/b3d81928-6c26-432f-8a0a-36602c2eefcb) |
 | ◐ 2026-10-22 | DocuSign | Software Engineer Intern | US-Seattle-3rd | intern | [link](https://careers.docusign.com/careers-home/jobs/30478) |
+| ◐ 2026-10-22 | Palantir | Forward Deployed Software Engineer, Internship - Warp Speed | New York, NY | intern | [link](https://jobs.lever.co/palantir/b3d81928-6c26-432f-8a0a-36602c2eefcb) |
 | ◐ 2026-10-22 | Palantir | Forward Deployed Software Engineer Intern - Warp Speed | NYC | intern | [link](https://jobs.lever.co/palantir/b3d81928-6c26-432f-8a0a-36602c2eefcb/apply) |
+| ◐ 2026-11-13 | Micron | Intern - IT Software Engineer | Boise, ID - Main Site | intern | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---IT-Software-Engineer_JR111582) |
 | ◐ 2026-10-21 | DocuSign | Software Engineer Intern | US-Chicago | intern | [link](https://careers.docusign.com/careers-home/jobs/30470) |
-| 🔥◐ 🆕 2026-10-21 | Microsoft | Software Engineer: Security & Identity Intern Opportunities for University Students, Cambridge | United States, Massachusetts, Cambridge | intern | [link](https://jobs.careers.microsoft.com/global/en/job/200063141) |
 | ◐ 2026-10-21 | Uber | Software Engineer Intern | Seattle, WA | intern | [link](https://iaziqy.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/303922) |
 | ◐ 2026-10-21 | NVIDIA | Product Management MBA Intern - Gaming, Content Creation, And PC AI | Canada | intern | [link](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Product-Management-MBA-Intern--Gaming--Content-Creation--and-PC-AI---Summer-2027_JR2026962) |
+| ◐ 2026-10-20 | Palantir | Software Engineer Intern - Query Engines | NYC | intern | [link](https://jobs.lever.co/palantir/da774f81-c98c-4dcf-9b9c-949fd7d90a13/apply) |
 | 🔥◐ 2026-11-14 | Amazon | Data Center Infrastructure Engineer Intern, Summer 2027 - East | Herndon, VA | intern | [link](https://www.amazon.jobs/en/jobs/10605141/data-center-infrastructure-engineer-intern-summer-2027-east) |
 | 🔥◐ 2026-11-14 | Amazon | Data Center Infrastructure Engineer Intern, Summer 2027 - West Coast | Umatilla, OR | intern | [link](https://www.amazon.jobs/en/jobs/10605132/data-center-infrastructure-engineer-intern-summer-2027-west-coast) |
-| ◐ 2026-10-20 | Palantir | Software Engineer Intern - Query Engines | NYC | intern | [link](https://jobs.lever.co/palantir/da774f81-c98c-4dcf-9b9c-949fd7d90a13/apply) |
-| 🔥◐ 🆕 2026-11-12 | Micron | Intern - IT Software Engineer | Boise, ID - Main Site | intern | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---IT-Software-Engineer_JR111582) |
-| ◐ 2026-10-19 | Insomniac Games | User Research Intern (Tools)- Master's | United States, Burbank, CA | intern | [link](https://job-boards.greenhouse.io/insomniac/jobs/6227520004) |
+| 🔥◐ 2026-11-14 | Intel | Power Integrity Intern Worker Engineer | Costa Rica, San Jose | intern | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/Costa-Rica-San-Jose/Power-Integrity-Intern-Worker-Engineer_JR0289171) |
 | ◐ 2026-10-19 | Nintendo | Intern - IT Software Engineer | Redmond, WA | intern | [link](https://careers.nintendo.com/?gh_jid=4421632009) |
 | ◐ 2026-10-19 | Nintendo | Intern - User Experience | Redmond, WA | intern | [link](https://careers.nintendo.com/?gh_jid=4418258009) |
+| ◐ 2026-10-19 | Insomniac Games | User Research Intern (Tools)- Master's | United States, Burbank, CA | intern | [link](https://job-boards.greenhouse.io/insomniac/jobs/6227520004) |
 | ◐ 2026-10-19 | Palantir | Software Engineer, Internship - Query Engines | New York, NY | intern | [link](https://jobs.lever.co/palantir/da774f81-c98c-4dcf-9b9c-949fd7d90a13) |
-| 🔥◐ 🆕 2026-11-13 | Intel | Power Integrity Intern Worker Engineer | Costa Rica, San Jose | intern | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/Costa-Rica-San-Jose/Power-Integrity-Intern-Worker-Engineer_JR0289171) |
+| ◐ 2026-10-16 | Tencent | Tencent Cloud CPaaS Product Management Intern | US-California-Palo Alto | intern | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-California-Palo-Alto/Tencent-Cloud-CPaaS-Product-Management-Intern_R108019) |
+| ◐ 2026-10-16 | Tencent | Tencent Cloud CPaaS Product Management Intern | US-California-Los Angeles | intern | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-California-Los-Angeles/Tencent-Cloud-CPaaS-Product-Management-Intern_R108020) |
 | ◐ 2026-10-16 | TikTok | Software Engineer Intern - Recommendation Performance Efficiency | San Jose, CA | intern | [link](https://lifeattiktok.com/search/7673636206961641781) |
-| ◐ 2026-10-15 | Tencent | Tencent Cloud CPaaS Product Management Intern | US-California-Palo Alto | intern | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-California-Palo-Alto/Tencent-Cloud-CPaaS-Product-Management-Intern_R108019) |
-| ◐ 2026-10-15 | Tencent | Tencent Cloud CPaaS Product Management Intern | US-California-Los Angeles | intern | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-California-Los-Angeles/Tencent-Cloud-CPaaS-Product-Management-Intern_R108020) |
-| ◐ 2026-10-15 | NVIDIA | Product Management MBA Intern | Santa Clara, CA | intern | [link](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Product-Management-MBA-Intern--Laptop---Summer-2027_JR2025905) |
 | ◐ 2026-11-06 | Waymo | 2027 Summer Intern, BS/MS, Software Engineer, Multiverse | San Francisco, California, USA | intern | [link](https://careers.withwaymo.com/jobs?gh_jid=8350832) |
 | ◐ 2026-11-06 | Salesforce | Product Management Intern - Product Management | SF | intern | [link](https://salesforce.wd12.myworkdayjobs.com/Futureforce_Internships/job/California---San-Francisco/Summer-2027-Intern---Product-Management_JR367659) |
 | ◐ 2026-11-05 | PayPal | Software Engineer Intern | Austin, TX | intern | [link](https://paypal.eightfold.ai/careers/job/274922982814) |
@@ -243,12 +239,14 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ◐ 2026-10-30 | Amazon | Software Development Engineer Intern | Cupertino, CA | intern | [link](https://amazon.jobs/en/jobs/10593872/software-development-engineer) |
 | ◐ 2026-10-29 | Amazon | Data Center Infrastructure Engineer Intern, Summer 2027 - Midwest / Southeast | Austin, TX | intern | [link](https://www.amazon.jobs/en/jobs/10593054/data-center-infrastructure-engineer-intern-summer-2027-midwest-southeast) |
 | ◐ 2026-10-28 | Figma | PhD Intern, Security Engineer (2027) | San Francisco, CA • New York, NY | intern | [link](https://boards.greenhouse.io/figma/jobs/6238015004?gh_jid=6238015004) |
-| 🔥◐ 2026-11-13 | Amazon | Robotics Applied Scientist 2 Intern - Robotics | Seattle, WA | intern | [link](https://amazon.jobs/en/jobs/10604778/2027-applied-science-internship-robotics-united-states) |
 | ◐ 2026-10-23 | Waymo | 2027 Summer Intern, MS/PhD, Software Engineer, ML Frameworks and Efficiency | Mountain View, CA, USA | intern | [link](https://careers.withwaymo.com/jobs?gh_jid=8287385) |
+|  2026-11-13 | Amazon | Robotics Applied Scientist 2 Intern - Robotics | Seattle, WA | intern | [link](https://amazon.jobs/en/jobs/10604778/2027-applied-science-internship-robotics-united-states) |
 |  2026-10-27 | Amazon | Network Development Engineer Intern, 2027 Summer | Seattle, WA | intern | [link](https://www.amazon.jobs/en/jobs/10590368/network-development-engineer-intern-2027-summer) |
 |  2026-10-27 | Amazon | Database Engineer Intern - Summer 2027 | Seattle, WA | intern | [link](https://www.amazon.jobs/en/jobs/10590290/database-engineer-intern-summer-2027) |
 |  2026-10-27 | Amazon | Database Engineer Intern | Seattle, WA | intern | [link](https://amazon.jobs/en/jobs/10590290/database-engineer-intern-summer-2027) |
 |  2026-10-26 | Amazon | Tech Ops Engineer Intern, 2027 Tech Ops Intern | San Diego, CA | intern | [link](https://www.amazon.jobs/en/jobs/10588969/tech-ops-engineer-intern-2027-tech-ops-intern) |
+| 🔥 2026-11-14 | Micron | Intern -  AI Engineer Platform | Boise, ID - Main Site | intern | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern----AI-Engineer-Platform_JR115934) |
+| 🔥 2026-11-14 | Micron | Intern - DRAM Device Engineer | Boise, ID - ID1 | intern | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---ID1/Intern---DRAM-Device-Engineer_JR114109) |
 |  2026-10-19 | Salesforce | Software Engineer Intern | SF | intern | [link](https://salesforce.wd12.myworkdayjobs.com/Futureforce_Internships/job/California---San-Francisco/Summer-2027-Intern---Software-Engineer--Security-Government-_JR364911) |
 |  2026-10-23 | Amazon | Software Development Engineer Intern, Amazon Leo - Summer 2027 (USA) | Redmond, WA | intern | [link](https://www.amazon.jobs/en/jobs/10587999/software-development-engineer-intern-amazon-leo-summer-2027-usa) |
 |  2026-10-23 | Amazon | Cloud Hardware Development Engineer Intern | Austin, TX | intern | [link](https://amazon.jobs/en/jobs/10517649/cloud-hardware-development-engineer-intern-annapurna-labs-2027) |
@@ -260,30 +258,25 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-23 | Intel | AI Hardware Engineer Intern | Santa Clara, CA | intern | [link](https://intel.wd1.myworkdayjobs.com/en-us/external/job/US-California-Santa-Clara/AI-Hardware-Engineering-Intern_JR0287533) |
 |  2026-11-11 | Riot Games | Anti-Cheat Engineering Intern (Masters/PhD) - Summer 2027 | Los Angeles, USA | intern | [link](https://www.riotgames.com/en/work-with-us/job/8356789?gh_jid=8356789) |
 |  2026-11-11 | Airbnb | Advanced Analytics Intern | United States | intern | [link](https://careers.airbnb.com/positions/8380007?gh_jid=8380007) |
-| 🔥 🆕 2026-11-13 | Micron | Intern -  AI Engineer Platform | Boise, ID - Main Site | intern | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern----AI-Engineer-Platform_JR115934) |
-| 🔥 🆕 2026-11-13 | Micron | Intern - DRAM Device Engineer | Boise, ID - ID1 | intern | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---ID1/Intern---DRAM-Device-Engineer_JR114109) |
 |  2026-10-22 | Amazon | System Development Engineer Intern/Co-op, ROBOTICS -  2027 | North Reading, MA | intern | [link](https://www.amazon.jobs/en/jobs/10587087/system-development-engineer-intern-co-op-robotics-2027) |
+|  2026-10-21 | Adobe | 2027 Intern - Security Engineer | San Jose | intern | [link](https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/San-Jose/XMLNAME-2027-Intern---Security-Engineer_R173001) |
 |  2026-10-20 | Amazon | Hardware Development Engineer Intern , Winter 2027 | Bellevue, WA | intern | [link](https://www.amazon.jobs/en/jobs/10584121/hardware-development-engineer-intern-winter-2027) |
-|  2026-10-20 | Adobe | 2027 Intern - Security Engineer | San Jose | intern | [link](https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/San-Jose/XMLNAME-2027-Intern---Security-Engineer_R173001) |
 |  2026-10-20 | Intel | Design Verification Engineer Intern | Santa Clara, CA | intern | [link](https://intel.wd1.myworkdayjobs.com/en-us/external/job/US-Colorado-Fort-Collins/Design-Verification-Graduate-Intern-2027_JR0287651) |
 |  2026-11-10 | Riot Games | Animation Art Intern - Summer 2027 | Los Angeles, USA | intern | [link](https://www.riotgames.com/en/work-with-us/job/8356855?gh_jid=8356855) |
 |  2026-11-10 | Riot Games | Concept Art Intern, Teamfight Tactics - Summer 2027 | Los Angeles, USA | intern | [link](https://www.riotgames.com/en/work-with-us/job/8356866?gh_jid=8356866) |
 |  2026-10-19 | Nintendo | Intern - IT Microsoft 365 Systems Engineer | Redmond, WA | intern | [link](https://careers.nintendo.com/?gh_jid=4417323009) |
 |  2026-10-19 | Nintendo | Intern – IT Platform Engineer | Redmond, WA | intern | [link](https://careers.nintendo.com/?gh_jid=4417311009) |
 |  2026-10-19 | Nintendo | Intern - Manufacturing Engineer | Redmond, WA | intern | [link](https://careers.nintendo.com/?gh_jid=4418251009) |
+|  2026-10-16 | Tencent | Site Reliability Engineer (SRE) Intern — AI Infrastructure | US-California-Palo Alto | intern | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-California-Palo-Alto/Site-Reliability-Engineer--SRE--Intern---AI-Infrastructure_R108158-1) |
+|  2026-10-16 | Tencent | Cyber Security Engineer Intern | US-California-Palo Alto | intern | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-California-Palo-Alto/Cyber-Security-Engineer-Intern_R108141-2) |
 |  2026-10-16 | Meta | Production Systems Engineer Intern | Menlo Park, CA | intern | [link](https://www.metacareers.com/jobs/4536253699919879) |
-|  2026-10-15 | Tencent | Site Reliability Engineer (SRE) Intern — AI Infrastructure | US-California-Palo Alto | intern | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-California-Palo-Alto/Site-Reliability-Engineer--SRE--Intern---AI-Infrastructure_R108158-1) |
-|  2026-10-15 | Tencent | Cyber Security Engineer Intern | US-California-Palo Alto | intern | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-California-Palo-Alto/Cyber-Security-Engineer-Intern_R108141-2) |
-|  2026-10-15 | TikTok | Research Engineer Intern - Video and Edge - Multimedia Lab | San Diego, CA | intern | [link](https://lifeattiktok.com/search/7696664743112788277) |
-|  2026-10-15 | Meta | Quality and Reliability Engineer Intern | Sunnyvale, CA | intern | [link](https://www.metacareers.com/jobs/1624891432439039) |
 |  2026-11-10 | Anduril | 2027 Optical Payload Engineer Intern | Costa Mesa, California, United States | intern | [link](https://boards.greenhouse.io/andurilindustries/jobs/5291546007?gh_jid=5291546007) |
 |  2026-11-10 | Pika | Applied AI Engineer Intern - Creative Experiences | Palo Alto, CA | intern | [link](https://jobs.ashbyhq.com/pika/b075e6fb-df01-4eac-9437-1c1db97ea881/application?embed=true) |
-|  2026-11-05 | PayPal | Machine Learning Engineer Intern - Summer 2027 | San Jose, California, United States of America | intern | [link](https://paypal.wd1.myworkdayjobs.com/en-US/jobs/job/San-Jose-California-United-States-of-America/Machine-Learning-Engineer-Intern---Summer-2027_R0138581) |
-|  2026-11-05 | PayPal | Machine Learning Engineer PhD Intern - Summer 2027 | San Jose, California, United States of America | intern | [link](https://paypal.wd1.myworkdayjobs.com/en-US/jobs/job/San-Jose-California-United-States-of-America/Machine-Learning-Engineer-PhD-Intern---Summer-2027_R0138579) |
+|  2026-11-06 | PayPal | Machine Learning Engineer Intern - Summer 2027 | San Jose, California, United States of America | intern | [link](https://paypal.wd1.myworkdayjobs.com/en-US/jobs/job/San-Jose-California-United-States-of-America/Machine-Learning-Engineer-Intern---Summer-2027_R0138581) |
+|  2026-11-06 | PayPal | Machine Learning Engineer PhD Intern - Summer 2027 | San Jose, California, United States of America | intern | [link](https://paypal.wd1.myworkdayjobs.com/en-US/jobs/job/San-Jose-California-United-States-of-America/Machine-Learning-Engineer-PhD-Intern---Summer-2027_R0138579) |
 |  2026-11-05 | PayPal | Machine Learning Engineer Intern | San Jose, CA | intern | [link](https://paypal.eightfold.ai/careers/job/274922983149) |
 |  2026-11-05 | PayPal | Mobile Engineer Intern | Austin, TX | intern | [link](https://paypal.eightfold.ai/careers/job/274922982818) |
 |  2026-11-05 | PayPal | Machine Learning Engineer PhD Intern | San Jose, CA | intern | [link](https://paypal.eightfold.ai/careers/job/274922983152) |
-| 🔥 🆕 2026-10-29 | Microsoft | Applied Scientist: Internship Opportunities, Turing | United States, Washington, Redmond | intern | [link](https://jobs.careers.microsoft.com/global/en/job/200064446) |
 |  2026-10-27 | Crystal Dynamics | Presentation Animator Intern [Spring 2027] | Remote/Flexible - United States | intern | [link](https://job-boards.greenhouse.io/crystaldynamics/jobs/4746883005) |
 |  2026-10-27 | Crystal Dynamics | Presentation Design Intern [Spring 2027] | Remote/Flexible - United States | intern | [link](https://job-boards.greenhouse.io/crystaldynamics/jobs/4748236005) |
 |  2026-10-23 | Amazon | Applied Scientist Intern - Automated Reasoning | Seattle, WA | intern | [link](https://amazon.jobs/en/jobs/10552930/2027-applied-science-internship-automated-reasoning-united-states-phd-student-science-recruiting-automated-reasoning) |
@@ -321,8 +314,6 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ⭐ 2026-10-22 | NVIDIA | Silicon Co-Design Engineer New Grad | United States | new-grad | [link](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Silicon-Co-Design-Engineer---New-College-Grad-2026_JR2027335) |
 | ⭐ 2026-11-10 | Autodesk | Software Engineer: AI & Fusion Engineering - Fusion Engineering | Novi, MI | new-grad | [link](https://autodesk.wd1.myworkdayjobs.com/Ext/job/Novi-MI-USA/Software-Engineer_26WD102129-1) |
 | ⭐ 2026-11-09 | Mercury Insurance | Software Engineer 1 | Remote in USA | new-grad | [link](https://careers-mercuryinsurance.icims.com/jobs/6943/job?mobile=true&needsRedirect=false) |
-| ⭐ 2026-10-15 | Intel | Microarchitecture and Design Engineer - AI SoC | Santa Clara, CA | new-grad | [link](https://intel.wd1.myworkdayjobs.com/en-us/external/job/US-California-Santa-Clara/Microarchitecture-and-Design-Engineer---AI-SoC_JR0287996) |
-| ⭐ 2026-10-15 | Apple | Graphics Software Content Engineer | Orlando, FL | new-grad | [link](https://jobs.apple.com/en-us/details/200689345) |
 | ⭐ 2026-11-06 | Microsoft | Software Engineer | Reston, VA | new-grad | [link](https://apply.careers.microsoft.com/careers/job/1970393557053350) |
 | ⭐ 2026-11-03 | ByteDance | Video/Image AI/ML Software Engineer Graduate - Video and Edge - Multimedia Lab | San Jose, CA | new-grad | [link](https://jobs.bytedance.com/en/position/7704089625815468293/detail) |
 | ⭐ 2026-11-02 | Google | Software Engineer 2 – Early Career | Palo Alto, CA | new-grad | [link](https://www.google.com/about/careers/applications/jobs/results/109116638069957318) |
@@ -334,11 +325,12 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ◐ 2026-10-21 | Affirm | Analyst, Early Career (Full Stack) | New York, New York, United States; San Francisco, California, United States | new-grad | [link](https://job-boards.greenhouse.io/affirm/jobs/8039471003) |
 | ◐ 2026-10-21 | Apple | Software Engineer - SoC Level Validation Engineer | Austin, TX | new-grad | [link](https://jobs.apple.com/en-us/details/200690790) |
 | ◐ 2026-10-20 | Palantir | Software Engineer New Grad - Query Engines | NYC | new-grad | [link](https://jobs.lever.co/palantir/90329118-d9b7-4b96-acdf-13377e3196ac/apply) |
-| ◐ 2026-11-12 | SpaceX | Aerospace Software Engineer New Grad - Aerospace Software | Hawthorne, CA | new-grad | [link](https://boards.greenhouse.io/spacex/jobs/8939697002) |
+| 🔥◐ 🆕 2026-11-14 | NVIDIA | Deep Learning Framework Communications Engineer New Grad | United States | new-grad | [link](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Deep-Learning-Framework-Communications-Engineer---New-College-Grad-2026_JR2026129-1) |
 | ◐ 2026-10-19 | Palantir | Software Engineer, New Grad - Query Engines | New York, NY | new-grad | [link](https://jobs.lever.co/palantir/90329118-d9b7-4b96-acdf-13377e3196ac) |
 | ◐ 2026-10-19 | Amazon | Software Engineer – Early Career | Madison, WI | new-grad | [link](https://amazon.jobs/en/jobs/10583340/software-development-engineer-early-career-2027-us) |
 | ◐ 2026-10-19 | Intel | CAD/EDA Tools Software Engineer | Hillsboro, OR | new-grad | [link](https://intel.wd1.myworkdayjobs.com/en-us/external/job/US-Oregon-Hillsboro/CAD-EDA-Tools-Software-Engineer_JR0288234-1) |
-| 🔥◐ 2026-11-13 | Microsoft | Electrical Engineer - Schie | Redmond, WA | new-grad | [link](https://apply.careers.microsoft.com/careers/job/1970393557023168) |
+| ◐ 2026-11-12 | SpaceX | Aerospace Software Engineer New Grad - Aerospace Software | Hawthorne, CA | new-grad | [link](https://boards.greenhouse.io/spacex/jobs/8939697002) |
+| ◐ 2026-11-13 | Microsoft | Electrical Engineer - Schie | Redmond, WA | new-grad | [link](https://apply.careers.microsoft.com/careers/job/1970393557023168) |
 | ◐ 2026-11-11 | Salesforce | Software Engineer New Grad | Palo Alto, CA | new-grad | [link](https://salesforce.wd12.myworkdayjobs.com/Futureforce_NewGradRoles/job/California---San-Francisco/Software-Engineering-AMTS--College-Grad-_JR368047) |
 | ◐ 2026-11-11 | Amazon | Software Development Engineer Early Career - Amazon Dedicated Cloud | Seattle, WA | new-grad | [link](https://amazon.jobs/en/jobs/10601956/software-development-engineer-amazon-dedicated-cloud-early-career-2027-amazon-dedicated-cloud-adc) |
 | ◐ 2026-11-11 | Amazon | Post-Silicon Systems Validation Engineer 1 | Austin, TX | new-grad | [link](https://amazon.jobs/en/jobs/10602663/post-silicon-systems-validation-engineer-i-annapurna-labs) |
@@ -369,7 +361,7 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-30 | Amazon | Software Development Engineer - Database | Boston, MA | new-grad | [link](https://amazon.jobs/en/jobs/10593902/software-development-engineer-database-early-career-2027-us) |
 |  2026-10-28 | Amazon | Software Developer Engineer - Product Knowledge Store | Seattle, WA | new-grad | [link](https://amazon.jobs/en/jobs/10590471/software-dev-engineer-product-knowledge-store) |
 |  2026-10-28 | Intel | Compiler Engineer for AI DSLs | Austin, TX | new-grad | [link](https://intel.wd1.myworkdayjobs.com/en-us/external/job/US-California-Santa-Clara/Compiler-Engineer-for-AI-DSLs_JR0288433) |
-| 🔥 2026-11-13 | Amazon | 2027 Applied Science Internship - Robotics - United States | North Reading, MA | new-grad | [link](https://www.amazon.jobs/en/jobs/10604778/2027-applied-science-internship-robotics-united-states) |
+|  2026-11-13 | Amazon | 2027 Applied Science Internship - Robotics - United States | North Reading, MA | new-grad | [link](https://www.amazon.jobs/en/jobs/10604778/2027-applied-science-internship-robotics-united-states) |
 |  2026-10-27 | NVIDIA | Formal Verification Engineer New Grad | Santa Clara, CA | new-grad | [link](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Formal-Verification-Engineer---New-College-Grad-2027_JR2028554) |
 |  2026-10-27 | Amazon | Software Developer Engineer 1 - Graviton Software - Annapurna Labs | Austin, TX | new-grad | [link](https://amazon.jobs/en/jobs/10526808/software-dev-engineer-i-graviton-software-annapurna-labs) |
 |  2026-10-22 | SpaceX | Software Engineer - Linux Kernel - Starlink | Redmond, WA | new-grad | [link](https://boards.greenhouse.io/spacex/jobs/8852114002) |
@@ -385,9 +377,8 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-22 | Amazon | Robotics Embedded Software Development Engineer | North Reading, MA | new-grad | [link](https://amazon.jobs/en/jobs/10522935/robotics-embedded-software-development-engineer) |
 |  2026-10-22 | Intel | IP Design Verification Engineer | Santa Clara, CA | new-grad | [link](https://intel.wd1.myworkdayjobs.com/en-us/external/job/US-California-Santa-Clara/IP-Design-Verification-Engineer_JR0288395) |
 |  2026-10-20 | Microsoft | Quantum Systems Stability & Sensitivity Engineer | Redmond, WA | new-grad | [link](https://apply.careers.microsoft.com/careers/job/1970393557041573) |
-|  2026-11-12 | SpaceX | New Graduate Engineer, Aerospace Software (Starfall) | Hawthorne, CA | new-grad | [link](https://boards.greenhouse.io/spacex/jobs/8939697002?gh_jid=8939697002) |
 |  2026-10-19 | Amazon | Software Development Engineer, Early Career - 2027 (US) | Seattle, WA | new-grad | [link](https://www.amazon.jobs/en/jobs/10583340/software-development-engineer-early-career-2027-us) |
-|  2026-10-15 | Qualcomm | DSP Micro-Architect RTL Engineer - ASIC Engineering | Austin, TX | new-grad | [link](https://qualcomm.eightfold.ai/careers/job/446721591743) |
+|  2026-11-12 | SpaceX | New Graduate Engineer, Aerospace Software (Starfall) | Hawthorne, CA | new-grad | [link](https://boards.greenhouse.io/spacex/jobs/8939697002?gh_jid=8939697002) |
 |  2026-11-10 | Anduril | 2027 New Grad Information Security Engineer | Costa Mesa, California, United States | new-grad | [link](https://boards.greenhouse.io/andurilindustries/jobs/5270839007?gh_jid=5270839007) |
 |  2026-11-09 | Anduril | Early Career RF Mission Systems Engineer, Air Dominance & Strike | Costa Mesa, California, United States | new-grad | [link](https://boards.greenhouse.io/andurilindustries/jobs/5290310007?gh_jid=5290310007) |
 |  2026-11-06 | SpaceX | New Graduate Engineer, Mechanical | McGregor, TX | new-grad | [link](https://boards.greenhouse.io/spacex/jobs/8933711002?gh_jid=8933711002) |
@@ -402,69 +393,84 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-19 | SpaceX | New Graduate Engineer, Electrical (Starshield) | Hawthorne, CA | new-grad | [link](https://boards.greenhouse.io/spacex/jobs/8900641002?gh_jid=8900641002) |
 |  2026-10-19 | Anduril | 2027 Early Career Supply Chain Engineer | Costa Mesa, California, United States | new-grad | [link](https://boards.greenhouse.io/andurilindustries/jobs/5268564007?gh_jid=5268564007) |
 |  2026-10-19 | Anduril | 2027 Early Career Warhead Engineer | Costa Mesa, California, United States | new-grad | [link](https://boards.greenhouse.io/andurilindustries/jobs/5268704007?gh_jid=5268704007) |
-|  2026-10-15 | Quora | Machine Learning Engineer, New Grad - Quora (Remote) | Remote - Multiple Locations | new-grad | [link](https://jobs.ashbyhq.com/quora/40659fe7-545e-4b08-b6d7-2567b18b9ed3) |
-|  2026-10-15 | SpaceX | New Graduate Engineer, Infrastructure  | Starbase, TX | new-grad | [link](https://boards.greenhouse.io/spacex/jobs/8893406002?gh_jid=8893406002) |
-|  2026-10-15 | Quora | Machine Learning Engineer New Grad | Remote in USA | new-grad | [link](https://jobs.ashbyhq.com/quora/40659fe7-545e-4b08-b6d7-2567b18b9ed3/application?embed=true) |
 | ⭐ 2026-11-14 | Apple | CPU Microarchitect / RTL Design Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694855) |
 | ⭐ 2026-11-14 | Apple | RF Design Engineer – Next-Gen Wireless | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694361) |
+| ⭐ 2026-11-13 | Intel | Silicon Packaging Design Engineer | US, Arizona, Phoenix | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Arizona-Phoenix/Silicon-Packaging-Design-Engineer_JR0288949) |
 | ⭐ 2026-11-13 | Google | RTL Design Engineer, Google | Sunnyvale, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/84385896404525766) |
 | ⭐ 2026-11-13 | Google | Product Safety Design Engineer | Sunnyvale, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/92255599340724934) |
 | ⭐ 2026-11-13 | Apple | Display Panel Design Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694990) |
 | ⭐ 2026-11-13 | Apple | Graphics Design Verification Flow Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694972) |
 | ⭐ 2026-11-13 | Apple | Manufacturing Design Engineer (MDE) - iPad | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694672) |
 | ⭐ 2026-11-12 | OpenAI | Power Generation Design Engineer, Electrical & Mechanical | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/5a4a52a0-2eee-4cde-8b9f-320ebff572a4) |
-| ⭐ 🆕 2026-11-12 | Intel | Silicon Packaging Design Engineer | US, Arizona, Phoenix | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Arizona-Phoenix/Silicon-Packaging-Design-Engineer_JR0288949) |
+| ⭐ 2026-11-12 | Intel | CPU Circuit Design Engineer | US, Texas, Austin | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Texas-Austin/CPU-Circuit-Design-Engineer_JR0289183) |
 | ⭐ 2026-11-12 | Google | CPU RTL Design Engineer | Mountain View, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/93191764772299462) |
 | ⭐ 2026-11-12 | Apple | Manufacturing Design Engineer (MDE) - Vision Pro | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693523) |
-| ⭐ 🆕 2026-11-11 | Intel | CPU Circuit Design Engineer | US, Texas, Austin | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Texas-Austin/CPU-Circuit-Design-Engineer_JR0289183) |
+| ⭐ 2026-11-11 | Snapchat | Design Engineer, Core Snapchat | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Design-Engineer--Core-Snapchat_R0047473-2) |
+| ⭐ 2026-11-11 | Snapchat | PCB Design Engineer | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/PCB-Design-Engineer_R0045397-1) |
 | ⭐ 2026-11-11 | Apple | Manufacturing Design Engineer (MDE) - Watch | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200692723) |
 | ⭐ 2026-11-11 | Apple | Software Engineer - 3D Vision & Perception | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694390) |
 | ⭐ 2026-11-11 | Apple | Product Design Engineer - Battery Cell | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200692936) |
 | ⭐ 2026-11-10 | OpenAI | RTL Design Engineer, Networking / NoC | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/ead83ff6-7a58-43dd-b7da-b85e7ddd679c) |
 | ⭐ 2026-11-10 | NBCUniversal (DreamWorks) | Associate Design Engineer | New York, NEW YORK | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000160955954) |
-| ⭐ 2026-11-10 | Snapchat | Design Engineer, Core Snapchat | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Design-Engineer--Core-Snapchat_R0047473-2) |
-| ⭐ 2026-11-10 | Snapchat | PCB Design Engineer | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/PCB-Design-Engineer_R0045397-1) |
 | ⭐ 2026-11-10 | Google | ASIC Design Engineer, Cloud TPU | Sunnyvale, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/86497860672987846) |
 | ⭐ 2026-11-10 | Apple | Graphics (GPU) RTL Design Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694232) |
 | ⭐ 2026-11-10 | Apple | GPU RTL Design Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694107) |
 | ⭐ 2026-11-10 | Apple | Product Design Engineer – Retail, Event, & Channel Product Design | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694307) |
-| ⭐ 2026-11-10 | Snapchat | Software Engineer, C++, Level 4 | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Software-Engineer--C----Level-4_R0046977-1) |
-| ⭐ 2026-11-10 | Snapchat | Software Engineer, C++, Level 5 | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Software-Engineer--C----Level-5_R0047035-1) |
+| ⭐ 🆕 2026-11-10 | Apple | Analog IC Design Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693714) |
+| ⭐ 🆕 2026-11-09 | Apple | Hardware Product Design Engineer - Mac | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694114) |
+| ⭐ 2026-11-11 | Snapchat | Software Engineer, C++, Level 4 | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Software-Engineer--C----Level-4_R0046977-1) |
+| ⭐ 2026-11-11 | Snapchat | Software Engineer, C++, Level 5 | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Software-Engineer--C----Level-5_R0047035-1) |
+| ⭐ 🆕 2026-11-07 | Apple | iPhone Touch Sensing Electrical Design Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200660278) |
 | ⭐ 2026-11-06 | Ubisoft | Lead Game Designer | Barcelona, CT | full-time | [link](https://jobs.smartrecruiters.com/Ubisoft2/744000160135969) |
 | ⭐ 2026-11-06 | Google | UX Engineer, Search Design System | Mountain View, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/131539193443558086) |
+| ⭐ 🆕 2026-11-06 | Apple | Product Display Driver Engineer, Graphics, Games, and ML | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693806) |
+| ⭐ 🆕 2026-11-06 | Apple | Baseband Hardware Design Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693872) |
+| ⭐ 🆕 2026-11-06 | Apple | Accessories Product Design Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693876) |
+| ⭐ 🆕 2026-11-06 | Apple | AC-DC Power Design Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693760) |
 | ⭐ 2026-11-05 | Roblox | Software Engineer, Engine Harmony | San Mateo, CA, United States | full-time | [link](https://careers.roblox.com/jobs/8243631?gh_jid=8243631) |
 | ⭐ 2026-11-05 | Google | Package Design Engineer | Sunnyvale, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/128061232006472390) |
 | ⭐ 2026-11-05 | Google | Hardware/Software Co-Design Engineer, Inference | Sunnyvale, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/75303820837429958) |
+| ⭐ 🆕 2026-11-05 | Apple | System Product Design Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691404) |
+| ⭐ 🆕 2026-11-05 | Apple | Physical Design Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691408) |
+| ⭐ 🆕 2026-11-05 | Apple | Physical Design Engineer, Machine Learning | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200607680) |
+| ⭐ 🆕 2026-11-05 | Apple | RF Passive Design Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693466) |
+| ⭐ 🆕 2026-11-05 | Apple | Product Design Engineer - Apple Vision Pro | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693502) |
+| ⭐ 🆕 2026-11-05 | Apple | Product Design Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691299) |
+| ⭐ 🆕 2026-11-05 | Apple | Module Design Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691344) |
+| ⭐ 🆕 2026-11-05 | Apple | Front End Design Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691298) |
+| ⭐ 🆕 2026-11-05 | Apple | Digital Circuit Design Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691563) |
+| ⭐ 🆕 2026-11-05 | Apple | Systems Design Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691255) |
+| ⭐ 🆕 2026-11-05 | Apple | Cellular ASIC Design Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200620219) |
 | ⭐ 2026-11-03 | Roblox | Software Engineer, Engine Productivity | San Mateo, CA, United States | full-time | [link](https://careers.roblox.com/jobs/8325759?gh_jid=8325759) |
 | ⭐ 2026-11-02 | Naughty Dog | Technical Game Designer (Contingent) | United States, Santa Monica, CA | full-time | [link](https://job-boards.greenhouse.io/naughtydog/jobs/6240756004) |
 | ⭐ 2026-11-02 | Cloudflare | Data Center Design Engineer | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8227832?gh_jid=8227832) |
 | ⭐ 2026-11-02 | ElevenLabs | Full-Stack Engineer - Ads Engine | Remote | full-time | [link](https://jobs.ashbyhq.com/ElevenLabs/3abf96ca-2937-4290-9d23-5208aece08b2) |
+| ⭐ 2026-11-15 | NVIDIA | Software Engineer, Technical Lead – Performance Data Platform | US, CA, Santa Clara | full-time | [link](https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Software-Engineer--Technical-Lead---Performance-Data-Platform_JR2029009) |
 | ⭐ 2026-10-30 | CD Projekt Red | Lead Gameplay Producer | Boston, MA | full-time | [link](https://jobs.smartrecruiters.com/CDPROJEKTRED/744000158788169) |
 | ⭐ 2026-10-30 | Ubisoft | Junior Technical Artist - Rainbow Six  Siege | Barcelona, CT | full-time | [link](https://jobs.smartrecruiters.com/Ubisoft2/744000158751601) |
-| ⭐ 🆕 2026-11-14 | NVIDIA | Software Engineer, Technical Lead – Performance Data Platform | US, CA, Santa Clara | full-time | [link](https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Software-Engineer--Technical-Lead---Performance-Data-Platform_JR2029009) |
 | ⭐ 2026-11-14 | Apple | Systems Software Engineer, Platform Architecture | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200695051) |
 | ⭐ 2026-11-14 | Apple | Performance Modeling Software Engineer, Platform Architecture | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200695049) |
+| ⭐ 2026-11-13 | Stripe | Software Engineer, Vulnerability Management | na | full-time | [link](https://stripe.com/jobs/search?gh_jid=8384567) |
 | ⭐ 2026-11-13 | Twitch | Software Engineer I, Payments | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/twitch/jobs/8943553002) |
 | ⭐ 2026-11-13 | Airbnb | Software Engineer, Profile & Community, Android | Remote, USA | full-time | [link](https://careers.airbnb.com/positions/8386083?gh_jid=8386083) |
 | ⭐ 2026-11-13 | Airbnb | Software Engineer, Profile & Community, Web | Remote, USA | full-time | [link](https://careers.airbnb.com/positions/8386065?gh_jid=8386065) |
 | ⭐ 2026-11-13 | PlayStation (SIE) | Software Engineer II | United States, San Mateo, CA | full-time | [link](https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal/jobs/6260703004) |
-| ⭐ 2026-11-13 | Stripe | Software Engineer, Vulnerability Management | na | full-time | [link](https://stripe.com/jobs/search?gh_jid=8384567) |
 | ⭐ 2026-11-13 | Ramp | Software Engineer, Fullstack, Spend Controls | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/6e717b06-6613-42ad-a1ee-f852a305fa37) |
 | ⭐ 2026-11-13 | OpenAI | Full Stack Software Engineer, ChatGPT Finances | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/26cfb873-f30a-4a13-b7b6-52833ea48ec9) |
 | ⭐ 2026-11-13 | OpenAI | Full Stack Software Engineer, Consumer Health | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/cc1ea124-47ad-4b81-9e4e-0c69e525b62a) |
-| ⭐ 🆕 2026-11-13 | Microsoft | Software Engineer II - CTJ- POLY | United States, Washington, Redmond | full-time | [link](https://jobs.careers.microsoft.com/global/en/job/200056252) |
 | ⭐ 2026-11-13 | Apple |  UI Frameworks Engineer, Swift Platform Experience | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694101) |
 | ⭐ 2026-11-13 | Apple | Core Audio Software Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694125) |
 | ⭐ 2026-11-13 | Apple | Software Engineer - Distributed Data Systems | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694753) |
 | ⭐ 2026-11-13 | Apple | Software Engineer, Infrastructure Applications | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693202) |
 | ⭐ 2026-11-13 | Apple | Software Engineer, Apple Ads | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694842) |
 | ⭐ 2026-10-27 | Ubisoft | Game Designer (Mobile) | Barcelona, CT | full-time | [link](https://jobs.smartrecruiters.com/Ubisoft2/744000158059429) |
-| ⭐ 2026-11-12 | Affirm | Software Engineer I, Backend (Continuous Delivery) | Remote US | full-time | [link](https://job-boards.greenhouse.io/affirm/jobs/8181183003) |
-| ⭐ 2026-11-12 | Brex | Software Engineer II, Frontend (Banking) | New York, New York, United States | full-time | [link](https://www.brex.com/careers/8928935002?gh_jid=8928935002) |
-| ⭐ 2026-11-12 | Brex | Software Engineer II, Frontend (Banking) | San Francisco, California, United States | full-time | [link](https://www.brex.com/careers/8939938002?gh_jid=8939938002) |
-| ⭐ 2026-11-12 | Brex | Software Engineer II, Frontend (Banking) | Seattle, Washington, United States | full-time | [link](https://www.brex.com/careers/8939939002?gh_jid=8939939002) |
+| ⭐ 2026-11-14 | Micron | New College Grad - Design Engineer | San Jose, CA | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/San-Jose-CA/New-College-Grad---Design-Engineer_JR117605) |
 | ⭐ 2026-11-12 | Stripe | Software Engineer – Backend Engineer – Tax Engineering | Seattle, WA | full-time | [link](https://stripe.com/jobs/search?gh_jid=8384325) |
 | ⭐ 2026-11-12 | Stripe | Software Engineer, Full Stack | New York, NY | full-time | [link](https://stripe.com/jobs/search?gh_jid=8384287) |
+| ⭐ 2026-11-12 | Affirm | Software Engineer I, Backend (Continuous Delivery) | Remote US | full-time | [link](https://job-boards.greenhouse.io/affirm/jobs/8181183003) |
+| ⭐ 2026-11-12 | Brex | Software Engineer II, Frontend (Banking) | Seattle, Washington, United States | full-time | [link](https://www.brex.com/careers/8939939002?gh_jid=8939939002) |
+| ⭐ 2026-11-12 | Brex | Software Engineer II, Frontend (Banking) | San Francisco, California, United States | full-time | [link](https://www.brex.com/careers/8939938002?gh_jid=8939938002) |
+| ⭐ 2026-11-12 | Brex | Software Engineer II, Frontend (Banking) | New York, New York, United States | full-time | [link](https://www.brex.com/careers/8928935002?gh_jid=8928935002) |
 | ⭐ 2026-11-12 | Perplexity | Lead Product Designer, Mobile (Native & Mobile) | San Francisco | full-time | [link](https://jobs.ashbyhq.com/Perplexity/1354f2e8-56c8-4a66-81f8-eb5d5b944506) |
 | ⭐ 2026-11-12 | Perplexity | Lead Product Designer, Growth (Mobile) | San Francisco | full-time | [link](https://jobs.ashbyhq.com/Perplexity/14a45e74-9cde-4622-8172-1b6968810802) |
 | ⭐ 2026-11-12 | Snowflake | Software Engineer, Identity & Access Management | US-WA-Bellevue | full-time | [link](https://jobs.ashbyhq.com/snowflake/d699971b-0c25-48e4-8733-7e8bd2328536) |
@@ -474,6 +480,8 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ⭐ 2026-11-12 | Apple | AIOps Software Engineer - Strategic Data Solutions | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693736) |
 | ⭐ 2026-11-11 | Twitch | Software Engineer I, Commerce | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/twitch/jobs/8934067002) |
 | ⭐ 2026-11-11 | MongoDB | Software Engineer 3 | New York City | full-time | [link](https://www.mongodb.com/careers/job/?gh_jid=8366703) |
+| ⭐ 2026-11-11 | Snapchat | Core Product Designer | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Core-Product-Designer_H226CPD3-1) |
+| ⭐ 2026-11-11 | Snapchat | Embedded Software Engineer, Power, Level 5 | San Diego, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/San-Diego-California/Embedded-Software-Engineer--Power--Level-5_R0047128-2) |
 | ⭐ 2026-11-11 | Google | UX Designer, Inception, Terra Nova, DeepMind | Mountain View, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/107713538826347206) |
 | ⭐ 2026-11-11 | Google | UX Designer, YouTube Labs | New York, NY, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/139778596427178694) |
 | ⭐ 2026-11-11 | Apple | Systems Software Engineer - Human Interface Devices | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693935) |
@@ -484,62 +492,67 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ⭐ 2026-11-11 | Apple | Software Engineer – Digital Asset Management, Retail & Marcom Engineering | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693621) |
 | ⭐ 2026-11-11 | Apple | Software Engineer, G&A Solutions Engineering  (GSE) | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693583) |
 | ⭐ 2026-11-13 | Gameloft | Lead Game Designer (PC/Console/Mobile)  | Barcelona, CT | full-time | [link](https://jobs.smartrecruiters.com/Gameloft/744000161462070) |
-| ⭐ 🆕 2026-11-13 | Micron | New College Grad - Design Engineer | San Jose, CA | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/San-Jose-CA/New-College-Grad---Design-Engineer_JR117605) |
-| ⭐ 2026-11-10 | Twitch | Software Engineer II, Fintech | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/twitch/jobs/8937278002) |
-| ⭐ 2026-11-10 | Roblox | Software Engineer, ROS Open Platform & AI Enablement | San Mateo, CA, United States | full-time | [link](https://careers.roblox.com/jobs/8356764?gh_jid=8356764) |
+| ⭐ 2026-11-13 | Micron | Design Engineer - DRAM Technology and Products | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Design-Engineer---DRAM-Technology-and-Products_JR105948) |
+| ⭐ 2026-11-13 | Micron | HBM SoC Physical Design Engineer | Folsom, CA | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Folsom-CA/HBM-SoC-Physical-Design-Engineer_JR107315) |
+| ⭐ 2026-10-20 | Activision Blizzard King | Associate Technical Artist (Contract) | Los Angeles | full-time | [link](https://xboxgaming.wd1.myworkdayjobs.com/en-US/External/job/Los-Angeles/Associate-Technical-Artist--Contract-_R028245) |
 | ⭐ 2026-11-10 | Stripe | Frontend Engineer, Link | N/A | full-time | [link](https://stripe.com/jobs/search?gh_jid=8353949) |
+| ⭐ 2026-11-10 | Roblox | Software Engineer, ROS Open Platform & AI Enablement | San Mateo, CA, United States | full-time | [link](https://careers.roblox.com/jobs/8356764?gh_jid=8356764) |
+| ⭐ 2026-11-10 | Twitch | Software Engineer II, Fintech | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/twitch/jobs/8937278002) |
 | ⭐ 2026-11-10 | Cursor | Software Engineer, ML Platform | Palo Alto, CA | full-time | [link](https://jobs.ashbyhq.com/cursor/5b744208-cb2c-4c31-9217-e0cbbf8ad7af) |
 | ⭐ 2026-11-10 | Cursor | Software Engineer, Pretraining Data | Palo Alto, CA | full-time | [link](https://jobs.ashbyhq.com/cursor/d06d229f-eb2c-46d7-8e0f-96da5ecaec88) |
 | ⭐ 2026-11-10 | Cursor | Software Engineer, Research Tooling | Palo Alto, CA | full-time | [link](https://jobs.ashbyhq.com/cursor/06675830-9b99-4347-8436-8110ca9c99a4) |
 | ⭐ 2026-11-10 | Supabase | Software Engineer - AI Tooling | Remote, Global | full-time | [link](https://jobs.ashbyhq.com/supabase/0055f731-cffa-4c74-9c00-8abfa579873d) |
-| ⭐ 2026-11-10 | Snapchat | Core Product Designer | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Core-Product-Designer_H226CPD3-1) |
-| ⭐ 2026-11-10 | Snapchat | Embedded Software Engineer, Power, Level 5 | San Diego, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/San-Diego-California/Embedded-Software-Engineer--Power--Level-5_R0047128-2) |
+| ⭐ 2026-11-10 | Disney | Product Software Engineer II | New York, NY, USA | full-time | [link](https://disney.wd5.myworkdayjobs.com/en-US/disneycareer/job/New-York-NY-USA/Product-Software-Engineer-II_10160173) |
+| ⭐ 2026-11-10 | Intel | GPU Software Engineer | US, California, Folsom | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-California-Folsom/GPU-Software-Engineer_JR0287695) |
 | ⭐ 2026-11-10 | Google | UX Designer, YouTube Ads Living Room | San Bruno, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/130762549539807942) |
 | ⭐ 2026-11-10 | Google | Software Engineer, Processor Design Infrastructure, Quantum AI | Goleta, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/121755350285066950) |
 | ⭐ 2026-11-10 | Apple | Software Engineer, Applied ML | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694108) |
 | ⭐ 2026-11-10 | Apple | Sensing Product Design Architecture Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694188) |
 | ⭐ 2026-11-12 | Hasbro (WotC) | Magic: The Gathering Game Rules Specialist | Renton, Washington, United States | full-time | [link](https://job-boards.greenhouse.io/hasbro/jobs/4485248009) |
-| ⭐ 🆕 2026-11-12 | Micron | Design Engineer - DRAM Technology and Products | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Design-Engineer---DRAM-Technology-and-Products_JR105948) |
-| ⭐ 🆕 2026-11-12 | Micron | HBM SoC Physical Design Engineer | Folsom, CA | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Folsom-CA/HBM-SoC-Physical-Design-Engineer_JR107315) |
-| ⭐ 2026-10-19 | Activision Blizzard King | Associate Technical Artist (Contract) | Los Angeles | full-time | [link](https://xboxgaming.wd1.myworkdayjobs.com/en-US/External/job/Los-Angeles/Associate-Technical-Artist--Contract-_R028245) |
-| ⭐ 2026-11-09 | Scopely | Full Stack Engineer | US - United States | full-time | [link](https://job-boards.greenhouse.io/scopely/jobs/5476480008?gh_jid=5476480008) |
+| ⭐ 2026-11-12 | Micron | NAND Custom Test Circuit Design Engineer | San Jose, CA | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/San-Jose-CA/NAND-Custom-Test-Circuit-Design-Engineer_JR117243) |
 | ⭐ 2026-11-09 | Coinbase | Software Engineer-1, Money Movement  | Remote - USA | full-time | [link](https://www.coinbase.com/careers/positions/8278991?gh_jid=8278991) |
 | ⭐ 2026-11-09 | Coinbase | Software Engineer, Wallets, Liquidity and Bridging Team | Remote - USA | full-time | [link](https://www.coinbase.com/careers/positions/8139750?gh_jid=8139750) |
+| ⭐ 2026-11-09 | Scopely | Full Stack Engineer | US - United States | full-time | [link](https://job-boards.greenhouse.io/scopely/jobs/5476480008?gh_jid=5476480008) |
 | ⭐ 2026-11-09 | ElevenLabs | Full-Stack Engineer - ElevenAPI | Remote | full-time | [link](https://jobs.ashbyhq.com/ElevenLabs/108c99e6-ba2b-44a0-b830-7d535e14a152) |
 | ⭐ 2026-11-09 | Ramp | Software Engineer, Security, Stablecoin | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/d1183b00-6590-4fe4-a585-28d84e578fe3) |
 | ⭐ 2026-11-09 | Ramp | Software Engineer, Backend, Comms Platform | Remote (US) | full-time | [link](https://jobs.ashbyhq.com/ramp/939892e5-5273-4bfc-8c41-a6c51cabb228) |
 | ⭐ 2026-11-09 | Notion | Software Engineer, Web Infrastructure | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/06c2599d-4dd5-4f97-843f-7194b546f042) |
-| ⭐ 2026-11-09 | Disney | Product Software Engineer II | New York, NY, USA | full-time | [link](https://disney.wd5.myworkdayjobs.com/en-US/disneycareer/job/New-York-NY-USA/Product-Software-Engineer-II_10160173) |
-| ⭐ 🆕 2026-11-09 | Intel | GPU Software Engineer | US, California, Folsom | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-California-Folsom/GPU-Software-Engineer_JR0287695) |
 | ⭐ 2026-11-09 | Google | Software Engineer III, Core Data (multiple openings) | Madison, WI, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/133148695930512070) |
-| ⭐ 🆕 2026-11-11 | Micron | NAND Custom Test Circuit Design Engineer | San Jose, CA | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/San-Jose-CA/NAND-Custom-Test-Circuit-Design-Engineer_JR117243) |
-| ⭐ 2026-10-15 | Adobe | Creative Strategist, Motion/3D | San Jose | full-time | [link](https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/San-Jose/Creative-Strategist--Motion-3D_R171217-1) |
+| ⭐ 🆕 2026-11-09 | Apple | Software Engineer, Deployment Platform MultiCloud | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694167) |
+| ⭐ 🆕 2026-11-09 | Apple | Location Software Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200692268) |
+| ⭐ 2026-10-16 | Adobe | Creative Strategist, Motion/3D | San Jose | full-time | [link](https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/San-Jose/Creative-Strategist--Motion-3D_R171217-1) |
+| ◐ 🆕 2026-11-08 | Apple | Machine Learning System Software Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693933) |
+| ◐ 🆕 2026-11-08 | Apple | Wireless Software Engineer, Wireless Technologies & Ecosystems | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200687778) |
 | ◐ 2026-11-10 | Physical Intelligence | 3D Printer Technician | San Francisco | full-time | [link](https://jobs.ashbyhq.com/physicalintelligence/0a9b9c9c-d700-4871-a7eb-69bd3ae1f547) |
 | ◐ 2026-11-06 | Figma | Software Engineer - Application Platform | San Francisco, CA • New York, NY • United States | full-time | [link](https://boards.greenhouse.io/figma/jobs/6242561004?gh_jid=6242561004) |
+| ◐ 2026-11-06 | Cloudflare | Software Engineer - Load Balancing | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8360609?gh_jid=8360609) |
 | ◐ 2026-11-06 | Affirm | Analytics Lead, Full Stack | Remote US | full-time | [link](https://job-boards.greenhouse.io/affirm/jobs/8011130003) |
 | ◐ 2026-11-06 | Affirm | Software Engineer II, Backend | Remote US | full-time | [link](https://job-boards.greenhouse.io/affirm/jobs/8196112003) |
-| ◐ 2026-11-06 | Cloudflare | Software Engineer - Load Balancing | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8360609?gh_jid=8360609) |
 | ◐ 2026-11-06 | Cohere | Software Engineer, GPU Infrastructure | Seattle | full-time | [link](https://jobs.ashbyhq.com/cohere/735f26a3-9456-49e2-8f84-23804534cfe4) |
 | ◐ 2026-11-06 | Cohere | Software Engineer, ML Workload Platform | Canada | full-time | [link](https://jobs.ashbyhq.com/cohere/8f60b8e2-55b9-4258-a4cc-813273161f97) |
+| ◐ 🆕 2026-11-06 | Apple | Wi-Fi Software Engineer, Wireless Technologies & Ecosystems | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200665281) |
 | ◐ 2026-11-05 | OpenAI | Founding Full Stack Software Engineer, Consulting | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/80c40695-5cd7-4206-96b6-873158a8e696) |
 | ◐ 2026-11-05 | OpenAI | Software Engineer, Agent Platform | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/783704d7-5afa-45aa-899b-1d6799f73004) |
 | ◐ 2026-11-05 | NBCUniversal (DreamWorks) | Software Engineer, VOD | New York, NEW YORK | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000159977020) |
+| ◐ 🆕 2026-11-05 | Apple | AI/ML Software Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200676774) |
+| ◐ 🆕 2026-11-05 | Apple | Software Engineer, Watch Software  | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693720) |
+| ◐ 🆕 2026-11-05 | Apple | Frontend Architect (AI Experiences), Retail and Marcom Engineering | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200692924) |
 | ◐ 2026-11-04 | Vercel | Software Engineer, Backend | Hybrid - San Francisco, New York City | full-time | [link](https://job-boards.greenhouse.io/vercel/jobs/6195153004) |
 | ◐ 2026-11-04 | Ramp | Software Engineer, Frontend | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/6511d68f-b65d-4499-962f-7e2f75eabe3f) |
 | ◐ 2026-11-04 | Notion | Software Engineer, Growth | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/f524ef6b-6a8a-4d73-b7ff-eac85bd6c887) |
-| ◐ 2026-11-04 | Palantir | Backend Software Engineer - Data Connectors | New York, NY | full-time | [link](https://jobs.lever.co/palantir/9aadca04-df88-4b46-95d8-c3b2628b30b0) |
 | ◐ 2026-11-04 | NBCUniversal (DreamWorks) | Jr. Software Engineer | Universal City, CALIFORNIA | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000159723020) |
+| ◐ 2026-11-04 | Palantir | Backend Software Engineer - Data Connectors | New York, NY | full-time | [link](https://jobs.lever.co/palantir/9aadca04-df88-4b46-95d8-c3b2628b30b0) |
 | ◐ 2026-11-04 | Google | UX Designer, Geo Makers | New York, NY, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/84000648575492806) |
 | ◐ 2026-11-04 | Google | Software Engineer III, Front End | Mountain View, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/139655315833397958) |
 | ◐ 2026-11-04 | Google | Software Engineer III, Front End | New York, NY, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/115184997362475718) |
-| ◐ 2026-11-06 | Samsara | Lead Design Engineer | Remote - US | full-time | [link](https://www.samsara.com/company/careers/roles/8359994?gh_jid=8359994) |
 | ◐ 2026-11-03 | Vercel | Software Engineer, Agent Auth | Hybrid - San Francisco | full-time | [link](https://job-boards.greenhouse.io/vercel/jobs/6242246004) |
 | ◐ 2026-11-03 | Vercel | Software Engineer, Connect  | Hybrid - San Francisco | full-time | [link](https://job-boards.greenhouse.io/vercel/jobs/6242244004) |
+| ◐ 2026-11-03 | Roblox | User Researcher | San Mateo, CA, United States | full-time | [link](https://careers.roblox.com/jobs/8317583?gh_jid=8317583) |
 | ◐ 2026-11-03 | Twilio | Software Engineer (L3) Email | Remote - US | full-time | [link](https://job-boards.greenhouse.io/twilio/jobs/8026199) |
 | ◐ 2026-11-03 | GitLab | Intermediate Fullstack Engineer, Subscription Lifecycle  | Remote, Canada; Remote, United States | full-time | [link](https://job-boards.greenhouse.io/gitlab/jobs/8922249002) |
-| ◐ 2026-11-03 | Roblox | User Researcher | San Mateo, CA, United States | full-time | [link](https://careers.roblox.com/jobs/8317583?gh_jid=8317583) |
 | ◐ 2026-11-03 | ElevenLabs | Full-Stack Engineer (Frontend Leaning) - Studio | Remote | full-time | [link](https://jobs.ashbyhq.com/ElevenLabs/e6924f60-c8cc-42b3-9d05-2442ec30e12d) |
 | ◐ 2026-11-03 | NBCUniversal (DreamWorks) | Software Engineer, Roku | Universal City, CALIFORNIA | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000159511839) |
+| ◐ 2026-11-06 | Samsara | Lead Design Engineer | Remote - US | full-time | [link](https://www.samsara.com/company/careers/roles/8359994?gh_jid=8359994) |
 | ◐ 2026-11-02 | Vercel | Software Engineer, Compute | Hybrid - San Francisco | full-time | [link](https://job-boards.greenhouse.io/vercel/jobs/6240736004) |
 | ◐ 2026-11-02 | Reddit | Software Engineer, Infrastructure Engineering | Remote - United States | full-time | [link](https://job-boards.greenhouse.io/reddit/jobs/8337444) |
 | ◐ 2026-11-02 | ElevenLabs | Full-Stack Engineer (Backend Leaning) - Platform Engineering | Remote | full-time | [link](https://jobs.ashbyhq.com/ElevenLabs/ce3d5a59-fb8c-482b-bc3f-60e44576c5e0) |
@@ -550,9 +563,9 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ◐ 2026-11-02 | Google | Software Engineer, Generative Media AI, Apparel ML | Mountain View, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/101544438928417478) |
 | ◐ 2026-10-31 | Supabase | Software Engineer - AI Tooling Infrastructure | Remote, Global | full-time | [link](https://jobs.ashbyhq.com/supabase/fb0b563a-e541-43fd-8555-9eb6473aaa11) |
 | ◐ 2026-11-03 | Writer | Design engineer (US) | New York City, NY | full-time | [link](https://jobs.ashbyhq.com/WRITER/c47f4fea-c97a-48cd-a121-aad079bd89db) |
+| ◐ 2026-10-30 | Roblox | Software Engineer, Discovery UX | San Mateo, CA, United States | full-time | [link](https://careers.roblox.com/jobs/8304210?gh_jid=8304210) |
 | ◐ 2026-10-30 | Chime | Software Engineer, Jade Awareness - AI Financial Partner | San Francisco, CA, USA | full-time | [link](https://boards.greenhouse.io/chime/jobs/8922481002?gh_jid=8922481002) |
 | ◐ 2026-10-30 | Chime | Software Engineer, Jade Foundation - AI Financial Partner | San Francisco, CA, USA | full-time | [link](https://boards.greenhouse.io/chime/jobs/8868948002?gh_jid=8868948002) |
-| ◐ 2026-10-30 | Roblox | Software Engineer, Discovery UX | San Mateo, CA, United States | full-time | [link](https://careers.roblox.com/jobs/8304210?gh_jid=8304210) |
 | ◐ 2026-10-30 | Snowflake | Software Engineer - Trust & Platform Security | US-WA-Bellevue | full-time | [link](https://jobs.ashbyhq.com/snowflake/2887def2-f6d8-44fb-b6c4-976329de7d5f) |
 | ◐ 2026-10-30 | Ubisoft | UI Programmer | Barcelona, CT | full-time | [link](https://jobs.smartrecruiters.com/Ubisoft2/744000158761684) |
 | ◐ 2026-10-29 | ElevenLabs | Full-Stack Engineer - ElevenCreative Enterprise | Remote | full-time | [link](https://jobs.ashbyhq.com/ElevenLabs/34dbe44c-9815-40b2-81f4-91c607fd84b2) |
@@ -565,12 +578,12 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ◐ 2026-10-28 | Stripe | Software Engineer - Full stack | Seattle, WA | full-time | [link](https://stripe.com/jobs/search?gh_jid=8332676) |
 | ◐ 2026-10-28 | Databricks | Software Engineer, Infrastructure | Mountain View, California | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8829039002) |
 | ◐ 2026-10-28 | Palantir | Forward Deployed Software Engineer - Germany Forward Deployed | Washington, D.C. | full-time | [link](https://jobs.lever.co/palantir/491a0133-b580-45c3-9fd4-2314faf82fb9) |
-| ◐ 2026-10-27 | Affirm | Software Engineer II - CIAM | Remote US | full-time | [link](https://job-boards.greenhouse.io/affirm/jobs/8040751003) |
 | ◐ 2026-10-27 | Roblox | Software Engineer, Creator Services Communication | San Mateo, CA, United States | full-time | [link](https://careers.roblox.com/jobs/8283641?gh_jid=8283641) |
+| ◐ 2026-10-27 | Affirm | Software Engineer II - CIAM | Remote US | full-time | [link](https://job-boards.greenhouse.io/affirm/jobs/8040751003) |
 | ◐ 2026-10-27 | PlayStation (SIE) | Full Stack Software Engineer II (Contract Role) | United States, Madison, WI | full-time | [link](https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal/jobs/6199055004) |
 | ◐ 2026-10-26 | Figma | Product Designer, Core Experience | San Francisco, CA • New York, NY • United States | full-time | [link](https://boards.greenhouse.io/figma/jobs/6231027004?gh_jid=6231027004) |
-| ◐ 2026-10-26 | Twitch | Software Engineer I - Engagement Growth | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/twitch/jobs/8917377002) |
 | ◐ 2026-10-26 | Roblox | Software Engineer, Frontend - Economy  | San Mateo, CA, United States | full-time | [link](https://careers.roblox.com/jobs/8259453?gh_jid=8259453) |
+| ◐ 2026-10-26 | Twitch | Software Engineer I - Engagement Growth | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/twitch/jobs/8917377002) |
 | ◐ 2026-10-26 | OpenAI | Founding Software Engineer, Physical Engineering | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/2c646ef9-6f93-4124-9d51-964d2c5aa783) |
 | ◐ 2026-10-26 | Google | UX Designer, Searching in Chrome | San Francisco, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/77068017308967622) |
 | ◐ 2026-11-14 | Baseten | Software Engineer, Cloud Platform | San Francisco | full-time | [link](https://jobs.ashbyhq.com/baseten/bbf1b1a9-c90e-438d-8e5c-2bac67cc8df0) |
@@ -580,22 +593,23 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ◐ 2026-10-24 | Reddit | Software Engineer, Ad Signals | Remote - United States | full-time | [link](https://job-boards.greenhouse.io/reddit/jobs/8319655) |
 | ◐ 2026-10-24 | Supabase | Software Engineer - Storage | Remote, Global | full-time | [link](https://jobs.ashbyhq.com/supabase/9f2ba0b2-6d3b-43ea-990f-5b4bf3930520) |
 | ◐ 2026-10-28 | Crusoe | Electrical Design Engineer | San Francisco, CA - US | full-time | [link](https://jobs.ashbyhq.com/Crusoe/7db491a6-5adc-443c-8513-f4c0743178c7) |
-| ◐ 2026-10-23 | Mercury | Software Engineer - Mercury Command | San Francisco, CA, New York, NY, Portland, OR, or Remote within Canada or United States | full-time | [link](https://job-boards.greenhouse.io/mercury/jobs/6233238004) |
+| ◐ 2026-10-23 | Stripe | Software Engineer, Payments | N/A | full-time | [link](https://stripe.com/jobs/search?gh_jid=8260982) |
 | ◐ 2026-10-23 | Roblox | Product Designer, Creator Services | San Mateo, CA, United States | full-time | [link](https://careers.roblox.com/jobs/8304526?gh_jid=8304526) |
 | ◐ 2026-10-23 | Roblox | Software Engineer, Notifications | San Mateo, CA, United States | full-time | [link](https://careers.roblox.com/jobs/8261393?gh_jid=8261393) |
 | ◐ 2026-10-23 | Roblox | Software Engineer, Reliability  | San Mateo, CA, United States | full-time | [link](https://careers.roblox.com/jobs/8283707?gh_jid=8283707) |
-| ◐ 2026-10-23 | Stripe | Software Engineer, Payments | N/A | full-time | [link](https://stripe.com/jobs/search?gh_jid=8260982) |
+| ◐ 2026-10-23 | Mercury | Software Engineer - Mercury Command | San Francisco, CA, New York, NY, Portland, OR, or Remote within Canada or United States | full-time | [link](https://job-boards.greenhouse.io/mercury/jobs/6233238004) |
 | ◐ 2026-10-23 | Plaid | Product Designer - Dashboard | San Francisco HQ | full-time | [link](https://jobs.ashbyhq.com/plaid/7b3df21a-1475-4d00-abe1-acf5d5b8844c) |
 | ◐ 2026-10-23 | Snowflake | Software Engineer | US-WA-Bellevue | full-time | [link](https://jobs.ashbyhq.com/snowflake/e56587dc-dc46-43e5-a93e-94d479fdb754) |
 | ◐ 2026-10-23 | OpenAI | Product Designer, Growth | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/3d71df2d-7d19-4ca9-97c4-b361c8a362f9) |
 | ◐ 2026-10-23 | OpenAI | Full Stack Software Engineer, Monetization Platform | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/191e42f8-cd62-4082-8f72-505c26505e67) |
-| ◐ 🆕 2026-10-23 | Microsoft | Software Engineer II- CTJ- POLY | United States, Virginia, Reston | full-time | [link](https://jobs.careers.microsoft.com/global/en/job/200055886) |
-| ◐ 2026-11-13 | xAI | Software Engineer, Consumer Subscriptions | Palo Alto, CA | full-time | [link](https://job-boards.greenhouse.io/xai/jobs/5290321007) |
 | ◐ 2026-10-22 | Stripe | Software Engineer | South San Francisco, CA | full-time | [link](https://stripe.com/jobs/search?gh_jid=8314283) |
 | ◐ 2026-10-22 | Stripe | Software Engineer, Resource Automation | South San Francisco, CA | full-time | [link](https://stripe.com/jobs/search?gh_jid=8314235) |
 | ◐ 2026-10-22 | Cloudflare | Software Engineer, Agentic Commerce | In-Office | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8312256?gh_jid=8312256) |
 | ◐ 2026-10-22 | Ramp | Software Engineer, Forward Deployed, Enterprise Product | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/09360e92-fc95-4ba6-9611-dfefd60b13ce) |
 | ◐ 2026-10-22 | OpenAI | Software Engineer, Identity Infrastructure  | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/551b0d0d-46c2-42fb-bb05-46e2fba8d4db) |
+| ◐ 2026-11-13 | xAI | Software Engineer, Consumer Subscriptions | Palo Alto, CA | full-time | [link](https://job-boards.greenhouse.io/xai/jobs/5290321007) |
+| ◐ 2026-11-13 | Micron | Full Stack AI Engineer | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Full-Stack-AI-Engineer_JR111963) |
+| ◐ 2026-11-13 | Micron | New College Grad - Software Engineer | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/New-College-Grad---Software-Engineer_JR109692) |
 | ◐ 2026-10-21 | Twitch | Software Engineer I - Engagement Growth | Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/twitch/jobs/8906750002) |
 | ◐ 2026-10-21 | DoorDash | Software Engineer, Reliability Platform | San Francisco, CA; Sunnyvale, CA; Seattle, WA; New York City, NY | full-time | [link](https://job-boards.greenhouse.io/doordashusa/jobs/8304878) |
 | ◐ 2026-10-21 | Supabase | Software Engineer - Turso | Remote, Global | full-time | [link](https://jobs.ashbyhq.com/supabase/7c5eb3fc-1087-4c1c-b3a2-a19fe01dd259) |
@@ -604,31 +618,38 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ◐ 2026-10-21 | OpenAI | Product Designer, People Innovation Labs | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/3874db80-f3ec-4dd1-8d56-6441e8f7299d) |
 | ◐ 2026-10-21 | OpenAI | Software Engineer, Privacy Engineering (Lawful Access) | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/e99105f1-0a15-4f25-9538-60312568f835) |
 | ◐ 2026-10-26 | Crusoe | [Electrical Design Engineer, Modular Data Centers - Data Center | San Francisco, CA - US | full-time | [link](https://jobs.ashbyhq.com/Crusoe/85137d1f-83ac-4685-8631-0922bae2649e) |
+| ◐ 2026-10-20 | Coinbase | Software Engineer - Crypto Data Foundations | Remote - USA | full-time | [link](https://www.coinbase.com/careers/positions/8304038?gh_jid=8304038) |
+| ◐ 2026-10-20 | Mercury | Risk UX Specialist | San Francisco, CA, New York, NY, Portland, OR, or Remote within United States | full-time | [link](https://job-boards.greenhouse.io/mercury/jobs/6230088004) |
+| ◐ 2026-10-20 | Ramp | Software Engineer, Backend, AI Spend Management | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/b7514711-8a29-4bd2-a97a-967be14e336f) |
+| ◐ 2026-10-20 | OpenAI | Software Engineer, TPU Compilers | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/0a6f6736-8743-4528-b17c-4e1f4f8ea45c) |
+| ◐ 2026-10-20 | Google | Software Engineer, Accelerators Software/Hardware Co design, DeepMind | Mountain View, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/93392001784783558) |
+| ◐ 2026-10-20 | Google | Software Engineer, Gemini App Skills Platform, DeepMind | Mountain View, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/136860781672047302) |
 | ◐ 2026-11-14 | OpenAI | Applied Scientist, Product Policy Research & Measurement | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/73875295-889e-4373-b20f-654e85c66ba4) |
+| ◐ 2026-11-14 | Snapchat | RF Hardware Engineer | Boulder, Colorado | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Boulder-Colorado/RF-Hardware-Engineer_R0047525-1) |
+| ◐ 2026-11-14 | Intel | Intel Foundry Advanced Device Development Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Intel-Foundry-Advanced-Device-Development-Engineer_JR0288604) |
+| ◐ 2026-11-14 | Intel | Power Integrity Engineer | Costa Rica, San Jose | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/Costa-Rica-San-Jose/Power-Integrity-Engineer_JR0289097) |
+| ◐ 2026-11-14 | NVIDIA | Hardware Design Validation Engineer | US, CA, Santa Clara | full-time | [link](https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Hardware-Design-Validation-Engineer_JR2029438) |
 | ◐ 2026-11-14 | Apple | Systems Software Developer, CAD Infrastructure | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694942) |
 | ◐ 2026-11-14 | Apple | RF System Integration Engineer (Instrument Engineering) | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200690352) |
 | ◐ 2026-11-14 | Apple | RF System Integration Engineer — Cellular Technology | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200682611) |
 | ◐ 2026-11-14 | Apple | Prototyping Systems Engineer - Platform Architecture | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200695036) |
 | ◐ 2026-11-14 | Apple | Machine Learning Research Engineer, Fitness Intelligence – Watch Software | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694963) |
-| ◐ 2026-10-20 | Mercury | Risk UX Specialist | San Francisco, CA, New York, NY, Portland, OR, or Remote within United States | full-time | [link](https://job-boards.greenhouse.io/mercury/jobs/6230088004) |
-| ◐ 2026-10-20 | Coinbase | Software Engineer - Crypto Data Foundations | Remote - USA | full-time | [link](https://www.coinbase.com/careers/positions/8304038?gh_jid=8304038) |
-| ◐ 2026-10-20 | Ramp | Software Engineer, Backend, AI Spend Management | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/b7514711-8a29-4bd2-a97a-967be14e336f) |
-| ◐ 2026-10-20 | OpenAI | Software Engineer, TPU Compilers | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/0a6f6736-8743-4528-b17c-4e1f4f8ea45c) |
-| ◐ 2026-10-20 | Google | Software Engineer, Accelerators Software/Hardware Co design, DeepMind | Mountain View, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/93392001784783558) |
-| ◐ 2026-10-20 | Google | Software Engineer, Gemini App Skills Platform, DeepMind | Mountain View, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/136860781672047302) |
-| ◐ 2026-11-12 | Gameloft | Lead UI Artist | Barcelona, CT | full-time | [link](https://jobs.smartrecruiters.com/Gameloft/744000161288789) |
-| ◐ 2026-11-12 | Anduril | Software Engineer, AI | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5293883007?gh_jid=5293883007) |
-| ◐ 🆕 2026-11-12 | Micron | Full Stack AI Engineer | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Full-Stack-AI-Engineer_JR111963) |
-| ◐ 🆕 2026-11-12 | Micron | New College Grad - Software Engineer | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/New-College-Grad---Software-Engineer_JR109692) |
 | ◐ 2026-10-19 | Scopely | Software Engineer, Machine Learning | US - San Francisco, California, United States | full-time | [link](https://job-boards.greenhouse.io/scopely/jobs/5456049008?gh_jid=5456049008) |
 | ◐ 2026-10-19 | Notion | Software Engineer, Developer Platform | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/8c0bf773-e536-45c9-9a6c-8ee478148cc8) |
 | ◐ 2026-10-19 | OpenAI | Software Engineer, CI/CD & ML Infrastructure | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/a5dd77a2-9ab1-4165-98aa-c7bb0260985b) |
 | ◐ 2026-10-19 | OpenAI | Software Engineer, Backend — Dots | New York City | full-time | [link](https://jobs.ashbyhq.com/openai/341a5ad4-9134-4bad-88e1-2ce0f70bf519) |
 | ◐ 2026-10-19 | Google | Software Engineer, Full Stack, Learning and Education | Mountain View, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/118791905797382854) |
-| ◐ 2026-11-13 | Snapchat | RF Hardware Engineer | Boulder, Colorado | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Boulder-Colorado/RF-Hardware-Engineer_R0047525-1) |
-| ◐ 🆕 2026-11-13 | Intel | Intel Foundry Advanced Device Development Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Intel-Foundry-Advanced-Device-Development-Engineer_JR0288604) |
-| ◐ 🆕 2026-11-13 | Intel | Power Integrity Engineer | Costa Rica, San Jose | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/Costa-Rica-San-Jose/Power-Integrity-Engineer_JR0289097) |
-| ◐ 2026-11-13 | NVIDIA | Hardware Design Validation Engineer | US, CA, Santa Clara | full-time | [link](https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Hardware-Design-Validation-Engineer_JR2029438) |
+| ◐ 2026-11-12 | Anduril | Software Engineer, AI | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5293883007?gh_jid=5293883007) |
+| ◐ 2026-11-12 | Gameloft | Lead UI Artist | Barcelona, CT | full-time | [link](https://jobs.smartrecruiters.com/Gameloft/744000161288789) |
+| ◐ 2026-10-16 | OpenAI | Product Designer, Higher Education | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/4885f56d-9f59-4c40-81d8-c33a167cb26c) |
+| ◐ 2026-10-16 | OpenAI | Software Engineer, Full Stack — Dots | New York City | full-time | [link](https://jobs.ashbyhq.com/openai/dbe79b89-e593-44b3-8aec-c667f7134445) |
+| ◐ 2026-10-16 | OpenAI | Software Engineer, Mobile Web — Dots | New York City | full-time | [link](https://jobs.ashbyhq.com/openai/3b34eb10-25b0-4a97-bd6d-05fc90ad4981) |
+| ◐ 2026-10-16 | DocuSign | Lead Software Engineer - Data Protection | US-Seattle-3rd | full-time | [link](https://careers.docusign.com/careers-home/jobs/30545) |
+| ◐ 2026-10-16 | Activision Blizzard King | Lead UX Designer | Santa Monica | full-time | [link](https://xboxgaming.wd1.myworkdayjobs.com/en-US/External/job/Santa-Monica/Lead-UX-Designer_R026708-2) |
+| ◐ 2026-10-16 | Google | Industrial Design Lead, Google Beam | Mountain View, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/140645189025702598) |
+| ◐ 2026-11-13 | Intel | Module Development Engineer - LTD Dry Etch | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Module-Development-Engineer---LTD-Dry-Etch_JR0289029) |
+| ◐ 2026-11-13 | Intel | Manufacturing Engineer and Shift Leader in NM WPM Production | US, New Mexico, Albuquerque | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-New-Mexico-Albuquerque/Manufacturing-Engineer-and-Shift-Leader-in-NM-WPM-Production_JR0288865) |
+| ◐ 2026-11-13 | Intel | Manufacturing Systems Engineer in Wafer Packaging Manufacturing | US, New Mexico, Albuquerque | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-New-Mexico-Albuquerque/Manufacturing-Systems-Engineer-in-Wafer-Packaging-Manufacturing_JR0288854) |
 | ◐ 2026-11-13 | Apple | GenAI Research Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694136) |
 | ◐ 2026-11-13 | Apple | Software Development Engineer, Enterprise and Education, CoreOS | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694773) |
 | ◐ 2026-11-13 | Apple | AR/VR Applications Engineer - visionOS Spatial Media, Vision Products Software | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694936) |
@@ -645,22 +666,13 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ◐ 2026-11-13 | Apple | Software Development Engineer, Test Tooling | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693291) |
 | ◐ 2026-11-13 | Apple | Applied Machine Learning Research Engineer - Multimodal for Human Understanding | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694398) |
 | ◐ 2026-11-13 | Apple | RF Communications Systems Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694829) |
-| ◐ 2026-10-16 | OpenAI | Product Designer, Higher Education | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/4885f56d-9f59-4c40-81d8-c33a167cb26c) |
-| ◐ 2026-10-16 | OpenAI | Software Engineer, Full Stack — Dots | New York City | full-time | [link](https://jobs.ashbyhq.com/openai/dbe79b89-e593-44b3-8aec-c667f7134445) |
-| ◐ 2026-10-16 | OpenAI | Software Engineer, Mobile Web — Dots | New York City | full-time | [link](https://jobs.ashbyhq.com/openai/3b34eb10-25b0-4a97-bd6d-05fc90ad4981) |
-| ◐ 2026-10-16 | DocuSign | Lead Software Engineer - Data Protection | US-Seattle-3rd | full-time | [link](https://careers.docusign.com/careers-home/jobs/30545) |
-| ◐ 2026-10-16 | Google | Industrial Design Lead, Google Beam | Mountain View, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/140645189025702598) |
-| ◐ 2026-10-15 | Affirm | Software Engineer I, Fullstack (Search) | Remote US | full-time | [link](https://job-boards.greenhouse.io/affirm/jobs/8017340003) |
-| ◐ 2026-10-15 | Affirm | Software Engineer II, Full Stack (Card Acquisition) | Remote US | full-time | [link](https://job-boards.greenhouse.io/affirm/jobs/8032173003) |
-| ◐ 2026-10-15 | Snowflake | Software Engineer — Engineering Systems, Continuous Integration | US-WA-Bellevue | full-time | [link](https://jobs.ashbyhq.com/snowflake/37ad5524-1716-4b54-8c3a-a81429592a91) |
-| ◐ 2026-10-15 | Activision Blizzard King | Lead UX Designer | Santa Monica | full-time | [link](https://xboxgaming.wd1.myworkdayjobs.com/en-US/External/job/Santa-Monica/Lead-UX-Designer_R026708-2) |
+| ◐ 2026-11-11 | PayPal | Software Engineer | San Jose, California, United States of America | full-time | [link](https://paypal.wd1.myworkdayjobs.com/en-US/jobs/job/San-Jose-California-United-States-of-America/Software-Engineer_R0138380) |
 | ◐ 2026-10-22 | Sierra | Software Engineer, Context Engine | San Francisco, CA | full-time | [link](https://jobs.ashbyhq.com/Sierra/ae8a501d-7f79-4398-b858-3d793756dd25) |
 | ◐ 2026-11-12 | Dropbox | Application Security Engineer | Remote - US: Select locations | full-time | [link](https://jobs.dropbox.com/listing/8328511?gh_jid=8328511) |
 | ◐ 2026-11-12 | OpenAI | Firmware Engineer, Robotics | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/3f99bfef-5b1a-48ea-aed0-2dbd57b12722) |
 | ◐ 2026-11-12 | OpenAI | Thermal Engineer | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/343d9176-1bd5-48cf-a771-dd4ecf726b77) |
-| ◐ 🆕 2026-11-12 | Intel | Module Development Engineer - LTD Dry Etch | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Module-Development-Engineer---LTD-Dry-Etch_JR0289029) |
-| ◐ 🆕 2026-11-12 | Intel | Manufacturing Engineer and Shift Leader in NM WPM Production | US, New Mexico, Albuquerque | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-New-Mexico-Albuquerque/Manufacturing-Engineer-and-Shift-Leader-in-NM-WPM-Production_JR0288865) |
-| ◐ 🆕 2026-11-12 | Intel | Manufacturing Systems Engineer in Wafer Packaging Manufacturing | US, New Mexico, Albuquerque | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-New-Mexico-Albuquerque/Manufacturing-Systems-Engineer-in-Wafer-Packaging-Manufacturing_JR0288854) |
+| ◐ 2026-11-12 | Intel | Silicon Photonics TD Process/Product Integration Engineer | US, New Mexico, Albuquerque | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-New-Mexico-Albuquerque/Silicon-Photonics-TD-Process-Product-Integration-Engineer_JR0285227) |
+| ◐ 2026-11-12 | Intel | Design Verification Engineer | US, California, Santa Clara | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-California-Santa-Clara/Design-Verification-Engineer_JR0288929-1) |
 | ◐ 2026-11-12 | Apple | Hardware System Validation Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694620) |
 | ◐ 2026-11-12 | Apple | Machine Learning Engineer, Evaluation and Quality, Creativity Apps | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691707) |
 | ◐ 2026-11-12 | Apple | PHY Systems Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694578) |
@@ -674,15 +686,33 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ◐ 2026-11-12 | Apple | Mac Touch Electrical Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694589) |
 | ◐ 2026-11-12 | Apple | Software Development Engineer, Vision Products Software | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694513) |
 | ◐ 2026-11-10 | 2K | Games UX Designer | San Mateo, California, United States | full-time | [link](https://job-boards.greenhouse.io/2k/jobs/8181280003) |
-| ◐ 2026-11-10 | PayPal | Software Engineer | San Jose, California, United States of America | full-time | [link](https://paypal.wd1.myworkdayjobs.com/en-US/jobs/job/San-Jose-California-United-States-of-America/Software-Engineer_R0138380) |
+| ◐ 2026-11-10 | PayPal | Software Engineer | Scottsdale, Arizona, United States of America | full-time | [link](https://paypal.wd1.myworkdayjobs.com/en-US/jobs/job/Scottsdale-Arizona-United-States-of-America/Software-Engineer_R0139000) |
+| ◐ 2026-11-09 | Gusto | Software Engineer,  Financial Data & Payments | Denver, CO - Hybrid; New York, NY - Hybrid; San Francisco, CA - Hybrid; Seattle, WA - Remote | full-time | [link](https://job-boards.greenhouse.io/gusto/jobs/8360497) |
+| ◐ 2026-11-09 | Mercor | Software Engineer, Applied AI - Systems | San Francisco | full-time | [link](https://jobs.ashbyhq.com/mercor/6d1de461-c08d-419c-96cf-ed38083e0976) |
+| ◐ 2026-11-09 | Mercor | Software Engineer, Applied AI- Evals | San Francisco | full-time | [link](https://jobs.ashbyhq.com/mercor/4b0920c5-49f9-4851-a8ca-26825ff570f8) |
+| ◐ 2026-11-09 | Anduril | Mission Software Engineer | Waltham, Massachusetts, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5289345007?gh_jid=5289345007) |
+| ◐ 2026-11-09 | Anduril | Realtime Software Engineer | Waltham, Massachusetts, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5289370007?gh_jid=5289370007) |
+| ◐ 2026-11-09 | Anduril | Software Engineer, Sentry Software (Allied Customer Deployment) | Irvine, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5290223007?gh_jid=5290223007) |
+| ◐ 2026-11-09 | Anduril | Software Engineer, Sentry Software (Ground Based Air Defense) | Irvine, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5290228007?gh_jid=5290228007) |
+| ◐ 2026-11-09 | Anduril | Software Engineer, Sentry Software (Manufacturing) | Irvine, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5290232007?gh_jid=5290232007) |
 | ◐ 2026-11-11 | Take-Two | Threat Intelligence Engineer | Las Vegas, Nevada, United States | full-time | [link](https://job-boards.greenhouse.io/taketwo/jobs/8379815) |
 | ◐ 2026-11-11 | DoorDash | Autonomy Simulation Engineer  | Oakland, CA | full-time | [link](https://job-boards.greenhouse.io/doordashusa/jobs/8381364) |
 | ◐ 2026-11-11 | Supabase | Developer Relations Engineer | Remote, Global | full-time | [link](https://jobs.ashbyhq.com/supabase/26f7817d-ca92-4094-a2b5-f22e07a218c4) |
 | ◐ 2026-11-11 | OpenAI | Partner Applied AI Engineer, Google Cloud  | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/9a57d693-24ad-4457-a408-50617551ea5e) |
 | ◐ 2026-11-11 | OpenAI | Partner Applied AI Engineer, Oracle and Cloud ISV | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/edfaa3d2-3434-4e51-af74-3945d63ad871) |
 | ◐ 2026-11-11 | NBCUniversal (DreamWorks) | Network Engineer | New York, NEW YORK | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000161163099) |
-| ◐ 🆕 2026-11-11 | Intel | Silicon Photonics TD Process/Product Integration Engineer | US, New Mexico, Albuquerque | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-New-Mexico-Albuquerque/Silicon-Photonics-TD-Process-Product-Integration-Engineer_JR0285227) |
-| ◐ 🆕 2026-11-11 | Intel | Design Verification Engineer | US, California, Santa Clara | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-California-Santa-Clara/Design-Verification-Engineer_JR0288929-1) |
+| ◐ 2026-11-11 | Snapchat | Custom IC Layout Engineer | Vancouver, WA - 805 Broadway | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Vancouver-WA---805-Broadway/Digital-IC-Design-Verification-Engineer_R0047100-1) |
+| ◐ 2026-11-11 | Snapchat | Integrated Circuit Design Verification Engineer | Vancouver, WA - 805 Broadway | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Vancouver-WA---805-Broadway/Integrated-Circuit-Design-Verification-Engineer_R0046055) |
+| ◐ 2026-11-11 | Snapchat | Quality Engineer, Level 4 | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Quality-Engineer--Level-4_R0047306-1) |
+| ◐ 2026-11-11 | Snapchat | Electrical Engineer | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Electrical-Engineer_H226EE1) |
+| ◐ 2026-11-11 | Snapchat | Embedded Software/Firmware Engineer | Vancouver, WA - 805 Broadway | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Vancouver-WA---805-Broadway/Embedded-Software-Firmware-Test-Engineer_R0046086-1) |
+| ◐ 2026-11-11 | Intel | Substrate Packaging Research and Development Engineer | US, Arizona, Phoenix | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Arizona-Phoenix/Substrate-Packaging-Research-and-Development-Engineer_JR0287474) |
+| ◐ 2026-11-11 | Intel | Operations Research Engineer | US, Arizona, Phoenix | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Arizona-Phoenix/Operations-Research-Engineer_JR0286348) |
+| ◐ 2026-11-11 | Intel | Fab Module Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Fab-Module-Engineer_JR0289087) |
+| ◐ 2026-11-11 | Intel | Tool Equipment Install Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Tool-Equipment-Install-Engineer_JR0289027-1) |
+| ◐ 2026-11-11 | Intel | Module Development Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Module-Development-Engineer_JR0286550) |
+| ◐ 2026-11-11 | Intel | Electrical Project Engineer - Global Construction Engineering | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Electrical-Project-Engineer---Global-Construction-Engineering_JR0288758) |
+| ◐ 2026-11-11 | Intel | WPM NM C4 Electroplating Module Engineer | US, New Mexico, Albuquerque | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-New-Mexico-Albuquerque/WPM-NM-C4-Electroplating-Module-Engineer_JR0288660) |
 | ◐ 2026-11-11 | Google | Packaging Mechanical Engineer, Quantum AI | Goleta, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/115741073220739782) |
 | ◐ 2026-11-11 | Apple | Machine Learning Engineer, Intelligent Sensing Technology - Incubation | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694120) |
 | ◐ 2026-11-11 | Apple | Advanced Packaging Development Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694643) |
@@ -700,36 +730,16 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ◐ 2026-11-11 | Apple | Camera Optical Illumination Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694386) |
 | ◐ 2026-11-11 | Apple | Battery Modeling and Algorithm Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693517) |
 | ◐ 2026-11-11 | Apple | Machine Learning Engineer, (Applied Machine Learning), AI & Data Platforms (AiDP) | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693613) |
-| ◐ 2026-11-09 | Gusto | Software Engineer,  Financial Data & Payments | Denver, CO - Hybrid; New York, NY - Hybrid; San Francisco, CA - Hybrid; Seattle, WA - Remote | full-time | [link](https://job-boards.greenhouse.io/gusto/jobs/8360497) |
-| ◐ 2026-11-09 | Mercor | Software Engineer, Applied AI - Systems | San Francisco | full-time | [link](https://jobs.ashbyhq.com/mercor/6d1de461-c08d-419c-96cf-ed38083e0976) |
-| ◐ 2026-11-09 | Mercor | Software Engineer, Applied AI- Evals | San Francisco | full-time | [link](https://jobs.ashbyhq.com/mercor/4b0920c5-49f9-4851-a8ca-26825ff570f8) |
-| ◐ 2026-11-09 | Anduril | Mission Software Engineer | Waltham, Massachusetts, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5289345007?gh_jid=5289345007) |
-| ◐ 2026-11-09 | Anduril | Realtime Software Engineer | Waltham, Massachusetts, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5289370007?gh_jid=5289370007) |
-| ◐ 2026-11-09 | Anduril | Software Engineer, Sentry Software (Allied Customer Deployment) | Irvine, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5290223007?gh_jid=5290223007) |
-| ◐ 2026-11-09 | Anduril | Software Engineer, Sentry Software (Ground Based Air Defense) | Irvine, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5290228007?gh_jid=5290228007) |
-| ◐ 2026-11-09 | Anduril | Software Engineer, Sentry Software (Manufacturing) | Irvine, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5290232007?gh_jid=5290232007) |
-| ◐ 2026-11-09 | PayPal | Software Engineer | Scottsdale, Arizona, United States of America | full-time | [link](https://paypal.wd1.myworkdayjobs.com/en-US/jobs/job/Scottsdale-Arizona-United-States-of-America/Software-Engineer_R0139000) |
-| ◐ 2026-10-15 | 2K | Lead Game Services Engineer | San Mateo, California, United States | full-time | [link](https://job-boards.greenhouse.io/2k/jobs/8035080003) |
-|  2026-11-10 | Dropbox | Security Engineer, IAM | Remote - US: Select locations | full-time | [link](https://jobs.dropbox.com/listing/8328534?gh_jid=8328534) |
-|  2026-11-10 | Anthropic | Security Engineer, RF and Technical Surveillance Countermeasures | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5476579008) |
 |  2026-11-10 | Stripe | Machine Learning Engineer, Transaction Risk | Seattle, New York City | full-time | [link](https://stripe.com/jobs/search?gh_jid=8187574) |
+|  2026-11-10 | Anthropic | Security Engineer, RF and Technical Surveillance Countermeasures | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5476579008) |
 |  2026-11-10 | Cloudflare | Data Center Operations Engineer | In-Office | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8369401?gh_jid=8369401) |
+|  2026-11-10 | Dropbox | Security Engineer, IAM | Remote - US: Select locations | full-time | [link](https://jobs.dropbox.com/listing/8328534?gh_jid=8328534) |
 |  2026-11-10 | Replit | SOC Engineer | Foster City, CA | full-time | [link](https://jobs.ashbyhq.com/replit/563751ea-cb0b-412e-ae07-c5638b87f81a) |
 |  2026-11-10 | Cursor | Model Engineer, RL Data | Palo Alto, CA | full-time | [link](https://jobs.ashbyhq.com/cursor/438ff4ff-2bdc-4e43-97bb-98e289694f8c) |
 |  2026-11-10 | OpenAI | Android Engineer, Growth | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/57bbaedc-30c1-4f1d-b194-e32a6adf874c) |
 |  2026-11-10 | NBCUniversal (DreamWorks) | Photographer (NABET Engineer), NBC4 & Telemundo 44 Washington DC | Washington, District of Columbia | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000160940069) |
-|  2026-11-10 | Snapchat | Custom IC Layout Engineer | Vancouver, WA - 805 Broadway | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Vancouver-WA---805-Broadway/Digital-IC-Design-Verification-Engineer_R0047100-1) |
-|  2026-11-10 | Snapchat | Integrated Circuit Design Verification Engineer | Vancouver, WA - 805 Broadway | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Vancouver-WA---805-Broadway/Integrated-Circuit-Design-Verification-Engineer_R0046055) |
-|  2026-11-10 | Snapchat | Quality Engineer, Level 4 | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Quality-Engineer--Level-4_R0047306-1) |
-|  2026-11-10 | Snapchat | Electrical Engineer | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Electrical-Engineer_H226EE1) |
-|  2026-11-10 | Snapchat | Embedded Software/Firmware Engineer | Vancouver, WA - 805 Broadway | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Vancouver-WA---805-Broadway/Embedded-Software-Firmware-Test-Engineer_R0046086-1) |
-|  🆕 2026-11-10 | Intel | Substrate Packaging Research and Development Engineer | US, Arizona, Phoenix | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Arizona-Phoenix/Substrate-Packaging-Research-and-Development-Engineer_JR0287474) |
-|  🆕 2026-11-10 | Intel | Operations Research Engineer | US, Arizona, Phoenix | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Arizona-Phoenix/Operations-Research-Engineer_JR0286348) |
-|  🆕 2026-11-10 | Intel | Fab Module Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Fab-Module-Engineer_JR0289087) |
-|  🆕 2026-11-10 | Intel | Tool Equipment Install Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Tool-Equipment-Install-Engineer_JR0289027-1) |
-|  🆕 2026-11-10 | Intel | Module Development Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Module-Development-Engineer_JR0286550) |
-|  🆕 2026-11-10 | Intel | Electrical Project Engineer - Global Construction Engineering | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Electrical-Project-Engineer---Global-Construction-Engineering_JR0288758) |
-|  🆕 2026-11-10 | Intel | WPM NM C4 Electroplating Module Engineer | US, New Mexico, Albuquerque | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-New-Mexico-Albuquerque/WPM-NM-C4-Electroplating-Module-Engineer_JR0288660) |
+|  2026-11-10 | Intel | NM Silicon Photonics Lithography Process Development Engineer | US, New Mexico, Albuquerque | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-New-Mexico-Albuquerque/NM-Silicon-Photonics-Lithography-Process-Development-Engineer_JR0289004) |
+|  2026-11-10 | Intel | Mechanical, Electrical, and Structural Tool Install Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Mechanical--Electrical--and-Structural-Tool-Install-Engineer_JR0288548) |
 |  2026-11-10 | Google | Low Power Verification Engineer, Physical Design | Sunnyvale, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/129495224949842630) |
 |  2026-11-10 | Apple | IC Packaging Integration Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694416) |
 |  2026-11-10 | Apple | Software Development Engineer in Test - Camera API | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694131) |
@@ -743,6 +753,10 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-10 | Apple | DevOps Engineer - Retail Engineering Apps & Services  | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693083) |
 |  2026-11-10 | Apple | Computer Vision Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694128) |
 |  2026-11-10 | Apple | Software Development Engineer - Cellular (Instrument Engineering) | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200692246) |
+|  🆕 2026-11-10 | Apple | Hardware System Integration Electrical Engineer - Mac | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200685334) |
+|  🆕 2026-11-10 | Apple | SoC Silicon Reliability Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200657320) |
+|  🆕 2026-11-10 | Apple | SoC Test Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200657329) |
+|  🆕 2026-11-10 | Apple | SoC Correlation Product Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200657317) |
 |  2026-11-09 | Nintendo | Application Security Engineer | Redmond, WA | full-time | [link](https://careers.nintendo.com/?gh_jid=4475136009) |
 |  2026-11-09 | Cursor | Field Engineer, Life Sciences | Remote | full-time | [link](https://jobs.ashbyhq.com/cursor/d02cb5cc-496f-4998-80a7-87c20312c82c) |
 |  2026-11-09 | Cursor | GTM Applications Engineer | San Francisco, CA | full-time | [link](https://jobs.ashbyhq.com/cursor/cddb7c29-39e2-431d-af11-029edd4207c4) |
@@ -752,13 +766,22 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-09 | Cursor | Field Engineer | New York, NY | full-time | [link](https://jobs.ashbyhq.com/cursor/014605a9-3a17-4f7d-9037-6c8bb3278e08) |
 |  2026-11-09 | ElevenLabs | Website Growth Engineer | London | full-time | [link](https://jobs.ashbyhq.com/ElevenLabs/71992118-5b37-4a4a-a862-99e82e02916f) |
 |  2026-11-09 | OpenAI | Solutions Engineer, Ads Solutions - NYC | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/eb3b695e-6c60-4875-b8bc-8f4d5d8a9bbb) |
-|  🆕 2026-11-09 | Intel | NM Silicon Photonics Lithography Process Development Engineer | US, New Mexico, Albuquerque | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-New-Mexico-Albuquerque/NM-Silicon-Photonics-Lithography-Process-Development-Engineer_JR0289004) |
-|  🆕 2026-11-09 | Intel | Mechanical, Electrical, and Structural Tool Install Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Mechanical--Electrical--and-Structural-Tool-Install-Engineer_JR0288548) |
+|  🆕 2026-11-09 | Apple | RF System Integration Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200555687) |
+|  🆕 2026-11-09 | Apple | Health Research Data Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694134) |
+|  🆕 2026-11-09 | Apple | SoC Characterization Product Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200657313) |
+|  🆕 2026-11-09 | Apple | Data Center Hardware Engineering — Hardware System Integration Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694124) |
+|  🆕 2026-11-09 | Apple | Site Reliability Engineer, Apple Data Platform | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200690525) |
+|  🆕 2026-11-09 | Apple | Design Verification Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200657224) |
 |  2026-11-06 | Samsara | Lead Product Designer | Remote - US | full-time | [link](https://www.samsara.com/company/careers/roles/8358687?gh_jid=8358687) |
 |  2026-11-08 | Anthropic | Research Engineer, Cybersecurity RL | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5459191008) |
 |  2026-11-05 | Fivetran | Product Designer II | Oakland, California, United States, AMER | full-time | [link](https://www.fivetran.com/careers/job?gh_jid=8040639003) |
 |  2026-11-05 | Verkada | Software Engineer, Cloud Infrastructure | San Mateo, CA United States | full-time | [link](https://job-boards.greenhouse.io/verkada/jobs/5283655007) |
 |  2026-11-05 | Anduril | Forward Deployed Software Engineer, JBLM (Active Clearance) | Tacoma, Washington, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5286149007?gh_jid=5286149007) |
+|  2026-11-07 | Intel | Module Equipment Development Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Module-Equipment-Development-Engineer_JR0288560) |
+|  2026-11-07 | Intel | Software QA Engineer | US, California, Santa Clara | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-California-Santa-Clara/Software-QA-Engineer_JR0288918) |
+|  2026-11-07 | Intel | Software Performance Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Software-Performance-Engineer_JR0288983) |
+|  2026-11-07 | Intel | Semiconductor Research Engineer | US, Arizona, Phoenix | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Arizona-Phoenix/Semiconductor-Research-Engineer_JR0288965) |
+|  🆕 2026-11-07 | Apple | NAND Product Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200683980) |
 |  2026-11-04 | Deepgram | Software Engineer - Applied AI | San Francisco, CA | full-time | [link](https://jobs.ashbyhq.com/Deepgram/3c9a9729-7ff1-49e3-a388-f108745e4b41) |
 |  2026-11-06 | Anthropic | Research Engineer, Cybersecurity RL (Reinforcement Learning) | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5463598008) |
 |  2026-11-06 | Cloudflare | Customer Engineer AI/ Start Up's | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8350836?gh_jid=8350836) |
@@ -767,10 +790,20 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-06 | OpenAI | Forward Deployed Engineer (FDE), Life Sciences - NYC | New York City | full-time | [link](https://jobs.ashbyhq.com/openai/a12c3c93-51df-437d-862f-4892367fea32) |
 |  2026-11-06 | OpenAI | Applied AI Engineer, Enterprise - EDU | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/087aa4f5-1192-413a-ba34-3ae324cf90e5) |
 |  2026-11-06 | OpenAI | Forward Deployed Engineer (FDE), Life Sciences - SF | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/218c0b55-53bd-4df6-805d-321a8c2e7db7) |
-|  🆕 2026-11-06 | Intel | Module Equipment Development Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Module-Equipment-Development-Engineer_JR0288560) |
-|  🆕 2026-11-06 | Intel | Software QA Engineer | US, California, Santa Clara | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-California-Santa-Clara/Software-QA-Engineer_JR0288918) |
-|  🆕 2026-11-06 | Intel | Software Performance Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Software-Performance-Engineer_JR0288983) |
-|  🆕 2026-11-06 | Intel | Semiconductor Research Engineer | US, Arizona, Phoenix | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Arizona-Phoenix/Semiconductor-Research-Engineer_JR0288965) |
+|  2026-11-06 | Intel | Defect Metrology Tool Install Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Defect-Metrology-Tool-Install-Engineer_JR0287207-1) |
+|  2026-11-06 | Intel | NM Wafer Packaging Manufacturing: Advanced Packaging Module Engineer | US, New Mexico, Albuquerque | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-New-Mexico-Albuquerque/NM-Wafer-Packaging-Manufacturing--Advanced-Packaging-Module-Engineer_JR0288857) |
+|  🆕 2026-11-06 | Apple | Security Engineer - Developer Experience | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200690608) |
+|  🆕 2026-11-06 | Apple | Hardware System Engineer - AirPods System Technologies | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693964) |
+|  🆕 2026-11-06 | Apple | Robotics Controls Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693759) |
+|  🆕 2026-11-06 | Apple | AI Software Evaluation Engineer, Siri AI Quality | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693908) |
+|  🆕 2026-11-06 | Apple | Modem System Test Engineer - Wireless Technologies and Ecosystems / | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693803) |
+|  🆕 2026-11-06 | Apple | Cellular Performance Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200692004) |
+|  🆕 2026-11-06 | Apple | AirPods Analog Systems Engineer, Power | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693797) |
+|  🆕 2026-11-06 | Apple | Operations Test Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691102) |
+|  🆕 2026-11-06 | Apple | Wireless Systems Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200682520) |
+|  🆕 2026-11-06 | Apple | Aesthetics Science ML Research Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200686682) |
+|  🆕 2026-11-06 | Apple | STA Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200657260) |
+|  🆕 2026-11-06 | Apple | Foundry Interface Engineer – Display / Mixed Signal Technologies | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693857) |
 |  2026-11-03 | Writer | Software engineer, agents | New York City, NY | full-time | [link](https://jobs.ashbyhq.com/WRITER/ce86adec-e8ce-4bbf-a706-43795a982de6) |
 |  2026-11-03 | Writer | Software engineer, generative AI | San Francisco, CA | full-time | [link](https://jobs.ashbyhq.com/WRITER/2170c74d-7726-4d8f-910e-7f4ef7ac4fd1) |
 |  2026-11-03 | Anduril | Forward Deployed Software Engineer, Connected Warfare (Active Clearance) | Colorado Springs, Colorado, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5283460007?gh_jid=5283460007) |
@@ -782,45 +815,73 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-05 | OpenAI | Forward Deployed Engineer (FDE), Financial Services- NYC | New York City | full-time | [link](https://jobs.ashbyhq.com/openai/c90cfa58-7513-4998-a1ce-f6168dd8fc95) |
 |  2026-11-05 | OpenAI | Forward Deployed Engineer (FDE), Cyber - NYC | New York City | full-time | [link](https://jobs.ashbyhq.com/openai/9c1aa1f3-b4d0-48fa-814b-37d36ad0ad2e) |
 |  2026-11-05 | OpenAI | Forward Deployed Engineer (FDE), Cyber - SF | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/a84e6109-142f-45ae-80e1-05811732cca1) |
-|  🆕 2026-11-05 | Intel | Defect Metrology Tool Install Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Defect-Metrology-Tool-Install-Engineer_JR0287207-1) |
-|  🆕 2026-11-05 | Intel | NM Wafer Packaging Manufacturing: Advanced Packaging Module Engineer | US, New Mexico, Albuquerque | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-New-Mexico-Albuquerque/NM-Wafer-Packaging-Manufacturing--Advanced-Packaging-Module-Engineer_JR0288857) |
+|  2026-11-05 | Intel | RF Lab Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/RF-Lab-Engineer_JR0288778) |
+|  2026-11-05 | Intel | AMHS Intelligent Systems Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/AMHS-Intelligent-Systems-Engineer_JR0288539) |
+|  2026-11-05 | Intel | AMHS Equipment Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/AMHS-Equipment-Engineer_JR0287565) |
 |  2026-11-05 | Google | ASIC Design Verification Engineer, Google TPU | Sunnyvale, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/97537045462688454) |
 |  2026-11-05 | Google | Data Center Electrical Engineer | Bridgeport, CT, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/111142402344788678) |
-|  2026-11-04 | Twitch | Software Dev Engineer I - Security Platform | Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/twitch/jobs/8931343002) |
-|  2026-11-04 | Twitch | Software Dev Engineer I - Security Platform | Irvine, CA | full-time | [link](https://job-boards.greenhouse.io/twitch/jobs/8931345002) |
-|  2026-11-04 | Twitch | Software Dev Engineer I - Security Platform | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/twitch/jobs/8929545002) |
-|  2026-11-04 | Stripe | Demo Engineer | Chicago | full-time | [link](https://stripe.com/jobs/search?gh_jid=8338344) |
-|  2026-11-04 | Stripe | Security Engineer, Privy | NYC-Privy | full-time | [link](https://stripe.com/jobs/search?gh_jid=8306475) |
-|  2026-11-04 | Cloudflare | Hardware Systems Engineer - AI Hardware | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8325834?gh_jid=8325834) |
-|  2026-11-04 | Cloudflare | Hardware Systems Engineer, Hardware Tools / Firmware | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8306486?gh_jid=8306486) |
-|  🆕 2026-11-04 | Intel | RF Lab Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/RF-Lab-Engineer_JR0288778) |
-|  🆕 2026-11-04 | Intel | AMHS Intelligent Systems Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/AMHS-Intelligent-Systems-Engineer_JR0288539) |
-|  🆕 2026-11-04 | Intel | AMHS Equipment Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/AMHS-Equipment-Engineer_JR0287565) |
-|  2026-11-04 | Google | ASIC Design Verification Engineer, Machine Learning | Sunnyvale, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/138578756510851782) |
-|  2026-11-04 | Google | Design Verification Infrastructure Engineer | Austin, TX, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/105390410343293638) |
-|  2026-11-04 | Google | Manufacturing Test Development Engineer, Google Cloud Platforms, Infrastructure Engineering | Sunnyvale, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/142748173322855110) |
+|  🆕 2026-11-05 | Apple | Test Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691413) |
+|  🆕 2026-11-05 | Apple | Signal Integrity Engineer – Memory Interface | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693584) |
+|  🆕 2026-11-05 | Apple | Computer Vision & Machine Learning Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693652) |
+|  🆕 2026-11-05 | Apple | Software Development Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691326) |
+|  🆕 2026-11-05 | Apple | MultiRadio Coex Software Systems Engineer, Wireless Technologies & Ecosystems | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693606) |
+|  🆕 2026-11-05 | Apple | Release Engineer,  Infrastructure Services | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693205) |
+|  🆕 2026-11-05 | Apple | Firmware Validation Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693295) |
+|  🆕 2026-11-05 | Apple | WSoC PHY/MAC Validation and Integration Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693292) |
+|  🆕 2026-11-05 | Apple | RFIC Test Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693492) |
+|  🆕 2026-11-05 | Apple | Wireless RF OTA Connectivity Systems Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693289) |
+|  🆕 2026-11-05 | Apple | Reliability Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691629) |
+|  🆕 2026-11-05 | Apple | Cryptography Engineer, SEAR | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693548) |
+|  🆕 2026-11-05 | Apple | K-12 Education Systems Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200692239) |
+|  🆕 2026-11-05 | Apple | Machine Learning Engineer - Health AIML | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200662966) |
+|  🆕 2026-11-05 | Apple | Performance and Modeling Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691334) |
+|  🆕 2026-11-05 | Apple | Silicon Prototype Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691630) |
+|  🆕 2026-11-05 | Apple | Advanced Manufacturing Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691657) |
+|  🆕 2026-11-05 | Apple | CPU Implementation Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691587) |
+|  🆕 2026-11-05 | Apple | Formal Validation Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691668) |
+|  🆕 2026-11-05 | Apple | Silicon Validation Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691670) |
+|  🆕 2026-11-05 | Apple | Design for Test Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691284) |
+|  🆕 2026-11-05 | Apple | RF/Analog/Mixed Signal Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691301) |
+|  🆕 2026-11-05 | Apple | FE Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691269) |
+|  🆕 2026-11-05 | Apple | Power Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691459) |
+|  🆕 2026-11-05 | Apple | VLSI CAD Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691586) |
+|  🆕 2026-11-05 | Apple | CPU Design Verification Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691583) |
+|  🆕 2026-11-05 | Apple | Manufacturing Quality Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691585) |
+|  🆕 2026-11-05 | Apple | Software Development Engineer - Test | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200680221) |
+|  🆕 2026-11-05 | Apple | Embedded Real Time Critical Control Firmware Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200625835) |
+|  🆕 2026-11-05 | Apple | Embedded 5G/4G Cellular Physical Layer Data Path Signal Processing Firmware Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200667514) |
 |  2026-11-01 | Anduril | GNC Software Engineer | Waltham, Massachusetts, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5281208007?gh_jid=5281208007) |
 |  2026-11-01 | Anduril | Software Engineer, Battlespace Awareness  | Broomfield, Colorado, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5281214007?gh_jid=5281214007) |
 |  2026-11-01 | Anduril | Software Engineer, Battlespace Awareness  | Waltham, Massachusetts, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5281215007?gh_jid=5281215007) |
 |  2026-11-01 | Anduril | Software Engineer- Infrastructure  | Broomfield, Colorado, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5281224007?gh_jid=5281224007) |
-|  2026-11-01 | Anduril | Software Engineer, Rust  | Broomfield, Colorado, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5281216007?gh_jid=5281216007) |
 |  2026-11-01 | Anduril | Software Engineer, Rust  | Waltham, Massachusetts, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5281217007?gh_jid=5281217007) |
+|  2026-11-01 | Anduril | Software Engineer, Rust  | Broomfield, Colorado, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5281216007?gh_jid=5281216007) |
+|  2026-11-04 | Stripe | Demo Engineer | Chicago | full-time | [link](https://stripe.com/jobs/search?gh_jid=8338344) |
+|  2026-11-04 | Stripe | Security Engineer, Privy | NYC-Privy | full-time | [link](https://stripe.com/jobs/search?gh_jid=8306475) |
+|  2026-11-04 | Twitch | Software Dev Engineer I - Security Platform | Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/twitch/jobs/8931343002) |
+|  2026-11-04 | Twitch | Software Dev Engineer I - Security Platform | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/twitch/jobs/8929545002) |
+|  2026-11-04 | Twitch | Software Dev Engineer I - Security Platform | Irvine, CA | full-time | [link](https://job-boards.greenhouse.io/twitch/jobs/8931345002) |
+|  2026-11-04 | Cloudflare | Hardware Systems Engineer - AI Hardware | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8325834?gh_jid=8325834) |
+|  2026-11-04 | Cloudflare | Hardware Systems Engineer, Hardware Tools / Firmware | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8306486?gh_jid=8306486) |
+|  2026-11-04 | Google | ASIC Design Verification Engineer, Machine Learning | Sunnyvale, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/138578756510851782) |
+|  2026-11-04 | Google | Design Verification Infrastructure Engineer | Austin, TX, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/105390410343293638) |
+|  2026-11-04 | Google | Manufacturing Test Development Engineer, Google Cloud Platforms, Infrastructure Engineering | Sunnyvale, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/142748173322855110) |
 |  2026-11-03 | DoorDash | Manufacturing Test Engineer - Dot | Oakland, CA | full-time | [link](https://job-boards.greenhouse.io/doordashusa/jobs/8349894) |
 |  2026-11-03 | DoorDash | Perception & State Estimation Engineer - DoorDash Air | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/doordashusa/jobs/8348870) |
 |  2026-11-03 | Ramp | Research Engineer, Benchmarks & Evaluation | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/d8925f84-562f-470c-a5bd-4f6c20009361) |
 |  2026-11-03 | OpenAI | EDA Cloud & Developer Infrastructure Engineer | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/4f2d9849-ad00-48d5-a22f-0cb943723999) |
+|  2026-11-03 | Intel | Software Application Development Engineer | US, Arizona, Phoenix | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Arizona-Phoenix/Software-Application-Development-Engineer-Grade_JR0283627) |
 |  2026-11-03 | Google | Low Power Design Methodology and Optimization Engineer | Austin, TX, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/83074189770007238) |
-|  2026-11-02 | PlayStation (SIE) | Software QA Engineer 2 | United States, San Mateo, CA | full-time | [link](https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal/jobs/6232171004) |
 |  2026-11-02 | Cloudflare | Systems Engineer, WARP | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8336674?gh_jid=8336674) |
+|  2026-11-02 | PlayStation (SIE) | Software QA Engineer 2 | United States, San Mateo, CA | full-time | [link](https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal/jobs/6232171004) |
 |  2026-11-02 | ElevenLabs | Mobile Engineer - ElevenMusic | Remote | full-time | [link](https://jobs.ashbyhq.com/ElevenLabs/1b90a2b2-1352-458d-b2b7-3900f6e02df5) |
 |  2026-11-02 | Plaid | Machine Learning Engineer - Income Insights | New York City Office | full-time | [link](https://jobs.ashbyhq.com/plaid/8d8378cf-edf2-4c86-afcc-49df91ece2e4) |
 |  2026-11-02 | OpenAI | Controls Engineer, BMS & EPMS | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/a46ffc60-39c6-4b1e-bd0f-9c33a8b06703) |
-|  🆕 2026-11-02 | Intel | Software Application Development Engineer | US, Arizona, Phoenix | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Arizona-Phoenix/Software-Application-Development-Engineer-Grade_JR0283627) |
 |  2026-10-29 | Box | Software Engineer III, Kubernetes | Redwood City, CA, United States | full-time | [link](https://job-boards.greenhouse.io/boxinc/jobs/8318475) |
 |  2026-10-29 | Anduril | Software Engineer, ERP Applications & Development | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5279793007?gh_jid=5279793007) |
 |  2026-11-01 | Anthropic | Research Engineer / Scientist, Pre-training | Remote-Friendly (Travel-Required) / San Francisco, CA / Seattle, WA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5468947008) |
-|  2026-10-28 | Gameloft | Lead UI Artist [Freelance] | Barcelona, CT | full-time | [link](https://jobs.smartrecruiters.com/Gameloft/744000158285779) |
 |  2026-10-28 | Anduril | Embedded Software Engineer, Manufacturing Test, Intelligence Systems | Ashville, Ohio, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5278217007?gh_jid=5278217007) |
+|  2026-10-28 | Gameloft | Lead UI Artist [Freelance] | Barcelona, CT | full-time | [link](https://jobs.smartrecruiters.com/Gameloft/744000158285779) |
 |  2026-10-27 | Mixpanel | Software Engineer, Growth | San Francisco, US (Hybrid) | full-time | [link](https://job-boards.greenhouse.io/mixpanel/jobs/8157627) |
 |  2026-10-27 | Box | Software Engineer III, Incident Response | Redwood City, CA, United States | full-time | [link](https://job-boards.greenhouse.io/boxinc/jobs/8267895) |
 |  2026-10-27 | Baseten | Software Engineer - Storage Systems (Agent Infra) | San Francisco | full-time | [link](https://jobs.ashbyhq.com/baseten/ed8ab178-e7a4-4524-8714-7ef55d574c7d) |
@@ -834,14 +895,15 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-26 | Speak | Full-Stack Engineer - Enterprise | San Francisco | full-time | [link](https://jobs.ashbyhq.com/speak/8428825b-a10f-47e2-acc6-5e24d11d6137) |
 |  2026-10-26 | Baseten | Software Engineer - Compute & Isolation | San Francisco | full-time | [link](https://jobs.ashbyhq.com/baseten/7c0ba27d-2f09-42f2-9277-1b756076b00b) |
 |  2026-10-26 | Baseten | Software Engineer - Networking (Agent Infra) | San Francisco | full-time | [link](https://jobs.ashbyhq.com/baseten/d7e9ee32-dee8-459f-9d8a-538d65df51ae) |
+|  2026-10-26 | Anduril | Scientific Software Engineer | Broomfield, Colorado, United States; Fort Collins, Colorado, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5275462007?gh_jid=5275462007) |
 |  2026-10-29 | Figma | Developer Advocate, Payload | San Francisco, CA • New York, NY • United States | full-time | [link](https://boards.greenhouse.io/figma/jobs/6231582004?gh_jid=6231582004) |
 |  2026-10-29 | DoorDash | GeoSpatial Engineer - DoorDash Air | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/doordashusa/jobs/8331607) |
 |  2026-10-29 | Notion | Business Systems Engineer | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/30a5c739-185f-4a55-8a63-85974d687444) |
 |  2026-10-29 | OpenAI | Network Infrastructure Engineer, Global Network Infra (WAN) | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/9f7371c4-e306-4a45-a400-aa2843fabd85) |
 |  2026-10-24 | Anduril | Software Engineer- Infrastructure  | Waltham, Massachusetts, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5274647007?gh_jid=5274647007) |
-|  2026-10-28 | Twilio | Machine Learning Engineer 2 | Remote - US | full-time | [link](https://job-boards.greenhouse.io/twilio/jobs/8240487) |
-|  2026-10-28 | Anthropic | Field Engineer, Data Center Design and Engineering | Remote-Friendly, United States | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5466517008) |
 |  2026-10-28 | Stripe | Technical Curriculum Developer, Technical Enablement | San Francisco; Seattle; Remote | full-time | [link](https://stripe.com/jobs/search?gh_jid=8164666) |
+|  2026-10-28 | Anthropic | Field Engineer, Data Center Design and Engineering | Remote-Friendly, United States | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5466517008) |
+|  2026-10-28 | Twilio | Machine Learning Engineer 2 | Remote - US | full-time | [link](https://job-boards.greenhouse.io/twilio/jobs/8240487) |
 |  2026-10-28 | Cloudflare | Data Center Network Operations Engineer | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8311376?gh_jid=8311376) |
 |  2026-10-28 | Cloudflare | Hardware Systems Engineer | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8325821?gh_jid=8325821) |
 |  2026-10-28 | Cloudflare | Systems Reliability Engineer - Core | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8324908?gh_jid=8324908) |
@@ -849,10 +911,10 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-28 | Cohere | Forward Deployed Engineer, Inference  | United States | full-time | [link](https://jobs.ashbyhq.com/cohere/8df498e9-aba8-487f-80ba-362b492bad09) |
 |  2026-10-28 | Notion | Data Engineer, Product | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/73a71747-28d3-4dda-a718-77336056e687) |
 |  2026-10-28 | OpenAI | Research Engineer / Research Scientist, Human Flourishing | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/0f600ed1-d70a-4648-820f-a1d1da3f7617) |
+|  2026-10-23 | Sierra | Software Engineer, Cloud Infrastructure | San Francisco, CA | full-time | [link](https://jobs.ashbyhq.com/Sierra/4b28305d-e601-4328-a8f5-9f236bd718bd) |
 |  2026-11-13 | Duolingo | Language Measurement Scientist | Pittsburgh, PA | full-time | [link](https://careers.duolingo.com/jobs/8942115002?gh_jid=8942115002) |
 |  2026-11-13 | Framestore | Freelance: Houdini Lighting & Look Dev TD | Remote job | full-time | [link](https://framestore.recruitee.com/o/freelance-lighting-ny) |
 |  2026-11-13 | Apple | US-Technical Specialist | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694985) |
-|  2026-10-23 | Sierra | Software Engineer, Cloud Infrastructure | San Francisco, CA | full-time | [link](https://jobs.ashbyhq.com/Sierra/4b28305d-e601-4328-a8f5-9f236bd718bd) |
 |  2026-10-27 | Figma | AI Engineer, Internal Tools | San Francisco, CA • New York, NY • United States | full-time | [link](https://boards.greenhouse.io/figma/jobs/6233043004?gh_jid=6233043004) |
 |  2026-10-27 | Figma | Data & Integration Engineer, Business Systems | San Francisco, CA • New York, NY • United States | full-time | [link](https://boards.greenhouse.io/figma/jobs/6233040004?gh_jid=6233040004) |
 |  2026-10-27 | Anthropic | Autonomous Systems Security Engineer | Remote-Friendly (Travel Required) / San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5462972008) |
@@ -876,11 +938,11 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-22 | Sierra | Software Engineer, Channels and Experiences | San Francisco, CA | full-time | [link](https://jobs.ashbyhq.com/Sierra/2f372b6b-d163-48bd-b5df-84f9bf2b4dbc) |
 |  2026-10-22 | Sierra | Software Engineer, Payments Infrastructure | San Francisco, CA | full-time | [link](https://jobs.ashbyhq.com/Sierra/50ec6f9a-25f9-44b4-b8cc-50c897e698b3) |
 |  2026-10-22 | Sierra | Software Engineer, Horizon | San Francisco, CA | full-time | [link](https://jobs.ashbyhq.com/Sierra/0dfe7805-aa81-4b8c-88e0-f93a7f80ecee) |
-|  2026-10-26 | Coinbase | Security Engineer, Corporate Security | Remote - USA | full-time | [link](https://www.coinbase.com/careers/positions/8319444?gh_jid=8319444) |
-|  2026-10-26 | Anthropic | Security Data Engineer | Remote-Friendly (Travel Required) / San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5462966008) |
 |  2026-10-26 | Stripe | Android Engineer, Identity  | Seattle, WA; San Francisco, CA; New York City, NY | full-time | [link](https://stripe.com/jobs/search?gh_jid=8311069) |
 |  2026-10-26 | Stripe | iOS Engineer, Identity | Seattle, WA; San Francisco, CA; New York City, NY | full-time | [link](https://stripe.com/jobs/search?gh_jid=8311082) |
 |  2026-10-26 | Stripe | Technical Operations Engineer | South San Francisco, CA | full-time | [link](https://stripe.com/jobs/search?gh_jid=8325807) |
+|  2026-10-26 | Anthropic | Security Data Engineer | Remote-Friendly (Travel Required) / San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5462966008) |
+|  2026-10-26 | Coinbase | Security Engineer, Corporate Security | Remote - USA | full-time | [link](https://www.coinbase.com/careers/positions/8319444?gh_jid=8319444) |
 |  2026-10-26 | Supabase | Container Engineer | Remote, Global | full-time | [link](https://jobs.ashbyhq.com/supabase/6f7656fc-9983-48be-bbd3-8b40e0e3027a) |
 |  2026-10-26 | ElevenLabs | Android Engineer - Creative App | Remote | full-time | [link](https://jobs.ashbyhq.com/ElevenLabs/b380fb97-bb18-46a5-91db-5132e6693e93) |
 |  2026-10-26 | OpenAI |  Value Engineer - San Francisco | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/916fa6f6-f441-43c6-9769-27e4bf0b2cc9) |
@@ -888,19 +950,35 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-26 | OpenAI | Forward Deployed Engineer (FDE) - AI Infra - SF | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/7472e486-0aa6-4f9d-86da-2105a42b2dce) |
 |  2026-10-21 | Elastic | Software Engineer II - Control Plane (Hosted Foundations / Applications) | United States | full-time | [link](https://jobs.elastic.co/jobs?gh_jid=8274383&gh_jid=8274383) |
 |  2026-10-21 | Anduril | Full Stack Software Engineer - Core Infrastructure | Atlanta, Georgia, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5271092007?gh_jid=5271092007) |
-|  2026-11-14 | Physical Intelligence | IT Operations Engineer | San Francisco | full-time | [link](https://jobs.ashbyhq.com/physicalintelligence/16bfcb45-4056-4e8d-b1d7-7411fffeb5a1) |
 |  2026-10-20 | Elastic | Software Engineer II (Networking) - Platform Infra | United States | full-time | [link](https://jobs.elastic.co/jobs?gh_jid=8303806&gh_jid=8303806) |
-|  2026-11-12 | Apple | Systems Architect | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694622) |
 |  2026-10-25 | Cloudflare | Customer Reliability Engineer | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8317751?gh_jid=8317751) |
+|  2026-11-14 | Physical Intelligence | IT Operations Engineer | San Francisco | full-time | [link](https://jobs.ashbyhq.com/physicalintelligence/16bfcb45-4056-4e8d-b1d7-7411fffeb5a1) |
+|  2026-11-14 | Micron | Product Quality Engineer | Longmont-MAX- Office, CO | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Longmont-MAX--Office-CO/Product-Quality-Engineer_JR116870) |
+|  2026-11-14 | Micron | DRAM Process Integration Engineer | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/DRAM-Process-Integration-Engineer_JR89665) |
+|  2026-11-14 | Micron | Equipment Engineer | Manassas, VA -  Fab 6 | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Manassas-VA----Fab-6/Equipment-Engineer_JR108493) |
+|  2026-11-14 | Micron | Water Services Operations Lead Engineer | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Water-Services-Operations-Lead-Engineer_JR116864-1) |
+|  2026-11-14 | Micron | Layout Engineer, DEG | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Layout-Engineer--DEG_JR116620-1) |
+|  2026-11-14 | Micron | Probe Process Engineer - Allcrunch | Boise, ID - ID1 | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---ID1/Probe-Process-Engineer---Allcrunch_JR116876) |
+|  2026-11-14 | Micron | TPG IE Operations Engineer | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/TPG-IE-Operations-Engineer_JR117622) |
+|  2026-11-12 | Apple | Systems Architect | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694622) |
 |  2026-10-19 | Elastic | Tech Lead, Web Development - Full Stack | United States | full-time | [link](https://jobs.elastic.co/jobs?gh_jid=8285465&gh_jid=8285465) |
 |  2026-10-19 | Anduril | Software Engineer - Payload Integrations | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5269031007?gh_jid=5269031007) |
 |  2026-10-24 | Supabase | Data API Engineer | Remote, Global | full-time | [link](https://jobs.ashbyhq.com/supabase/950e8ffc-79a5-4626-b1dd-115fcbcddad0) |
-|  2026-10-23 | Together AI | Forward Deployed Engineer, Post-Training | San Francisco | full-time | [link](https://job-boards.greenhouse.io/togetherai/jobs/5274195007) |
-|  2026-10-23 | GitLab | Backend Engineer, GitLab Orbit | Remote, Canada; Remote, United States | full-time | [link](https://job-boards.greenhouse.io/gitlab/jobs/8771512002) |
 |  2026-10-23 | Databricks | Associate Forward Deployed Engineer | Mountain View, California | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8910846002) |
+|  2026-10-23 | GitLab | Backend Engineer, GitLab Orbit | Remote, Canada; Remote, United States | full-time | [link](https://job-boards.greenhouse.io/gitlab/jobs/8771512002) |
+|  2026-10-23 | Together AI | Forward Deployed Engineer, Post-Training | San Francisco | full-time | [link](https://job-boards.greenhouse.io/togetherai/jobs/5274195007) |
 |  2026-10-23 | OpenAI | IT Systems Engineer | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/b73e46a6-881a-4413-835a-94b9d5f35d2f) |
 |  2026-11-11 | Twilio | Architect | Remote - US | full-time | [link](https://job-boards.greenhouse.io/twilio/jobs/8316035) |
+|  2026-11-11 | Snapchat | Creative Strategist | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Creative-Strategist_R0047414-1) |
+|  2026-11-11 | Snapchat | Executive Producer, Snap Studio | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Executive-Producer--Global-Studio-Services_R0047397-1) |
 |  2026-11-11 | Apple | Imaging Scientist, Camera and Photos  | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200670007) |
+|  2026-10-22 | Databricks | Associate Forward Deployed Engineer | New York City, New York | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8907988002) |
+|  2026-10-22 | PlayStation (SIE) | Software Development Engineer in Test II  | United States, San Mateo, CA | full-time | [link](https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal/jobs/6145091004) |
+|  2026-10-22 | OpenAI | Electrical Engineer, PCBA Test Infrastructure, Robotics | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/83939922-2a95-4cc0-b8ff-e1b15ed5254b) |
+|  2026-10-22 | Warner Bros Games | Advanced Systems Engineer (Broadcast & Live Production) | GA Atlanta 1050 Techwood Drive NW | full-time | [link](https://warnerbros.wd5.myworkdayjobs.com/en-US/global/job/GA-Atlanta-1050-Techwood-Drive-NW/Advanced-Systems-Engineer--Broadcast---Live-Production-_R000107632) |
+|  2026-10-22 | Warner Bros Games | Associate BIT Field Engineer | DC Washington 820 1st Street NE | full-time | [link](https://warnerbros.wd5.myworkdayjobs.com/en-US/global/job/DC-Washington-820-1st-Street-NE/Associate-BIT-Field-Engineer_R000098795) |
+|  2026-10-22 | Warner Bros Games | Broadcast IT Field Engineer | DC Washington 820 1st Street NE | full-time | [link](https://warnerbros.wd5.myworkdayjobs.com/en-US/global/job/DC-Washington-820-1st-Street-NE/BIT-Field-Engineer_R000093788) |
+|  2026-10-22 | Warner Bros Games | Systems Engineer III - Live Production | DC Washington 820 1st Street NE | full-time | [link](https://warnerbros.wd5.myworkdayjobs.com/en-US/global/job/DC-Washington-820-1st-Street-NE/Sr-BIT-Engineer_R000107383) |
 |  2026-11-13 | Anduril | Chief Engineer, Containerized Effects | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5290206007?gh_jid=5290206007) |
 |  2026-11-13 | Anduril | Electrical Engineer | Waltham, Massachusetts, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5294957007?gh_jid=5294957007) |
 |  2026-11-13 | Anduril | Electromechanical Engineer, Anduril Expeditionary Systems - Costa Mesa, CA | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5295265007?gh_jid=5295265007) |
@@ -916,19 +994,12 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-13 | Anduril | Site Reliability Engineer | Waltham, Massachusetts, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5294371007?gh_jid=5294371007) |
 |  2026-11-13 | Anduril | Test & Evaluation Engineer | Channel Islands, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5196267007?gh_jid=5196267007) |
 |  2026-11-13 | Anduril | Warfighter Systems  - Technical Operations Engineer | Washington, District of Columbia, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5295270007?gh_jid=5295270007) |
-|  🆕 2026-11-13 | Micron | Product Quality Engineer | Longmont-MAX- Office, CO | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Longmont-MAX--Office-CO/Product-Quality-Engineer_JR116870) |
-|  🆕 2026-11-13 | Micron | DRAM Process Integration Engineer | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/DRAM-Process-Integration-Engineer_JR89665) |
-|  🆕 2026-11-13 | Micron | Equipment Engineer | Manassas, VA -  Fab 6 | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Manassas-VA----Fab-6/Equipment-Engineer_JR108493) |
-|  🆕 2026-11-13 | Micron | Water Services Operations Lead Engineer | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Water-Services-Operations-Lead-Engineer_JR116864-1) |
-|  🆕 2026-11-13 | Micron | Layout Engineer, DEG | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Layout-Engineer--DEG_JR116620-1) |
-|  🆕 2026-11-13 | Micron | Probe Process Engineer - Allcrunch | Boise, ID - ID1 | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---ID1/Probe-Process-Engineer---Allcrunch_JR116876) |
-|  🆕 2026-11-13 | Micron | TPG IE Operations Engineer | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/TPG-IE-Operations-Engineer_JR117622) |
-|  2026-10-22 | PlayStation (SIE) | Software Development Engineer in Test II  | United States, San Mateo, CA | full-time | [link](https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal/jobs/6145091004) |
-|  2026-10-22 | Databricks | Associate Forward Deployed Engineer | New York City, New York | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8907988002) |
-|  2026-10-22 | OpenAI | Electrical Engineer, PCBA Test Infrastructure, Robotics | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/83939922-2a95-4cc0-b8ff-e1b15ed5254b) |
-|  2026-10-15 | Gamma | UI Engineer | San Francisco | full-time | [link](https://jobs.ashbyhq.com/gamma/48508f9a-06e6-4394-b97d-b69bab2a5485) |
-|  2026-10-15 | Gamma | Software Engineer, Frontend | San Francisco | full-time | [link](https://jobs.ashbyhq.com/gamma/fa99107a-c458-45fa-b856-add887b0a255) |
-|  2026-10-15 | Gamma | Software Engineer, Growth | San Francisco | full-time | [link](https://jobs.ashbyhq.com/gamma/71009abf-dff3-44a9-b347-95e3362bffef) |
+|  2026-11-13 | Micron | Engineer-Design Methodology-Analog Testbench Development | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Engineer-Design-Methodology-Analog-Testbench-Development_JR117681) |
+|  2026-11-13 | Micron | ATE Diffusion Process Engineer | Boise, ID - ID1 | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---ID1/ATE-Diffusion-Process-Engineer_JR117676) |
+|  2026-11-13 | Micron | Process Integration Engineer | Boise, ID - ID1 | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---ID1/Process-Integration-Engineer_JR117666-1) |
+|  2026-11-13 | Micron | New College Grad - Dry Etch Process Engineer | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/New-College-Grad---Dry-Etch-Process-Engineer_JR115572) |
+|  2026-11-13 | Micron | New College Grad - ATE Process Engineer | Boise, ID - ID1 | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---ID1/New-College-Grad---ATE-Process-Engineer_JR107760) |
+|  2026-11-13 | Micron | New College Grad - Semiconductor Process Engineer | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/New-College-Grad---Semiconductor-Process-Engineer_JR116163) |
 |  2026-10-21 | Anthropic | Research Engineer, Chip Design RL | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5459098008) |
 |  2026-10-21 | Cloudflare | Capacity Planning Engineer | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8300518?gh_jid=8300518) |
 |  2026-10-21 | DoorDash | Mechanical Engineer - Engineer, Chassis & Vehicle Dynamic | Oakland, CA | full-time | [link](https://job-boards.greenhouse.io/doordashusa/jobs/8306636) |
@@ -937,60 +1008,42 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-21 | OpenAI | Compute Electrical Engineer, Robotics | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/eb112d35-cd7e-45a4-8633-5d7ade298a39) |
 |  2026-10-21 | OpenAI | Research Scientist / Research Engineer - Web Understanding and Structured Retrieval, Search | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/1441816f-6429-426e-8f6d-8e5930a818f9) |
 |  2026-10-21 | OpenAI | Research Scientist / Research Engineer, Safety + Alignment, Search | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/5ef10e09-2b3f-41de-b77c-829787302101) |
-|  2026-10-21 | Warner Bros Games | Advanced Systems Engineer (Broadcast & Live Production) | GA Atlanta 1050 Techwood Drive NW | full-time | [link](https://warnerbros.wd5.myworkdayjobs.com/en-US/global/job/GA-Atlanta-1050-Techwood-Drive-NW/Advanced-Systems-Engineer--Broadcast---Live-Production-_R000107632) |
-|  2026-10-21 | Warner Bros Games | Associate BIT Field Engineer | DC Washington 820 1st Street NE | full-time | [link](https://warnerbros.wd5.myworkdayjobs.com/en-US/global/job/DC-Washington-820-1st-Street-NE/Associate-BIT-Field-Engineer_R000098795) |
-|  2026-10-21 | Warner Bros Games | Broadcast IT Field Engineer | DC Washington 820 1st Street NE | full-time | [link](https://warnerbros.wd5.myworkdayjobs.com/en-US/global/job/DC-Washington-820-1st-Street-NE/BIT-Field-Engineer_R000093788) |
-|  2026-10-21 | Warner Bros Games | Systems Engineer III - Live Production | DC Washington 820 1st Street NE | full-time | [link](https://warnerbros.wd5.myworkdayjobs.com/en-US/global/job/DC-Washington-820-1st-Street-NE/Sr-BIT-Engineer_R000107383) |
 |  2026-10-21 | Google | Data Center Engineer, Electrical Engineering | Franklin Furnace, OH, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/112635997891502790) |
 |  2026-10-21 | Google | Hardware System Validation Engineer, Pixel | Mountain View, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/112538553673491142) |
 |  2026-10-20 | Anthropic | Security Engineer / Research Engineer, RL Security | San Francisco, CA / New York City, NY / Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5458420008) |
 |  2026-10-20 | OpenAI | Customer Service Systems Engineer, Government | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/068c4492-1e07-4d51-9ab0-ec2727b7fc51) |
-|  🆕 2026-10-20 | Microsoft | Electrical Engineer | United States, Washington, Redmond | full-time | [link](https://jobs.careers.microsoft.com/global/en/job/200062196) |
 |  2026-11-10 | PlayStation (SIE) | SDET Contractor | United States, San Diego, CA | full-time | [link](https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal/jobs/6250205004) |
 |  2026-11-10 | PlayStation (SIE) | SDET Contractor | United States, Aliso Viejo, CA | full-time | [link](https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal/jobs/6181170004) |
-|  2026-11-10 | Snapchat | Creative Strategist | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Creative-Strategist_R0047414-1) |
-|  2026-11-10 | Snapchat | Executive Producer, Snap Studio | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Executive-Producer--Global-Studio-Services_R0047397-1) |
+|  2026-10-19 | Stripe | Backend / API Engineer, Radar | San Francisco, Seattle, New York | full-time | [link](https://stripe.com/jobs/search?gh_jid=8301253) |
+|  2026-10-19 | Anthropic | Applied AI Demo Engineer | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5455961008) |
+|  2026-10-19 | Anthropic | IT Systems Engineer, Client Platform Engineer, ChromeOS | Boston, MA; Remote-Friendly (Travel-Required) / San Francisco, CA / Seattle, WA / New York City, NY; Washington, DC | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5456018008) |
+|  2026-10-19 | Reddit | Lead Forward Deployed Engineer (AI Enablement) | Remote - United States | full-time | [link](https://job-boards.greenhouse.io/reddit/jobs/8301736) |
+|  2026-10-19 | ElevenLabs | Research Engineer - Data Infrastructure | United Kingdom | full-time | [link](https://jobs.ashbyhq.com/ElevenLabs/9fbd9227-57e0-4221-9255-1a1d967be8ed) |
+|  2026-10-19 | OpenAI | Mechanical Engineer, PCBA Test Infrastructure, Robotics | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/88e65467-7e19-4164-a1de-1d49d3f2dd52) |
+|  2026-10-19 | OpenAI | Product Reliability Engineer  | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/30a1d941-f12c-4589-a7a0-dad116b9aa33) |
 |  2026-11-12 | Cockroach Labs | Escalation Engineer | Remote, United States | full-time | [link](https://www.cockroachlabs.com/careers/job/?gh_jid=8383567) |
 |  2026-11-12 | xAI | Government Cloud Security Engineer | Austin, TX; New York, NY; Palo Alto, CA; Washington, DC | full-time | [link](https://job-boards.greenhouse.io/xai/jobs/5294116007) |
 |  2026-11-12 | Cartesia | IT Systems Engineer | *HQ - San Francisco, CA | full-time | [link](https://jobs.ashbyhq.com/cartesia/1a254e7d-54f2-4bee-bfdf-0c49d5e2909e) |
 |  2026-11-12 | Cartesia | Security Engineer | *HQ - San Francisco, CA | full-time | [link](https://jobs.ashbyhq.com/cartesia/8a247184-de39-46b7-a6a0-fe78f784597a) |
 |  2026-11-12 | Anduril | Aviation Maintenance Engineer | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5294012007?gh_jid=5294012007) |
 |  2026-11-12 | Anduril |  Mechanical Engineer, Intelligence Systems | Santa Ana, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5293515007?gh_jid=5293515007) |
-|  🆕 2026-11-12 | Micron | Engineer-Design Methodology-Analog Testbench Development | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Engineer-Design-Methodology-Analog-Testbench-Development_JR117681) |
-|  🆕 2026-11-12 | Micron | ATE Diffusion Process Engineer | Boise, ID - ID1 | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---ID1/ATE-Diffusion-Process-Engineer_JR117676) |
-|  🆕 2026-11-12 | Micron | Process Integration Engineer | Boise, ID - ID1 | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---ID1/Process-Integration-Engineer_JR117666-1) |
-|  🆕 2026-11-12 | Micron | New College Grad - Dry Etch Process Engineer | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/New-College-Grad---Dry-Etch-Process-Engineer_JR115572) |
-|  🆕 2026-11-12 | Micron | New College Grad - ATE Process Engineer | Boise, ID - ID1 | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---ID1/New-College-Grad---ATE-Process-Engineer_JR107760) |
-|  🆕 2026-11-12 | Micron | New College Grad - Semiconductor Process Engineer | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/New-College-Grad---Semiconductor-Process-Engineer_JR116163) |
-|  2026-10-19 | Reddit | Lead Forward Deployed Engineer (AI Enablement) | Remote - United States | full-time | [link](https://job-boards.greenhouse.io/reddit/jobs/8301736) |
-|  2026-10-19 | Anthropic | Applied AI Demo Engineer | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5455961008) |
-|  2026-10-19 | Anthropic | IT Systems Engineer, Client Platform Engineer, ChromeOS | Boston, MA; Remote-Friendly (Travel-Required) / San Francisco, CA / Seattle, WA / New York City, NY; Washington, DC | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5456018008) |
-|  2026-10-19 | Stripe | Backend / API Engineer, Radar | San Francisco, Seattle, New York | full-time | [link](https://stripe.com/jobs/search?gh_jid=8301253) |
-|  2026-10-19 | ElevenLabs | Research Engineer - Data Infrastructure | United Kingdom | full-time | [link](https://jobs.ashbyhq.com/ElevenLabs/9fbd9227-57e0-4221-9255-1a1d967be8ed) |
-|  2026-10-19 | OpenAI | Mechanical Engineer, PCBA Test Infrastructure, Robotics | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/88e65467-7e19-4164-a1de-1d49d3f2dd52) |
-|  2026-10-19 | OpenAI | Product Reliability Engineer  | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/30a1d941-f12c-4589-a7a0-dad116b9aa33) |
+|  2026-11-12 | Micron | Experienced Shift Equipment Engineer | Boise, ID - ID1 | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---ID1/Experienced-Shift-Equipment-Engineer_JR112277) |
 |  2026-10-18 | Reddit | Machine Learning Engineer, Answers Relevance | Remote - United States | full-time | [link](https://job-boards.greenhouse.io/reddit/jobs/8299781) |
 |  2026-11-09 | OpenAI | Novel Abuse Red Teamer | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/9e7c3009-6a91-4927-b242-3d5aa766c722) |
+|  🆕 2026-11-09 | Apple | Applied Scientist | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694181) |
 |  2026-10-16 | PlayStation (SIE) | ServiceNow Developer (Contractor) | United States, San Diego, CA | full-time | [link](https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal/jobs/6218031004) |
 |  2026-10-16 | DoorDash | Electrical Engineer - Consumer Electronics | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/doordashusa/jobs/8288972) |
 |  2026-10-16 | DoorDash | Electrical Engineer - DoorDash Air | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/doordashusa/jobs/8288985) |
 |  2026-10-16 | DoorDash | Radio Frequency Hardware Engineer - DoorDash Air | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/doordashusa/jobs/8289376) |
 |  2026-10-16 | Snowflake | Incident Response Engineer | US-CA-Bay Area-Remote | full-time | [link](https://jobs.ashbyhq.com/snowflake/88a70f56-834d-44d4-add8-e36b739e5495) |
 |  2026-10-16 | OpenAI | Financial Systems Engineer | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/ac43a452-1f50-42a2-816e-f920fdb51823) |
+|  2026-10-16 | Adobe | Software Development Engineer 4 | San Jose | full-time | [link](https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/San-Jose/Software-Development-Engineer-4_R171262) |
+|  2026-10-16 | Adobe | AI Engineer 4 | San Jose | full-time | [link](https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/San-Jose/AI-Engineer-4_R170716-1) |
+|  2026-10-16 | Intel | Construction Project Engineer (Civil, Structural, Architectural) | US, Arizona, Phoenix | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Arizona-Phoenix/Construction-Project-Engineer--Civil--Structural--Architectural-_JR0287556) |
 |  2026-11-11 | Samsung Research America | Security Certification Engineer - Android, Common Criteria & FIPS 140-3 | 665 Clyde Avenue, Mountain View,  CA, USA | full-time | [link](https://job-boards.greenhouse.io/samsungresearchamerica/jobs/8935817002) |
 |  2026-11-11 | Anduril | Manufacturing Engineer, Electromagnetic Warfare | Irvine, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5292997007?gh_jid=5292997007) |
 |  2026-11-11 | Anduril | Manufacturing Test Engineer, Fury | Ashville, Ohio, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5293006007?gh_jid=5293006007) |
 |  2026-11-11 | Anduril | Production Master Data Engineer | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5291892007?gh_jid=5291892007) |
-|  🆕 2026-11-11 | Micron | Experienced Shift Equipment Engineer | Boise, ID - ID1 | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---ID1/Experienced-Shift-Equipment-Engineer_JR112277) |
-|  2026-10-15 | Vercel | GTM Engineer | Hybrid - San Francisco, New York City, Austin | full-time | [link](https://job-boards.greenhouse.io/vercel/jobs/6225825004) |
-|  2026-10-15 | Anthropic | Applied AI Engineer, Startups (Life Sciences) | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5454650008) |
-|  2026-10-15 | Anthropic | Applied AI Engineer, Startups (Physical AI) | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5454673008) |
-|  2026-10-15 | Supabase | Site Reliability Engineer | Remote, Global | full-time | [link](https://jobs.ashbyhq.com/supabase/ed6cedb1-b9bf-4609-ac5c-c75c33b31bf3) |
-|  2026-10-15 | OpenAI | Client Platform Engineer | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/329fe50f-7701-4f07-982d-a4e10cbec236) |
-|  2026-10-15 | OpenAI | Enterprise Security Engineer, Vulnerability Management | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/f2d8ed04-3c2f-4298-832b-dda7e1644c1b) |
-|  🆕 2026-10-15 | Intel | Construction Project Engineer (Civil, Structural, Architectural) | US, Arizona, Phoenix | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Arizona-Phoenix/Construction-Project-Engineer--Civil--Structural--Architectural-_JR0287556) |
-|  2026-10-15 | Adobe | Software Development Engineer 4 | San Jose | full-time | [link](https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/San-Jose/Software-Development-Engineer-4_R171262) |
-|  2026-10-15 | Adobe | AI Engineer 4 | San Jose | full-time | [link](https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/San-Jose/AI-Engineer-4_R170716-1) |
 |  2026-11-10 | Pika | Forward Deployed Engineer, Applied AI | Palo Alto HQ | full-time | [link](https://jobs.ashbyhq.com/pika/3800dd06-4d34-4557-a038-b8cda5980b6c) |
 |  2026-11-10 | Pika | Applied AI Engineer, Creative Experiences | Palo Alto HQ | full-time | [link](https://jobs.ashbyhq.com/pika/b075e6fb-df01-4eac-9437-1c1db97ea881) |
 |  2026-11-10 | Mercor | Research Engineer, Real Environments  | San Francisco | full-time | [link](https://jobs.ashbyhq.com/mercor/44cf5f07-342d-4f64-9062-3617beb88b31) |
@@ -1012,6 +1065,7 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-06 | Mixpanel | Security Engineer | San Francisco | full-time | [link](https://job-boards.greenhouse.io/mixpanel/jobs/8357913) |
 |  2026-11-06 | Samsara | Firmware Engineer  | Remote - Austin; Remote - Seattle; San Francisco, CA, United States | full-time | [link](https://www.samsara.com/company/careers/roles/8359978?gh_jid=8359978) |
 |  2026-11-06 | Samsara | Security Operations Engineer I | Remote - CA | full-time | [link](https://www.samsara.com/company/careers/roles/8353283?gh_jid=8353283) |
+|  2026-11-06 | Anduril | Curriculum Developer | Santa Ana, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5287840007?gh_jid=5287840007) |
 |  2026-11-06 | Anduril | Flight Test Engineer - Advanced Effects (Missiles) | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5213097007?gh_jid=5213097007) |
 |  2026-11-06 | Anduril | Flight Test Engineer, Omen | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5287971007?gh_jid=5287971007) |
 |  2026-11-06 | Anduril | Site Reliability Engineer, Strategic Defense | Washington, District of Columbia, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5272039007?gh_jid=5272039007) |
@@ -1027,12 +1081,11 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-04 | Waymo | PCBA Reliability Engineer  | Mountain View, CA, USA  | full-time | [link](https://careers.withwaymo.com/jobs?gh_jid=8354166) |
 |  2026-11-04 | Cerebras | AI Engineer | Sunnyvale, CA | full-time | [link](https://jobs.ashbyhq.com/cerebras/c6f607ce-306c-4deb-8825-4175201a7cd4) |
 |  2026-11-04 | Anduril | Chief Engineer, USMC, Air Defense | Huntsville, Alabama, United States; Irvine, California, United States; Seattle, Washington, United States; Washington, District of Columbia, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5284445007?gh_jid=5284445007) |
-|  2026-11-04 | Anduril | Curriculum Developer | Santa Ana, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5283822007?gh_jid=5283822007) |
 |  2026-11-04 | Anduril | Flight Test Engineer - Mission Autonomy  | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5213087007?gh_jid=5213087007) |
 |  2026-11-04 | Anduril | Flight Test Engineer - Mission Autonomy (UAS - Fury) | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5285545007?gh_jid=5285545007) |
 |  2026-11-04 | Anduril | Manufacturing Engineer  | Ashville, Ohio, United States; Costa Mesa, California, United States; McHenry, Mississippi, United States; Quonset, Rhode Island, United States; Raleigh, North Carolina, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5284718007?gh_jid=5284718007) |
-|  2026-11-04 | Anduril | Mission Operations Engineer, USMC (Active Clearance) | Washington, District of Columbia, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5285388007?gh_jid=5285388007) |
 |  2026-11-04 | Anduril | Mission Operations Engineer, USMC (Active Clearance) | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5285383007?gh_jid=5285383007) |
+|  2026-11-04 | Anduril | Mission Operations Engineer, USMC (Active Clearance) | Washington, District of Columbia, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5285388007?gh_jid=5285388007) |
 |  2026-11-04 | Anduril | Product Sourcing Engineer (Batteries/Energy/Etc..) | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5283356007?gh_jid=5283356007) |
 |  2026-11-04 | Anduril | Product Sourcing Engineer, Fury | Ashville, Ohio, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5283927007?gh_jid=5283927007) |
 |  2026-11-04 | Anduril | Product Test Engineer, Intel Systems Manufacturing  | Santa Ana, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5279909007?gh_jid=5279909007) |
@@ -1068,11 +1121,11 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-29 | PlayStation (SIE) | Animation Tools Programmer | United States, San Diego, CA | full-time | [link](https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal/jobs/6234944004) |
 |  2026-11-01 | Anduril | Machine Learning Tracking Engineer | Broomfield, Colorado, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5281225007?gh_jid=5281225007) |
 |  2026-10-28 | Asana | Design Leader, Emerging Products | San Francisco | full-time | [link](https://www.asana.com/jobs/apply/8154796?gh_jid=8154796) |
+|  2026-10-27 | Framestore | FX TD - Expression of Interest | Remote job | full-time | [link](https://framestore.recruitee.com/o/fx-td-expression-of-interest-1) |
+|  2026-10-27 | Ubisoft | Rigger  | Barcelona, CT | full-time | [link](https://jobs.smartrecruiters.com/Ubisoft2/744000158039659) |
 |  2026-10-31 | Anduril | Electrical Test Engineer | Fort Collins, Colorado, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5281154007?gh_jid=5281154007) |
 |  2026-10-31 | Anduril | FPGA Engineer | Broomfield, Colorado, United States; Fort Collins, Colorado, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5281150007?gh_jid=5281150007) |
 |  2026-10-31 | Anduril | RF Engineer | Broomfield, Colorado, United States; Fort Collins, Colorado, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5281151007?gh_jid=5281151007) |
-|  2026-10-27 | Framestore | FX TD - Expression of Interest | Remote job | full-time | [link](https://framestore.recruitee.com/o/fx-td-expression-of-interest-1) |
-|  2026-10-27 | Ubisoft | Rigger  | Barcelona, CT | full-time | [link](https://jobs.smartrecruiters.com/Ubisoft2/744000158039659) |
 |  2026-10-26 | Figma | Business Systems Architect | San Francisco, CA • New York, NY • United States | full-time | [link](https://boards.greenhouse.io/figma/jobs/6232410004?gh_jid=6232410004) |
 |  2026-10-30 | xAI | Operation & Maintenance Engineer (Power Plant) - Memphis |  Southaven, MS; Memphis, TN | full-time | [link](https://job-boards.greenhouse.io/xai/jobs/5279894007) |
 |  2026-10-30 | Waymo | Industrialization Engineer | Mountain View, CA, USA; Novi, MI, USA  | full-time | [link](https://careers.withwaymo.com/jobs?gh_jid=8315980) |
@@ -1092,8 +1145,8 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-28 | Anduril | Manufacturing Test Engineer, Software/Electrical | Quonset, Rhode Island, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5174864007?gh_jid=5174864007) |
 |  2026-10-28 | Anduril | Quality Engineer, Analytics | Atlanta, Georgia, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5278364007?gh_jid=5278364007) |
 |  2026-10-28 | Anduril | Software Test Engineer, Intelligence Systems | Ashville, Ohio, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5278214007?gh_jid=5278214007) |
-|  2026-10-28 | Anduril | Systems Engineer, Decision Advantage  | Broomfield, Colorado, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5278854007?gh_jid=5278854007) |
 |  2026-10-28 | Anduril | Systems Engineer, Decision Advantage  | Waltham, Massachusetts, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5278857007?gh_jid=5278857007) |
+|  2026-10-28 | Anduril | Systems Engineer, Decision Advantage  | Broomfield, Colorado, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5278854007?gh_jid=5278854007) |
 |  2026-10-28 | Anduril | Test Automation Engineer, Manufacturing Test, Intelligence Systems | Ashville, Ohio, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5278219007?gh_jid=5278219007) |
 |  2026-10-23 | Naughty Dog | Animation Assistant | United States, Santa Monica, CA | full-time | [link](https://job-boards.greenhouse.io/naughtydog/jobs/6232192004) |
 |  2026-10-27 | Hasbro (WotC) | Lead QA Engineer, AI Automation | Boston, Massachusetts, United States | full-time | [link](https://job-boards.greenhouse.io/hasbro/jobs/4450231009) |
@@ -1174,25 +1227,12 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-16 | Anduril | Sustainment Engineer, Fury | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5266500007?gh_jid=5266500007) |
 |  2026-10-16 | Anduril | Vehicle Battery Systems Engineer | Santa Ana, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5267767007?gh_jid=5267767007) |
 |  2026-10-16 | Crusoe | AI Tools Engineer, Storage Infrastructure | San Francisco, CA - US | full-time | [link](https://jobs.ashbyhq.com/Crusoe/fb2f4059-00a0-4e89-a58b-2e8d7a3ed0c6) |
-|  2026-10-15 | xAI | Site Reliability Engineer - Memphis |  Southaven, MS; Memphis, TN | full-time | [link](https://job-boards.greenhouse.io/xai/jobs/5266379007) |
-|  2026-10-15 | Block (Square) | Security Engineer - Network Edge Security | Bay Area, CA, United States of America | full-time | [link](http://block.xyz/careers/jobs/5427855008?gh_jid=5427855008) |
-|  2026-10-15 | Anduril | Assembly Integration and Test Engineer, Space Systems | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5266880007?gh_jid=5266880007) |
-|  2026-10-15 | Anduril | Classified Systems Engineer | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5267122007?gh_jid=5267122007) |
-|  2026-10-15 | Anduril | Electrical Test Engineer | Lexington, Massachusetts, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5266460007?gh_jid=5266460007) |
-|  2026-10-15 | Anduril | Electromechanical Integration Engineer - Air Vehicles | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5266468007?gh_jid=5266468007) |
-|  2026-10-15 | Anduril | Hardware Test Engineer | Lexington, Massachusetts, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5266463007?gh_jid=5266463007) |
-|  2026-10-15 | Anduril | Systems Safety Engineer | Broomfield, Colorado, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5266886007?gh_jid=5266886007) |
-|  2026-10-15 | Anduril | Systems Safety Engineer | Mountain View, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5266897007?gh_jid=5266897007) |
-|  2026-10-15 | Anduril | Systems Safety Engineer | Washington, District of Columbia, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5266875007?gh_jid=5266875007) |
-|  2026-10-15 | Anduril | Systems Safety Engineer | Seattle, Washington, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5266894007?gh_jid=5266894007) |
-|  2026-10-15 | Anduril | Systems Safety Engineer | Huntsville, Alabama, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5266884007?gh_jid=5266884007) |
-|  2026-10-15 | Anduril | Systems Test Engineer | Lexington, Massachusetts, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5244231007?gh_jid=5244231007) |
-|  2026-10-15 | Sony | Associate Field Service Engineer (Fixed Term – 12-month assignment) | Remote - Massachusetts | full-time | [link](https://sonyglobal.wd1.myworkdayjobs.com/en-US/SonyGlobalCareers/job/Remote---Massachusetts/Associate-Field-Service-Engineer--Fixed-Term---12-month-assignment-_JR-119652) |
+|  2026-10-16 | Sony | Associate Field Service Engineer (Fixed Term – 12-month assignment) | Remote - Massachusetts | full-time | [link](https://sonyglobal.wd1.myworkdayjobs.com/en-US/SonyGlobalCareers/job/Remote---Massachusetts/Associate-Field-Service-Engineer--Fixed-Term---12-month-assignment-_JR-119652) |
 |  2026-11-03 | Elastic | Consulting Architect | United States | full-time | [link](https://jobs.elastic.co/jobs?gh_jid=8325389&gh_jid=8325389) |
 |  2026-10-27 | Hasbro (WotC) | 2027 Spring - Project Development Management Co-op (Jan - July 2027) | Boston, Massachusetts, United States | full-time | [link](https://job-boards.greenhouse.io/hasbro/jobs/4468121009) |
 |  2026-10-22 | Normal Computing | Simulator & Debug Tools Lead | Mountain View | full-time | [link](https://jobs.ashbyhq.com/NormalComputing/433256ca-a4d9-4339-9613-fb205442bebc) |
 
-## Graphics / Game / 3D (43 recent)
+## Graphics / Game / 3D (42 recent)
 
 | Posted | Company | Role | Location | Level · Term | Apply |
 |---|---|---|---|---|---|
@@ -1215,32 +1255,31 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ⭐ 2026-10-19 | Insomniac Games | Animation Intern (Gameplay)- Undergraduate | United States, Burbank, CA | intern | [link](https://job-boards.greenhouse.io/insomniac/jobs/6226213004) |
 | ⭐ 2026-10-19 | Insomniac Games | Game Design Intern-Undergraduate | United States, Burbank, CA | intern | [link](https://job-boards.greenhouse.io/insomniac/jobs/6226630004) |
 | ⭐ 2026-10-19 | Insomniac Games | Gameplay Programming Intern - Undergraduate  | United States, Burbank, CA; United States, Remote | intern | [link](https://job-boards.greenhouse.io/insomniac/jobs/6226611004) |
+| ⭐ 2026-10-16 | Tencent | Game Research & Development Intern, Engine Research | US-California-Los Angeles | intern | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-California-Los-Angeles/Game-Research---Development-Intern--Engine-Research_R107344-1) |
+| ⭐ 2026-10-16 | Tencent | Game Research & Development Intern, Engine Research | US-Washington-Bellevue | intern | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-Washington-Bellevue/Game-Research---Development-Intern--Engine-Research_R107363-1) |
 | ⭐ 2026-11-11 | PTC | Creo Graphics Engineering Intern | Boston, MA | intern | [link](https://ptc.wd1.myworkdayjobs.com/ptc/job/Boston-MA-USA/Creo-Graphics-Engineering-Intern--Summer-2027-_JR112970) |
-| ⭐ 2026-10-15 | Tencent | Game Research & Development Intern, Engine Research | US-California-Los Angeles | intern | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-California-Los-Angeles/Game-Research---Development-Intern--Engine-Research_R107344-1) |
-| ⭐ 2026-10-15 | Tencent | Game Research & Development Intern, Engine Research | US-Washington-Bellevue | intern | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-Washington-Bellevue/Game-Research---Development-Intern--Engine-Research_R107363-1) |
 | ⭐ 2026-11-03 | Nex | Software Engineer Intern - Sports & Fitness - Game Development | San Jose, CA | intern | [link](https://job-boards.greenhouse.io/nex/jobs/5421056008) |
 | ⭐ 2026-10-28 | PrizePicks | Business Intelligence Intern - Game Operations | Atlanta, GA | intern | [link](http://prizepicks.com/position?gh_jid=8047188003) |
 |  2026-11-09 | NBCUniversal (DreamWorks) | Digital Transformation AR/VR Internships – Summer 2027 | North Hollywood, CA | intern | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000160647460) |
 |  2026-11-05 | NBCUniversal (DreamWorks) | NBC Sports Bay Area & California - Programming Intern - Summer 2027 | San Francisco, CALIFORNIA | intern | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000159947792) |
 |  2026-11-09 | Toyota Research Institute | Robotics Intern - Teleoperation and Spatial Computing | Cambridge, MA | intern | [link](https://jobs.lever.co/tri/4ea8d663-1060-4c55-aede-91fd8f945871/apply) |
 |  2026-11-06 | Deeplocal | Creative Technology Intern | Pittsburgh, PA | intern | [link](https://job-boards.greenhouse.io/deeplocal/jobs/8360330) |
-| ⭐ 2026-10-15 | Apple | Graphics Software Content Engineer | Orlando, FL | new-grad | [link](https://jobs.apple.com/en-us/details/200689345) |
 | ⭐ 2026-11-05 | Oak View Group | Game Night Statistician | Palm Desert, CA | new-grad | [link](https://careers-ovg.icims.com/jobs/35511/job) |
 | ◐ 2026-10-21 | Mach9 | Software Engineer - 3D Graphics | SF | new-grad | [link](https://jobs.ashbyhq.com/mach9/b5aaabd0-d286-440c-8e95-c650fceb0fa8/application?embed=true) |
 | ⭐ 2026-11-11 | Apple | Software Engineer - 3D Vision & Perception | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694390) |
+| ⭐ 🆕 2026-11-06 | Apple | Product Display Driver Engineer, Graphics, Games, and ML | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693806) |
 | ⭐ 2026-10-30 | CD Projekt Red | Lead Gameplay Producer | Boston, MA | full-time | [link](https://jobs.smartrecruiters.com/CDPROJEKTRED/744000158788169) |
 | ⭐ 2026-10-30 | Ubisoft | Junior Technical Artist - Rainbow Six  Siege | Barcelona, CT | full-time | [link](https://jobs.smartrecruiters.com/Ubisoft2/744000158751601) |
+| ⭐ 2026-10-20 | Activision Blizzard King | Associate Technical Artist (Contract) | Los Angeles | full-time | [link](https://xboxgaming.wd1.myworkdayjobs.com/en-US/External/job/Los-Angeles/Associate-Technical-Artist--Contract-_R028245) |
 | ⭐ 2026-11-12 | Hasbro (WotC) | Magic: The Gathering Game Rules Specialist | Renton, Washington, United States | full-time | [link](https://job-boards.greenhouse.io/hasbro/jobs/4485248009) |
-| ⭐ 2026-10-19 | Activision Blizzard King | Associate Technical Artist (Contract) | Los Angeles | full-time | [link](https://xboxgaming.wd1.myworkdayjobs.com/en-US/External/job/Los-Angeles/Associate-Technical-Artist--Contract-_R028245) |
-| ⭐ 2026-10-15 | Adobe | Creative Strategist, Motion/3D | San Jose | full-time | [link](https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/San-Jose/Creative-Strategist--Motion-3D_R171217-1) |
+| ⭐ 2026-10-16 | Adobe | Creative Strategist, Motion/3D | San Jose | full-time | [link](https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/San-Jose/Creative-Strategist--Motion-3D_R171217-1) |
 | ◐ 2026-11-10 | Physical Intelligence | 3D Printer Technician | San Francisco | full-time | [link](https://jobs.ashbyhq.com/physicalintelligence/0a9b9c9c-d700-4871-a7eb-69bd3ae1f547) |
 | ◐ 2026-10-30 | Ubisoft | UI Programmer | Barcelona, CT | full-time | [link](https://jobs.smartrecruiters.com/Ubisoft2/744000158761684) |
-| ◐ 2026-10-15 | 2K | Lead Game Services Engineer | San Mateo, California, United States | full-time | [link](https://job-boards.greenhouse.io/2k/jobs/8035080003) |
 |  2026-11-11 | Apple | Imaging Scientist, Camera and Photos  | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200670007) |
 |  2026-10-29 | PlayStation (SIE) | Animation Tools Programmer | United States, San Diego, CA | full-time | [link](https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal/jobs/6234944004) |
 |  2026-10-26 | CD Projekt Red | Lead Quest Programmer  | Remote | full-time | [link](https://jobs.smartrecruiters.com/CDPROJEKTRED/744000157835480) |
 
-## Art / Animation / VFX (32 recent)
+## Art / Animation / VFX (31 recent)
 
 | Posted | Company | Role | Location | Level · Term | Apply |
 |---|---|---|---|---|---|
@@ -1274,14 +1313,13 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-23 | NBCUniversal (DreamWorks) | Associate Producer, Dateline (contract) | New York, NEW YORK | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000157551504) |
 |  2026-11-13 | Harvey | Video Editor/Shooter | San Francisco | full-time | [link](https://jobs.ashbyhq.com/harvey/31cfe42b-6c69-4a73-9913-01ae85a8e68a) |
 |  2026-10-19 | SpaceX | Rigger (Critical Movement Team) - 2nd Shift | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8896689002?gh_jid=8896689002) |
-|  2026-10-15 | Anduril | Technical Illustrator | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5265617007?gh_jid=5265617007) |
-|  2026-10-15 | Sony | Coordinator, Creative Bleeding Fingers | Santa Monica | full-time | [link](https://sonyglobal.wd1.myworkdayjobs.com/en-US/SonyGlobalCareers/job/Santa-Monica/Coordinator--Creative-Bleeding-Fingers_JR-119771) |
+|  2026-10-16 | Sony | Coordinator, Creative Bleeding Fingers | Santa Monica | full-time | [link](https://sonyglobal.wd1.myworkdayjobs.com/en-US/SonyGlobalCareers/job/Santa-Monica/Coordinator--Creative-Bleeding-Fingers_JR-119771) |
 
-## Design / UX (181 recent)
+## Design / UX (182 recent)
 
 | Posted | Company | Role | Location | Level · Term | Apply |
 |---|---|---|---|---|---|
-| 🔥⭐ 2026-11-13 | Meta | UX Research Scientist Intern, Contextual AI (PhD) | Redmond, WA, United States | intern | [link](https://jobright.ai/jobs/info/6af600328cc703bba47aed5e?utm_campaign=1049&utm_source=git) |
+| ⭐ 2026-11-13 | Meta | UX Research Scientist Intern, Contextual AI (PhD) | Redmond, WA, United States | intern | [link](https://jobright.ai/jobs/info/6af600328cc703bba47aed5e?utm_campaign=1049&utm_source=git) |
 | 🔥⭐ 2026-11-14 | The Minnesota Star Tribune | Data, Graphics & Design Internship – Summer 2027 | Minneapolis, MN, United States | intern | [link](https://jobright.ai/jobs/info/6abecff0d9621c5b28391b84?utm_campaign=1049&utm_source=git) |
 | ⭐ 2026-11-11 | NBCUniversal (DreamWorks) | Franchise, Products & Partnerships: Creative and Product Design & Development Internships – Summer 2027 | Universal City, CA | intern | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000161161787) |
 | ⭐ 2026-10-20 | Amazon | Industrial Design Engineer Intern , Summer 2027 | Bellevue, WA | intern | [link](https://www.amazon.jobs/en/jobs/10584122/industrial-design-engineer-intern-summer-2027) |
@@ -1297,10 +1335,9 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ⭐ 2026-10-29 | Amazon | UX Researcher Intern – Summer 2027 | Seattle, WA | intern | [link](https://www.amazon.jobs/en/jobs/10592767/ux-researcher-intern-summer-2027) |
 | ⭐ 2026-10-29 | Amazon | UX Designer Intern – Summer 2027 | Seattle, WA | intern | [link](https://www.amazon.jobs/en/jobs/10592766/ux-designer-intern-summer-2027) |
 | ⭐ 2026-10-30 | Samsung | SRAM Design Engineer Intern | San Jose, CA | intern | [link](https://job-boards.greenhouse.io/samsungsemiconductor/jobs/8081483003) |
-| 🔥⭐ 🆕 2026-11-14 | ICE | Summer Internship Program 2027 - User Experience (UX) Designer Intern | New York, NY, United States | intern | [link](https://jobright.ai/jobs/info/6adbc32e0a4cc7090f974965?utm_campaign=1049&utm_source=git) |
-| 🔥⭐ 🆕 2026-11-14 | ICE | Summer Internship Program 2027 - Enterprise UX Intern | Atlanta, GA, United States | intern | [link](https://jobright.ai/jobs/info/6adbc3260a4cc7090f97495e?utm_campaign=1049&utm_source=git) |
-| 🔥⭐ 🆕 2026-11-14 | Tractian | Product Design Intern | Atlanta, GA, United States | intern | [link](https://jobright.ai/jobs/info/6abed9e68ff3fb9b3bc764a0?utm_campaign=1049&utm_source=git) |
-| 🔥⭐ 2026-11-14 | Vermilion | Graphic Design Intern (UX/UI) | New York, NY, United States | intern | [link](https://jobright.ai/jobs/info/6af8780234e2d29dcb75565f?utm_campaign=1049&utm_source=git) |
+| 🔥⭐ 2026-11-14 | ICE | Summer Internship Program 2027 - User Experience (UX) Designer Intern | New York, NY, United States | intern | [link](https://jobright.ai/jobs/info/6adbc32e0a4cc7090f974965?utm_campaign=1049&utm_source=git) |
+| 🔥⭐ 2026-11-14 | ICE | Summer Internship Program 2027 - Enterprise UX Intern | Atlanta, GA, United States | intern | [link](https://jobright.ai/jobs/info/6adbc3260a4cc7090f97495e?utm_campaign=1049&utm_source=git) |
+| 🔥⭐ 2026-11-14 | Tractian | Product Design Intern | Atlanta, GA, United States | intern | [link](https://jobright.ai/jobs/info/6abed9e68ff3fb9b3bc764a0?utm_campaign=1049&utm_source=git) |
 | 🔥⭐ 2026-11-14 | Newell Brands | 2027 Newell Brands Intern- User Experience Research | Sandy Springs, GA, United States | intern | [link](https://jobright.ai/jobs/info/6af8495386a9b19681af879a?utm_campaign=1049&utm_source=git) |
 | 🔥⭐ 2026-11-14 | SeatGeek | UX Design - Internship | New York, NY, United States | intern | [link](https://jobright.ai/jobs/info/6ada50ae54bbabbab0714c70?utm_campaign=1049&utm_source=git) |
 | 🔥⭐ 2026-11-14 | Union Home Mortgage Corp. | UX/UI Design Intern | Strongsville, OH, United States | intern | [link](https://jobright.ai/jobs/info/6a872f7e25fc4e7ae3dabc8d?utm_campaign=1049&utm_source=git) |
@@ -1311,24 +1348,25 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ◐ 2026-11-13 | Amway | Digital Product Designer Intern, Summer 2027 (Req#43550) | Ada, MI, United States | intern | [link](https://jobright.ai/jobs/info/6aa3afb44238ea18d430d705?utm_campaign=1049&utm_source=git) |
 | ◐ 2026-11-13 | Dell Technologies | User Experience (UX) Research Intern | Austin, TX, United States | intern | [link](https://jobright.ai/jobs/info/6af63a92a4a5218a07e8474b?utm_campaign=1049&utm_source=git) |
 | ◐ 2026-11-13 | Dorman Products | IT User Experience and Technology Communications Intern | Colmar, Pennsylvania, United States | intern | [link](https://jobright.ai/jobs/info/6af85fdd34e2d29dcb7549a2?utm_campaign=1049&utm_source=git) |
-| ◐ 2026-10-19 | Insomniac Games | User Research Intern (Tools)- Master's | United States, Burbank, CA | intern | [link](https://job-boards.greenhouse.io/insomniac/jobs/6227520004) |
 | ◐ 2026-10-19 | Nintendo | Intern - User Experience | Redmond, WA | intern | [link](https://careers.nintendo.com/?gh_jid=4418258009) |
+| ◐ 2026-10-19 | Insomniac Games | User Research Intern (Tools)- Master's | United States, Burbank, CA | intern | [link](https://job-boards.greenhouse.io/insomniac/jobs/6227520004) |
+| ◐ 🆕 2026-11-12 | Duke Energy Corporation | UX Design Internship – Summer 2027 | Charlotte, NC, United States | intern | [link](https://jobright.ai/jobs/info/6af73ed8824228640064317f?utm_campaign=1049&utm_source=git) |
 | ◐ 2026-10-20 | Micron Technology | Design Engineer Intern - Pathfinding | San Jose, CA | intern | [link](https://micron.wd1.myworkdayjobs.com/External/job/Folsom-CA/Intern---Design-Engineer--Pathfinding_JR114189) |
 | ◐ 2026-10-19 | Garmin | Design Engineer Intern | Yarmouth, ME | intern | [link](https://careers.garmin.com/jobs/18994?icims=1) |
 | ◐ 2026-10-27 | HP IQ | Product Design Engineering Intern | SF | intern | [link](https://job-boards.greenhouse.io/hpiq/jobs/6141235004) |
+| ◐ 🆕 2026-11-14 | TikTok | Creative Design Intern (TikTok-Design) - 2027 Summer | Los Angeles, United States | intern | [link](https://jobright.ai/jobs/info/6a750ba5b17cba569035903b?utm_campaign=1049&utm_source=git) |
 |  2026-11-11 | NBCUniversal (DreamWorks) | NBC News Creative & Digital Design Internships – Summer 2027 | New York, NY | intern | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000161096049) |
 |  2026-11-13 | Navy Federal Credit Union | Summer Associate Internship (Data Storytelling & Visual Communications) | Pensacola, FL, United States | intern | [link](https://jobright.ai/jobs/info/6aa17973ef23570cae244037?utm_campaign=1049&utm_source=git) |
 |  2026-11-12 | Haworth | Design Research Intern | Holland, MI, United States | intern | [link](https://jobright.ai/jobs/info/6af861e386a9b19681af9817?utm_campaign=1049&utm_source=git) |
 |  2026-11-09 | NBCUniversal (DreamWorks) | NBC 4 New York Marketing & Digital Design Internships – Summer 2027 | New York, NY | intern | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000160733409) |
 |  2026-11-09 | NBCUniversal (DreamWorks) | Universal Television Entertainment Digital, Creative & Design Internships – Summer 2027 | New York, NY | intern | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000160636835) |
 |  2026-11-09 | NBCUniversal (DreamWorks) | Universal Television Entertainment Digital, Creative & Design Internships – Summer 2027 | Universal City, CA | intern | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000160635200) |
-|  2026-11-04 | Adobe | 2027 Intern - Brand Creative | San Francisco | intern | [link](https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/San-Francisco/XMLNAME-2027-Intern---Brand-Creative_R173411) |
+|  2026-11-05 | Adobe | 2027 Intern - Brand Creative | San Francisco | intern | [link](https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/San-Francisco/XMLNAME-2027-Intern---Brand-Creative_R173411) |
 |  2026-11-14 | Ilitch Companies | Graphic Design Intern | Detroit, MI, United States | intern | [link](https://jobright.ai/jobs/info/6af87c5786a9b19681afa1a0?utm_campaign=1049&utm_source=git) |
-|  🆕 2026-11-14 | Federal Home Loan Bank of Dallas | 2027 Summer Digital & Graphic Design Intern | Irving, TX, United States | intern | [link](https://jobright.ai/jobs/info/6ac00b47372c01f6cd72a440?utm_campaign=1049&utm_source=git) |
+|  2026-11-14 | Federal Home Loan Bank of Dallas | 2027 Summer Digital & Graphic Design Intern | Irving, TX, United States | intern | [link](https://jobright.ai/jobs/info/6ac00b47372c01f6cd72a440?utm_campaign=1049&utm_source=git) |
 |  2026-11-14 | Camping World | Conversational Design Intern | Chicago, IL, United States | intern | [link](https://jobright.ai/jobs/info/6af787e641166cab7564c85b?utm_campaign=1049&utm_source=git) |
 |  2026-11-14 | Progressive Companies | Summer 2027 Urban Design Intern | Detroit, MI, United States | intern | [link](https://jobright.ai/jobs/info/6abfbb71064da25272e05991?utm_campaign=1049&utm_source=git) |
-|  2026-11-14 | dataing | TIk Tok Intern 💘💘 | United States | intern | [link](https://jobright.ai/jobs/info/6af874d74ddfc50167b98182?utm_campaign=1049&utm_source=git) |
-|  2026-11-14 | Baird | Internship – Graphic Design (Year-Round) | Milwaukee, WI, United States | intern | [link](https://jobright.ai/jobs/info/6ad12912a4f99fef8194266c?utm_campaign=1049&utm_source=git) |
+|  2026-11-14 | Baird | Internship – Graphic Design (Year-Round) | Milwaukee, WI, United States | intern | [link](https://jobright.ai/jobs/info/6aa378946b9ea4538f92893e?utm_campaign=1049&utm_source=git) |
 |  2026-11-14 | Tillamook County Creamery Association | Graphic Design Intern | Portland, OR, United States | intern | [link](https://jobright.ai/jobs/info/6adbd4c25dc7953215a35093?utm_campaign=1049&utm_source=git) |
 |  2026-11-14 | VerdeGo | Landscape Internship | Bunnell, FL, United States | intern | [link](https://jobright.ai/jobs/info/6a640aa5e8d8d22e3292bcf1?utm_campaign=1049&utm_source=git) |
 |  2026-11-14 | The Minnesota Star Tribune | Visual Producer Internship – Summer 2027 | Minneapolis, MN, United States | intern | [link](https://jobright.ai/jobs/info/6abeb7dc064da25272e0242e?utm_campaign=1049&utm_source=git) |
@@ -1350,12 +1388,12 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-13 | Tarte Cosmetics | Spring 2027 Intern to Founder & CEO - Graphic Design | New York, NY, United States | intern | [link](https://jobright.ai/jobs/info/6af77d6b3ba46d7b6c167665?utm_campaign=1049&utm_source=git) |
 |  2026-11-13 | Tarte Cosmetics | Spring 2027 Creative - Print Internship | New York, NY, United States | intern | [link](https://jobright.ai/jobs/info/6af77d62d0eefb7d11b8d236?utm_campaign=1049&utm_source=git) |
 |  2026-11-13 | Zoë Feldman Design | Summer - Design Intern | Washington, DC, United States | intern | [link](https://jobright.ai/jobs/info/6af771933ba46d7b6c166bd8?utm_campaign=1049&utm_source=git) |
-|  2026-11-13 | Tarte Cosmetics | Spring 2027 Content - Photo Still Internship | New York, NY, United States | intern | [link](https://jobright.ai/jobs/info/6af78b76e3d8d612bf4248f5?utm_campaign=1049&utm_source=git) |
 |  2026-11-13 | Tarte Cosmetics | Spring 2027 Content - Photo Internship | New York, NY, United States | intern | [link](https://jobright.ai/jobs/info/6af77d62c7349029d709668c?utm_campaign=1049&utm_source=git) |
+|  2026-11-13 | Tarte Cosmetics | Spring 2027 Content - Photo Still Internship | New York, NY, United States | intern | [link](https://jobright.ai/jobs/info/6af78b76e3d8d612bf4248f5?utm_campaign=1049&utm_source=git) |
 |  2026-11-13 | The New York Times | Editorial Design Intern, Wirecutter | New York, NY, United States | intern | [link](https://jobright.ai/jobs/info/6ae4e9a2eab1f9673097e13a?utm_campaign=1049&utm_source=git) |
 |  2026-11-13 | The New York Times | Creative Development Intern, Wirecutter | New York, NY, United States | intern | [link](https://jobright.ai/jobs/info/6ae4e146d7424a2a828e98e7?utm_campaign=1049&utm_source=git) |
 |  2026-11-13 | Imagine | Summer 2027 Creative Intern | Charlotte, NC, United States | intern | [link](https://jobright.ai/jobs/info/6af70c8d824228640064181d?utm_campaign=1049&utm_source=git) |
-|  2026-11-13 | Navy Federal Credit Union | Summer Associate Internship (Enterprise Risk - Communications) | Vienna, VA, United States | intern | [link](https://jobright.ai/jobs/info/6aa1630fdbc0e60e37e110e8?utm_campaign=1049&utm_source=git) |
+|  2026-11-13 | Navy Federal Credit Union | Summer Associate Internship (Enterprise Risk - Communications) | Vienna, VA, United States | intern | [link](https://jobright.ai/jobs/info/6aa1683a0ffb3d4fea6b48ee?utm_campaign=1049&utm_source=git) |
 |  2026-11-13 | Sandhills Global | Graphic Design Output Intern | Lincoln, NE, United States | intern | [link](https://jobright.ai/jobs/info/68cf47a0fb49c96ca6ea6a3c?utm_campaign=1049&utm_source=git) |
 |  2026-11-13 | Rocket | Art Director Intern - Summer 2027 | Detroit, MI, United States | intern | [link](https://jobright.ai/jobs/info/6af73e868242286400643137?utm_campaign=1049&utm_source=git) |
 |  2026-11-13 | Rocket | Creative Designer Intern - Summer 2027 | Detroit, MI, United States | intern | [link](https://jobright.ai/jobs/info/6af73e803ba46d7b6c164851?utm_campaign=1049&utm_source=git) |
@@ -1367,6 +1405,7 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-13 | ASM Global | Digital Workplace Experience Intern | West Conshohocken, PA, United States of America | intern | [link](https://jobright.ai/jobs/info/6a52cafd8a74e077472f6211?utm_campaign=1049&utm_source=git) |
 |  2026-11-13 | Thomas Jefferson University | Graphic Design Intern | Philadelphia, PA, United States | intern | [link](https://jobright.ai/jobs/info/6ada7ad24c3adc437cecd979?utm_campaign=1049&utm_source=git) |
 |  2026-11-13 | American Bankers Association | Intern, Web Content | Washington, District of Columbia, United States | intern | [link](https://jobright.ai/jobs/info/6ada1863950ef68d51853e7a?utm_campaign=1049&utm_source=git) |
+|  2026-10-20 | Adobe | 2027 Intern - Experience Researcher | San Jose | intern | [link](https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/San-Jose/XMLNAME-2027-Intern---Experience-Researcher_R172996) |
 |  2026-11-12 | Ampact | Graphic Design Intern | Minnesota, United States | intern | [link](https://jobright.ai/jobs/info/6ae40749d45dc30fb7d2e80f?utm_campaign=1049&utm_source=git) |
 |  2026-11-12 | Benco Dental | Graphic Design Intern | Pittston, PA, United States | intern | [link](https://jobright.ai/jobs/info/6aad7c000ebc8fb2313e9c33?utm_campaign=1049&utm_source=git) |
 |  2026-11-12 | AOA | Visioning & Planning Intern | Winter Park, FL, United States | intern | [link](https://jobright.ai/jobs/info/6af642aff10ae27369e18683?utm_campaign=1049&utm_source=git) |
@@ -1374,13 +1413,13 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-12 | AOA | Concept Design Intern- FL | Winter Park, FL, United States | intern | [link](https://jobright.ai/jobs/info/6af642b379862a378dcf2851?utm_campaign=1049&utm_source=git) |
 |  2026-11-12 | House Of Flavors Inc. | Graphic Designer Intern | Laurel, MD, United States | intern | [link](https://jobright.ai/jobs/info/6af672268a9bd36b08993464?utm_campaign=1049&utm_source=git) |
 |  2026-11-12 | Rocket | Video Editing Intern - Summer 2027 | Detroit, MI, United States | intern | [link](https://jobright.ai/jobs/info/6af73e813ba46d7b6c164852?utm_campaign=1049&utm_source=git) |
+|  2026-11-12 | Quicken Loans | Video Editing Intern - Summer 2027 | Detroit, MI, United States | intern | [link](https://jobright.ai/jobs/info/6af729afe3d8d612bf420855?utm_campaign=1049&utm_source=git) |
 |  2026-11-12 | Quicken Loans | Graphic Design Intern - 3 Consecutive Terms (Winter, Summer and Fall 2027) | Detroit, MI, United States | intern | [link](https://jobright.ai/jobs/info/6af729b7d0eefb7d11b8971a?utm_campaign=1049&utm_source=git) |
 |  2026-11-12 | Quicken Loans | Art Director Intern - Summer 2027 | Detroit, MI, United States | intern | [link](https://jobright.ai/jobs/info/6af729ad3ba46d7b6c163b8e?utm_campaign=1049&utm_source=git) |
 |  2026-11-12 | Quicken Loans | Creative Designer Intern - Summer 2027 | Detroit, MI, United States | intern | [link](https://jobright.ai/jobs/info/6af729b1c7349029d7092c15?utm_campaign=1049&utm_source=git) |
-|  2026-11-12 | Quicken Loans | Video Editing Intern - Summer 2027 | Detroit, MI, United States | intern | [link](https://jobright.ai/jobs/info/6af729afe3d8d612bf420855?utm_campaign=1049&utm_source=git) |
-|  2026-10-19 | Adobe | 2027 Intern - Experience Researcher | San Jose | intern | [link](https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/San-Jose/XMLNAME-2027-Intern---Experience-Researcher_R172996) |
+|  🆕 2026-11-12 | Tesla | Internship, Graphic Design (Winter/Spring 2027) | Austin, TX, United States | intern | [link](https://jobright.ai/jobs/info/6af51e409144106c56a23fd9?utm_campaign=1049&utm_source=git) |
 | ⭐ 2026-11-02 | Intel | Memory Design Engineer | Austin, TX | new-grad | [link](https://intel.wd1.myworkdayjobs.com/en-us/external/job/US-Texas-Austin/Memory-Design-Engineer_JR0288752) |
-| 🔥⭐ 2026-11-13 | Micron Technology | Design Engineer New Grad | San Jose, CA | new-grad | [link](https://micron.wd1.myworkdayjobs.com/External/job/San-Jose-CA/New-College-Grad---Design-Engineer_JR117605) |
+| ⭐ 2026-11-13 | Micron Technology | Design Engineer New Grad | San Jose, CA | new-grad | [link](https://micron.wd1.myworkdayjobs.com/External/job/San-Jose-CA/New-College-Grad---Design-Engineer_JR117605) |
 | ⭐ 2026-11-12 | Bask Health | Junior Design Engineer | Remote in USA | new-grad | [link](https://apply.workable.com/bask-health-1/j/E8EA53DF48/apply) |
 | ⭐ 2026-11-12 | RTX | Digital Design Engineer 1 | Tucson, AZ | new-grad | [link](https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-AZ-TUCSON-M02--1151-E-Hermans-Rd--BLDG-M02/Digital-Design-Engineer-I---onsite_01888918) |
 | ⭐ 2026-11-12 | RTX | Digital Design Engineer 2 | Tucson, AZ | new-grad | [link](https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-AZ-TUCSON-M02--1151-E-Hermans-Rd--BLDG-M02/Digital-Design-Engineer-II---onsite_01888883) |
@@ -1393,27 +1432,31 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ⭐ 2026-11-13 | Apple | Display Panel Design Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694990) |
 | ⭐ 2026-11-13 | Apple | Manufacturing Design Engineer (MDE) - iPad | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694672) |
 | ⭐ 2026-11-12 | Apple | Manufacturing Design Engineer (MDE) - Vision Pro | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693523) |
+| ⭐ 2026-11-11 | Snapchat | Design Engineer, Core Snapchat | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Design-Engineer--Core-Snapchat_R0047473-2) |
 | ⭐ 2026-11-11 | Apple | Manufacturing Design Engineer (MDE) - Watch | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200692723) |
 | ⭐ 2026-11-10 | NBCUniversal (DreamWorks) | Associate Design Engineer | New York, NEW YORK | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000160955954) |
-| ⭐ 2026-11-10 | Snapchat | Design Engineer, Core Snapchat | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Design-Engineer--Core-Snapchat_R0047473-2) |
 | ⭐ 2026-11-06 | Google | UX Engineer, Search Design System | Mountain View, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/131539193443558086) |
 | ⭐ 2026-11-05 | Google | Hardware/Software Co-Design Engineer, Inference | Sunnyvale, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/75303820837429958) |
+| ⭐ 🆕 2026-11-05 | Apple | RF Passive Design Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693466) |
+| ⭐ 🆕 2026-11-05 | Apple | Module Design Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691344) |
+| ⭐ 🆕 2026-11-05 | Apple | Front End Design Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691298) |
+| ⭐ 🆕 2026-11-05 | Apple | Systems Design Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691255) |
 | ⭐ 2026-11-02 | Cloudflare | Data Center Design Engineer | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8227832?gh_jid=8227832) |
+| ⭐ 2026-11-14 | Micron | New College Grad - Design Engineer | San Jose, CA | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/San-Jose-CA/New-College-Grad---Design-Engineer_JR117605) |
 | ⭐ 2026-11-12 | Perplexity | Lead Product Designer, Mobile (Native & Mobile) | San Francisco | full-time | [link](https://jobs.ashbyhq.com/Perplexity/1354f2e8-56c8-4a66-81f8-eb5d5b944506) |
 | ⭐ 2026-11-12 | Perplexity | Lead Product Designer, Growth (Mobile) | San Francisco | full-time | [link](https://jobs.ashbyhq.com/Perplexity/14a45e74-9cde-4622-8172-1b6968810802) |
 | ⭐ 2026-11-12 | OpenAI | Product Designer, Physical Engineering | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/8e754a28-926e-40f9-b33d-6e2b838ef5dd) |
+| ⭐ 2026-11-11 | Snapchat | Core Product Designer | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Core-Product-Designer_H226CPD3-1) |
 | ⭐ 2026-11-11 | Google | UX Designer, Inception, Terra Nova, DeepMind | Mountain View, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/107713538826347206) |
 | ⭐ 2026-11-11 | Google | UX Designer, YouTube Labs | New York, NY, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/139778596427178694) |
 | ⭐ 2026-11-11 | Apple | Systems Software Engineer - Human Interface Devices | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693935) |
-| ⭐ 🆕 2026-11-13 | Micron | New College Grad - Design Engineer | San Jose, CA | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/San-Jose-CA/New-College-Grad---Design-Engineer_JR117605) |
-| ⭐ 2026-11-10 | Snapchat | Core Product Designer | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Core-Product-Designer_H226CPD3-1) |
 | ⭐ 2026-11-10 | Google | UX Designer, YouTube Ads Living Room | San Bruno, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/130762549539807942) |
 | ⭐ 2026-11-10 | Apple | Sensing Product Design Architecture Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694188) |
 | ◐ 2026-11-04 | Roblox | Product Designer, Marketing Systems | San Mateo, CA, United States | full-time | [link](https://careers.roblox.com/jobs/8240434?gh_jid=8240434) |
 | ◐ 2026-11-04 | Google | UX Designer, Geo Makers | New York, NY, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/84000648575492806) |
+| ◐ 2026-11-03 | Roblox | User Researcher | San Mateo, CA, United States | full-time | [link](https://careers.roblox.com/jobs/8317583?gh_jid=8317583) |
 | ◐ 2026-11-06 | Samsara | Lead Design Engineer | Remote - US | full-time | [link](https://www.samsara.com/company/careers/roles/8359994?gh_jid=8359994) |
 | ◐ 2026-11-06 | SpaceX | Lead MEP Design Engineer | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8933529002?gh_jid=8933529002) |
-| ◐ 2026-11-03 | Roblox | User Researcher | San Mateo, CA, United States | full-time | [link](https://careers.roblox.com/jobs/8317583?gh_jid=8317583) |
 | ◐ 2026-11-03 | Writer | Design engineer (US) | New York City, NY | full-time | [link](https://jobs.ashbyhq.com/WRITER/c47f4fea-c97a-48cd-a121-aad079bd89db) |
 | ◐ 2026-10-30 | Roblox | Software Engineer, Discovery UX | San Mateo, CA, United States | full-time | [link](https://careers.roblox.com/jobs/8304210?gh_jid=8304210) |
 | ◐ 2026-10-26 | Figma | Product Designer, Core Experience | San Francisco, CA • New York, NY • United States | full-time | [link](https://boards.greenhouse.io/figma/jobs/6231027004?gh_jid=6231027004) |
@@ -1427,20 +1470,18 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ◐ 2026-10-20 | Mercury | Risk UX Specialist | San Francisco, CA, New York, NY, Portland, OR, or Remote within United States | full-time | [link](https://job-boards.greenhouse.io/mercury/jobs/6230088004) |
 | ◐ 2026-11-12 | Gameloft | Lead UI Artist | Barcelona, CT | full-time | [link](https://jobs.smartrecruiters.com/Gameloft/744000161288789) |
 | ◐ 2026-10-16 | OpenAI | Product Designer, Higher Education | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/4885f56d-9f59-4c40-81d8-c33a167cb26c) |
+| ◐ 2026-10-16 | Activision Blizzard King | Lead UX Designer | Santa Monica | full-time | [link](https://xboxgaming.wd1.myworkdayjobs.com/en-US/External/job/Santa-Monica/Lead-UX-Designer_R026708-2) |
 | ◐ 2026-10-16 | Google | Industrial Design Lead, Google Beam | Mountain View, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/140645189025702598) |
-| ◐ 2026-10-15 | Activision Blizzard King | Lead UX Designer | Santa Monica | full-time | [link](https://xboxgaming.wd1.myworkdayjobs.com/en-US/External/job/Santa-Monica/Lead-UX-Designer_R026708-2) |
 | ◐ 2026-11-10 | 2K | Games UX Designer | San Mateo, California, United States | full-time | [link](https://job-boards.greenhouse.io/2k/jobs/8181280003) |
 | ◐ 2026-10-16 | SpaceX | Rack Design Engineer (Starmind) | Bastrop, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8895441002?gh_jid=8895441002) |
 |  2026-11-06 | Samsara | Lead Product Designer | Remote - US | full-time | [link](https://www.samsara.com/company/careers/roles/8358687?gh_jid=8358687) |
 |  2026-11-05 | Fivetran | Product Designer II | Oakland, California, United States, AMER | full-time | [link](https://www.fivetran.com/careers/job?gh_jid=8040639003) |
 |  2026-10-28 | Gameloft | Lead UI Artist [Freelance] | Barcelona, CT | full-time | [link](https://jobs.smartrecruiters.com/Gameloft/744000158285779) |
-|  2026-11-13 | Warner Bros Games | Advanced Designer, Narrative | UT Salt Lake City 175 East 400 South | full-time | [link](https://warnerbros.wd5.myworkdayjobs.com/en-US/global/job/UT-Salt-Lake-City-175-East-400-South/Advanced-Designer--Narrative_R000108894) |
-|  🆕 2026-11-11 | Microsoft | Design Lead | United States, Washington, Redmond | full-time | [link](https://jobs.careers.microsoft.com/global/en/job/200066466) |
-|  2026-10-15 | Gamma | UI Engineer | San Francisco | full-time | [link](https://jobs.ashbyhq.com/gamma/48508f9a-06e6-4394-b97d-b69bab2a5485) |
-|  2026-11-10 | Snapchat | Creative Strategist | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Creative-Strategist_R0047414-1) |
+|  2026-11-14 | Warner Bros Games | Advanced Designer, Narrative | UT Salt Lake City 175 East 400 South | full-time | [link](https://warnerbros.wd5.myworkdayjobs.com/en-US/global/job/UT-Salt-Lake-City-175-East-400-South/Advanced-Designer--Narrative_R000108894) |
+|  2026-11-11 | Snapchat | Creative Strategist | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Creative-Strategist_R0047414-1) |
 |  2026-11-10 | Apple | Designer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694394) |
-|  🆕 2026-11-09 | Microsoft | Brand & Campaign Designer | United States, Washington, Redmond | full-time | [link](https://jobs.careers.microsoft.com/global/en/job/200064701) |
 |  2026-11-05 | Google | Experience Designer, Demos and Creative Strategy | San Jose, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/130528647768351430) |
+|  🆕 2026-11-05 | Apple | Layout/Mask Designer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691672) |
 |  2026-11-04 | Perplexity | Content Designer | San Francisco | full-time | [link](https://jobs.ashbyhq.com/Perplexity/0807f77b-4499-498a-b2bf-3cd44d965138) |
 |  2026-11-04 | NBCUniversal (DreamWorks) | Learning Experience Designer | Universal City, CA | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000159706969) |
 |  2026-11-04 | NBCUniversal (DreamWorks) | Designer, Design & Development (Toys) | Universal City, CALIFORNIA | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000159693639) |
@@ -1453,17 +1494,15 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-26 | Figma | Business Systems Architect | San Francisco, CA • New York, NY • United States | full-time | [link](https://boards.greenhouse.io/figma/jobs/6232410004?gh_jid=6232410004) |
 |  2026-10-24 | Pinterest | Designer, PPM | Remote, US | full-time | [link](https://www.pinterestcareers.com/jobs/?gh_jid=8268336) |
 |  2026-10-23 | Scale AI | Creative Advisor - Human Frontier Collective | United States | full-time | [link](https://job-boards.greenhouse.io/scaleai/jobs/4747295005) |
-|  2026-10-21 | Warner Bros Games | Advanced Designer, Systems | UT Salt Lake City 175 East 400 South | full-time | [link](https://warnerbros.wd5.myworkdayjobs.com/en-US/global/job/UT-Salt-Lake-City-175-East-400-South/Advanced-Designer--Systems_R000109059) |
+|  2026-10-22 | Warner Bros Games | Advanced Designer, Systems | UT Salt Lake City 175 East 400 South | full-time | [link](https://warnerbros.wd5.myworkdayjobs.com/en-US/global/job/UT-Salt-Lake-City-175-East-400-South/Advanced-Designer--Systems_R000109059) |
 |  2026-10-16 | Scale AI | Web Designer, Brand Web Experience | New York, NY; San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/scaleai/jobs/4743989005) |
-|  2026-10-15 | Stripe | Workplace Design Coordinator | SF, NYC, SEA, TOR | full-time | [link](https://stripe.com/jobs/search?gh_jid=8275261) |
 |  2026-11-05 | Anduril |  Leadership Development Designer & Facilitator (Manufacturing)  | Ashville, Ohio, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5240674007?gh_jid=5240674007) |
 |  2026-10-26 | SpaceX | Spatial Interior Designer (Starlink) | Bastrop, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8918126002?gh_jid=8918126002) |
 |  2026-10-19 | Mercor | Brand Design Lead | San Francisco | full-time | [link](https://jobs.ashbyhq.com/mercor/9a012d72-f296-48fa-a9b9-f77ea3ea14b0) |
-|  2026-10-16 | Anduril | Electronics Designer, Space | Waltham, Massachusetts, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5267595007?gh_jid=5267595007) |
 |  2026-10-16 | Anduril | Electronics Designer, Space | Boulder, Colorado, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5267597007?gh_jid=5267597007) |
-|  2026-10-15 | Hasbro (WotC) | Digital Designer (Contract/Temporary) - D&D | Renton, Washington, United States | full-time | [link](https://job-boards.greenhouse.io/hasbro/jobs/4454683009) |
+|  2026-10-16 | Anduril | Electronics Designer, Space | Waltham, Massachusetts, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5267595007?gh_jid=5267595007) |
 
-## Software Engineering (1444 recent)
+## Software Engineering (1439 recent)
 
 | Posted | Company | Role | Location | Level · Term | Apply |
 |---|---|---|---|---|---|
@@ -1479,11 +1518,9 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ⭐ 2026-11-06 | Notion | Software Engineer Intern - iOS | NYC | intern | [link](https://jobs.ashbyhq.com/notion/27090d0f-07d3-419b-adaa-837b5e22f947/application?embed=true) |
 | ⭐ 2026-11-06 | Notion | Software Engineer Intern - Frontend | NYC | intern | [link](https://jobs.ashbyhq.com/notion/43ffba97-b64a-4c6a-ac13-c803253c9413/application?embed=true) |
 | ⭐ 2026-11-05 | Palantir | Software Engineer, Internship - Sovereign AI Systems | New York, NY | intern | [link](https://jobs.lever.co/palantir/cd64bcd4-50bb-4aeb-a135-4e0487ffd312) |
-| 🔥⭐ 🆕 2026-11-05 | Microsoft | Software Engineer: Security & Identity Intern Opportunities for University Students, Redmond | United States, Washington, Redmond | intern | [link](https://jobs.careers.microsoft.com/global/en/job/200042199) |
 | ⭐ 2026-11-05 | Palantir | Software Engineer Intern - Sovereign AI Systems | NYC | intern | [link](https://jobs.lever.co/palantir/cd64bcd4-50bb-4aeb-a135-4e0487ffd312/apply) |
 | ⭐ 2026-11-04 | Palantir | Software Engineer, Intern - Connectivity Platform and Product | New York, NY | intern | [link](https://jobs.lever.co/palantir/130ee501-bd22-4d44-b651-39581ef97743) |
 | ⭐ 2026-11-04 | Palantir | Software Engineer, Internship - Data Connectors | New York, NY | intern | [link](https://jobs.lever.co/palantir/45e4617d-d658-4b30-8dc9-378ca84a027a) |
-| 🔥⭐ 🆕 2026-11-03 | Microsoft | Software Engineer, Teamwork Experiences Internship Opportunities | United States, Washington, Redmond | intern | [link](https://jobs.careers.microsoft.com/global/en/job/200061280) |
 | ⭐ 2026-11-02 | Microsoft | Software Engineer Intern | United States | intern | [link](https://apply.careers.microsoft.com/careers/job/1970393557044764) |
 | ⭐ 2026-10-30 | Nintendo | Intern - Software Engineer, Performance Tools (NTD) | Redmond, WA | intern | [link](https://careers.nintendo.com/?gh_jid=4473568009) |
 | ⭐ 2026-10-30 | Amazon | Software Engineer Intern - Machine Learning/Automated Reasoning | Boston, MA | intern | [link](https://amazon.jobs/en/jobs/10593521/software-development-engineer-intern-machine-learning-automated-reasoning-summer-2027) |
@@ -1496,17 +1533,18 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ⭐ 2026-10-28 | Nintendo | Intern - Software Engineer, Platform Security (NTD) | Redmond, WA | intern | [link](https://careers.nintendo.com/?gh_jid=4469778009) |
 | ⭐ 2026-10-23 | Amazon | Software Engineer Intern - AWS Database | United States | intern | [link](https://amazon.jobs/en/jobs/10565667/software-development-engineer-intern-aws-database-2027-us) |
 | ⭐ 2026-10-23 | Amazon | Software Engineer Intern | Redmond, WA | intern | [link](https://amazon.jobs/en/jobs/10587999/software-development-engineer-intern-amazon-leo-summer-2027-usa) |
+| ◐ 2026-10-22 | DocuSign | Software Engineer Intern | US-Seattle-3rd | intern | [link](https://careers.docusign.com/careers-home/jobs/30478) |
+| ◐ 2026-10-22 | Palantir | Forward Deployed Software Engineer, Internship - Warp Speed | New York, NY | intern | [link](https://jobs.lever.co/palantir/b3d81928-6c26-432f-8a0a-36602c2eefcb) |
+| ◐ 2026-10-22 | Palantir | Forward Deployed Software Engineer Intern - Warp Speed | NYC | intern | [link](https://jobs.lever.co/palantir/b3d81928-6c26-432f-8a0a-36602c2eefcb/apply) |
+| ◐ 2026-11-13 | Micron | Intern - IT Software Engineer | Boise, ID - Main Site | intern | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---IT-Software-Engineer_JR111582) |
 | ◐ 2026-11-13 | Aurora Innovation | Software Engineer Intern - Vehicle Platforms | Mountain View, CA | intern | [link](https://jobs.ashbyhq.com/aurora-operations-inc/06daa269-c02b-43a4-88b8-b57a3ba335ef/application?embed=true) |
 | ◐ 2026-11-13 | Valeo | Software Engineer Intern | Troy, MI | intern | [link](https://valeo.wd3.myworkdayjobs.com/en-US/valeo_jobs/job/Troy-MI/Software-Engineer-Intern--Year-Round-_REQ2026081794) |
 | ◐ 2026-11-13 | Camping World | Software Engineer Intern | Chicago, IL | intern | [link](https://campingworld.wd5.myworkdayjobs.com/en-US/Jobs/job/Lincolnshire-IL/Software-Engineering-Intern_26_09080) |
-| ◐ 2026-10-22 | Palantir | Forward Deployed Software Engineer, Internship - Warp Speed | New York, NY | intern | [link](https://jobs.lever.co/palantir/b3d81928-6c26-432f-8a0a-36602c2eefcb) |
-| ◐ 2026-10-22 | DocuSign | Software Engineer Intern | US-Seattle-3rd | intern | [link](https://careers.docusign.com/careers-home/jobs/30478) |
-| ◐ 2026-10-22 | Palantir | Forward Deployed Software Engineer Intern - Warp Speed | NYC | intern | [link](https://jobs.lever.co/palantir/b3d81928-6c26-432f-8a0a-36602c2eefcb/apply) |
 | ◐ 2026-10-21 | DocuSign | Software Engineer Intern | US-Chicago | intern | [link](https://careers.docusign.com/careers-home/jobs/30470) |
-| 🔥◐ 🆕 2026-10-21 | Microsoft | Software Engineer: Security & Identity Intern Opportunities for University Students, Cambridge | United States, Massachusetts, Cambridge | intern | [link](https://jobs.careers.microsoft.com/global/en/job/200063141) |
 | ◐ 2026-10-21 | Uber | Software Engineer Intern | Seattle, WA | intern | [link](https://iaziqy.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/303922) |
 | ◐ 2026-10-20 | Palantir | Software Engineer Intern - Query Engines | NYC | intern | [link](https://jobs.lever.co/palantir/da774f81-c98c-4dcf-9b9c-949fd7d90a13/apply) |
-| 🔥◐ 🆕 2026-11-12 | Micron | Intern - IT Software Engineer | Boise, ID - Main Site | intern | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---IT-Software-Engineer_JR111582) |
+| ◐ 2026-10-19 | Nintendo | Intern - IT Software Engineer | Redmond, WA | intern | [link](https://careers.nintendo.com/?gh_jid=4421632009) |
+| ◐ 2026-10-19 | Palantir | Software Engineer, Internship - Query Engines | New York, NY | intern | [link](https://jobs.lever.co/palantir/da774f81-c98c-4dcf-9b9c-949fd7d90a13) |
 | ◐ 2026-11-12 | Bask Health | Frontend Engineer Intern - Frontend Engineering | Remote in USA | intern | [link](https://apply.workable.com/bask-health-1/j/9C2964C7CD/apply) |
 | ◐ 2026-11-12 | Wolters Kluwer | Product Software Engineer Intern | Waltham, MA | intern | [link](https://wk.wd3.myworkdayjobs.com/en-US/External/job/USA---Waltham-MA/Product-Software-Engineer_R0061394) |
 | ◐ 2026-11-12 | Leidos | Junior Software Engineer / Data Scientist Intern | Tucson, AZ | intern | [link](https://leidos.wd5.myworkdayjobs.com/External/job/Tucson-AZ/Junior-Software-Engineer---Data-Scientist-Intern_R-00196510) |
@@ -1515,9 +1553,6 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ◐ 2026-11-12 | Cintas | IT OT Software Engineer Intern | Mason, OH | intern | [link](https://careers.cintas.com/job/Mason-IT-Intern-OT-Software-Engineer-OH-45040/1450367200/?ats=successfactors) |
 | ◐ 2026-11-12 | CareSource | Software Engineer Intern | Remote in USA | intern | [link](https://caresource.wd1.myworkdayjobs.com/caresource/job/Remote/XMLNAME-2027-Summer-Internship-Program---Software-Engineer_R14136) |
 | ◐ 2026-11-12 | Vital Lyfe | Software Engineer Intern | Torrance, CA | intern | [link](https://jobs.ashbyhq.com/vital-lyfe/5b5e7e6d-d59e-410b-9a7f-619717c3c942/application?embed=true) |
-| ◐ 2026-10-19 | Nintendo | Intern - IT Software Engineer | Redmond, WA | intern | [link](https://careers.nintendo.com/?gh_jid=4421632009) |
-| ◐ 2026-10-19 | Palantir | Software Engineer, Internship - Query Engines | New York, NY | intern | [link](https://jobs.lever.co/palantir/da774f81-c98c-4dcf-9b9c-949fd7d90a13) |
-| ◐ 🆕 2026-11-13 | Microsoft | Research Intern - MSR Software-Hardware Co-design | United States, Washington, Redmond | intern | [link](https://jobs.careers.microsoft.com/global/en/job/200067399) |
 | ◐ 2026-11-13 | Microsoft | Research Intern - Microsoft Research Software-Hardware Co-design | Redmond, WA | intern | [link](https://apply.careers.microsoft.com/careers/job/1970393557073455) |
 | ◐ 2026-11-11 | Unisys | Software Engineer Intern | Eagan, MN | intern | [link](https://unisys.wd5.myworkdayjobs.com/en-US/External/job/Eagan-MN-United-States-of-America/Software-Engineer-Intern_REQ575421) |
 | ◐ 2026-11-11 | RTX | Software Engineer Intern | Cedar Rapids, IA | intern | [link](https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-IA-CEDAR-RAPIDS-143--855-35Th-St-NE--BLDG-143/Software-Engineering-Intern--Summer-2027-_01888055) |
@@ -1548,8 +1583,8 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ◐ 2026-11-09 | McDonald's | Software Engineer Intern | Chicago, IL | intern | [link](https://jobs.mcdonalds.com/job/Chicago-Software-Development-Engineer-Intern-IL-60607/1449052900/?ats=successfactors) |
 | ◐ 2026-10-23 | KLA Corporation | Software Engineer Intern - C++ - Linux | Milpitas, CA | intern | [link](https://kla.wd1.myworkdayjobs.com/UR/job/Milpitas-CA/Software-Engineer-Intern--C----Linux----Summer-2027_2641878) |
 | ◐ 2026-11-08 | Formulary Financial | Software Engineer Intern | NYC | intern | [link](https://jobs.ashbyhq.com/formulary/bbc4fef5-3cff-4879-89bc-65aba1214b04/application?embed=true) |
+| ◐ 2026-11-10 | NVIDIA | Systems Research Intern, Observability – Summer 2027 | US, CA, Santa Clara | intern | [link](https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Systems-Research-Intern--Observability---Summer-2027_JR2026644) |
 | ◐ 2026-11-10 | NVIDIA | AI Operations Intern - AI Clouds | Santa Clara, CA | intern | [link](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/AI-Operations-Intern--AI-Clouds---Summer-2027_JR2029119-1) |
-| ◐ 2026-11-09 | NVIDIA | Systems Research Intern, Observability – Summer 2027 | US, CA, Santa Clara | intern | [link](https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Systems-Research-Intern--Observability---Summer-2027_JR2026644) |
 | ◐ 2026-11-09 | NVIDIA | Systems Research Intern - Observability | Canada | intern | [link](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Systems-Research-Intern--Observability---Summer-2027_JR2026644) |
 | ◐ 2026-11-06 | Waymo | 2027 Summer Intern, BS/MS, Software Engineer, Multiverse | San Francisco, California, USA | intern | [link](https://careers.withwaymo.com/jobs?gh_jid=8350832) |
 | ◐ 2026-11-06 | Light & Wonder | Software Engineer Intern | Reno, NV | intern | [link](https://lnw.wd5.myworkdayjobs.com/lightwonderexternalcareers/job/Reno-NV/Intern-Software-Engineering_R322885) |
@@ -1587,7 +1622,6 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ◐ 2026-11-03 | Northrop Grumman | Flight Software Engineer Intern | Manhattan Beach, CA | intern | [link](https://ngc.wd1.myworkdayjobs.com/Northrop_Grumman_External_Site/job/United-States-California-Manhattan-Beach/XMLNAME-2027-Flight-Software-Engineer-Intern---Redondo-Beach-CA_R10259032) |
 | ◐ 2026-11-03 | Northrop Grumman | Ground Software Engineer Intern | Redondo Beach, CA | intern | [link](https://ngc.wd1.myworkdayjobs.com/Northrop_Grumman_External_Site/job/United-States-California-Redondo-Beach/XMLNAME-2027-Ground-Software-Engineer-Intern---Redondo-Beach-CA_R10259057) |
 | ◐ 2026-11-03 | General Dynamics Mission Systems | Software Engineer Intern | Taunton, MA | intern | [link](https://careers-gdms.icims.com/jobs/75755/job?mobile=true&needsRedirect=false) |
-| ◐ 🆕 2026-11-05 | Microsoft | Research Intern - Research in Software Engineering, ML Systems, Agents | United States, Washington, Redmond | intern | [link](https://jobs.careers.microsoft.com/global/en/job/200065702) |
 | ◐ 2026-11-05 | Microsoft | Research Intern - Multiple Teams | Redmond, WA | intern | [link](https://apply.careers.microsoft.com/careers/job/1970393557054069) |
 | ◐ 2026-11-02 | Roku | Software Engineer Intern - AI Engineering | San Jose, CA | intern | [link](https://www.weareroku.com/jobs/8258241?gh_jid=8258241) |
 | ◐ 2026-11-02 | ParetoHealth | Software Engineer Intern | Philadelphia, PA | intern | [link](https://job-boards.greenhouse.io/paretocaptiveservicesllc/jobs/4726117006) |
@@ -1665,7 +1699,6 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-22 | CVS Health | Software Engineer Intern - Platform & Applications | Dallas, TX | intern | [link](https://cvshealth.wd1.myworkdayjobs.com/CVS_Health_Careers/job/AZ---Scottsdale/Innovation-Technology-Internship-Software-Engineering--Platform---Applications-Summer-2027-Undergrad_R1081193) |
 |  2026-10-26 | Amazon | Tech Ops Engineer Intern, 2027 Tech Ops Intern | San Diego, CA | intern | [link](https://www.amazon.jobs/en/jobs/10588969/tech-ops-engineer-intern-2027-tech-ops-intern) |
 |  2026-10-21 | John Deere | Software Engineer Student Intern - Product Engineering | Cary, NC | intern | [link](https://johndeere.eightfold.ai/careers/job/137483990019) |
-|  2026-11-14 | SAS | Software Developer Intern - Go/Golang Experience | Cary, NC | intern | [link](https://careers-sas.icims.com/jobs/42797/job?mobile=true&needsRedirect=false) |
 |  2026-10-20 | Textron | Industrial Software Engineer Intern | Williamsport, PA | intern | [link](https://textron.taleo.net/careersection/textron/jobdetail.ftl?job=345735) |
 |  2026-10-20 | Texas Instruments | Software Engineer Intern - Compiler | Sugar Land, TX | intern | [link](https://edbz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/25019103) |
 |  2026-10-20 | Allstate | Software Engineer Intern | North Carolina | intern | [link](https://allstate.wd5.myworkdayjobs.com/sourcing_event/job/USA---NC-Remote/Arity---Software-Engineer-Intern_R36266) |
@@ -1674,6 +1707,8 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-20 | AeroVironment | Software Engineer Intern | San Diego, CA | intern | [link](https://avav.wd1.myworkdayjobs.com/en-US/avav/job/San-Diego-CA/Software-Engineering-Intern_8828) |
 |  2026-10-20 | Hewlett Packard Enterprise | Embedded Software Engineer Intern | Roseville, CA | intern | [link](https://hpe.wd5.myworkdayjobs.com/jobsathpe/job/Roseville-California-United-States-of-America/Embedded-Software-Engineering-Intern_1214088) |
 |  2026-10-20 | Integrate | Software Engineer Intern | Seattle, WA | intern | [link](https://jobs.ashbyhq.com/integrate/7681f59b-70c0-414b-96d9-ae8925cc2ed3/application?embed=true) |
+| 🔥 2026-11-14 | Micron | Intern -  AI Engineer Platform | Boise, ID - Main Site | intern | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern----AI-Engineer-Platform_JR115934) |
+|  2026-11-14 | SAS | Software Developer Intern - Go/Golang Experience | Cary, NC | intern | [link](https://careers-sas.icims.com/jobs/42797/job?mobile=true&needsRedirect=false) |
 |  2026-10-19 | HeyGen | Software Engineer Intern | Toronto, ON, Canada | intern | [link](https://job-boards.greenhouse.io/heygen/jobs/4540716007) |
 |  2026-10-19 | Bracebridge Capital | Software Engineer: Business Intelligence Co-op | Boston, MA | intern | [link](https://job-boards.greenhouse.io/bracebridgecapital/jobs/4744999005) |
 |  2026-10-19 | Salesforce | Software Engineer Intern | SF | intern | [link](https://salesforce.wd12.myworkdayjobs.com/Futureforce_Internships/job/California---San-Francisco/Summer-2027-Intern---Software-Engineer--Security-Government-_JR364911) |
@@ -1683,16 +1718,6 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-19 | Inversion Space | AI & Internal Tools Software Engineer Intern | Playa Vista, LA | intern | [link](https://job-boards.greenhouse.io/inversionspace/jobs/4745076005) |
 |  2026-10-19 | Patreon | Software Engineer Intern | NYC | intern | [link](https://jobs.ashbyhq.com/patreon/cefe07ab-ba4f-48cc-86b9-a88b1859a95c/application?embed=true) |
 |  2026-10-23 | Amazon | Software Development Engineer Intern, Amazon Leo - Summer 2027 (USA) | Redmond, WA | intern | [link](https://www.amazon.jobs/en/jobs/10587999/software-development-engineer-intern-amazon-leo-summer-2027-usa) |
-|  2026-11-11 | Riot Games | Anti-Cheat Engineering Intern (Masters/PhD) - Summer 2027 | Los Angeles, USA | intern | [link](https://www.riotgames.com/en/work-with-us/job/8356789?gh_jid=8356789) |
-|  2026-11-11 | NBCUniversal (DreamWorks) | Software Engineering Internships – Summer 2027 | Universal City, CA | intern | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000161179529) |
-| 🔥 🆕 2026-11-13 | Micron | Intern -  AI Engineer Platform | Boise, ID - Main Site | intern | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern----AI-Engineer-Platform_JR115934) |
-|  2026-11-13 | Samsung | Compiler Engineer Intern | San Jose, CA | intern | [link](https://job-boards.greenhouse.io/samsungsemiconductor/jobs/8202902003) |
-|  2026-11-13 | Hiebing | AI Agent Developer Intern | Madison, WI | intern | [link](https://hiebing.applytojob.com/apply/yIhDpeWv4F/AI-Agent-Developer-Intern) |
-|  2026-11-13 | FieldPulse | AI Intern | Dallas, TX | intern | [link](https://ats.rippling.com/fieldpulse/jobs/bfade8ef-2509-4042-b400-019fe3a84a7d) |
-|  2026-11-13 | Samsung | ML Compiler Intern - Kernel Auto-Tuning | San Jose, CA | intern | [link](https://job-boards.greenhouse.io/samsungsemiconductor/jobs/8203052003) |
-|  🆕 2026-11-13 | Shield AI | Engineer 1 New Grad - Software | Arlington County, Arlington, VA | intern | [link](https://jobs.ashbyhq.com/f7d8749a-72d6-407c-bf98-292ea630c73a/7e0ae8a3-4872-431c-a04a-2f2b8988b527/application?embed=true) |
-|  2026-11-13 | Martin Marietta | Software Data Integration Engineer Intern | Raleigh, NC | intern | [link](https://martinmarietta.wd5.myworkdayjobs.com/Martin_Marietta_Careers/job/Raleigh-NC/Intern--Software-Data-Integration-Engineer_JR024146) |
-|  2026-11-13 | Daimler Truck | IT Developer Analyst Intern | Mt Holly, NC | intern | [link](https://dtna.wd5.myworkdayjobs.com/dtna_affiliate/job/Mount-Holly-NC-US/IT-Developer-Analyst-Intern_DT-20681-1) |
 |  2026-10-16 | Healthpeak Properties | Forward Deployed Software Engineer Intern | NYC | intern | [link](https://healthpeak.applytojob.com/apply/ss4v1Qi95q/Forward-Deployed-Software-Engineer-Internship) |
 |  2026-10-16 | Healthpeak Properties | Forward Deployed Software Engineer Intern | Irvine, CA | intern | [link](https://healthpeak.applytojob.com/apply/RTf9TfJE4h/Forward-Deployed-Software-Engineer-Internship) |
 |  2026-10-16 | Impulse Space | Enterprise Software Engineer Intern | Redondo Beach, CA | intern | [link](https://impulsespace.pinpointhq.com/en/postings/66981a77-8e79-4050-9818-4ed4209c5579?ats=pinpointhq) |
@@ -1702,21 +1727,24 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-16 | AeroVironment | Software Engineer Intern | Moorpark, CA | intern | [link](https://avav.wd1.myworkdayjobs.com/en-US/avav/job/Moorpark-CA/Software-Engineering-Intern_9094) |
 |  2026-10-16 | Ryan | Software Engineer Intern | Plano, TX | intern | [link](https://ryan.wd1.myworkdayjobs.com/RyanCareers/job/Plano/Summer-2027-Intern--Software-Engineering_R0020843-1) |
 |  2026-10-16 | AiDash | Software Engineer Intern - Backend | Palo Alto, CA | intern | [link](https://job-boards.greenhouse.io/aidashinc/jobs/4436057009) |
+|  2026-11-11 | Riot Games | Anti-Cheat Engineering Intern (Masters/PhD) - Summer 2027 | Los Angeles, USA | intern | [link](https://www.riotgames.com/en/work-with-us/job/8356789?gh_jid=8356789) |
+|  2026-11-11 | NBCUniversal (DreamWorks) | Software Engineering Internships – Summer 2027 | Universal City, CA | intern | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000161179529) |
+|  2026-11-11 | NVIDIA | Performance Engineering Intern, Platform Performance and Power -  Spring 2027 | US, CA, Santa Clara | intern | [link](https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Performance-Engineering-Intern--Platform-Performance-and-Power----Spring-2027_JR2029541) |
 |  2026-10-22 | Amazon | System Development Engineer Intern/Co-op, ROBOTICS -  2027 | North Reading, MA | intern | [link](https://www.amazon.jobs/en/jobs/10587087/system-development-engineer-intern-co-op-robotics-2027) |
-|  2026-10-15 | Muon Space | Ground Software Engineer Intern | San Jose, CA | intern | [link](https://job-boards.greenhouse.io/muonspace/jobs/5266679007) |
-|  2026-10-15 | Axiom Space | Software Engineer Intern | Houston, TX | intern | [link](https://axiomspace.wd5.myworkdayjobs.com/External_Career_Site/job/Houston/Software-Engineering-Intern--Summer-2027-_JR100767) |
-|  2026-10-15 | Texas Instruments | Web Marketing Intern - Front-end Developer | Dallas, TX | intern | [link](https://edbz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/25018753) |
-|  2026-10-15 | Engramme | Full-Stack Software Engineer Co-op Intern | SF | intern | [link](https://jobs.ashbyhq.com/engramme/06517730-61e8-4e73-bd95-2816b391a9d2/application?embed=true) |
-|  2026-10-15 | Engramme | Back-End Software Engineer Co-op Intern | SF | intern | [link](https://jobs.ashbyhq.com/engramme/9233d3f9-83d2-4967-ad97-176c11e16696/application?embed=true) |
-|  2026-10-20 | Adobe | 2027 Intern - Security Engineer | San Jose | intern | [link](https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/San-Jose/XMLNAME-2027-Intern---Security-Engineer_R173001) |
-|  2026-11-10 | NVIDIA | Performance Engineering Intern, Platform Performance and Power -  Spring 2027 | US, CA, Santa Clara | intern | [link](https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Performance-Engineering-Intern--Platform-Performance-and-Power----Spring-2027_JR2029541) |
+|  2026-11-13 | Samsung | Compiler Engineer Intern | San Jose, CA | intern | [link](https://job-boards.greenhouse.io/samsungsemiconductor/jobs/8202902003) |
+|  2026-11-13 | Hiebing | AI Agent Developer Intern | Madison, WI | intern | [link](https://hiebing.applytojob.com/apply/yIhDpeWv4F/AI-Agent-Developer-Intern) |
+|  2026-11-13 | FieldPulse | AI Intern | Dallas, TX | intern | [link](https://ats.rippling.com/fieldpulse/jobs/bfade8ef-2509-4042-b400-019fe3a84a7d) |
+|  2026-11-13 | Samsung | ML Compiler Intern - Kernel Auto-Tuning | San Jose, CA | intern | [link](https://job-boards.greenhouse.io/samsungsemiconductor/jobs/8203052003) |
+|  2026-11-13 | Martin Marietta | Software Data Integration Engineer Intern | Raleigh, NC | intern | [link](https://martinmarietta.wd5.myworkdayjobs.com/Martin_Marietta_Careers/job/Raleigh-NC/Intern--Software-Data-Integration-Engineer_JR024146) |
+|  2026-11-13 | Daimler Truck | IT Developer Analyst Intern | Mt Holly, NC | intern | [link](https://dtna.wd5.myworkdayjobs.com/dtna_affiliate/job/Mount-Holly-NC-US/IT-Developer-Analyst-Intern_DT-20681-1) |
+|  2026-10-21 | Adobe | 2027 Intern - Security Engineer | San Jose | intern | [link](https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/San-Jose/XMLNAME-2027-Intern---Security-Engineer_R173001) |
+|  2026-10-19 | Nintendo | Intern - IT Microsoft 365 Systems Engineer | Redmond, WA | intern | [link](https://careers.nintendo.com/?gh_jid=4417323009) |
+|  2026-10-19 | Nintendo | Intern – IT Platform Engineer | Redmond, WA | intern | [link](https://careers.nintendo.com/?gh_jid=4417311009) |
+|  2026-10-19 | Adobe | AI & Architecture Intern | San Jose, CA | intern | [link](https://adobe.wd5.myworkdayjobs.com/external_experienced/job/San-Jose/XMLNAME-2027-Intern---AI---Architecture_R172998) |
 |  2026-11-12 | Fresenius Medical Care | Agentic AI Analytics Co-op | Lawrence, MA | intern | [link](https://freseniusmedicalcare.wd3.myworkdayjobs.com/fme/job/Lawrence-MA-USA/Agentic-AI-Analytics-Co-op_R0277797) |
 |  2026-11-12 | Lightmatter | Data & AI Platform Intern | Boston, MA | intern | [link](https://boards.greenhouse.io/lightmatter/jobs/5474807008) |
 |  2026-11-12 | Atalanta | Forward Deployed Engineer Intern | Washington, DC | intern | [link](https://jobs.ashbyhq.com/atalanta/732425ff-3461-49e6-9022-5b0cd732e6c1/application?embed=true) |
 |  2026-11-12 | Bask Health | AI Engineering Intern | Remote in USA | intern | [link](https://apply.workable.com/bask-health-1/j/F0E122E877/apply) |
-|  2026-10-19 | Nintendo | Intern - IT Microsoft 365 Systems Engineer | Redmond, WA | intern | [link](https://careers.nintendo.com/?gh_jid=4417323009) |
-|  2026-10-19 | Nintendo | Intern – IT Platform Engineer | Redmond, WA | intern | [link](https://careers.nintendo.com/?gh_jid=4417311009) |
-|  2026-10-19 | Adobe | AI & Architecture Intern | San Jose, CA | intern | [link](https://adobe.wd5.myworkdayjobs.com/external_experienced/job/San-Jose/XMLNAME-2027-Intern---AI---Architecture_R172998) |
 |  2026-11-09 | NBCUniversal (DreamWorks) | NBC News Group Technology Internships – Summer 2027 | New York, NY | intern | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000160731770) |
 |  2026-11-09 | NBCUniversal (DreamWorks) | Platform Distribution & Partnerships: Business Development, Sales & Marketing Internships – Summer 2027 | Universal City, CA | intern | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000160661852) |
 |  2026-11-09 | NBCUniversal (DreamWorks) | Platform Distribution & Partnerships: Business Development, Sales & Marketing Internships – Summer 2027 | New York, NY | intern | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000160664279) |
@@ -1725,6 +1753,8 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-09 | NBCUniversal (DreamWorks) | Media Tech: Product & Engineering Internships – Summer 2027 | Miami, FL | intern | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000160653439) |
 |  2026-11-09 | NBCUniversal (DreamWorks) | Media Tech: Product & Engineering Internships – Summer 2027 | Universal City, CA | intern | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000160652254) |
 |  2026-11-09 | NBCUniversal (DreamWorks) | Media Tech: Product & Engineering Internships – Summer 2027 | New York, NY | intern | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000160652809) |
+|  2026-10-16 | Tencent | Site Reliability Engineer (SRE) Intern — AI Infrastructure | US-California-Palo Alto | intern | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-California-Palo-Alto/Site-Reliability-Engineer--SRE--Intern---AI-Infrastructure_R108158-1) |
+|  2026-10-16 | Tencent | Cyber Security Engineer Intern | US-California-Palo Alto | intern | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-California-Palo-Alto/Cyber-Security-Engineer-Intern_R108141-2) |
 |  2026-11-11 | Tesla | Software Developer Intern - IT Apps | Fremont, CA | intern | [link](https://www.tesla.com/careers/search/job/289683) |
 |  2026-11-11 | SHOPLINE | AI Skill Developer Intern | United States | intern | [link](https://shopline.applytojob.com/apply/Ujgi4rGMS1/AI-Skill-Agent-Skill-Builder-Intern) |
 |  2026-11-11 | Rockwell Automation | Software Developer/Engineering Intern | Mequon, WI | intern | [link](https://rockwellautomation.wd1.myworkdayjobs.com/External_Rockwell_Automation/job/Mequon-Wisconsin-United-States/Intern--Software-Developer-Engineering_R26-8666-2) |
@@ -1733,14 +1763,10 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-11 | Bask Health | Backend Engineer Intern - Backend Engineering | Remote in USA | intern | [link](https://apply.workable.com/bask-health-1/j/98DB106D88/apply) |
 |  2026-11-11 | Bose | Agentic AI Engineering Co-op - Active Noise Cancellation | Framingham, MA | intern | [link](https://boseallaboutme.wd503.myworkdayjobs.com/Bose_Careers/job/US-MA---Framingham/Agentic-AI-Engineering-Co-op---Active-Noise-Cancellation---Fall-2027_R29391) |
 |  2026-11-11 | HUB International | AI Engineer Intern | Chicago, IL | intern | [link](https://hubinternational.wd1.myworkdayjobs.com/hubinternational/job/Chicago-IL/AI-Engineering-Intern_R0039470) |
-|  2026-11-11 | Shield AI | Engineer 2 New Grad - Software - Autonomy Capabilities | United States | intern | [link](https://jobs.ashbyhq.com/shield/24de5a65-86ce-4269-ad26-0a3e85b42eec/application?embed=true) |
 |  2026-11-11 | Shive-Hattery | Software Developer Intern - Software Development | Iowa City, IA | intern | [link](https://recruiting.paylocity.com/Recruiting/Jobs/Details/4619793) |
 |  2026-11-11 | Bloom Energy | AI Solutions Engineer Intern | San Jose, CA | intern | [link](https://bloomenergy.wd1.myworkdayjobs.com/bloomenergycareers/job/San-Jose-California/AI-Solutions-Engineer-Intern_JR-25361) |
 |  2026-11-11 | Bloom Energy | Remote Monitoring Control Center Systems Engineer Intern | San Jose, CA | intern | [link](https://bloomenergy.wd1.myworkdayjobs.com/bloomenergycareers/job/San-Jose-California/RMCC-Systems-Engineering-Intern_JR-25363) |
 |  2026-11-11 | Hewlett Packard Enterprise | Systems Architecture Research Associate Intern - Systems Architecture Lab | Milpitas, CA | intern | [link](https://hpe.wd5.myworkdayjobs.com/jobsathpe/job/Milpitas-California-United-States-of-America/HPE-Labs---Systems-Architecture-Lab-Research-Associate-Intern_1218728) |
-|  2026-10-15 | Tencent | Site Reliability Engineer (SRE) Intern — AI Infrastructure | US-California-Palo Alto | intern | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-California-Palo-Alto/Site-Reliability-Engineer--SRE--Intern---AI-Infrastructure_R108158-1) |
-|  2026-10-15 | Tencent | Cyber Security Engineer Intern | US-California-Palo Alto | intern | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-California-Palo-Alto/Cyber-Security-Engineer-Intern_R108141-2) |
-|  🆕 2026-10-15 | Microsoft | Research Intern - Efficient AI Software Systems | United States, Washington, Redmond | intern | [link](https://jobs.careers.microsoft.com/global/en/job/200062277) |
 |  2026-11-10 | Pika | Applied AI Engineer Intern - Creative Experiences | Palo Alto, CA | intern | [link](https://jobs.ashbyhq.com/pika/b075e6fb-df01-4eac-9437-1c1db97ea881/application?embed=true) |
 |  2026-11-10 | Tesla | Mobile Application Developer Intern | Palo Alto, CA | intern | [link](https://www.tesla.com/careers/search/job/289480) |
 |  2026-11-10 | Altice USA | Developer Intern - Financial & People Systems | Bethpage, NY | intern | [link](https://www.optimumcareers.com/job/Bethpage-Intern-Developer,-Financial-&-People-Systems-NY-11714/1449511200/?ats=successfactors) |
@@ -1762,10 +1788,9 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-09 | UiPath | AI Engineer Intern | Bellevue, WA | intern | [link](https://jobs.ashbyhq.com/uipath/f6857594-645c-4833-aa5b-763e9759b555/application?embed=true) |
 |  2026-11-09 | Trilogy Health Services | Information Systems Developer of AI and Automated Solutions Intern | Louisville, KY | intern | [link](https://jobs.trilogyhs.com/jobs/214624?icims=1&lang=en-us) |
 |  2026-10-23 | Siemens | Python Backend Developer Intern - Energy Flexibility Platform | Princeton, NJ | intern | [link](https://siemens.avature.net/en_US/externaljobs/JobDetail/526984) |
-|  2026-11-08 | Shield AI | Engineer 2 New Grad - Multiple Teams | Washington, DC | intern | [link](https://jobs.lever.co/shieldai/88f7b66e-3412-40c8-b74d-aafc462405ff/apply) |
-|  2026-11-10 | JMP Statistical Discovery | C++ Software Development Intern | Cary, NC | intern | [link](https://jmp-sas.icims.com/jobs/46960/job?mobile=true&needsRedirect=false) |
 |  2026-11-07 | Zoox | AI Workflows & Safety Decision Making Intern | Foster City, CA | intern | [link](https://jobs.lever.co/zoox/0168ad29-2fd8-4c91-865c-b9fff8aa30c1/apply) |
 |  2026-11-07 | Category Labs | Research Intern | NYC | intern | [link](https://jobs.ashbyhq.com/category-labs/248a6400-c18e-4627-9c8c-1b1054869075/application?embed=true) |
+|  2026-11-10 | JMP Statistical Discovery | C++ Software Development Intern | Cary, NC | intern | [link](https://jmp-sas.icims.com/jobs/46960/job?mobile=true&needsRedirect=false) |
 |  2026-11-06 | ASM International | Product Intelligence Engineering Intern - AI/ML | Phoenix, AZ | intern | [link](https://www.asm.com/open-vacancies/?gh_jid=5029228101) |
 |  2026-11-06 | Tinder | Android Engineer Intern | LA | intern | [link](https://jobs.lever.co/matchgroup/f0e29495-4dd2-4bc5-9ceb-31d36f0b5a9d/apply) |
 |  2026-11-06 | Tinder | Backend Engineer Intern | Palo Alto, CA | intern | [link](https://jobs.lever.co/matchgroup/54a814d1-9a73-43d7-a266-c933ffd99ce3/apply) |
@@ -1826,20 +1851,21 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-29 | Noblis | Applied Research Intern | United States | intern | [link](https://careers.noblis.org/jobs/28089?icims=1&lang=en-us) |
 |  2026-10-28 | Pennsylvania State University | Research and Development Engineer Intern | State College, PA | intern | [link](https://psu.wd1.myworkdayjobs.com/PSU_Staff/job/Penn-State-University-Park/R-D-Engineer-Intern_REQ_0000083854-1) |
 |  2026-10-23 | MongoDB | 2027 - Software Engineering Intern, AMER | Austin; New York City; San Francisco | intern | [link](https://www.mongodb.com/careers/job/?gh_jid=8209134) |
+|  2026-10-22 | Twitch | Undergrad Software Engineering Intern (Grad Year: Spring 2028) | San Francisco, CA | intern | [link](https://job-boards.greenhouse.io/twitch/jobs/8886748002) |
+|  2026-10-22 | Twitch | Undergrad Software Engineering Intern (Grad Year: Winter 2027) | San Francisco, CA | intern | [link](https://job-boards.greenhouse.io/twitch/jobs/8886605002) |
+|  2026-10-22 | Adobe | 2027 Intern - Emerging Technology & Innovation | San Jose | intern | [link](https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/San-Jose/XMLNAME-2027-Intern---Data--AI---Innovation_R172997) |
 |  2026-11-13 | Shield AI | Human Machine Teaming Intern | Washington, DC | intern | [link](https://jobs.lever.co/shieldai/a737063e-e831-49e1-98c3-25be44faac30/apply) |
 |  2026-11-13 | Manulife Financial | Software Engineering Co-op Intern | Boston, MA | intern | [link](https://manulife.wd3.myworkdayjobs.com/en-US/MFCJH_adminJobs/job/Boston-Massachusetts/Spring-Co-op-2027---Software-Engineering-Intern_JR26110405) |
 |  2026-11-13 | NextEra Energy | Software Engineering Intern - Technical | St Paul, MN | intern | [link](https://jobs.nexteraenergy.com/job/Juno-Beach-Summer-Intern-Technical-FL-33408/1450749000/?ats=successfactors) |
 |  2026-11-13 | TC Energy | Intelligent Operations Technology Intern | Spokane, WA | intern | [link](https://tcenergy.wd3.myworkdayjobs.com/CAREER_SITE_TC/job/Spokane-Washington/Intern--Intelligent-Operations-Technology_JR-10919) |
 |  2026-11-13 | Capital Group | Global Technology Summer Associate Intern | Irvine, CA | intern | [link](https://capgroup.wd1.myworkdayjobs.com/en-US/capitalgroupcareers/job/Irvine/CAMPUS-Global-Technology-Summer-Associate--2027-_JR7798) |
-|  2026-10-22 | Twitch | Undergrad Software Engineering Intern (Grad Year: Spring 2028) | San Francisco, CA | intern | [link](https://job-boards.greenhouse.io/twitch/jobs/8886748002) |
-|  2026-10-22 | Twitch | Undergrad Software Engineering Intern (Grad Year: Winter 2027) | San Francisco, CA | intern | [link](https://job-boards.greenhouse.io/twitch/jobs/8886605002) |
+|  🆕 2026-11-13 | RTX | Software Engineering Co-op | Richardson, TX | intern | [link](https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-TX-RICHARDSON-C17--1717-Cityline-Dr--CITYLINE-C17/Software-Engineering-Co-op--Summer-Fall-_01884404) |
 |  2026-10-27 | Mayo Clinic | Graduate Engineer Intern - Software Development | Rochester, MN | intern | [link](https://fa-euwp-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/392190) |
 |  2026-10-27 | ASML | Imaging Product Engineer Intern | San Jose, CA | intern | [link](https://asml.wd3.myworkdayjobs.com/asmlext1/job/San-Jose-CA-USA/Internship--Imaging-product-engineer_J-00355220) |
 |  2026-10-27 | Great American Insurance Company | Data Application Engineer Intern | Cincinnati, OH | intern | [link](https://gaig.wd1.myworkdayjobs.com/GAIG_External/job/Cincinnati-OH-USA/Data-Application-Development-Intern---Summer-2027_R9796) |
 |  2026-10-27 | Great American Insurance Company | Claims Lab Developer Intern | Cincinnati, OH | intern | [link](https://gaig.wd1.myworkdayjobs.com/GAIG_External/job/Cincinnati-OH-USA/Claims-Lab-Developer-Intern---Summer-2027_R9803) |
 |  2026-10-21 | Amazon | Associate Delivery Consultant Intern, National Security, AWS Professional Services | Arlington, VA | intern | [link](https://www.amazon.jobs/en/jobs/10585775/associate-delivery-consultant-intern-national-security-aws-professional-services) |
 |  2026-10-21 | Amazon | Associate Delivery Consultant Intern, AWS Professional Services | Arlington, VA | intern | [link](https://www.amazon.jobs/en/jobs/10585774/associate-delivery-consultant-intern-aws-professional-services) |
-|  2026-10-21 | Adobe | 2027 Intern - Emerging Technology & Innovation | San Jose | intern | [link](https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/San-Jose/XMLNAME-2027-Intern---Data--AI---Innovation_R172997) |
 |  2026-10-26 | HCSC | Product Engineer Intern | Chicago, IL | intern | [link](https://hcsc.wd1.myworkdayjobs.com/en-US/HCSC_External/job/IL---Chicago/Early-Careers---Product-Engineering-Developer-Intern_R0059492) |
 |  2026-10-26 | Booz Allen | Summer Games Software Developer Intern | Detroit, MI | intern | [link](https://bah.wd1.myworkdayjobs.com/bah_jobs/job/Detroit-MI/University---2027-Summer-Games-Software-Developer-Intern---Royal-Oaks--MI_R0252340) |
 |  2026-10-26 | Booz Allen | Software Developer Intern | Lexington, MA | intern | [link](https://bah.wd1.myworkdayjobs.com/bah_jobs/job/Lexington-MA/University---2027-Summer-Games-Software-Developer-Intern---Lexington--MA_R0252274) |
@@ -1850,6 +1876,8 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-26 | Booz Allen | Software Developer Intern | Albuquerque, NM | intern | [link](https://bah.wd1.myworkdayjobs.com/bah_jobs/job/Albuquerque-NM/University---2027-Summer-Games-Software-Developer-Intern---Albuquerque--NM_R0252335) |
 |  2026-10-26 | Booz Allen | Software Developer Intern - University - Summer Games | Dayton, OH | intern | [link](https://bah.wd1.myworkdayjobs.com/bah_jobs/job/Dayton-OH/University---2027-Summer-Games-Software-Developer-Intern---Dayton--OH_R0252345) |
 |  2026-10-26 | Prologis | AI and Automation Intern | Denver, CO | intern | [link](https://prologis.wd5.myworkdayjobs.com/Prologis_External_Careers/job/Denver-Colorado/AI-and-Automation--IT--Intern_R6883) |
+|  2026-10-19 | Insomniac Games | Accessibility Intern- Master's or PhD | United States, Burbank, CA | intern | [link](https://job-boards.greenhouse.io/insomniac/jobs/6227618004) |
+|  2026-10-19 | Insomniac Games | Dialogue Intern- Undergraduate | United States, Burbank, CA | intern | [link](https://job-boards.greenhouse.io/insomniac/jobs/6228761004) |
 |  2026-11-12 | Bask Health | Creative Engineering Intern | Remote in USA | intern | [link](https://apply.workable.com/bask-health-1/j/24DD93E3BA/apply) |
 |  2026-11-12 | Motorola Solutions | Systems Engineering Intern | Chicago, IL | intern | [link](https://motorolasolutions.wd5.myworkdayjobs.com/Careers/job/Chicago-IL/North-America--NA--Systems-Engineering-Operations-Internship----2027_R70657) |
 |  2026-11-12 | General Dynamics Information Technology | Programmer Intern | Raleigh, NC | intern | [link](https://gdit.wd5.myworkdayjobs.com/gdit_earlytalent/job/USA-NC-Raleigh/Professional-Programmer---Intern_RQ232030) |
@@ -1857,20 +1885,17 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-12 | Octant Bio | Software Engineering Intern | Emeryville, CA | intern | [link](https://www.octant.bio/jobs?gh_jid=6260895004) |
 |  2026-11-12 | Cardinal Health | Technology Intern | Dublin, OH | intern | [link](https://cardinalhealth.wd1.myworkdayjobs.com/EXT/job/OH-Dublin-Cardinal-Place/Technology-Internship--Summer-2027-_20189610-1) |
 |  2026-11-12 | General Dynamics Mission Systems | Software/Systems Engineering Intern | Middletown, RI | intern | [link](https://careers-gdms.icims.com/jobs/75808/job?mobile=true&needsRedirect=false) |
-|  2026-10-19 | Insomniac Games | Accessibility Intern- Master's or PhD | United States, Burbank, CA | intern | [link](https://job-boards.greenhouse.io/insomniac/jobs/6227618004) |
-|  2026-10-19 | Insomniac Games | Dialogue Intern- Undergraduate | United States, Burbank, CA | intern | [link](https://job-boards.greenhouse.io/insomniac/jobs/6228761004) |
 |  2026-10-29 | Interco | Software Development Intern - Software Development - React | St. Louis, MO | intern | [link](https://jobs.smartrecruiters.com/Interco/744000158581114) |
 |  2026-10-23 | MSA Safety | AI Engineer Co-op | Cranberry Township, PA | intern | [link](https://careers.msasafety.com/jobs/10243?icims=1) |
 |  2026-10-23 | Flagship Pioneering | AI/ML Engineering Co-op - SAGE Platform | Watertown, MA | intern | [link](https://job-boards.greenhouse.io/fspco-op012325/jobs/8911276002) |
 |  2026-10-23 | Intercontinental Exchange | Software Developer Intern | Jacksonville, FL | intern | [link](https://careers-ice.icims.com/jobs/14076/job?mobile=true&needsRedirect=false) |
+|  2026-10-16 | Tencent | Cloud Media Services Intern | US-California-Palo Alto | intern | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-California-Palo-Alto/Cloud-Media-Services-Intern_R108186) |
 |  2026-11-11 | McDonald's | Global Tech Infrastructure & Operations Intern | Chicago, IL | intern | [link](https://jobs.mcdonalds.com/job/Chicago-Global-Tech-Infrastructure-&-Operations-Intern-IL-60607/1449562300/?ats=successfactors) |
 |  2026-11-11 | RTX | Aftermarket & Sustainment Engineering Methods Engineering Intern | East Hartford, CT | intern | [link](https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-CT-EAST-HARTFORD-ETC--400-Main-St--BLDG-ETC/Aftermarket---Sustainment-Engineering-Methods-Engineering-Intern--Summer-2027--Onsite-_01887864) |
 |  2026-11-11 | Formlabs | Manufacturing Test Software Intern - Manufacturing | Somerville, MA | intern | [link](https://careers.formlabs.com/job/8374598/apply/?gh_jid=8374598) |
 |  2026-11-11 | Bask Health | Product Engineering Intern | Remote in USA | intern | [link](https://apply.workable.com/bask-health-1/j/1C108B16E2/apply) |
 |  2026-11-11 | Arcesium | Technology Operations Intern | NYC | intern | [link](https://job-boards.greenhouse.io/arcesiumllc/jobs/5257251007) |
 |  2026-11-11 | PTC | Creo Core Geometry Intern | Boston, MA | intern | [link](https://ptc.wd1.myworkdayjobs.com/ptc/job/Boston-MA-USA/Creo-Core-Geometry-Intern--Summer-2027-_JR112959) |
-|  2026-10-15 | Tencent | Cloud Media Services Intern | US-California-Palo Alto | intern | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-California-Palo-Alto/Cloud-Media-Services-Intern_R108186) |
-|  2026-10-15 | Palantir | Meritocracy Fellow | NYC | intern | [link](https://jobs.lever.co/palantir/7fa0ceca-c30e-48de-9b27-f98469c374f3/apply) |
 |  2026-10-22 | Uline | Software Developer Intern | Waukegan, IL | intern | [link](https://uline.wd1.myworkdayjobs.com/en-US/Uline_Careers/job/Pleasant-Prairie-WI/Software-Development-Internship---Summer-2027_R268537) |
 |  2026-10-22 | OpenSesame | AI Product Builder Intern | Austin, TX | intern | [link](https://boards.greenhouse.io/opensesame/jobs/8313424) |
 |  2026-10-22 | CVS Health | Innovation & Technology Software Engineering: Data & Intelligence Intern | NYC | intern | [link](https://cvshealth.wd1.myworkdayjobs.com/CVS_Health_Careers/job/NY---New-York/Innovation---Technology-Internship--Software-Engineering--Data---Intelligence-Summer-2027-Graduate_R1081128) |
@@ -1970,7 +1995,6 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-19 | Horizon Industries | Appian Intern | Vienna, VA | intern | [link](https://job-boards.greenhouse.io/horizonindustrieslimited/jobs/5457606008) |
 |  2026-10-16 | Ryan | Software Development Intern | Plano, TX | intern | [link](https://ryan.wd1.myworkdayjobs.com/RyanCareers/job/Plano/Summer-2027-Intern--Software-Development_R0020822-1) |
 |  2026-10-16 | Ryan | Application Development Intern | Plano, TX | intern | [link](https://ryan.wd1.myworkdayjobs.com/RyanCareers/job/Plano/Summer-2027-Intern--Application-Development_R0020820-1) |
-|  2026-10-15 | Wikimedia Foundation | Software Engineering Intern | Remote in USA | intern | [link](https://job-boards.greenhouse.io/wikimedia/jobs/8268853) |
 | 🔥⭐ 2026-11-14 | Microsoft | Software Engineer - Microsoft Business Operations | Redmond, WA | new-grad | [link](https://apply.careers.microsoft.com/careers/job/1970393557073410) |
 | ⭐ 2026-11-10 | Autodesk | Software Engineer: AI & Fusion Engineering - Fusion Engineering | Novi, MI | new-grad | [link](https://autodesk.wd1.myworkdayjobs.com/Ext/job/Novi-MI-USA/Software-Engineer_26WD102129-1) |
 | ⭐ 2026-11-09 | Mercury Insurance | Software Engineer 1 | Remote in USA | new-grad | [link](https://careers-mercuryinsurance.icims.com/jobs/6943/job?mobile=true&needsRedirect=false) |
@@ -1983,6 +2007,8 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ◐ 2026-10-27 | Databricks | Software Engineer New Grad | Mountain View, CA | new-grad | [link](https://boards.greenhouse.io/embed/job_app?token=6865698002) |
 | ◐ 2026-10-27 | Databricks | Software Engineer New Grad - Distributed Data Systems | Bellevue, WA | new-grad | [link](https://boards.greenhouse.io/embed/job_app?token=6865704002) |
 | ◐ 2026-11-02 | DTCC | Software Engineer - Python & AI Solutions | Tampa, FL | new-grad | [link](https://ebxr.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/213540) |
+| ◐ 2026-10-22 | Palantir | Forward Deployed Software Engineer, New Grad - Warp Speed | New York, NY | new-grad | [link](https://jobs.lever.co/palantir/66b495eb-aaf9-4bf9-a759-41854534add7) |
+| ◐ 🆕 2026-11-13 | Shield AI | Software Engineer 1 New Grad | Washington, DC | new-grad | [link](https://jobs.ashbyhq.com/f7d8749a-72d6-407c-bf98-292ea630c73a/7e0ae8a3-4872-431c-a04a-2f2b8988b527/application?embed=true) |
 | ◐ 2026-11-13 | Empowerly | Full Stack Software Engineer | Remote in USA | new-grad | [link](https://ats.rippling.com/empowerly/jobs/bf9b3e41-e94a-409e-8dc6-620f2cc0171b) |
 | ◐ 2026-11-13 | Northrop Grumman | Associate Software Engineer | McClellan Park, CA | new-grad | [link](https://ngc.wd1.myworkdayjobs.com/Northrop_Grumman_External_Site/job/United-States-California-McClellan/XMLNAME-2027---Associate-Software-Engineer---McClellan-CA_R10260423) |
 | ◐ 2026-11-13 | Peraton | Full Stack Engineer | Columbus, OH | new-grad | [link](https://careers-peraton.icims.com/jobs/173596/job?mobile=true&needsRedirect=false) |
@@ -1992,9 +2018,12 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ◐ 2026-11-13 | H2O.ai | Software Engineer | Seattle, WA | new-grad | [link](https://h2oai.applytojob.com/apply/n5X2LVJYN1/Software-Engineer) |
 | ◐ 2026-11-13 | H2O.ai | Software Engineer | Remote in USA | new-grad | [link](https://h2oai.applytojob.com/apply/QwA3SV58KB/Software-Engineer) |
 | ◐ 2026-11-13 | H2O.ai | Software Engineer | Denver, CO | new-grad | [link](https://h2oai.applytojob.com/apply/E5OHXf0U55/Software-Engineer) |
-| ◐ 2026-10-22 | Palantir | Forward Deployed Software Engineer, New Grad - Warp Speed | New York, NY | new-grad | [link](https://jobs.lever.co/palantir/66b495eb-aaf9-4bf9-a759-41854534add7) |
+| ◐ 🆕 2026-11-13 | Johnson Controls | Nextgen Software Engineer New Grad | Milwaukee, WI | new-grad | [link](https://jci.wd5.myworkdayjobs.com/JCI_Confidential/job/Glendale-Wisconsin-United-States-of-America/NextGen-Software-Engineer_WD30279373-2) |
 | ◐ 2026-10-21 | Affirm | Analyst, Early Career (Full Stack) | New York, New York, United States; San Francisco, California, United States | new-grad | [link](https://job-boards.greenhouse.io/affirm/jobs/8039471003) |
 | ◐ 2026-10-20 | Palantir | Software Engineer New Grad - Query Engines | NYC | new-grad | [link](https://jobs.lever.co/palantir/90329118-d9b7-4b96-acdf-13377e3196ac/apply) |
+| 🔥◐ 🆕 2026-11-14 | NVIDIA | Deep Learning Framework Communications Engineer New Grad | United States | new-grad | [link](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Deep-Learning-Framework-Communications-Engineer---New-College-Grad-2026_JR2026129-1) |
+| ◐ 2026-10-19 | Palantir | Software Engineer, New Grad - Query Engines | New York, NY | new-grad | [link](https://jobs.lever.co/palantir/90329118-d9b7-4b96-acdf-13377e3196ac) |
+| ◐ 2026-10-19 | Amazon | Software Engineer – Early Career | Madison, WI | new-grad | [link](https://amazon.jobs/en/jobs/10583340/software-development-engineer-early-career-2027-us) |
 | ◐ 2026-11-12 | ViaSat | Associate Software Engineer | Carlsbad, CA | new-grad | [link](https://careers.viasat.com/jobs/7147?icims=1&lang=en-us) |
 | ◐ 2026-11-12 | Bask Health | Frontend Engineer New Grad | Remote in USA | new-grad | [link](https://apply.workable.com/bask-health-1/j/95FB1074E4/apply) |
 | ◐ 2026-11-12 | Johns Hopkins Applied Physics Laboratory | Mission Modeling, Simulation & Software Engineer New Grad | Laurel, MD | new-grad | [link](https://careers.jhuapl.edu/jobs/60029?icims=1&lang=en-us) |
@@ -2005,8 +2034,6 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ◐ 2026-11-12 | General Dynamics Mission Systems | Platform Services Software Engineer Entry Level | Scottsdale, AZ | new-grad | [link](https://careers-gdms.icims.com/jobs/80580/job?mobile=true&needsRedirect=false) |
 | ◐ 2026-11-12 | RTX | Software Engineer 1 | Marlborough, MA | new-grad | [link](https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-MA-MARLBOROUGH-MA2--1001-Boston-Post-Rd--BLDG-2/Software-Engineer-I_01888972) |
 | ◐ 2026-11-12 | CDPHP | Software Engineer - ETL | Rochester, NY | new-grad | [link](https://lthc.wd1.myworkdayjobs.com/CDPHPCareers/job/Rochester/Software-Engineer---ETL_JR104172) |
-| ◐ 2026-10-19 | Palantir | Software Engineer, New Grad - Query Engines | New York, NY | new-grad | [link](https://jobs.lever.co/palantir/90329118-d9b7-4b96-acdf-13377e3196ac) |
-| ◐ 2026-10-19 | Amazon | Software Engineer – Early Career | Madison, WI | new-grad | [link](https://amazon.jobs/en/jobs/10583340/software-development-engineer-early-career-2027-us) |
 | ◐ 2026-11-11 | Salesforce | Software Engineer New Grad | Palo Alto, CA | new-grad | [link](https://salesforce.wd12.myworkdayjobs.com/Futureforce_NewGradRoles/job/California---San-Francisco/Software-Engineering-AMTS--College-Grad-_JR368047) |
 | ◐ 2026-11-11 | Northrop Grumman | Associate Software Engineer - Pathways | Boulder, CO | new-grad | [link](https://ngc.wd1.myworkdayjobs.com/Northrop_Grumman_External_Site/job/United-States-Colorado-Boulder/XMLNAME-2027-Associate-Software-Engineer---Pathways---Boulder-CO_R10260171) |
 | ◐ 2026-11-11 | Rubrik | Software Engineer - Virtual Platform | Palo Alto, CA | new-grad | [link](https://www.rubrik.com/company/careers/departments/job.8351288?gh_jid=8351288) |
@@ -2028,8 +2055,6 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ◐ 2026-11-10 | Fidelity National Information Services | Mainframe Software Engineer 1 | Columbus, GA | new-grad | [link](https://fis.wd5.myworkdayjobs.com/searchjobs/job/US-GA-CMH-ONE-RIVERFRONT/Mainframe-Software-Engineer-I_JR0310604-1) |
 | ◐ 2026-11-10 | Cox Automotive | Software Engineer 1 | Atlanta, GA | new-grad | [link](https://cox.wd1.myworkdayjobs.com/Cox_External_Career_Site_1/job/Atlanta-GA/Software-Engineer-I---19025_R202684623) |
 | ◐ 2026-11-10 | Goldman Sachs | Software Engineer - Software Engineering | Dallas, TX | new-grad | [link](https://higher.gs.com/roles/188640) |
-| ◐ 2026-11-11 | Amazon | Software Development Engineer Early Career - Amazon Dedicated Cloud | Seattle, WA | new-grad | [link](https://amazon.jobs/en/jobs/10601956/software-development-engineer-amazon-dedicated-cloud-early-career-2027-amazon-dedicated-cloud-adc) |
-| ◐ 2026-11-11 | Microsoft | Software Development Engineer | Redmond, WA | new-grad | [link](https://apply.careers.microsoft.com/careers/job/1970393557050698) |
 | ◐ 2026-11-09 | Sur La Table | Junior Software Engineer | Toronto, ON, Canada | new-grad | [link](https://jobs.lever.co/cscgeneration-2/61ba3ce6-b92b-45b4-932d-0c66e5e19185/apply) |
 | ◐ 2026-11-09 | Whoop | Software Engineer 1 - Backend - Growth | Boston, MA | new-grad | [link](https://jobs.ashbyhq.com/whoop/d31312c2-236a-45f1-8da7-61a7ca8d1622/application?embed=true) |
 | ◐ 2026-11-09 | RTX | Software Engineer 1 | Richardson, TX | new-grad | [link](https://globalhr.wd5.myworkdayjobs.com/fr-CA/Private_Posting_No_TMP/job/US-TX-RICHARDSON-C17--1717-Cityline-Dr--CITYLINE-C17/Software-Engineer-I--Onsite-_01884131) |
@@ -2038,12 +2063,15 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ◐ 2026-11-09 | CSI | Software Engineer 1 - C#/.NET | Paducah, KY | new-grad | [link](https://csiweb.wd1.myworkdayjobs.com/CSI_Careers/job/Paducah-KY-Corporate/Software-Engineer-I---C--NET---Hybrid---Paducah--KY_R-100739) |
 | ◐ 2026-11-09 | Northrop Grumman | Associate Cyber Software Engineer - Vulnerability Research - Reverse Engineering | San Antonio, TX | new-grad | [link](https://ngc.wd1.myworkdayjobs.com/Northrop_Grumman_External_Site/job/United-States-Texas-San-Antonio/XMLNAME-2027----Associate-Cyber-Software-Engineer---San-Antonio-TX_R10259762) |
 | ◐ 2026-11-09 | Markon | Software Engineer Level 0 | Annapolis Junction, MD | new-grad | [link](https://markonsolutions.jibeapply.com/jobs/8806?icims=1&lang=en-us) |
+| ◐ 2026-11-11 | Amazon | Software Development Engineer Early Career - Amazon Dedicated Cloud | Seattle, WA | new-grad | [link](https://amazon.jobs/en/jobs/10601956/software-development-engineer-amazon-dedicated-cloud-early-career-2027-amazon-dedicated-cloud-adc) |
+| ◐ 2026-11-11 | Microsoft | Software Development Engineer | Redmond, WA | new-grad | [link](https://apply.careers.microsoft.com/careers/job/1970393557050698) |
 | ◐ 2026-11-08 | Shield AI | Software Engineer 1 New Grad - Software - Autonomy Capabilities | United States | new-grad | [link](https://jobs.ashbyhq.com/f7d8749a-72d6-407c-bf98-292ea630c73a/955d48ad-9380-4621-91f4-51f3f093ac10/application?embed=true) |
 | ◐ 2026-11-10 | Amazon | Software Development Engineer, Amazon Dedicated Cloud, Early Career - 2027, Amazon Dedicated Cloud (ADC) | Seattle, WA | new-grad | [link](https://www.amazon.jobs/en/jobs/10601956/software-development-engineer-amazon-dedicated-cloud-early-career-2027-amazon-dedicated-cloud-adc) |
 | ◐ 2026-10-21 | Garmin | Software Engineer 1 - C++ MEC Maptech | Olathe, KS | new-grad | [link](https://careers.garmin.com/jobs/20439?icims=1) |
 | ◐ 2026-11-07 | AbbVie | Associate Software Engineer 1 | North Chicago, IL | new-grad | [link](https://jobs.smartrecruiters.com/AbbVie/3743990016715126) |
 | ◐ 2026-11-07 | Ande | Software Engineer – Early Career - AI | NYC | new-grad | [link](https://jobs.ashbyhq.com/ande/8ff8145e-8040-4a7a-a90c-cc1fdc36deb1/application?embed=true) |
 | ◐ 2026-11-07 | Shield AI | Software Engineer 1 New Grad - Internal Tools | Seattle, WA | new-grad | [link](https://jobs.ashbyhq.com/shield/986a26e9-0597-4402-85ee-0f05a6012902/application?embed=true) |
+| ◐ 2026-11-06 | Huntington Ingalls Industries | Software Engineer 1 | Newport News, VA | new-grad | [link](https://careers.huntingtoningalls.com/job/Newport-News-ENGINEER-SOFTWARE-1-Virg/1448477600/?ats=successfactors) |
 | ◐ 2026-11-06 | Prosync | Software Engineer 0/1 | Annapolis Junction, MD | new-grad | [link](https://apply.workable.com/prosync/j/6ECFBED6E7/apply) |
 | ◐ 2026-11-06 | AMD | Senior Software Engineer | San Jose, CA | new-grad | [link](https://careers.amd.com/jobs/94257?icims=1&lang=en-us) |
 | ◐ 2026-11-06 | Elevation Autism Center | Software Engineer - AI & Workflow Automation | Alpharetta, GA | new-grad | [link](https://apply.workable.com/elevation-autism-center/j/B5CCC7D40B/apply) |
@@ -2053,7 +2081,6 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ◐ 2026-11-06 | Wells Fargo | Software Engineer | Charlotte, NC | new-grad | [link](https://wd1.myworkdaysite.com/recruiting/wf/WellsFargoJobs/job/IRVING-TX/Software-Engineer_R-586193-1) |
 | ◐ 2026-11-06 | Chewy | Software Engineer 1 - Full Stack - Promotions | Boston, MA | new-grad | [link](https://wd5.myworkdaysite.com/recruiting/chewy/External/job/Boston-MA/Software-Engineer-I--Full-Stack--Promotions_R31442) |
 | ◐ 2026-11-06 | Engine | Software Engineer - GTM Engineering | Remote in USA | new-grad | [link](https://job-boards.greenhouse.io/engine/jobs/8046374003) |
-| ◐ 2026-10-15 | SirenOpt | Software Engineer - Early Career - C++ & Systems | San Leandro, CA | new-grad | [link](https://job-boards.greenhouse.io/sirenopt/jobs/4452002009) |
 | ◐ 2026-11-05 | Cisco | Software Engineer Full Stack / Backend 1 | Austin, TX | new-grad | [link](https://careers.cisco.com/global/en/job/2028784) |
 | ◐ 2026-11-05 | Emerson Electric | Embedded Software Engineer - AI - Web | Marshalltown, IA | new-grad | [link](https://hdjq.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26013465) |
 | ◐ 2026-11-05 | Choice Hotels | Software Engineer 1 - Finance Technology | Scottsdale, AZ | new-grad | [link](https://choicehotels.wd5.myworkdayjobs.com/External/job/Scottsdale-AZ---Technology--Digital-Commerce-Center/Software-Engineer-1---Finance-Technology_R22514) |
@@ -2090,8 +2117,6 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ◐ 2026-11-02 | Capgemini | Full Stack Developer | Newark, NJ | new-grad | [link](https://careers.capgemini.com/job/New-York,-NY-Fullstack-Developer-NY-10001/1453515033/?ats=successfactors) |
 | ◐ 2026-11-02 | Anduril | Space Orbital Software Engineer | Costa Mesa, CA | new-grad | [link](https://boards.greenhouse.io/andurilindustries/jobs/5236290007) |
 | ◐ 2026-11-02 | Qualtrics | Software Engineer 1 - XMD | Seattle, WA | new-grad | [link](https://www.qualtrics.com/careers/us/en/job/8325652?gh_jid=8325652) |
-| ◐ 2026-11-01 | Northrop Grumman | Associate Software Engineer | Huntsville, AL | new-grad | [link](https://ngc.wd1.myworkdayjobs.com/Northrop_Grumman_External_Site/job/United-States-Alabama-Huntsville/XMLNAME-2027-Associate-Software-Engineer---Bellevue--NE-_R10258366) |
-| ◐ 2026-11-01 | Huntington Ingalls Industries | Software Engineer 1 | Newport News, VA | new-grad | [link](https://careers.huntingtoningalls.com/job/Newport-News-ENGINEER-SOFTWARE-1-Virg/1446380900/?ats=successfactors) |
 | ◐ 2026-11-03 | Amazon | Software Development Engineer (Embedded Systems) Early Career - 2027 (US) | Seattle, WA | new-grad | [link](https://www.amazon.jobs/en/jobs/10595839/software-development-engineer-embedded-systems-early-career-2027-us) |
 | ◐ 2026-10-30 | BodySpec | Junior Software Engineer | Austin, TX | new-grad | [link](https://bodyspec.applytojob.com/apply/YsrsS9yEg7/Junior-Developer) |
 | ◐ 2026-10-30 | Built Technologies | Innovation Software Engineer 1 - Marketplace | Nashville, TN | new-grad | [link](https://job-boards.greenhouse.io/getbuilt/jobs/4749545005) |
@@ -2120,15 +2145,16 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-30 | Amazon | Software Development Engineer (Database) Early Career- 2027 (US) | Seattle, WA | new-grad | [link](https://www.amazon.jobs/en/jobs/10593902/software-development-engineer-database-early-career-2027-us) |
 |  2026-10-30 | Amazon | Software Development Engineer - Database | Boston, MA | new-grad | [link](https://amazon.jobs/en/jobs/10593902/software-development-engineer-database-early-career-2027-us) |
 |  2026-10-26 | HNTB | Software Engineer 1 New Grad | Tampa, FL | new-grad | [link](https://hntb.wd5.myworkdayjobs.com/hntb_university_careers/job/Tallahassee-FL/Returning-New-Grad-Software-Engineer-I--For-Current-Previous-HNTB-Interns-ONLY-_R-32175) |
+|  🆕 2026-10-26 | T-Mobile | Associate Software Engineer: Billing Platform | Frisco, TX | new-grad | [link](https://tmobile.wd1.myworkdayjobs.com/External/job/Frisco-Texas/Associate-Software-Engineer--Billing-Platform_REQ375195-1) |
 |  2026-10-26 | Madhive | Software Engineer - Financial Systems | NYC | new-grad | [link](https://jobs.ashbyhq.com/madhive/b95e6485-c017-49a0-a966-61f68404279c/application?embed=true) |
 |  2026-10-26 | General Dynamics Mission Systems | Software Engineer | Manassas, VA | new-grad | [link](https://careers-gdms.icims.com/jobs/75277/job?mobile=true&needsRedirect=false) |
 |  2026-10-26 | General Dynamics Mission Systems | Software Engineer Entry Level | Manassas, VA | new-grad | [link](https://careers-gdms.icims.com/jobs/75792/job?mobile=true&needsRedirect=false) |
-|  2026-11-05 | Susquehanna International Group | Software Developer - Core Order Management System - C++ | Chicago, IL | new-grad | [link](https://careers-sig.icims.com/jobs/11068/job?mobile=true&needsRedirect=false) |
 |  2026-10-28 | Amazon | Software Developer Engineer - Product Knowledge Store | Seattle, WA | new-grad | [link](https://amazon.jobs/en/jobs/10590471/software-dev-engineer-product-knowledge-store) |
 |  2026-10-28 | Intel | Compiler Engineer for AI DSLs | Austin, TX | new-grad | [link](https://intel.wd1.myworkdayjobs.com/en-us/external/job/US-California-Santa-Clara/Compiler-Engineer-for-AI-DSLs_JR0288433) |
-| 🔥 2026-11-13 | Amazon | 2027 Applied Science Internship - Robotics - United States | North Reading, MA | new-grad | [link](https://www.amazon.jobs/en/jobs/10604778/2027-applied-science-internship-robotics-united-states) |
+|  2026-11-05 | Susquehanna International Group | Software Developer - Core Order Management System - C++ | Chicago, IL | new-grad | [link](https://careers-sig.icims.com/jobs/11068/job?mobile=true&needsRedirect=false) |
 |  2026-10-23 | ServiceNow | Associate Software Engineer | Santa Clara, CA | new-grad | [link](https://jobs.smartrecruiters.com/ServiceNow/744000157571919) |
 |  2026-10-23 | Shield AI | Software Engineer New Grad | Seattle, WA | new-grad | [link](https://jobs.ashbyhq.com/f7d8749a-72d6-407c-bf98-292ea630c73a/986a26e9-0597-4402-85ee-0f05a6012902/application?embed=true) |
+|  2026-11-13 | Amazon | 2027 Applied Science Internship - Robotics - United States | North Reading, MA | new-grad | [link](https://www.amazon.jobs/en/jobs/10604778/2027-applied-science-internship-robotics-united-states) |
 |  2026-10-27 | Amazon | Software Developer Engineer 1 - Graviton Software - Annapurna Labs | Austin, TX | new-grad | [link](https://amazon.jobs/en/jobs/10526808/software-dev-engineer-i-graviton-software-annapurna-labs) |
 |  2026-10-22 | SpaceX | Software Engineer - Linux Kernel - Starlink | Redmond, WA | new-grad | [link](https://boards.greenhouse.io/spacex/jobs/8852114002) |
 |  2026-10-22 | Flexera | Senior Software Engineer | Remote in USA | new-grad | [link](https://flexerasoftware.wd1.myworkdayjobs.com/FlexeraSoftware/job/Home-United-States/Senior-AI-Augmented-Software-Engineer_17762) |
@@ -2152,6 +2178,9 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-23 | Amazon | Software Development Engineer - Prime Video Personalization & Discovery | Seattle, WA | new-grad | [link](https://amazon.jobs/en/jobs/10412948/software-dev-engineer-prime-video-personalization-discovery) |
 |  2026-10-23 | Amazon | Software Development Engineer 1 Early Career - Annapurna Labs | Seattle, WA | new-grad | [link](https://amazon.jobs/en/jobs/10558915/software-development-engineer-i-annapurna-labs-early-career-2027) |
 |  2026-10-23 | Amazon | System Development Engineer - Region Reliability Engineering | Denver, CO | new-grad | [link](https://amazon.jobs/en/jobs/10550753/system-development-engineer-region-reliability-engineering) |
+|  2026-10-16 | Intuit | Software Engineer 1 | Charlotte, NC | new-grad | [link](https://jobs.intuit.com/job/mountain-view/software-engineer-1/27595/102012325536) |
+|  2026-10-16 | Brown & Brown Insurance | Software Engineer | Olivette, MO | new-grad | [link](https://bbinsurance.wd1.myworkdayjobs.com/careers/job/Olivette-MO-USA/Software-Engineer_R26_0000003648) |
+|  2026-10-16 | Planview | Software Engineer 1 | United States | new-grad | [link](https://careers.planview.com/jobs/5080?icims=1) |
 |  2026-11-13 | Shield AI | Engineer 1 New Grad - Software | Washington, DC | new-grad | [link](https://jobs.lever.co/shieldai/c33ab680-2625-4da1-a96c-41bea441b98b/apply) |
 |  2026-11-13 | Keysight Technologies | IT Engineer - Software | Colorado Springs, CO | new-grad | [link](https://jobs.keysight.com/jobs/56558?icims=1&lang=en-us) |
 |  2026-11-13 | Huntington Ingalls Industries | Software Development Engineer 1 | Newport News, VA | new-grad | [link](https://careers.huntingtoningalls.com/job/Newport-News-SOFTWARE-DEVELOPMENT-ENGINEER-1-Virg/1450616800/?ats=successfactors) |
@@ -2159,16 +2188,13 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-13 | Booz Allen | Systems Engineer | Beavercreek, OH | new-grad | [link](https://bah.wd1.myworkdayjobs.com/bah_jobs/job/Beavercreek-OH/Systems-Engineer_R0253553) |
 |  2026-11-13 | Empire State Realty Trust | Applied AI Engineer 1 | NYC | new-grad | [link](https://jobs.lever.co/esrtreit/9ec61f1b-1eeb-44c8-8be2-f25167b83267/apply) |
 |  2026-11-13 | Fort Bend County | Web Developer - Web Development - Information Technology | Richmond, TX | new-grad | [link](https://fortbendcountytx.wd5.myworkdayjobs.com/externalcareers/job/Richmond-TX/Temporary-Position---Web-Development---Information-Technology_JR1694-11-26) |
-|  2026-10-16 | Intuit | Software Engineer 1 | Charlotte, NC | new-grad | [link](https://jobs.intuit.com/job/mountain-view/software-engineer-1/27595/102012325536) |
-|  2026-10-16 | Brown & Brown Insurance | Software Engineer | Olivette, MO | new-grad | [link](https://bbinsurance.wd1.myworkdayjobs.com/careers/job/Olivette-MO-USA/Software-Engineer_R26_0000003648) |
-|  2026-10-16 | Planview | Software Engineer 1 | United States | new-grad | [link](https://careers.planview.com/jobs/5080?icims=1) |
+|  2026-10-19 | Amazon | Software Development Engineer, Early Career - 2027 (US) | Seattle, WA | new-grad | [link](https://www.amazon.jobs/en/jobs/10583340/software-development-engineer-early-career-2027-us) |
 |  2026-11-12 | SpaceX | New Graduate Engineer, Aerospace Software (Starfall) | Hawthorne, CA | new-grad | [link](https://boards.greenhouse.io/spacex/jobs/8939697002?gh_jid=8939697002) |
 |  2026-11-12 | Dillards | COBOL Developer | Little Rock, AR | new-grad | [link](https://job-boards.greenhouse.io/dillards/jobs/5293318007) |
 |  2026-11-12 | CDK Global | Associate Database Engineer | Austin, TX | new-grad | [link](https://cdk.wd1.myworkdayjobs.com/en-US/CDK/job/Austin-TX-USA/Associate-Database-Engineer_JR9386) |
 |  2026-11-12 | Neko Health | AI Acceleration Specialist | NYC | new-grad | [link](https://jobs.ashbyhq.com/neko-health/555d3020-e769-4d2d-bb64-d94107b1b79f/application?embed=true) |
 |  2026-11-12 | ZettaSquared | Forward Engineer / AI Developer | Houston, TX | new-grad | [link](https://jobs.ashbyhq.com/zetta2/28a44d44-b138-476f-acda-65384f1623dc/application?embed=true) |
 |  2026-11-12 | ARCXIS | AI Rapid Prototype Developer Level 1 | Houston, TX | new-grad | [link](https://recruiting.paylocity.com/Recruiting/Jobs/Details/4661286) |
-|  2026-10-19 | Amazon | Software Development Engineer, Early Career - 2027 (US) | Seattle, WA | new-grad | [link](https://www.amazon.jobs/en/jobs/10583340/software-development-engineer-early-career-2027-us) |
 |  2026-11-11 | Sieve | Deployment Engineer | SF | new-grad | [link](https://jobs.ashbyhq.com/sieve/b8a87691-3b2a-4960-aa0e-cda34894039c/application?embed=true) |
 |  2026-11-11 | SharkNinja | Forward Deployed Engineer - Entry Level - THE FIN | Needham, MA | new-grad | [link](https://job-boards.greenhouse.io/sharkninjaoperatingllc/jobs/4728305006) |
 |  2026-11-11 | Intercontinental Exchange | Associate Software Developer | Jacksonville, FL | new-grad | [link](https://ice.jibeapply.com/jobs/14039?icims=1&lang=en-us) |
@@ -2191,9 +2217,11 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-09 | Old Republic Title | Associate Developer - C#/.Net | Orlando, FL | new-grad | [link](https://oldrepublic.wd1.myworkdayjobs.com/oldrepublictitle/job/FL-Orlando-6545-Corporate-Ctr-Blvd/Associate-Developer---C--NET_R-4410) |
 |  2026-11-08 | Shield AI | Engineer 1 New Grad - Software - Autonomous Pilot Integration | Washington, DC | new-grad | [link](https://jobs.ashbyhq.com/f7d8749a-72d6-407c-bf98-292ea630c73a/29917792-e504-4cb5-9e70-9d74212d3b1f/application?embed=true) |
 |  2026-11-08 | Shield AI | Engineer 1 New Grad - Software - Perception | Washington, DC | new-grad | [link](https://jobs.ashbyhq.com/f7d8749a-72d6-407c-bf98-292ea630c73a/e4ac2482-6da7-4ab9-bab8-7bccbf3f6ae7/application?embed=true) |
+|  2026-11-08 | Shield AI | Engineer 2 New Grad - Multiple Teams | Washington, DC | new-grad | [link](https://jobs.ashbyhq.com/f7d8749a-72d6-407c-bf98-292ea630c73a/e7cb113f-9656-452c-a214-40241dfc04b0/application?embed=true) |
 |  2026-11-08 | Shield AI | Engineer 1 New Grad - Software - Autonomy Capabilities | United States | new-grad | [link](https://jobs.lever.co/shieldai/f8e0f87f-0e12-4e05-a491-4e8272494896/apply) |
 |  2026-11-08 | M&T Bank | Technology Development Program - Software Engineering - Data & API Engineering | Buffalo, NY | new-grad | [link](https://mtb.wd5.myworkdayjobs.com/Campus/job/Buffalo-NY/XMLNAME-2027-Technology-Development-Program---Software-Engineering--Data---API-Engineering-_R92036) |
 |  2026-11-07 | AbbVie | Associate Engineer - Technology 1 | North Chicago, IL | new-grad | [link](https://jobs.smartrecruiters.com/AbbVie/3743990016714871) |
+|  2026-11-03 | Duolingo | QA Specialist I, Recent Graduate | New York, NY; Pittsburgh, PA | new-grad | [link](https://careers.duolingo.com/jobs/8927565002?gh_jid=8927565002) |
 |  2026-11-06 | Lawrence Livermore National Laboratory (LLNL) | Super Intelligence Platform Integration Engineer | Livermore, CA | new-grad | [link](https://jobs.smartrecruiters.com/LLNL/3743990016713536) |
 |  2026-11-06 | University of Chicago | Research Professional | Chicago, IL | new-grad | [link](https://uchicago.wd5.myworkdayjobs.com/External/job/Chicago-IL/Research-Professional_JR35802) |
 |  2026-11-06 | Orbital | AI Ops Engineer - GTM | NYC | new-grad | [link](https://jobs.ashbyhq.com/orbital/c611ac8a-86f8-4962-b4dd-0832bc352c4f/application?embed=true) |
@@ -2201,7 +2229,6 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-06 | ICF International | Software Developer | Remote in USA | new-grad | [link](https://icf.wd5.myworkdayjobs.com/icfexternal_career_site/job/Richmond-VA/Software-Developer_R2603769) |
 |  2026-11-06 | Nightwing Intelligence Solutions | Software Developer 1 - System Security | Huntsville, AL | new-grad | [link](https://nwis.wd12.myworkdayjobs.com/NW/job/AL600--600-Boulevard-South-Ste-301-Huntsville-AL-35802/Software-Developer-I--System-Security-_JR102225) |
 |  2026-11-06 | Iowa State University | Software Developer 1 | Ames, IA | new-grad | [link](https://isu.wd1.myworkdayjobs.com/IowaStateJobs/job/Ames-IA/Software-Developer-I_R20057) |
-|  2026-11-03 | Duolingo | QA Specialist I, Recent Graduate | New York, NY; Pittsburgh, PA | new-grad | [link](https://careers.duolingo.com/jobs/8927565002?gh_jid=8927565002) |
 |  2026-11-05 | Cisive | Associate Software Developer | Maryland | new-grad | [link](https://cisive.wd108.myworkdayjobs.com/Cisive/job/Headquarters-MD/Associate-Software-Developer_JR100449-1) |
 |  2026-11-05 | CACI | Junior Software Developer | Remote in USA | new-grad | [link](https://caci.wd1.myworkdayjobs.com/external/job/Remote-Any-State/Junior-Software-Developer_334685) |
 |  2026-11-05 | EquipmentShare | Junior Ecommerce Web Developer | Columbia, MO | new-grad | [link](https://www.equipmentshare.com/careers/openings/?gh_jid=8319404) |
@@ -2282,8 +2309,6 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-16 | Dexcom | Software Development Engineer 1 | California | new-grad | [link](https://dexcom.wd1.myworkdayjobs.com/Dexcom/job/Remote-California/SW-Development-Engineer-1_JR121398) |
 |  2026-10-16 | Fortinet | Software Development Engineer | Sunnyvale, CA | new-grad | [link](https://edel.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/24668) |
 |  2026-10-16 | M&T Bank | Technology Apprentice - Application Developer | Buffalo, NY | new-grad | [link](https://mtb.wd5.myworkdayjobs.com/Campus/job/Buffalo-NY/Technology-Apprentice---Application-Developer--ZDP-_R91349) |
-|  2026-10-15 | SpaceX | New Graduate Engineer, Infrastructure  | Starbase, TX | new-grad | [link](https://boards.greenhouse.io/spacex/jobs/8893406002?gh_jid=8893406002) |
-|  2026-10-15 | Micron Technology | Computer Engineer New Grad - Central Engineering | Boise, ID | new-grad | [link](https://micron.wd1.myworkdayjobs.com/External/job/Boise-ID---Main-Site/New-College-Grad---Computer-Engineer--Central-Engineering_JR115116-1) |
 |  2026-11-08 | M&T Bank | Technology Development Program - Software Engineering - Enterprise & Wealth Application Development | Buffalo, NY | new-grad | [link](https://mtb.wd5.myworkdayjobs.com/Campus/job/Buffalo-NY/XMLNAME-2027-Technology-Development-Program---Software-Engineering--Enterprise---Wealth-Application-Development-_R92035) |
 |  2026-11-06 | Charles Schwab | Associate Software Development & Engineering | Austin, TX | new-grad | [link](https://career-schwab.icims.com/jobs/129593/job?mobile=true&needsRedirect=false) |
 |  2026-11-05 | Capgemini | Associate Application Consultant | Philadelphia, PA | new-grad | [link](https://careers.capgemini.com/job/Berwyn,-PA-C&CA-Campus-Associate-Application-Consultant-PA/1454933833/?ats=successfactors) |
@@ -2303,80 +2328,87 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-21 | Capgemini | Software Technician | Atlanta, GA | new-grad | [link](https://careers.capgemini.com/job/Atlanta,-GA-Software-Technician-GA-30301/1450033033/?ats=successfactors) |
 |  2026-10-20 | Texas A&M University System | Programmer 1 | Laredo, TX | new-grad | [link](https://tamus.wd1.myworkdayjobs.com/System-wide_External/job/Laredo-TX/Programmer-I_R-098117) |
 |  2026-10-20 | Amentum | Programmer Analyst | Huntsville, AL | new-grad | [link](https://pae.wd1.myworkdayjobs.com/en-US/amentum_careers/job/US-AL-Huntsville/Programmer-Analyst_R0172394) |
-| ⭐ 2026-11-10 | Snapchat | Software Engineer, C++, Level 4 | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Software-Engineer--C----Level-4_R0046977-1) |
-| ⭐ 2026-11-10 | Snapchat | Software Engineer, C++, Level 5 | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Software-Engineer--C----Level-5_R0047035-1) |
+| ⭐ 2026-11-11 | Snapchat | Software Engineer, C++, Level 4 | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Software-Engineer--C----Level-4_R0046977-1) |
+| ⭐ 2026-11-11 | Snapchat | Software Engineer, C++, Level 5 | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Software-Engineer--C----Level-5_R0047035-1) |
 | ⭐ 2026-11-05 | Roblox | Software Engineer, Engine Harmony | San Mateo, CA, United States | full-time | [link](https://careers.roblox.com/jobs/8243631?gh_jid=8243631) |
 | ⭐ 2026-11-03 | Roblox | Software Engineer, Engine Productivity | San Mateo, CA, United States | full-time | [link](https://careers.roblox.com/jobs/8325759?gh_jid=8325759) |
 | ⭐ 2026-11-02 | ElevenLabs | Full-Stack Engineer - Ads Engine | Remote | full-time | [link](https://jobs.ashbyhq.com/ElevenLabs/3abf96ca-2937-4290-9d23-5208aece08b2) |
-| ⭐ 🆕 2026-11-14 | NVIDIA | Software Engineer, Technical Lead – Performance Data Platform | US, CA, Santa Clara | full-time | [link](https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Software-Engineer--Technical-Lead---Performance-Data-Platform_JR2029009) |
+| ⭐ 2026-11-15 | NVIDIA | Software Engineer, Technical Lead – Performance Data Platform | US, CA, Santa Clara | full-time | [link](https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Software-Engineer--Technical-Lead---Performance-Data-Platform_JR2029009) |
 | ⭐ 2026-11-14 | Apple | Systems Software Engineer, Platform Architecture | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200695051) |
 | ⭐ 2026-11-14 | Apple | Performance Modeling Software Engineer, Platform Architecture | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200695049) |
+| ⭐ 2026-11-13 | Stripe | Software Engineer, Vulnerability Management | na | full-time | [link](https://stripe.com/jobs/search?gh_jid=8384567) |
 | ⭐ 2026-11-13 | Twitch | Software Engineer I, Payments | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/twitch/jobs/8943553002) |
 | ⭐ 2026-11-13 | Airbnb | Software Engineer, Profile & Community, Android | Remote, USA | full-time | [link](https://careers.airbnb.com/positions/8386083?gh_jid=8386083) |
 | ⭐ 2026-11-13 | Airbnb | Software Engineer, Profile & Community, Web | Remote, USA | full-time | [link](https://careers.airbnb.com/positions/8386065?gh_jid=8386065) |
 | ⭐ 2026-11-13 | PlayStation (SIE) | Software Engineer II | United States, San Mateo, CA | full-time | [link](https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal/jobs/6260703004) |
-| ⭐ 2026-11-13 | Stripe | Software Engineer, Vulnerability Management | na | full-time | [link](https://stripe.com/jobs/search?gh_jid=8384567) |
 | ⭐ 2026-11-13 | Ramp | Software Engineer, Fullstack, Spend Controls | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/6e717b06-6613-42ad-a1ee-f852a305fa37) |
 | ⭐ 2026-11-13 | OpenAI | Full Stack Software Engineer, ChatGPT Finances | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/26cfb873-f30a-4a13-b7b6-52833ea48ec9) |
 | ⭐ 2026-11-13 | OpenAI | Full Stack Software Engineer, Consumer Health | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/cc1ea124-47ad-4b81-9e4e-0c69e525b62a) |
-| ⭐ 🆕 2026-11-13 | Microsoft | Software Engineer II - CTJ- POLY | United States, Washington, Redmond | full-time | [link](https://jobs.careers.microsoft.com/global/en/job/200056252) |
 | ⭐ 2026-11-13 | Apple |  UI Frameworks Engineer, Swift Platform Experience | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694101) |
 | ⭐ 2026-11-13 | Apple | Core Audio Software Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694125) |
 | ⭐ 2026-11-13 | Apple | Software Engineer - Distributed Data Systems | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694753) |
 | ⭐ 2026-11-13 | Apple | Software Engineer, Infrastructure Applications | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693202) |
 | ⭐ 2026-11-13 | Apple | Software Engineer, Apple Ads | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694842) |
-| ⭐ 2026-11-12 | Affirm | Software Engineer I, Backend (Continuous Delivery) | Remote US | full-time | [link](https://job-boards.greenhouse.io/affirm/jobs/8181183003) |
-| ⭐ 2026-11-12 | Brex | Software Engineer II, Frontend (Banking) | New York, New York, United States | full-time | [link](https://www.brex.com/careers/8928935002?gh_jid=8928935002) |
-| ⭐ 2026-11-12 | Brex | Software Engineer II, Frontend (Banking) | San Francisco, California, United States | full-time | [link](https://www.brex.com/careers/8939938002?gh_jid=8939938002) |
-| ⭐ 2026-11-12 | Brex | Software Engineer II, Frontend (Banking) | Seattle, Washington, United States | full-time | [link](https://www.brex.com/careers/8939939002?gh_jid=8939939002) |
 | ⭐ 2026-11-12 | Stripe | Software Engineer – Backend Engineer – Tax Engineering | Seattle, WA | full-time | [link](https://stripe.com/jobs/search?gh_jid=8384325) |
 | ⭐ 2026-11-12 | Stripe | Software Engineer, Full Stack | New York, NY | full-time | [link](https://stripe.com/jobs/search?gh_jid=8384287) |
+| ⭐ 2026-11-12 | Affirm | Software Engineer I, Backend (Continuous Delivery) | Remote US | full-time | [link](https://job-boards.greenhouse.io/affirm/jobs/8181183003) |
+| ⭐ 2026-11-12 | Brex | Software Engineer II, Frontend (Banking) | Seattle, Washington, United States | full-time | [link](https://www.brex.com/careers/8939939002?gh_jid=8939939002) |
+| ⭐ 2026-11-12 | Brex | Software Engineer II, Frontend (Banking) | San Francisco, California, United States | full-time | [link](https://www.brex.com/careers/8939938002?gh_jid=8939938002) |
+| ⭐ 2026-11-12 | Brex | Software Engineer II, Frontend (Banking) | New York, New York, United States | full-time | [link](https://www.brex.com/careers/8928935002?gh_jid=8928935002) |
 | ⭐ 2026-11-12 | Snowflake | Software Engineer, Identity & Access Management | US-WA-Bellevue | full-time | [link](https://jobs.ashbyhq.com/snowflake/d699971b-0c25-48e4-8733-7e8bd2328536) |
 | ⭐ 2026-11-12 | Apple | UI Software Engineer - Apple TV | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694832) |
 | ⭐ 2026-11-12 | Apple | Software Engineer, Ad Platforms | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694769) |
 | ⭐ 2026-11-12 | Apple | AIOps Software Engineer - Strategic Data Solutions | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693736) |
 | ⭐ 2026-11-11 | Twitch | Software Engineer I, Commerce | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/twitch/jobs/8934067002) |
 | ⭐ 2026-11-11 | MongoDB | Software Engineer 3 | New York City | full-time | [link](https://www.mongodb.com/careers/job/?gh_jid=8366703) |
+| ⭐ 2026-11-11 | Snapchat | Embedded Software Engineer, Power, Level 5 | San Diego, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/San-Diego-California/Embedded-Software-Engineer--Power--Level-5_R0047128-2) |
 | ⭐ 2026-11-11 | Apple | Compute Runtime Software Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200687791) |
 | ⭐ 2026-11-11 | Apple | Software Engineer (Platform Software Engineer), G&A Solutions Engineering (GSE) | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693547) |
 | ⭐ 2026-11-11 | Apple | Software Engineer, Automations and Shortcuts, Proactive | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200675289) |
 | ⭐ 2026-11-11 | Apple | Software Engineer – Digital Asset Management, Retail & Marcom Engineering | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693621) |
 | ⭐ 2026-11-11 | Apple | Software Engineer, G&A Solutions Engineering  (GSE) | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693583) |
-| ⭐ 2026-11-10 | Twitch | Software Engineer II, Fintech | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/twitch/jobs/8937278002) |
-| ⭐ 2026-11-10 | Roblox | Software Engineer, ROS Open Platform & AI Enablement | San Mateo, CA, United States | full-time | [link](https://careers.roblox.com/jobs/8356764?gh_jid=8356764) |
 | ⭐ 2026-11-10 | Stripe | Frontend Engineer, Link | N/A | full-time | [link](https://stripe.com/jobs/search?gh_jid=8353949) |
+| ⭐ 2026-11-10 | Roblox | Software Engineer, ROS Open Platform & AI Enablement | San Mateo, CA, United States | full-time | [link](https://careers.roblox.com/jobs/8356764?gh_jid=8356764) |
+| ⭐ 2026-11-10 | Twitch | Software Engineer II, Fintech | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/twitch/jobs/8937278002) |
 | ⭐ 2026-11-10 | Cursor | Software Engineer, ML Platform | Palo Alto, CA | full-time | [link](https://jobs.ashbyhq.com/cursor/5b744208-cb2c-4c31-9217-e0cbbf8ad7af) |
 | ⭐ 2026-11-10 | Cursor | Software Engineer, Pretraining Data | Palo Alto, CA | full-time | [link](https://jobs.ashbyhq.com/cursor/d06d229f-eb2c-46d7-8e0f-96da5ecaec88) |
 | ⭐ 2026-11-10 | Cursor | Software Engineer, Research Tooling | Palo Alto, CA | full-time | [link](https://jobs.ashbyhq.com/cursor/06675830-9b99-4347-8436-8110ca9c99a4) |
 | ⭐ 2026-11-10 | Supabase | Software Engineer - AI Tooling | Remote, Global | full-time | [link](https://jobs.ashbyhq.com/supabase/0055f731-cffa-4c74-9c00-8abfa579873d) |
-| ⭐ 2026-11-10 | Snapchat | Embedded Software Engineer, Power, Level 5 | San Diego, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/San-Diego-California/Embedded-Software-Engineer--Power--Level-5_R0047128-2) |
+| ⭐ 2026-11-10 | Disney | Product Software Engineer II | New York, NY, USA | full-time | [link](https://disney.wd5.myworkdayjobs.com/en-US/disneycareer/job/New-York-NY-USA/Product-Software-Engineer-II_10160173) |
+| ⭐ 2026-11-10 | Intel | GPU Software Engineer | US, California, Folsom | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-California-Folsom/GPU-Software-Engineer_JR0287695) |
 | ⭐ 2026-11-10 | Google | Software Engineer, Processor Design Infrastructure, Quantum AI | Goleta, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/121755350285066950) |
 | ⭐ 2026-11-10 | Apple | Software Engineer, Applied ML | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694108) |
 | ⭐ 2026-11-10 | Apple | Software Engineer, Deployment Compliance | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691617) |
-| ⭐ 2026-11-09 | Scopely | Full Stack Engineer | US - United States | full-time | [link](https://job-boards.greenhouse.io/scopely/jobs/5476480008?gh_jid=5476480008) |
 | ⭐ 2026-11-09 | Coinbase | Software Engineer-1, Money Movement  | Remote - USA | full-time | [link](https://www.coinbase.com/careers/positions/8278991?gh_jid=8278991) |
 | ⭐ 2026-11-09 | Coinbase | Software Engineer, Wallets, Liquidity and Bridging Team | Remote - USA | full-time | [link](https://www.coinbase.com/careers/positions/8139750?gh_jid=8139750) |
+| ⭐ 2026-11-09 | Scopely | Full Stack Engineer | US - United States | full-time | [link](https://job-boards.greenhouse.io/scopely/jobs/5476480008?gh_jid=5476480008) |
 | ⭐ 2026-11-09 | ElevenLabs | Full-Stack Engineer - ElevenAPI | Remote | full-time | [link](https://jobs.ashbyhq.com/ElevenLabs/108c99e6-ba2b-44a0-b830-7d535e14a152) |
 | ⭐ 2026-11-09 | Ramp | Software Engineer, Security, Stablecoin | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/d1183b00-6590-4fe4-a585-28d84e578fe3) |
 | ⭐ 2026-11-09 | Ramp | Software Engineer, Backend, Comms Platform | Remote (US) | full-time | [link](https://jobs.ashbyhq.com/ramp/939892e5-5273-4bfc-8c41-a6c51cabb228) |
 | ⭐ 2026-11-09 | Notion | Software Engineer, Web Infrastructure | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/06c2599d-4dd5-4f97-843f-7194b546f042) |
-| ⭐ 2026-11-09 | Disney | Product Software Engineer II | New York, NY, USA | full-time | [link](https://disney.wd5.myworkdayjobs.com/en-US/disneycareer/job/New-York-NY-USA/Product-Software-Engineer-II_10160173) |
-| ⭐ 🆕 2026-11-09 | Intel | GPU Software Engineer | US, California, Folsom | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-California-Folsom/GPU-Software-Engineer_JR0287695) |
 | ⭐ 2026-11-09 | Google | Software Engineer III, Core Data (multiple openings) | Madison, WI, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/133148695930512070) |
+| ⭐ 🆕 2026-11-09 | Apple | Software Engineer, Deployment Platform MultiCloud | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694167) |
+| ⭐ 🆕 2026-11-09 | Apple | Location Software Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200692268) |
+| ◐ 🆕 2026-11-08 | Apple | Machine Learning System Software Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693933) |
+| ◐ 🆕 2026-11-08 | Apple | Wireless Software Engineer, Wireless Technologies & Ecosystems | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200687778) |
 | ◐ 2026-11-06 | Figma | Software Engineer - Application Platform | San Francisco, CA • New York, NY • United States | full-time | [link](https://boards.greenhouse.io/figma/jobs/6242561004?gh_jid=6242561004) |
+| ◐ 2026-11-06 | Cloudflare | Software Engineer - Load Balancing | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8360609?gh_jid=8360609) |
 | ◐ 2026-11-06 | Affirm | Analytics Lead, Full Stack | Remote US | full-time | [link](https://job-boards.greenhouse.io/affirm/jobs/8011130003) |
 | ◐ 2026-11-06 | Affirm | Software Engineer II, Backend | Remote US | full-time | [link](https://job-boards.greenhouse.io/affirm/jobs/8196112003) |
-| ◐ 2026-11-06 | Cloudflare | Software Engineer - Load Balancing | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8360609?gh_jid=8360609) |
 | ◐ 2026-11-06 | Cohere | Software Engineer, GPU Infrastructure | Seattle | full-time | [link](https://jobs.ashbyhq.com/cohere/735f26a3-9456-49e2-8f84-23804534cfe4) |
 | ◐ 2026-11-06 | Cohere | Software Engineer, ML Workload Platform | Canada | full-time | [link](https://jobs.ashbyhq.com/cohere/8f60b8e2-55b9-4258-a4cc-813273161f97) |
+| ◐ 🆕 2026-11-06 | Apple | Wi-Fi Software Engineer, Wireless Technologies & Ecosystems | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200665281) |
 | ◐ 2026-11-05 | OpenAI | Founding Full Stack Software Engineer, Consulting | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/80c40695-5cd7-4206-96b6-873158a8e696) |
 | ◐ 2026-11-05 | OpenAI | Software Engineer, Agent Platform | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/783704d7-5afa-45aa-899b-1d6799f73004) |
 | ◐ 2026-11-05 | NBCUniversal (DreamWorks) | Software Engineer, VOD | New York, NEW YORK | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000159977020) |
+| ◐ 🆕 2026-11-05 | Apple | AI/ML Software Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200676774) |
+| ◐ 🆕 2026-11-05 | Apple | Software Engineer, Watch Software  | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693720) |
+| ◐ 🆕 2026-11-05 | Apple | Frontend Architect (AI Experiences), Retail and Marcom Engineering | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200692924) |
 | ◐ 2026-11-04 | Vercel | Software Engineer, Backend | Hybrid - San Francisco, New York City | full-time | [link](https://job-boards.greenhouse.io/vercel/jobs/6195153004) |
 | ◐ 2026-11-04 | Ramp | Software Engineer, Frontend | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/6511d68f-b65d-4499-962f-7e2f75eabe3f) |
 | ◐ 2026-11-04 | Notion | Software Engineer, Growth | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/f524ef6b-6a8a-4d73-b7ff-eac85bd6c887) |
-| ◐ 2026-11-04 | Palantir | Backend Software Engineer - Data Connectors | New York, NY | full-time | [link](https://jobs.lever.co/palantir/9aadca04-df88-4b46-95d8-c3b2628b30b0) |
 | ◐ 2026-11-04 | NBCUniversal (DreamWorks) | Jr. Software Engineer | Universal City, CALIFORNIA | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000159723020) |
+| ◐ 2026-11-04 | Palantir | Backend Software Engineer - Data Connectors | New York, NY | full-time | [link](https://jobs.lever.co/palantir/9aadca04-df88-4b46-95d8-c3b2628b30b0) |
 | ◐ 2026-11-04 | Google | Software Engineer III, Front End | Mountain View, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/139655315833397958) |
 | ◐ 2026-11-04 | Google | Software Engineer III, Front End | New York, NY, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/115184997362475718) |
 | ◐ 2026-11-03 | Vercel | Software Engineer, Agent Auth | Hybrid - San Francisco | full-time | [link](https://job-boards.greenhouse.io/vercel/jobs/6242246004) |
@@ -2407,53 +2439,58 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ◐ 2026-10-28 | Stripe | Software Engineer - Full stack | Seattle, WA | full-time | [link](https://stripe.com/jobs/search?gh_jid=8332676) |
 | ◐ 2026-10-28 | Databricks | Software Engineer, Infrastructure | Mountain View, California | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8829039002) |
 | ◐ 2026-10-28 | Palantir | Forward Deployed Software Engineer - Germany Forward Deployed | Washington, D.C. | full-time | [link](https://jobs.lever.co/palantir/491a0133-b580-45c3-9fd4-2314faf82fb9) |
-| ◐ 2026-10-27 | Affirm | Software Engineer II - CIAM | Remote US | full-time | [link](https://job-boards.greenhouse.io/affirm/jobs/8040751003) |
 | ◐ 2026-10-27 | Roblox | Software Engineer, Creator Services Communication | San Mateo, CA, United States | full-time | [link](https://careers.roblox.com/jobs/8283641?gh_jid=8283641) |
+| ◐ 2026-10-27 | Affirm | Software Engineer II - CIAM | Remote US | full-time | [link](https://job-boards.greenhouse.io/affirm/jobs/8040751003) |
 | ◐ 2026-10-27 | PlayStation (SIE) | Full Stack Software Engineer II (Contract Role) | United States, Madison, WI | full-time | [link](https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal/jobs/6199055004) |
-| ◐ 2026-10-26 | Twitch | Software Engineer I - Engagement Growth | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/twitch/jobs/8917377002) |
 | ◐ 2026-10-26 | Roblox | Software Engineer, Frontend - Economy  | San Mateo, CA, United States | full-time | [link](https://careers.roblox.com/jobs/8259453?gh_jid=8259453) |
+| ◐ 2026-10-26 | Twitch | Software Engineer I - Engagement Growth | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/twitch/jobs/8917377002) |
 | ◐ 2026-10-26 | OpenAI | Founding Software Engineer, Physical Engineering | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/2c646ef9-6f93-4124-9d51-964d2c5aa783) |
 | ◐ 2026-11-14 | Baseten | Software Engineer, Cloud Platform | San Francisco | full-time | [link](https://jobs.ashbyhq.com/baseten/bbf1b1a9-c90e-438d-8e5c-2bac67cc8df0) |
 | ◐ 2026-11-14 | Mercor | Software Engineer, Frontier Data Products  | San Francisco | full-time | [link](https://jobs.ashbyhq.com/mercor/ae344099-3fde-4027-bfde-f953db8b4728) |
 | ◐ 2026-11-14 | Lambda Labs | Software Engineer - Data Center Tooling | San Francisco Office (Fremont St) | full-time | [link](https://jobs.ashbyhq.com/Lambda/08addfcf-1466-4bea-a72e-07fb5b29fb97) |
+| ◐ 🆕 2026-11-14 | SpaceX | Full Stack Software Engineer (Starlink) | Palo Alto, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8943586002?gh_jid=8943586002) |
 | ◐ 2026-10-24 | Reddit | Software Engineer, Ad Signals | Remote - United States | full-time | [link](https://job-boards.greenhouse.io/reddit/jobs/8319655) |
 | ◐ 2026-10-24 | Supabase | Software Engineer - Storage | Remote, Global | full-time | [link](https://jobs.ashbyhq.com/supabase/9f2ba0b2-6d3b-43ea-990f-5b4bf3930520) |
-| ◐ 2026-10-23 | Mercury | Software Engineer - Mercury Command | San Francisco, CA, New York, NY, Portland, OR, or Remote within Canada or United States | full-time | [link](https://job-boards.greenhouse.io/mercury/jobs/6233238004) |
+| ◐ 2026-10-23 | Stripe | Software Engineer, Payments | N/A | full-time | [link](https://stripe.com/jobs/search?gh_jid=8260982) |
 | ◐ 2026-10-23 | Roblox | Software Engineer, Notifications | San Mateo, CA, United States | full-time | [link](https://careers.roblox.com/jobs/8261393?gh_jid=8261393) |
 | ◐ 2026-10-23 | Roblox | Software Engineer, Reliability  | San Mateo, CA, United States | full-time | [link](https://careers.roblox.com/jobs/8283707?gh_jid=8283707) |
-| ◐ 2026-10-23 | Stripe | Software Engineer, Payments | N/A | full-time | [link](https://stripe.com/jobs/search?gh_jid=8260982) |
+| ◐ 2026-10-23 | Mercury | Software Engineer - Mercury Command | San Francisco, CA, New York, NY, Portland, OR, or Remote within Canada or United States | full-time | [link](https://job-boards.greenhouse.io/mercury/jobs/6233238004) |
 | ◐ 2026-10-23 | Snowflake | Software Engineer | US-WA-Bellevue | full-time | [link](https://jobs.ashbyhq.com/snowflake/e56587dc-dc46-43e5-a93e-94d479fdb754) |
 | ◐ 2026-10-23 | OpenAI | Full Stack Software Engineer, Monetization Platform | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/191e42f8-cd62-4082-8f72-505c26505e67) |
-| ◐ 🆕 2026-10-23 | Microsoft | Software Engineer II- CTJ- POLY | United States, Virginia, Reston | full-time | [link](https://jobs.careers.microsoft.com/global/en/job/200055886) |
-| ◐ 2026-11-13 | xAI | Software Engineer, Consumer Subscriptions | Palo Alto, CA | full-time | [link](https://job-boards.greenhouse.io/xai/jobs/5290321007) |
+| ◐ 🆕 2026-11-15 | NVIDIA | Deep Learning Framework Communications Engineer - New College Grad 2026 | US, CA, Santa Clara | full-time | [link](https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Deep-Learning-Framework-Communications-Engineer---New-College-Grad-2026_JR2026129-1) |
 | ◐ 2026-10-22 | Stripe | Software Engineer | South San Francisco, CA | full-time | [link](https://stripe.com/jobs/search?gh_jid=8314283) |
 | ◐ 2026-10-22 | Stripe | Software Engineer, Resource Automation | South San Francisco, CA | full-time | [link](https://stripe.com/jobs/search?gh_jid=8314235) |
 | ◐ 2026-10-22 | Cloudflare | Software Engineer, Agentic Commerce | In-Office | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8312256?gh_jid=8312256) |
 | ◐ 2026-10-22 | Ramp | Software Engineer, Forward Deployed, Enterprise Product | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/09360e92-fc95-4ba6-9611-dfefd60b13ce) |
 | ◐ 2026-10-22 | OpenAI | Software Engineer, Identity Infrastructure  | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/551b0d0d-46c2-42fb-bb05-46e2fba8d4db) |
+| ◐ 2026-11-13 | xAI | Software Engineer, Consumer Subscriptions | Palo Alto, CA | full-time | [link](https://job-boards.greenhouse.io/xai/jobs/5290321007) |
+| ◐ 2026-11-13 | Micron | Full Stack AI Engineer | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Full-Stack-AI-Engineer_JR111963) |
+| ◐ 2026-11-13 | Micron | New College Grad - Software Engineer | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/New-College-Grad---Software-Engineer_JR109692) |
 | ◐ 2026-10-21 | Twitch | Software Engineer I - Engagement Growth | Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/twitch/jobs/8906750002) |
 | ◐ 2026-10-21 | DoorDash | Software Engineer, Reliability Platform | San Francisco, CA; Sunnyvale, CA; Seattle, WA; New York City, NY | full-time | [link](https://job-boards.greenhouse.io/doordashusa/jobs/8304878) |
 | ◐ 2026-10-21 | Supabase | Software Engineer - Turso | Remote, Global | full-time | [link](https://jobs.ashbyhq.com/supabase/7c5eb3fc-1087-4c1c-b3a2-a19fe01dd259) |
 | ◐ 2026-10-21 | Plaid | Software Engineer - Security Engineering | Seattle Office | full-time | [link](https://jobs.ashbyhq.com/plaid/f214bf6c-2008-4eab-8943-03f5d03088c2) |
 | ◐ 2026-10-21 | Ramp | Software Engineer, Backend, Accounting | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/c0a71032-1efb-40dc-b1e8-aa0f30cd5961) |
 | ◐ 2026-10-21 | OpenAI | Software Engineer, Privacy Engineering (Lawful Access) | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/e99105f1-0a15-4f25-9538-60312568f835) |
-| ◐ 2026-11-14 | Apple | Prototyping Systems Engineer - Platform Architecture | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200695036) |
-| ◐ 2026-11-14 | Apple | Machine Learning Research Engineer, Fitness Intelligence – Watch Software | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694963) |
 | ◐ 2026-10-20 | Coinbase | Software Engineer - Crypto Data Foundations | Remote - USA | full-time | [link](https://www.coinbase.com/careers/positions/8304038?gh_jid=8304038) |
 | ◐ 2026-10-20 | Ramp | Software Engineer, Backend, AI Spend Management | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/b7514711-8a29-4bd2-a97a-967be14e336f) |
 | ◐ 2026-10-20 | OpenAI | Software Engineer, TPU Compilers | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/0a6f6736-8743-4528-b17c-4e1f4f8ea45c) |
 | ◐ 2026-10-20 | Google | Software Engineer, Accelerators Software/Hardware Co design, DeepMind | Mountain View, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/93392001784783558) |
 | ◐ 2026-10-20 | Google | Software Engineer, Gemini App Skills Platform, DeepMind | Mountain View, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/136860781672047302) |
-| ◐ 2026-11-12 | SpaceX | Aerospace Software Engineer (Starfall) | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8939698002?gh_jid=8939698002) |
-| ◐ 2026-11-12 | SpaceX | RF Software Engineer (Starshield) | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8937195002?gh_jid=8937195002) |
-| ◐ 2026-11-12 | Anduril | Software Engineer, AI | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5293883007?gh_jid=5293883007) |
-| ◐ 🆕 2026-11-12 | Micron | Full Stack AI Engineer | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Full-Stack-AI-Engineer_JR111963) |
-| ◐ 🆕 2026-11-12 | Micron | New College Grad - Software Engineer | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/New-College-Grad---Software-Engineer_JR109692) |
+| ◐ 2026-11-14 | Apple | Prototyping Systems Engineer - Platform Architecture | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200695036) |
+| ◐ 2026-11-14 | Apple | Machine Learning Research Engineer, Fitness Intelligence – Watch Software | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694963) |
 | ◐ 2026-10-19 | Scopely | Software Engineer, Machine Learning | US - San Francisco, California, United States | full-time | [link](https://job-boards.greenhouse.io/scopely/jobs/5456049008?gh_jid=5456049008) |
 | ◐ 2026-10-19 | Notion | Software Engineer, Developer Platform | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/8c0bf773-e536-45c9-9a6c-8ee478148cc8) |
 | ◐ 2026-10-19 | OpenAI | Software Engineer, CI/CD & ML Infrastructure | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/a5dd77a2-9ab1-4165-98aa-c7bb0260985b) |
 | ◐ 2026-10-19 | OpenAI | Software Engineer, Backend — Dots | New York City | full-time | [link](https://jobs.ashbyhq.com/openai/341a5ad4-9134-4bad-88e1-2ce0f70bf519) |
 | ◐ 2026-10-19 | Google | Software Engineer, Full Stack, Learning and Education | Mountain View, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/118791905797382854) |
+| ◐ 2026-11-12 | SpaceX | Aerospace Software Engineer (Starfall) | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8939698002?gh_jid=8939698002) |
+| ◐ 2026-11-12 | SpaceX | RF Software Engineer (Starshield) | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8937195002?gh_jid=8937195002) |
+| ◐ 2026-11-12 | Anduril | Software Engineer, AI | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5293883007?gh_jid=5293883007) |
+| ◐ 2026-10-16 | OpenAI | Software Engineer, Full Stack — Dots | New York City | full-time | [link](https://jobs.ashbyhq.com/openai/dbe79b89-e593-44b3-8aec-c667f7134445) |
+| ◐ 2026-10-16 | OpenAI | Software Engineer, Mobile Web — Dots | New York City | full-time | [link](https://jobs.ashbyhq.com/openai/3b34eb10-25b0-4a97-bd6d-05fc90ad4981) |
+| ◐ 2026-10-16 | DocuSign | Lead Software Engineer - Data Protection | US-Seattle-3rd | full-time | [link](https://careers.docusign.com/careers-home/jobs/30545) |
+| ◐ 2026-11-13 | Intel | Manufacturing Systems Engineer in Wafer Packaging Manufacturing | US, New Mexico, Albuquerque | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-New-Mexico-Albuquerque/Manufacturing-Systems-Engineer-in-Wafer-Packaging-Manufacturing_JR0288854) |
 | ◐ 2026-11-13 | Apple | Software Development Engineer, Enterprise and Education, CoreOS | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694773) |
 | ◐ 2026-11-13 | Apple | AR/VR Applications Engineer - visionOS Spatial Media, Vision Products Software | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694936) |
 | ◐ 2026-11-13 | Apple | Retail Network Engineer, Infrastructure Services | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200687215) |
@@ -2461,32 +2498,17 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ◐ 2026-11-13 | Apple | Hardware Reliability Engineer - Mac System Reliability | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200684228) |
 | ◐ 2026-11-13 | Apple | Software Development Engineer, Test Tooling | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693291) |
 | ◐ 2026-11-13 | Apple | RF Communications Systems Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694829) |
-| ◐ 2026-10-16 | OpenAI | Software Engineer, Full Stack — Dots | New York City | full-time | [link](https://jobs.ashbyhq.com/openai/dbe79b89-e593-44b3-8aec-c667f7134445) |
-| ◐ 2026-10-16 | OpenAI | Software Engineer, Mobile Web — Dots | New York City | full-time | [link](https://jobs.ashbyhq.com/openai/3b34eb10-25b0-4a97-bd6d-05fc90ad4981) |
-| ◐ 2026-10-16 | DocuSign | Lead Software Engineer - Data Protection | US-Seattle-3rd | full-time | [link](https://careers.docusign.com/careers-home/jobs/30545) |
-| ◐ 2026-11-11 | SpaceX | Software Engineer (Starship) | Starbase, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8937000002?gh_jid=8937000002) |
 | ◐ 2026-11-11 | SpaceX | Software Engineer (Starship) | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8937029002?gh_jid=8937029002) |
-| ◐ 2026-10-15 | Affirm | Software Engineer I, Fullstack (Search) | Remote US | full-time | [link](https://job-boards.greenhouse.io/affirm/jobs/8017340003) |
-| ◐ 2026-10-15 | Affirm | Software Engineer II, Full Stack (Card Acquisition) | Remote US | full-time | [link](https://job-boards.greenhouse.io/affirm/jobs/8032173003) |
-| ◐ 2026-10-15 | Snowflake | Software Engineer — Engineering Systems, Continuous Integration | US-WA-Bellevue | full-time | [link](https://jobs.ashbyhq.com/snowflake/37ad5524-1716-4b54-8c3a-a81429592a91) |
+| ◐ 2026-11-11 | SpaceX | Software Engineer (Starship) | Starbase, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8937000002?gh_jid=8937000002) |
+| ◐ 2026-11-11 | PayPal | Software Engineer | San Jose, California, United States of America | full-time | [link](https://paypal.wd1.myworkdayjobs.com/en-US/jobs/job/San-Jose-California-United-States-of-America/Software-Engineer_R0138380) |
 | ◐ 2026-10-22 | Sierra | Software Engineer, Context Engine | San Francisco, CA | full-time | [link](https://jobs.ashbyhq.com/Sierra/ae8a501d-7f79-4398-b858-3d793756dd25) |
 | ◐ 2026-11-12 | Dropbox | Application Security Engineer | Remote - US: Select locations | full-time | [link](https://jobs.dropbox.com/listing/8328511?gh_jid=8328511) |
 | ◐ 2026-11-12 | OpenAI | Firmware Engineer, Robotics | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/3f99bfef-5b1a-48ea-aed0-2dbd57b12722) |
-| ◐ 🆕 2026-11-12 | Intel | Manufacturing Systems Engineer in Wafer Packaging Manufacturing | US, New Mexico, Albuquerque | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-New-Mexico-Albuquerque/Manufacturing-Systems-Engineer-in-Wafer-Packaging-Manufacturing_JR0288854) |
 | ◐ 2026-11-12 | Apple | PHY Systems Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694578) |
 | ◐ 2026-11-12 | Apple | Build Automation & iOS Engineer - Services Special Project  | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694227) |
 | ◐ 2026-11-12 | Apple | Power Performance Modeling Engineer - Platform Architecture | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693603) |
 | ◐ 2026-11-12 | Apple | Software Development Engineer, Vision Products Software | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694513) |
-| ◐ 2026-11-10 | PayPal | Software Engineer | San Jose, California, United States of America | full-time | [link](https://paypal.wd1.myworkdayjobs.com/en-US/jobs/job/San-Jose-California-United-States-of-America/Software-Engineer_R0138380) |
-| ◐ 2026-11-11 | DoorDash | Autonomy Simulation Engineer  | Oakland, CA | full-time | [link](https://job-boards.greenhouse.io/doordashusa/jobs/8381364) |
-| ◐ 2026-11-11 | Supabase | Developer Relations Engineer | Remote, Global | full-time | [link](https://jobs.ashbyhq.com/supabase/26f7817d-ca92-4094-a2b5-f22e07a218c4) |
-| ◐ 2026-11-11 | NBCUniversal (DreamWorks) | Network Engineer | New York, NEW YORK | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000161163099) |
-| ◐ 2026-11-11 | Apple | GPU Performance Engineer, Platform Architecture | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694453) |
-| ◐ 2026-11-11 | Apple | Machine Learning Systems Engineer, Siri Runtime Systems and Interaction | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200649481) |
-| ◐ 2026-11-11 | Apple | Cellular RF Receiver Systems Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694339) |
-| ◐ 2026-11-11 | Apple | System Software Developer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694530) |
-| ◐ 2026-11-11 | Apple | Darwin Runtime Engineer, Core OS | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200678840) |
-| ◐ 2026-11-11 | Apple | Software Quality Engineer, Retail & Marcom Engineering | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693627) |
+| ◐ 2026-11-10 | PayPal | Software Engineer | Scottsdale, Arizona, United States of America | full-time | [link](https://paypal.wd1.myworkdayjobs.com/en-US/jobs/job/Scottsdale-Arizona-United-States-of-America/Software-Engineer_R0139000) |
 | ◐ 2026-11-09 | Gusto | Software Engineer,  Financial Data & Payments | Denver, CO - Hybrid; New York, NY - Hybrid; San Francisco, CA - Hybrid; Seattle, WA - Remote | full-time | [link](https://job-boards.greenhouse.io/gusto/jobs/8360497) |
 | ◐ 2026-11-09 | Mercor | Software Engineer, Applied AI - Systems | San Francisco | full-time | [link](https://jobs.ashbyhq.com/mercor/6d1de461-c08d-419c-96cf-ed38083e0976) |
 | ◐ 2026-11-09 | Mercor | Software Engineer, Applied AI- Evals | San Francisco | full-time | [link](https://jobs.ashbyhq.com/mercor/4b0920c5-49f9-4851-a8ca-26825ff570f8) |
@@ -2495,14 +2517,22 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ◐ 2026-11-09 | Anduril | Software Engineer, Sentry Software (Allied Customer Deployment) | Irvine, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5290223007?gh_jid=5290223007) |
 | ◐ 2026-11-09 | Anduril | Software Engineer, Sentry Software (Ground Based Air Defense) | Irvine, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5290228007?gh_jid=5290228007) |
 | ◐ 2026-11-09 | Anduril | Software Engineer, Sentry Software (Manufacturing) | Irvine, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5290232007?gh_jid=5290232007) |
-| ◐ 2026-11-09 | PayPal | Software Engineer | Scottsdale, Arizona, United States of America | full-time | [link](https://paypal.wd1.myworkdayjobs.com/en-US/jobs/job/Scottsdale-Arizona-United-States-of-America/Software-Engineer_R0139000) |
+| ◐ 2026-11-11 | DoorDash | Autonomy Simulation Engineer  | Oakland, CA | full-time | [link](https://job-boards.greenhouse.io/doordashusa/jobs/8381364) |
+| ◐ 2026-11-11 | Supabase | Developer Relations Engineer | Remote, Global | full-time | [link](https://jobs.ashbyhq.com/supabase/26f7817d-ca92-4094-a2b5-f22e07a218c4) |
+| ◐ 2026-11-11 | NBCUniversal (DreamWorks) | Network Engineer | New York, NEW YORK | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000161163099) |
+| ◐ 2026-11-11 | Snapchat | Embedded Software/Firmware Engineer | Vancouver, WA - 805 Broadway | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Vancouver-WA---805-Broadway/Embedded-Software-Firmware-Test-Engineer_R0046086-1) |
+| ◐ 2026-11-11 | Apple | GPU Performance Engineer, Platform Architecture | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694453) |
+| ◐ 2026-11-11 | Apple | Machine Learning Systems Engineer, Siri Runtime Systems and Interaction | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200649481) |
+| ◐ 2026-11-11 | Apple | Cellular RF Receiver Systems Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694339) |
+| ◐ 2026-11-11 | Apple | System Software Developer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694530) |
+| ◐ 2026-11-11 | Apple | Darwin Runtime Engineer, Core OS | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200678840) |
+| ◐ 2026-11-11 | Apple | Software Quality Engineer, Retail & Marcom Engineering | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693627) |
 |  2026-11-08 | SpaceX | Full Stack Software Engineer, Internal Platforms | Starbase, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8934566002?gh_jid=8934566002) |
 |  2026-11-08 | SpaceX | Full Stack Software Engineer, Internal Platforms | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8934563002?gh_jid=8934563002) |
 |  2026-11-08 | SpaceX | Full Stack Software Engineer, Manufacturing Systems  | Bastrop, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8934567002?gh_jid=8934567002) |
-|  2026-11-10 | Dropbox | Security Engineer, IAM | Remote - US: Select locations | full-time | [link](https://jobs.dropbox.com/listing/8328534?gh_jid=8328534) |
 |  2026-11-10 | Anthropic | Security Engineer, RF and Technical Surveillance Countermeasures | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5476579008) |
+|  2026-11-10 | Dropbox | Security Engineer, IAM | Remote - US: Select locations | full-time | [link](https://jobs.dropbox.com/listing/8328534?gh_jid=8328534) |
 |  2026-11-10 | OpenAI | Android Engineer, Growth | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/57bbaedc-30c1-4f1d-b194-e32a6adf874c) |
-|  2026-11-10 | Snapchat | Embedded Software/Firmware Engineer | Vancouver, WA - 805 Broadway | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Vancouver-WA---805-Broadway/Embedded-Software-Firmware-Test-Engineer_R0046086-1) |
 |  2026-11-10 | Apple | Software Development Engineer in Test - Camera API | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694131) |
 |  2026-11-10 | Apple | Software Development Engineer - iOS for Keyboard | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694375) |
 |  2026-11-10 | Apple | Software Development Engineer - System Analytics & Intelligence (SAIL) | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693892) |
@@ -2511,24 +2541,32 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-10 | Apple | Computer Vision Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694128) |
 |  2026-11-10 | Apple | Software Development Engineer - Cellular (Instrument Engineering) | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200692246) |
 |  2026-11-09 | Nintendo | Application Security Engineer | Redmond, WA | full-time | [link](https://careers.nintendo.com/?gh_jid=4475136009) |
-|  2026-11-09 | GitLab | Professional Services Engineer - KSA | Remote, KSA | full-time | [link](https://job-boards.greenhouse.io/gitlab/jobs/8928253002) |
 |  2026-11-09 | Stripe | Solutions Architect, Metronome (AI Native) | San Francisco, Seattle, US-Remote | full-time | [link](https://stripe.com/jobs/search?gh_jid=8368260) |
+|  2026-11-09 | GitLab | Professional Services Engineer - KSA | Remote, KSA | full-time | [link](https://job-boards.greenhouse.io/gitlab/jobs/8928253002) |
 |  2026-11-09 | Cursor | GTM Applications Engineer | San Francisco, CA | full-time | [link](https://jobs.ashbyhq.com/cursor/cddb7c29-39e2-431d-af11-029edd4207c4) |
 |  2026-11-09 | Cursor | Product Education Engineer | New York, NY | full-time | [link](https://jobs.ashbyhq.com/cursor/7a3714ab-8566-44c7-90e5-46a5c9f20e5f) |
 |  2026-11-09 | Cursor | Field Engineer | New York, NY | full-time | [link](https://jobs.ashbyhq.com/cursor/014605a9-3a17-4f7d-9037-6c8bb3278e08) |
 |  2026-11-09 | ElevenLabs | Website Growth Engineer | London | full-time | [link](https://jobs.ashbyhq.com/ElevenLabs/71992118-5b37-4a4a-a862-99e82e02916f) |
 |  2026-11-09 | OpenAI | Solutions Engineer, Ads Solutions - NYC | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/eb3b695e-6c60-4875-b8bc-8f4d5d8a9bbb) |
+|  🆕 2026-11-09 | Apple | Site Reliability Engineer, Apple Data Platform | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200690525) |
 |  2026-11-06 | SpaceX | Software Engineer, Flight Software (Starship) | Cape Canaveral, FL | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8933873002?gh_jid=8933873002) |
+|  🆕 2026-11-08 | Apple | Agent Development Engineer, Customer Systems | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200662678) |
 |  2026-11-05 | Verkada | Software Engineer, Cloud Infrastructure | San Mateo, CA United States | full-time | [link](https://job-boards.greenhouse.io/verkada/jobs/5283655007) |
 |  2026-11-05 | SpaceX | Space Operations Software Engineer | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8931476002?gh_jid=8931476002) |
 |  2026-11-05 | Anduril | Forward Deployed Software Engineer, JBLM (Active Clearance) | Tacoma, Washington, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5286149007?gh_jid=5286149007) |
+|  2026-11-07 | Intel | Software QA Engineer | US, California, Santa Clara | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-California-Santa-Clara/Software-QA-Engineer_JR0288918) |
+|  2026-11-07 | Intel | Software Performance Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Software-Performance-Engineer_JR0288983) |
 |  2026-11-04 | Deepgram | Software Engineer - Applied AI | San Francisco, CA | full-time | [link](https://jobs.ashbyhq.com/Deepgram/3c9a9729-7ff1-49e3-a388-f108745e4b41) |
 |  2026-11-04 | SpaceX | Software Engineer, Telemetry - Top Secret Clearance (Starlink) | Washington, DC | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8918317002?gh_jid=8918317002) |
 |  2026-11-06 | OpenAI | Robotics Test Engineer | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/0369bd4b-bfb1-4c36-90cb-4e3a24365150) |
 |  2026-11-06 | OpenAI | Forward Deployed Engineer (FDE), Life Sciences - NYC | New York City | full-time | [link](https://jobs.ashbyhq.com/openai/a12c3c93-51df-437d-862f-4892367fea32) |
 |  2026-11-06 | OpenAI | Forward Deployed Engineer (FDE), Life Sciences - SF | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/218c0b55-53bd-4df6-805d-321a8c2e7db7) |
-|  🆕 2026-11-06 | Intel | Software QA Engineer | US, California, Santa Clara | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-California-Santa-Clara/Software-QA-Engineer_JR0288918) |
-|  🆕 2026-11-06 | Intel | Software Performance Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Software-Performance-Engineer_JR0288983) |
+|  🆕 2026-11-06 | Apple | Security Engineer - Developer Experience | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200690608) |
+|  🆕 2026-11-06 | Apple | Technical Enablement Engineer  | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200690606) |
+|  🆕 2026-11-06 | Apple | AI Software Evaluation Engineer, Siri AI Quality | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693908) |
+|  🆕 2026-11-06 | Apple | Modem System Test Engineer - Wireless Technologies and Ecosystems / | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693803) |
+|  🆕 2026-11-06 | Apple | Operations Test Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691102) |
+|  🆕 2026-11-06 | Apple | Wireless Systems Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200682520) |
 |  2026-11-03 | Writer | Software engineer, agents | New York City, NY | full-time | [link](https://jobs.ashbyhq.com/WRITER/ce86adec-e8ce-4bbf-a706-43795a982de6) |
 |  2026-11-03 | Writer | Software engineer, generative AI | San Francisco, CA | full-time | [link](https://jobs.ashbyhq.com/WRITER/2170c74d-7726-4d8f-910e-7f4ef7ac4fd1) |
 |  2026-11-03 | SpaceX | Propulsion Software Engineer (Falcon Engineering) | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8927858002?gh_jid=8927858002) |
@@ -2540,28 +2578,41 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-05 | OpenAI | Forward Deployed Engineer (FDE), Financial Services- NYC | New York City | full-time | [link](https://jobs.ashbyhq.com/openai/c90cfa58-7513-4998-a1ce-f6168dd8fc95) |
 |  2026-11-05 | OpenAI | Forward Deployed Engineer (FDE), Cyber - NYC | New York City | full-time | [link](https://jobs.ashbyhq.com/openai/9c1aa1f3-b4d0-48fa-814b-37d36ad0ad2e) |
 |  2026-11-05 | OpenAI | Forward Deployed Engineer (FDE), Cyber - SF | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/a84e6109-142f-45ae-80e1-05811732cca1) |
+|  2026-11-05 | Intel | AMHS Intelligent Systems Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/AMHS-Intelligent-Systems-Engineer_JR0288539) |
+|  🆕 2026-11-05 | Apple | Test Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691413) |
+|  🆕 2026-11-05 | Apple | Software Development Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691326) |
+|  🆕 2026-11-05 | Apple | MultiRadio Coex Software Systems Engineer, Wireless Technologies & Ecosystems | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693606) |
+|  🆕 2026-11-05 | Apple | Release Engineer,  Infrastructure Services | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693205) |
+|  🆕 2026-11-05 | Apple | Firmware Validation Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693295) |
+|  🆕 2026-11-05 | Apple | Wireless RF OTA Connectivity Systems Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693289) |
+|  🆕 2026-11-05 | Apple | Reliability Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691629) |
+|  🆕 2026-11-05 | Apple | K-12 Education Systems Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200692239) |
+|  🆕 2026-11-05 | Apple | Design for Test Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691284) |
+|  🆕 2026-11-05 | Apple | Software Development Engineer - Test | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200680221) |
+|  🆕 2026-11-05 | Apple | Embedded Real Time Critical Control Firmware Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200625835) |
+|  🆕 2026-11-05 | Apple | Embedded 5G/4G Cellular Physical Layer Data Path Signal Processing Firmware Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200667514) |
+|  2026-11-02 | SpaceX | Software Engineer (Starlink) | Redmond, WA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8922361002?gh_jid=8922361002) |
 |  2026-11-02 | SpaceX | Software Engineer (Starlink Enterprise) | Palo Alto, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8927257002?gh_jid=8927257002) |
-|  2026-11-04 | Twitch | Software Dev Engineer I - Security Platform | Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/twitch/jobs/8931343002) |
-|  2026-11-04 | Twitch | Software Dev Engineer I - Security Platform | Irvine, CA | full-time | [link](https://job-boards.greenhouse.io/twitch/jobs/8931345002) |
-|  2026-11-04 | Twitch | Software Dev Engineer I - Security Platform | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/twitch/jobs/8929545002) |
-|  2026-11-04 | Stripe | Demo Engineer | Chicago | full-time | [link](https://stripe.com/jobs/search?gh_jid=8338344) |
-|  2026-11-04 | Stripe | Security Engineer, Privy | NYC-Privy | full-time | [link](https://stripe.com/jobs/search?gh_jid=8306475) |
-|  2026-11-04 | Cloudflare | Hardware Systems Engineer - AI Hardware | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8325834?gh_jid=8325834) |
-|  2026-11-04 | Cloudflare | Hardware Systems Engineer, Hardware Tools / Firmware | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8306486?gh_jid=8306486) |
-|  🆕 2026-11-04 | Intel | AMHS Intelligent Systems Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/AMHS-Intelligent-Systems-Engineer_JR0288539) |
-|  2026-11-04 | Google | Manufacturing Test Development Engineer, Google Cloud Platforms, Infrastructure Engineering | Sunnyvale, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/142748173322855110) |
 |  2026-11-01 | Anduril | GNC Software Engineer | Waltham, Massachusetts, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5281208007?gh_jid=5281208007) |
 |  2026-11-01 | Anduril | Software Engineer, Battlespace Awareness  | Broomfield, Colorado, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5281214007?gh_jid=5281214007) |
 |  2026-11-01 | Anduril | Software Engineer, Battlespace Awareness  | Waltham, Massachusetts, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5281215007?gh_jid=5281215007) |
 |  2026-11-01 | Anduril | Software Engineer- Infrastructure  | Broomfield, Colorado, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5281224007?gh_jid=5281224007) |
-|  2026-11-01 | Anduril | Software Engineer, Rust  | Broomfield, Colorado, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5281216007?gh_jid=5281216007) |
 |  2026-11-01 | Anduril | Software Engineer, Rust  | Waltham, Massachusetts, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5281217007?gh_jid=5281217007) |
+|  2026-11-01 | Anduril | Software Engineer, Rust  | Broomfield, Colorado, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5281216007?gh_jid=5281216007) |
+|  2026-11-04 | Stripe | Demo Engineer | Chicago | full-time | [link](https://stripe.com/jobs/search?gh_jid=8338344) |
+|  2026-11-04 | Stripe | Security Engineer, Privy | NYC-Privy | full-time | [link](https://stripe.com/jobs/search?gh_jid=8306475) |
+|  2026-11-04 | Twitch | Software Dev Engineer I - Security Platform | Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/twitch/jobs/8931343002) |
+|  2026-11-04 | Twitch | Software Dev Engineer I - Security Platform | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/twitch/jobs/8929545002) |
+|  2026-11-04 | Twitch | Software Dev Engineer I - Security Platform | Irvine, CA | full-time | [link](https://job-boards.greenhouse.io/twitch/jobs/8931345002) |
+|  2026-11-04 | Cloudflare | Hardware Systems Engineer - AI Hardware | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8325834?gh_jid=8325834) |
+|  2026-11-04 | Cloudflare | Hardware Systems Engineer, Hardware Tools / Firmware | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8306486?gh_jid=8306486) |
+|  2026-11-04 | Google | Manufacturing Test Development Engineer, Google Cloud Platforms, Infrastructure Engineering | Sunnyvale, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/142748173322855110) |
 |  2026-11-03 | DoorDash | Manufacturing Test Engineer - Dot | Oakland, CA | full-time | [link](https://job-boards.greenhouse.io/doordashusa/jobs/8349894) |
 |  2026-11-03 | OpenAI | EDA Cloud & Developer Infrastructure Engineer | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/4f2d9849-ad00-48d5-a22f-0cb943723999) |
-|  2026-11-02 | PlayStation (SIE) | Software QA Engineer 2 | United States, San Mateo, CA | full-time | [link](https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal/jobs/6232171004) |
+|  2026-11-03 | Intel | Software Application Development Engineer | US, Arizona, Phoenix | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Arizona-Phoenix/Software-Application-Development-Engineer-Grade_JR0283627) |
 |  2026-11-02 | Cloudflare | Systems Engineer, WARP | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8336674?gh_jid=8336674) |
+|  2026-11-02 | PlayStation (SIE) | Software QA Engineer 2 | United States, San Mateo, CA | full-time | [link](https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal/jobs/6232171004) |
 |  2026-11-02 | ElevenLabs | Mobile Engineer - ElevenMusic | Remote | full-time | [link](https://jobs.ashbyhq.com/ElevenLabs/1b90a2b2-1352-458d-b2b7-3900f6e02df5) |
-|  🆕 2026-11-02 | Intel | Software Application Development Engineer | US, Arizona, Phoenix | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Arizona-Phoenix/Software-Application-Development-Engineer-Grade_JR0283627) |
 |  2026-10-29 | Box | Software Engineer III, Kubernetes | Redwood City, CA, United States | full-time | [link](https://job-boards.greenhouse.io/boxinc/jobs/8318475) |
 |  2026-10-29 | Anduril | Software Engineer, ERP Applications & Development | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5279793007?gh_jid=5279793007) |
 |  2026-10-28 | Anduril | Embedded Software Engineer, Manufacturing Test, Intelligence Systems | Ashville, Ohio, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5278217007?gh_jid=5278217007) |
@@ -2574,26 +2625,27 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-26 | Speak | Full-Stack Engineer - Enterprise | San Francisco | full-time | [link](https://jobs.ashbyhq.com/speak/8428825b-a10f-47e2-acc6-5e24d11d6137) |
 |  2026-10-26 | Baseten | Software Engineer - Compute & Isolation | San Francisco | full-time | [link](https://jobs.ashbyhq.com/baseten/7c0ba27d-2f09-42f2-9277-1b756076b00b) |
 |  2026-10-26 | Baseten | Software Engineer - Networking (Agent Infra) | San Francisco | full-time | [link](https://jobs.ashbyhq.com/baseten/d7e9ee32-dee8-459f-9d8a-538d65df51ae) |
+|  2026-10-26 | Anduril | Scientific Software Engineer | Broomfield, Colorado, United States; Fort Collins, Colorado, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5275462007?gh_jid=5275462007) |
 |  2026-11-14 | Apple | Performance Modeling Software Architect, Platform Architecture | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200695054) |
+|  2026-10-25 | SpaceX | Application Software Engineer, Launch Software | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8915956002?gh_jid=8915956002) |
 |  2026-10-29 | Figma | Developer Advocate, Payload | San Francisco, CA • New York, NY • United States | full-time | [link](https://boards.greenhouse.io/figma/jobs/6231582004?gh_jid=6231582004) |
 |  2026-10-29 | Notion | Business Systems Engineer | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/30a5c739-185f-4a55-8a63-85974d687444) |
 |  2026-10-29 | OpenAI | Network Infrastructure Engineer, Global Network Infra (WAN) | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/9f7371c4-e306-4a45-a400-aa2843fabd85) |
-|  2026-10-25 | SpaceX | Application Software Engineer, Launch Software | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8915956002?gh_jid=8915956002) |
 |  2026-10-24 | Anduril | Software Engineer- Infrastructure  | Waltham, Massachusetts, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5274647007?gh_jid=5274647007) |
 |  2026-10-28 | Stripe | Technical Curriculum Developer, Technical Enablement | San Francisco; Seattle; Remote | full-time | [link](https://stripe.com/jobs/search?gh_jid=8164666) |
 |  2026-10-28 | Cloudflare | Hardware Systems Engineer | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8325821?gh_jid=8325821) |
 |  2026-10-28 | Cloudflare | Systems Reliability Engineer - Core | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8324908?gh_jid=8324908) |
 |  2026-10-28 | Supabase | Partner Solutions Architect, AI Builder  | Remote, AMER | full-time | [link](https://jobs.ashbyhq.com/supabase/282d1dfb-b162-4ce4-a938-c4b2173230e0) |
 |  2026-10-28 | Cohere | Forward Deployed Engineer, Inference  | United States | full-time | [link](https://jobs.ashbyhq.com/cohere/8df498e9-aba8-487f-80ba-362b492bad09) |
-|  2026-11-13 | Dropbox | Implementation Architect | Remote - US: Select locations | full-time | [link](https://jobs.dropbox.com/listing/8374438?gh_jid=8374438) |
+|  2026-10-23 | SpaceX | AI Software Engineer (Vehicle Engineering) | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8910071002?gh_jid=8910071002) |
+|  2026-10-23 | Sierra | Software Engineer, Cloud Infrastructure | San Francisco, CA | full-time | [link](https://jobs.ashbyhq.com/Sierra/4b28305d-e601-4328-a8f5-9f236bd718bd) |
 |  2026-11-13 | Databricks | Solutions Architect - Digital Native Business (DNB) | Remote - California; San Francisco, California | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8938652002) |
+|  2026-11-13 | Dropbox | Implementation Architect | Remote - US: Select locations | full-time | [link](https://jobs.dropbox.com/listing/8374438?gh_jid=8374438) |
 |  2026-11-13 | DoorDash | Solutions Architect, Business Technology Security | Atlanta, GA; Charlotte, NC; Tampa, FL; Raleigh, NC; Richmond, VA; Charleston, SC; Portland, ME; Wilmington, DE; United States- remote | full-time | [link](https://job-boards.greenhouse.io/doordashusa/jobs/8386180) |
 |  2026-11-13 | Ramp | Technical Consultant, Strategic | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/e45a8b6a-5029-4ca5-ac6f-5af940843c72) |
 |  2026-11-13 | OpenAI | Technical Operations Analyst, User Safety & Risk Operations | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/7b867d19-f018-4c08-8183-d2358b733ee5) |
 |  2026-11-13 | NBCUniversal (DreamWorks) | System Analyst, Remote IT Operations | Monroe, Connecticut | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000161533282) |
 |  2026-11-13 | Apple | US-Technical Specialist | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694985) |
-|  2026-10-23 | SpaceX | AI Software Engineer (Vehicle Engineering) | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8910071002?gh_jid=8910071002) |
-|  2026-10-23 | Sierra | Software Engineer, Cloud Infrastructure | San Francisco, CA | full-time | [link](https://jobs.ashbyhq.com/Sierra/4b28305d-e601-4328-a8f5-9f236bd718bd) |
 |  2026-10-27 | Anthropic | Autonomous Systems Security Engineer | Remote-Friendly (Travel Required) / San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5462972008) |
 |  2026-10-27 | PlayStation (SIE) | Contract Software Development Engineer in Test - Subscription Platform | United States, Aliso Viejo, CA | full-time | [link](https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal/jobs/6237074004) |
 |  2026-10-27 | PlayStation (SIE) | Contract Software Development Engineer in Test - Subscription Platform | United States, San Diego, CA | full-time | [link](https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal/jobs/6232183004) |
@@ -2608,10 +2660,10 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-22 | Baseten | Software Engineer - Billing & Internal Tooling | San Francisco | full-time | [link](https://jobs.ashbyhq.com/baseten/34fd4416-49f3-4ef7-b9f8-5883f8d0710c) |
 |  2026-10-22 | Baseten | Software Engineer - Partner Platform | San Francisco | full-time | [link](https://jobs.ashbyhq.com/baseten/08bededd-d362-453e-b014-384a2003cbf1) |
 |  2026-10-22 | SpaceX | Embedded Software Engineer, Laser Mesh Routing (Starlink) | Redmond, WA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8849599002?gh_jid=8849599002) |
-|  2026-10-22 | SpaceX | Embedded Software Engineer, Laser Mesh Routing (Starlink) | Bellevue, WA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8852118002?gh_jid=8852118002) |
 |  2026-10-22 | SpaceX | Embedded Software Engineer, Laser Mesh Routing (Starlink) | Palo Alto, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8852117002?gh_jid=8852117002) |
-|  2026-10-22 | SpaceX | Software Engineer, Linux Kernel (Starlink) | Redmond, WA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8852114002?gh_jid=8852114002) |
+|  2026-10-22 | SpaceX | Embedded Software Engineer, Laser Mesh Routing (Starlink) | Bellevue, WA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8852118002?gh_jid=8852118002) |
 |  2026-10-22 | SpaceX | Software Engineer, Linux Kernel (Starlink) | Bellevue, WA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8852121002?gh_jid=8852121002) |
+|  2026-10-22 | SpaceX | Software Engineer, Linux Kernel (Starlink) | Redmond, WA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8852114002?gh_jid=8852114002) |
 |  2026-10-22 | SpaceX | Software Engineer, Linux Kernel (Starlink) | Palo Alto, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8852119002?gh_jid=8852119002) |
 |  2026-10-22 | SpaceX |  Software Engineer, Supercomputer Network (Starlink) | Redmond, WA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8852113002?gh_jid=8852113002) |
 |  2026-10-22 | SpaceX | Software Engineer, Supercomputer Network (Starlink) | Palo Alto, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8852122002?gh_jid=8852122002) |
@@ -2623,10 +2675,10 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-22 | Sierra | Software Engineer, Channels and Experiences | San Francisco, CA | full-time | [link](https://jobs.ashbyhq.com/Sierra/2f372b6b-d163-48bd-b5df-84f9bf2b4dbc) |
 |  2026-10-22 | Sierra | Software Engineer, Payments Infrastructure | San Francisco, CA | full-time | [link](https://jobs.ashbyhq.com/Sierra/50ec6f9a-25f9-44b4-b8cc-50c897e698b3) |
 |  2026-10-22 | Sierra | Software Engineer, Horizon | San Francisco, CA | full-time | [link](https://jobs.ashbyhq.com/Sierra/0dfe7805-aa81-4b8c-88e0-f93a7f80ecee) |
-|  2026-10-26 | Coinbase | Security Engineer, Corporate Security | Remote - USA | full-time | [link](https://www.coinbase.com/careers/positions/8319444?gh_jid=8319444) |
 |  2026-10-26 | Stripe | Android Engineer, Identity  | Seattle, WA; San Francisco, CA; New York City, NY | full-time | [link](https://stripe.com/jobs/search?gh_jid=8311069) |
 |  2026-10-26 | Stripe | iOS Engineer, Identity | Seattle, WA; San Francisco, CA; New York City, NY | full-time | [link](https://stripe.com/jobs/search?gh_jid=8311082) |
 |  2026-10-26 | Stripe | Technical Operations Engineer | South San Francisco, CA | full-time | [link](https://stripe.com/jobs/search?gh_jid=8325807) |
+|  2026-10-26 | Coinbase | Security Engineer, Corporate Security | Remote - USA | full-time | [link](https://www.coinbase.com/careers/positions/8319444?gh_jid=8319444) |
 |  2026-10-26 | Supabase | Support Engineer (APAC - Weekends) | Remote, APAC | full-time | [link](https://jobs.ashbyhq.com/supabase/4857bb69-da99-4027-87f1-a6a4d03699b3) |
 |  2026-10-26 | Supabase | Container Engineer | Remote, Global | full-time | [link](https://jobs.ashbyhq.com/supabase/6f7656fc-9983-48be-bbd3-8b40e0e3027a) |
 |  2026-10-26 | ElevenLabs | Android Engineer - Creative App | Remote | full-time | [link](https://jobs.ashbyhq.com/ElevenLabs/b380fb97-bb18-46a5-91db-5132e6693e93) |
@@ -2636,90 +2688,87 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-21 | SpaceX | Lead Software Engineer, Application Software (Procurement) | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8907619002?gh_jid=8907619002) |
 |  2026-10-21 | Anduril | Full Stack Software Engineer - Core Infrastructure | Atlanta, Georgia, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5271092007?gh_jid=5271092007) |
 |  2026-10-20 | Elastic | Software Engineer II (Networking) - Platform Infra | United States | full-time | [link](https://jobs.elastic.co/jobs?gh_jid=8303806&gh_jid=8303806) |
+|  2026-10-25 | Cloudflare | Customer Reliability Engineer | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8317751?gh_jid=8317751) |
 |  2026-11-12 | Apple | Power Performance Modeling Architect - Platform Architecture | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694567) |
 |  2026-11-12 | Apple | Systems Architect | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694622) |
-|  2026-10-25 | Cloudflare | Customer Reliability Engineer | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8317751?gh_jid=8317751) |
 |  2026-10-19 | Elastic | Tech Lead, Web Development - Full Stack | United States | full-time | [link](https://jobs.elastic.co/jobs?gh_jid=8285465&gh_jid=8285465) |
 |  2026-10-19 | Anduril | Software Engineer - Payload Integrations | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5269031007?gh_jid=5269031007) |
 |  2026-10-18 | SpaceX | Application Software Engineer, Flight Software | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8899128002?gh_jid=8899128002) |
-|  2026-10-23 | Together AI | Forward Deployed Engineer, Post-Training | San Francisco | full-time | [link](https://job-boards.greenhouse.io/togetherai/jobs/5274195007) |
-|  2026-10-23 | GitLab | Backend Engineer, GitLab Orbit | Remote, Canada; Remote, United States | full-time | [link](https://job-boards.greenhouse.io/gitlab/jobs/8771512002) |
 |  2026-10-23 | Databricks | Associate Forward Deployed Engineer | Mountain View, California | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8910846002) |
+|  2026-10-23 | GitLab | Backend Engineer, GitLab Orbit | Remote, Canada; Remote, United States | full-time | [link](https://job-boards.greenhouse.io/gitlab/jobs/8771512002) |
+|  2026-10-23 | Together AI | Forward Deployed Engineer, Post-Training | San Francisco | full-time | [link](https://job-boards.greenhouse.io/togetherai/jobs/5274195007) |
 |  2026-10-23 | OpenAI | IT Systems Engineer | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/b73e46a6-881a-4413-835a-94b9d5f35d2f) |
 |  2026-11-11 | Twilio | Architect | Remote - US | full-time | [link](https://job-boards.greenhouse.io/twilio/jobs/8316035) |
+|  2026-11-11 | NVIDIA | Solutions Architect, Agent Security | US, CA, Santa Clara | full-time | [link](https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Solutions-Architect--Agent-Security_JR2029403) |
 |  2026-11-11 | Apple | Software Engineering Technical Lead, Apple Card & Savings | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694651) |
+|  2026-10-22 | Databricks | Associate Forward Deployed Engineer | New York City, New York | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8907988002) |
+|  2026-10-22 | PlayStation (SIE) | Software Development Engineer in Test II  | United States, San Mateo, CA | full-time | [link](https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal/jobs/6145091004) |
+|  2026-10-22 | OpenAI | Electrical Engineer, PCBA Test Infrastructure, Robotics | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/83939922-2a95-4cc0-b8ff-e1b15ed5254b) |
+|  2026-10-22 | Warner Bros Games | Advanced Systems Engineer (Broadcast & Live Production) | GA Atlanta 1050 Techwood Drive NW | full-time | [link](https://warnerbros.wd5.myworkdayjobs.com/en-US/global/job/GA-Atlanta-1050-Techwood-Drive-NW/Advanced-Systems-Engineer--Broadcast---Live-Production-_R000107632) |
+|  2026-10-22 | Warner Bros Games | Systems Engineer III - Live Production | DC Washington 820 1st Street NE | full-time | [link](https://warnerbros.wd5.myworkdayjobs.com/en-US/global/job/DC-Washington-820-1st-Street-NE/Sr-BIT-Engineer_R000107383) |
 |  2026-11-13 | SpaceX | High Performance Computing Systems Engineer (HPC) | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8942392002?gh_jid=8942392002) |
 |  2026-11-13 | SpaceX | OT Systems Engineer  | Memphis, TN | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8940768002?gh_jid=8940768002) |
 |  2026-11-13 | Anduril | Optical Hardware Test Engineer | Lexington, Massachusetts, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5294614007?gh_jid=5294614007) |
 |  2026-11-13 | Anduril | Platform Software Security Engineer, Air Defense | Irvine, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5295297007?gh_jid=5295297007) |
 |  2026-11-13 | Anduril | Site Reliability Engineer | Waltham, Massachusetts, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5294371007?gh_jid=5294371007) |
 |  2026-11-13 | Anduril | Warfighter Systems  - Technical Operations Engineer | Washington, District of Columbia, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5295270007?gh_jid=5295270007) |
-|  2026-10-22 | PlayStation (SIE) | Software Development Engineer in Test II  | United States, San Mateo, CA | full-time | [link](https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal/jobs/6145091004) |
-|  2026-10-22 | Databricks | Associate Forward Deployed Engineer | New York City, New York | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8907988002) |
-|  2026-10-22 | OpenAI | Electrical Engineer, PCBA Test Infrastructure, Robotics | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/83939922-2a95-4cc0-b8ff-e1b15ed5254b) |
-|  2026-10-15 | Gamma | Software Engineer, Frontend | San Francisco | full-time | [link](https://jobs.ashbyhq.com/gamma/fa99107a-c458-45fa-b856-add887b0a255) |
-|  2026-10-15 | Gamma | Software Engineer, Growth | San Francisco | full-time | [link](https://jobs.ashbyhq.com/gamma/71009abf-dff3-44a9-b347-95e3362bffef) |
-|  2026-10-15 | SpaceX | Full Stack Software Engineer, Launch Software  | Starbase, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8893016002?gh_jid=8893016002) |
-|  2026-10-15 | SpaceX | Lead Software Engineer, Components Test (Starshield) | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8827702002?gh_jid=8827702002) |
+|  2026-11-13 | Salesforce | Systems Engineer, Marketing Cloud Engagement | Illinois - Chicago | full-time | [link](https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/job/Illinois---Chicago/Systems-Engineer--Marketing-Cloud-Engagement_JR362608) |
 |  2026-10-21 | Notion | Growth Engineer, Startups & SMBs | New York, New York | full-time | [link](https://jobs.ashbyhq.com/notion/45f60d0e-e44f-40c5-985e-4096a8966860) |
-|  2026-10-21 | Warner Bros Games | Advanced Systems Engineer (Broadcast & Live Production) | GA Atlanta 1050 Techwood Drive NW | full-time | [link](https://warnerbros.wd5.myworkdayjobs.com/en-US/global/job/GA-Atlanta-1050-Techwood-Drive-NW/Advanced-Systems-Engineer--Broadcast---Live-Production-_R000107632) |
-|  2026-10-21 | Warner Bros Games | Systems Engineer III - Live Production | DC Washington 820 1st Street NE | full-time | [link](https://warnerbros.wd5.myworkdayjobs.com/en-US/global/job/DC-Washington-820-1st-Street-NE/Sr-BIT-Engineer_R000107383) |
-|  2026-10-20 | Anthropic | Financial Data and Controls Lead, Billing Platform | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5459274008) |
 |  2026-10-20 | Anthropic | Security Engineer / Research Engineer, RL Security | San Francisco, CA / New York City, NY / Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5458420008) |
 |  2026-10-20 | OpenAI | Customer Service Systems Engineer, Government | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/068c4492-1e07-4d51-9ab0-ec2727b7fc51) |
 |  2026-11-10 | Figma | Technical Operations & Insights Analyst | San Francisco, CA • New York, NY • United States | full-time | [link](https://boards.greenhouse.io/figma/jobs/6249978004?gh_jid=6249978004) |
 |  2026-11-10 | Nintendo | Supervisor, Language QA-Spanish | Redmond, WA | full-time | [link](https://careers.nintendo.com/?gh_jid=4475154009) |
 |  2026-11-10 | Nintendo | Supervisor, Language QA Testing - Portuguese | Redmond, WA | full-time | [link](https://careers.nintendo.com/?gh_jid=4475149009) |
+|  2026-11-10 | Stripe | Large User Sales Managers, Platform Partnerships | New York, NY; Chicago, IL or San Francisco, CA | full-time | [link](https://stripe.com/jobs/search?gh_jid=8368638) |
+|  2026-11-10 | Databricks | Solutions Architect - Banking and Capital Markets (FINS) | New Jersey; New York City, New York; Remote - New York | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8885039002) |
 |  2026-11-10 | PlayStation (SIE) | SDET Contractor | United States, San Diego, CA | full-time | [link](https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal/jobs/6250205004) |
 |  2026-11-10 | PlayStation (SIE) | SDET Contractor | United States, Aliso Viejo, CA | full-time | [link](https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal/jobs/6181170004) |
-|  2026-11-10 | Databricks | Solutions Architect - Banking and Capital Markets (FINS) | New Jersey; New York City, New York; Remote - New York | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8885039002) |
 |  2026-11-10 | Supabase | Dev Experiences and Community Lead (SF)  | San Francisco, CA, US | full-time | [link](https://jobs.ashbyhq.com/supabase/715ba1ea-bd0b-4960-9d5a-defca99f2e24) |
-|  2026-11-10 | NVIDIA | Solutions Architect, Agent Security | US, CA, Santa Clara | full-time | [link](https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Solutions-Architect--Agent-Security_JR2029403) |
+|  2026-10-19 | Stripe | Backend / API Engineer, Radar | San Francisco, Seattle, New York | full-time | [link](https://stripe.com/jobs/search?gh_jid=8301253) |
+|  2026-10-19 | Anthropic | IT Systems Engineer, Client Platform Engineer, ChromeOS | Boston, MA; Remote-Friendly (Travel-Required) / San Francisco, CA / Seattle, WA / New York City, NY; Washington, DC | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5456018008) |
+|  2026-10-19 | Reddit | Lead Forward Deployed Engineer (AI Enablement) | Remote - United States | full-time | [link](https://job-boards.greenhouse.io/reddit/jobs/8301736) |
+|  2026-10-19 | ElevenLabs | Research Engineer - Data Infrastructure | United Kingdom | full-time | [link](https://jobs.ashbyhq.com/ElevenLabs/9fbd9227-57e0-4221-9255-1a1d967be8ed) |
+|  2026-10-19 | OpenAI | Product Reliability Engineer  | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/30a1d941-f12c-4589-a7a0-dad116b9aa33) |
 |  2026-11-12 | xAI | Government Cloud Security Engineer | Austin, TX; New York, NY; Palo Alto, CA; Washington, DC | full-time | [link](https://job-boards.greenhouse.io/xai/jobs/5294116007) |
 |  2026-11-12 | Cartesia | IT Systems Engineer | *HQ - San Francisco, CA | full-time | [link](https://jobs.ashbyhq.com/cartesia/1a254e7d-54f2-4bee-bfdf-0c49d5e2909e) |
 |  2026-11-12 | Cartesia | Security Engineer | *HQ - San Francisco, CA | full-time | [link](https://jobs.ashbyhq.com/cartesia/8a247184-de39-46b7-a6a0-fe78f784597a) |
-|  2026-11-12 | Salesforce | Systems Engineer, Marketing Cloud Engagement | Illinois - Chicago | full-time | [link](https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/job/Illinois---Chicago/Systems-Engineer--Marketing-Cloud-Engagement_JR362608) |
-|  2026-10-19 | Reddit | Lead Forward Deployed Engineer (AI Enablement) | Remote - United States | full-time | [link](https://job-boards.greenhouse.io/reddit/jobs/8301736) |
-|  2026-10-19 | Anthropic | IT Systems Engineer, Client Platform Engineer, ChromeOS | Boston, MA; Remote-Friendly (Travel-Required) / San Francisco, CA / Seattle, WA / New York City, NY; Washington, DC | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5456018008) |
-|  2026-10-19 | Stripe | Backend / API Engineer, Radar | San Francisco, Seattle, New York | full-time | [link](https://stripe.com/jobs/search?gh_jid=8301253) |
-|  2026-10-19 | ElevenLabs | Research Engineer - Data Infrastructure | United Kingdom | full-time | [link](https://jobs.ashbyhq.com/ElevenLabs/9fbd9227-57e0-4221-9255-1a1d967be8ed) |
-|  2026-10-19 | OpenAI | Product Reliability Engineer  | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/30a1d941-f12c-4589-a7a0-dad116b9aa33) |
 |  2026-11-09 | Stripe | Solutions Architect, Enterprise (German-Speaking)  | N/A | full-time | [link](https://stripe.com/jobs/search?gh_jid=8336703) |
 |  2026-11-09 | Cursor | Solutions Architect  | Remote | full-time | [link](https://jobs.ashbyhq.com/cursor/236b6232-a98b-43c0-a0ed-d2b475b8e579) |
 |  2026-11-09 | Cohere | Adoption Specialist - Infrastructure & Agentic  | Toronto | full-time | [link](https://jobs.ashbyhq.com/cohere/dc881634-ca66-46e5-90ff-43ad83080de2) |
 |  2026-10-16 | OpenAI | Audio Engineer, Live Video | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/775ef7de-c9aa-423e-b00c-a43124068bdb) |
 |  2026-10-16 | OpenAI | Financial Systems Engineer | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/ac43a452-1f50-42a2-816e-f920fdb51823) |
+|  2026-10-16 | Adobe | Software Development Engineer 4 | San Jose | full-time | [link](https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/San-Jose/Software-Development-Engineer-4_R171262) |
 |  2026-11-11 | Samsung Research America | Security Certification Engineer - Android, Common Criteria & FIPS 140-3 | 665 Clyde Avenue, Mountain View,  CA, USA | full-time | [link](https://job-boards.greenhouse.io/samsungresearchamerica/jobs/8935817002) |
 |  2026-11-11 | Anduril | Manufacturing Test Engineer, Fury | Ashville, Ohio, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5293006007?gh_jid=5293006007) |
-|  2026-10-15 | Vercel | GTM Engineer | Hybrid - San Francisco, New York City, Austin | full-time | [link](https://job-boards.greenhouse.io/vercel/jobs/6225825004) |
-|  2026-10-15 | Databricks | Solutions Engineer | Chicago, Illinois | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8886944002) |
-|  2026-10-15 | Supabase | Site Reliability Engineer | Remote, Global | full-time | [link](https://jobs.ashbyhq.com/supabase/ed6cedb1-b9bf-4609-ac5c-c75c33b31bf3) |
-|  2026-10-15 | OpenAI | Client Platform Engineer | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/329fe50f-7701-4f07-982d-a4e10cbec236) |
-|  2026-10-15 | OpenAI | Enterprise Security Engineer, Vulnerability Management | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/f2d8ed04-3c2f-4298-832b-dda7e1644c1b) |
-|  2026-10-15 | Adobe | Software Development Engineer 4 | San Jose | full-time | [link](https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/San-Jose/Software-Development-Engineer-4_R171262) |
 |  2026-11-10 | Pika | Forward Deployed Engineer, Applied AI | Palo Alto HQ | full-time | [link](https://jobs.ashbyhq.com/pika/3800dd06-4d34-4557-a038-b8cda5980b6c) |
 |  2026-11-10 | Suno | IT Engineer | Los Angeles | full-time | [link](https://jobs.ashbyhq.com/suno/13ab742b-aac0-483b-a895-c0468a05e3e0) |
 |  2026-11-10 | Vanta | Solutions Engineer, Mid-Market | Remote U.S. | full-time | [link](https://jobs.ashbyhq.com/vanta/383e20b0-b2c5-4c4f-9406-46f0a671a7bc) |
+|  2026-11-10 | SpaceX | Server Hardware Systems Engineer (Starlink) | Redmond, WA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8934139002?gh_jid=8934139002) |
 |  2026-11-10 | SpaceX | Server Hardware Systems Engineer (Starlink) | Palo Alto, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8934113002?gh_jid=8934113002) |
 |  2026-11-10 | SpaceX | Server Hardware Systems Engineer (Starlink) | Bastrop, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8934135002?gh_jid=8934135002) |
-|  2026-11-10 | SpaceX | Server Hardware Systems Engineer (Starlink) | Redmond, WA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8934139002?gh_jid=8934139002) |
 |  2026-11-10 | SpaceX | Server Hardware Systems Engineer (Starlink) | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8934140002?gh_jid=8934140002) |
 |  2026-11-10 | Anduril | Manufacturing Test Engineer, Propulsion | Ashville, Ohio, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5290308007?gh_jid=5290308007) |
+|  🆕 2026-11-07 | Apple | Exploratory Design Scientist - Platform Architecture | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693262) |
 |  2026-11-09 | SpaceX | OT Network Engineer | College Station, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8934043002?gh_jid=8934043002) |
 |  2026-11-09 | Anduril | Battery Systems Engineer | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5290158007?gh_jid=5290158007) |
 |  2026-11-09 | Anduril |  Development Test Engineer | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5287568007?gh_jid=5287568007) |
 |  2026-11-09 | Anduril | Development Test Engineer, Maritime | Quincy, Massachusetts, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5287577007?gh_jid=5287577007) |
 |  2026-11-09 | Anduril | Hardware Reliability Engineer - Battlespace Awareness | Fort Collins, Colorado, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5290001007?gh_jid=5290001007) |
 |  2026-11-09 | Anduril | Systems Engineer, Ground Maneuver Programs | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5289311007?gh_jid=5289311007) |
+|  🆕 2026-11-06 | Apple | Apple Ads - Platform Operations Business Specialist | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693928) |
 |  2026-11-08 | SpaceX | Lead Electrical Hardware Reliability Engineer (Starlink) | Bastrop, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8932765002?gh_jid=8932765002) |
 |  2026-11-08 | SpaceX | Optical Test Engineer, AI Satellites (Starmind) | Bastrop, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8931042002?gh_jid=8931042002) |
 |  2026-11-05 | Databricks | Solutions Architect - Digital Native Business (Geo) | Connecticut; Remote - Massachusetts; Remote - New York; Remote - Pennsylvania | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8904745002) |
 |  2026-11-05 | Google | Google Maps Traffic Integrity Engineering Analyst | Mountain View, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/91526221552067270) |
+|  🆕 2026-11-05 | Apple | Exploratory Device Scientist - Platform Architecture | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693256) |
+|  🆕 2026-11-05 | Apple | Platform Specialist | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691492) |
 |  2026-11-04 | Nintendo | CONTRACT - Digital Archivist, Historical Systems | Redmond, WA | full-time | [link](https://careers.nintendo.com/?gh_jid=4458631009) |
+|  2026-11-03 | Databricks | Solutions Architect - Telco | Denver, Colorado | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8929038002) |
+|  2026-11-03 | Ramp | Technical Consultant, Commercial | Remote (US) | full-time | [link](https://jobs.ashbyhq.com/ramp/100c09be-f179-406f-893e-8a212f32c642) |
 |  2026-11-06 | Mixpanel | Security Engineer | San Francisco | full-time | [link](https://job-boards.greenhouse.io/mixpanel/jobs/8357913) |
-|  2026-11-06 | xAI | IAM Engineer | Austin, TX; Palo Alto, CA; Washington, DC | full-time | [link](https://job-boards.greenhouse.io/xai/jobs/5288061007) |
 |  2026-11-06 | Samsara | Firmware Engineer  | Remote - Austin; Remote - Seattle; San Francisco, CA, United States | full-time | [link](https://www.samsara.com/company/careers/roles/8359978?gh_jid=8359978) |
 |  2026-11-06 | Samsara | Security Operations Engineer I | Remote - CA | full-time | [link](https://www.samsara.com/company/careers/roles/8353283?gh_jid=8353283) |
+|  2026-11-06 | xAI | IAM Engineer | Austin, TX; Palo Alto, CA; Washington, DC | full-time | [link](https://job-boards.greenhouse.io/xai/jobs/5288061007) |
 |  2026-11-06 | SpaceX | Electrical Test Engineer (Starfall) | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8933527002?gh_jid=8933527002) |
 |  2026-11-06 | SpaceX | Fluid Systems Engineer, Starlink Infrastructure | Bastrop, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8926072002?gh_jid=8926072002) |
 |  2026-11-06 | SpaceX | IT Network Infrastructure Engineer, Launch | Starbase, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8933928002?gh_jid=8933928002) |
@@ -2727,8 +2776,6 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-06 | Anduril | Flight Test Engineer - Advanced Effects (Missiles) | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5213097007?gh_jid=5213097007) |
 |  2026-11-06 | Anduril | Flight Test Engineer, Omen | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5287971007?gh_jid=5287971007) |
 |  2026-11-06 | Anduril | Site Reliability Engineer, Strategic Defense | Washington, District of Columbia, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5272039007?gh_jid=5272039007) |
-|  2026-11-03 | Databricks | Solutions Architect - Telco | Denver, Colorado | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8929038002) |
-|  2026-11-03 | Ramp | Technical Consultant, Commercial | Remote (US) | full-time | [link](https://jobs.ashbyhq.com/ramp/100c09be-f179-406f-893e-8a212f32c642) |
 |  2026-11-05 | Sigma Computing | Enterprise Solution Engineer  - East  | Boston, Massachusetts, United States | full-time | [link](https://job-boards.greenhouse.io/sigmacomputing/jobs/8109440003) |
 |  2026-11-05 | Krea | Growth Engineer | San Francisco | full-time | [link](https://jobs.ashbyhq.com/krea/159a0d40-dc48-4c4f-b67b-17909f2f3f7a) |
 |  2026-11-05 | Cerebras | Developer Relations | Sunnyvale, CA | full-time | [link](https://jobs.ashbyhq.com/cerebras/ae958e4c-2f4b-43e6-bdbd-47ab32b80e03) |
@@ -2737,8 +2784,8 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-05 | SpaceX | Network Engineer (Starlink Maritime) | Redmond, WA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8927107002?gh_jid=8927107002) |
 |  2026-11-05 | SpaceX | Site Reliability Engineer (Infrastructure, Virtualization, & Compute) | Memphis, TN | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8931114002?gh_jid=8931114002) |
 |  2026-11-05 | SpaceX | Site Reliability Engineer (Starlink) | Redmond, WA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8932369002?gh_jid=8932369002) |
-|  2026-11-05 | SpaceX | Site Reliability Engineer (Starlink) | Palo Alto, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8932368002?gh_jid=8932368002) |
 |  2026-11-05 | SpaceX | Site Reliability Engineer (Starlink) | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8886620002?gh_jid=8886620002) |
+|  2026-11-05 | SpaceX | Site Reliability Engineer (Starlink) | Palo Alto, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8932368002?gh_jid=8932368002) |
 |  2026-11-05 | Anduril | Flight Test Engineer - Space Systems | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5277872007?gh_jid=5277872007) |
 |  2026-11-05 | Anduril | Lab & Integration Engineer | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5286797007?gh_jid=5286797007) |
 |  2026-11-05 | Anduril | Product Quality Engineer - Dive-XL | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5281851007?gh_jid=5281851007) |
@@ -2776,29 +2823,29 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-02 | Harvey | Research Engineer, Infrastructure | Remote | full-time | [link](https://jobs.ashbyhq.com/harvey/9b63e15d-2d43-4c4a-94be-75908e942ea7) |
 |  2026-10-29 | Databricks | Solutions Architect - Retail | Arkansas; Remote - Illinois; Remote - Ohio | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8920805002) |
 |  2026-10-29 | Databricks | Solutions Architect - Retail | Chicago, Illinois; Florida; Northeast - United States; Remote - Georgia; Remote - Massachusetts; Remote - New York; Southeast - United States; Tennessee | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8893728002) |
-|  2026-10-31 | Anduril | Electrical Test Engineer | Fort Collins, Colorado, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5281154007?gh_jid=5281154007) |
 |  2026-10-27 | OpenAI | Deployment Lead, Forward Deployed Engineering (FDE) - Platform | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/bc80a3ae-1e69-4a8d-8366-77fcdd56ff61) |
+|  2026-10-31 | Anduril | Electrical Test Engineer | Fort Collins, Colorado, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5281154007?gh_jid=5281154007) |
 |  2026-10-30 | xAI | Construction Superintendent, Electrical - Mobile Construction |  Southaven, MS; Memphis, TN | full-time | [link](https://job-boards.greenhouse.io/xai/jobs/5279988007) |
 |  2026-10-30 | xAI | Construction Superintendent, Structural - Mobile Construction |  Southaven, MS; Memphis, TN | full-time | [link](https://job-boards.greenhouse.io/xai/jobs/5280765007) |
 |  2026-10-30 | SpaceX | OT Network Engineer, Mission Systems | Memphis, TN | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8925985002?gh_jid=8925985002) |
 |  2026-10-30 | Anduril | Site Reliability Engineer 2 - Production Engineering | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5280959007?gh_jid=5280959007) |
 |  2026-10-29 | Samsung Research America | Android Systems Security Engineer  | 665 Clyde Avenue, Mountain View,  CA, USA | full-time | [link](https://job-boards.greenhouse.io/samsungresearchamerica/jobs/8924143002) |
-|  2026-10-29 | SpaceX | IT Network Engineer | Cape Canaveral, FL | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8922064002?gh_jid=8922064002) |
 |  2026-10-29 | SpaceX | IT Network Engineer | Memphis, TN | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8924393002?gh_jid=8924393002) |
+|  2026-10-29 | SpaceX | IT Network Engineer | Cape Canaveral, FL | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8922064002?gh_jid=8922064002) |
 |  2026-10-29 | SpaceX | IT Wireless Network Engineer | Memphis, TN | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8924320002?gh_jid=8924320002) |
 |  2026-10-28 | SpaceX | Test Engineer (Dragon) | McGregor, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8922066002?gh_jid=8922066002) |
 |  2026-10-28 | Anduril | HPC Systems Engineer | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5278381007?gh_jid=5278381007) |
 |  2026-10-28 | Anduril | Manufacturing Test Engineer, Software/Electrical | Quonset, Rhode Island, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5174864007?gh_jid=5174864007) |
 |  2026-10-28 | Anduril | Software Test Engineer, Intelligence Systems | Ashville, Ohio, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5278214007?gh_jid=5278214007) |
-|  2026-10-28 | Anduril | Systems Engineer, Decision Advantage  | Broomfield, Colorado, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5278854007?gh_jid=5278854007) |
 |  2026-10-28 | Anduril | Systems Engineer, Decision Advantage  | Waltham, Massachusetts, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5278857007?gh_jid=5278857007) |
+|  2026-10-28 | Anduril | Systems Engineer, Decision Advantage  | Broomfield, Colorado, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5278854007?gh_jid=5278854007) |
 |  2026-10-28 | Anduril | Test Automation Engineer, Manufacturing Test, Intelligence Systems | Ashville, Ohio, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5278219007?gh_jid=5278219007) |
 |  2026-10-23 | Palantir | Deployment Strategist - Germany Forward Deployed | Washington, D.C. | full-time | [link](https://jobs.lever.co/palantir/6940fc9a-b79c-4935-a90f-1c6a02e54fb1) |
-|  2026-11-13 | Cerebras | Operations Tech Lead | Sunnyvale, CA | full-time | [link](https://jobs.ashbyhq.com/cerebras/9843180d-ba0a-44d7-8cc1-7ae94d686f56) |
+|  2026-10-22 | Databricks | Solutions Architect - Financial Services (Hunter)  | Georgia; Illinois; Massachusetts; New Jersey; New York; North Carolina; Texas; Washington, D.C. | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8884587002) |
 |  2026-10-22 | GitLab | Solutions Architect - SLED (East) | Remote, United States | full-time | [link](https://job-boards.greenhouse.io/gitlab/jobs/8907111002) |
 |  2026-10-22 | GitLab | Solutions Architect - SLED (West) | Remote, United States | full-time | [link](https://job-boards.greenhouse.io/gitlab/jobs/8907130002) |
-|  2026-10-22 | Databricks | Solutions Architect - Financial Services (Hunter)  | Georgia; Illinois; Massachusetts; New Jersey; New York; North Carolina; Texas; Washington, D.C. | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8884587002) |
 |  2026-10-22 | Supabase | Customer Solution Architect (AU, NZ, SG) | Remote, APAC | full-time | [link](https://jobs.ashbyhq.com/supabase/dca463e6-b6d0-4003-a30b-e0970a8dcee2) |
+|  2026-11-13 | Cerebras | Operations Tech Lead | Sunnyvale, CA | full-time | [link](https://jobs.ashbyhq.com/cerebras/9843180d-ba0a-44d7-8cc1-7ae94d686f56) |
 |  2026-10-27 | Hasbro (WotC) | Lead QA Engineer, AI Automation | Boston, Massachusetts, United States | full-time | [link](https://job-boards.greenhouse.io/hasbro/jobs/4450231009) |
 |  2026-10-27 | Synthesia | Solutions Engineer  | Austin | full-time | [link](https://jobs.ashbyhq.com/synthesia/103ca468-012b-4882-b5ab-001e3d55f71b) |
 |  2026-10-27 | Synthesia | Solutions Engineer  | New York City | full-time | [link](https://jobs.ashbyhq.com/synthesia/4a884a77-946e-4d4f-8030-d256b961cce8) |
@@ -2810,12 +2857,12 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-26 | Anduril | Site Reliability Engineer, Edge Devices  | Irvine, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5253746007?gh_jid=5253746007) |
 |  2026-10-26 | Anduril | System Security Engineer, Space | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5275224007?gh_jid=5275224007) |
 |  2026-10-20 | Anthropic | Finance & Strategy Compute, Infrastructure | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5443875008) |
-|  2026-11-12 | Waymo | Security Operations Center Watch Lead | Tempe, AZ, USA | full-time | [link](https://careers.withwaymo.com/jobs?gh_jid=8357292) |
 |  2026-10-25 | SpaceX | Power Systems Engineer, Launch Pad (Starship) | Starbase, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8916039002?gh_jid=8916039002) |
 |  2026-10-19 | Databricks | Solutions Architect - Adtech | United States | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8893716002) |
 |  2026-10-19 | Databricks | Solutions Architect - Communications, Media, Entertainment and Games | Denver, Colorado | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8900134002) |
 |  2026-10-19 | Databricks | Solutions Architect- Public Sector (Federal Healthcare) | Maryland; Virginia; Washington, D.C. | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8893782002) |
 |  2026-10-19 | Databricks | Solutions Architect - Telco | Atlanta, Georgia | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8880391002) |
+|  2026-11-12 | Waymo | Security Operations Center Watch Lead | Tempe, AZ, USA | full-time | [link](https://careers.withwaymo.com/jobs?gh_jid=8357292) |
 |  2026-10-18 | Databricks | Delivery Solutions Architect - Public Sector (Defense Industrial Base)  | United States | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8899463002) |
 |  2026-10-18 | Databricks | Delivery Solutions Architect - Public Sector (DOJ) | Alabama | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8899461002) |
 |  2026-10-18 | Databricks | Delivery Solutions Architect - Public Sector (DOW, DHS, Intelligence Community) | Northeast - United States; Southwest - United States | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8899462002) |
@@ -2837,11 +2884,11 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-22 | Anduril | Quality Systems Engineer, Battlespace Awareness | Fort Collins, Colorado, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5236058007?gh_jid=5236058007) |
 |  2026-10-21 | PlanetScale | AI Developer Experience Engineer | Remote US  | full-time | [link](https://job-boards.greenhouse.io/planetscale/jobs/4463390009) |
 |  2026-10-21 | Gusto | Workday System Developer | Denver, CO - Hybrid; New York, NY - Hybrid; San Francisco, CA - Hybrid | full-time | [link](https://job-boards.greenhouse.io/gusto/jobs/8257486) |
-|  2026-10-21 | Verkada | Channel Solutions Engineer | Denver, CO United States | full-time | [link](https://job-boards.greenhouse.io/verkada/jobs/5271742007) |
 |  2026-10-21 | Verkada | Channel Solutions Engineer | Chicago, IL United States | full-time | [link](https://job-boards.greenhouse.io/verkada/jobs/5271734007) |
 |  2026-10-21 | Verkada | Channel Solutions Engineer | Seattle, WA United States | full-time | [link](https://job-boards.greenhouse.io/verkada/jobs/5271745007) |
-|  2026-10-21 | Verkada | Enterprise Solutions Engineer, State | Oklahoma City, OK United States | full-time | [link](https://job-boards.greenhouse.io/verkada/jobs/5271481007) |
+|  2026-10-21 | Verkada | Channel Solutions Engineer | Denver, CO United States | full-time | [link](https://job-boards.greenhouse.io/verkada/jobs/5271742007) |
 |  2026-10-21 | Verkada | Enterprise Solutions Engineer, State | Philadelphia, PA United States | full-time | [link](https://job-boards.greenhouse.io/verkada/jobs/5270698007) |
+|  2026-10-21 | Verkada | Enterprise Solutions Engineer, State | Oklahoma City, OK United States | full-time | [link](https://job-boards.greenhouse.io/verkada/jobs/5271481007) |
 |  2026-10-21 | Baseten | IT Systems Engineer | Remote | full-time | [link](https://jobs.ashbyhq.com/baseten/64bdba5c-8cf6-473f-814c-1e86c8c66681) |
 |  2026-10-21 | Cerebras | Cloud Infrastructure Engineer  | Sunnyvale, CA | full-time | [link](https://jobs.ashbyhq.com/cerebras/315e96ea-e64d-4096-b9ba-c0025cf796f6) |
 |  2026-10-21 | SpaceX | Data Engineer (Starlink Mobile) | Redmond, WA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8694609002?gh_jid=8694609002) |
@@ -2873,19 +2920,6 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-16 | Anduril | Engineer, Systems & Tools | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5267986007?gh_jid=5267986007) |
 |  2026-10-16 | Anduril | Vehicle Battery Systems Engineer | Santa Ana, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5267767007?gh_jid=5267767007) |
 |  2026-10-16 | Crusoe | AI Tools Engineer, Storage Infrastructure | San Francisco, CA - US | full-time | [link](https://jobs.ashbyhq.com/Crusoe/fb2f4059-00a0-4e89-a58b-2e8d7a3ed0c6) |
-|  2026-10-15 | xAI | Site Reliability Engineer - Memphis |  Southaven, MS; Memphis, TN | full-time | [link](https://job-boards.greenhouse.io/xai/jobs/5266379007) |
-|  2026-10-15 | Block (Square) | Security Engineer - Network Edge Security | Bay Area, CA, United States of America | full-time | [link](http://block.xyz/careers/jobs/5427855008?gh_jid=5427855008) |
-|  2026-10-15 | SpaceX | Avionics Integration & Test Engineer, HASS (Starshield) | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8892801002?gh_jid=8892801002) |
-|  2026-10-15 | SpaceX | Security Engineer | Starbase, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8893742002?gh_jid=8893742002) |
-|  2026-10-15 | SpaceX | Security Engineer | Bastrop, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8893743002?gh_jid=8893743002) |
-|  2026-10-15 | SpaceX | Security Engineer (OT) | Starbase, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8893744002?gh_jid=8893744002) |
-|  2026-10-15 | SpaceX | Security Engineer (Software) | Starbase, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8893740002?gh_jid=8893740002) |
-|  2026-10-15 | SpaceX | Security Engineer (Software) | Bastrop, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8893741002?gh_jid=8893741002) |
-|  2026-10-15 | Anduril | Assembly Integration and Test Engineer, Space Systems | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5266880007?gh_jid=5266880007) |
-|  2026-10-15 | Anduril | Classified Systems Engineer | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5267122007?gh_jid=5267122007) |
-|  2026-10-15 | Anduril | Electrical Test Engineer | Lexington, Massachusetts, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5266460007?gh_jid=5266460007) |
-|  2026-10-15 | Anduril | Hardware Test Engineer | Lexington, Massachusetts, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5266463007?gh_jid=5266463007) |
-|  2026-10-15 | Anduril | Systems Test Engineer | Lexington, Massachusetts, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5244231007?gh_jid=5244231007) |
 |  2026-11-08 | Elastic | Consulting Architect - Search | United States | full-time | [link](https://jobs.elastic.co/jobs?gh_jid=8352728&gh_jid=8352728) |
 |  2026-11-06 | Gusto | Security Operations Analyst | Denver, CO - Hybrid; New York, NY - Hybrid; San Francisco, CA - Hybrid | full-time | [link](https://job-boards.greenhouse.io/gusto/jobs/8348189) |
 |  2026-11-05 | SpaceX | Supervisor, IT Network Infrastructure | Memphis, TN | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8932324002?gh_jid=8932324002) |
@@ -2896,9 +2930,9 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-02 | Lovable | Business Value Consultant | New York City | full-time | [link](https://jobs.ashbyhq.com/lovable/8c0c177d-38c1-4b66-b7d4-76c232ba23f4) |
 |  2026-10-29 | Normal Computing | Systems/Rack Architect | Mountain View | full-time | [link](https://jobs.ashbyhq.com/NormalComputing/4a991e16-7097-461c-b048-8d9c97cb33c1) |
 |  2026-10-29 | Sardine | Solutions Architect, Integrations - Public Sector (US) | North America | full-time | [link](https://jobs.ashbyhq.com/sardine/b03b9dc7-9655-4eda-b918-7acd3da2ffb0) |
-|  2026-10-28 | Box | Associate Technical Consultant | Redwood City, CA, United States, San Francisco, CA, United States | full-time | [link](https://job-boards.greenhouse.io/boxinc/jobs/8328785) |
 |  2026-10-28 | Fivetran | Customer Solutions Architect (Denver) | Denver, Colorado, United States, AMER | full-time | [link](https://www.fivetran.com/careers/job?gh_jid=8047327003) |
 |  2026-10-28 | Fivetran | Customer Solutions Architect (NYC) | USA - New York (dbt) | full-time | [link](https://www.fivetran.com/careers/job?gh_jid=8047340003) |
+|  2026-10-28 | Box | Associate Technical Consultant | Redwood City, CA, United States, San Francisco, CA, United States | full-time | [link](https://job-boards.greenhouse.io/boxinc/jobs/8328785) |
 |  2026-10-27 | SpaceX | IT Network Infrastructure Technician (Night Shift) | Bastrop, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8920839002?gh_jid=8920839002) |
 |  2026-10-26 | Baseten | Solutions Architect, EMEA | Remote | full-time | [link](https://jobs.ashbyhq.com/baseten/5a1a7b6c-646b-495c-911a-8fa435c78b6f) |
 |  2026-10-26 | SpaceX | IT Network Infrastructure Technician | Bastrop, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8918407002?gh_jid=8918407002) |
@@ -2912,23 +2946,22 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-21 | Anduril | Lab Lead, Space | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5271608007?gh_jid=5271608007) |
 |  2026-10-21 | Anduril | Manufacturing Test Engineering, Software | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5271177007?gh_jid=5271177007) |
 
-## Data / AI / ML (1174 recent)
+## Data / AI / ML (1131 recent)
 
 | Posted | Company | Role | Location | Level · Term | Apply |
 |---|---|---|---|---|---|
 | 🔥◐ 2026-11-14 | Amazon | Data Center Infrastructure Engineer Intern, Summer 2027 - East | Herndon, VA | intern | [link](https://www.amazon.jobs/en/jobs/10605141/data-center-infrastructure-engineer-intern-summer-2027-east) |
 | 🔥◐ 2026-11-14 | Amazon | Data Center Infrastructure Engineer Intern, Summer 2027 - West Coast | Umatilla, OR | intern | [link](https://www.amazon.jobs/en/jobs/10605132/data-center-infrastructure-engineer-intern-summer-2027-west-coast) |
-| ◐ 🆕 2026-11-13 | Microsoft | Research Intern - AI Coding Agents | United States, Washington, Redmond | intern | [link](https://jobs.careers.microsoft.com/global/en/job/200067371) |
+| ◐ 2026-10-16 | TikTok | Software Engineer Intern - Recommendation Performance Efficiency | San Jose, CA | intern | [link](https://lifeattiktok.com/search/7673636206961641781) |
 | ◐ 2026-11-13 | TikTok | Research Scientist Intern - Content Ecology - Local Services | San Jose, CA | intern | [link](https://lifeattiktok.com/search/7707222170826623285) |
 | ◐ 2026-11-13 | TikTok | Machine Learning Scientist Intern - Local Services | San Jose, CA | intern | [link](https://lifeattiktok.com/search/7703925583541979445) |
 | ◐ 2026-11-13 | Microsoft | Research Intern - AI Coding Agents | Redmond, WA | intern | [link](https://apply.careers.microsoft.com/careers/job/1970393557073416) |
-| ◐ 2026-10-16 | TikTok | Software Engineer Intern - Recommendation Performance Efficiency | San Jose, CA | intern | [link](https://lifeattiktok.com/search/7673636206961641781) |
 | ◐ 2026-11-12 | Microsoft | Data Scientist Intern - CoreAI | Redmond, WA | intern | [link](https://apply.careers.microsoft.com/careers/job/1970393557027390) |
 | ◐ 2026-11-11 | Riot Games | Machine Learning Engineering Intern (Masters/PhD) - Summer 2027 | Los Angeles, USA | intern | [link](https://www.riotgames.com/en/work-with-us/job/8356771?gh_jid=8356771) |
+| ◐ 2026-11-11 | Snapchat | 2027 Generative Media Research Intern | Los Angeles, California | intern | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/XMLNAME-2027-Generative-Media-Researc_R0047179) |
+| ◐ 2026-11-11 | NVIDIA | AI Operations Intern, AI Clouds - Summer 2027 | US, CA, Santa Clara | intern | [link](https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/AI-Operations-Intern--AI-Clouds---Summer-2027_JR2029119-1) |
 | ◐ 2026-11-11 | Meta | Research Scientist Intern - LLM Memory and Skills | Seattle, WA | intern | [link](https://www.metacareers.com/jobs/1676116714093186) |
 | ◐ 2026-11-10 | Riot Games | Data Engineering Intern - Summer 2027 | Los Angeles, USA | intern | [link](https://www.riotgames.com/en/work-with-us/job/8356716?gh_jid=8356716) |
-| ◐ 2026-11-10 | Snapchat | 2027 Generative Media Research Intern | Los Angeles, California | intern | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/XMLNAME-2027-Generative-Media-Researc_R0047179) |
-| ◐ 2026-11-10 | NVIDIA | AI Operations Intern, AI Clouds - Summer 2027 | US, CA, Santa Clara | intern | [link](https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/AI-Operations-Intern--AI-Clouds---Summer-2027_JR2029119-1) |
 | ◐ 2026-11-10 | Meta | Research Scientist Intern - AI Core Machine Learning | Menlo Park, CA | intern | [link](https://www.metacareers.com/jobs/2432079507324778) |
 | ◐ 2026-11-10 | Meta | Research Scientist Intern - Foundation Model Optimization | Burlingame, CA | intern | [link](https://www.metacareers.com/jobs/997597222780035) |
 | ◐ 2026-11-10 | Meta | Research Intern - Neural Network Training and Hardware-Software Co-Design | Redmond, WA | intern | [link](https://www.metacareers.com/jobs/1560905132724186) |
@@ -2938,7 +2971,6 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ◐ 2026-11-09 | NBCUniversal (DreamWorks) | Media Tech: Data, AI & Machine Learning Internships – Summer 2027 | Universal City, CA | intern | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000160649935) |
 | ◐ 2026-11-09 | NBCUniversal (DreamWorks) | Media Tech: Data, AI & Machine Learning Internships – Summer 2027 | New York, NY | intern | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000160650767) |
 | ◐ 2026-11-09 | NBCUniversal (DreamWorks) | Studio Operations, Data Analytics Internships – Summer 2027 | Universal City, CA | intern | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000160648109) |
-| ◐ 🆕 2026-11-09 | Microsoft | Research Intern - Next-Generation AI Agents | United States, Washington, Redmond | intern | [link](https://jobs.careers.microsoft.com/global/en/job/200066468) |
 | ◐ 2026-11-09 | Warner Bros. | Data Engineering Co-op | Needham, MA | intern | [link](https://warnerbros.wd5.myworkdayjobs.com/global/job/MA-Needham-117-Kendrick-St/WB-Games-Data-Engineering-Co-op--Needham--MA---January-May-2027_R000109902) |
 | ◐ 2026-11-09 | Microsoft | Research Intern - Next-Generation AI Agents | Redmond, WA | intern | [link](https://apply.careers.microsoft.com/careers/job/1970393557070079) |
 | ◐ 2026-11-09 | Meta | Research Scientist Intern - Computational Photography & Computer Vision | Redmond, WA | intern | [link](https://www.metacareers.com/jobs/1670489511324528) |
@@ -2948,7 +2980,6 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ◐ 2026-11-06 | T-Mobile | Software Engineer HR Data Products Intern | Bellevue, WA | intern | [link](https://tmobile.wd1.myworkdayjobs.com/External/job/Bellevue-Washington/Summer-2027-Software-Engineer-HR-Data-Products-Internship_REQ380766) |
 | ◐ 2026-11-07 | TikTok | Research Engineer Intern | San Jose, CA | intern | [link](https://lifeattiktok.com/search/7704981006856145205) |
 | ◐ 2026-11-06 | Duolingo | AI Research Intern (PhD) | New York, NY; Pittsburgh, PA | intern | [link](https://careers.duolingo.com/jobs/8928712002?gh_jid=8928712002) |
-| ◐ 🆕 2026-11-06 | Microsoft | Research Intern - AI & Human Systems | United States, New York, New York | intern | [link](https://jobs.careers.microsoft.com/global/en/job/200066265) |
 | ◐ 2026-11-06 | HoYoverse | Research Scientist Intern - Video Generation | Mountain View, CA | intern | [link](https://jobs.ashbyhq.com/hoyoverse/432bf860-11c1-4a8f-92a1-b3773ac42280/application?embed=true) |
 | ◐ 2026-11-06 | Duolingo | AI Research Intern | Pittsburgh, PA | intern | [link](https://job-boards.greenhouse.io/duolingounirecruitment/jobs/8928923002) |
 | ◐ 2026-11-06 | Meta | Research Scientist Intern - Synthetic Data for Computer Use Agents | Menlo Park, CA | intern | [link](https://www.metacareers.com/jobs/1667187061776108) |
@@ -2969,15 +3000,11 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ◐ 2026-11-02 | Pacific Northwest National Laboratory | NSIP Master's Intern - Artificial Intelligence & Data Analytics - SWE Conference | Seattle, WA | intern | [link](https://careers.pnnl.gov/jobs/12898?icims=1) |
 | ◐ 2026-11-02 | Pacific Northwest National Laboratory | NSIP PhD Intern - Artificial Intelligence & Data Analytics - SWE Conference | Seattle, WA | intern | [link](https://careers.pnnl.gov/jobs/12899?icims=1) |
 | ◐ 2026-11-02 | Pacific Northwest National Laboratory | NSIP Undergraduate Intern - Artificial Intelligence & Data Analytics - SWE Conference | Seattle, WA | intern | [link](https://careers.pnnl.gov/jobs/12897?icims=1) |
-| ◐ 🆕 2026-11-04 | Microsoft | Data Science: PhD Internship Opportunities - Redmond | United States, Washington, Redmond | intern | [link](https://jobs.careers.microsoft.com/global/en/job/200052449) |
 | ◐ 2026-11-04 | NVIDIA | Deep Learning Scientist Intern - LLM, Multimodal and Agentic AI | Canada | intern | [link](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Deep-Learning-Scientist-Intern--LLM--Multimodal-and-Agentic-AI---Summer-2027_JR2027548) |
 | ◐ 2026-11-03 | Meta | Research Scientist Intern - FM Quality ML | Menlo Park, CA | intern | [link](https://www.metacareers.com/jobs/1125383989877928) |
 | ◐ 2026-11-03 | Meta | Research Scientist Intern - GenAI Safety | SF | intern | [link](https://www.metacareers.com/jobs/993713283787464) |
 | ◐ 2026-11-03 | Meta | Research Scientist Intern - Ads Quality - PhD | Menlo Park, CA | intern | [link](https://www.metacareers.com/jobs/1838454487574865) |
 | ◐ 2026-11-03 | ByteDance | Research Scientist Intern - Video and Edge - Multimedia Lab | San Diego, CA | intern | [link](https://jobs.bytedance.com/en/position/7701477754169968901/detail) |
-| ◐ 🆕 2026-11-02 | Microsoft | Research Intern - Coding Agents & Post-Training Optimization | United States, Washington, Redmond | intern | [link](https://jobs.careers.microsoft.com/global/en/job/200065202) |
-| ◐ 🆕 2026-11-02 | Microsoft | Research Intern - Speech Processing | United States, Washington, Redmond | intern | [link](https://jobs.careers.microsoft.com/global/en/job/200065196) |
-| ◐ 🆕 2026-11-02 | Microsoft | Research Intern - Foundational Models & Agent | United States, Washington, Redmond | intern | [link](https://jobs.careers.microsoft.com/global/en/job/200065169) |
 | ◐ 2026-11-02 | Microsoft | Research Intern - Coding Agents & Post-Training Optimization | Redmond, WA | intern | [link](https://apply.careers.microsoft.com/careers/job/1970393557053024) |
 | ◐ 2026-11-02 | Meta | Research Scientist Intern - Robotic Control Policy | Redmond, WA | intern | [link](https://www.metacareers.com/jobs/1872420890835857) |
 | ◐ 2026-11-02 | Microsoft | Research Intern - Foundational Models & Agent | Redmond, WA | intern | [link](https://apply.careers.microsoft.com/careers/job/1970393557052982) |
@@ -2987,7 +3014,6 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ◐ 2026-10-31 | Meta | Research Scientist Intern - Video Recsys | Menlo Park, CA | intern | [link](https://www.metacareers.com/jobs/1553890293163197) |
 | ◐ 2026-10-30 | Stripe | Master's Machine Learning Engineer, Intern | San Francisco, New York City, Seattle | intern | [link](https://stripe.com/jobs/search?gh_jid=8333074) |
 | ◐ 2026-10-30 | Stripe | PhD Machine Learning Engineer, Intern | San Francisco, New York City, Seattle | intern | [link](https://stripe.com/jobs/search?gh_jid=8328662) |
-| ◐ 🆕 2026-10-30 | Microsoft | Research Intern - Office of Applied Research | United States, Washington, Redmond | intern | [link](https://jobs.careers.microsoft.com/global/en/job/200064977) |
 | ◐ 2026-10-30 | Meta | Research Scientist Intern - Photorealistic Telepresence | Redmond, WA | intern | [link](https://www.metacareers.com/jobs/1358944629494375) |
 | ◐ 2026-10-30 | Meta | Research Scientist Intern - Photorealistic Telepresence - PhD | Burlingame, CA | intern | [link](https://www.metacareers.com/jobs/957720287051540) |
 | ◐ 2026-10-30 | Microsoft | Research Intern - Office of Applied Research | Redmond, WA | intern | [link](https://apply.careers.microsoft.com/careers/job/1970393557051409) |
@@ -2997,13 +3023,11 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ◐ 2026-10-29 | Meta | Research Scientist Intern - Multiple Teams | Seattle, WA | intern | [link](https://www.metacareers.com/jobs/1105933535765181) |
 | ◐ 2026-10-29 | Meta | Research Scientist Intern - AI Infra | Menlo Park, CA | intern | [link](https://www.metacareers.com/jobs/4603165899971826) |
 | ◐ 2026-10-29 | Meta | Research Scientist Intern - ML Innovation for Products | Menlo Park, CA | intern | [link](https://www.metacareers.com/jobs/1060093353751700) |
-| ◐ 🆕 2026-10-28 | Microsoft | Research Intern - MSR Systems Research Group - Redmond | United States, Washington, Redmond | intern | [link](https://jobs.careers.microsoft.com/global/en/job/200064379) |
-| ◐ 🆕 2026-10-28 | Microsoft | Research Intern - Machine Learning and Optimization - Redmond | United States, Washington, Redmond | intern | [link](https://jobs.careers.microsoft.com/global/en/job/200064359) |
 | ◐ 2026-10-28 | Meta | Research Scientist Intern - Ads Recommendations | Menlo Park, CA | intern | [link](https://www.metacareers.com/jobs/1691709792593561) |
 | ◐ 2026-10-28 | Microsoft | Research Intern - MSR Systems Research Group | Redmond, WA | intern | [link](https://apply.careers.microsoft.com/careers/job/1970393557050039) |
 | ◐ 2026-10-28 | Microsoft | Research Intern - Machine Learning and Optimization | Redmond, WA | intern | [link](https://apply.careers.microsoft.com/careers/job/1970393557049981) |
 | ◐ 2026-10-28 | Anthropic | Research Resident | London, UK | intern | [link](https://job-boards.greenhouse.io/anthropic/jobs/5439169008) |
-| 🔥◐ 2026-11-13 | Amazon | Robotics Applied Scientist 2 Intern - Robotics | Seattle, WA | intern | [link](https://amazon.jobs/en/jobs/10604778/2027-applied-science-internship-robotics-united-states) |
+|  2026-11-13 | Amazon | Robotics Applied Scientist 2 Intern - Robotics | Seattle, WA | intern | [link](https://amazon.jobs/en/jobs/10604778/2027-applied-science-internship-robotics-united-states) |
 |  2026-10-27 | Amazon | Database Engineer Intern - Summer 2027 | Seattle, WA | intern | [link](https://www.amazon.jobs/en/jobs/10590290/database-engineer-intern-summer-2027) |
 |  2026-10-27 | Meta | Research Scientist Intern - Search | Menlo Park, CA | intern | [link](https://www.metacareers.com/jobs/2171476533578976) |
 |  2026-10-27 | Meta | Research Scientist Intern - Video Generation Self-Improvement | Seattle, WA | intern | [link](https://www.metacareers.com/jobs/29358420983776961) |
@@ -3021,7 +3045,6 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-26 | Atlassian | AI Research Intern | SF | intern | [link](https://campus-americas.icims.com/jobs/26269/ai-research-intern-%28phd%29%2c-2027-summer-u.s./job) |
 |  2026-10-21 | Rhoda AI | Software Engineer Intern - Inference | Mountain View, CA | intern | [link](https://jobs.ashbyhq.com/rhoda-ai/2de33083-782f-489e-9b91-f40761a36bf4/application?embed=true) |
 |  2026-10-24 | Meta | Research Scientist Intern - Policy Learning for Robotics - PhD | Redmond, WA | intern | [link](https://www.metacareers.com/jobs/2554989011673624) |
-|  🆕 2026-10-23 | Microsoft | Research Intern - Algorithms Group: Theory | United States, Washington, Redmond | intern | [link](https://jobs.careers.microsoft.com/global/en/job/200063562) |
 |  2026-10-23 | Meta | Research Scientist Intern - Video Recommendations - PhD | Menlo Park, CA | intern | [link](https://www.metacareers.com/jobs/932919123033502) |
 |  2026-10-23 | Amazon | Research Science Intern | Cambridge, MA | intern | [link](https://amazon.jobs/en/jobs/10564602/2027-research-science-internship-united-states-phd-student-science-recruiting) |
 |  2026-10-23 | Amazon | Data Science Intern | Seattle, WA | intern | [link](https://amazon.jobs/en/jobs/10556927/2027-data-science-internship-united-states-phd-or-masters-student) |
@@ -3035,6 +3058,15 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-23 | Meta | Research Scientist Intern - Meta Recommendation Systems - PhD | Menlo Park, CA | intern | [link](https://www.metacareers.com/jobs/1416549056773684) |
 |  2026-11-11 | Airbnb | Advanced Analytics Intern | United States | intern | [link](https://careers.airbnb.com/positions/8380007?gh_jid=8380007) |
 |  2026-11-11 | TikTok | Platform Campaign Project Intern | Seattle, WA | intern | [link](https://lifeattiktok.com/search/7706422460086159669) |
+|  2026-10-22 | Meta | Research Scientist Intern - Central Applied Science | Menlo Park, CA | intern | [link](https://www.metacareers.com/jobs/1582569213186235) |
+|  2026-10-22 | Meta | Research Scientist Intern - Feed Recommendations | Bellevue, WA | intern | [link](https://www.metacareers.com/jobs/29044546168568671) |
+|  2026-10-22 | Meta | Research Scientist Intern - FAIR - Multimodal Foundations | Boston, MA | intern | [link](https://www.metacareers.com/jobs/2322361288548512) |
+|  2026-10-22 | Meta | Research Scientist Intern - Multi-Agent Systems and Memory | Seattle, WA | intern | [link](https://www.metacareers.com/jobs/2615214025585454) |
+|  2026-10-22 | Meta | Research Scientist Intern - Physical Engineering AI | Seattle, WA | intern | [link](https://www.metacareers.com/jobs/1081255008061721) |
+|  2026-10-22 | Meta | Research Scientist Intern - AI Alignment | Boston, MA | intern | [link](https://www.metacareers.com/jobs/2356892281747003) |
+|  2026-10-22 | Meta | Research Scientist Intern - FAIR Chemistry | SF | intern | [link](https://www.metacareers.com/jobs/2162858564439476) |
+|  2026-10-22 | Microsoft | Research Intern | Redmond, WA | intern | [link](https://apply.careers.microsoft.com/careers/job/1970393557045445) |
+|  2026-10-22 | Databricks | Data Science Intern | SF | intern | [link](https://boards.greenhouse.io/embed/job_app?token=6866538002) |
 |  2026-11-13 | Zoox | Data Scientist Intern | Foster City, CA | intern | [link](https://jobs.lever.co/zoox/0f42ac76-3821-4805-8b59-446477d1e1db/apply) |
 |  2026-11-13 | Verisk | Data Science/AI Intern | Lehi, UT | intern | [link](https://fa-ewmy-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/5184) |
 |  2026-11-13 | Minitab | Research & Design Intern | State College, PA | intern | [link](https://job-boards.greenhouse.io/minitab/jobs/8200707003) |
@@ -3051,26 +3083,24 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-13 | Camping World | Data Engineering Intern | Chicago, IL | intern | [link](https://campingworld.wd5.myworkdayjobs.com/en-US/Jobs/job/Chicago-IL/Data-Engineering-Intern_26_09297) |
 |  2026-11-13 | Camping World | Data Analyst Intern - AI & Machine Learning Focus | Chicago, IL | intern | [link](https://campingworld.wd5.myworkdayjobs.com/en-US/Jobs/job/Chicago-IL/Data-Analyst-Intern_26_09300) |
 |  2026-11-13 | Martin Marietta | Data Scientist Intern | Raleigh, NC | intern | [link](https://martinmarietta.wd5.myworkdayjobs.com/Martin_Marietta_Careers/job/Raleigh-NC/Intern--Data-Scientist_JR024144-1) |
-|  🆕 2026-10-22 | Microsoft | Research Intern - Gray Systems Lab (GSL) | United States, Washington, Redmond | intern | [link](https://jobs.careers.microsoft.com/global/en/job/200063363) |
-|  2026-10-22 | Meta | Research Scientist Intern - Central Applied Science | Menlo Park, CA | intern | [link](https://www.metacareers.com/jobs/1582569213186235) |
-|  2026-10-22 | Meta | Research Scientist Intern - Feed Recommendations | Bellevue, WA | intern | [link](https://www.metacareers.com/jobs/29044546168568671) |
-|  2026-10-22 | Meta | Research Scientist Intern - FAIR - Multimodal Foundations | Boston, MA | intern | [link](https://www.metacareers.com/jobs/2322361288548512) |
-|  2026-10-22 | Meta | Research Scientist Intern - Multi-Agent Systems and Memory | Seattle, WA | intern | [link](https://www.metacareers.com/jobs/2615214025585454) |
-|  2026-10-22 | Meta | Research Scientist Intern - Physical Engineering AI | Seattle, WA | intern | [link](https://www.metacareers.com/jobs/1081255008061721) |
-|  2026-10-22 | Meta | Research Scientist Intern - AI Alignment | Boston, MA | intern | [link](https://www.metacareers.com/jobs/2356892281747003) |
-|  2026-10-22 | Meta | Research Scientist Intern - FAIR Chemistry | SF | intern | [link](https://www.metacareers.com/jobs/2162858564439476) |
-|  2026-10-22 | Microsoft | Research Intern | Redmond, WA | intern | [link](https://apply.careers.microsoft.com/careers/job/1970393557045445) |
-|  2026-10-22 | Databricks | Data Science Intern | SF | intern | [link](https://boards.greenhouse.io/embed/job_app?token=6866538002) |
-|  2026-10-15 | Rivian | Software Engineer Intern Co-op - Machine Learning Research - Perception | Palo Alto, CA | intern | [link](https://careers.rivian.com/jobs/33801?icims=1) |
 |  2026-10-21 | Meta | Research Scientist Intern | Menlo Park, CA | intern | [link](https://www.metacareers.com/jobs/1510576574212840) |
 |  2026-10-21 | Meta | Research Scientist Intern - Multimodal Learning for Robotics - PhD | Burlingame, CA | intern | [link](https://www.metacareers.com/jobs/1656954472496223) |
 |  2026-10-21 | Meta | Research Scientist Intern - Robot Foundation Models | Redmond, WA | intern | [link](https://www.metacareers.com/jobs/27730225806654441) |
 |  2026-10-21 | NVIDIA | Research Intern - Robotic Perception and Learning | Seattle, WA | intern | [link](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-WA-Redmond/PhD-Research-Intern--Robotic-Perception-and-Learning---2027_JR2027089) |
 |  2026-10-21 | NVIDIA | PhD Research Intern - AI for Climate and Weather Simulation | Canada | intern | [link](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/PhD-Research-Intern--AI-for-Climate-and-Weather-Simulation---2027_JR2026949) |
+|  2026-10-20 | Adobe | 2027 Intern - AI & Architecture | San Jose | intern | [link](https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/San-Jose/XMLNAME-2027-Intern---AI---Architecture_R172998) |
 |  2026-10-20 | Intel | Data Science / Software Engineering PhD Intern | Santa Clara, CA | intern | [link](https://intel.wd1.myworkdayjobs.com/en-us/external/job/US-California-Santa-Clara/AI-Data-Science---Software-Engineering-PhD-Intern-New-2027_JR0288138) |
 |  2026-10-20 | Intel | AI Data Science / Software Engineering PhD Intern | Hillsboro, OR | intern | [link](https://intel.wd1.myworkdayjobs.com/en-us/external/job/US-Oregon-Hillsboro/AI-Data-Science---Software-Engineering-PhD-Intern-New-2027_JR0288136) |
 |  2026-10-20 | Meta | Research Scientist Intern - Artificial Intelligence-Driven Neural Interfaces | Burlingame, CA | intern | [link](https://www.metacareers.com/jobs/1436615821934863) |
 |  2026-10-20 | Meta | Research Scientist Intern - Multimodal Behavioral AI | Redmond, WA | intern | [link](https://www.metacareers.com/jobs/1428978125312655) |
+|  2026-10-19 | Scale AI | Machine Learning Research Intern (Summer 2027) | New York, NY; San Francisco, CA | intern | [link](https://job-boards.greenhouse.io/scaleai/jobs/4735665005) |
+|  2026-10-19 | DoorDash | Operations Research Intern (PhD), Summer 2027 | Sunnyvale, CA | intern | [link](https://job-boards.greenhouse.io/doordashusa/jobs/8273965) |
+|  2026-10-19 | Microsoft | Research Intern - Algorithms Group - Generative Modeling | Redmond, WA | intern | [link](https://apply.careers.microsoft.com/careers/job/1970393557043740) |
+|  2026-10-19 | Meta | Research Scientist Intern - Smart Glasses in Wearables AI | Burlingame, CA | intern | [link](https://www.metacareers.com/jobs/1584033410435097) |
+|  2026-10-19 | Meta | Research Scientist Intern - On-Device AI Model Optimization | Burlingame, CA | intern | [link](https://www.metacareers.com/jobs/4455569504707135) |
+|  2026-10-19 | Meta | Optical Engineering AI and Data Analytics Intern | Sunnyvale, CA | intern | [link](https://www.metacareers.com/jobs/1851348099357899) |
+|  2026-10-19 | Meta | Research Scientist Intern - Multimodal LLM and Speech-to-Speech Translation - PhD | Redmond, WA | intern | [link](https://www.metacareers.com/jobs/4723409617931131) |
+|  2026-10-19 | Microsoft | Research Intern - Extended Perception, Interaction & Cognition | Redmond, WA | intern | [link](https://apply.careers.microsoft.com/careers/job/1970393557043754) |
 |  2026-11-12 | Rhoda AI | Research Intern | Mountain View, CA | intern | [link](https://jobs.ashbyhq.com/rhoda-ai/20056166-79de-420b-8569-d0b15ee83599/application?embed=true) |
 |  2026-11-12 | SharkNinja | Data Science Intern | Needham, MA | intern | [link](https://job-boards.greenhouse.io/sharkninjaoperatingllc/jobs/4727539006) |
 |  2026-11-12 | Toyota Research Institute | Robotics Intern - Prototyping and Research Operations | Cambridge, MA | intern | [link](https://jobs.lever.co/tri/4f1efb39-385b-4ff9-8e82-1459a6b22628/apply) |
@@ -3090,21 +3120,7 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-12 | White Cap Supply Holdings | Product Data Management Intern | Remote in USA | intern | [link](https://whitecap.wd1.myworkdayjobs.com/careers/job/Corporate-Intern---Product-Data-Management_WCJR-036650) |
 |  2026-11-12 | E2 Consulting Engineers | Data Analyst Intern | San Diego, CA | intern | [link](https://careers-e2.icims.com/jobs/6496/job?mobile=true&needsRedirect=false) |
 |  2026-11-12 | ASML | Data Scientist Intern | Wilton, CT | intern | [link](https://asml.wd3.myworkdayjobs.com/asmlext1/job/Wilton-CT-USA/Internship---Data-Scientist_J-00356462) |
-|  2026-10-19 | Scale AI | Machine Learning Research Intern (Summer 2027) | New York, NY; San Francisco, CA | intern | [link](https://job-boards.greenhouse.io/scaleai/jobs/4735665005) |
-|  2026-10-19 | DoorDash | Operations Research Intern (PhD), Summer 2027 | Sunnyvale, CA | intern | [link](https://job-boards.greenhouse.io/doordashusa/jobs/8273965) |
-|  2026-10-19 | Adobe | 2027 Intern - AI & Architecture | San Jose | intern | [link](https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/San-Jose/XMLNAME-2027-Intern---AI---Architecture_R172998) |
-|  🆕 2026-10-19 | Microsoft | Research Intern - Extended Perception Interaction Cognition (EPIC) | United States, Washington, Redmond | intern | [link](https://jobs.careers.microsoft.com/global/en/job/200062675) |
-|  🆕 2026-10-19 | Microsoft | Research Intern - Algorithms Group: Generative Modeling | United States, Washington, Redmond | intern | [link](https://jobs.careers.microsoft.com/global/en/job/200062674) |
-|  2026-10-19 | Microsoft | Research Intern - Algorithms Group - Generative Modeling | Redmond, WA | intern | [link](https://apply.careers.microsoft.com/careers/job/1970393557043740) |
-|  2026-10-19 | Meta | Research Scientist Intern - Smart Glasses in Wearables AI | Burlingame, CA | intern | [link](https://www.metacareers.com/jobs/1584033410435097) |
-|  2026-10-19 | Meta | Research Scientist Intern - On-Device AI Model Optimization | Burlingame, CA | intern | [link](https://www.metacareers.com/jobs/4455569504707135) |
-|  2026-10-19 | Meta | Optical Engineering AI and Data Analytics Intern | Sunnyvale, CA | intern | [link](https://www.metacareers.com/jobs/1851348099357899) |
-|  2026-10-19 | Meta | Research Scientist Intern - Multimodal LLM and Speech-to-Speech Translation - PhD | Redmond, WA | intern | [link](https://www.metacareers.com/jobs/4723409617931131) |
-|  2026-10-19 | Microsoft | Research Intern - Extended Perception, Interaction & Cognition | Redmond, WA | intern | [link](https://apply.careers.microsoft.com/careers/job/1970393557043754) |
 |  2026-10-16 | Together AI | Research Intern, Frontier Speculative Decoding (Summer 2027) | San Francisco | intern | [link](https://job-boards.greenhouse.io/togetherai/jobs/5267198007) |
-|  🆕 2026-10-16 | Microsoft | Research Intern - Agentic Data Memory | United States, Washington, Redmond | intern | [link](https://jobs.careers.microsoft.com/global/en/job/200061716) |
-|  🆕 2026-10-16 | Microsoft | Research Intern - Machine Learning at MSR NYC | United States, New York, New York | intern | [link](https://jobs.careers.microsoft.com/global/en/job/200062418) |
-|  🆕 2026-10-16 | Microsoft | Research Intern - MSR AI Interaction and Learning | United States, Washington, Redmond | intern | [link](https://jobs.careers.microsoft.com/global/en/job/200062421) |
 |  2026-10-16 | Microsoft | Research Intern - Efficient AI Software Systems | Redmond, WA | intern | [link](https://apply.careers.microsoft.com/careers/job/1970393557041731) |
 |  2026-10-16 | Microsoft | Research Intern - MSR AI Interaction and Learning | Redmond, WA | intern | [link](https://apply.careers.microsoft.com/careers/job/1970393557042156) |
 |  2026-10-16 | Microsoft | Research Intern - Machine Learning | Cambridge, MA | intern | [link](https://apply.careers.microsoft.com/careers/job/1970393557042145) |
@@ -3122,9 +3138,6 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-11 | San Francisco Data | Engineer Intern | SF | intern | [link](https://jobs.ashbyhq.com/sfdata/20f37c79-b892-46d9-98d9-3588ab45542c/application?embed=true) |
 |  2026-11-11 | Panera Bread | Data Science & AI Analytics Intern | Newton, MA | intern | [link](https://panerabread.wd5.myworkdayjobs.com/panera_careers/job/Newton-Support-Center/Data-Science---AI-Analytics---Summer-2027-Internship-Program_JR0049082) |
 |  2026-11-11 | Zotec Partners | Database Engineer Intern | Carmel, IN | intern | [link](https://zotecpartners.applytojob.com/apply/Yl1p7EmzZN/Database-Engineer-Intern) |
-|  2026-10-15 | Duolingo | Data Scientist, Intern (PhD) | New York, NY; Pittsburgh, PA | intern | [link](https://careers.duolingo.com/jobs/8888848002?gh_jid=8888848002) |
-|  2026-10-15 | TikTok | Research Engineer Intern - Video and Edge - Multimedia Lab | San Diego, CA | intern | [link](https://lifeattiktok.com/search/7696664743112788277) |
-|  2026-10-15 | Duolingo | Data Scientist Intern | Pittsburgh, PA | intern | [link](https://job-boards.greenhouse.io/duolingounirecruitment/jobs/8893030002) |
 |  2026-11-10 | General Dynamics Mission Systems | Ontology Data Analysis and Validation Intern | Chantilly, VA | intern | [link](https://careers-gdms.icims.com/jobs/76095/job?mobile=true&needsRedirect=false) |
 |  2026-11-10 | Intuitive Surgical | Robotics and Controls Engineer Intern | Sunnyvale, CA | intern | [link](https://jobs.smartrecruiters.com/Intuitive/744000160747319) |
 |  2026-11-10 | onsemi | AI & Data Analytics Intern | Scottsdale, AZ | intern | [link](https://hctz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/2507010) |
@@ -3162,6 +3175,9 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-04 | Intel | Robotics PhD Intern | Hillsboro, OR | intern | [link](https://intel.wd1.myworkdayjobs.com/en-us/external/job/US-Oregon-Hillsboro/Robotics-PhD-Intern_JR0288833) |
 |  2026-11-06 | Waymo | 2027 Summer Intern, Machine Learning, MS/PhD, Simulation Realism (World Model)  | Mountain View, California, United States | intern | [link](https://careers.withwaymo.com/jobs?gh_jid=8358262) |
 |  2026-11-06 | Waymo | 2027 Summer Intern, PhD, Machine Learning - Generative World Models & Controllable Simulation | Mountain View, California, United States | intern | [link](https://careers.withwaymo.com/jobs?gh_jid=8351210) |
+|  2026-11-06 | PayPal | Data Scientist Intern - Summer 2027 | San Jose, California, United States of America | intern | [link](https://paypal.wd1.myworkdayjobs.com/en-US/jobs/job/San-Jose-California-United-States-of-America/Data-Scientist-Intern---Summer-2027_R0138582) |
+|  2026-11-06 | PayPal | Machine Learning Engineer Intern - Summer 2027 | San Jose, California, United States of America | intern | [link](https://paypal.wd1.myworkdayjobs.com/en-US/jobs/job/San-Jose-California-United-States-of-America/Machine-Learning-Engineer-Intern---Summer-2027_R0138581) |
+|  2026-11-06 | PayPal | Machine Learning Engineer PhD Intern - Summer 2027 | San Jose, California, United States of America | intern | [link](https://paypal.wd1.myworkdayjobs.com/en-US/jobs/job/San-Jose-California-United-States-of-America/Machine-Learning-Engineer-PhD-Intern---Summer-2027_R0138579) |
 |  2026-11-06 | Tinder | Data Scientist Intern | SF | intern | [link](https://jobs.lever.co/matchgroup/573621f6-9931-4e39-840a-1d04171be2ff/apply) |
 |  2026-11-06 | Tinder | Machine Learning Engineer Intern | Palo Alto, CA | intern | [link](https://jobs.lever.co/matchgroup/860a839a-5be3-44dc-916f-eb2e71d67d72/apply) |
 |  2026-11-06 | Gannett Fleming | Data Analytics Intern | NYC | intern | [link](https://careers-gannettfleming.icims.com/jobs/15085/job?mobile=true&needsRedirect=false) |
@@ -3187,9 +3203,6 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-06 | L.L.Bean | Business Analyst/Data Analyst Intern | Freeport, ME | intern | [link](https://llbean.wd1.myworkdayjobs.com/llbean_careers/job/Freeport-ME/Business--Data-Analyst-Intern--Summer-2027-_JR11275) |
 |  2026-11-06 | Keysight Technologies | Machine Learning PhD Intern - Modeling and Data Analysis | Santa Rosa, CA | intern | [link](https://jobs.keysight.com/jobs/54742?icims=1&lang=en-us) |
 |  2026-11-06 | Parspec | Applied AI Engineer Intern | San Mateo, CA | intern | [link](https://jobs.ashbyhq.com/parspec/0a897c21-0df7-40ba-85f2-694bf6678504/application?embed=true) |
-|  2026-11-05 | PayPal | Data Scientist Intern - Summer 2027 | San Jose, California, United States of America | intern | [link](https://paypal.wd1.myworkdayjobs.com/en-US/jobs/job/San-Jose-California-United-States-of-America/Data-Scientist-Intern---Summer-2027_R0138582) |
-|  2026-11-05 | PayPal | Machine Learning Engineer Intern - Summer 2027 | San Jose, California, United States of America | intern | [link](https://paypal.wd1.myworkdayjobs.com/en-US/jobs/job/San-Jose-California-United-States-of-America/Machine-Learning-Engineer-Intern---Summer-2027_R0138581) |
-|  2026-11-05 | PayPal | Machine Learning Engineer PhD Intern - Summer 2027 | San Jose, California, United States of America | intern | [link](https://paypal.wd1.myworkdayjobs.com/en-US/jobs/job/San-Jose-California-United-States-of-America/Machine-Learning-Engineer-PhD-Intern---Summer-2027_R0138579) |
 |  2026-11-05 | Toyota Research Institute | Automated Driving Advanced Development Intern - Machine Learning Research | Los Altos, CA | intern | [link](https://jobs.lever.co/tri/62b161d6-21e0-4d10-9997-ff7ae91a2ff4/apply) |
 |  2026-11-05 | Toyota Research Institute | Robotics Research Intern - Manipulation | Los Altos, CA | intern | [link](https://jobs.lever.co/tri/17acdd1f-f234-4a30-a313-34be94a1adcd/apply) |
 |  2026-11-05 | Toyota Research Institute | Human-Centered AI Research Intern - Human Language Models | Los Altos, CA | intern | [link](https://jobs.lever.co/tri/d4184c04-b963-489a-9a0b-91bc57d6267e/apply) |
@@ -3266,7 +3279,6 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-02 | Signet Jewelers | Data Analytics Intern | Akron, OH | intern | [link](https://signetjewelers.wd1.myworkdayjobs.com/SignetCorporateCareers/job/Support-Center---Akron-OH/Data-Analytics-Intern_REQ_84317) |
 |  2026-11-02 | Sonos | Data Engineer Intern | Seattle, WA | intern | [link](https://sonos.wd1.myworkdayjobs.com/Sonos/job/Seattle-WA/Data-Engineering-Intern--Seattle-_R2897-1) |
 |  2026-11-02 | Noblis | Data Science and Innovation Intern | Springfield, VA | intern | [link](https://careers.noblis.org/jobs/28097?icims=1&lang=en-us) |
-| 🔥 🆕 2026-10-29 | Microsoft | Applied Scientist: Internship Opportunities, Turing | United States, Washington, Redmond | intern | [link](https://jobs.careers.microsoft.com/global/en/job/200064446) |
 |  2026-10-29 | Microsoft | Applied Science PhD Intern | Redmond, WA | intern | [link](https://apply.careers.microsoft.com/careers/job/1970393557050154) |
 |  2026-10-31 | Sierra | Research Intern | San Francisco, CA | intern | [link](https://jobs.ashbyhq.com/Sierra/ef896ee9-e903-4a1f-84c2-537373cb9081) |
 |  2026-10-31 | Firework | Data Engineer Intern | San Mateo, CA | intern | [link](https://jobs.lever.co/fireworkhq/36722fbd-2705-4beb-83aa-1884068eaa09/apply) |
@@ -3331,12 +3343,13 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-23 | Amazon | Applied Scientist Intern - Automated Reasoning | Seattle, WA | intern | [link](https://amazon.jobs/en/jobs/10552930/2027-applied-science-internship-automated-reasoning-united-states-phd-student-science-recruiting-automated-reasoning) |
 |  2026-10-23 | Amazon | Associate Delivery Consultant Intern - AWS Professional Services | Arlington County, Arlington, VA | intern | [link](https://amazon.jobs/en/jobs/10585774/associate-delivery-consultant-intern-aws-professional-services) |
 |  2026-10-23 | Amazon | Applied Science Intern - Natural Language Processing and Speech Technologies | Cambridge, MA | intern | [link](https://amazon.jobs/en/jobs/10564593/2027-applied-science-internship-natural-language-processing-and-speech-technologies-united-states-phd-student-science-recruiting) |
+|  2026-10-22 | Docusign | Applied Science Intern | SF | intern | [link](https://careers.docusign.com/jobs/30563?icims=1) |
 |  2026-11-13 | The Toro Company | CX and Customer Lifetime Value Intern - Operations Analyst | Bloomington, MN | intern | [link](https://ttc.wd1.myworkdayjobs.com/Toro_External_Careers/job/Bloomington-MN/CX-and-Customer-Lifetime-Value---Operations-Analyst---The-Toro-Company_JR17819) |
 |  2026-11-13 | Merrick | GIS Analyst Intern | Greenwood Village, CO | intern | [link](https://careers.merrick.com/jobs/8476?icims=1&lang=en-us) |
 |  2026-11-13 | Rocket Mortgage | Customer Correspondence Analyst Intern | Detroit, MI | intern | [link](https://quickenloans.wd5.myworkdayjobs.com/rocket_careers/job/Detroit-MI/Customer-Correspondence-Analyst---Summer-2027_R-085167-1) |
 |  2026-11-13 | Pennsylvania State University | Energy Savings Program Intern | University Park, State College, PA | intern | [link](https://psu.wd1.myworkdayjobs.com/PSU_Staff/job/Penn-State-University-Park/Part-Time-Energy-Savings-Program-Intern_REQ_0000084318-1) |
 |  2026-11-13 | StepStone Group | Junior Analyst Intern - Client Services | Cleveland, OH | intern | [link](https://boards.greenhouse.io/embed/job_app?token=8386648) |
-|  2026-10-22 | Docusign | Applied Science Intern | SF | intern | [link](https://careers.docusign.com/jobs/30563?icims=1) |
+|  🆕 2026-11-13 | Cigna Group | Healthcare Analytics Intern | Morris Plains, NJ | intern | [link](https://cigna.wd5.myworkdayjobs.com/cignacareers/job/Morris-Plains-NJ/Healthcare-Analytics-Summer-Intern---Start-Date--May-24--2027_26009857) |
 |  2026-10-27 | Mercor | Research Engineer Intern - Environments, Data and Post-Training | San Francisco | intern | [link](https://jobs.ashbyhq.com/mercor/049bd532-6fb7-4ae6-85a1-788dd31a14ca) |
 |  2026-10-27 | Mercor | Research Engineer, Intern – Benchmarking | San Francisco | intern | [link](https://jobs.ashbyhq.com/mercor/2b1a4fd9-300d-4ae9-b5c8-eacba99bf4ae) |
 |  2026-10-27 | Saviynt | Research Scientist Intern | Milpitas, CA | intern | [link](https://jobs.lever.co/saviynt/183188c3-c043-4f91-b3f0-30ec4961f4c7/apply) |
@@ -3372,6 +3385,13 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-26 | Tradeweb | Human Resources Data & Analytics Intern | NYC | intern | [link](https://ecnf.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/301987) |
 |  2026-10-26 | The Allen Institute for AI | Research Intern - Open Ecosystem | Seattle, WA | intern | [link](https://job-boards.greenhouse.io/thealleninstitute/jobs/8319350) |
 |  2026-10-26 | Highmark Health | Enterprise Master Data Management Analyst Graduate Intern | New Mexico | intern | [link](https://highmarkhealth.wd1.myworkdayjobs.com/highmark/job/PA-Working-at-Home---Pennsylvania/Summer-2027-Enterprise-Master-Data-Management-Analyst-Graduate-Intern_J289856) |
+|  2026-10-25 | Dell Technologies | Data Science Intern | Round Rock, TX | intern | [link](https://iawmqy.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/careers/job/301413) |
+|  2026-10-25 | ConnectPrep | Data Analyst Intern | Remote in USA | intern | [link](https://apply.workable.com/connectprep/j/1AF4F8C65F/apply) |
+|  2026-10-25 | Skydio | PhD Autonomy Engineer Intern | San Mateo, CA | intern | [link](https://jobs.ashbyhq.com/skydio/fe26fdf8-15b2-44e6-8e43-ace13431453c/application?embed=true) |
+|  2026-10-25 | Skydio | Autonomy Engineer Intern | San Mateo, CA | intern | [link](https://jobs.ashbyhq.com/skydio/d39c46ce-a4e9-45d2-99bf-17e3b7dac34b/application?embed=true) |
+|  2026-10-25 | Skydio | Autonomy Engineer Intern - Deep Learning / Computer Vision | San Mateo, CA | intern | [link](https://jobs.ashbyhq.com/skydio/f1a72f5b-6157-47c1-8de9-379a32c7419f/application?embed=true) |
+|  2026-10-25 | Hewlett Packard Enterprise | AI/ML Developer Intern | San Jose, CA | intern | [link](https://hpe.wd5.myworkdayjobs.com/jobsathpe/job/San-Jose-California/AI-ML-Developer-Intern_1217413) |
+|  2026-10-19 | Nintendo | Intern - Business Intelligence | Redmond, WA | intern | [link](https://careers.nintendo.com/?gh_jid=4421623009) |
 |  2026-11-12 | Vizient | Contract Operations Intern - Analytics | Irving, TX | intern | [link](https://vizient.wd1.myworkdayjobs.com/Vizient_Careers/job/Chicago-IL-60607/XMLNAME-2027-Summer-Internship---Contract-Operations---Analytics_36238R-1) |
 |  2026-11-12 | State Farm | Property and Casualty Underwriting Intern - Knowledge Management | Richardson, TX | intern | [link](https://jobs.statefarm.com/jobs/46442?icims=1&lang=en-us) |
 |  2026-11-12 | Eversource Energy | GIS Intern | Dorchester, Boston, MA | intern | [link](https://eversource.wd1.myworkdayjobs.com/ExternalSite/job/Dorchester-MA/XMLNAME-2027-Summer--GIS-Intern--MA-_R-032519) |
@@ -3380,13 +3400,6 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-12 | Environmental Defense Fund | Consumer Energy Analytics Intern | Remote in USA | intern | [link](https://osv-edf.wd5.myworkdayjobs.com/Confidential/job/Remote---US-Home/Florida-Consumer-Energy-Analytics-Intern_REQ-002752) |
 |  2026-11-12 | CareSource | Clinical Operations Business Analyst Intern | Remote in USA | intern | [link](https://caresource.wd1.myworkdayjobs.com/caresource/job/Remote/XMLNAME-2027-Summer-Internship-Program---Clinical-Operations-Business-Analyst_R14353) |
 |  2026-11-12 | CoStar Group | Vision & Learning Intern | Sunnyvale, CA | intern | [link](https://costar.wd1.myworkdayjobs.com/Costar_Campus/job/Sunnyvale-US/Vision---Learning-Intern_R40196) |
-|  2026-10-25 | Dell Technologies | Data Science Intern | Round Rock, TX | intern | [link](https://iawmqy.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/careers/job/301413) |
-|  2026-10-25 | ConnectPrep | Data Analyst Intern | Remote in USA | intern | [link](https://apply.workable.com/connectprep/j/1AF4F8C65F/apply) |
-|  2026-10-25 | Skydio | PhD Autonomy Engineer Intern | San Mateo, CA | intern | [link](https://jobs.ashbyhq.com/skydio/fe26fdf8-15b2-44e6-8e43-ace13431453c/application?embed=true) |
-|  2026-10-25 | Skydio | Autonomy Engineer Intern | San Mateo, CA | intern | [link](https://jobs.ashbyhq.com/skydio/d39c46ce-a4e9-45d2-99bf-17e3b7dac34b/application?embed=true) |
-|  2026-10-25 | Skydio | Autonomy Engineer Intern - Deep Learning / Computer Vision | San Mateo, CA | intern | [link](https://jobs.ashbyhq.com/skydio/f1a72f5b-6157-47c1-8de9-379a32c7419f/application?embed=true) |
-|  2026-10-25 | Hewlett Packard Enterprise | AI/ML Developer Intern | San Jose, CA | intern | [link](https://hpe.wd5.myworkdayjobs.com/jobsathpe/job/San-Jose-California/AI-ML-Developer-Intern_1217413) |
-|  2026-10-19 | Nintendo | Intern - Business Intelligence | Redmond, WA | intern | [link](https://careers.nintendo.com/?gh_jid=4421623009) |
 |  2026-10-24 | NextToken | Applied Research Intern | SF | intern | [link](https://jobs.ashbyhq.com/nexttoken/f202a966-912e-40b8-b55a-8cca851eef5e/application?embed=true) |
 |  2026-10-23 | Waymo | 2027 Summer Intern, MS/PhD, Machine Learning, Driver Refinement Foundations | San Francisco, CA, USA | intern | [link](https://careers.withwaymo.com/jobs?gh_jid=8304574) |
 |  2026-10-23 | Robert Bosch Venture Capital | Agentic AI Intern | Sunnyvale, CA | intern | [link](https://jobs.smartrecruiters.com/BoschGroup/744000157483412) |
@@ -3412,7 +3425,6 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-11 | Woolpert | Aviation Modeling & Simulation Intern | San Rafael, CA | intern | [link](https://job-boards.greenhouse.io/woolpert/jobs/4430700009) |
 |  2026-11-11 | Exelon | Forestry/Vegetation Management Intern | Oakbrook Terrace, IL | intern | [link](https://careers.comed.com/jobs/33847?icims=1&lang=en-us) |
 |  2026-11-11 | Zotec Partners | Business Intelligence Intern | Carmel, IN | intern | [link](https://zotecpartners.applytojob.com/apply/csKRdla8ap/Business-Intelligence-Intern) |
-|  2026-10-15 | Microsoft | Researcher Intern - Coreai | Redmond, WA | intern | [link](https://apply.careers.microsoft.com/careers/job/1970393557027387) |
 |  2026-10-22 | Waymo | 2027 Summer Intern, PhD, AI Foundations - Recipes | Mountain View, CA, USA | intern | [link](https://careers.withwaymo.com/jobs?gh_jid=8306841) |
 |  2026-10-22 | Waymo | 2027 Summer Intern, PhD, Research, Multimodal Foundation Models | Mountain View, CA, USA | intern | [link](https://careers.withwaymo.com/jobs?gh_jid=8306867) |
 |  2026-10-22 | Waymo | 2027 Summer Intern, PhD, Research, RSI for Autonomous Driving | Mountain View, CA, USA | intern | [link](https://careers.withwaymo.com/jobs?gh_jid=8306779) |
@@ -3500,19 +3512,6 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-16 | Riverlane | PhD Research Intern | Cambridge, MA | intern | [link](https://www.riverlane.com/jobs?gh_jid=5009045101#vacancies) |
 |  2026-10-16 | Schneider Electric | AI Quality & Continuous Improvement Intern | Foxborough, MA | intern | [link](https://se.jibeapply.com/jobs/136783?icims=1) |
 |  2026-10-16 | CenturyLink | AI & Automation Builders Internship | Remote in USA | intern | [link](https://internaljobs.centurylink.com/job/Remote-AI-&-Automation-Builders-Summer-2027-Internship-Pathway/1440953200/?ats=successfactors) |
-|  2026-10-15 | National Laboratory of the Rockies | AI/ML for Cybersecurity Intern | Golden, CO | intern | [link](https://nrel.wd5.myworkdayjobs.com/NLR/job/Golden-CO/Graduate--10-12-weeks--Intern---AI-ML-for-Cybersecurity_R14563) |
-|  2026-10-15 | National Laboratory of the Rockies | Connected Vehicle Engineer Intern - V2X - Communications Modeling and Traffic Simulation | Golden, CO | intern | [link](https://nrel.wd5.myworkdayjobs.com/NLR/job/Golden-CO/Graduate-Intern---Connected-Vehicle--V2X--Communications-Modeling-and-Traffic-Simulation_R14564) |
-|  2026-10-15 | Ardian | Data Scientist Intern | NYC | intern | [link](https://ardian.wd103.myworkdayjobs.com/ArdianCareers/job/New-York/Data-Scientist-Intern---February-2027---NYC_JR1002271) |
-|  2026-10-15 | General Motors | Embodied AI Data Scaling Intern - Data Scaling - Embodied AI | Sunnyvale, CA | intern | [link](https://generalmotors.wd5.myworkdayjobs.com/Careers_GM/job/Sunnyvale-California-United-States-of-America/XMLNAME-2027-Summer-Intern---Data-Scaling--Embodied-AI--Masters-_JR-202622540) |
-|  2026-10-15 | General Motors | AI/ML Engineer Intern - Mapping - Masters | Warren, MI | intern | [link](https://generalmotors.wd5.myworkdayjobs.com/Careers_GM/job/Warren-Michigan-United-States-of-America/XMLNAME-2027-Summer-Intern--AI-ML-Engineer--Mapping--Masters-_JR-202622539) |
-|  2026-10-15 | General Motors | Embodied AI Research Intern | Sunnyvale, CA | intern | [link](https://generalmotors.wd5.myworkdayjobs.com/Careers_GM/job/Sunnyvale-California-United-States-of-America/XMLNAME-2027-Summer-Intern--AI-Research--Embodied-AI--Masters-_JR-202622535) |
-|  2026-10-15 | General Motors | Onboard Autonomy Intern - Embodied AI | Sunnyvale, CA | intern | [link](https://generalmotors.wd5.myworkdayjobs.com/Careers_GM/job/Sunnyvale-California-United-States-of-America/XMLNAME-2027-Summer-Intern--Onboard-Autonomy--Embodied-AI--Masters-_JR-202622543) |
-|  2026-10-15 | Danaher | Data Governance Intern - CCM | Logan, UT | intern | [link](https://danaher.wd1.myworkdayjobs.com/danaherjobs/job/Logan-Utah-United-States/CCM-Data-Governance---Intern-Summer-2027_R1318977) |
-|  2026-10-15 | Pennsylvania State University | R&D Engineer Intern | Key West, FL | intern | [link](https://psu.wd1.myworkdayjobs.com/PSU_Staff/job/Key-West-FL/R-D-Engineer-Intern_REQ_0000083331) |
-|  2026-10-15 | American Family Insurance Group | Enterprise Data Intern - Enablement, Service & Support | Madison, WI | intern | [link](https://amfam.wd1.myworkdayjobs.com/en-US/Careers/job/WI-Madison/Enterprise-Data-Intern_R39510) |
-|  2026-10-15 | Hewlett Packard Enterprise | AI & HPC Performance Engineering Intern | Spring, TX | intern | [link](https://hpe.wd5.myworkdayjobs.com/jobsathpe/job/Spring-Texas-United-States-of-America/AI---HPC-Performance-Engineering-Intern_1213397) |
-|  2026-10-15 | Engramme | Machine Learning Engineer Co-op Intern | SF | intern | [link](https://jobs.ashbyhq.com/engramme/36691537-e0fd-4aa9-9fcd-2618b433fac1/application?embed=true) |
-|  2026-10-15 | Susquehanna International Group | Business Analytics AI Co-op | Bala Cynwyd, PA | intern | [link](https://careers-sig.icims.com/jobs/11675/job?mobile=true&needsRedirect=false) |
 |  2026-11-07 | Zoox | Safety Reporting & Benchmarking Intern | Foster City, CA | intern | [link](https://jobs.lever.co/zoox/614f35d6-a415-4f44-be38-cb38877df1db/apply) |
 |  2026-11-07 | Moss | Intern - Multiple Teams | SF | intern | [link](https://jobs.ashbyhq.com/mossrobotics/d16d9e47-fc07-4e49-95dc-6a997421114c/application?embed=true) |
 |  2026-11-06 | Rivian | Intern - Multiple Teams | Champaign, IL | intern | [link](https://careers.rivian.com/jobs/35896?icims=1&lang=en-us) |
@@ -3663,15 +3662,10 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-16 | Linea Energy | GIS Intern | Austin, TX | intern | [link](https://ats.rippling.com/linea-energy/jobs/1247c5f0-eedf-4f15-9f81-065445d89d01) |
 |  2026-10-16 | Lawrence Livermore National Laboratory (LLNL) | Astronomy & Astrophysics Intern - Postdoctoral Researcher | Livermore, CA | intern | [link](https://jobs.smartrecruiters.com/LLNL/3743990016166956) |
 |  2026-10-16 | 84 Lumber | Business Intelligence Intern - Business Intelligence | Eighty Four, PA | intern | [link](https://careers.84lumber.com/jobs/26178?icims=1) |
-|  2026-10-15 | Symbotic | Robot Manipulation Co-op | Wilmington, MA | intern | [link](https://symbotic.wd504.myworkdayjobs.com/Symbotic/job/USA-Wilmington--MA---HQ/Co-op--Robot-Manipulation_R8257) |
-|  2026-10-15 | Paccar | Summer Intern - Product Definition Analytics | Renton, WA | intern | [link](https://jobs.paccar.com/job/Renton-Summer-Internship-Product-Definition-Analytics-WA-98055/1448230233/?ats=successfactors) |
-|  2026-10-15 | Royal Caribbean Group | Guest Travel Services Intern | Miramar, FL | intern | [link](https://jobs.royalcaribbeangroup.com/job/Miramar-Intern,-Guest-Travel-Services-(Summer-2027)-FL-33132/1440504600/?ats=successfactors) |
-|  2026-10-15 | Live Nation Entertainment | Venue Analytics Intern | Chicago, IL | intern | [link](https://livenation.wd503.myworkdayjobs.com/LNExternalSite/job/Chicago-IL-USA/Venue-Analytics-Intern_JR-93773-2) |
-|  2026-10-15 | Lawrence Livermore National Laboratory (LLNL) | Critical Infrastructure Analysis Graduate Intern - Cyber and Critical Infrastructure Summer Institute | Livermore, CA | intern | [link](https://jobs.smartrecruiters.com/LLNL/3743990016610216) |
 | ⭐ 2026-11-03 | ByteDance | Video/Image AI/ML Software Engineer Graduate - Video and Edge - Multimedia Lab | San Jose, CA | new-grad | [link](https://jobs.bytedance.com/en/position/7704089625815468293/detail) |
 | ◐ 2026-11-14 | Integrated Biosciences | Software Engineer - Robotics | Redwood City, CA | new-grad | [link](https://job-boards.greenhouse.io/integratedbiosciencesinc/jobs/4507787009) |
+| ◐ 2026-11-13 | Adobe | 2027 University Graduate - Data Scientist | San Jose | new-grad | [link](https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/San-Jose/XMLNAME-2027-University-Graduate---Data-Scientist_R173462) |
 | ◐ 2026-11-11 | Symbotic | Robotics Software Engineer New Grad | Wilmington, MA | new-grad | [link](https://symbotic.wd504.myworkdayjobs.com/Symbotic/job/USA-Wilmington--MA---HQ/New-Grad--Robotics-Software-Engineer_R8496) |
-| ◐ 2026-11-12 | Adobe | 2027 University Graduate - Data Scientist | San Jose | new-grad | [link](https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/San-Jose/XMLNAME-2027-University-Graduate---Data-Scientist_R173462) |
 | ◐ 2026-11-11 | Adobe | Data Scientist New Grad | San Jose, CA | new-grad | [link](https://adobe.wd5.myworkdayjobs.com/external_experienced/job/San-Jose/XMLNAME-2027-University-Graduate---Data-Scientist_R173462) |
 | ◐ 2026-11-11 | Amazon | Software Development Engineer 1 - Inference models optimization - AWS Neuron Inference | Cupertino, CA | new-grad | [link](https://amazon.jobs/en/jobs/10598223/software-development-engineer-i-inference-models-optimization-aws-neuron-inference) |
 | ◐ 2026-11-09 | Adobe | Data Science Engineer New Grad | San Jose, CA | new-grad | [link](https://adobe.wd5.myworkdayjobs.com/external_experienced/job/San-Jose/XMLNAME-2027-University-Graduate---Data-Engineer_R173455) |
@@ -3781,6 +3775,7 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-30 | Mitsubishi UFG | Data Governance Coordinator | Jersey City, NJ | new-grad | [link](https://mufgub.wd3.myworkdayjobs.com/mufg-careers/job/Jersey-City-NJ/Data-Governance-Coordinator---NY-NJ_10080368-WD) |
 |  2026-10-30 | Raydar | Robotics Machine Learning Engineer | SF | new-grad | [link](https://apply.workable.com/raydar/j/4C6517AC1B/apply) |
 |  2026-10-30 | Cooper Norcross Health | Data Specialist | Voorhees Township, NJ | new-grad | [link](https://careers-cooperhealth.icims.com/jobs/86860/job?mobile=true&needsRedirect=false) |
+|  🆕 2026-11-14 | Uhaul | Road Count Taker | Louisville, KY | new-grad | [link](https://uhaul.wd1.myworkdayjobs.com/UhaulJobs/job/Louisville-Kentucky/Road-Count-Taker_R259638) |
 |  2026-10-29 | Tesla | Data Collection Operator - Optimus | Littleton, CO | new-grad | [link](https://www.tesla.com/careers/search/job/287960) |
 |  2026-10-29 | UtiliSave | Forensic Regulatory Data Analyst | Remote in USA | new-grad | [link](https://apply.workable.com/utilisave-llc-1/j/9ED27658CC/apply) |
 |  2026-10-29 | Argonne National Laboratory | Robotics Software Developer Postbaccalaureate Appointee - Rapid Prototyping Laboratory | Lemont, IL | new-grad | [link](https://argonne.wd1.myworkdayjobs.com/Argonne_Careers/job/Lemont-IL-USA/Postbaccalaureate-Appointee---Robotics-Software-Developer--Rapid-Prototyping-Laboratory_423629-1) |
@@ -3860,10 +3855,6 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-09 | Advantage Solutions | Category Insights Analyst | Dallas, TX | new-grad | [link](https://uscareers2-asm.icims.com/jobs/442816/job?mobile=true&needsRedirect=false) |
 |  2026-10-16 | T.D. Williamson | Data Analyst Trainee | Salt Lake City, UT | new-grad | [link](https://tdwilliamson.wd1.myworkdayjobs.com/en-US/TDWCareers/job/USA-UT-Salt-Lake-City/Data-Analyst-Trainee_REQ-03921) |
 |  2026-10-16 | FedWriters | Data Engineer | Arlington County, Arlington, VA | new-grad | [link](https://careers-fedwriters.icims.com/jobs/2536/job?mobile=true&needsRedirect=false) |
-|  2026-10-15 | Quora | Machine Learning Engineer, New Grad - Quora (Remote) | Remote - Multiple Locations | new-grad | [link](https://jobs.ashbyhq.com/quora/40659fe7-545e-4b08-b6d7-2567b18b9ed3) |
-|  2026-10-15 | PlusAI | Senior Machine Learning Engineer - Perception | Santa Clara, CA | new-grad | [link](https://jobs.lever.co/plus-2/49900d1b-1074-4372-82b0-a5f33c038a8c/apply) |
-|  2026-10-15 | Quora | Machine Learning Engineer New Grad | Remote in USA | new-grad | [link](https://jobs.ashbyhq.com/quora/40659fe7-545e-4b08-b6d7-2567b18b9ed3/application?embed=true) |
-|  2026-10-15 | Michelin | Data Scientist | Woodburn, IN | new-grad | [link](https://michelinhr.wd3.myworkdayjobs.com/Michelin/job/WOODBURN-IN/Data-Scientist_R-2026029871-1) |
 |  2026-11-06 | Dominion Energy | Associate Business Performance Analyst - Contact Intelligence | Richmond, VA | new-grad | [link](https://careers.dominionenergy.com/job/RICHMOND-Associate-Business-Performance-Analyst-Contact-Intelligence-VA-23231/1448533300/?ats=successfactors) |
 |  2026-11-06 | CVHCare | Marketing Analyst | SF | new-grad | [link](https://cvhcare.applytojob.com/apply/dfv1EWNifG/Marketing-Analyst) |
 |  2026-11-06 | MILE MARKER | Analyst, Analytics | NYC | new-grad | [link](https://ats.rippling.com/mile-marker/jobs/36e8d7b9-a453-425e-ace1-53a9b42b07b7) |
@@ -3905,11 +3896,8 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-21 | University of Virginia | Statistical Associate New Grad | Charlottesville, VA | new-grad | [link](https://uva.wd1.myworkdayjobs.com/uvastudentjobs/job/Charlottesville-VA/StatLab-Graduate-Associate--Student-Wage-_R0088483) |
 |  2026-10-20 | Keysight Technologies | Quantum Physicist - Neutral Atom Platforms | Loveland, CO | new-grad | [link](https://jobs.keysight.com/jobs/54857?icims=1) |
 |  2026-10-20 | ENFRA | Utility Analyst 1 | Little Rock, AR | new-grad | [link](https://careers-enfra.icims.com/jobs/11611/job?mobile=true&needsRedirect=false) |
-|  2026-10-15 | ZS | Decision Analytics Associate | Bethesda, MD | new-grad | [link](https://jobs.zs.com/jobs/63654?icims=1) |
-|  2026-10-15 | CACI | Junior Dashboard Administrator | Ashburn, VA | new-grad | [link](https://caci.wd1.myworkdayjobs.com/external/job/Ashburn-VA-US/Dashboard-Administrator--Junior-_333487) |
-|  2026-10-15 | Total Quality Logistics | Business Intelligence Analyst | Cincinnati, OH | new-grad | [link](https://tql.avature.net/en_US/TQLexternalcareers/JobDetail/17524) |
 | ◐ 2026-11-14 | OpenAI | Applied Scientist, Product Policy Research & Measurement | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/73875295-889e-4373-b20f-654e85c66ba4) |
-| ◐ 2026-11-13 | Snapchat | Forensic Data Specialist | New York, New York | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/New-York-New-York/Forensic-Data-Specialist_R0047524) |
+| ◐ 2026-11-14 | Snapchat | Forensic Data Specialist | New York, New York | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/New-York-New-York/Forensic-Data-Specialist_R0047524) |
 | ◐ 2026-11-13 | Apple | GenAI Research Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694136) |
 | ◐ 2026-11-13 | Apple | AI/ML Engineer: System RF Data Ecosystem | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200682498) |
 | ◐ 2026-11-13 | Apple | ML Data Operations Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694741) |
@@ -3924,6 +3912,10 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ◐ 2026-11-11 | Cloudflare | Data Center Architect | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8344893?gh_jid=8344893) |
 | ◐ 2026-11-11 | OpenAI | Partner Applied AI Engineer, Google Cloud  | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/9a57d693-24ad-4457-a408-50617551ea5e) |
 | ◐ 2026-11-11 | OpenAI | Partner Applied AI Engineer, Oracle and Cloud ISV | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/edfaa3d2-3434-4e51-af74-3945d63ad871) |
+| ◐ 2026-11-11 | Snapchat | Lead Business Intelligence Engineer | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Lead-Business-Intelligence-Engineer_R0047201-2) |
+| ◐ 2026-11-11 | Snapchat | Machine Learning Engineer, Revenue+, Level 5 | New York, New York | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/New-York-New-York/Machine-Learning-Engineer--Revenue---Level-5_R0047092-1) |
+| ◐ 2026-11-11 | Intel | Substrate Packaging Research and Development Engineer | US, Arizona, Phoenix | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Arizona-Phoenix/Substrate-Packaging-Research-and-Development-Engineer_JR0287474) |
+| ◐ 2026-11-11 | Intel | Operations Research Engineer | US, Arizona, Phoenix | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Arizona-Phoenix/Operations-Research-Engineer_JR0286348) |
 | ◐ 2026-11-11 | Apple | Machine Learning Engineer, Intelligent Sensing Technology - Incubation | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694120) |
 | ◐ 2026-11-11 | Apple | CV & ML Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694470) |
 | ◐ 2026-11-11 | Apple | Data Scientist - Business Process Re-Engineering | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694519) |
@@ -3934,10 +3926,7 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-10 | Cohere | Data Partnerships Coordinator (1-year contract) | Toronto | full-time | [link](https://jobs.ashbyhq.com/cohere/6d2d5e2e-46bd-4da5-9e03-573578424976) |
 |  2026-11-10 | Snowflake | AI Associate, Office of the CEO | US-CA-Menlo Park | full-time | [link](https://jobs.ashbyhq.com/snowflake/88348d29-0ec4-475f-a54e-c6b247cbc6a8) |
 |  2026-11-10 | NBCUniversal (DreamWorks) | Lead Data Scientist | New York, NEW YORK | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000160965989) |
-|  2026-11-10 | Snapchat | Lead Business Intelligence Engineer | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Lead-Business-Intelligence-Engineer_R0047201-2) |
-|  2026-11-10 | Snapchat | Machine Learning Engineer, Revenue+, Level 5 | New York, New York | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/New-York-New-York/Machine-Learning-Engineer--Revenue---Level-5_R0047092-1) |
-|  🆕 2026-11-10 | Intel | Substrate Packaging Research and Development Engineer | US, Arizona, Phoenix | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Arizona-Phoenix/Substrate-Packaging-Research-and-Development-Engineer_JR0287474) |
-|  🆕 2026-11-10 | Intel | Operations Research Engineer | US, Arizona, Phoenix | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Arizona-Phoenix/Operations-Research-Engineer_JR0286348) |
+|  2026-11-10 | Activision Blizzard King | Analytics Engineer | Santa Monica | full-time | [link](https://xboxgaming.wd1.myworkdayjobs.com/en-US/External/job/Santa-Monica/Analytics-Engineer_R027920) |
 |  2026-11-10 | Apple | PR Specialist, AI | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694106) |
 |  2026-11-10 | Apple | AI Research Scientist: Multimodal Foundation Models - Architecture, Pre-Training & Distillation | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694380) |
 |  2026-11-10 | Apple | Applied AI Scientist - Multimodal Intelligence | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694378) |
@@ -3945,27 +3934,34 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-10 | Apple | AIML - ML Researcher, AFM | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694347) |
 |  2026-11-10 | Apple | Simulation Synthetic Data Engineer - Special Projects | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200637194) |
 |  2026-11-10 | Apple | Fitness Sensing AI/ML Lead  - Sensing & Connectivity | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693966) |
-|  2026-11-09 | Scale AI | AI Policy Lead | New York, NY; San Francisco, CA; Washington, DC | full-time | [link](https://job-boards.greenhouse.io/scaleai/jobs/4752554005) |
 |  2026-11-09 | Figma | Researcher, AI Evaluations | San Francisco, CA • New York, NY • United States | full-time | [link](https://boards.greenhouse.io/figma/jobs/6242701004?gh_jid=6242701004) |
+|  2026-11-09 | Scale AI | AI Policy Lead | New York, NY; San Francisco, CA; Washington, DC | full-time | [link](https://job-boards.greenhouse.io/scaleai/jobs/4752554005) |
 |  2026-11-09 | Chime | Data Scientist, Dispute Risk | Chicago, IL, USA | full-time | [link](https://boards.greenhouse.io/chime/jobs/8904126002?gh_jid=8904126002) |
-|  2026-11-09 | Activision Blizzard King | Analytics Engineer | Santa Monica | full-time | [link](https://xboxgaming.wd1.myworkdayjobs.com/en-US/External/job/Santa-Monica/Analytics-Engineer_R027920) |
 |  2026-11-09 | Google | Data Scientist | New York, NY, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/122506522885268166) |
+|  🆕 2026-11-09 | Apple | Health Research Data Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694134) |
+|  🆕 2026-11-09 | Apple | Data Center Hardware Engineering — Hardware System Integration Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694124) |
+|  🆕 2026-11-09 | Apple | Inventory Operations Specialist, Data Center Operations | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693742) |
 |  2026-11-08 | Anthropic | Research Engineer, Cybersecurity RL | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5459191008) |
+|  🆕 2026-11-08 | Apple | Data Center Hardware Engineering - Hardware Technician | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693785) |
 |  2026-11-06 | Anthropic | Applied AI Architect, Democratic Partnerships  | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5473198008) |
 |  2026-11-06 | Anthropic | Applied AI Architect, International Policy | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5473195008) |
 |  2026-11-06 | Anthropic | Research Engineer, Cybersecurity RL (Reinforcement Learning) | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5463598008) |
-|  2026-11-06 | Cloudflare | Customer Engineer AI/ Start Up's | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8350836?gh_jid=8350836) |
 |  2026-11-06 | Databricks | Applied AI Architect | United States | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8933544002) |
+|  2026-11-06 | Cloudflare | Customer Engineer AI/ Start Up's | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8350836?gh_jid=8350836) |
 |  2026-11-06 | OpenAI | Applied AI Engineer, Enterprise - EDU | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/087aa4f5-1192-413a-ba34-3ae324cf90e5) |
 |  2026-11-06 | OpenAI | Data Scientist, Preparedness | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/bd1ac97f-20f9-4727-9f92-7064035a416f) |
 |  2026-11-06 | Ubisoft | Data Analyst | Barcelona, CT | full-time | [link](https://jobs.smartrecruiters.com/Ubisoft2/744000160147039) |
+|  🆕 2026-11-06 | Apple | AI Media Strategist | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693611) |
+|  🆕 2026-11-06 | Apple | Aesthetics Science ML Research Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200686682) |
+|  2026-11-05 | Stripe | AMER Data Analyst - Sales Strategy and Operations | Chicago, US Remote, SF, NYC, Seattle | full-time | [link](https://stripe.com/jobs/search?gh_jid=8354566) |
 |  2026-11-05 | Anthropic | Research Scientist, Discovery (Engineering & Applied Sciences) | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5468937008) |
 |  2026-11-05 | PlayStation (SIE) | Data Engineer II, JVM | United States, San Diego, CA | full-time | [link](https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal/jobs/6250753004) |
 |  2026-11-05 | PlayStation (SIE) | Data Engineer II, JVM | United States, San Mateo, CA | full-time | [link](https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal/jobs/6250762004) |
-|  2026-11-05 | Stripe | AMER Data Analyst - Sales Strategy and Operations | Chicago, US Remote, SF, NYC, Seattle | full-time | [link](https://stripe.com/jobs/search?gh_jid=8354566) |
 |  2026-11-05 | OpenAI | Applied AI Delivery Lead - NYC | New York City | full-time | [link](https://jobs.ashbyhq.com/openai/20df76c8-aa7e-40d1-8602-28605ed5431b) |
 |  2026-11-05 | Google | Data Center Electrical Engineer | Bridgeport, CT, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/111142402344788678) |
 |  2026-11-05 | Google | Applied AI Insights Lead, Creator and Consumer Experience Operations, YouTube | New York, NY, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/78947808530309830) |
+|  🆕 2026-11-05 | Apple | Computer Vision & Machine Learning Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693652) |
+|  🆕 2026-11-05 | Apple | Machine Learning Engineer - Health AIML | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200662966) |
 |  2026-11-04 | Scale AI | Quality Operations Lead, Gen AI | San Francisco, CA; New York, NY | full-time | [link](https://job-boards.greenhouse.io/scaleai/jobs/4750929005) |
 |  2026-11-04 | OpenAI | Data Scientist, Analytics Enablement | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/5ceff3dd-3503-4ea0-9ade-eeb36b29f14e) |
 |  2026-11-03 | Anthropic | Applied AI Architect, Beneficial Deployments (Global & Public Health) | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5471361008) |
@@ -3978,20 +3974,20 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-02 | Plaid | Data Scientist - Credit (Retros) | New York City Office | full-time | [link](https://jobs.ashbyhq.com/plaid/9d8a139c-8f99-4049-b7bd-8de693820d7b) |
 |  2026-11-02 | Plaid | Machine Learning Engineer - Income Insights | New York City Office | full-time | [link](https://jobs.ashbyhq.com/plaid/8d8378cf-edf2-4c86-afcc-49df91ece2e4) |
 |  2026-11-01 | Anthropic | Research Engineer / Scientist, Pre-training | Remote-Friendly (Travel-Required) / San Francisco, CA / Seattle, WA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5468947008) |
-|  2026-10-30 | Pinterest | Business Development, AI Product Partnerships | San Francisco, CA, US; Remote, US | full-time | [link](https://www.pinterestcareers.com/jobs/?gh_jid=8319154) |
-|  2026-10-30 | GitLab | Data Scientist, Enterprise Analytics | Remote, Canada; Remote, United States | full-time | [link](https://job-boards.greenhouse.io/gitlab/jobs/8922013002) |
 |  2026-10-30 | Anthropic | Data Center Electrical Engineer – Design | Remote-Friendly, United States | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5468392008) |
 |  2026-10-30 | Anthropic | Data Center Power Generation and Microgrids Engineer | Remote-Friendly, United States | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5468374008) |
 |  2026-10-30 | Anthropic | Data Foundations, GTM Systems | San Francisco, CA / New York City, NY; Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5464234008) |
 |  2026-10-30 | Anthropic | Research Operations Lead, Biology | Boston, MA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5467690008) |
+|  2026-10-30 | Pinterest | Business Development, AI Product Partnerships | San Francisco, CA, US; Remote, US | full-time | [link](https://www.pinterestcareers.com/jobs/?gh_jid=8319154) |
+|  2026-10-30 | GitLab | Data Scientist, Enterprise Analytics | Remote, Canada; Remote, United States | full-time | [link](https://job-boards.greenhouse.io/gitlab/jobs/8922013002) |
 |  2026-10-30 | OpenAI | Applied AI Delivery Lead - Mountain View | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/18b4427e-b168-475e-a1e2-92a86c73f0f0) |
 |  2026-10-29 | Anthropic | Research Scientist, Life Sciences (Large Molecules, Antibody Design)  | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5467092008) |
 |  2026-10-29 | Anthropic | Research Scientist, Life Sciences (Large Molecules, Process Development)  | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5467099008) |
-|  2026-10-28 | Twilio | Machine Learning Engineer 2 | Remote - US | full-time | [link](https://job-boards.greenhouse.io/twilio/jobs/8240487) |
 |  2026-10-28 | Anthropic | Anthropic Research Resident | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5438311008) |
 |  2026-10-28 | Anthropic | Field Engineer, Data Center Design and Engineering | Remote-Friendly, United States | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5466517008) |
-|  2026-10-28 | PlayStation (SIE) | Data Center Strategy & Commercial Management Specialist  | United States, Austin, TX | full-time | [link](https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal/jobs/6237981004) |
+|  2026-10-28 | Twilio | Machine Learning Engineer 2 | Remote - US | full-time | [link](https://job-boards.greenhouse.io/twilio/jobs/8240487) |
 |  2026-10-28 | Cloudflare | Data Center Network Operations Engineer | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8311376?gh_jid=8311376) |
+|  2026-10-28 | PlayStation (SIE) | Data Center Strategy & Commercial Management Specialist  | United States, Austin, TX | full-time | [link](https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal/jobs/6237981004) |
 |  2026-10-28 | Cursor | Data Engineer, Marketing | San Francisco, CA | full-time | [link](https://jobs.ashbyhq.com/cursor/6acdd80a-3a1b-4701-a607-ca10d86c6847) |
 |  2026-10-28 | Notion | Data Engineer, Product | San Francisco, California | full-time | [link](https://jobs.ashbyhq.com/notion/73a71747-28d3-4dda-a718-77336056e687) |
 |  2026-10-28 | OpenAI | Research Engineer / Research Scientist, Human Flourishing | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/0f600ed1-d70a-4648-820f-a1d1da3f7617) |
@@ -4005,35 +4001,32 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-26 | Cloudflare | Model Operations Lead, AI Gateway | In-Office | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8319231?gh_jid=8319231) |
 |  2026-10-25 | Anthropic | Research Scientist, Life Sciences (Computational Chemistry) | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5461863008) |
 |  2026-10-24 | Supabase | Data API Engineer | Remote, Global | full-time | [link](https://jobs.ashbyhq.com/supabase/950e8ffc-79a5-4626-b1dd-115fcbcddad0) |
-|  2026-10-22 | Lyft | Data Scientist, Algorithms - Pricing - Rider Engagement | San Francisco, CA | full-time | [link](https://app.careerpuck.com/job-board/lyft/job/8908005002?gh_jid=8908005002) |
 |  2026-10-22 | Anthropic | Applied AI Architect, Public Sector (Federal Civilan) | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5455627008) |
 |  2026-10-22 | Anthropic | Applied AI Architect, Public Sector (GovTech) | Washington, DC | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5460211008) |
 |  2026-10-22 | Cloudflare | Data Scientist | In-Office | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8275927?gh_jid=8275927) |
+|  2026-10-22 | Lyft | Data Scientist, Algorithms - Pricing - Rider Engagement | San Francisco, CA | full-time | [link](https://app.careerpuck.com/job-board/lyft/job/8908005002?gh_jid=8908005002) |
 |  2026-10-22 | OpenAI | Machine Learning Data Scientist - Consumer Forecasting | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/0ca02747-5c97-432b-95c5-4b9099bce992) |
+|  2026-11-13 | Salesforce | Talent Advisor, AI Labs | California - San Francisco | full-time | [link](https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/job/California---San-Francisco/Talent-Advisor--AI-Labs_JR368057) |
 |  2026-10-21 | Figma | Product Builder, AI Insights | San Francisco, CA • New York, NY • United States | full-time | [link](https://boards.greenhouse.io/figma/jobs/6227402004?gh_jid=6227402004) |
 |  2026-10-21 | OpenAI | Research Scientist / Research Engineer - Web Understanding and Structured Retrieval, Search | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/1441816f-6429-426e-8f6d-8e5930a818f9) |
 |  2026-10-21 | OpenAI | Research Scientist / Research Engineer, Safety + Alignment, Search | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/5ef10e09-2b3f-41de-b77c-829787302101) |
 |  2026-10-21 | Google | Data Center Engineer, Electrical Engineering | Franklin Furnace, OH, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/112635997891502790) |
 |  2026-10-20 | OpenAI | Product Data Scientist - Youth, Families and Learning | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/1f148786-2e00-472a-96b9-0b29015980e1) |
-|  2026-11-12 | Writer | AI research scientist | San Francisco, CA | full-time | [link](https://jobs.ashbyhq.com/WRITER/2934dd8c-cf65-4a2c-a1b4-6693772cc6a1) |
-|  2026-11-12 | Mercor | Tech Lead, AI Data Products | New York City | full-time | [link](https://jobs.ashbyhq.com/mercor/cbff2229-0bf0-4ca4-a794-fb3ff358e8e6) |
-|  2026-11-12 | Salesforce | Talent Advisor, AI Labs | California - San Francisco | full-time | [link](https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/job/California---San-Francisco/Talent-Advisor--AI-Labs_JR368057) |
 |  2026-10-19 | Anthropic | Applied AI Demo Engineer | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5455961008) |
 |  2026-10-19 | OpenAI | Agent Post-Training, Computer Use Research | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/34c2ed3f-840f-4a68-9a00-0a0606660abf) |
 |  2026-10-19 | Google | Product Policy Lead, Generative AI | New York, NY, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/93509185672487622) |
+|  2026-11-12 | Writer | AI research scientist | San Francisco, CA | full-time | [link](https://jobs.ashbyhq.com/WRITER/2934dd8c-cf65-4a2c-a1b4-6693772cc6a1) |
+|  2026-11-12 | Mercor | Tech Lead, AI Data Products | New York City | full-time | [link](https://jobs.ashbyhq.com/mercor/cbff2229-0bf0-4ca4-a794-fb3ff358e8e6) |
 |  2026-10-18 | Reddit | Machine Learning Engineer, Answers Relevance | Remote - United States | full-time | [link](https://job-boards.greenhouse.io/reddit/jobs/8299781) |
 |  2026-11-09 | OpenAI | Novel Abuse Red Teamer | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/9e7c3009-6a91-4927-b242-3d5aa766c722) |
-|  2026-10-16 | Scale AI | AI Safety Residency - SLPreP | Canada; United Kingdom; United States | full-time | [link](https://job-boards.greenhouse.io/scaleai/jobs/4744402005) |
-|  2026-10-16 | Anthropic | Applied AI Architect, Cyber Specialist  | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5445806008) |
+|  🆕 2026-11-09 | Apple | Applied Scientist | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694181) |
+|  🆕 2026-10-16 | Scale AI | AI Safety Residency — Scale Labs Preparedness & Policy (SLPreP) | Canada; United Kingdom; United States | full-time | [link](https://job-boards.greenhouse.io/scaleai/jobs/4744402005) |
 |  2026-10-16 | Stripe | Solutions Engineer, AI Build Team  | US-SF, US-NYC, US-Remote | full-time | [link](https://stripe.com/jobs/search?gh_jid=8198323) |
+|  2026-10-16 | Anthropic | Applied AI Architect, Cyber Specialist  | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5445806008) |
+|  2026-10-16 | Tencent | Associate, Global AI Policy | US-California-Palo Alto | full-time | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-California-Palo-Alto/Associate--Global-AI-Policy_R107663) |
+|  2026-10-16 | Adobe | AI Engineer 4 | San Jose | full-time | [link](https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/San-Jose/AI-Engineer-4_R170716-1) |
 |  2026-11-11 | SpaceX | Data Engineer (Starship) | Starbase, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8938027002?gh_jid=8938027002) |
 |  2026-11-11 | Anduril | Production Master Data Engineer | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5291892007?gh_jid=5291892007) |
-|  2026-10-15 | Anthropic | Applied AI Engineer, Startups (Life Sciences) | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5454650008) |
-|  2026-10-15 | Anthropic | Applied AI Engineer, Startups (Physical AI) | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5454673008) |
-|  2026-10-15 | Cloudflare | Data Center Strategy - Edge | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8282124?gh_jid=8282124) |
-|  2026-10-15 | OpenAI | Applied Data Scientist, Personalization & Machine Learning | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/5dce6671-9aa8-4c49-b263-b175a2a927f8) |
-|  2026-10-15 | Tencent | Associate, Global AI Policy | US-California-Palo Alto | full-time | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-California-Palo-Alto/Associate--Global-AI-Policy_R107663) |
-|  2026-10-15 | Adobe | AI Engineer 4 | San Jose | full-time | [link](https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/San-Jose/AI-Engineer-4_R170716-1) |
 |  2026-11-10 | Pika | Applied AI Engineer, Creative Experiences | Palo Alto HQ | full-time | [link](https://jobs.ashbyhq.com/pika/b075e6fb-df01-4eac-9437-1c1db97ea881) |
 |  2026-11-10 | Cognition | Search & AI Discoverability Lead | New York City | full-time | [link](https://jobs.ashbyhq.com/cognition/447e34db-fc95-4048-9f5a-4d26e8b5b720) |
 |  2026-11-10 | Mercor | Research Engineer, Real Environments  | San Francisco | full-time | [link](https://jobs.ashbyhq.com/mercor/44cf5f07-342d-4f64-9062-3617beb88b31) |
@@ -4046,19 +4039,19 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-05 | xAI | Analytics Engineer (X) | Palo Alto, CA | full-time | [link](https://job-boards.greenhouse.io/xai/jobs/5286889007) |
 |  2026-11-05 | xAI | Data Center Operations Technician - Memphis |  Southaven, MS; Memphis, TN | full-time | [link](https://job-boards.greenhouse.io/xai/jobs/5286282007) |
 |  2026-11-05 | Gameloft | Data Scientist | Barcelona, CT | full-time | [link](https://jobs.smartrecruiters.com/Gameloft/744000159968050) |
+|  2026-11-05 | Sony | Associate Data Analyst | San Diego | full-time | [link](https://sonyglobal.wd1.myworkdayjobs.com/en-US/SonyGlobalCareers/job/San-Diego/Associate-Data-Analyst_JR-119868) |
 |  2026-11-04 | Cerebras | AI Engineer | Sunnyvale, CA | full-time | [link](https://jobs.ashbyhq.com/cerebras/c6f607ce-306c-4deb-8825-4175201a7cd4) |
 |  2026-11-04 | SpaceX | Data Center Administrator | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8931226002?gh_jid=8931226002) |
 |  2026-11-04 | Anduril | Compute Systems Architect - Expeditionary AI/HPC Data Centers | Mountain View, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5285298007?gh_jid=5285298007) |
 |  2026-11-04 | Crusoe | People Research Scientist | San Francisco, CA - US | full-time | [link](https://jobs.ashbyhq.com/Crusoe/2601c3ec-318b-42f8-ab43-793bb7c4d2ba) |
 |  2026-11-04 | Crusoe | People Research Scientist | Denver, CO - US | full-time | [link](https://jobs.ashbyhq.com/Crusoe/5e855163-0286-4345-9aad-5fb697270692) |
-|  2026-11-04 | Sony | Associate Data Analyst | San Diego | full-time | [link](https://sonyglobal.wd1.myworkdayjobs.com/en-US/SonyGlobalCareers/job/San-Diego/Associate-Data-Analyst_JR-119868) |
+|  2026-11-04 | PayPal | Data Scientist | San Jose, California, United States of America | full-time | [link](https://paypal.wd1.myworkdayjobs.com/en-US/jobs/job/San-Jose-California-United-States-of-America/Data-Scientist_R0137881) |
 |  2026-11-03 | Writer | AI transformation lead (Central) | Chicago, IL | full-time | [link](https://jobs.ashbyhq.com/WRITER/bb04804e-6332-4a89-8651-b962ca529fd7) |
 |  2026-11-03 | Writer | AI transformation lead (West) | San Francisco, CA | full-time | [link](https://jobs.ashbyhq.com/WRITER/f27740ea-19f4-4166-8ed3-4d7bb9a870ba) |
 |  2026-11-03 | Writer | AI adoption lead (West) | San Francisco, CA | full-time | [link](https://jobs.ashbyhq.com/WRITER/8d73c429-203a-4375-9aba-5e9576e5fd98) |
 |  2026-11-03 | Writer | AI transformation lead (East) | New York City, NY | full-time | [link](https://jobs.ashbyhq.com/WRITER/993aa857-1c36-4edb-b230-fc1b49f70774) |
 |  2026-11-03 | Lambda Labs | Data Center Operations System Engineer III (Columbus) | Columbus, OH - Data Center | full-time | [link](https://jobs.ashbyhq.com/Lambda/0060eaab-d18d-434f-9e13-88c8cce8ba3a) |
 |  2026-11-03 | SpaceX | Data Center Technician (TS/SCI) | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8926143002?gh_jid=8926143002) |
-|  2026-11-03 | PayPal | Data Scientist | San Jose, California, United States of America | full-time | [link](https://paypal.wd1.myworkdayjobs.com/en-US/jobs/job/San-Jose-California-United-States-of-America/Data-Scientist_R0137881) |
 |  2026-11-02 | SpaceX | Data Center Administrator | Memphis, TN | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8927645002?gh_jid=8927645002) |
 |  2026-11-02 | SpaceX | Data Scientist (Starlink) | Redmond, WA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8920514002?gh_jid=8920514002) |
 |  2026-11-02 | Harvey | Research Engineer / Scientist, Data & Evals | San Francisco | full-time | [link](https://jobs.ashbyhq.com/harvey/7e75a1a6-1884-4772-86c2-2ea4d6a7a08d) |
@@ -4088,15 +4081,13 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-19 | Mercor | Mercor AI Research Fund Grants: Economics of AI | San Francisco | full-time | [link](https://jobs.ashbyhq.com/mercor/c34c84d9-b7f8-436e-ae8d-a9a9120cecac) |
 |  2026-10-16 | Glean | Machine Learning Engineer, Enterprise Brain | Mountain View, CA | full-time | [link](https://job-boards.greenhouse.io/gleanwork/jobs/4744818005) |
 |  2026-10-16 | Anduril | Finance, Master Data Management  | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5267816007?gh_jid=5267816007) |
-|  2026-10-15 | xAI | Data Center Operations Technician, Linux - Memphis |  Southaven, MS; Memphis, TN | full-time | [link](https://job-boards.greenhouse.io/xai/jobs/5266491007) |
-|  2026-10-15 | Suno | AI Security Specialist | NYC | full-time | [link](https://jobs.ashbyhq.com/suno/f93eefd6-5e2d-41a1-8c19-fb74466a8860) |
 
-## Product (175 recent)
+## Product (166 recent)
 
 | Posted | Company | Role | Location | Level · Term | Apply |
 |---|---|---|---|---|---|
+| ⭐ 2026-11-10 | NVIDIA | Product Management Space Compute MBA Intern - Summer 2027 | US, CA, Santa Clara | intern | [link](https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Product-Management-Space-Compute-MBA-Intern---Summer-2027_JR2029628) |
 | ⭐ 2026-11-09 | NBCUniversal (DreamWorks) | Streaming Platforms, Product Management Internships – Summer 2027 | New York, NY | intern | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000160661249) |
-| ⭐ 2026-11-09 | NVIDIA | Product Management Space Compute MBA Intern - Summer 2027 | US, CA, Santa Clara | intern | [link](https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Product-Management-Space-Compute-MBA-Intern---Summer-2027_JR2029628) |
 | ⭐ 2026-11-09 | Warner Bros. | Product Management Co-op | Needham, MA | intern | [link](https://warnerbros.wd5.myworkdayjobs.com/global/job/MA-Needham-117-Kendrick-St/WB-Games-Product-Management-Co-op--Needham--MA---January-May-2027_R000109850) |
 | ⭐ 2026-11-09 | NVIDIA | Product Management Space Compute MBA Intern | Canada | intern | [link](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Product-Management-Space-Compute-MBA-Intern---Summer-2027_JR2029628) |
 | ⭐ 2026-11-07 | TikTok | GEO Content Product Manager Intern | San Jose, CA | intern | [link](https://lifeattiktok.com/search/7696000178264361269) |
@@ -4107,24 +4098,22 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ⭐ 2026-10-29 | Cloudflare | Product Manager Intern | Austin, TX | intern | [link](https://boards.greenhouse.io/cloudflare/jobs/8274790) |
 | ⭐ 2026-10-23 | Amazon | Technical Product Manager Intern | Seattle, WA | intern | [link](https://amazon.jobs/en/jobs/10509639/product-manager-technical-pmt-intern-summer-2027) |
 | ⭐ 2026-10-23 | Amazon | Product Manager Intern - ALA | Seattle, WA | intern | [link](https://amazon.jobs/en/jobs/10491935/2027-amazon-leadership-accelerator-ala-product-manager-internship) |
+| ◐ 2026-10-22 | TikTok | Product-Led-Growth Product Manager Project Intern | San Jose, CA | intern | [link](https://lifeattiktok.com/search/7655421207605889333) |
 | ◐ 2026-11-13 | Entegris | Associate Product Manager Intern | Chaska, MN | intern | [link](https://entegris.wd1.myworkdayjobs.com/entegriscareers/job/Chaska-MN/Associate-Product-Manager-Intern_REQ-15844) |
 | ◐ 2026-11-13 | Koch Industries | Product Management Intern - Aerospace & Defense Solutions | Georgetown, TX | intern | [link](https://koch.avature.net/en_US/careers/JobDetail/197821) |
 | ◐ 2026-11-13 | Trane Technologies | Product Management Engineering Co-op | Pueblo, CO | intern | [link](https://careers.tranetechnologies.com/global/en/job/JR-10435) |
-| ◐ 2026-10-22 | TikTok | Product-Led-Growth Product Manager Project Intern | San Jose, CA | intern | [link](https://lifeattiktok.com/search/7655421207605889333) |
 | ◐ 2026-10-21 | NVIDIA | Product Management MBA Intern - Gaming, Content Creation, And PC AI | Canada | intern | [link](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Product-Management-MBA-Intern--Gaming--Content-Creation--and-PC-AI---Summer-2027_JR2026962) |
+| ◐ 2026-10-19 | NVIDIA | Product Manager MBA Intern - Enterprise AI | Santa Clara, CA | intern | [link](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Product-Manager-MBA-Intern--Enterprise-AI---Summer-2027_JR2026707) |
 | ◐ 2026-11-12 | Entegris | Product Management Intern | Colorado Springs, CO | intern | [link](https://entegris.wd1.myworkdayjobs.com/entegriscareers/job/Rockrimmon-Colorado-Springs-CO/Product-Management-Intern_REQ-15838) |
 | ◐ 2026-11-12 | ServiceNow | Senior Outbound Product Manager Intern | San Diego, CA | intern | [link](https://jobs.smartrecruiters.com/ServiceNow/744000161362293) |
 | ◐ 2026-11-12 | ServiceNow | Senior Inbound Product Manager Intern | San Diego, CA | intern | [link](https://jobs.smartrecruiters.com/ServiceNow/744000161364609) |
-| ◐ 2026-10-19 | NVIDIA | Product Manager MBA Intern - Enterprise AI | Santa Clara, CA | intern | [link](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Product-Manager-MBA-Intern--Enterprise-AI---Summer-2027_JR2026707) |
 | ◐ 2026-10-17 | TikTok | Video Moderation & Platform Responsibility Product Manager Project Intern - Platform Responsibility - Feed Safety | San Jose, CA | intern | [link](https://lifeattiktok.com/search/7697105572165519621) |
+| ◐ 2026-10-16 | Tencent | Tencent Cloud CPaaS Product Management Intern | US-California-Palo Alto | intern | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-California-Palo-Alto/Tencent-Cloud-CPaaS-Product-Management-Intern_R108019) |
+| ◐ 2026-10-16 | Tencent | Tencent Cloud CPaaS Product Management Intern | US-California-Los Angeles | intern | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-California-Los-Angeles/Tencent-Cloud-CPaaS-Product-Management-Intern_R108020) |
 | ◐ 2026-11-11 | Bask Health | Product Management Intern | Remote in USA | intern | [link](https://apply.workable.com/bask-health-1/j/AAE5145A49/apply) |
 | ◐ 2026-11-11 | APEX Analytix | Product Management Intern | Greensboro, NC | intern | [link](https://ats.rippling.com/apexanalytix-careers/jobs/116e13fe-7202-45ba-a119-a81af4fcb4b9) |
 | ◐ 2026-11-11 | Rubrik | Product Manager Intern - Managed Service Provider | Palo Alto, CA | intern | [link](https://www.rubrik.com/company/careers/departments/job.8346967?gh_jid=8346967) |
 | ◐ 2026-11-11 | Gordon Food Service | Digital Product Management Intern | Wyoming, MI | intern | [link](https://gfs.wd5.myworkdayjobs.com/usprivate-gfs/job/Wyoming-Michigan/Digital-Product-Management-Internship_R-57336-2) |
-| ◐ 2026-10-15 | Tencent | Tencent Cloud CPaaS Product Management Intern | US-California-Palo Alto | intern | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-California-Palo-Alto/Tencent-Cloud-CPaaS-Product-Management-Intern_R108019) |
-| ◐ 2026-10-15 | Tencent | Tencent Cloud CPaaS Product Management Intern | US-California-Los Angeles | intern | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-California-Los-Angeles/Tencent-Cloud-CPaaS-Product-Management-Intern_R108020) |
-| ◐ 2026-10-15 | NVIDIA | Product Management MBA Intern | Santa Clara, CA | intern | [link](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Product-Management-MBA-Intern--Laptop---Summer-2027_JR2025905) |
-| ◐ 2026-10-15 | Duolingo | Product Manager MBA Intern | Pittsburgh, PA | intern | [link](https://careers.duolingo.com/jobs/8888045002?gh_jid=8888045002) |
 | ◐ 2026-11-10 | Legrand | Product Management Intern | Syracuse, NY | intern | [link](https://iadugs.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/1837) |
 | ◐ 2026-11-10 | Altice USA | Product Management Customer Management App Intern | Bethpage, NY | intern | [link](https://www.optimumcareers.com/job/Bethpage-Intern-Product-Management-Customer-Management-App-NY-11714/1449512200/?ats=successfactors) |
 | ◐ 2026-11-10 | Altice USA | Product Management Intern - Video CPE | Bethpage, NY | intern | [link](https://www.optimumcareers.com/job/Bethpage-Intern-Product-Management-Video-CPE-NY-11714/1449511700/?ats=successfactors) |
@@ -4161,7 +4150,6 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ◐ 2026-10-26 | Zebra Technologies | Product Management Intern | Lincolnshire, IL | intern | [link](https://zebra.wd501.myworkdayjobs.com/Zebra_careers/job/Lincolnshire-Illinois/XMLNAME-2027-Summer-Internship--US----Product-Management_JR103652) |
 | ◐ 2026-10-26 | ABB | Product Management Intern | New Berlin, WI | intern | [link](https://abb.wd3.myworkdayjobs.com/external_career_page/job/New-Berlin-Wisconsin-United-States-of-America/Product-Management-Intern-Drive-Products---Summer-2027_JR00047254) |
 | ◐ 2026-10-26 | Parallel Systems | Product Management Intern | LA | intern | [link](https://boards.greenhouse.io/parallel/jobs/5275719007) |
-| ◐ 🆕 2026-11-14 | Microsoft | Marketing MBA Internship Opportunities, United States | United States, Washington, Redmond | intern | [link](https://jobs.careers.microsoft.com/global/en/job/200048816) |
 | ◐ 2026-10-23 | Intercontinental Exchange | Product Management Intern | Atlanta, GA | intern | [link](https://ice.jibeapply.com/jobs/14065?icims=1) |
 | ◐ 2026-10-23 | Panasonic Holdings | Product Management Intern | Bridgeton, MO | intern | [link](https://careers.na.panasonic.com/jobs/51897?icims=1&lang=en-us) |
 |  2026-10-22 | Tesla | Internship - Product Management - Megapack Services - Winter/Spring 2027 | Fremont, CA | intern | [link](https://www.tesla.com/careers/search/job/287443) |
@@ -4171,15 +4159,13 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-20 | DriveWealth | AI Consulting Associate Program Product Owner Intern | Chicago, IL | intern | [link](https://boards.greenhouse.io/drivewealth/jobs/8038087003) |
 |  2026-10-19 | Amplify | Product Management Intern | Remote in USA | intern | [link](https://jobs.ashbyhq.com/amplify/c95f690f-28af-42b1-8847-5dcf14c1155e/application?embed=true) |
 |  2026-10-19 | Zurn Elkay Water Solutions | Product Management Intern | Downers Grove, IL | intern | [link](https://elkay.wd1.myworkdayjobs.com/Elkay_External/job/Downers-Grove-IL/Product-Management-Intern---Summer-2027_REQ-020065) |
-|  2026-10-15 | Blue Origin | Terawave Product Management Intern - MBA | Kent, WA | intern | [link](https://blueorigin.wd5.myworkdayjobs.com/blueorigin/job/Kent-WA/Summer-2027-Terawave-Product-Management-Internship---MBA_R74200) |
-|  2026-10-15 | ROCKWOOL Group | Associate Product Management Intern | Chicago, IL | intern | [link](https://rockwoolgroup.wd3.myworkdayjobs.com/ROCKWOOL/job/Chicago-Illinois/Associate-Product-Management-Intern_R0036805-2) |
-|  2026-10-15 | Dover | Product Management Intern - Aftermarket Parts | Conyers, GA | intern | [link](https://dover.wd103.myworkdayjobs.com/Dover/job/Conyers-Georgia-USA/Product-Management-Intern--Aftermarket-Parts_JR101948) |
 |  2026-11-12 | InsCipher | AI Product Intern | Pleasant Grove, UT | intern | [link](https://ats.rippling.com/inscipher-careers/jobs/a79113bc-e11e-47a3-9d4e-8847e5ff4c9c) |
-|  🆕 2026-11-07 | TikTok | Product Operations Intern | LA | intern | [link](https://lifeattiktok.com/search/7704784971953916213) |
+|  2026-11-07 | TikTok | Product Operations Intern | LA | intern | [link](https://lifeattiktok.com/search/7704784971953916213) |
 |  2026-11-09 | Zoetis Services | Data and Analytics Product Operations Intern | Parsippany-Troy Hills, NJ | intern | [link](https://zoetis.wd5.myworkdayjobs.com/zoetis/job/Parsippany/Data---Analytics-Product-Operations-Intern_JR00022022-1) |
 |  2026-11-03 | USAFacts | AI Product Intern | Bellevue, WA | intern | [link](https://job-boards.greenhouse.io/usafacts/jobs/4478239009) |
 |  2026-10-27 | TikTok | Global Product Solutions and Operations Intern - Global Monetization Product and Technology | San Jose, CA | intern | [link](https://lifeattiktok.com/search/7701069870360627509) |
 |  2026-10-27 | TikTok | Brand Search Ads Intern | NYC | intern | [link](https://lifeattiktok.com/search/7701072604556642613) |
+|  🆕 2026-11-14 | SAS | IoT Product Strategy Intern | Cary, NC | intern | [link](https://careers-sas.icims.com/jobs/43309/job?mobile=true&needsRedirect=false) |
 |  2026-11-13 | FieldPulse | Product Intern | Dallas, TX | intern | [link](https://ats.rippling.com/fieldpulse/jobs/c62a858b-8eea-47e8-b481-07b9363d509f) |
 |  2026-11-13 | Addepar | Product Analyst Intern | NYC | intern | [link](https://job-boards.greenhouse.io/addepar1/jobs/8910306002) |
 |  2026-10-27 | SageSure | Data Science Product Analyst Intern | Fairfield, CA | intern | [link](https://www.sagesure.com/careers/current-job-openings/?gh_jid=4719503006) |
@@ -4216,8 +4202,6 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-16 | Publicis Groupe | Product Intern | Irving, TX | intern | [link](https://publicisgroupe.jibeapply.com/jobs/172715?icims=1) |
 |  2026-10-16 | Publicis Groupe | Product Intern | NYC | intern | [link](https://publicisgroupe.jibeapply.com/jobs/172717?icims=1) |
 |  2026-10-16 | Publicis Groupe | Product Intern | Chicago, IL | intern | [link](https://publicisgroupe.jibeapply.com/jobs/172716?icims=1) |
-|  2026-10-15 | Q2 | Product Operations Intern - Product Operations | Austin, TX | intern | [link](https://q2ebanking.wd5.myworkdayjobs.com/Q2/job/Austin-Texas/XMLNAME-2027-Summer-Internship---Product-Operations_REQ-12904-1) |
-|  2026-10-15 | Nissan | Cross Car Line Feature Strategy Intern | Franklin, TN | intern | [link](https://alliance.wd3.myworkdayjobs.com/en-US/nissanjobs/job/Franklin-Tennessee---United-States-of-America/Cross-Car-Line-Feature-Strategy-Intern---Summer-2027---Franklin--TN_R00214296) |
 | ⭐ 2026-11-12 | Perplexity AI | Product Manager - Legal | SF | new-grad | [link](https://jobs.ashbyhq.com/perplexity/f4312e0a-7d39-4af9-9a7d-b0fe041a228a/application?embed=true) |
 | ◐ 2026-10-26 | TikTok | Product Manager New Grad - Platform Trust and Ecosystem | San Jose, CA | new-grad | [link](https://lifeattiktok.com/search/7680761598014015797) |
 | ◐ 2026-11-12 | Copart | Associate Product Manager | Dallas, TX | new-grad | [link](https://copart.wd12.myworkdayjobs.com/copart/job/Dallas-TX---Headquarters/Associate-Product-Manager_JR112795) |
@@ -4232,7 +4216,6 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ◐ 2026-11-03 | Mohawk | Product Management Associate | Calhoun, GA | new-grad | [link](https://careers.mohawkind.com/mohawk/job/Calhoun-Product-Management-Associate-ASPIRE-LDP-Geor-30701/1447354900/?ats=successfactors) |
 | ◐ 2026-11-03 | GAF | Product Management Rotational Associate | Parsippany-Troy Hills, NJ | new-grad | [link](https://gafsgi.wd5.myworkdayjobs.com/GAF_Careers/job/Parsippany-NJ/Product-Management-Rotational-Associate_26458) |
 | ◐ 2026-11-02 | Jerry | Product Manager-in-Training | Palo Alto, CA | new-grad | [link](https://jobs.ashbyhq.com/jerry.ai/7a417376-e6e8-45ff-820e-0a6cfcfe5987/application?embed=true) |
-| ◐ 2026-11-01 | Huntington Ingalls Industries | Product Owner - Digital Plant | Newport News, VA | new-grad | [link](https://careers.huntingtoningalls.com/job/Newport-News-PRODUCT-OWNER-DIGITAL-PLANT-Virg/1446303400/?ats=successfactors) |
 | ◐ 2026-10-29 | Raydar | Growth Product Manager | NYC | new-grad | [link](https://apply.workable.com/raydar/j/899876B20C/apply) |
 | ◐ 2026-10-29 | Raydar | Research Product Manager | SF | new-grad | [link](https://apply.workable.com/raydar/j/0D7E553664/apply) |
 | ◐ 2026-10-28 | T-Mobile | Associate Product Manager - App | Bellevue, WA | new-grad | [link](https://tmobile.wd1.myworkdayjobs.com/External/job/Bellevue-Washington/Associate-Product-Manager---App_REQ373263-1) |
@@ -4244,7 +4227,6 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-20 | Kikoff | Product Manager - Retention & Monetization | SF | new-grad | [link](https://job-boards.greenhouse.io/kikoff/jobs/4458616009) |
 |  2026-10-20 | Clerkie | Associate Product Manager | Remote in USA | new-grad | [link](http://getfiber.ai/careers?gh_jid=5269011007) |
 |  2026-10-19 | Applied Materials | Service Product Manager New Grad - Product Line Management | Austin, TX | new-grad | [link](https://amat.wd1.myworkdayjobs.com/External/job/Santa-ClaraCA/Service-Product-Manager-Product-Line-Management-New-College-Grad--Master-s--Santa-Clara--CA-Austin--TX-_R2629842) |
-|  2026-10-15 | Applied Materials | Product Management 2 New Grad | Santa Clara, CA | new-grad | [link](https://amat.wd1.myworkdayjobs.com/External/job/Santa-ClaraCA/Product-Management-II-New-College-Grad--Master-s--Santa-Clara--CA-_R2629882) |
 |  2026-11-06 | Salesforce | AI Product Associate Analyst - Early Talent | Indianapolis, IN | new-grad | [link](https://salesforce.wd12.myworkdayjobs.com/Futureforce_NewGradRoles/job/Illinois---Chicago/AI-Product-Associate-Analyst--Early-Talent_JR367622-1) |
 |  2026-10-30 | TikTok | Product Solutions and Operations New Grad - Global Monetization Product and Technology | San Jose, CA | new-grad | [link](https://lifeattiktok.com/search/7702517151362976053) |
 |  2026-10-29 | Allegion | Software Systems Engineer | Indianapolis, IN | new-grad | [link](https://allegion.wd5.myworkdayjobs.com/careers/job/Indianapolis-IN---Hague-Rd/Software-Systems-Engineer---Indianapolis--IN_JR38122) |
@@ -4255,8 +4237,8 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-13 | Nintendo | Online Catalog & Commerce Specialist | Redmond, WA | full-time | [link](https://careers.nintendo.com/?gh_jid=4435572009) |
 |  2026-10-26 | OpenAI |  Value Engineer - San Francisco | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/916fa6f6-f441-43c6-9769-27e4bf0b2cc9) |
 |  2026-10-26 | OpenAI | Value Engineer - NYC | New York City | full-time | [link](https://jobs.ashbyhq.com/openai/d134caf2-907c-4c85-be2d-fad477d2b425) |
+|  2026-11-11 | Snapchat | Executive Producer, Snap Studio | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Executive-Producer--Global-Studio-Services_R0047397-1) |
 |  2026-11-10 | Scopely | Producer | US - United States | full-time | [link](https://job-boards.greenhouse.io/scopely/jobs/5476581008?gh_jid=5476581008) |
-|  2026-11-10 | Snapchat | Executive Producer, Snap Studio | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Executive-Producer--Global-Studio-Services_R0047397-1) |
 |  2026-11-04 | Nintendo | Product Experience Specialist (Bilingual Japanese) | Redmond, WA | full-time | [link](https://careers.nintendo.com/?gh_jid=4453756009) |
 |  2026-10-30 | OpenAI | Product Growth | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/65dd3a22-32f8-4559-875a-bbb923664c87) |
 |  2026-10-23 | Ramp | Product Operations / General Builder (All Levels) | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/e0cca3aa-24f7-46ca-9493-9984a7ae2285) |
@@ -4271,7 +4253,7 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-27 | Hasbro (WotC) | 2027 Spring - Project Development Management Co-op (Jan - July 2027) | Boston, Massachusetts, United States | full-time | [link](https://job-boards.greenhouse.io/hasbro/jobs/4468121009) |
 |  2026-10-27 | Sierra | Strategist Lead, Agent Development | San Francisco, CA | full-time | [link](https://jobs.ashbyhq.com/Sierra/69ca85f1-240b-493e-9fe5-e2b03ffa2dd0) |
 
-## Quant (34 recent)
+## Quant (33 recent)
 
 | Posted | Company | Role | Location | Level · Term | Apply |
 |---|---|---|---|---|---|
@@ -4299,26 +4281,25 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-22 | Constellation Energy | Structuring & Portfolio Management Intern | San Diego, CA | intern | [link](https://jobs.constellationenergy.com/jobs/140355?icims=1&lang=en-us) |
 |  2026-10-19 | Graviton | Quantitative Researcher Intern | London, UK | intern | [link](https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8899673002) |
 |  2026-10-16 | Invesco | Quantitative Intern - Portfolio Engineering and Analytics | Boston, MA | intern | [link](https://invesco.wd1.myworkdayjobs.com/IVZearlycareers/job/Boston-Massachusetts/Quantitative-Intern---Portfolio-Engineering-and-Analytics_R-15665-1) |
-|  2026-10-15 | State of Wisconsin Investment Board | Liquidity Optimization Intern | Madison, WI | intern | [link](https://swib.wd12.myworkdayjobs.com/en-US/ext/job/Madison-Wisconsin/Liquidity-Optimization-Intern_R-001346) |
 |  2026-11-13 | Citi | AVP Quantitative Engineer - Exotic Equity Derivatives | NYC | new-grad | [link](https://citi.wd5.myworkdayjobs.com/2/job/New-York-New-York-United-States/AVP-Quantitative-Engineer---Exotic-Equity-Derivatives_261009500) |
 |  2026-11-11 | Maven Securities | Graduate Floor Trader | Chicago, IL | new-grad | [link](https://job-boards.greenhouse.io/emergingtalent/jobs/8352764) |
 |  2026-11-05 | Susquehanna International Group | Quantitative Sports Researcher – Graduate Hire | Bala Cynwyd, PA | new-grad | [link](https://careers-sig.icims.com/jobs/4454/job?mobile=true&needsRedirect=false) |
 |  2026-11-05 | Two Sigma | Systematic Strategies Oversight Analyst | NYC | new-grad | [link](https://twosigma.avature.net/careers/JobDetail/14405) |
+|  🆕 2026-11-05 | Russell Investments | Quantitative Performance Analyst | Seattle, WA | new-grad | [link](https://russell.wd5.myworkdayjobs.com/russellinvestments/job/Seattle/Quantitative-Performance-Analyst_R-04179) |
 |  2026-11-04 | Morgan Stanley | Quantitative Strategist - Associate - Municipal Markets | NYC | new-grad | [link](https://ms.wd5.myworkdayjobs.com/private/job/New-York-New-York-United-States-of-America/Fixed-Income-Division---Associate--Municipal-Markets--New-York-_JR046276) |
 |  2026-11-04 | PIMCO | Analyst/Associate - Client Solutions & Analytics | Newport Beach, CA | new-grad | [link](https://pimco.wd1.myworkdayjobs.com/pimco-careers/job/New-York-NY-USA/Analyst-Associate--Client-Solutions---Analytics_R107095) |
 |  2026-10-23 | JP Morgan Chase | Pricingdirect Evaluator - Securitized Products Group - Analyst | NYC | new-grad | [link](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210803400) |
 |  2026-10-19 | Graviton | Quantitative Researcher | London, UK | new-grad | [link](https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8899670002) |
-|  🆕 2026-10-20 | Microsoft | Electrical Engineer | United States, Washington, Redmond | full-time | [link](https://jobs.careers.microsoft.com/global/en/job/200062196) |
 
-## Hardware (702 recent)
+## Hardware (719 recent)
 
 | Posted | Company | Role | Location | Level · Term | Apply |
 |---|---|---|---|---|---|
-| 🔥⭐ 2026-11-13 | Reliable Robotics | FPGA Design Engineer Intern | Mountain View, CA | intern | [link](https://jobs.ashbyhq.com/reliable-robotics/131987a0-ede9-4291-9cd2-1aaadabd2a54/application?embed=true) |
-| 🔥⭐ 2026-11-13 | Texas Instruments | Analog Design Engineer Intern - Power | Dallas, TX | intern | [link](https://edbz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/25019495) |
-| 🔥⭐ 2026-11-13 | Texas Instruments | Analog Design Engineer Intern - High-speed/RF/mm-wave | Dallas, TX | intern | [link](https://edbz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/25016349) |
-| 🔥⭐ 2026-11-13 | Texas Instruments | Analog Design Engineer Intern - High-Speed/RF | Santa Clara, CA | intern | [link](https://edbz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/25016352) |
-| 🔥⭐ 2026-11-13 | Texas Instruments | Analog Design Engineer Intern - GaN Device | Santa Clara, CA | intern | [link](https://edbz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/25016345) |
+| ⭐ 2026-11-13 | Reliable Robotics | FPGA Design Engineer Intern | Mountain View, CA | intern | [link](https://jobs.ashbyhq.com/reliable-robotics/131987a0-ede9-4291-9cd2-1aaadabd2a54/application?embed=true) |
+| ⭐ 2026-11-13 | Texas Instruments | Analog Design Engineer Intern - Power | Dallas, TX | intern | [link](https://edbz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/25019495) |
+| ⭐ 2026-11-13 | Texas Instruments | Analog Design Engineer Intern - High-speed/RF/mm-wave | Dallas, TX | intern | [link](https://edbz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/25016349) |
+| ⭐ 2026-11-13 | Texas Instruments | Analog Design Engineer Intern - High-Speed/RF | Santa Clara, CA | intern | [link](https://edbz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/25016352) |
+| ⭐ 2026-11-13 | Texas Instruments | Analog Design Engineer Intern - GaN Device | Santa Clara, CA | intern | [link](https://edbz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/25016345) |
 | ⭐ 2026-11-12 | KLA Corporation | Electrical Design Engineer Intern | Ann Arbor, MI | intern | [link](https://kla.wd1.myworkdayjobs.com/UR/job/Ann-Arbor-MI/Electrical-Design-Engineering-Intern_2641709) |
 | ⭐ 2026-11-09 | RTX | Digital Hardware Design Engineer Co-op | Cedar Rapids, IA | intern | [link](https://globalhr.wd5.myworkdayjobs.com/fr-CA/Private_Posting_No_TMP/job/US-IA-CEDAR-RAPIDS-130--5350-C-Ave-NE--BLDG-130/Digital-Hardware-Design-Engineer-Co-op--Winter-Spring--Onsite-_01871518) |
 | ⭐ 2026-10-23 | Amazon | Software Engineer Intern - Embedded Systems | United States | intern | [link](https://amazon.jobs/en/jobs/10567914/software-development-engineer-intern-embedded-systems-summer-2027-usa) |
@@ -4360,9 +4341,10 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ◐ 2026-10-23 | John Deere | Software Engineer Intern - Product Engineering | Waterloo, IA | intern | [link](https://johndeere.eightfold.ai/careers/job/137483990265) |
 | ◐ 2026-10-23 | Skydio | Embedded Software Engineer Intern | San Mateo, CA | intern | [link](https://jobs.ashbyhq.com/skydio/d79ccbaa-2901-4303-bd90-675db7802366/application?embed=true) |
 |  2026-10-21 | The Aerospace Corporation | Embedded Software Engineer Grad Intern | El Segundo, CA | intern | [link](https://aero.wd5.myworkdayjobs.com/external/job/El-Segundo-CA/XMLNAME-2027-Embedded-Software-Engineering-Grad-Intern_R016950) |
-|  2026-11-14 | Tesla | Electrical Engineer Intern - High Speed Hardware Design | Palo Alto, CA | intern | [link](https://www.tesla.com/careers/search/job/289951) |
 |  2026-10-20 | Ciena | Software Engineer Intern - Security | Atlanta, GA | intern | [link](https://ciena.wd5.myworkdayjobs.com/Careers/job/Atlanta/Software-Engineer--Security----Intern--Winter-2027-_R031926) |
 |  2026-10-20 | Humble Robotics | Embedded Software Engineer Intern | SF | intern | [link](https://jobs.lever.co/humble-robotics/8d1fb5d7-9b07-4fac-8c39-e395dca7f2b3/apply) |
+| 🔥 2026-11-14 | Micron | Intern - DRAM Device Engineer | Boise, ID - ID1 | intern | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---ID1/Intern---DRAM-Device-Engineer_JR114109) |
+|  2026-11-14 | Tesla | Electrical Engineer Intern - High Speed Hardware Design | Palo Alto, CA | intern | [link](https://www.tesla.com/careers/search/job/289951) |
 |  2026-10-19 | Keysight Technologies | R&D Software Engineer Intern | Santa Clara, CA | intern | [link](https://jobs.keysight.com/jobs/54805?icims=1) |
 |  2026-10-19 | Inversion Space | Vehicle Software Engineer Intern | Playa Vista, LA | intern | [link](https://job-boards.greenhouse.io/inversionspace/jobs/4745083005) |
 |  2026-10-23 | Amazon | Cloud Hardware Development Engineer Intern | Austin, TX | intern | [link](https://amazon.jobs/en/jobs/10517649/cloud-hardware-development-engineer-intern-annapurna-labs-2027) |
@@ -4371,22 +4353,20 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-23 | Amazon | ASIC Engineer Intern | Sunnyvale, CA | intern | [link](https://amazon.jobs/en/jobs/10576619/asic-engineer-intern-summer-2027) |
 |  2026-10-23 | Amazon | Hardware Development Engineer Intern | Bellevue, WA | intern | [link](https://amazon.jobs/en/jobs/10584121/hardware-development-engineer-intern-winter-2027) |
 |  2026-10-23 | Intel | AI Hardware Engineer Intern | Santa Clara, CA | intern | [link](https://intel.wd1.myworkdayjobs.com/en-us/external/job/US-California-Santa-Clara/AI-Hardware-Engineering-Intern_JR0287533) |
-| 🔥 🆕 2026-11-13 | Micron | Intern - DRAM Device Engineer | Boise, ID - ID1 | intern | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---ID1/Intern---DRAM-Device-Engineer_JR114109) |
-|  2026-11-13 | Reliable Robotics | Hardware Test Engineer Intern | Mountain View, CA | intern | [link](https://jobs.ashbyhq.com/reliable-robotics/0af72d5a-87b7-49a1-b49e-424d28758c9e/application?embed=true) |
-|  2026-11-13 | Samsung | AI Systems Performance Engineer Intern | San Jose, CA | intern | [link](https://job-boards.greenhouse.io/samsungsemiconductor/jobs/8202927003) |
-|  2026-11-13 | Lightmatter | Hardware Test Engineer Intern | Mountain View, CA | intern | [link](https://boards.greenhouse.io/lightmatter/jobs/5473869008) |
 |  2026-10-16 | Inversion Space | Avionics Embedded Software Engineer Intern | Playa Vista, LA | intern | [link](https://job-boards.greenhouse.io/inversionspace/jobs/4744391005) |
 |  2026-10-16 | Keysight Technologies | R&D Software Engineer Intern | Santa Rosa, CA | intern | [link](https://jobs.keysight.com/jobs/54673?icims=1) |
 |  2026-10-16 | AGCO | Embedded Software Engineer Intern | Hesston, KS | intern | [link](https://careers.agcocorp.com/job/Hesston-Embedded-Software-Engineering-Intern-Summer-2027-KS-67062/1440993300/?ats=successfactors) |
-|  2026-10-15 | Garmin | Software Engineer Intern | Brea, CA | intern | [link](https://careers.garmin.com/jobs/20129?icims=1) |
+|  2026-11-13 | Reliable Robotics | Hardware Test Engineer Intern | Mountain View, CA | intern | [link](https://jobs.ashbyhq.com/reliable-robotics/0af72d5a-87b7-49a1-b49e-424d28758c9e/application?embed=true) |
+|  2026-11-13 | Samsung | AI Systems Performance Engineer Intern | San Jose, CA | intern | [link](https://job-boards.greenhouse.io/samsungsemiconductor/jobs/8202927003) |
+|  2026-11-13 | Lightmatter | Hardware Test Engineer Intern | Mountain View, CA | intern | [link](https://boards.greenhouse.io/lightmatter/jobs/5473869008) |
 |  2026-10-21 | Meta | Research Intern - Audio Hardware | Redmond, WA | intern | [link](https://www.metacareers.com/jobs/1445807477756644) |
 |  2026-10-20 | Amazon | Hardware Development Engineer Intern , Winter 2027 | Bellevue, WA | intern | [link](https://www.amazon.jobs/en/jobs/10584121/hardware-development-engineer-intern-winter-2027) |
 |  2026-10-20 | Intel | Design Verification Engineer Intern | Santa Clara, CA | intern | [link](https://intel.wd1.myworkdayjobs.com/en-us/external/job/US-Colorado-Fort-Collins/Design-Verification-Graduate-Intern-2027_JR0287651) |
 |  2026-11-10 | NVIDIA | Performance Engineering Intern - Platform Performance and Power | Canada | intern | [link](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Performance-Engineering-Intern--Platform-Performance-and-Power----Spring-2027_JR2029541) |
+|  2026-10-19 | Meta | Research Scientist Intern - Robotics Hardware | Redmond, WA | intern | [link](https://www.metacareers.com/jobs/2105411693413958) |
 |  2026-11-12 | AMAX | R&D Engineer Intern | Fremont, CA | intern | [link](https://apply.workable.com/amax-1/j/19B39953E1/apply) |
 |  2026-11-12 | Shield AI | Hardware Test Engineer Co-op | Dallas, TX | intern | [link](https://jobs.lever.co/shieldai/3cfe5522-856e-4216-a5f7-c9188bebf12a/apply) |
 |  2026-11-12 | Zoox | Firmware Engineer Intern - FW Core System Services | Seattle, WA | intern | [link](https://jobs.lever.co/zoox/54be0f19-9a45-466d-89bc-bc72dd3f9d68/apply) |
-|  2026-10-19 | Meta | Research Scientist Intern - Robotics Hardware | Redmond, WA | intern | [link](https://www.metacareers.com/jobs/2105411693413958) |
 |  2026-10-16 | Meta | Production Systems Engineer Intern | Menlo Park, CA | intern | [link](https://www.metacareers.com/jobs/4536253699919879) |
 |  2026-11-11 | Astranis | Embedded Software Developer – Network/Payload Intern | SF | intern | [link](https://job-boards.greenhouse.io/astranis/jobs/4704569006) |
 |  2026-11-11 | RTX | Electrical Components Engineer Intern | Tucson, AZ | intern | [link](https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-AZ-TUCSON-M10--3360-E-Hemisphere-Loop--BLDG-M10/Electrical-Components-Engineer-Intern--Summer-2027---Onsite-_01888885) |
@@ -4400,7 +4380,6 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-11 | Sumitomo Electric Wiring Systems | Validation Engineer Co-op Intern | Farmington Hills, MI | intern | [link](https://jobs.jobvite.com/sews/job/oDu5Afww?nl=1&nl=1&fr=false) |
 |  2026-11-11 | Hewlett Packard Enterprise | Large-Scale Integrated Photonics Lab Research Associate Intern | Milpitas, CA | intern | [link](https://hpe.wd5.myworkdayjobs.com/jobsathpe/job/Milpitas-California-United-States-of-America/Large-Scale-Integrated-Photonics-Lab-Research-Associate-Intern_1218729) |
 |  2026-11-11 | RTX | Electrical Engineer Intern - Firmware | Fort Wayne, IN | intern | [link](https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-IN-FT-WAYNE-150A--1010-Production-Rd--BLDG-150A/Electrical--Firmware--Engineering-Intern--Summer-2027--Onsite-_01888316) |
-|  2026-10-15 | Meta | Quality and Reliability Engineer Intern | Sunnyvale, CA | intern | [link](https://www.metacareers.com/jobs/1624891432439039) |
 |  2026-11-10 | GlobalFoundries | Design Verification Engineer Intern | Plano, TX | intern | [link](https://globalfoundries.wd1.myworkdayjobs.com/External/job/USA---Texas---Richardson/Design-Verification-Engineer-Intern--Summer-2027-_JR-2604022) |
 |  2026-11-10 | Renesas Electronics | Applications Engineer Intern | Morrisville, NC | intern | [link](https://jobs.smartrecruiters.com/RenesasElectronics/744000160975701) |
 |  2026-11-10 | General Dynamics Mission Systems | ASIC/FPGA Engineer Intern | Scottsdale, AZ | intern | [link](https://careers-gdms.icims.com/jobs/80153/job?mobile=true&needsRedirect=false) |
@@ -4459,7 +4438,7 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-02 | ASML | Electrical Engineer Co-op Intern | Wilton, CT | intern | [link](https://asml.wd3.myworkdayjobs.com/asmlext1/job/Wilton-CT-USA/CoOp---Electrical-Engineer--Internship-_J-00356208) |
 |  2026-11-02 | ViaSat | Digital and Programmable Logic Engineer Intern | Tempe, AZ | intern | [link](https://careers.viasat.com/jobs/7088?icims=1) |
 |  2026-10-26 | Meta | Battery Engineering Intern | Sunnyvale, CA | intern | [link](https://www.metacareers.com/jobs/938682979075854) |
-|  🆕 2026-10-30 | Shield AI | Electrical Engineer Intern - Hardware Test | Dallas, TX | intern | [link](https://jobs.ashbyhq.com/shield/16b044e7-02e2-4657-9b87-782a76b127b1/application?embed=true) |
+|  🆕 2026-11-14 | Eight Sleep | Firmware Intern | Washington, DC | intern | [link](https://jobs.ashbyhq.com/eightsleep/8da94996-2820-4964-b2b8-0ed151dd4f1b/application?embed=true) |
 |  2026-10-29 | Carrier Global | Lab Assistant Engineer Co-op | Fort Wayne, IN | intern | [link](https://carrier.wd5.myworkdayjobs.com/jobs/job/CAI19-UTEC-Huntington-111-East-Wayne-Street-Fort-Wayne-IN-46802-USA/Lab-Assistant-Engineering---Co-Op_30220677) |
 |  2026-10-29 | Toyota Research Institute | Human Interactive Driving Intern - Platform Research Systems Integration | Los Altos, CA | intern | [link](https://jobs.lever.co/tri/0e7063a7-7761-4843-bc28-bf7870fa44b3/apply) |
 |  2026-10-29 | V2X | Electrical Engineer Intern | Indianapolis, IN | intern | [link](https://careers.gov2x.com/jobs/63854?icims=1) |
@@ -4473,6 +4452,7 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-28 | ASML | Optical Engineer Co-op Intern | Wilton, CT | intern | [link](https://asml.wd3.myworkdayjobs.com/asmlext1/job/Wilton-CT-USA/Co-op---Optical-Engineer--Internship-_J-00354451) |
 |  2026-10-28 | Viavi Solutions | Hardware Engineer Co-op Intern | Germantown, MD | intern | [link](https://viavisolutions.wd1.myworkdayjobs.com/careers/job/Germantown-MD-USA/Intern_260005108-1) |
 |  2026-10-23 | Amazon | Embedded Firmware Co-op | North Reading, MA | intern | [link](https://amazon.jobs/en/jobs/10573570/embedded-firmware-co-op-amazon-robotics-spring-2027) |
+|  2026-10-22 | DoorDash | Mechanical Engineering, Intern - Labs (Summer 2027) | Oakland, CA | intern | [link](https://job-boards.greenhouse.io/doordashusa/jobs/8313401) |
 |  2026-11-13 | Lightmatter | Quality & Reliability Intern | Mountain View, CA | intern | [link](https://boards.greenhouse.io/lightmatter/jobs/5474812008) |
 |  2026-11-13 | Rambus | Mixed-Signal Design Intern | San Jose, CA | intern | [link](https://careers-rambus.icims.com/jobs/23125/job?mobile=true&needsRedirect=false) |
 |  2026-11-13 | Micron Technology | Enterprise SSD Architecture Intern | Boise, ID | intern | [link](https://micron.wd1.myworkdayjobs.com/External/job/Boise-ID---Main-Site/Intern---Enterprise-SSD-Architecture_JR114108) |
@@ -4483,7 +4463,6 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-13 | Texas Instruments | Test Engineering Intern | United States | intern | [link](https://edbz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/25019536) |
 |  2026-11-13 | Texas Instruments | Product Engineering Failure Analysis Intern | Dallas, TX | intern | [link](https://edbz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/25016015) |
 |  2026-11-13 | Lightmatter | Physical Design Intern | Boston, MA | intern | [link](https://boards.greenhouse.io/lightmatter/jobs/5481668008) |
-|  2026-10-22 | DoorDash | Mechanical Engineering, Intern - Labs (Summer 2027) | Oakland, CA | intern | [link](https://job-boards.greenhouse.io/doordashusa/jobs/8313401) |
 |  2026-10-27 | HP IQ | Electrical Engineer Intern - Hardware | SF | intern | [link](https://job-boards.greenhouse.io/hpiq/jobs/6116396004) |
 |  2026-10-27 | Mayo Clinic | Graduate Engineer Intern - Electronics | Rochester, MN | intern | [link](https://fa-euwp-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/394029) |
 |  2026-10-27 | Keysight Technologies | Quantum R&D Engineer Intern | Cambridge, MA | intern | [link](https://jobs.keysight.com/jobs/55183?icims=1) |
@@ -4549,7 +4528,6 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-09 | Carnegie Mellon University | Advanced Computing Lab Intern | Pittsburgh, PA | intern | [link](https://cmu.wd115.myworkdayjobs.com/SEI/job/Pittsburgh-PA/Advanced-Computing-Lab-Intern---Summer-2027-_2025336-1) |
 |  2026-10-16 | Rockwell Automation | Firmware Engineer Intern | Milwaukee, WI | intern | [link](https://rockwellautomation.wd1.myworkdayjobs.com/External_Rockwell_Automation/job/Milwaukee-Wisconsin-United-States/Intern--Firmware-Engineering_R26-7922-1) |
 |  2026-10-16 | SiTime | Validation Engineer Intern | Tempe, AZ | intern | [link](https://job-boards.greenhouse.io/sitimecorporation/jobs/4452953009) |
-|  2026-10-15 | onsemi | Device Characterization Engineer Intern | Hopewell Junction, NY | intern | [link](https://hctz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/2506970) |
 |  2026-11-07 | Moss | Electrical Engineering Intern | SF | intern | [link](https://jobs.ashbyhq.com/mossrobotics/791e2c8b-be0d-42c6-85f1-4a7c101dc484/application?embed=true) |
 |  2026-11-06 | Rhoda AI | Optical Sensing Intern - Robot Perception | Mountain View, CA | intern | [link](https://jobs.ashbyhq.com/rhoda-ai/df2aa2a4-ca56-4fa6-b106-89a7fc6a9bb4/application?embed=true) |
 |  2026-11-06 | Spectrum Control | Engineering Co-op | Philadelphia, PA | intern | [link](https://spectrumcontrol.wd1.myworkdayjobs.com/spectrumcontrol/job/Philadelphia-PA/Engineering-Co-Op_JR101547) |
@@ -4631,13 +4609,11 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-16 | GlobalFoundries | Foundation IP Design Verification Intern | Santa Clara, CA | intern | [link](https://globalfoundries.wd1.myworkdayjobs.com/External/job/USA---California---Santa-Clara/Foundation-IP-Design-Verification-Intern--Summer-2027-_JR-2604356) |
 |  2026-10-16 | ADT | Hardware Engineering & Connected Devices Intern | Boca Raton, FL | intern | [link](https://fa-erqb-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/3022475) |
 |  2026-10-16 | Westinghouse Electric Company | System Test Engineering Intern | Warrendale, PA | intern | [link](https://careers.westinghousenuclear.com/job/Warrendale-Summer-Intern-System-Test-Engineering-OR/1433673100/?ats=successfactors) |
-|  2026-10-15 | Laminar | Sensor Characterization Co-op | Somerville, MA | intern | [link](https://jobs.lever.co/runlaminar/7e573316-8d6b-455a-834b-b278bfadded3/apply) |
 | ⭐ 2026-11-09 | Intel | SoC Logic Design Engineer | Santa Clara, CA | new-grad | [link](https://intel.wd1.myworkdayjobs.com/en-us/external/job/US-California-Santa-Clara/SoC-Logic-Design-Engineer_JR0288396-1) |
-| 🔥⭐ 2026-11-13 | Elevate Semiconductor | Analog Design Engineer | San Diego, CA | new-grad | [link](https://apply.workable.com/elevate-semiconductor/j/1A8827A74E/apply) |
 | ⭐ 2026-10-22 | Qualcomm | ASIC Design Engineer - Multiple Teams | San Diego, CA | new-grad | [link](https://qualcomm.eightfold.ai/careers/job/446721432288) |
 | ⭐ 2026-10-22 | NVIDIA | Silicon Co-Design Engineer New Grad | United States | new-grad | [link](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Silicon-Co-Design-Engineer---New-College-Grad-2026_JR2027335) |
+| ⭐ 2026-11-13 | Elevate Semiconductor | Analog Design Engineer | San Diego, CA | new-grad | [link](https://apply.workable.com/elevate-semiconductor/j/1A8827A74E/apply) |
 | ⭐ 2026-11-11 | RTX | Associate Software Engineer 1 - CDS / Engine System Software | East Hartford, CT | new-grad | [link](https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-CT-EAST-HARTFORD-ETC--400-Main-St--BLDG-ETC/Associate-Software-Engineer-I---CDS---Engine-System-Software--Onsite-_01884197) |
-| ⭐ 2026-10-15 | Intel | Microarchitecture and Design Engineer - AI SoC | Santa Clara, CA | new-grad | [link](https://intel.wd1.myworkdayjobs.com/en-us/external/job/US-California-Santa-Clara/Microarchitecture-and-Design-Engineer---AI-SoC_JR0287996) |
 | ⭐ 2026-11-10 | Motorola Solutions | FPGA Design Engineer | LA | new-grad | [link](https://motorolasolutions.wd5.myworkdayjobs.com/Careers/job/Los-Angeles-CA/FPGA-Design-Engineer_R70443-1) |
 | ⭐ 2026-11-09 | Space Kinetic | Electrical Design Engineer | Albuquerque, NM | new-grad | [link](https://job-boards.greenhouse.io/spacekinetic/jobs/5476158008) |
 | ⭐ 2026-11-02 | Apple | Cellular Power Optimization Software Engineer - Wireless Technologies & Ecosystems | San Diego, CA | new-grad | [link](https://jobs.apple.com/en-us/details/200692907) |
@@ -4649,10 +4625,10 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ◐ 2026-10-27 | SambaNova Systems | Physical Design Engineer New Grad | San Jose, CA | new-grad | [link](https://sambanova.ai/sambanova-available-positions/?gh_jid=6236609004) |
 | ◐ 2026-10-21 | Apple | Software Engineer - SoC Level Validation Engineer | Austin, TX | new-grad | [link](https://jobs.apple.com/en-us/details/200690790) |
 | ◐ 2026-10-26 | RTX | Electrical Design Engineer - Traffic Surveillance | Melbourne, FL | new-grad | [link](https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-FL-MELBOURNE-313--1344-S-Babcock-St--BLDG-313/Electrical-Design-Engineer---Traffic-Surveillance--ONSITE-_01867317) |
+| ◐ 2026-10-19 | Intel | CAD/EDA Tools Software Engineer | Hillsboro, OR | new-grad | [link](https://intel.wd1.myworkdayjobs.com/en-us/external/job/US-Oregon-Hillsboro/CAD-EDA-Tools-Software-Engineer_JR0288234-1) |
 | ◐ 2026-11-12 | SpaceX | Aerospace Software Engineer New Grad - Aerospace Software | Hawthorne, CA | new-grad | [link](https://boards.greenhouse.io/spacex/jobs/8939697002) |
 | ◐ 2026-11-12 | Boeing | Entry Flight Software Engineer - Vehicle Management Systems | El Segundo, CA | new-grad | [link](https://boeing.wd1.myworkdayjobs.com/external_subsidiary/job/USA---El-Segundo-CA/Entry-Flight-Software-Engineer---Vehicle-Management-Systems_JR2026527015) |
-| ◐ 2026-10-19 | Intel | CAD/EDA Tools Software Engineer | Hillsboro, OR | new-grad | [link](https://intel.wd1.myworkdayjobs.com/en-us/external/job/US-Oregon-Hillsboro/CAD-EDA-Tools-Software-Engineer_JR0288234-1) |
-| 🔥◐ 2026-11-13 | Microsoft | Electrical Engineer - Schie | Redmond, WA | new-grad | [link](https://apply.careers.microsoft.com/careers/job/1970393557023168) |
+| ◐ 2026-11-13 | Microsoft | Electrical Engineer - Schie | Redmond, WA | new-grad | [link](https://apply.careers.microsoft.com/careers/job/1970393557023168) |
 | ◐ 2026-11-11 | RTX | Software Engineer 1 | Fort Wayne, IN | new-grad | [link](https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-IN-FT-WAYNE-150A--1010-Production-Rd--BLDG-150A/Software-Engineer-I--CMA-P1-1-_01888038) |
 | ◐ 2026-11-11 | Boeing | Embedded Software Engineer | Long Beach, CA | new-grad | [link](https://boeing.wd1.myworkdayjobs.com/external_subsidiary/job/USA---Long-Beach-CA/Embedded-Software-Engineer_JR2026529493) |
 | ◐ 2026-11-11 | Boeing | Entry-Level Missions Systems Software Engineer - Embedded | Berkeley, MO | new-grad | [link](https://boeing.wd1.myworkdayjobs.com/external_subsidiary/job/USA---Berkeley-MO/Entry-Level-Missions-Systems-Software-Engineer---Embedded_JR2026529463) |
@@ -4662,10 +4638,10 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ◐ 2026-11-10 | SAIC | Software Engineer | Huntsville, AL | new-grad | [link](https://eihu.fa.us8.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/2618968) |
 | ◐ 2026-11-10 | RTX | Software Engineer 1 | St. Petersburg, FL | new-grad | [link](https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-FL-ST-PETERSBURG-381BD--7401-22nd-Ave-N--BLDG-D/Software-Engineer-I--Onsite-_01887812) |
 | ◐ 2026-11-10 | JBT Marel | Software Engineer | Redmond, WA | new-grad | [link](https://jbtm.wd108.myworkdayjobs.com/jbt_marel_career_site/job/US---Redmond-WA/Software-Engineer_25394) |
-| ◐ 2026-11-11 | Amazon | Post-Silicon Systems Validation Engineer 1 | Austin, TX | new-grad | [link](https://amazon.jobs/en/jobs/10602663/post-silicon-systems-validation-engineer-i-annapurna-labs) |
 | ◐ 2026-11-09 | Rocket Lab Corporation | Software Engineer 1 - Robotics | Pasadena, CA | new-grad | [link](https://job-boards.greenhouse.io/rocketlab/jobs/8057246003) |
 | ◐ 2026-11-09 | RTX | Embedded Software Engineer 1 | Goleta, CA | new-grad | [link](https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-CA-GOLETA-H01--6380-Hollister-Ave--BLDG-H01/Embedded-Software-Engineer-I--Onsite-_01888147) |
 | ◐ 2026-11-09 | RTX | Embedded Security Software Engineer 1 | Goleta, CA | new-grad | [link](https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-CA-GOLETA-H01--6380-Hollister-Ave--BLDG-H01/Embedded-Security-Software-Engineer-I--Onsite-_01888154) |
+| ◐ 2026-11-11 | Amazon | Post-Silicon Systems Validation Engineer 1 | Austin, TX | new-grad | [link](https://amazon.jobs/en/jobs/10602663/post-silicon-systems-validation-engineer-i-annapurna-labs) |
 | ◐ 2026-11-10 | Intel | Junior CPU Verification Engineer | Austin, TX | new-grad | [link](https://intel.wd1.myworkdayjobs.com/en-us/external/job/US-Texas-Austin/Junior-CPU-Verification-Engineer_JR0289132) |
 | ◐ 2026-11-09 | Intel | SoC Design Verification Engineer | Santa Clara, CA | new-grad | [link](https://intel.wd1.myworkdayjobs.com/en-us/external/job/US-California-Santa-Clara/SoC-Design-Verification-Engineer_JR0288406) |
 | ◐ 2026-11-06 | ViaSat | Associate Embedded Software Engineer | Carlsbad, CA | new-grad | [link](https://careers.viasat.com/jobs/7118?icims=1&lang=en-us) |
@@ -4680,6 +4656,7 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ◐ 2026-11-06 | Amazon | Software Development Engineer - SoC Hardware Abstraction Layer | Cupertino, CA | new-grad | [link](https://amazon.jobs/en/jobs/10598432/software-development-engineer-soc-hal) |
 | ◐ 2026-11-03 | RTX | Software Engineer 1 - Embedded | Goleta, CA | new-grad | [link](https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-CA-GOLETA-H01--6380-Hollister-Ave--BLDG-H01/Software-Engineer-l---Embedded--Onsite_01886765) |
 | ◐ 2026-11-03 | Northrop Grumman | Associate Flight Software Engineer | Manhattan Beach, CA | new-grad | [link](https://ngc.wd1.myworkdayjobs.com/Northrop_Grumman_External_Site/job/United-States-California-Manhattan-Beach/XMLNAME-2027-Associate-Flight-Software-Engineer---Manhattan-Beach-CA_R10259061) |
+| ◐ 🆕 2026-11-03 | Vantive | Embedded Software Engineer | Plymouth, MN | new-grad | [link](https://vantive.wd108.myworkdayjobs.com/Vantive/job/Plymouth-Minnesota/Embedded-Software-Engineer--hybrid-_JR-198138-1) |
 | ◐ 2026-11-05 | Amazon | Software Development Engineer – Early Career - Embedded Systems | Redmond, WA | new-grad | [link](https://amazon.jobs/en/jobs/10598021/software-development-engineer-embedded-systems-amazon-leo-early-career-2027-us) |
 | ◐ 2026-11-02 | AbbVie | Associate Device Software Engineer | Irvine, CA | new-grad | [link](https://jobs.smartrecruiters.com/AbbVie/3743990016568546) |
 | ◐ 2026-11-03 | Apple | Silicon Photonics Process Integration Engineer | Cupertino, CA | new-grad | [link](https://jobs.apple.com/en-us/details/200693031) |
@@ -4698,13 +4675,12 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-23 | Amazon | ASIC Engineer Early Career | Redmond, WA | new-grad | [link](https://amazon.jobs/en/jobs/10576621/asic-engineer-early-career-2027-project-leo) |
 |  2026-10-23 | Amazon | ASIC Formal Verification Engineer 1 | Austin, TX | new-grad | [link](https://amazon.jobs/en/jobs/10586351/asic-formal-verification-engineer-i-annapurna-labs) |
 |  2026-10-23 | Amazon | Software Development Engineer - Embedded Systems | Seattle, WA | new-grad | [link](https://amazon.jobs/en/jobs/3183020/software-development-engineer-embedded-systems-2026-us) |
+|  2026-10-22 | Amazon | Robotics Embedded Software Development Engineer | North Reading, MA | new-grad | [link](https://amazon.jobs/en/jobs/10522935/robotics-embedded-software-development-engineer) |
+|  2026-10-22 | Intel | IP Design Verification Engineer | Santa Clara, CA | new-grad | [link](https://intel.wd1.myworkdayjobs.com/en-us/external/job/US-California-Santa-Clara/IP-Design-Verification-Engineer_JR0288395) |
 |  2026-11-13 | CesiumAstro | Electrical Engineer 2 - Satcom | Westminster, CO | new-grad | [link](https://jobs.lever.co/CesiumAstro/de2920ac-e9a6-4a48-9fb1-ae0b24c7cffe/apply) |
 |  2026-11-13 | Rambus | Signal Integrity Engineer | San Jose, CA | new-grad | [link](https://careers-rambus.icims.com/jobs/23136/job?mobile=true&needsRedirect=false) |
 |  2026-11-13 | Analog Devices | Design Evaluation Engineer - Power Management ICs | United States | new-grad | [link](https://analogdevices.wd1.myworkdayjobs.com/External/job/US-CA-San-Jose-Rio-Robles/Design-Evaluation-Engineer---Summer-2027_R266633) |
 |  2026-11-13 | Microchip Technology | Semiconductor Modeling Test & Data Analysis Engineer 1 - Semiconductor Modeling Test & Analysis | Chandler, AZ | new-grad | [link](https://wd5.myworkdaysite.com/recruiting/microchiphr/External/job/AZ---Chandler/Engineer-I--Device--Semiconductor-Modeling-Test---Analysis-_R4763-26) |
-|  2026-10-22 | Amazon | Robotics Embedded Software Development Engineer | North Reading, MA | new-grad | [link](https://amazon.jobs/en/jobs/10522935/robotics-embedded-software-development-engineer) |
-|  2026-10-22 | Intel | IP Design Verification Engineer | Santa Clara, CA | new-grad | [link](https://intel.wd1.myworkdayjobs.com/en-us/external/job/US-California-Santa-Clara/IP-Design-Verification-Engineer_JR0288395) |
-|  2026-10-15 | Oshkosh | Software Engineer | Oshkosh, WI | new-grad | [link](https://oshkoshcorporation.wd5.myworkdayjobs.com/Oshkosh/job/Oshkosh-Wisconsin-United-States/Engineer---Software_R50694) |
 |  2026-10-20 | Microsoft | Quantum Systems Stability & Sensitivity Engineer | Redmond, WA | new-grad | [link](https://apply.careers.microsoft.com/careers/job/1970393557041573) |
 |  2026-11-12 | L3Harris Technologies | Associate Electrical Engineer | Ashburn, VA | new-grad | [link](https://jobs.l3harris.com/job/Ashburn-Associate,-Electrical-Engineer-VA-20147/1450077500/?ats=successfactors) |
 |  2026-11-12 | RTX | Components Engineer 1 | El Segundo, CA | new-grad | [link](https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-CA-EL-SEGUNDO-E01--2000-E-El-Segundo-Blvd--BLDG-E01/Components-Engineer-I--Onsite-_01889186) |
@@ -4713,9 +4689,9 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-12 | ASM International | Engineer 2 - Electrical Engineering | Phoenix, AZ | new-grad | [link](https://www.asm.com/open-vacancies/?gh_jid=5021046101) |
 |  2026-11-11 | AST SpaceMobile | RF Test Engineer 1 | Midland, TX | new-grad | [link](https://ast-science.com/company/careers/?gh_jid=4753267005) |
 |  2026-11-11 | GlobalFoundries | AI Processor Hardware/Software Integration Engineer New Grad | Richardson, TX | new-grad | [link](https://globalfoundries.wd1.myworkdayjobs.com/External/job/USA---Texas---Richardson/AI-Processor-Hardware-Software-Integration-Engineer--2027-New-College-Graduate-_JR-2604093) |
+|  2026-11-11 | Shield AI | Engineer 2 New Grad - Software - Autonomy Capabilities | United States | new-grad | [link](https://jobs.lever.co/shieldai/d2050861-fd48-4ac6-9606-e1e502a817af/apply) |
 |  2026-11-11 | Shield AI | Engineer 2 New Grad - Software - Autonomous Pilot Integration | Washington, DC | new-grad | [link](https://jobs.lever.co/shieldai/d2beda9f-f7f1-46ca-86d6-5bbbd52fbe50/apply) |
 |  2026-11-11 | Western Digital | Applications Engineer | Irvine, CA | new-grad | [link](https://jobs.smartrecruiters.com/WesternDigital/744000161156269) |
-|  2026-10-15 | Qualcomm | DSP Micro-Architect RTL Engineer - ASIC Engineering | Austin, TX | new-grad | [link](https://qualcomm.eightfold.ai/careers/job/446721591743) |
 |  2026-11-10 | L3Harris Technologies | Senior Associate, Integration / Test Engineer | Colorado Springs, CO | new-grad | [link](https://jobs.l3harris.com/job/Colorado-Springs-Sr_-Associate,-Integration-Test-Engineer-CO-80916/1423113700/?ats=successfactors) |
 |  2026-11-10 | Eagle Wireless | Test Automation Engineer | St Louis Park, MN | new-grad | [link](https://ats.rippling.com/eagle-wireless/jobs/ada461d3-5a62-4dcf-bf3f-c561bc264c38) |
 |  2026-11-10 | Longshot Space Technologies | Electrical Engineer 1 | Alameda, CA | new-grad | [link](https://ats.rippling.com/longshot/jobs/4392677a-3d26-4049-845d-bb7fb04246fd) |
@@ -4735,6 +4711,7 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-09 | Microchip Technology | Engineer 1 - Device/Test - Parametric/Etest | Colorado Springs, CO | new-grad | [link](https://wd5.myworkdaysite.com/recruiting/microchiphr/External/job/CO---Colorado-Springs---East-Cheyenne-Mountain-Blvd/Engineer-I--Device-Test--Parametric-Etest-_R4730-26) |
 |  2026-11-07 | Subsense | Electrical Engineer | Mountain View, CA | new-grad | [link](https://jobs.lever.co/subsense/5d721ba5-6aa5-4a62-8ae2-c938c836d7a1/apply) |
 |  2026-11-07 | Northwood Space | Electrical Engineer New Grad | LA | new-grad | [link](https://jobs.ashbyhq.com/NorthwoodSpace/ca73b132-2264-4649-ad83-73ea3e69fe5d/application?embed=true) |
+|  2026-11-03 | NVIDIA | GPU System and Scheduling Architect | Canada | new-grad | [link](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/GPU-System-and-Scheduling-Architect---New-College-Grad-2026_JR2028824) |
 |  2026-11-06 | SpaceX | New Graduate Engineer, Mechanical | McGregor, TX | new-grad | [link](https://boards.greenhouse.io/spacex/jobs/8933711002?gh_jid=8933711002) |
 |  2026-11-06 | Sopra Steria | FPGA Verification Engineer – Entry Level | East Hartford, CT | new-grad | [link](https://jobs.smartrecruiters.com/SopraSteria1/744000160220699) |
 |  2026-11-06 | Sopra Steria | FPGA Verification Engineer | Platteville, WI | new-grad | [link](https://jobs.smartrecruiters.com/SopraSteria1/744000160224361) |
@@ -4744,7 +4721,6 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-06 | Zeiss | Associate Test Engineer 1 | Dublin, CA | new-grad | [link](https://zeissgroup.wd3.myworkdayjobs.com/External/job/Dublin-CA/Associate-Test-Engineer-Lvl-1-CW_JR_1054482) |
 |  2026-11-06 | Lawrence Livermore National Laboratory (LLNL) | Embedded Systems Engineer - Super Intelligence Integration | Livermore, CA | new-grad | [link](https://jobs.smartrecruiters.com/LLNL/3743990016713546) |
 |  2026-11-06 | Shield AI | Electrical Engineer New Grad | San Diego, CA | new-grad | [link](https://jobs.ashbyhq.com/shield/b2660259-a5db-4530-95e6-20e48a41068d/application?embed=true) |
-|  2026-11-03 | NVIDIA | GPU System and Scheduling Architect | Canada | new-grad | [link](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/GPU-System-and-Scheduling-Architect---New-College-Grad-2026_JR2028824) |
 |  2026-11-05 | SpaceX | New Graduate Engineer, Mechanical - Satellites (Starlink) | Redmond, WA | new-grad | [link](https://boards.greenhouse.io/spacex/jobs/8931509002?gh_jid=8931509002) |
 |  2026-11-05 | Paccar | Associate System Integration and Test Engineer | Mount Vernon, WA | new-grad | [link](https://jobs.paccar.com/job/Mount-Vernon-Associate-System-Integration-and-Test-Engineer-WA-98273-9671/1454445133/?ats=successfactors) |
 |  2026-11-05 | CIS Secure | TEMPEST Engineer Trainee | Ashburn, VA | new-grad | [link](https://careers-cis.icims.com/jobs/2385/job?mobile=true&needsRedirect=false) |
@@ -4851,9 +4827,6 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-16 | GlobalFoundries | Silicon Photonics Test Development Engineer | Essex Junction, VT | new-grad | [link](https://globalfoundries.wd1.myworkdayjobs.com/External/job/USA---Vermont---Essex-Junction/Silicon-Photonics-Test-Development-Engineer--2027-New-College-Graduate-_JR-2604257) |
 |  2026-10-16 | Koch Industries | Signal Integrity Systems Engineer | Lisle, IL | new-grad | [link](https://koch.avature.net/en_US/careers/JobDetail/196274) |
 |  2026-10-16 | SiTime | Senior Test Engineer | California | new-grad | [link](https://job-boards.greenhouse.io/sitimecorporation/jobs/4452324009) |
-|  2026-10-15 | Emerson Electric | EMC Engineer | Austin, TX | new-grad | [link](https://hdjq.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26011781) |
-|  2026-10-15 | Graphcore | Graduate Engineer - System Validation | Austin, TX | new-grad | [link](https://job-boards.greenhouse.io/graphcore-early-careers/jobs/8893623002) |
-|  2026-10-15 | Shield AI | Electrical Engineer 1 New Grad | Seattle, WA | new-grad | [link](https://jobs.ashbyhq.com/f7d8749a-72d6-407c-bf98-292ea630c73a/10eb4e64-8f2d-473f-a53a-1dc53e90f1d6/application?embed=true) |
 |  2026-11-06 | Base Power | Failure Analysis Technician | Austin, TX | new-grad | [link](https://jobs.ashbyhq.com/base-power/2fab77c3-d853-41db-8a77-e97761562030/application?embed=true) |
 |  2026-11-06 | ALTEN Technology | Robotics Lab Technician | Wilmington, MA | new-grad | [link](https://job-boards.greenhouse.io/altentechnologyusa/jobs/5286844007) |
 |  2026-11-05 | General Dynamics Mission Systems | PCB Designer | Pittsfield, MA | new-grad | [link](https://careers-gdms.icims.com/jobs/74426/job?mobile=true&needsRedirect=false) |
@@ -4892,24 +4865,37 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-16 | Onto Innovation | Senior Applications Scientist | Milpitas, CA | new-grad | [link](https://onto.wd1.myworkdayjobs.com/onto_careers/job/Hillsboro-OR/Senior-Applications-Scientist_R-6626) |
 | ⭐ 2026-11-14 | Apple | CPU Microarchitect / RTL Design Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694855) |
 | ⭐ 2026-11-14 | Apple | RF Design Engineer – Next-Gen Wireless | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694361) |
+| ⭐ 2026-11-13 | Intel | Silicon Packaging Design Engineer | US, Arizona, Phoenix | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Arizona-Phoenix/Silicon-Packaging-Design-Engineer_JR0288949) |
 | ⭐ 2026-11-13 | Google | RTL Design Engineer, Google | Sunnyvale, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/84385896404525766) |
 | ⭐ 2026-11-13 | Apple | Graphics Design Verification Flow Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694972) |
 | ⭐ 2026-11-12 | OpenAI | Power Generation Design Engineer, Electrical & Mechanical | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/5a4a52a0-2eee-4cde-8b9f-320ebff572a4) |
-| ⭐ 🆕 2026-11-12 | Intel | Silicon Packaging Design Engineer | US, Arizona, Phoenix | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Arizona-Phoenix/Silicon-Packaging-Design-Engineer_JR0288949) |
+| ⭐ 2026-11-12 | Intel | CPU Circuit Design Engineer | US, Texas, Austin | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Texas-Austin/CPU-Circuit-Design-Engineer_JR0289183) |
 | ⭐ 2026-11-12 | Google | CPU RTL Design Engineer | Mountain View, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/93191764772299462) |
-| ⭐ 🆕 2026-11-11 | Intel | CPU Circuit Design Engineer | US, Texas, Austin | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Texas-Austin/CPU-Circuit-Design-Engineer_JR0289183) |
+| ⭐ 2026-11-11 | Snapchat | PCB Design Engineer | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/PCB-Design-Engineer_R0045397-1) |
 | ⭐ 2026-11-11 | Apple | Product Design Engineer - Battery Cell | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200692936) |
 | ⭐ 2026-11-10 | OpenAI | RTL Design Engineer, Networking / NoC | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/ead83ff6-7a58-43dd-b7da-b85e7ddd679c) |
-| ⭐ 2026-11-10 | Snapchat | PCB Design Engineer | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/PCB-Design-Engineer_R0045397-1) |
 | ⭐ 2026-11-10 | Google | ASIC Design Engineer, Cloud TPU | Sunnyvale, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/86497860672987846) |
 | ⭐ 2026-11-10 | Apple | Graphics (GPU) RTL Design Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694232) |
 | ⭐ 2026-11-10 | Apple | GPU RTL Design Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694107) |
 | ⭐ 2026-11-10 | Apple | Product Design Engineer – Retail, Event, & Channel Product Design | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694307) |
+| ⭐ 🆕 2026-11-10 | Apple | Analog IC Design Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693714) |
+| ⭐ 🆕 2026-11-09 | Apple | Hardware Product Design Engineer - Mac | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694114) |
+| ⭐ 🆕 2026-11-07 | Apple | iPhone Touch Sensing Electrical Design Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200660278) |
+| ⭐ 🆕 2026-11-06 | Apple | Baseband Hardware Design Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693872) |
+| ⭐ 🆕 2026-11-06 | Apple | Accessories Product Design Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693876) |
+| ⭐ 🆕 2026-11-06 | Apple | AC-DC Power Design Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693760) |
 | ⭐ 2026-11-05 | Google | Package Design Engineer | Sunnyvale, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/128061232006472390) |
+| ⭐ 🆕 2026-11-05 | Apple | System Product Design Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691404) |
+| ⭐ 🆕 2026-11-05 | Apple | Physical Design Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691408) |
+| ⭐ 🆕 2026-11-05 | Apple | Physical Design Engineer, Machine Learning | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200607680) |
+| ⭐ 🆕 2026-11-05 | Apple | Product Design Engineer - Apple Vision Pro | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693502) |
+| ⭐ 🆕 2026-11-05 | Apple | Product Design Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691299) |
+| ⭐ 🆕 2026-11-05 | Apple | Digital Circuit Design Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691563) |
+| ⭐ 🆕 2026-11-05 | Apple | Cellular ASIC Design Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200620219) |
 | ⭐ 2026-11-11 | Apple | SoC Embedded Software Engineer for Factory | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694418) |
-| ⭐ 🆕 2026-11-12 | Micron | Design Engineer - DRAM Technology and Products | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Design-Engineer---DRAM-Technology-and-Products_JR105948) |
-| ⭐ 🆕 2026-11-12 | Micron | HBM SoC Physical Design Engineer | Folsom, CA | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Folsom-CA/HBM-SoC-Physical-Design-Engineer_JR107315) |
-| ⭐ 🆕 2026-11-11 | Micron | NAND Custom Test Circuit Design Engineer | San Jose, CA | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/San-Jose-CA/NAND-Custom-Test-Circuit-Design-Engineer_JR117243) |
+| ⭐ 2026-11-13 | Micron | Design Engineer - DRAM Technology and Products | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Design-Engineer---DRAM-Technology-and-Products_JR105948) |
+| ⭐ 2026-11-13 | Micron | HBM SoC Physical Design Engineer | Folsom, CA | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Folsom-CA/HBM-SoC-Physical-Design-Engineer_JR107315) |
+| ⭐ 2026-11-12 | Micron | NAND Custom Test Circuit Design Engineer | San Jose, CA | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/San-Jose-CA/NAND-Custom-Test-Circuit-Design-Engineer_JR117243) |
 | ◐ 2026-11-05 | SpaceX | Structures Design Engineer (Starship) | Starbase, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8931443002?gh_jid=8931443002) |
 | ◐ 2026-11-04 | SpaceX | Electronic Design Engineer, Satellites (Starlink) | Redmond, WA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8928709002?gh_jid=8928709002) |
 | ◐ 2026-11-03 | SpaceX | Harness Design Engineer, Satellites (Starlink) | Redmond, WA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8924817002?gh_jid=8924817002) |
@@ -4920,45 +4906,58 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ◐ 2026-11-14 | Apple | Systems Software Developer, CAD Infrastructure | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694942) |
 | ◐ 2026-11-13 | Apple | CAD Automation and ML Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694967) |
 | ◐ 2026-11-12 | OpenAI | Thermal Engineer | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/343d9176-1bd5-48cf-a771-dd4ecf726b77) |
+| ◐ 2026-11-12 | Intel | Silicon Photonics TD Process/Product Integration Engineer | US, New Mexico, Albuquerque | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-New-Mexico-Albuquerque/Silicon-Photonics-TD-Process-Product-Integration-Engineer_JR0285227) |
+| ◐ 2026-11-12 | Intel | Design Verification Engineer | US, California, Santa Clara | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-California-Santa-Clara/Design-Verification-Engineer_JR0288929-1) |
 | ◐ 2026-11-12 | Apple | Pre-Silicon Digital Verification Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200692449) |
 | ◐ 2026-11-12 | Apple | CAD Engineer - Signoff Infrastructure | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200684809) |
-| ◐ 🆕 2026-11-11 | Intel | Silicon Photonics TD Process/Product Integration Engineer | US, New Mexico, Albuquerque | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-New-Mexico-Albuquerque/Silicon-Photonics-TD-Process-Product-Integration-Engineer_JR0285227) |
-| ◐ 🆕 2026-11-11 | Intel | Design Verification Engineer | US, California, Santa Clara | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-California-Santa-Clara/Design-Verification-Engineer_JR0288929-1) |
+| ◐ 2026-11-11 | Snapchat | Integrated Circuit Design Verification Engineer | Vancouver, WA - 805 Broadway | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Vancouver-WA---805-Broadway/Integrated-Circuit-Design-Verification-Engineer_R0046055) |
 | ◐ 2026-11-11 | Google | Packaging Mechanical Engineer, Quantum AI | Goleta, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/115741073220739782) |
 | ◐ 2026-11-11 | Apple | iPhone Hardware Systems Engineer - SOC & System Performance | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694588) |
 | ◐ 2026-11-11 | Apple | Formal Verification Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694557) |
-| ◐ 2026-10-15 | SpaceX | Silicon Photonics Design Engineer (RFIC Engineering) | Palo Alto, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8893579002?gh_jid=8893579002) |
 |  2026-11-10 | Replit | SOC Engineer | Foster City, CA | full-time | [link](https://jobs.ashbyhq.com/replit/563751ea-cb0b-412e-ae07-c5638b87f81a) |
-|  2026-11-10 | Snapchat | Integrated Circuit Design Verification Engineer | Vancouver, WA - 805 Broadway | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Vancouver-WA---805-Broadway/Integrated-Circuit-Design-Verification-Engineer_R0046055) |
+|  2026-11-10 | Intel | NM Silicon Photonics Lithography Process Development Engineer | US, New Mexico, Albuquerque | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-New-Mexico-Albuquerque/NM-Silicon-Photonics-Lithography-Process-Development-Engineer_JR0289004) |
+|  2026-11-10 | Intel | Mechanical, Electrical, and Structural Tool Install Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Mechanical--Electrical--and-Structural-Tool-Install-Engineer_JR0288548) |
 |  2026-11-10 | Google | Low Power Verification Engineer, Physical Design | Sunnyvale, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/129495224949842630) |
-|  🆕 2026-11-09 | Intel | NM Silicon Photonics Lithography Process Development Engineer | US, New Mexico, Albuquerque | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-New-Mexico-Albuquerque/NM-Silicon-Photonics-Lithography-Process-Development-Engineer_JR0289004) |
-|  🆕 2026-11-09 | Intel | Mechanical, Electrical, and Structural Tool Install Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Mechanical--Electrical--and-Structural-Tool-Install-Engineer_JR0288548) |
+|  🆕 2026-11-10 | Apple | SoC Silicon Reliability Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200657320) |
+|  🆕 2026-11-10 | Apple | SoC Test Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200657329) |
+|  🆕 2026-11-10 | Apple | SoC Correlation Product Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200657317) |
+|  🆕 2026-11-09 | Apple | SoC Characterization Product Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200657313) |
+|  🆕 2026-11-09 | Apple | Design Verification Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200657224) |
+|  2026-11-07 | Intel | Semiconductor Research Engineer | US, Arizona, Phoenix | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Arizona-Phoenix/Semiconductor-Research-Engineer_JR0288965) |
 |  2026-11-06 | DoorDash | Mechanical Engineer - Structural Simulation | Oakland, CA | full-time | [link](https://job-boards.greenhouse.io/doordashusa/jobs/8359091) |
-|  🆕 2026-11-06 | Intel | Semiconductor Research Engineer | US, Arizona, Phoenix | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Arizona-Phoenix/Semiconductor-Research-Engineer_JR0288965) |
+|  🆕 2026-11-06 | Apple | AirPods Analog Systems Engineer, Power | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693797) |
+|  🆕 2026-11-06 | Apple | Foundry Interface Engineer – Display / Mixed Signal Technologies | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693857) |
 |  2026-11-03 | SpaceX | Embedded Software Engineer, Satellite Antenna (Starlink) | Redmond, WA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8925605002?gh_jid=8925605002) |
 |  2026-11-05 | Google | ASIC Design Verification Engineer, Google TPU | Sunnyvale, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/97537045462688454) |
+|  🆕 2026-11-05 | Apple | RFIC Test Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693492) |
+|  🆕 2026-11-05 | Apple | Silicon Prototype Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691630) |
+|  🆕 2026-11-05 | Apple | Silicon Validation Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691670) |
+|  🆕 2026-11-05 | Apple | RF/Analog/Mixed Signal Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691301) |
+|  🆕 2026-11-05 | Apple | VLSI CAD Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691586) |
+|  🆕 2026-11-05 | Apple | CPU Design Verification Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691583) |
 |  2026-11-04 | Google | ASIC Design Verification Engineer, Machine Learning | Sunnyvale, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/138578756510851782) |
 |  2026-11-04 | Google | Design Verification Infrastructure Engineer | Austin, TX, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/105390410343293638) |
 |  2026-11-03 | OpenAI | ML Silicon Performance Lead | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/67c8b37d-f856-4edf-adb7-1a5b0d07f6b3) |
 |  2026-11-03 | Google | Low Power Design Methodology and Optimization Engineer | Austin, TX, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/83074189770007238) |
-|  🆕 2026-11-13 | Intel | Semiconductor Packaging Process Engineering Lead | US, Arizona, Phoenix | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Arizona-Phoenix/Semiconductor-Packaging-Process-Engineering-Lead_JR0289081-1) |
+|  2026-11-14 | Intel | Semiconductor Packaging Process Engineering Lead | US, Arizona, Phoenix | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Arizona-Phoenix/Semiconductor-Packaging-Process-Engineering-Lead_JR0289081-1) |
 |  2026-10-27 | Google | ASIC Power Engineer, ML Accelerators | Sunnyvale, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/120765048938209990) |
+|  2026-11-14 | Micron | DRAM Process Integration Engineer | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/DRAM-Process-Integration-Engineer_JR89665) |
 |  2026-11-11 | Google | CPU RTL Design Lead | Austin, TX, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/87309832830231238) |
 |  2026-11-13 | Anduril | Materials Engineer, Design Allowables & Materials Data | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5292823007?gh_jid=5292823007) |
-|  🆕 2026-11-13 | Micron | DRAM Process Integration Engineer | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/DRAM-Process-Integration-Engineer_JR89665) |
+|  2026-11-13 | Micron | Engineer-Design Methodology-Analog Testbench Development | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Engineer-Design-Methodology-Analog-Testbench-Development_JR117681) |
+|  2026-11-13 | Micron | New College Grad - Semiconductor Process Engineer | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/New-College-Grad---Semiconductor-Process-Engineer_JR116163) |
 |  2026-10-21 | Anthropic | Research Engineer, Chip Design RL | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5459098008) |
 |  2026-10-21 | DoorDash | Mechanical Engineer - Engineer, Chassis & Vehicle Dynamic | Oakland, CA | full-time | [link](https://job-boards.greenhouse.io/doordashusa/jobs/8306636) |
 |  2026-11-10 | Google | Physical Design Lead, TPU, ASIC | Sunnyvale, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/116298886393275078) |
-|  2026-11-12 | Anduril |  Mechanical Engineer, Intelligence Systems | Santa Ana, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5293515007?gh_jid=5293515007) |
-|  🆕 2026-11-12 | Micron | Engineer-Design Methodology-Analog Testbench Development | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Engineer-Design-Methodology-Analog-Testbench-Development_JR117681) |
-|  🆕 2026-11-12 | Micron | New College Grad - Semiconductor Process Engineer | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/New-College-Grad---Semiconductor-Process-Engineer_JR116163) |
 |  2026-10-19 | OpenAI | Mechanical Engineer, PCBA Test Infrastructure, Robotics | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/88e65467-7e19-4164-a1de-1d49d3f2dd52) |
+|  2026-11-12 | Anduril |  Mechanical Engineer, Intelligence Systems | Santa Ana, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5293515007?gh_jid=5293515007) |
 |  2026-11-10 | SpaceX | Materials Engineer, Metals (Starship) | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8935623002?gh_jid=8935623002) |
 |  2026-11-10 | Anduril | Battery Mechanical Engineer | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5290138007?gh_jid=5290138007) |
 |  2026-11-10 | Anduril | Mechanical Engineer, Anduril Expeditionary Systems | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5291726007?gh_jid=5291726007) |
 |  2026-11-10 | Anduril | Mechanical Engineer, Support Systems | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5280991007?gh_jid=5280991007) |
 |  2026-11-09 | SpaceX | Mechanical Engineer, Launch Mount/Tower (Starship) | Starbase, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8935935002?gh_jid=8935935002) |
 |  2026-11-08 | SpaceX | Mechanical Engineer, Hardware Reliability (Starlink) | Bastrop, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8932795002?gh_jid=8932795002) |
+|  🆕 2026-11-05 | Apple | Design Verification | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691489) |
 |  2026-11-04 | OpenAI | Silicon Design Lead | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/5692fcec-bd48-40b4-9cd3-2c881faf176c) |
 |  2026-11-04 | Google | Physical Design Technical Lead, ASIC, TPU | Sunnyvale, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/74914971678319302) |
 |  2026-11-04 | Google | Physical Design Lead, ASIC | Sunnyvale, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/125329229079290566) |
@@ -4982,16 +4981,15 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-29 | Normal Computing | Hardware Engineer, Analog Design | Mountain View | full-time | [link](https://jobs.ashbyhq.com/NormalComputing/468572cb-828e-4350-84b0-f49eae30c0ec) |
 |  2026-10-28 | SpaceX | Automation & Controls Engineer, PCB (Starlink/Starmind) | Bastrop, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8904356002?gh_jid=8904356002) |
 |  2026-10-28 | Anduril | Manufacturing Test Engineer, Electrical/Mechanical | Quonset, Rhode Island, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5174848007?gh_jid=5174848007) |
+|  2026-10-22 | Warner Bros Games | Commercial HVAC Technician | GA Atlanta 1050 Techwood Drive NW | full-time | [link](https://warnerbros.wd5.myworkdayjobs.com/en-US/global/job/GA-Atlanta-1050-Techwood-Drive-NW/Commercial-HVAC-Technician_R000106858) |
 |  2026-11-13 | SpaceX | Lead PCB Designer (Starshield) | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8940602002?gh_jid=8940602002) |
 |  2026-11-13 | SpaceX | Sourcing Specialist, Mechanical (Starship) | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8943227002?gh_jid=8943227002) |
+|  2026-11-13 | Micron | DEG, Design Verification | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/MTS--DEG-Design-Verification_JR102253) |
+|  2026-11-13 | Micron | Layout Designer | Richardson, TX | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Richardson-TX/Senior-Layout-Designer_JR114402) |
 |  2026-10-27 | SpaceX | Mechanical Engineer, Starship Tooling | Cape Canaveral, FL | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8920387002?gh_jid=8920387002) |
-|  2026-10-21 | Warner Bros Games | Commercial HVAC Technician | GA Atlanta 1050 Techwood Drive NW | full-time | [link](https://warnerbros.wd5.myworkdayjobs.com/en-US/global/job/GA-Atlanta-1050-Techwood-Drive-NW/Commercial-HVAC-Technician_R000106858) |
-|  🆕 2026-10-20 | Microsoft | Mechanical Designer - Cryomechanical Systems | United States, Washington, Redmond | full-time | [link](https://jobs.careers.microsoft.com/global/en/job/200062192) |
-|  2026-11-12 | SpaceX | Development Test Technician, Mechanical | McGregor, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8922618002?gh_jid=8922618002) |
-|  🆕 2026-11-12 | Micron | DEG, Design Verification | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/MTS--DEG-Design-Verification_JR102253) |
-|  🆕 2026-11-12 | Micron | Layout Designer | Richardson, TX | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Richardson-TX/Senior-Layout-Designer_JR114402) |
 |  2026-10-19 | Google | Physical Design Lead, Static Timing Analysis | Sunnyvale, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/127423759270191814) |
-|  🆕 2026-10-15 | Intel | Silicon Packaging Design Architect | US, Arizona, Phoenix | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Arizona-Phoenix/Silicon-Packaging-Design-Architect_JR0287863) |
+|  2026-11-12 | SpaceX | Development Test Technician, Mechanical | McGregor, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8922618002?gh_jid=8922618002) |
+|  2026-10-16 | Intel | Silicon Packaging Design Architect | US, Arizona, Phoenix | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Arizona-Phoenix/Silicon-Packaging-Design-Architect_JR0287863) |
 |  2026-10-22 | Normal Computing | Hardware Engineer, DFT | Mountain View | full-time | [link](https://jobs.ashbyhq.com/NormalComputing/41b9c0fe-5483-4dba-a1a8-517d88c9a9ae) |
 |  2026-10-22 | Normal Computing | Mechanical Engineer, Hardware Systems | Mountain View | full-time | [link](https://jobs.ashbyhq.com/NormalComputing/5274c553-920a-4c10-8b86-24c98f52ca1d) |
 |  2026-10-21 | SpaceX | Thermal Engineer (Starshield) | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8907194002?gh_jid=8907194002) |
@@ -5017,23 +5015,23 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-19 | Anduril | CAD Systems Architect | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5262845007?gh_jid=5262845007) |
 |  2026-10-17 | Normal Computing | ASIC Architect | Mountain View | full-time | [link](https://jobs.ashbyhq.com/NormalComputing/308ca921-30d3-43bc-8217-8570c62480b2) |
 
-## Other (1194 recent)
+## Other (1207 recent)
 
 | Posted | Company | Role | Location | Level · Term | Apply |
 |---|---|---|---|---|---|
-| 🔥◐ 🆕 2026-11-13 | Intel | Power Integrity Intern Worker Engineer | Costa Rica, San Jose | intern | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/Costa-Rica-San-Jose/Power-Integrity-Intern-Worker-Engineer_JR0289171) |
-| ◐ 2026-11-13 | Robinhood | Corporate Finance Intern (Summer 2027) | New York, NY | intern | [link](https://boards.greenhouse.io/robinhood/jobs/8357464?t=gh_src=&gh_jid=8357464) |
-| ◐ 2026-11-13 | Ramp | Risk Strategy Intern | New York, NY (HQ) | intern | [link](https://jobs.ashbyhq.com/ramp/b87e898f-8d8b-447d-b3d5-9073ccf7d109) |
-| ◐ 🆕 2026-11-13 | Intel | PnP Lab Eng. Intern Worker | Costa Rica, San Jose | intern | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/Costa-Rica-San-Jose/PnP-Lab-Eng-Intern-Worker_JR0289168) |
-| ◐ 🆕 2026-11-13 | Microsoft | Electrical Engineering INTERN (PhD) | United States, Washington, Redmond | intern | [link](https://jobs.careers.microsoft.com/global/en/job/200053353) |
+| 🔥◐ 2026-11-14 | Intel | Power Integrity Intern Worker Engineer | Costa Rica, San Jose | intern | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/Costa-Rica-San-Jose/Power-Integrity-Intern-Worker-Engineer_JR0289171) |
+| ◐ 2026-11-14 | Intel | PnP Lab Eng. Intern Worker | Costa Rica, San Jose | intern | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/Costa-Rica-San-Jose/PnP-Lab-Eng-Intern-Worker_JR0289168) |
+|  2026-11-13 | Robinhood | Corporate Finance Intern (Summer 2027) | New York, NY | intern | [link](https://boards.greenhouse.io/robinhood/jobs/8357464?t=gh_src=&gh_jid=8357464) |
+|  2026-11-13 | Ramp | Risk Strategy Intern | New York, NY (HQ) | intern | [link](https://jobs.ashbyhq.com/ramp/b87e898f-8d8b-447d-b3d5-9073ccf7d109) |
 |  2026-10-27 | Amazon | Network Development Engineer Intern, 2027 Summer | Seattle, WA | intern | [link](https://www.amazon.jobs/en/jobs/10590368/network-development-engineer-intern-2027-summer) |
 |  2026-11-12 | Pinterest | Sales Analytics Intern 2027 (USA) | San Francisco, CA, US; Remote, US | intern | [link](https://www.pinterestcareers.com/jobs/?gh_jid=8214783) |
-|  🆕 2026-11-12 | Microsoft | Applied Science: Internship Opportunities - Redmond | United States, Washington, Redmond | intern | [link](https://jobs.careers.microsoft.com/global/en/job/200053346) |
 |  2026-11-11 | Riot Games | Insights Analyst Intern, League of Legends - Summer 2027 | Los Angeles, USA | intern | [link](https://www.riotgames.com/en/work-with-us/job/8356372?gh_jid=8356372) |
 |  2026-11-11 | NBCUniversal (DreamWorks) | NBC News Production & Digital Editorial Internships – Summer 2027 | New York, NY | intern | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000161096298) |
 |  2026-11-11 | NBCUniversal (DreamWorks) | NBC News Bureau Internships – Summer 2027 | Universal City, CA | intern | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000161096279) |
 |  2026-11-11 | NBCUniversal (DreamWorks) | NBC 4 New York Production & Editorial Internships – Summer 2027 | New York, NY | intern | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000161093625) |
-|  🆕 2026-11-11 | Microsoft | Applied Science: PhD Internship Opportunities - Multiple Locations | United States, Washington, Redmond | intern | [link](https://jobs.careers.microsoft.com/global/en/job/200053343) |
+|  2026-11-11 | Adobe | 2027 MBA Intern - Integrated GTM Strategy | San Francisco | intern | [link](https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/San-Francisco/XMLNAME-2027-MBA-Intern---Integrated-GTM-Strategy_R173508) |
+|  2026-11-11 | Intel | Module Engineering PhD Intern | US, Oregon, Hillsboro | intern | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Module-Engineering-PhD-Intern_JR0287022-1) |
+|  2026-11-11 | NVIDIA | Corporate Development MBA Intern - Summer 2027 | US, CA, Santa Clara | intern | [link](https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Corporate-Development-MBA-Intern---Summer-2027_JR2029532-1) |
 |  2026-11-10 | Coinbase | Strategic Sourcing Intern | Hybrid - New York, NY | intern | [link](https://www.coinbase.com/careers/positions/8376084?gh_jid=8376084) |
 |  2026-11-10 | NBCUniversal (DreamWorks) | NBC News Production & Digital Editorial Internships – Summer 2027 | Universal City, CA | intern | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000160966800) |
 |  2026-11-10 | NBCUniversal (DreamWorks) | NBC and Telemundo Local South Florida News Internships – Summer 2027 | Miramar, FL | intern | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000160960769) |
@@ -5043,10 +5041,8 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-10 | NBCUniversal (DreamWorks) | Creative Marketing Intern, NBCU Local Chicago – Summer 2027 | Chicago, ILLINOIS | intern | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000160921300) |
 |  2026-11-10 | NBCUniversal (DreamWorks) | NBC Chicago News Intern – Summer 2027 | Chicago, ILLINOIS | intern | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000160923895) |
 |  2026-11-10 | NBCUniversal (DreamWorks) | NBC Chicago Community Relations and Special Events Intern – Summer 2027 | Chicago, ILLINOIS | intern | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000160922227) |
-|  🆕 2026-11-10 | Intel | Module Engineering PhD Intern | US, Oregon, Hillsboro | intern | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Module-Engineering-PhD-Intern_JR0287022-1) |
-|  2026-11-10 | Adobe | 2027 MBA Intern - Integrated GTM Strategy | San Francisco | intern | [link](https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/San-Francisco/XMLNAME-2027-MBA-Intern---Integrated-GTM-Strategy_R173508) |
-|  2026-11-10 | NVIDIA | Corporate Development MBA Intern - Summer 2027 | US, CA, Santa Clara | intern | [link](https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Corporate-Development-MBA-Intern---Summer-2027_JR2029532-1) |
 |  2026-10-19 | Nintendo | Intern - Manufacturing Engineer | Redmond, WA | intern | [link](https://careers.nintendo.com/?gh_jid=4418251009) |
+|  🆕 2026-11-09 | Netflix | Strategy MBA Internship, Summer 2027 | Los Angeles, California, United States of America | intern | [link](https://explore.jobs.netflix.net/careers/job/790319427586) |
 |  2026-11-09 | NBCUniversal (DreamWorks) | NBC Local Production, Editorial, and Marketing News Internships – Summer 2027 | Miami, FL | intern | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000160696244) |
 |  2026-11-09 | NBCUniversal (DreamWorks) | NBC Local Production, Editorial, and Marketing News Internships – Summer 2027 | Universal City, CA | intern | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000160697599) |
 |  2026-11-09 | NBCUniversal (DreamWorks) | NBC Local Production, Editorial, and Marketing News Internships – Summer 2027 | New York, NY | intern | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000160697300) |
@@ -5107,10 +5103,10 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-09 | NBCUniversal (DreamWorks) | Universal Television Entertainment Production, Development & Programming Internships – Summer 2027 | New York, NY | intern | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000160639069) |
 |  2026-11-09 | NBCUniversal (DreamWorks) | Universal Television Entertainment Production, Development & Programming Internships – Summer 2027 | Universal City, CA | intern | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000160639019) |
 |  2026-11-10 | Anduril | 2027 Optical Payload Engineer Intern | Costa Mesa, California, United States | intern | [link](https://boards.greenhouse.io/andurilindustries/jobs/5291546007?gh_jid=5291546007) |
-|  2026-11-06 | Pinterest | Strategy & Operations Intern 2027 (USA) | San Francisco, CA, US; Remote, CA, US | intern | [link](https://www.pinterestcareers.com/jobs/?gh_jid=8334878) |
+|  2026-11-07 | Tencent | Global Talent Sourcing Intern | US-California-Palo Alto | intern | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-California-Palo-Alto/Global-Talent-Sourcing-Intern_R108100) |
 |  2026-11-06 | Epic Games | Player Marketing Intern (MBA) | Cary,North Carolina,United States | intern | [link](https://epicgames.com/careers/jobs/6218206004?gh_jid=6218206004) |
 |  2026-11-06 | Stripe | Controllership Intern | Seattle, WA | intern | [link](https://stripe.com/jobs/search?gh_jid=8357739) |
-|  2026-11-06 | Tencent | Global Talent Sourcing Intern | US-California-Palo Alto | intern | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-California-Palo-Alto/Global-Talent-Sourcing-Intern_R108100) |
+|  2026-11-06 | Pinterest | Strategy & Operations Intern 2027 (USA) | San Francisco, CA, US; Remote, CA, US | intern | [link](https://www.pinterestcareers.com/jobs/?gh_jid=8334878) |
 |  2026-11-05 | NBCUniversal (DreamWorks) | NBC Sports Bay Area & California - Sales & Digital Media Intern - Summer 2027 | San Francisco, CALIFORNIA | intern | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000159988539) |
 |  2026-11-05 | NBCUniversal (DreamWorks) | NBC Sports Bay Area & California - Marketing Intern - Summer 2027 | San Francisco, CALIFORNIA | intern | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000159950181) |
 |  2026-11-05 | NBCUniversal (DreamWorks) | NBC Sports Bay Area & California - Finance Intern - Summer 2027 | San Francisco, CALIFORNIA | intern | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000159950049) |
@@ -5119,30 +5115,29 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-31 | Palantir | Finance Operator Intern | New York, NY | intern | [link](https://jobs.lever.co/palantir/bd7766c4-6aea-4b37-8d47-a8864bb9bd69) |
 |  2026-10-30 | DocuSign | Growth Strategy & Operations Intern | US-Seattle-3rd | intern | [link](https://careers.docusign.com/careers-home/jobs/30593) |
 |  2026-10-30 | Amazon | Graduate Pharmacist Intern, Amazon Pharmacy | Plainfield, IN | intern | [link](https://www.amazon.jobs/en/jobs/10593569/graduate-pharmacist-intern-amazon-pharmacy) |
-|  🆕 2026-10-29 | Microsoft | Applied Science: PhD Internship Opportunities, Turing | United States, Washington, Redmond | intern | [link](https://jobs.careers.microsoft.com/global/en/job/200064449) |
 |  2026-10-27 | Amazon | PhD Economics Intern – Finance, Macroeconomics, and Forecasting - Summer 2027 | Seattle, WA | intern | [link](https://www.amazon.jobs/en/jobs/10590600/phd-economics-intern-finance-macroeconomics-and-forecasting-summer-2027) |
-|  2026-11-13 | Anduril | 2027 Brand Marketing Intern | Costa Mesa, California, United States | intern | [link](https://boards.greenhouse.io/andurilindustries/jobs/5261731007?gh_jid=5261731007) |
-|  2026-11-13 | Salesforce | Summer 2027 Intern - Sales Immersion, Financial Services | New York - New York | intern | [link](https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/job/New-York---New-York/Summer-2027-Intern---Sales-Immersion--Financial-Services_JR368293-1) |
-|  🆕 2026-11-13 | Micron | Intern - Enterprise SSD Architecture | Boise, ID - Main Site | intern | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Enterprise-SSD-Architecture_JR114108) |
+|  2026-11-14 | Micron | Intern - Enterprise SSD Architecture | Boise, ID - Main Site | intern | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Enterprise-SSD-Architecture_JR114108) |
+|  2026-11-14 | Salesforce | Summer 2027 Intern - Sales Immersion, Financial Services | New York - New York | intern | [link](https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/job/New-York---New-York/Summer-2027-Intern---Sales-Immersion--Financial-Services_JR368293-1) |
 |  2026-10-22 | DoorDash | Drone Operations, Intern - Labs (Summer 2027) | San Francisco, CA | intern | [link](https://job-boards.greenhouse.io/doordashusa/jobs/8312381) |
+|  2026-10-22 | Adobe | 2027 MBA Intern - Digital Strategy Associate, Strategic Advisory | New York | intern | [link](https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/New-York/XMLNAME-2027-MBA-Intern---Digital-Strategy-Associate--Strategic-Advisory_R172922) |
+|  2026-11-13 | Anduril | 2027 Brand Marketing Intern | Costa Mesa, California, United States | intern | [link](https://boards.greenhouse.io/andurilindustries/jobs/5261731007?gh_jid=5261731007) |
+|  2026-11-13 | Micron | Physical Failure Analysis Technician - 6 Month Intern 2027 | Boise, ID - ID1 | intern | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---ID1/Physical-Failure-Analysis-Technician---6-Month-Intern-2027_JR114535) |
 |  2026-10-27 | Waymo | 2027 Summer Intern, MS/PhD, Sensor Performance Engineer Intern | Mountain View, CA, USA  | intern | [link](https://careers.withwaymo.com/jobs?gh_jid=8319171) |
-|  2026-10-21 | Adobe | 2027 MBA Intern - Digital Strategy Associate, Strategic Advisory | New York | intern | [link](https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/New-York/XMLNAME-2027-MBA-Intern---Digital-Strategy-Associate--Strategic-Advisory_R172922) |
-|  2026-10-20 | Tencent | Consumer Insights Intern | US-California-Los Angeles | intern | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-California-Los-Angeles/Consumer-Insights-Intern_R108279) |
+|  2026-10-21 | Tencent | Consumer Insights Intern | US-California-Los Angeles | intern | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-California-Los-Angeles/Consumer-Insights-Intern_R108279) |
 |  2026-10-20 | Amazon | Creative Marketing Intern – Summer 2027 | Seattle, WA | intern | [link](https://www.amazon.jobs/en/jobs/10584130/creative-marketing-intern-summer-2027) |
-|  🆕 2026-11-12 | Micron | Physical Failure Analysis Technician - 6 Month Intern 2027 | Boise, ID - ID1 | intern | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---ID1/Physical-Failure-Analysis-Technician---6-Month-Intern-2027_JR114535) |
-|  2026-10-19 | Insomniac Games | Publishing Project Management Intern - Undergraduate  | United States, Burbank, CA | intern | [link](https://job-boards.greenhouse.io/insomniac/jobs/6226347004) |
-|  2026-10-19 | Insomniac Games | Story Intern - Undergraduate  | United States, Burbank, CA | intern | [link](https://job-boards.greenhouse.io/insomniac/jobs/6227611004) |
 |  2026-10-19 | Nintendo | Intern - E-Commerce Merchandising & Strategy | Redmond, WA | intern | [link](https://careers.nintendo.com/?gh_jid=4417152009) |
 |  2026-10-19 | Nintendo | Intern - Localization Systems Analyst | Redmond, WA | intern | [link](https://careers.nintendo.com/?gh_jid=4417305009) |
 |  2026-10-19 | Nintendo | Intern - Retail Category Management | Redmond, WA | intern | [link](https://careers.nintendo.com/?gh_jid=4417163009) |
 |  2026-10-19 | Nintendo | Intern - Supply Chain Planning | Redmond, WA | intern | [link](https://careers.nintendo.com/?gh_jid=4417296009) |
+|  2026-10-19 | Insomniac Games | Publishing Project Management Intern - Undergraduate  | United States, Burbank, CA | intern | [link](https://job-boards.greenhouse.io/insomniac/jobs/6226347004) |
+|  2026-10-19 | Insomniac Games | Story Intern - Undergraduate  | United States, Burbank, CA | intern | [link](https://job-boards.greenhouse.io/insomniac/jobs/6227611004) |
 |  2026-10-19 | Amazon | Customer Acquisition Representative Intern – Summer 2027 | Arlington, VA | intern | [link](https://www.amazon.jobs/en/jobs/10580807/customer-acquisition-representative-intern-summer-2027) |
-|  2026-10-15 | Tencent | Marketing Intern | US-California-Palo Alto | intern | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-California-Palo-Alto/Marketing-Intern_R108206) |
-|  2026-10-15 | Tencent | Tencent Cloud Business Development Intern - United States | US-California-Palo Alto | intern | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-California-Palo-Alto/Tencent-Cloud-Business-Development-Intern---United-States_R108152) |
-|  2026-10-15 | Tencent | IT Operations Intern | US-California-Palo Alto | intern | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-California-Palo-Alto/IT-Operations-Intern_R108176-2) |
-|  2026-10-15 | Tencent | IT Operations Intern | US-Washington-Bellevue | intern | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-Washington-Bellevue/IT-Operations-Intern_R107720) |
-|  2026-10-15 | Adobe | 2027 Intern - Digital Strategy Analyst, Strategic Advisory | New York | intern | [link](https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/New-York/XMLNAME-2027-Intern---Digital-Strategy-Analyst_R171828) |
-|  2026-10-15 | Adobe | 2027 Intern - Sales Velocity Analyst | New York | intern | [link](https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/New-York/XMLNAME-2027-Intern---Sales-Velocity-Analyst_R171869) |
+|  2026-10-16 | Tencent | Marketing Intern | US-California-Palo Alto | intern | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-California-Palo-Alto/Marketing-Intern_R108206) |
+|  2026-10-16 | Tencent | Tencent Cloud Business Development Intern - United States | US-California-Palo Alto | intern | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-California-Palo-Alto/Tencent-Cloud-Business-Development-Intern---United-States_R108152) |
+|  2026-10-16 | Tencent | IT Operations Intern | US-California-Palo Alto | intern | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-California-Palo-Alto/IT-Operations-Intern_R108176-2) |
+|  2026-10-16 | Tencent | IT Operations Intern | US-Washington-Bellevue | intern | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-Washington-Bellevue/IT-Operations-Intern_R107720) |
+|  2026-10-16 | Adobe | 2027 Intern - Digital Strategy Analyst, Strategic Advisory | New York | intern | [link](https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/New-York/XMLNAME-2027-Intern---Digital-Strategy-Analyst_R171828) |
+|  2026-10-16 | Adobe | 2027 Intern - Sales Velocity Analyst | New York | intern | [link](https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/New-York/XMLNAME-2027-Intern---Sales-Velocity-Analyst_R171869) |
 |  2026-10-21 | Anduril | 2027 Business Operations Engineer Intern | Ashville, Ohio, United States; Costa Mesa, California, United States | intern | [link](https://boards.greenhouse.io/andurilindustries/jobs/5271672007?gh_jid=5271672007) |
 |  2026-10-21 | Anduril | 2027 Product Sourcing Engineer Intern | Costa Mesa, California, United States; Irvine, California, United States; Santa Ana, California, United States | intern | [link](https://boards.greenhouse.io/andurilindustries/jobs/5271285007?gh_jid=5271285007) |
 |  2026-11-10 | Gameloft | Marketing Activations Intern | Barcelona, CT | intern | [link](https://jobs.smartrecruiters.com/Gameloft/744000160880969) |
@@ -5150,17 +5145,15 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-19 | Anduril | 2027 Low Observables Engineer Intern | Costa Mesa, California, United States | intern | [link](https://boards.greenhouse.io/andurilindustries/jobs/5268752007?gh_jid=5268752007) |
 |  2026-10-28 | Hasbro (WotC) | 2027 Summer Finance Internships | Boston, Massachusetts, United States; Renton, Washington, United States | intern | [link](https://job-boards.greenhouse.io/hasbro/jobs/4470038009) |
 |  2026-10-28 | Anduril | 2027 Library Science Intern | Santa Ana, California, United States | intern | [link](https://boards.greenhouse.io/andurilindustries/jobs/5278662007?gh_jid=5278662007) |
+|  2026-10-26 | Samsara | Account Development Representative Intern - Atlanta | Atlanta, Georgia, United States | intern | [link](https://www.samsara.com/company/careers/roles/8325057?gh_jid=8325057) |
 |  2026-10-26 | Samsara | Account Development Representative Intern - Phoenix | Remote - AZ | intern | [link](https://www.samsara.com/company/careers/roles/8325371?gh_jid=8325371) |
-|  2026-10-23 | Samsara | Account Development Representative Intern - Phoenix | Phoenix, Arizona, United States | intern | [link](https://www.samsara.com/company/careers/roles/8319784?gh_jid=8319784) |
 |  2026-10-21 | Anduril | 2027 Business Operations Intern - Connected Warfare | Costa Mesa, California, United States; Seattle, Washington, United States | intern | [link](https://boards.greenhouse.io/andurilindustries/jobs/5271826007?gh_jid=5271826007) |
-|  2026-10-15 | Waymo | 2027 Summer Intern, MS/PhD, Semantics | Mountain View, California, USA | intern | [link](https://careers.withwaymo.com/jobs?gh_jid=8244128) |
 |  2026-11-06 | Amazon | 2027 Quantum Science Internship - Masters, Quantum Technologies team | Pasadena, CA | new-grad | [link](https://www.amazon.jobs/en/jobs/10598841/2027-quantum-science-internship-masters-quantum-technologies-team) |
 |  2026-11-04 | Amazon | Amazon Finance Rotational Program (AFRP) - Operations Finance, Early Career - 2027 | Seattle, WA | new-grad | [link](https://www.amazon.jobs/en/jobs/10597230/amazon-finance-rotational-program-afrp-operations-finance-early-career-2027) |
 |  2026-11-05 | SpaceX | New Graduate Engineer, Electrical - Satellites (Starlink) | Redmond, WA | new-grad | [link](https://boards.greenhouse.io/spacex/jobs/8931507002?gh_jid=8931507002) |
 |  2026-10-28 | Anduril | 2027 New Grad GNC Engineer | Costa Mesa, California, United States | new-grad | [link](https://boards.greenhouse.io/andurilindustries/jobs/5270855007?gh_jid=5270855007) |
 |  2026-10-23 | Amazon | Amazon Finance Rotational Program (AFRP) - Business Unit Finance, Early Career - 2027 | Seattle, WA | new-grad | [link](https://www.amazon.jobs/en/jobs/10587748/amazon-finance-rotational-program-afrp-business-unit-finance-early-career-2027) |
-|  2026-11-13 | Salesforce | Finance Pathways Rotation Analyst (Early Career) | Indiana - Indianapolis | new-grad | [link](https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/job/Indiana---Indianapolis/Finance-Pathways-Rotation-Analyst--Early-Career-_JR359637-1) |
-|  2026-11-12 | Salesforce | Business Development Associate (Early Career) | California - San Francisco | new-grad | [link](https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/job/California---San-Francisco/Business-Development-Associate--Early-Career-_JR340479-1) |
+|  2026-11-13 | Salesforce | Business Development Associate (Early Career) | California - San Francisco | new-grad | [link](https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/job/California---San-Francisco/Business-Development-Associate--Early-Career-_JR340479-1) |
 |  2026-10-23 | Anduril | 2027 New Grad Low Observables Engineer | Costa Mesa, California, United States | new-grad | [link](https://boards.greenhouse.io/andurilindustries/jobs/5269789007?gh_jid=5269789007) |
 |  2026-11-10 | Anduril | 2027 Early Career Finance Emerging Leadership Rotational Program | Costa Mesa, California, United States | new-grad | [link](https://boards.greenhouse.io/andurilindustries/jobs/5291829007?gh_jid=5291829007) |
 |  2026-10-19 | SpaceX | New Graduate Engineer, Electrical (Starshield) | Hawthorne, CA | new-grad | [link](https://boards.greenhouse.io/spacex/jobs/8900641002?gh_jid=8900641002) |
@@ -5168,24 +5161,32 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-19 | Anduril | 2027 Early Career Warhead Engineer | Costa Mesa, California, United States | new-grad | [link](https://boards.greenhouse.io/andurilindustries/jobs/5268704007?gh_jid=5268704007) |
 |  2026-11-04 | SpaceX | Starlink Aviation Production Technician (Entry Level, Temporary) | Woodinville, WA | new-grad | [link](https://boards.greenhouse.io/spacex/jobs/8928271002?gh_jid=8928271002) |
 |  2026-10-26 | Samsara | (New Grad) Account Development Representative II - Atlanta | Atlanta, Georgia, United States | new-grad | [link](https://www.samsara.com/company/careers/roles/8325055?gh_jid=8325055) |
-|  2026-10-26 | Samsara | (New Grad) Account Development Representative II - Phoenix | Phoenix, Arizona, United States | new-grad | [link](https://www.samsara.com/company/careers/roles/8325356?gh_jid=8325356) |
+|  2026-10-26 | Samsara | (New Grad) Account Development Representative II - Phoenix | Phoenix, Arizona, United States | new-grad | [link](https://www.samsara.com/company/careers/roles/8325054?gh_jid=8325054) |
 |  2026-10-21 | Anduril | 2027 Early Career Business Operations Analyst | Costa Mesa, California, United States; Seattle, Washington, United States; Washington, District of Columbia, United States | new-grad | [link](https://boards.greenhouse.io/andurilindustries/jobs/5271811007?gh_jid=5271811007) |
 | ◐ 2026-10-28 | SpaceX | Propulsion Technician (Raptor Engine Shop), Level 4/5 - Night Shift | McGregor, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8922771002?gh_jid=8922771002) |
+| ◐ 2026-11-14 | Snapchat | RF Hardware Engineer | Boulder, Colorado | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Boulder-Colorado/RF-Hardware-Engineer_R0047525-1) |
+| ◐ 2026-11-14 | Intel | Intel Foundry Advanced Device Development Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Intel-Foundry-Advanced-Device-Development-Engineer_JR0288604) |
+| ◐ 2026-11-14 | Intel | Power Integrity Engineer | Costa Rica, San Jose | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/Costa-Rica-San-Jose/Power-Integrity-Engineer_JR0289097) |
+| ◐ 2026-11-14 | NVIDIA | Hardware Design Validation Engineer | US, CA, Santa Clara | full-time | [link](https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Hardware-Design-Validation-Engineer_JR2029438) |
 | ◐ 2026-11-14 | Apple | RF System Integration Engineer (Instrument Engineering) | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200690352) |
 | ◐ 2026-11-14 | Apple | RF System Integration Engineer — Cellular Technology | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200682611) |
-| ◐ 2026-11-13 | Snapchat | RF Hardware Engineer | Boulder, Colorado | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Boulder-Colorado/RF-Hardware-Engineer_R0047525-1) |
-| ◐ 🆕 2026-11-13 | Intel | Intel Foundry Advanced Device Development Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Intel-Foundry-Advanced-Device-Development-Engineer_JR0288604) |
-| ◐ 🆕 2026-11-13 | Intel | Power Integrity Engineer | Costa Rica, San Jose | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/Costa-Rica-San-Jose/Power-Integrity-Engineer_JR0289097) |
-| ◐ 2026-11-13 | NVIDIA | Hardware Design Validation Engineer | US, CA, Santa Clara | full-time | [link](https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Hardware-Design-Validation-Engineer_JR2029438) |
+| ◐ 2026-11-13 | Intel | Module Development Engineer - LTD Dry Etch | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Module-Development-Engineer---LTD-Dry-Etch_JR0289029) |
+| ◐ 2026-11-13 | Intel | Manufacturing Engineer and Shift Leader in NM WPM Production | US, New Mexico, Albuquerque | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-New-Mexico-Albuquerque/Manufacturing-Engineer-and-Shift-Leader-in-NM-WPM-Production_JR0288865) |
 | ◐ 2026-11-13 | Apple | Coating Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694538) |
 | ◐ 2026-11-13 | Apple | Hardware Systems Design & Integration Engineer - AirPods | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694768) |
-| ◐ 🆕 2026-11-12 | Intel | Module Development Engineer - LTD Dry Etch | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Module-Development-Engineer---LTD-Dry-Etch_JR0289029) |
-| ◐ 🆕 2026-11-12 | Intel | Manufacturing Engineer and Shift Leader in NM WPM Production | US, New Mexico, Albuquerque | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-New-Mexico-Albuquerque/Manufacturing-Engineer-and-Shift-Leader-in-NM-WPM-Production_JR0288865) |
 | ◐ 2026-11-12 | Apple | Hardware System Validation Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694620) |
 | ◐ 2026-11-12 | Apple | Computational Display Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694607) |
 | ◐ 2026-11-12 | Apple | Thin-Film/ALD Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694765) |
 | ◐ 2026-11-12 | Apple | Mac Touch Electrical Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694589) |
 | ◐ 2026-11-11 | Take-Two | Threat Intelligence Engineer | Las Vegas, Nevada, United States | full-time | [link](https://job-boards.greenhouse.io/taketwo/jobs/8379815) |
+| ◐ 2026-11-11 | Snapchat | Custom IC Layout Engineer | Vancouver, WA - 805 Broadway | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Vancouver-WA---805-Broadway/Digital-IC-Design-Verification-Engineer_R0047100-1) |
+| ◐ 2026-11-11 | Snapchat | Quality Engineer, Level 4 | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Quality-Engineer--Level-4_R0047306-1) |
+| ◐ 2026-11-11 | Snapchat | Electrical Engineer | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Electrical-Engineer_H226EE1) |
+| ◐ 2026-11-11 | Intel | Fab Module Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Fab-Module-Engineer_JR0289087) |
+| ◐ 2026-11-11 | Intel | Tool Equipment Install Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Tool-Equipment-Install-Engineer_JR0289027-1) |
+| ◐ 2026-11-11 | Intel | Module Development Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Module-Development-Engineer_JR0286550) |
+| ◐ 2026-11-11 | Intel | Electrical Project Engineer - Global Construction Engineering | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Electrical-Project-Engineer---Global-Construction-Engineering_JR0288758) |
+| ◐ 2026-11-11 | Intel | WPM NM C4 Electroplating Module Engineer | US, New Mexico, Albuquerque | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-New-Mexico-Albuquerque/WPM-NM-C4-Electroplating-Module-Engineer_JR0288660) |
 | ◐ 2026-11-11 | Apple | Advanced Packaging Development Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694643) |
 | ◐ 2026-11-11 | Apple | Hardware Systems Design Electrical Engineer - iPhone | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200598796) |
 | ◐ 2026-11-11 | Apple | iPhone Hardware System Design Electrical Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694618) |
@@ -5193,50 +5194,59 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 | ◐ 2026-11-11 | Apple | Camera Optical Illumination Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694386) |
 | ◐ 2026-11-11 | Apple | Battery Modeling and Algorithm Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693517) |
 |  2026-11-10 | NBCUniversal (DreamWorks) | Photographer (NABET Engineer), NBC4 & Telemundo 44 Washington DC | Washington, District of Columbia | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000160940069) |
-|  2026-11-10 | Snapchat | Custom IC Layout Engineer | Vancouver, WA - 805 Broadway | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Vancouver-WA---805-Broadway/Digital-IC-Design-Verification-Engineer_R0047100-1) |
-|  2026-11-10 | Snapchat | Quality Engineer, Level 4 | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Quality-Engineer--Level-4_R0047306-1) |
-|  2026-11-10 | Snapchat | Electrical Engineer | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Electrical-Engineer_H226EE1) |
-|  🆕 2026-11-10 | Intel | Fab Module Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Fab-Module-Engineer_JR0289087) |
-|  🆕 2026-11-10 | Intel | Tool Equipment Install Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Tool-Equipment-Install-Engineer_JR0289027-1) |
-|  🆕 2026-11-10 | Intel | Module Development Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Module-Development-Engineer_JR0286550) |
-|  🆕 2026-11-10 | Intel | Electrical Project Engineer - Global Construction Engineering | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Electrical-Project-Engineer---Global-Construction-Engineering_JR0288758) |
-|  🆕 2026-11-10 | Intel | WPM NM C4 Electroplating Module Engineer | US, New Mexico, Albuquerque | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-New-Mexico-Albuquerque/WPM-NM-C4-Electroplating-Module-Engineer_JR0288660) |
 |  2026-11-10 | Apple | IC Packaging Integration Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694416) |
 |  2026-11-10 | Apple | Wi-Fi Certification Quality Engineer, Wireless Technologies & Ecosystems | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200688169) |
 |  2026-11-10 | Apple | Hardware Systems Workload and Characterization Engineer - iPad | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694234) |
+|  🆕 2026-11-10 | Apple | Hardware System Integration Electrical Engineer - Mac | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200685334) |
 |  2026-11-09 | Cursor | Field Engineer, Life Sciences | Remote | full-time | [link](https://jobs.ashbyhq.com/cursor/d02cb5cc-496f-4998-80a7-87c20312c82c) |
 |  2026-11-09 | Cursor | Field Engineer, Public Sector | Washington, D.C. | full-time | [link](https://jobs.ashbyhq.com/cursor/1f4f9aea-af74-49dc-9495-203c4c631379) |
 |  2026-11-09 | Cursor | Field Engineer, Healthcare | Remote | full-time | [link](https://jobs.ashbyhq.com/cursor/60a3541f-f6b6-4da2-a168-40e867a51740) |
+|  🆕 2026-11-09 | Apple | RF System Integration Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200555687) |
+|  2026-11-07 | Intel | Module Equipment Development Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Module-Equipment-Development-Engineer_JR0288560) |
+|  🆕 2026-11-07 | Apple | NAND Product Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200683980) |
 |  2026-11-06 | ElevenLabs | IT Support Engineer | New York | full-time | [link](https://jobs.ashbyhq.com/ElevenLabs/750a8325-7ce1-45ea-b0b1-61dab78a456e) |
-|  🆕 2026-11-06 | Intel | Module Equipment Development Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Module-Equipment-Development-Engineer_JR0288560) |
+|  2026-11-06 | Intel | Defect Metrology Tool Install Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Defect-Metrology-Tool-Install-Engineer_JR0287207-1) |
+|  2026-11-06 | Intel | NM Wafer Packaging Manufacturing: Advanced Packaging Module Engineer | US, New Mexico, Albuquerque | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-New-Mexico-Albuquerque/NM-Wafer-Packaging-Manufacturing--Advanced-Packaging-Module-Engineer_JR0288857) |
+|  🆕 2026-11-06 | Apple | Hardware System Engineer - AirPods System Technologies | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693964) |
+|  🆕 2026-11-06 | Apple | Robotics Controls Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693759) |
+|  🆕 2026-11-06 | Apple | Cellular Performance Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200692004) |
+|  🆕 2026-11-06 | Apple | STA Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200657260) |
 |  2026-11-05 | Roblox | Developer Engagement Team  (Contract) | Remote | full-time | [link](https://careers.roblox.com/jobs/8357783?gh_jid=8357783) |
-|  🆕 2026-11-05 | Intel | Defect Metrology Tool Install Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Defect-Metrology-Tool-Install-Engineer_JR0287207-1) |
-|  🆕 2026-11-05 | Intel | NM Wafer Packaging Manufacturing: Advanced Packaging Module Engineer | US, New Mexico, Albuquerque | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-New-Mexico-Albuquerque/NM-Wafer-Packaging-Manufacturing--Advanced-Packaging-Module-Engineer_JR0288857) |
-|  🆕 2026-11-04 | Intel | RF Lab Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/RF-Lab-Engineer_JR0288778) |
-|  🆕 2026-11-04 | Intel | AMHS Equipment Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/AMHS-Equipment-Engineer_JR0287565) |
+|  2026-11-05 | Intel | RF Lab Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/RF-Lab-Engineer_JR0288778) |
+|  2026-11-05 | Intel | AMHS Equipment Engineer | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/AMHS-Equipment-Engineer_JR0287565) |
+|  🆕 2026-11-05 | Apple | Signal Integrity Engineer – Memory Interface | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693584) |
+|  🆕 2026-11-05 | Apple | WSoC PHY/MAC Validation and Integration Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693292) |
+|  🆕 2026-11-05 | Apple | Cryptography Engineer, SEAR | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693548) |
+|  🆕 2026-11-05 | Apple | Performance and Modeling Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691334) |
+|  🆕 2026-11-05 | Apple | Advanced Manufacturing Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691657) |
+|  🆕 2026-11-05 | Apple | CPU Implementation Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691587) |
+|  🆕 2026-11-05 | Apple | Formal Validation Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691668) |
+|  🆕 2026-11-05 | Apple | FE Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691269) |
+|  🆕 2026-11-05 | Apple | Power Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691459) |
+|  🆕 2026-11-05 | Apple | Manufacturing Quality Engineer | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691585) |
 |  2026-11-03 | Stripe | IT Support Engineer | San Francisco | full-time | [link](https://stripe.com/jobs/search?gh_jid=8328323) |
 |  2026-11-03 | DoorDash | Perception & State Estimation Engineer - DoorDash Air | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/doordashusa/jobs/8348870) |
 |  2026-11-03 | Snowflake | Account Engineer | US-CA-Menlo Park | full-time | [link](https://jobs.ashbyhq.com/snowflake/720f9903-f7bf-49a8-a0f2-c8906aba8262) |
+|  2026-11-03 | Adobe | Business Intelligence Engineer, Marketing Finance | San Jose | full-time | [link](https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/San-Jose/Finance-Lead--Marketing-Finance_R171712) |
 |  2026-11-02 | Replit | Support Engineer I (FC, Weekend Shift) | Foster City, CA | full-time | [link](https://jobs.ashbyhq.com/replit/951e0ebb-a957-45fa-8763-d56ba46750b4) |
 |  2026-11-02 | Replit | Support Engineer I (NYC, Weekend Shift) | NYC (SoHo) | full-time | [link](https://jobs.ashbyhq.com/replit/4e64e46f-f69d-4454-89b6-bd27302a464d) |
 |  2026-11-02 | OpenAI | Controls Engineer, BMS & EPMS | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/a46ffc60-39c6-4b1e-bd0f-9c33a8b06703) |
-|  2026-11-02 | Adobe | Business Intelligence Engineer, Marketing Finance | San Jose | full-time | [link](https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/San-Jose/Finance-Lead--Marketing-Finance_R171712) |
+|  2026-11-15 | Apple | US - Specialist: Seasonal, Part-time | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/114438158) |
 |  2026-10-30 | Cloudflare | Customer Engineer, Enterprise - Austin/Dallas,TX or Raleigh, NC | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8329370?gh_jid=8329370) |
 |  2026-10-30 | Perplexity | IT Engineer | San Francisco | full-time | [link](https://jobs.ashbyhq.com/Perplexity/2d510148-8cce-4b67-be25-5784106bbff4) |
 |  2026-11-14 | OpenAI | Certification Architect | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/24d1efa7-2b6d-4f5c-873f-362843ca3395) |
-|  2026-11-14 | Apple | US - Specialist: Seasonal, Part-time | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/114438158) |
 |  2026-11-14 | Apple | System Integration Lead | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694950) |
 |  2026-11-14 | Apple | Channel Activation Lead | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200695056) |
 |  2026-11-14 | Apple | Camera Competitive Intelligence & Strategy Lead | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200686608) |
 |  2026-10-29 | DoorDash | GeoSpatial Engineer - DoorDash Air | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/doordashusa/jobs/8331607) |
 |  2026-10-28 | DoorDash | UTM Engineer - DoorDash Air | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/doordashusa/jobs/8330693) |
 |  2026-11-13 | Nintendo | CONTRACT - Online Merchandising Specialist | Redmond, WA | full-time | [link](https://careers.nintendo.com/?gh_jid=4439340009) |
-|  2026-11-13 | Twilio | Fraud Specialist, Supplier Operations & Governance  | Remote - US | full-time | [link](https://job-boards.greenhouse.io/twilio/jobs/8386095) |
-|  2026-11-13 | Lyft | SVP, Chief Communications Officer | San Francisco, CA | full-time | [link](https://app.careerpuck.com/job-board/lyft/job/8927801002?gh_jid=8927801002) |
-|  2026-11-13 | Airbnb | Lead, Quality, Elevated Support | United States  | full-time | [link](https://careers.airbnb.com/positions/8383913?gh_jid=8383913) |
 |  2026-11-13 | Anthropic | CMC & Manufacturing Lead, Life Sciences | Remote-Friendly, United States | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5481396008) |
 |  2026-11-13 | Anthropic | GTM Narrative Lead | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5481671008) |
+|  2026-11-13 | Twilio | Fraud Specialist, Supplier Operations & Governance  | Remote - US | full-time | [link](https://job-boards.greenhouse.io/twilio/jobs/8386095) |
 |  2026-11-13 | Cloudflare | Executive & Personal Assistant, Founders’ Office | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8282863?gh_jid=8282863) |
+|  2026-11-13 | Lyft | SVP, Chief Communications Officer | San Francisco, CA | full-time | [link](https://app.careerpuck.com/job-board/lyft/job/8927801002?gh_jid=8927801002) |
+|  2026-11-13 | Airbnb | Lead, Quality, Elevated Support | United States  | full-time | [link](https://careers.airbnb.com/positions/8383913?gh_jid=8383913) |
 |  2026-11-13 | DoorDash | Team Lead, Critical Investigations | Tempe, AZ | full-time | [link](https://job-boards.greenhouse.io/doordashusa/jobs/8238172) |
 |  2026-11-13 | OpenAI | Strategic Delivery Lead, National Security | Washington, DC | full-time | [link](https://jobs.ashbyhq.com/openai/38e66047-7d81-4347-8e64-2c16bc9a803a) |
 |  2026-11-13 | OpenAI | Account Associate - NYC | New York City | full-time | [link](https://jobs.ashbyhq.com/openai/55f36629-8351-41d9-b2f5-3d63c5e26bf7) |
@@ -5251,18 +5261,25 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-13 | NBCUniversal (DreamWorks) | Associate Producer, Dateline | New York, NEW YORK | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000161509039) |
 |  2026-11-13 | NBCUniversal (DreamWorks) | Assistant Audio Producer, Dateline (contract) | New York, NEW YORK | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000161506990) |
 |  2026-11-13 | NBCUniversal (DreamWorks) | Studio Tech II- NBC Philadelphia  | Philadelphia, PENNSYLVANIA | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000161488283) |
+|  2026-11-13 | Intel | Process Integration & Program Leader, Hybrid Bonding / 3DIC | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Process-Integration---Program-Leader--Hybrid-Bonding---3DIC_JR0288456) |
 |  2026-11-13 | Apple | People Planning Operations Analyst | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694921) |
 |  2026-11-13 | Apple | US-Technical Expert | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693429) |
 |  2026-11-14 | Physical Intelligence | IT Operations Engineer | San Francisco | full-time | [link](https://jobs.ashbyhq.com/physicalintelligence/16bfcb45-4056-4e8d-b1d7-7411fffeb5a1) |
-|  2026-11-12 | Robinhood | AML Investigator | Denver, CO; New York, NY; Westlake, TX | full-time | [link](https://boards.greenhouse.io/robinhood/jobs/8259642?t=gh_src=&gh_jid=8259642) |
-|  2026-11-12 | Together AI | CX Ops Specialist | San Francisco | full-time | [link](https://job-boards.greenhouse.io/togetherai/jobs/5292001007) |
-|  2026-11-12 | Airbnb | Category Lead, Airbnb Services | United States | full-time | [link](https://careers.airbnb.com/positions/8381807?gh_jid=8381807) |
-|  2026-11-12 | Airbnb | Consumer Insights Lead | United States | full-time | [link](https://careers.airbnb.com/positions/8356835?gh_jid=8356835) |
-|  2026-11-12 | Coinbase | Compliance, International Investigations Associate | Remote - Luxembourg | full-time | [link](https://www.coinbase.com/careers/positions/8382720?gh_jid=8382720) |
+|  2026-11-14 | Micron | Product Quality Engineer | Longmont-MAX- Office, CO | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Longmont-MAX--Office-CO/Product-Quality-Engineer_JR116870) |
+|  2026-11-14 | Micron | Equipment Engineer | Manassas, VA -  Fab 6 | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Manassas-VA----Fab-6/Equipment-Engineer_JR108493) |
+|  2026-11-14 | Micron | Water Services Operations Lead Engineer | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Water-Services-Operations-Lead-Engineer_JR116864-1) |
+|  2026-11-14 | Micron | Layout Engineer, DEG | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Layout-Engineer--DEG_JR116620-1) |
+|  2026-11-14 | Micron | Probe Process Engineer - Allcrunch | Boise, ID - ID1 | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---ID1/Probe-Process-Engineer---Allcrunch_JR116876) |
+|  2026-11-14 | Micron | TPG IE Operations Engineer | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/TPG-IE-Operations-Engineer_JR117622) |
 |  2026-11-12 | Anthropic | Commercial Activation Lead | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5478939008) |
 |  2026-11-12 | Anthropic | Partner Support Operations Lead | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5453322008) |
 |  2026-11-12 | Anthropic | Resale Operations Lead | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5468548008) |
+|  2026-11-12 | Coinbase | Compliance, International Investigations Associate | Remote - Luxembourg | full-time | [link](https://www.coinbase.com/careers/positions/8382720?gh_jid=8382720) |
+|  2026-11-12 | Robinhood | AML Investigator | Denver, CO; New York, NY; Westlake, TX | full-time | [link](https://boards.greenhouse.io/robinhood/jobs/8259642?t=gh_src=&gh_jid=8259642) |
 |  2026-11-12 | MongoDB | Lead, Candidate Experience | Austin; New York City; United States | full-time | [link](https://www.mongodb.com/careers/job/?gh_jid=8381870) |
+|  2026-11-12 | Together AI | CX Ops Specialist | San Francisco | full-time | [link](https://job-boards.greenhouse.io/togetherai/jobs/5292001007) |
+|  2026-11-12 | Airbnb | Category Lead, Airbnb Services | United States | full-time | [link](https://careers.airbnb.com/positions/8381807?gh_jid=8381807) |
+|  2026-11-12 | Airbnb | Consumer Insights Lead | United States | full-time | [link](https://careers.airbnb.com/positions/8356835?gh_jid=8356835) |
 |  2026-11-12 | DoorDash | DashMart Shift Lead | Tempe, AZ | full-time | [link](https://job-boards.greenhouse.io/doordashusa/jobs/8383962) |
 |  2026-11-12 | DoorDash | Kitchen Operations Associate, DashMart | Salt Lake City, UT | full-time | [link](https://job-boards.greenhouse.io/doordashusa/jobs/8384030) |
 |  2026-11-12 | DoorDash | Kitchen Shift Lead, DashMart | Phoenix, AZ | full-time | [link](https://job-boards.greenhouse.io/doordashusa/jobs/8383988) |
@@ -5283,7 +5300,10 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-12 | DocuSign | Partner Development Representative I | US-Chicago | full-time | [link](https://careers.docusign.com/careers-home/jobs/30925) |
 |  2026-11-12 | NBCUniversal (DreamWorks) | Multiplatform Story Producer, Telemundo San Diego | San Diego, CALIFORNIA | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000161383497) |
 |  2026-11-12 | NBCUniversal (DreamWorks) | Specialist, Learning and Talent Development | Universal City, CALIFORNIA | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000161359648) |
-|  🆕 2026-11-12 | Intel | Process Integration & Program Leader, Hybrid Bonding / 3DIC | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Process-Integration---Program-Leader--Hybrid-Bonding---3DIC_JR0288456) |
+|  2026-11-12 | Intel | Module Engineering - Day Shift 5 or 7 | US, Arizona, Phoenix | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Arizona-Phoenix/Module-Engineering---Day-Shift-5-or-7_JR0287830) |
+|  2026-11-12 | Intel | Manufacturing Technician – New Mexico | US, New Mexico, Albuquerque | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-New-Mexico-Albuquerque/Manufacturing-Technician---New-Mexico_JR0288675) |
+|  2026-11-12 | Intel | ORAP Metro Module Equipment Technician | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/ORAP-Metro-Module-Equipment-Technician_JR0287271-1) |
+|  2026-11-12 | Intel | Defect Metrology Area Coordinator | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Defect-Metrology-Area-Coordinator_JR0289022) |
 |  2026-11-12 | Apple | US Industry and Ecosystem Lead, Life Sciences | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694764) |
 |  2026-11-12 | Apple | US-Lead Genius | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694531) |
 |  2026-11-11 | Stripe | Credit Operations Analyst | Chicago, IL; Atlanta, GA; Toronto, Canada | full-time | [link](https://stripe.com/jobs/search?gh_jid=8354560) |
@@ -5291,10 +5311,15 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-11 | Cohere | Managing Editor | United States | full-time | [link](https://jobs.ashbyhq.com/cohere/31bfc2b4-472f-4921-86b1-010daa2da1e8) |
 |  2026-11-11 | NBCUniversal (DreamWorks) | Producer, Telemundo T60 San Antonio | San Antonio, TEXAS | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000161163147) |
 |  2026-11-11 | NBCUniversal (DreamWorks) | Duopoly Reporter, NBC & Telemundo New York | New York, NEW YORK | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000161086009) |
-|  🆕 2026-11-11 | Intel | Module Engineering - Day Shift 5 or 7 | US, Arizona, Phoenix | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Arizona-Phoenix/Module-Engineering---Day-Shift-5-or-7_JR0287830) |
-|  🆕 2026-11-11 | Intel | Manufacturing Technician – New Mexico | US, New Mexico, Albuquerque | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-New-Mexico-Albuquerque/Manufacturing-Technician---New-Mexico_JR0288675) |
-|  🆕 2026-11-11 | Intel | ORAP Metro Module Equipment Technician | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/ORAP-Metro-Module-Equipment-Technician_JR0287271-1) |
-|  🆕 2026-11-11 | Intel | Defect Metrology Area Coordinator | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Defect-Metrology-Area-Coordinator_JR0289022) |
+|  2026-11-11 | Snapchat | Ad Product Quality Analyst I | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Ad-Product-Quality-Analyst-I_R0047453-1) |
+|  2026-11-11 | Snapchat | Executive Protection Specialist | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Executive-Protection-Specialist_R0047307-2) |
+|  2026-11-11 | Snapchat | Producer | New York, New York | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/New-York-New-York/Producer_R0047467-1) |
+|  2026-11-11 | Snapchat | Agency Lead | New York, New York | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/New-York-New-York/Agency-Lead_R0046975) |
+|  2026-11-11 | Snapchat | Associate Agency Partner | New York, New York | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/New-York-New-York/Associate-Agency-Partner_R0047074-1) |
+|  2026-11-11 | Snapchat | Lead, Strategy & Operations | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Lead--Support-Content-Program-Manager_R0046390-1) |
+|  2026-11-11 | Snapchat | Trust & Safety Specialist, Global Operations | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Trust---Safety-Specialist--Global-Operations_R0047206-2) |
+|  2026-11-11 | Intel | Tool Install Qual Operations Specialist | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Tool-Install-Qual-Operations-Specialist_JR0289025) |
+|  2026-11-11 | Warner Bros Games | Producer, CNN Video Editorial | DC Washington 820 1st Street NE | full-time | [link](https://warnerbros.wd5.myworkdayjobs.com/en-US/global/job/DC-Washington-820-1st-Street-NE/Producer--CNN-Video-Editorial_R000107510) |
 |  2026-11-11 | Google | Policy Vertical Lead, Social and Escalation Operations, YouTube | San Bruno, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/126451897023242950) |
 |  2026-11-11 | Apple | Marketing Insights Lead, Apple Services | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200668075) |
 |  2026-11-11 | Apple | Strategic Space Planner | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693775) |
@@ -5302,6 +5327,8 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-11 | Apple | US-Store Leader | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200684229) |
 |  2026-11-11 | Apple | Global Strategy & Business Development Executive | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694354) |
 |  2026-11-11 | Apple | Strategic Media Planning Lead, Apple Services | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694385) |
+|  2026-10-22 | Warner Bros Games | Associate BIT Field Engineer | DC Washington 820 1st Street NE | full-time | [link](https://warnerbros.wd5.myworkdayjobs.com/en-US/global/job/DC-Washington-820-1st-Street-NE/Associate-BIT-Field-Engineer_R000098795) |
+|  2026-10-22 | Warner Bros Games | Broadcast IT Field Engineer | DC Washington 820 1st Street NE | full-time | [link](https://warnerbros.wd5.myworkdayjobs.com/en-US/global/job/DC-Washington-820-1st-Street-NE/BIT-Field-Engineer_R000093788) |
 |  2026-11-13 | SpaceX | Lead Electrical Engineer, Hardware Reliability (Starshield) | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8943811002?gh_jid=8943811002) |
 |  2026-11-13 | Anduril | Chief Engineer, Containerized Effects | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5290206007?gh_jid=5290206007) |
 |  2026-11-13 | Anduril | Electrical Engineer | Waltham, Massachusetts, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5294957007?gh_jid=5294957007) |
@@ -5315,26 +5342,22 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-13 | Anduril | Test & Evaluation Engineer | Channel Islands, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5196267007?gh_jid=5196267007) |
 |  2026-11-13 | Harvey | Compliance Engineer | New York | full-time | [link](https://jobs.ashbyhq.com/harvey/09fe3d93-8c13-49a2-b8f8-d53f0edb91f2) |
 |  2026-11-13 | Harvey | Compliance Engineer | San Francisco | full-time | [link](https://jobs.ashbyhq.com/harvey/5c10c348-0ad1-4dbe-a58a-dc32ba882d97) |
-|  🆕 2026-11-13 | Micron | Product Quality Engineer | Longmont-MAX- Office, CO | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Longmont-MAX--Office-CO/Product-Quality-Engineer_JR116870) |
-|  🆕 2026-11-13 | Micron | Equipment Engineer | Manassas, VA -  Fab 6 | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Manassas-VA----Fab-6/Equipment-Engineer_JR108493) |
-|  🆕 2026-11-13 | Micron | Water Services Operations Lead Engineer | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Water-Services-Operations-Lead-Engineer_JR116864-1) |
-|  🆕 2026-11-13 | Micron | Layout Engineer, DEG | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Layout-Engineer--DEG_JR116620-1) |
-|  🆕 2026-11-13 | Micron | Probe Process Engineer - Allcrunch | Boise, ID - ID1 | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---ID1/Probe-Process-Engineer---Allcrunch_JR116876) |
-|  🆕 2026-11-13 | Micron | TPG IE Operations Engineer | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/TPG-IE-Operations-Engineer_JR117622) |
+|  2026-11-13 | Micron | ATE Diffusion Process Engineer | Boise, ID - ID1 | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---ID1/ATE-Diffusion-Process-Engineer_JR117676) |
+|  2026-11-13 | Micron | Process Integration Engineer | Boise, ID - ID1 | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---ID1/Process-Integration-Engineer_JR117666-1) |
+|  2026-11-13 | Micron | New College Grad - Dry Etch Process Engineer | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/New-College-Grad---Dry-Etch-Process-Engineer_JR115572) |
+|  2026-11-13 | Micron | New College Grad - ATE Process Engineer | Boise, ID - ID1 | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---ID1/New-College-Grad---ATE-Process-Engineer_JR107760) |
 |  2026-10-21 | Cloudflare | Capacity Planning Engineer | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8300518?gh_jid=8300518) |
 |  2026-10-21 | ElevenLabs | IT Engineer | Remote | full-time | [link](https://jobs.ashbyhq.com/ElevenLabs/9aca205e-b2bc-405b-85d6-3d2aadbe49b1) |
 |  2026-10-21 | OpenAI | Compute Electrical Engineer, Robotics | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/eb112d35-cd7e-45a4-8633-5d7ade298a39) |
-|  2026-10-21 | Warner Bros Games | Associate BIT Field Engineer | DC Washington 820 1st Street NE | full-time | [link](https://warnerbros.wd5.myworkdayjobs.com/en-US/global/job/DC-Washington-820-1st-Street-NE/Associate-BIT-Field-Engineer_R000098795) |
-|  2026-10-21 | Warner Bros Games | Broadcast IT Field Engineer | DC Washington 820 1st Street NE | full-time | [link](https://warnerbros.wd5.myworkdayjobs.com/en-US/global/job/DC-Washington-820-1st-Street-NE/BIT-Field-Engineer_R000093788) |
 |  2026-10-21 | Google | Hardware System Validation Engineer, Pixel | Mountain View, CA, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/112538553673491142) |
-|  2026-11-10 | Discord | Strategic Finance Analyst | San Francisco Bay Area | full-time | [link](https://job-boards.greenhouse.io/discord/jobs/8865033002) |
 |  2026-11-10 | Figma | Strategic Finance | San Francisco, CA • New York, NY • United States | full-time | [link](https://boards.greenhouse.io/figma/jobs/6251998004?gh_jid=6251998004) |
-|  2026-11-10 | Robinhood | Fraud and Disputes Vendor Management Specialist | Chicago, IL; Denver, CO; Lake Mary, FL; Westlake, TX | full-time | [link](https://boards.greenhouse.io/robinhood/jobs/8357023?t=gh_src=&gh_jid=8357023) |
 |  2026-11-10 | Epic Games |  Gaming Threat Intelligence Analyst | Cary,North Carolina,United States | full-time | [link](https://epicgames.com/careers/jobs/6238833004?gh_jid=6238833004) |
-|  2026-11-10 | Airbnb | Connectivity Partner Specialist | United States | full-time | [link](https://careers.airbnb.com/positions/8372149?gh_jid=8372149) |
 |  2026-11-10 | Databricks | Sales Leader, Commercial | United States | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8936930002) |
+|  2026-11-10 | Discord | Strategic Finance Analyst | San Francisco Bay Area | full-time | [link](https://job-boards.greenhouse.io/discord/jobs/8865033002) |
+|  2026-11-10 | Robinhood | Fraud and Disputes Vendor Management Specialist | Chicago, IL; Denver, CO; Lake Mary, FL; Westlake, TX | full-time | [link](https://boards.greenhouse.io/robinhood/jobs/8357023?t=gh_src=&gh_jid=8357023) |
 |  2026-11-10 | MongoDB | IT Support Lead | New York City | full-time | [link](https://www.mongodb.com/careers/job/?gh_jid=8360183) |
 |  2026-11-10 | MongoDB | Pricing & Monetization Associate | New York City | full-time | [link](https://www.mongodb.com/careers/job/?gh_jid=8372135) |
+|  2026-11-10 | Airbnb | Connectivity Partner Specialist | United States | full-time | [link](https://careers.airbnb.com/positions/8372149?gh_jid=8372149) |
 |  2026-11-10 | DoorDash | Growth Merchant Lead - Emerging Markets (Grand Forks, ND) | Grand Forks, ND | full-time | [link](https://job-boards.greenhouse.io/doordashusa/jobs/8360131) |
 |  2026-11-10 | DoorDash | Growth Merchant Lead - Emerging Markets (Grand Island, NE) | Grand Island, NE | full-time | [link](https://job-boards.greenhouse.io/doordashusa/jobs/8360124) |
 |  2026-11-10 | DoorDash | Growth Merchant Lead - Emerging Markets (Rapid City, SD) | Rapid City, SD | full-time | [link](https://job-boards.greenhouse.io/doordashusa/jobs/8360134) |
@@ -5352,15 +5375,7 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-10 | OpenAI | Subject Matter Expert, Legal | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/bb4e2d58-d481-4e81-ac69-0d99bbf5808e) |
 |  2026-11-10 | NBCUniversal (DreamWorks) | Coordinator, Partner Marketing | Universal City, CALIFORNIA | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000160960999) |
 |  2026-11-10 | NBCUniversal (DreamWorks) | Assignment Desk Editor, NBC & Telemundo Miami | Miramar, Florida | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000160935069) |
-|  2026-11-10 | Snapchat | Ad Product Quality Analyst I | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Ad-Product-Quality-Analyst-I_R0047453-1) |
-|  2026-11-10 | Snapchat | Executive Protection Specialist | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Executive-Protection-Specialist_R0047307-2) |
-|  2026-11-10 | Snapchat | Producer | New York, New York | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/New-York-New-York/Producer_R0047467-1) |
-|  2026-11-10 | Snapchat | Agency Lead | New York, New York | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/New-York-New-York/Agency-Lead_R0046975) |
-|  2026-11-10 | Snapchat | Associate Agency Partner | New York, New York | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/New-York-New-York/Associate-Agency-Partner_R0047074-1) |
-|  2026-11-10 | Snapchat | Lead, Strategy & Operations | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Lead--Support-Content-Program-Manager_R0046390-1) |
-|  2026-11-10 | Snapchat | Trust & Safety Specialist, Global Operations | Los Angeles, California | full-time | [link](https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Los-Angeles-California/Trust---Safety-Specialist--Global-Operations_R0047206-2) |
-|  🆕 2026-11-10 | Intel | Tool Install Qual Operations Specialist | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Tool-Install-Qual-Operations-Specialist_JR0289025) |
-|  2026-11-10 | Warner Bros Games | Producer, CNN Video Editorial | DC Washington 820 1st Street NE | full-time | [link](https://warnerbros.wd5.myworkdayjobs.com/en-US/global/job/DC-Washington-820-1st-Street-NE/Producer--CNN-Video-Editorial_R000107510) |
+|  2026-11-10 | Intel | Analytical Chemistry Lab Technician | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Analytical-Chemistry-Lab-Technician_JR0289037) |
 |  2026-11-10 | Apple | US-Lead | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694076) |
 |  2026-11-10 | Apple | Community Specialist, Channel Retail | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694203) |
 |  2026-11-12 | Cockroach Labs | Escalation Engineer | Remote, United States | full-time | [link](https://www.cockroachlabs.com/careers/job/?gh_jid=8383567) |
@@ -5369,15 +5384,12 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-12 | SpaceX | Manufacturing Engineer, Machining (Starship) | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8939418002?gh_jid=8939418002) |
 |  2026-11-12 | SpaceX | Manufacturing Engineer (Starship Components Operations) | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8939815002?gh_jid=8939815002) |
 |  2026-11-12 | Anduril | Aviation Maintenance Engineer | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5294012007?gh_jid=5294012007) |
-|  🆕 2026-11-12 | Micron | ATE Diffusion Process Engineer | Boise, ID - ID1 | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---ID1/ATE-Diffusion-Process-Engineer_JR117676) |
-|  🆕 2026-11-12 | Micron | Process Integration Engineer | Boise, ID - ID1 | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---ID1/Process-Integration-Engineer_JR117666-1) |
-|  🆕 2026-11-12 | Micron | New College Grad - Dry Etch Process Engineer | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/New-College-Grad---Dry-Etch-Process-Engineer_JR115572) |
-|  🆕 2026-11-12 | Micron | New College Grad - ATE Process Engineer | Boise, ID - ID1 | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---ID1/New-College-Grad---ATE-Process-Engineer_JR107760) |
-|  2026-11-09 | Duolingo | Talent Mobility Specialist | Pittsburgh, PA | full-time | [link](https://careers.duolingo.com/jobs/8935389002?gh_jid=8935389002) |
+|  2026-11-12 | Micron | Experienced Shift Equipment Engineer | Boise, ID - ID1 | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---ID1/Experienced-Shift-Equipment-Engineer_JR112277) |
 |  2026-11-09 | Scale AI | US Executive Branch Policy & International Engagement Lead | Washington, DC | full-time | [link](https://job-boards.greenhouse.io/scaleai/jobs/4752556005) |
+|  2026-11-09 | Duolingo | Talent Mobility Specialist | Pittsburgh, PA | full-time | [link](https://careers.duolingo.com/jobs/8935389002?gh_jid=8935389002) |
 |  2026-11-09 | Nintendo | Assoc Digital Operations Specialist - eShop | Redmond, WA | full-time | [link](https://careers.nintendo.com/?gh_jid=4420408009) |
-|  2026-11-09 | Roblox | Client Partner, Sales – Media & Video Solutions | United States | full-time | [link](https://careers.roblox.com/jobs/8335158?gh_jid=8335158) |
 |  2026-11-09 | Anthropic | Security Risk & Compliance, SOX IT  | San Francisco, CA / Seattle, WA / New York City, NY / Washington, DC | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5477464008) |
+|  2026-11-09 | Roblox | Client Partner, Sales – Media & Video Solutions | United States | full-time | [link](https://careers.roblox.com/jobs/8335158?gh_jid=8335158) |
 |  2026-11-09 | PlayStation (SIE) | Hardware Fleet Operations Specialist | United States, Aliso Viejo, CA | full-time | [link](https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal/jobs/6251255004) |
 |  2026-11-09 | DoorDash | Supervisor, Onsite Support Operations, DoorDash for Business | Austin, TX; San Diego, CA; Chicago, IL; Denver, CO; Philadelphia, PA; Miami, FL; Atlanta, GA, Phoenix, AZ | full-time | [link](https://job-boards.greenhouse.io/doordashusa/jobs/8367293) |
 |  2026-11-09 | Cursor | Community Operations Lead  | San Francisco, CA | full-time | [link](https://jobs.ashbyhq.com/cursor/d59a1083-dce8-4d51-8a48-aebe31577fc4) |
@@ -5385,16 +5397,26 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-09 | OpenAI | Executive in Residence, Cyber | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/6384df1b-c2e0-4265-ad9b-d4a7bca706d6) |
 |  2026-11-09 | NBCUniversal (DreamWorks) | Universal Film Global Distribution – Summer 2027 | New York, NY | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000160654359) |
 |  2026-11-09 | NBCUniversal (DreamWorks) | Universal Film Global Distribution – Summer 2027 | North Hollywood, CA | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000160652668) |
-|  🆕 2026-11-09 | Intel | Analytical Chemistry Lab Technician | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Analytical-Chemistry-Lab-Technician_JR0289037) |
+|  🆕 2026-11-09 | Apple | Storefront Insights Specialist | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693773) |
+|  🆕 2026-11-09 | Apple | Associate, Corporate Development | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200665527) |
+|  🆕 2026-11-09 | Apple | System Electrical Architect (Input Devices) | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200677521) |
+|  🆕 2026-11-09 | Apple | US-Operations Specialist | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694156) |
+|  🆕 2026-11-09 | Apple | System Architect – Product Lifecycle Management (PLM) | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693955) |
+|  🆕 2026-11-09 | Apple | Finance Analyst – Payments – Global Business Solutions | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200694119) |
+|  🆕 2026-11-09 | Apple | RF Systems Architect - Control Algorithms | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200657690) |
+|  🆕 2026-11-09 | Apple | AMR Ops Supply Chain Operations Rotation | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200677136) |
+|  🆕 2026-11-09 | Apple | Tribologist | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693946) |
+|  🆕 2026-11-09 | Apple | Americas Reseller Operations Business & New Product Introduction (NPI) Analyst | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693009) |
+|  🆕 2026-11-09 | Apple | Americas Reseller Operations Business Analyst | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200692995) |
 |  2026-10-16 | Figma | Compliance Engineer | San Francisco, CA • New York, NY • United States | full-time | [link](https://boards.greenhouse.io/figma/jobs/6223155004?gh_jid=6223155004) |
 |  2026-10-16 | PlayStation (SIE) | ServiceNow Developer (Contractor) | United States, San Diego, CA | full-time | [link](https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal/jobs/6218031004) |
 |  2026-10-16 | DoorDash | Electrical Engineer - Consumer Electronics | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/doordashusa/jobs/8288972) |
 |  2026-10-16 | DoorDash | Electrical Engineer - DoorDash Air | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/doordashusa/jobs/8288985) |
 |  2026-10-16 | DoorDash | Radio Frequency Hardware Engineer - DoorDash Air | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/doordashusa/jobs/8289376) |
 |  2026-10-16 | Snowflake | Incident Response Engineer | US-CA-Bay Area-Remote | full-time | [link](https://jobs.ashbyhq.com/snowflake/88a70f56-834d-44d4-add8-e36b739e5495) |
+|  2026-10-16 | Intel | Construction Project Engineer (Civil, Structural, Architectural) | US, Arizona, Phoenix | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Arizona-Phoenix/Construction-Project-Engineer--Civil--Structural--Architectural-_JR0287556) |
 |  2026-11-11 | Anduril | Manufacturing Engineer, Electromagnetic Warfare | Irvine, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5292997007?gh_jid=5292997007) |
-|  🆕 2026-11-11 | Micron | Experienced Shift Equipment Engineer | Boise, ID - ID1 | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---ID1/Experienced-Shift-Equipment-Engineer_JR112277) |
-|  🆕 2026-10-15 | Intel | Construction Project Engineer (Civil, Structural, Architectural) | US, Arizona, Phoenix | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Arizona-Phoenix/Construction-Project-Engineer--Civil--Structural--Architectural-_JR0287556) |
+|  🆕 2026-11-08 | Apple | Hardware Systems Integration (iPhone) | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693800) |
 |  2026-11-10 | Lambda Labs | Hardware Quality Engineer | San Jose Office (Zanker) | full-time | [link](https://jobs.ashbyhq.com/Lambda/9644bc3d-966a-4a5e-85ef-3afbe080a7a6) |
 |  2026-11-10 | Cerebras | Lead Engineer, Critical Facility Operations | Remote (US) | full-time | [link](https://jobs.ashbyhq.com/cerebras/0e00a241-92ad-4ca6-a80f-e8353bf4a36f) |
 |  2026-11-10 | SpaceX | Launch Engineer, Fluid Systems (Starship) | Starbase, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8935948002?gh_jid=8935948002) |
@@ -5403,15 +5425,18 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-10 | SpaceX | Regulatory Affairs Engineer | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8934255002?gh_jid=8934255002) |
 |  2026-11-10 | Anduril | Lead Industrial Engineer | Quonset, Rhode Island, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5281846007?gh_jid=5281846007) |
 |  2026-11-10 | Anduril | Product Quality Engineer, Dive-XL | Quonset, Rhode Island, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5291814007?gh_jid=5291814007) |
+|  2026-11-07 | Intel | Engineering Planning Analyst (Contract) | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Engineering-Planning-Analyst--Contract-_JR0288586) |
+|  2026-11-07 | Intel | NMSi F11x Shift Group Leader for Planar or Lithography - Night Shift | US, New Mexico, Albuquerque | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-New-Mexico-Albuquerque/JR0288711-NMSi-F11x-Shift-Group-Leader-for-Planar-or-Lithography---Night-Shift_JR0288711-1) |
+|  2026-11-07 | Intel | New Mexico Wafer Packaging Manufacturing Advanced Packaging Die Pick Engineering Group Leader | US, New Mexico, Albuquerque | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-New-Mexico-Albuquerque/New-Mexico-Wafer-Packaging-Manufacturing-Advanced-Packaging-Die-Pick-Engineering-Group-Leader_JR0288867) |
 |  2026-11-09 | SpaceX | Design Criteria Engineer (Starshield)  | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8933949002?gh_jid=8933949002) |
 |  2026-11-09 | Anduril | Electrical Sustainment Engineer | Broomfield, Colorado, United States; Fort Collins, Colorado, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5206535007?gh_jid=5206535007) |
 |  2026-11-09 | Harvey | Associate Legal Engineer | San Francisco | full-time | [link](https://jobs.ashbyhq.com/harvey/ac406ea9-bd7f-4a50-9341-8370ceca3949) |
+|  2026-11-06 | Stripe | OpenRouter Product Accounting  | Seattle, San Francisco, New York, Chicago  | full-time | [link](https://stripe.com/jobs/search?gh_jid=8348327) |
 |  2026-11-06 | Anthropic | Brand Strategy Lead, Brand Architecture & Naming | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5475321008) |
 |  2026-11-06 | Anthropic | Legal Specialist, Law Enforcement | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5474559008) |
 |  2026-11-06 | Anthropic | Political Economist, Rule of Law | San Francisco, CA / New York City, NY; Washington, DC | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5474544008) |
 |  2026-11-06 | Anthropic | Strategic Partner Development, Product Partnerships  | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5475830008) |
 |  2026-11-06 | Datadog | Enterprise Sales Executive | Michigan, USA, Remote; Ohio, USA, Remote; Pennsylvania, USA, Remote | full-time | [link](https://careers.datadoghq.com/detail/7463138/?gh_jid=7463138) |
-|  2026-11-06 | Stripe | OpenRouter Product Accounting  | Seattle, San Francisco, New York, Chicago  | full-time | [link](https://stripe.com/jobs/search?gh_jid=8348327) |
 |  2026-11-06 | MongoDB | Candidate Experience Coordinator, Contract | Austin; New York City; San Francisco; United States | full-time | [link](https://www.mongodb.com/careers/job/?gh_jid=8359939) |
 |  2026-11-06 | DoorDash | Shift Lead, DashMart - Wick Field | Milwaukee, WI | full-time | [link](https://job-boards.greenhouse.io/doordashusa/jobs/8359503) |
 |  2026-11-06 | Supabase | GTM, Strategic Planning  | Remote, Global | full-time | [link](https://jobs.ashbyhq.com/supabase/1dfafad5-e177-4d31-bc94-e8b6d0a7a046) |
@@ -5421,32 +5446,47 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-06 | NBCUniversal (DreamWorks) | Assignment Desk Editor - Multiplatform, Telemundo Arizona (Phoenix/Tucson) | Phoenix, Arizona | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000160300670) |
 |  2026-11-06 | NBCUniversal (DreamWorks) | Producer/Editor, Telemundo Al Rojo Vivo | Universal City, CALIFORNIA | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000160291330) |
 |  2026-11-06 | NBCUniversal (DreamWorks) | Security Coordinator, Guest Reception | New York, NEW YORK | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000160282359) |
-|  🆕 2026-11-06 | Intel | Engineering Planning Analyst (Contract) | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Engineering-Planning-Analyst--Contract-_JR0288586) |
-|  🆕 2026-11-06 | Intel | NMSi F11x Shift Group Leader for Planar or Lithography - Night Shift | US, New Mexico, Albuquerque | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-New-Mexico-Albuquerque/JR0288711-NMSi-F11x-Shift-Group-Leader-for-Planar-or-Lithography---Night-Shift_JR0288711-1) |
-|  🆕 2026-11-06 | Intel | New Mexico Wafer Packaging Manufacturing Advanced Packaging Die Pick Engineering Group Leader | US, New Mexico, Albuquerque | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-New-Mexico-Albuquerque/New-Mexico-Wafer-Packaging-Manufacturing-Advanced-Packaging-Die-Pick-Engineering-Group-Leader_JR0288867) |
+|  2026-11-06 | Intel | WPM Module Equipment Technician Nightshift | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/WPM-Module-Equipment-Technician-Nightshift_JR0288646-1) |
+|  🆕 2026-11-06 | Apple | Commercial Lead, New Ventures & Monetization | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693865) |
+|  🆕 2026-11-06 | Apple | US-Genius Admin | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693853) |
+|  🆕 2026-11-06 | Apple | US-Pro | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200689479) |
+|  🆕 2026-11-06 | Apple | US-Genius | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200677612) |
+|  🆕 2026-11-06 | Apple | Tax Technology Lead | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200669513) |
 |  2026-11-08 | SpaceX | Electrical Engineer, Hardware Reliability (Starlink) | Bastrop, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8932403002?gh_jid=8932403002) |
 |  2026-11-08 | SpaceX | Telecommunications Engineer, Fiber | College Station, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8934055002?gh_jid=8934055002) |
 |  2026-11-08 | SpaceX | Wi-Fi Engineer, Hardware Reliability (Starlink) | Bastrop, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8932736002?gh_jid=8932736002) |
 |  2026-11-08 | Harvey | Associate Legal Engineer | Chicago | full-time | [link](https://jobs.ashbyhq.com/harvey/e2613ef0-b37c-42ab-aae2-3b47162a9401) |
 |  2026-11-08 | Harvey | Associate Legal Engineer | Boston | full-time | [link](https://jobs.ashbyhq.com/harvey/eb6318f2-957c-4d2b-8c44-054a0ef049a3) |
 |  2026-11-08 | Harvey | Associate Legal Engineer | Dallas | full-time | [link](https://jobs.ashbyhq.com/harvey/28b62bdc-3d36-47eb-980d-4f52455cc3f2) |
-|  2026-11-05 | Robinhood | Registration and Onboarding Specialist | Chicago, IL; Denver, CO; Lake Mary, FL; New York, NY | full-time | [link](https://boards.greenhouse.io/robinhood/jobs/8356970?t=gh_src=&gh_jid=8356970) |
-|  2026-11-05 | Mercury | Corporate Development Lead | San Francisco, CA, New York, NY, Portland, OR, or Remote within Canada or United States | full-time | [link](https://job-boards.greenhouse.io/mercury/jobs/6250477004) |
-|  2026-11-05 | Instacart | Lifecycle Marketing Coordinator, CRM | United States - Remote | full-time | [link](https://instacart.careers/job/?gh_jid=8355990) |
-|  2026-11-05 | Anthropic | International Equity Accounting and Reporting | San Francisco, CA / Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5463197008) |
-|  2026-11-05 | Anthropic | Public Policy, Strategic Advisory  | San Francisco, CA; Washington, DC | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5473110008) |
 |  2026-11-05 | Stripe | Events Lead, Product & Financial Services | South San Francisco, New York City, or Remote  | full-time | [link](https://stripe.com/jobs/search?gh_jid=8332888) |
 |  2026-11-05 | Stripe | Revenue and Go-to-Market Accounting Lead  | Seattle, San Francisco, New York  | full-time | [link](https://stripe.com/jobs/search?gh_jid=8350920) |
+|  2026-11-05 | Anthropic | International Equity Accounting and Reporting | San Francisco, CA / Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5463197008) |
+|  2026-11-05 | Anthropic | Public Policy, Strategic Advisory  | San Francisco, CA; Washington, DC | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5473110008) |
+|  2026-11-05 | Robinhood | Registration and Onboarding Specialist | Chicago, IL; Denver, CO; Lake Mary, FL; New York, NY | full-time | [link](https://boards.greenhouse.io/robinhood/jobs/8356970?t=gh_src=&gh_jid=8356970) |
 |  2026-11-05 | MongoDB | Lead, Engineering Backup | New York | full-time | [link](https://www.mongodb.com/careers/job/?gh_jid=8353315) |
+|  2026-11-05 | Instacart | Lifecycle Marketing Coordinator, CRM | United States - Remote | full-time | [link](https://instacart.careers/job/?gh_jid=8355990) |
+|  2026-11-05 | Mercury | Corporate Development Lead | San Francisco, CA, New York, NY, Portland, OR, or Remote within Canada or United States | full-time | [link](https://job-boards.greenhouse.io/mercury/jobs/6250477004) |
 |  2026-11-05 | DoorDash | Associate, Dasher & Logistics — Rotational Leadership Program | San Francisco, CA; New York, NY | full-time | [link](https://job-boards.greenhouse.io/doordashusa/jobs/8356727) |
 |  2026-11-05 | ElevenLabs | Talent Lead | London | full-time | [link](https://jobs.ashbyhq.com/ElevenLabs/34e2d52b-f57a-4833-87a1-0a7b0c4c5532) |
 |  2026-11-05 | OpenAI | User Education Lead | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/654f8dde-2ccb-4349-aeb7-40f454f28cce) |
-|  🆕 2026-11-05 | Intel | WPM Module Equipment Technician Nightshift | US, Oregon, Hillsboro | full-time | [link](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/WPM-Module-Equipment-Technician-Nightshift_JR0288646-1) |
+|  🆕 2026-11-05 | Apple | IC Package Integration Lead | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693639) |
+|  🆕 2026-11-05 | Apple | Manufacturing Design | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691589) |
+|  🆕 2026-11-05 | Apple | Layout/Mask Design | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691641) |
+|  🆕 2026-11-05 | Apple | FE Engineering | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691651) |
+|  🆕 2026-11-05 | Apple | Wireless Systems Validation Eng | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691296) |
+|  🆕 2026-11-05 | Apple | Show and Event Coordinator | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691692) |
+|  🆕 2026-11-05 | Apple | Change Management Lead, US Channel Sales BPR | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200693533) |
+|  🆕 2026-11-05 | Apple | Hardware Development | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691711) |
+|  🆕 2026-11-05 | Apple | Strategic Sourcing Specialist | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691699) |
+|  🆕 2026-11-05 | Apple | Telecommunications | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691540) |
+|  🆕 2026-11-05 | Apple | Supply Demand Planner | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691295) |
+|  🆕 2026-11-05 | Apple | Supply Demand Planning | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691593) |
+|  🆕 2026-11-05 | Apple | Manufacturing Quality | United States of America | full-time | [link](https://jobs.apple.com/en-us/details/200691262) |
 |  2026-11-07 | Harvey | Associate Legal Engineer | New York | full-time | [link](https://jobs.ashbyhq.com/harvey/8a6fd2f5-1d8f-40b3-a101-1e792f0ff80a) |
-|  2026-11-04 | GitLab | Lead Journey Architect | Remote, United States | full-time | [link](https://job-boards.greenhouse.io/gitlab/jobs/8929004002) |
-|  2026-11-04 | Coinbase | Prime Financing Trading Analyst | Remote - USA | full-time | [link](https://www.coinbase.com/careers/positions/8351568?gh_jid=8351568) |
-|  2026-11-04 | Anthropic | Learning & Education Specialist | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5462661008) |
 |  2026-11-04 | Stripe | Financial Services Transfer Pricing Strategist | New York, Chicago, Seattle, San Francisco  | full-time | [link](https://stripe.com/jobs/search?gh_jid=8318680) |
+|  2026-11-04 | Anthropic | Learning & Education Specialist | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5462661008) |
+|  2026-11-04 | Coinbase | Prime Financing Trading Analyst | Remote - USA | full-time | [link](https://www.coinbase.com/careers/positions/8351568?gh_jid=8351568) |
+|  2026-11-04 | GitLab | Lead Journey Architect | Remote, United States | full-time | [link](https://job-boards.greenhouse.io/gitlab/jobs/8929004002) |
 |  2026-11-04 | DoorDash | Associate, Enterprise Strategy & Planning | New York, NY | full-time | [link](https://job-boards.greenhouse.io/doordashusa/jobs/8353733) |
 |  2026-11-04 | Cursor | Marketing Strategy & Operations Lead | San Francisco, CA | full-time | [link](https://jobs.ashbyhq.com/cursor/daa01e68-4183-43b3-8599-882ea60d7a60) |
 |  2026-11-04 | Ramp | Partner Development Representative / Advisory and Services | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/390f4cd0-e0e4-451c-ae28-e6b19861dda9) |
@@ -5456,6 +5496,22 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-04 | NBCUniversal (DreamWorks) | Multimedia Journalist Telemundo T31 Orlando, FL | Orlando, Florida | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000159733284) |
 |  2026-11-04 | NBCUniversal (DreamWorks) | Transmission Operator - NBC Sports | Stamford, Connecticut | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000159694381) |
 |  2026-11-04 | NBCUniversal (DreamWorks) | Assistant, Talent & Culture  | Universal City, CALIFORNIA | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000159689357) |
+|  2026-11-03 | Stripe | Renewals Specialist | Chicago | full-time | [link](https://stripe.com/jobs/search?gh_jid=8210218) |
+|  2026-11-03 | Anthropic | Partner Specializations Lead | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5464485008) |
+|  2026-11-03 | Anthropic | People Services Partner, Compliance | San Francisco, CA / New York City, NY / Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5461871008) |
+|  2026-11-03 | Pinterest | Lead Digital Producer | San Francisco, CA, US; Remote, CA, US | full-time | [link](https://www.pinterestcareers.com/jobs/?gh_jid=8268318) |
+|  2026-11-03 | Dropbox | Legal Operations Associate | Remote - US: Select locations | full-time | [link](https://jobs.dropbox.com/listing/8328469?gh_jid=8328469) |
+|  2026-11-03 | Dropbox | Stock Administrator | Remote - US: Select locations | full-time | [link](https://jobs.dropbox.com/listing/8328476?gh_jid=8328476) |
+|  2026-11-03 | Lyft | Digital Ad Ops Coordinator, Lyft Ads | San Francisco, CA | full-time | [link](https://app.careerpuck.com/job-board/lyft/job/8927244002?gh_jid=8927244002) |
+|  2026-11-03 | ElevenLabs | Employee Relations Partner | Remote | full-time | [link](https://jobs.ashbyhq.com/ElevenLabs/9c44055f-3246-42ab-8bb6-d89258a8c43a) |
+|  2026-11-03 | Ramp | Solutions Consultant, Commercial | Remote (US) | full-time | [link](https://jobs.ashbyhq.com/ramp/220e674a-fc70-439f-bacf-687553ca59c9) |
+|  2026-11-03 | Ramp | Travel Operations Lead | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/dba53e68-4c96-449d-af4d-27dc475b814c) |
+|  2026-11-03 | OpenAI | Accounting Lead, Hardware | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/bfecbfa0-6573-4c00-8215-50e271f411bc) |
+|  2026-11-03 | NBCUniversal (DreamWorks) | Freelance Scheduling Coordinator - NBC Sports | Stamford, Connecticut | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000159509155) |
+|  2026-11-03 | NBCUniversal (DreamWorks) | Coordinator, Franchise Mgmt & Brand Mktg | Universal City, CALIFORNIA | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000159487075) |
+|  2026-11-03 | NBCUniversal (DreamWorks) | Multimedia Journalist, Telemundo T51 Miami | Miramar, Florida | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000159448534) |
+|  2026-11-03 | Palantir | Talent Program and Events Strategist | New York, NY | full-time | [link](https://jobs.lever.co/palantir/133e2f49-685b-4234-b118-8d8e6851fb2e) |
+|  2026-11-03 | Google | Global Product Solutions Lead, Verticals Auto | New York, NY, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/115127977376654022) |
 |  2026-11-06 | SpaceX | Environmental Engineer (Compliance) | Cape Canaveral, FL | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8931171002?gh_jid=8931171002) |
 |  2026-11-06 | SpaceX | Environmental Health & Safety Engineer | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8933589002?gh_jid=8933589002) |
 |  2026-11-06 | SpaceX | Environmental Health & Safety Engineer (Satellites) | Redmond, WA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8932797002?gh_jid=8932797002) |
@@ -5465,36 +5521,21 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-06 | SpaceX | Process Safety Engineer | College Station, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8925572002?gh_jid=8925572002) |
 |  2026-11-06 | SpaceX | Propulsion Engineer, Avionics Manufacturing (Raptor) | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8933942002?gh_jid=8933942002) |
 |  2026-11-06 | SpaceX | Propulsion Engineer, Components Manufacturing (Raptor) | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8933926002?gh_jid=8933926002) |
+|  2026-11-06 | Anduril | Curriculum Developer | Santa Ana, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5287840007?gh_jid=5287840007) |
 |  2026-11-06 | Anduril | Supplier Quality Engineer - Sentry  | Irvine, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5243310007?gh_jid=5243310007) |
-|  2026-11-03 | Pinterest | Lead Digital Producer | San Francisco, CA, US; Remote, CA, US | full-time | [link](https://www.pinterestcareers.com/jobs/?gh_jid=8268318) |
-|  2026-11-03 | Dropbox | Legal Operations Associate | Remote - US: Select locations | full-time | [link](https://jobs.dropbox.com/listing/8328469?gh_jid=8328469) |
-|  2026-11-03 | Dropbox | Stock Administrator | Remote - US: Select locations | full-time | [link](https://jobs.dropbox.com/listing/8328476?gh_jid=8328476) |
-|  2026-11-03 | Lyft | Digital Ad Ops Coordinator, Lyft Ads | San Francisco, CA | full-time | [link](https://app.careerpuck.com/job-board/lyft/job/8927244002?gh_jid=8927244002) |
-|  2026-11-03 | Anthropic | Partner Specializations Lead | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5464485008) |
-|  2026-11-03 | Anthropic | People Services Partner, Compliance | San Francisco, CA / New York City, NY / Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5461871008) |
-|  2026-11-03 | Stripe | Renewals Specialist | Chicago | full-time | [link](https://stripe.com/jobs/search?gh_jid=8210218) |
-|  2026-11-03 | ElevenLabs | Employee Relations Partner | Remote | full-time | [link](https://jobs.ashbyhq.com/ElevenLabs/9c44055f-3246-42ab-8bb6-d89258a8c43a) |
-|  2026-11-03 | Ramp | Solutions Consultant, Commercial | Remote (US) | full-time | [link](https://jobs.ashbyhq.com/ramp/220e674a-fc70-439f-bacf-687553ca59c9) |
-|  2026-11-03 | Ramp | Travel Operations Lead | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/dba53e68-4c96-449d-af4d-27dc475b814c) |
-|  2026-11-03 | Palantir | Talent Program and Events Strategist | New York, NY | full-time | [link](https://jobs.lever.co/palantir/133e2f49-685b-4234-b118-8d8e6851fb2e) |
-|  2026-11-03 | OpenAI | Accounting Lead, Hardware | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/bfecbfa0-6573-4c00-8215-50e271f411bc) |
-|  2026-11-03 | NBCUniversal (DreamWorks) | Freelance Scheduling Coordinator - NBC Sports | Stamford, Connecticut | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000159509155) |
-|  2026-11-03 | NBCUniversal (DreamWorks) | Coordinator, Franchise Mgmt & Brand Mktg | Universal City, CALIFORNIA | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000159487075) |
-|  2026-11-03 | NBCUniversal (DreamWorks) | Multimedia Journalist, Telemundo T51 Miami | Miramar, Florida | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000159448534) |
-|  2026-11-03 | Google | Global Product Solutions Lead, Verticals Auto | New York, NY, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/115127977376654022) |
-|  2026-11-02 | Robinhood | Risk Specialist | Menlo Park, CA; New York, NY | full-time | [link](https://boards.greenhouse.io/robinhood/jobs/8334344?t=gh_src=&gh_jid=8334344) |
-|  2026-11-02 | GitLab | Incident & Escalation Lead- Enterprise Customers | Remote, Canada; Remote, United States | full-time | [link](https://job-boards.greenhouse.io/gitlab/jobs/8923121002) |
 |  2026-11-02 | Anthropic | Energy Special Projects | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5469339008) |
 |  2026-11-02 | Anthropic | Energy Supply  Lead - Power Supply and PPA  | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5469341008) |
 |  2026-11-02 | Anthropic | Gas Supply and Transport Lead, US and Canada | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5469337008) |
 |  2026-11-02 | Datadog | Video Script Writer | New York, New York, USA | full-time | [link](https://careers.datadoghq.com/detail/8346246/?gh_jid=8346246) |
 |  2026-11-02 | Cloudflare | Project Coordinator, Professional Services | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8331522?gh_jid=8331522) |
+|  2026-11-02 | Robinhood | Risk Specialist | Menlo Park, CA; New York, NY | full-time | [link](https://boards.greenhouse.io/robinhood/jobs/8334344?t=gh_src=&gh_jid=8334344) |
+|  2026-11-02 | GitLab | Incident & Escalation Lead- Enterprise Customers | Remote, Canada; Remote, United States | full-time | [link](https://job-boards.greenhouse.io/gitlab/jobs/8923121002) |
 |  2026-11-02 | ElevenLabs | Deployment Strategist - North America | United States | full-time | [link](https://jobs.ashbyhq.com/ElevenLabs/8c068ebf-c79f-4f12-97ef-b4c9a4f7ae5f) |
 |  2026-11-02 | ElevenLabs | Partnerships - Private Equity | New York | full-time | [link](https://jobs.ashbyhq.com/ElevenLabs/f1427164-3037-47d1-a768-11cfb87953ae) |
-|  2026-11-02 | Palantir | Sales Finance Operations Analyst | Palo Alto, CA | full-time | [link](https://jobs.lever.co/palantir/d505f854-d339-448b-bf7e-46e2f32cff78) |
 |  2026-11-02 | NBCUniversal (DreamWorks) | Content Producer, NBC Connecticut | Hartford, Connecticut | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000159248324) |
 |  2026-11-02 | NBCUniversal (DreamWorks) | General Assignment Reporter, NBC10 Philadelphia  | Philadelphia, PENNSYLVANIA | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000159235962) |
 |  2026-11-02 | NBCUniversal (DreamWorks) | Project Coordinator, Media Group Decision Sciences | New York, NEW YORK | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000159170845) |
+|  2026-11-02 | Palantir | Sales Finance Operations Analyst | Palo Alto, CA | full-time | [link](https://jobs.lever.co/palantir/d505f854-d339-448b-bf7e-46e2f32cff78) |
 |  2026-11-02 | Google | Global Product GTM Lead, Commercial Strategy | New York, NY, USA | full-time | [link](https://www.google.com/about/careers/applications/jobs/results/129897132957016774) |
 |  2026-11-05 | SpaceX | Equipment Engineer, Solar Cell Metallization (Starlink) | Bastrop, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8932277002?gh_jid=8932277002) |
 |  2026-11-05 | SpaceX | Equipment Engineer, Wet Process (Solar Cells) | Bastrop, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8932274002?gh_jid=8932274002) |
@@ -5509,10 +5550,9 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-04 | SpaceX | Power Electronics Engineer - High Voltage (Starlink) | Redmond, WA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8921006002?gh_jid=8921006002) |
 |  2026-11-04 | SpaceX | RF/Microwave Engineer, Satellites (Starlink)  | Redmond, WA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8928728002?gh_jid=8928728002) |
 |  2026-11-04 | Anduril | Chief Engineer, USMC, Air Defense | Huntsville, Alabama, United States; Irvine, California, United States; Seattle, Washington, United States; Washington, District of Columbia, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5284445007?gh_jid=5284445007) |
-|  2026-11-04 | Anduril | Curriculum Developer | Santa Ana, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5283822007?gh_jid=5283822007) |
 |  2026-11-04 | Anduril | Manufacturing Engineer  | Ashville, Ohio, United States; Costa Mesa, California, United States; McHenry, Mississippi, United States; Quonset, Rhode Island, United States; Raleigh, North Carolina, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5284718007?gh_jid=5284718007) |
-|  2026-11-04 | Anduril | Mission Operations Engineer, USMC (Active Clearance) | Washington, District of Columbia, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5285388007?gh_jid=5285388007) |
 |  2026-11-04 | Anduril | Mission Operations Engineer, USMC (Active Clearance) | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5285383007?gh_jid=5285383007) |
+|  2026-11-04 | Anduril | Mission Operations Engineer, USMC (Active Clearance) | Washington, District of Columbia, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5285388007?gh_jid=5285388007) |
 |  2026-11-04 | Anduril | Product Sourcing Engineer (Batteries/Energy/Etc..) | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5283356007?gh_jid=5283356007) |
 |  2026-11-04 | Anduril | Product Sourcing Engineer, Fury | Ashville, Ohio, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5283927007?gh_jid=5283927007) |
 |  2026-11-04 | Anduril | System Engineer | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5280683007?gh_jid=5280683007) |
@@ -5525,58 +5565,58 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-03 | Anduril | Electrical Engineer, Manufacturing Test | Fort Collins, Colorado, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5283093007?gh_jid=5283093007) |
 |  2026-11-03 | Anduril | Quality Compliance Engineer | Fort Collins, Colorado, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5281730007?gh_jid=5281730007) |
 |  2026-11-03 | Harvey | Legal Engineer (Law Firm, Litigation/Regulatory) | Boston | full-time | [link](https://jobs.ashbyhq.com/harvey/6b91c32f-2fc6-4215-a743-9e83151de61e) |
+|  2026-10-30 | Stripe | Startup Products Strategy & Operations, Insights & Analytics | Remote US | full-time | [link](https://stripe.com/jobs/search?gh_jid=8234710) |
+|  2026-10-30 | Anthropic | Content Strategy Lead, Executive Programs | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5468266008) |
+|  2026-10-30 | Roblox | Critical Harms Investigations & Incident Management Specialist | San Mateo, CA, United States | full-time | [link](https://careers.roblox.com/jobs/8303922?gh_jid=8303922) |
 |  2026-10-30 | Remedy | Pharmacy Packaging Clerk | Syracuse, NY | full-time | [link](https://job-boards.greenhouse.io/remedy/jobs/8925143002) |
-|  2026-10-30 | Asana | Legal Operations Analyst | Chicago | full-time | [link](https://www.asana.com/jobs/apply/8282518?gh_jid=8282518) |
 |  2026-10-30 | Lyft | Fleet Operations Associate | Nashville, TN | full-time | [link](https://app.careerpuck.com/job-board/lyft/job/8925465002?gh_jid=8925465002) |
 |  2026-10-30 | Lyft | Fleet Operations Associate (Day Shift) | Nashville, TN | full-time | [link](https://app.careerpuck.com/job-board/lyft/job/8925486002?gh_jid=8925486002) |
 |  2026-10-30 | Lyft | Fleet Operations Associate (Overnight Shift) | Nashville, TN | full-time | [link](https://app.careerpuck.com/job-board/lyft/job/8925493002?gh_jid=8925493002) |
 |  2026-10-30 | Lyft | Fleet Operations Associate (Swing Shift) | Nashville, TN | full-time | [link](https://app.careerpuck.com/job-board/lyft/job/8925496002?gh_jid=8925496002) |
-|  2026-10-30 | Roblox | Critical Harms Investigations & Incident Management Specialist | San Mateo, CA, United States | full-time | [link](https://careers.roblox.com/jobs/8303922?gh_jid=8303922) |
-|  2026-10-30 | Anthropic | Content Strategy Lead, Executive Programs | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5468266008) |
-|  2026-10-30 | Stripe | Startup Products Strategy & Operations, Insights & Analytics | Remote US | full-time | [link](https://stripe.com/jobs/search?gh_jid=8234710) |
+|  2026-10-30 | Asana | Legal Operations Analyst | Chicago | full-time | [link](https://www.asana.com/jobs/apply/8282518?gh_jid=8282518) |
 |  2026-10-30 | Plaid | Security Compliance Lead | Remote United States | full-time | [link](https://jobs.ashbyhq.com/plaid/4a4fd836-ac5c-4570-8cb2-b50c2e55ede4) |
 |  2026-10-30 | Cohere | Business Operations Lead | New York | full-time | [link](https://jobs.ashbyhq.com/cohere/a3a69960-3c85-4b11-b9b7-d4056d406c2e) |
 |  2026-10-30 | Snowflake | People Systems Analyst | US-CA-Dublin | full-time | [link](https://jobs.ashbyhq.com/snowflake/d23bc607-27d8-48a9-8c12-a455b3c6a820) |
 |  2026-11-02 | SpaceX | Lead Structural Engineer (MEP Design) | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8927481002?gh_jid=8927481002) |
 |  2026-11-02 | SpaceX | Loads and Dynamics Engineer, Satellites (Starlink) | Redmond, WA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8917595002?gh_jid=8917595002) |
 |  2026-11-02 | SpaceX | Manufacturing Engineer (Raptor Combustion Devices Machining) | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8927499002?gh_jid=8927499002) |
-|  2026-11-02 | SpaceX | Operations Engineer (Starshield) | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8927627002?gh_jid=8927627002) |
 |  2026-11-02 | SpaceX | Process Engineer, Wafer Preparation & Assembly (Starlink/Akoustis) | Bastrop, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8925444002?gh_jid=8925444002) |
 |  2026-11-02 | Anduril | Airworthiness Engineer, Rotary Aircraft | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5235387007?gh_jid=5235387007) |
 |  2026-11-02 | Anduril | Product Sourcing Engineer | Quincy, Massachusetts, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5237644007?gh_jid=5237644007) |
 |  2026-11-02 | Anduril | Product Support Engineer, Altius | Atlanta, Georgia, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5281513007?gh_jid=5281513007) |
-|  2026-10-29 | Brex | Analyst, Banking Operations (Domestic) | New York, New York, United States | full-time | [link](https://www.brex.com/careers/8924533002?gh_jid=8924533002) |
-|  2026-10-29 | Brex | Analyst, Banking Operations (Domestic) | Salt Lake City, Utah, United States | full-time | [link](https://www.brex.com/careers/8923923002?gh_jid=8923923002) |
 |  2026-10-29 | Datadog | Immigration and Mobility Program Lead | New York, New York, USA | full-time | [link](https://careers.datadoghq.com/detail/8328266/?gh_jid=8328266) |
 |  2026-10-29 | Cloudflare | Client Executive, SLED | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8332361?gh_jid=8332361) |
+|  2026-10-29 | Brex | Analyst, Banking Operations (Domestic) | Salt Lake City, Utah, United States | full-time | [link](https://www.brex.com/careers/8923923002?gh_jid=8923923002) |
+|  2026-10-29 | Brex | Analyst, Banking Operations (Domestic) | New York, New York, United States | full-time | [link](https://www.brex.com/careers/8924533002?gh_jid=8924533002) |
 |  2026-10-29 | ElevenLabs | Revenue Strategy & Operations | United States | full-time | [link](https://jobs.ashbyhq.com/ElevenLabs/b28719ff-833d-49b4-8286-f59082732186) |
 |  2026-10-29 | Plaid | Economist, Macro & Economic Insights | San Francisco HQ | full-time | [link](https://jobs.ashbyhq.com/plaid/3a15bd9d-e44c-4f88-bdbe-3f75d9053002) |
 |  2026-10-29 | OpenAI | Trusted Access Specialist, Critical Harm Operations | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/5ebf3a52-0023-484c-a0fd-75f6ec7483ca) |
 |  2026-10-29 | OpenAI | Trusted Access Lead, Critical Harm Operations | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/500c16b5-26ca-46be-9280-abbfff3b5c2b) |
 |  2026-10-29 | NBCUniversal (DreamWorks) | Retail Merchandiser, Universal Studios Hollywood  | Universal City, CALIFORNIA | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000158608877) |
 |  2026-10-29 | NBCUniversal (DreamWorks) |  Multi-Media Journalist, Telemundo T62 Filadelfia | Philadelphia, PENNSYLVANIA | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000158603929) |
-|  2026-10-28 | Airtable | Renewals Associate | Remote - US | full-time | [link](https://job-boards.greenhouse.io/airtable/jobs/8905022002) |
 |  2026-10-28 | Stripe | Finance & Strategy Specialist | United States | full-time | [link](https://stripe.com/jobs/search?gh_jid=8287914) |
 |  2026-10-28 | MongoDB | SVP, Revenue Marketing | United States | full-time | [link](https://www.mongodb.com/careers/job/?gh_jid=8331479) |
+|  2026-10-28 | Airtable | Renewals Associate | Remote - US | full-time | [link](https://job-boards.greenhouse.io/airtable/jobs/8905022002) |
 |  2026-10-28 | ElevenLabs | Public Sector Partnerships - US | United States | full-time | [link](https://jobs.ashbyhq.com/ElevenLabs/71b1f886-593a-43a3-86db-1ab8e2a83496) |
 |  2026-10-28 | OpenAI | Communications Lead, Cyber | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/c12ea9bc-8590-4913-a213-1977296fb3db) |
 |  2026-10-28 | NBCUniversal (DreamWorks) | Coordinator Digital Operations, Corporate Communications  | New York, NEW YORK | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000158293820) |
-|  2026-10-31 | Anduril | RF Engineer | Broomfield, Colorado, United States; Fort Collins, Colorado, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5281151007?gh_jid=5281151007) |
+|  🆕 2026-11-15 | Sardine | Lead, Agentic Commerce (Product & GTM) | Berkeley, California | full-time | [link](https://jobs.ashbyhq.com/sardine/9d67eba9-e460-4409-9e1c-353f55d983c9) |
 |  2026-10-27 | Vercel | Sales Strategy & Operations, Enterprise | Hybrid - San Francisco, New York City | full-time | [link](https://job-boards.greenhouse.io/vercel/jobs/6236516004) |
 |  2026-10-27 | Vercel | Strategy and Planning Lead | Hybrid - San Francisco, New York City | full-time | [link](https://job-boards.greenhouse.io/vercel/jobs/6236530004) |
 |  2026-10-27 | Nintendo | Bilingual Communications Coordinator (Japanese) | Redmond, WA | full-time | [link](https://careers.nintendo.com/?gh_jid=4456691009) |
-|  2026-10-27 | Robinhood |  Sanctions Crypto Investigator  | Denver, CO; New York, NY; Westlake, TX | full-time | [link](https://boards.greenhouse.io/robinhood/jobs/8162450?t=gh_src=&gh_jid=8162450) |
-|  2026-10-27 | Asana | CX Technical Enablement Partner | Chicago | full-time | [link](https://www.asana.com/jobs/apply/8315830?gh_jid=8315830) |
-|  2026-10-27 | Lyft | Operations Associate, Flexdrive | Milwaukee, WI | full-time | [link](https://app.careerpuck.com/job-board/lyft/job/8919442002?gh_jid=8919442002) |
-|  2026-10-27 | Roblox | Talent Sourcing Partner (Short-Term) | San Mateo, CA, United States | full-time | [link](https://careers.roblox.com/jobs/8080046?gh_jid=8080046) |
 |  2026-10-27 | Datadog | Enterprise Security Sales Specialist | Chicago, Illinois, USA | full-time | [link](https://careers.datadoghq.com/detail/8237332/?gh_jid=8237332) |
+|  2026-10-27 | Roblox | Talent Sourcing Partner (Short-Term) | San Mateo, CA, United States | full-time | [link](https://careers.roblox.com/jobs/8080046?gh_jid=8080046) |
+|  2026-10-27 | Robinhood |  Sanctions Crypto Investigator  | Denver, CO; New York, NY; Westlake, TX | full-time | [link](https://boards.greenhouse.io/robinhood/jobs/8162450?t=gh_src=&gh_jid=8162450) |
+|  2026-10-27 | Lyft | Operations Associate, Flexdrive | Milwaukee, WI | full-time | [link](https://app.careerpuck.com/job-board/lyft/job/8919442002?gh_jid=8919442002) |
+|  2026-10-27 | Asana | CX Technical Enablement Partner | Chicago | full-time | [link](https://www.asana.com/jobs/apply/8315830?gh_jid=8315830) |
 |  2026-10-27 | NBCUniversal (DreamWorks) | Rental Agent | Long Island City, NEW YORK | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000158059054) |
-|  2026-10-26 | Robinhood | Trading Specialist | Chicago, IL; Denver, CO; Lake Mary, FL; New York, NY | full-time | [link](https://boards.greenhouse.io/robinhood/jobs/8289855?t=gh_src=&gh_jid=8289855) |
-|  2026-10-26 | Lyft | Fleet Operations Lead | Nashville, TN | full-time | [link](https://app.careerpuck.com/job-board/lyft/job/8910495002?gh_jid=8910495002) |
-|  2026-10-26 | Reddit | Revenue Strategy & Operations Partner | New York City, NY | full-time | [link](https://job-boards.greenhouse.io/reddit/jobs/8289304) |
-|  2026-10-26 | GitLab | Lead Investor Relations | Remote, Canada; Remote, United States | full-time | [link](https://job-boards.greenhouse.io/gitlab/jobs/8895451002) |
-|  2026-10-26 | Affirm | Implementation Specialist I | Remote US | full-time | [link](https://job-boards.greenhouse.io/affirm/jobs/8040794003) |
+|  2026-10-31 | Anduril | RF Engineer | Broomfield, Colorado, United States; Fort Collins, Colorado, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5281151007?gh_jid=5281151007) |
 |  2026-10-26 | Databricks | CustomerLake Sales Specialist | United States | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8882986002) |
+|  2026-10-26 | Reddit | Revenue Strategy & Operations Partner | New York City, NY | full-time | [link](https://job-boards.greenhouse.io/reddit/jobs/8289304) |
+|  2026-10-26 | Robinhood | Trading Specialist | Chicago, IL; Denver, CO; Lake Mary, FL; New York, NY | full-time | [link](https://boards.greenhouse.io/robinhood/jobs/8289855?t=gh_src=&gh_jid=8289855) |
+|  2026-10-26 | GitLab | Lead Investor Relations | Remote, Canada; Remote, United States | full-time | [link](https://job-boards.greenhouse.io/gitlab/jobs/8895451002) |
+|  2026-10-26 | Lyft | Fleet Operations Lead | Nashville, TN | full-time | [link](https://app.careerpuck.com/job-board/lyft/job/8910495002?gh_jid=8910495002) |
+|  2026-10-26 | Affirm | Implementation Specialist I | Remote US | full-time | [link](https://job-boards.greenhouse.io/affirm/jobs/8040794003) |
 |  2026-10-26 | Supabase | Video Producer | Remote, San Francisco, CA, US | full-time | [link](https://jobs.ashbyhq.com/supabase/05226c15-0501-4559-833d-3815fdf01f56) |
 |  2026-10-26 | NBCUniversal (DreamWorks) | Specialist, Olympic Sales | New York, NEW YORK | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000157902039) |
 |  2026-10-30 | xAI | Operation & Maintenance Engineer (Power Plant) - Memphis |  Southaven, MS; Memphis, TN | full-time | [link](https://job-boards.greenhouse.io/xai/jobs/5279894007) |
@@ -5585,20 +5625,26 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-30 | SpaceX | Electrical Safety Engineer | McGregor, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8925461002?gh_jid=8925461002) |
 |  2026-10-30 | SpaceX | GNC Engineer, Collision Avoidance (Starlink) | Redmond, WA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8923946002?gh_jid=8923946002) |
 |  2026-10-30 | SpaceX | Launch Pad Engineer, Fluid Systems (Falcon 9) | Vandenberg, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8924273002?gh_jid=8924273002) |
-|  2026-10-30 | SpaceX | Splunk Engineer | Starbase, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8925448002?gh_jid=8925448002) |
-|  2026-10-30 | SpaceX | Splunk Engineer | Bastrop, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8925449002?gh_jid=8925449002) |
-|  2026-10-30 | SpaceX | Splunk Engineer | Cape Canaveral, FL | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8925450002?gh_jid=8925450002) |
 |  2026-10-30 | SpaceX | Splunk Engineer | Washington, DC | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8925456002?gh_jid=8925456002) |
+|  2026-10-30 | SpaceX | Splunk Engineer | Cape Canaveral, FL | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8925450002?gh_jid=8925450002) |
+|  2026-10-30 | SpaceX | Splunk Engineer | Bastrop, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8925449002?gh_jid=8925449002) |
+|  2026-10-30 | SpaceX | Splunk Engineer | Starbase, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8925448002?gh_jid=8925448002) |
 |  2026-10-30 | SpaceX | Tooling Engineer, Plastic Injection Molding (Starlink)  | Bastrop, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8924763002?gh_jid=8924763002) |
 |  2026-10-30 | Anduril | Fall 2027 Manufacturing Engineer Co-op | Ashville, Ohio, United States; Quincy, Massachusetts, United States; Santa Ana, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5280611007?gh_jid=5280611007) |
 |  2026-10-30 | Anduril | Lead Communications Engineer (SATCOM / RF / Acoustics) - Maritime | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5279416007?gh_jid=5279416007) |
 |  2026-10-30 | Anduril | Manufacturing Engineer | Lexington, Massachusetts, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5280578007?gh_jid=5280578007) |
 |  2026-10-30 | Anduril | Mission Operations Engineer, Connected Warfare | Herndon, Virginia, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5268869007?gh_jid=5268869007) |
 |  2026-10-30 | Anduril | Product Support Engineer - (Sustainment/Reliability/Maintainability) | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5249040007?gh_jid=5249040007) |
-|  🆕 2026-11-14 | Physical Intelligence | Robot Service Technician Shift Lead | San Francisco | full-time | [link](https://jobs.ashbyhq.com/physicalintelligence/b0de3fd2-fb06-48d4-adf9-c7964e1cbc55) |
-|  🆕 2026-11-14 | SpaceX | TIG Welder (Starship) | Starbase, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8943425002?gh_jid=8943425002) |
-|  🆕 2026-11-14 | Harvey | Marketing Coordinator, Brand Partnerships | New York | full-time | [link](https://jobs.ashbyhq.com/harvey/ba8a6b0a-f791-4d06-8f1a-b960825cd7f8) |
+|  2026-11-14 | Physical Intelligence | Robot Service Technician Shift Lead | San Francisco | full-time | [link](https://jobs.ashbyhq.com/physicalintelligence/b0de3fd2-fb06-48d4-adf9-c7964e1cbc55) |
+|  2026-11-14 | SpaceX | TIG Welder (Starship) | Starbase, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8943425002?gh_jid=8943425002) |
+|  2026-11-14 | Harvey | Marketing Coordinator, Brand Partnerships | New York | full-time | [link](https://jobs.ashbyhq.com/harvey/ba8a6b0a-f791-4d06-8f1a-b960825cd7f8) |
 |  2026-11-14 | Crusoe | Site Acceptance Testing Technician | Remote - US | full-time | [link](https://jobs.ashbyhq.com/Crusoe/2b238a5d-f634-4255-8d51-c17f05dfd29f) |
+|  2026-11-14 | Micron | GEL Site Lead | San Jose, CA | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/San-Jose-CA/GEL-Site-Lead_JR108232) |
+|  2026-11-14 | Micron | Process Integration Conversion Coordinator | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Process-Integration-Conversion-Coordinator_JR117321) |
+|  2026-11-14 | Micron | Area Manufacturing Tactical Planner | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Area-Manufacturing-Tactical-Planner_JR117143) |
+|  2026-11-14 | Micron | Fab Support Equipment Technician | Manassas, VA -  Fab 6 | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Manassas-VA----Fab-6/Fab-Support-Equipment-Technician_JR117708) |
+|  2026-11-14 | Salesforce | Event Broadcast Specialist | California - San Francisco | full-time | [link](https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/job/California---San-Francisco/Event-Broadcast-Specialist_JR367654) |
+|  2026-11-14 | PayPal | Global Influencer, PayPal | Chicago, Illinois, United States of America | full-time | [link](https://paypal.wd1.myworkdayjobs.com/en-US/jobs/job/Chicago-Illinois-United-States-of-America/Global-Influencer--PayPal_R0139105) |
 |  2026-10-29 | SpaceX | Automation & Controls Engineer, Assembly Manufacturing (Starlink) | Bastrop, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8922445002?gh_jid=8922445002) |
 |  2026-10-29 | SpaceX | Fiber Engineer | Memphis, TN | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8924773002?gh_jid=8924773002) |
 |  2026-10-29 | SpaceX | Lead Manufacturing Engineer, Mesh Optical (Starmind) | Bastrop, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8923484002?gh_jid=8923484002) |
@@ -5615,11 +5661,11 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-28 | Anduril | Quality Engineer, Analytics | Atlanta, Georgia, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5278364007?gh_jid=5278364007) |
 |  2026-10-23 | Naughty Dog | Associate Producer | United States, Santa Monica, CA | full-time | [link](https://job-boards.greenhouse.io/naughtydog/jobs/6232209004) |
 |  2026-10-23 | Naughty Dog | Producer | United States, Santa Monica, CA | full-time | [link](https://job-boards.greenhouse.io/naughtydog/jobs/6232783004) |
+|  2026-10-23 | Reddit | Lead Product Adoption Strategist, SMB | Chicago, IL; New York City, NY | full-time | [link](https://job-boards.greenhouse.io/reddit/jobs/8263435) |
 |  2026-10-23 | Pinterest | Retail Transformation Lead | Remote, US | full-time | [link](https://www.pinterestcareers.com/jobs/?gh_jid=8287192) |
 |  2026-10-23 | Dropbox | Integrated Campaign Strategist | Remote - US: Select locations | full-time | [link](https://jobs.dropbox.com/listing/8249957?gh_jid=8249957) |
-|  2026-10-23 | Mercury | Workplace Experience Specialist - NYC | New York, NY | full-time | [link](https://job-boards.greenhouse.io/mercury/jobs/6232781004) |
-|  2026-10-23 | Reddit | Lead Product Adoption Strategist, SMB | Chicago, IL; New York City, NY | full-time | [link](https://job-boards.greenhouse.io/reddit/jobs/8263435) |
 |  2026-10-23 | GitLab | Ecosystem Operations Specialist | Remote, Canada; Remote, United States | full-time | [link](https://job-boards.greenhouse.io/gitlab/jobs/8907694002) |
+|  2026-10-23 | Mercury | Workplace Experience Specialist - NYC | New York, NY | full-time | [link](https://job-boards.greenhouse.io/mercury/jobs/6232781004) |
 |  2026-10-23 | PlayStation (SIE) | Audience Business Analyst | United States, San Mateo, CA | full-time | [link](https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal/jobs/6231005004) |
 |  2026-10-23 | Perplexity | Legal Response Specialist | San Francisco | full-time | [link](https://jobs.ashbyhq.com/Perplexity/ffa25e26-9675-4ab1-bc98-325675879e1d) |
 |  2026-10-23 | Perplexity | Compensation Lead | San Francisco | full-time | [link](https://jobs.ashbyhq.com/Perplexity/94e1b3a4-c773-4ee8-982a-ac9be04fbca8) |
@@ -5627,11 +5673,31 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-23 | OpenAI | Strategic Finance Generalist | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/f93ed20a-4a1c-43b4-895f-0830cdac6737) |
 |  2026-10-23 | NBCUniversal (DreamWorks) | Sales Commercial Producer - NBC4 & Telemundo 44 Washington D.C. | Washington, District of Columbia | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000157546949) |
 |  2026-10-23 | NBCUniversal (DreamWorks) | Producer, NBC & Telemundo San Diego | San Diego, CALIFORNIA | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000157524364) |
-|  2026-11-13 | Faire | Verifications Associate | San Francisco, CA | full-time | [link](https://boards.greenhouse.io/faire/jobs/8943515002?gh_jid=8943515002) |
+|  2026-10-22 | Nintendo | Assoc Logistics & Customs Specialist | North Bend, WA | full-time | [link](https://careers.nintendo.com/?gh_jid=4429107009) |
+|  2026-10-22 | Anthropic | Corporate Accounting | San Francisco, CA / Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5451768008) |
+|  2026-10-22 | Anthropic | Partner Enablement Lead, Beneficial Deployments | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5456939008) |
+|  2026-10-22 | Anthropic | Technical Editor  | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5443997008) |
+|  2026-10-22 | Reddit | Creative Strategist (M&E/Retail) | Los Angeles, CA | full-time | [link](https://job-boards.greenhouse.io/reddit/jobs/8191664) |
+|  2026-10-22 | Coinbase | Analyst, Privacy (Privacy Assessments) | Remote - USA | full-time | [link](https://www.coinbase.com/careers/positions/8281622?gh_jid=8281622) |
+|  2026-10-22 | Pinterest | Product Policy Lead, Ads | San Francisco, CA, US; Remote, US | full-time | [link](https://www.pinterestcareers.com/jobs/?gh_jid=8287196) |
+|  2026-10-22 | Cloudflare | Customer Security Compliance Specialist | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8311164?gh_jid=8311164) |
+|  2026-10-22 | Cloudflare | Product Cost Analyst | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8305918?gh_jid=8305918) |
+|  2026-10-22 | Remedy | Pharmacy Technician | Houston, TX | full-time | [link](https://job-boards.greenhouse.io/remedy/jobs/8910348002) |
+|  2026-10-22 | OpenAI | Researcher, Misalignment Monitoring Lead | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/c955617d-f465-4f7a-b57c-98284fd14777) |
+|  2026-10-22 | NBCUniversal (DreamWorks) | Distribution Operations Project Specialist | Stamford, Connecticut | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000157206147) |
+|  2026-10-22 | Warner Bros Games | Associate Producer, CNN VOD Streaming | DC Washington 820 1st Street NE | full-time | [link](https://warnerbros.wd5.myworkdayjobs.com/en-US/global/job/DC-Washington-820-1st-Street-NE/Associate-Producer--CNN-VOD-Streaming_R000105826) |
+|  2026-10-22 | Warner Bros Games | Commercial Electrician | GA Atlanta 1050 Techwood Drive NW | full-time | [link](https://warnerbros.wd5.myworkdayjobs.com/en-US/global/job/GA-Atlanta-1050-Techwood-Drive-NW/Commercial-Electrician_R000097134) |
+|  2026-10-22 | Warner Bros Games | Lead Electrician | GA Atlanta 1050 Techwood Drive NW | full-time | [link](https://warnerbros.wd5.myworkdayjobs.com/en-US/global/job/GA-Atlanta-1050-Techwood-Drive-NW/Lead-Electrician_R000106344) |
+|  2026-10-22 | Warner Bros Games | News Desk Producer, CNN | DC Washington 820 1st Street NE | full-time | [link](https://warnerbros.wd5.myworkdayjobs.com/en-US/global/job/DC-Washington-820-1st-Street-NE/News-Desk-Producer--CNN_R000107699) |
+|  2026-10-22 | Warner Bros Games | Producer, CNN en Español | FL Miami 6505 Blue Lagoon Dri | full-time | [link](https://warnerbros.wd5.myworkdayjobs.com/en-US/global/job/FL-Miami-6505-Blue-Lagoon-Dri/Producer--CNN-en-Espaol_R000104977) |
+|  2026-10-22 | Warner Bros Games | Publicist-CNN Morning Programming | NY New York 30 Hudson Yards | full-time | [link](https://warnerbros.wd5.myworkdayjobs.com/en-US/global/job/NY-New-York-30-Hudson-Yards/Publicist-CNN-Morning-Programming_R000108961) |
+|  2026-10-22 | Warner Bros Games | Remote Operations Center Specialist (Live Sports & Entertainment) | GA Atlanta 1050 Techwood Drive NW | full-time | [link](https://warnerbros.wd5.myworkdayjobs.com/en-US/global/job/GA-Atlanta-1050-Techwood-Drive-NW/Remote-Operations-Center-Specialist_R000108691-1) |
+|  2026-10-22 | Warner Bros Games | Supervisor, Global Field Engineering (News & Sports Live Production & Broadcast) | GA Atlanta 1050 Techwood Drive NW | full-time | [link](https://warnerbros.wd5.myworkdayjobs.com/en-US/global/job/GA-Atlanta-1050-Techwood-Drive-NW/Supervisor--Global-Field-Engineering_R000108938) |
 |  2026-11-13 | Hasbro (WotC) | Commercial Excess Inventory Analyst | Boston, Massachusetts, United States | full-time | [link](https://job-boards.greenhouse.io/hasbro/jobs/4442935009) |
+|  2026-11-13 | Faire | Verifications Associate | San Francisco, CA | full-time | [link](https://boards.greenhouse.io/faire/jobs/8943515002?gh_jid=8943515002) |
 |  2026-11-13 | Fivetran | Technical Revenue Accounting Lead | Oakland, California, United States, AMER | full-time | [link](https://www.fivetran.com/careers/job?gh_jid=8202963003) |
-|  2026-11-13 | xAI | Supervisor, Fire Protection - Memphis | Memphis, TN | full-time | [link](https://job-boards.greenhouse.io/xai/jobs/5294031007) |
 |  2026-11-13 | Samsara | AVP, Federal Sales | Remote - US | full-time | [link](https://www.samsara.com/company/careers/roles/8353780?gh_jid=8353780) |
+|  2026-11-13 | xAI | Supervisor, Fire Protection - Memphis | Memphis, TN | full-time | [link](https://job-boards.greenhouse.io/xai/jobs/5294031007) |
 |  2026-11-13 | Baseten | Legal, Commercial | San Francisco | full-time | [link](https://jobs.ashbyhq.com/baseten/cfcb4e4c-e0bb-4055-bdec-dd08fc2df505) |
 |  2026-11-13 | Baseten | Legal, Partnerships | San Francisco | full-time | [link](https://jobs.ashbyhq.com/baseten/c29d0cad-d4e4-4f96-b5f3-57b33150fcab) |
 |  2026-11-13 | SpaceX | Integration Specialist (Starlink Aviation) - 2nd Shift | Woodinville, WA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8937225002?gh_jid=8937225002) |
@@ -5641,30 +5707,12 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-13 | SpaceX | Process Operator Specialist, Air Separation Unit (Starship) - Level 4/5 - Night Shift | Starbase, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8943271002?gh_jid=8943271002) |
 |  2026-11-13 | SpaceX | Sourcing Specialist (Raptor) | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8943221002?gh_jid=8943221002) |
 |  2026-11-13 | SpaceX | Sourcing Specialist (Starship) | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8943214002?gh_jid=8943214002) |
-|  2026-11-13 | SpaceX | Sourcing Specialist (Starship) | Starbase, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8943224002?gh_jid=8943224002) |
 |  2026-11-13 | SpaceX | Supervisor, Logistics - Shipping & Outsourcing (Materials Management) | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8943044002?gh_jid=8943044002) |
 |  2026-11-13 | Anduril | Production Scheduler, Intelligence Systems | Ashville, Ohio, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5293939007?gh_jid=5293939007) |
 |  2026-11-13 | Anduril | R&D Engineering Technician | Hudson, New Hampshire, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5295004007?gh_jid=5295004007) |
 |  2026-11-13 | Anduril | Technical Publications Specialist - Advanced Effects | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5294029007?gh_jid=5294029007) |
 |  2026-11-13 | Crusoe | Continuous Improvement Specialist | Brighton, CO - US | full-time | [link](https://jobs.ashbyhq.com/Crusoe/ad314d82-5592-48a6-a15c-a5139612e7f6) |
-|  2026-11-13 | Salesforce | Event Broadcast Specialist | California - San Francisco | full-time | [link](https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/job/California---San-Francisco/Event-Broadcast-Specialist_JR367654) |
-|  🆕 2026-11-13 | Micron | GEL Site Lead | San Jose, CA | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/San-Jose-CA/GEL-Site-Lead_JR108232) |
-|  🆕 2026-11-13 | Micron | Process Integration Conversion Coordinator | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Process-Integration-Conversion-Coordinator_JR117321) |
-|  🆕 2026-11-13 | Micron | Area Manufacturing Tactical Planner | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Area-Manufacturing-Tactical-Planner_JR117143) |
-|  🆕 2026-11-13 | Micron | Fab Support Equipment Technician | Manassas, VA -  Fab 6 | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Manassas-VA----Fab-6/Fab-Support-Equipment-Technician_JR117708) |
-|  2026-11-13 | PayPal | Global Influencer, PayPal | Chicago, Illinois, United States of America | full-time | [link](https://paypal.wd1.myworkdayjobs.com/en-US/jobs/job/Chicago-Illinois-United-States-of-America/Global-Influencer--PayPal_R0139105) |
-|  2026-10-22 | Nintendo | Assoc Logistics & Customs Specialist | North Bend, WA | full-time | [link](https://careers.nintendo.com/?gh_jid=4429107009) |
-|  2026-10-22 | Remedy | Pharmacy Technician | Houston, TX | full-time | [link](https://job-boards.greenhouse.io/remedy/jobs/8910348002) |
-|  2026-10-22 | Pinterest | Product Policy Lead, Ads | San Francisco, CA, US; Remote, US | full-time | [link](https://www.pinterestcareers.com/jobs/?gh_jid=8287196) |
-|  2026-10-22 | Reddit | Creative Strategist (M&E/Retail) | Los Angeles, CA | full-time | [link](https://job-boards.greenhouse.io/reddit/jobs/8191664) |
-|  2026-10-22 | Coinbase | Analyst, Privacy (Privacy Assessments) | Remote - USA | full-time | [link](https://www.coinbase.com/careers/positions/8281622?gh_jid=8281622) |
-|  2026-10-22 | Anthropic | Corporate Accounting | San Francisco, CA / Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5451768008) |
-|  2026-10-22 | Anthropic | Partner Enablement Lead, Beneficial Deployments | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5456939008) |
-|  2026-10-22 | Anthropic | Technical Editor  | San Francisco, CA / New York City, NY | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5443997008) |
-|  2026-10-22 | Cloudflare | Customer Security Compliance Specialist | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8311164?gh_jid=8311164) |
-|  2026-10-22 | Cloudflare | Product Cost Analyst | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8305918?gh_jid=8305918) |
-|  2026-10-22 | OpenAI | Researcher, Misalignment Monitoring Lead | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/c955617d-f465-4f7a-b57c-98284fd14777) |
-|  2026-10-22 | NBCUniversal (DreamWorks) | Distribution Operations Project Specialist | Stamford, Connecticut | full-time | [link](https://jobs.smartrecruiters.com/NBCUniversal3/744000157206147) |
+|  2026-11-13 | Micron | CMOS Device Integration and modeling lead - MTS | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/CMOS-Device-Integration-and-modeling-lead---MTS_JR116881) |
 |  2026-10-27 | SpaceX | Electrical Engineer (Starship Avionics) | Starbase, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8882529002?gh_jid=8882529002) |
 |  2026-10-27 | SpaceX | Propulsion Engineer (Raptor Test) | McGregor, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8920150002?gh_jid=8920150002) |
 |  2026-10-27 | SpaceX | Starship Engineer | Starbase, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8919699002?gh_jid=8919699002) |
@@ -5672,39 +5720,39 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-27 | SpaceX | Tooling Engineer, Starship Components (Materials Engineering) | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8918376002?gh_jid=8918376002) |
 |  2026-10-27 | Anduril | Manufacturing Engineer, Composites Development | Morrisville, North Carolina, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5229600007?gh_jid=5229600007) |
 |  2026-10-27 | Anduril | Manufacturing Engineer, Fury Airframe Launch Team | Ashville, Ohio, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5277825007?gh_jid=5277825007) |
-|  2026-10-21 | Discord | Public Affairs Advisor | San Francisco Bay Area | full-time | [link](https://job-boards.greenhouse.io/discord/jobs/8904389002) |
-|  2026-10-21 | Mercury | Business Continuity Management Lead | San Francisco, CA, New York, NY, Portland, OR, or Remote within Canada or United States | full-time | [link](https://job-boards.greenhouse.io/mercury/jobs/6230246004) |
-|  2026-10-21 | Instacart | Social Content Producer | United States - Remote | full-time | [link](https://instacart.careers/job/?gh_jid=8304832) |
-|  2026-10-21 | Affirm | Contract Management Specialist II | Remote US | full-time | [link](https://job-boards.greenhouse.io/affirm/jobs/8037635003) |
-|  2026-10-21 | Brex | Fraud Strategy Associate | Seattle, Washington, United States | full-time | [link](https://www.brex.com/careers/8907623002?gh_jid=8907623002) |
-|  2026-10-21 | Brex | Fraud Strategy Associate | New York, New York, United States | full-time | [link](https://www.brex.com/careers/8907584002?gh_jid=8907584002) |
-|  2026-10-21 | Brex | Fraud Strategy Associate | San Francisco, California, United States | full-time | [link](https://www.brex.com/careers/8907563002?gh_jid=8907563002) |
-|  2026-10-21 | Brex | Fraud Strategy Associate | Salt Lake City, Utah, United States | full-time | [link](https://www.brex.com/careers/8907553002?gh_jid=8907553002) |
 |  2026-10-21 | Anthropic | Audit Operations Lead | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5459290008) |
 |  2026-10-21 | Databricks | Genie Global Sales Leader | United States | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8821955002) |
+|  2026-10-21 | Discord | Public Affairs Advisor | San Francisco Bay Area | full-time | [link](https://job-boards.greenhouse.io/discord/jobs/8904389002) |
+|  2026-10-21 | Instacart | Social Content Producer | United States - Remote | full-time | [link](https://instacart.careers/job/?gh_jid=8304832) |
+|  2026-10-21 | Mercury | Business Continuity Management Lead | San Francisco, CA, New York, NY, Portland, OR, or Remote within Canada or United States | full-time | [link](https://job-boards.greenhouse.io/mercury/jobs/6230246004) |
+|  2026-10-21 | Affirm | Contract Management Specialist II | Remote US | full-time | [link](https://job-boards.greenhouse.io/affirm/jobs/8037635003) |
+|  2026-10-21 | Brex | Fraud Strategy Associate | San Francisco, California, United States | full-time | [link](https://www.brex.com/careers/8907563002?gh_jid=8907563002) |
+|  2026-10-21 | Brex | Fraud Strategy Associate | New York, New York, United States | full-time | [link](https://www.brex.com/careers/8907584002?gh_jid=8907584002) |
+|  2026-10-21 | Brex | Fraud Strategy Associate | Seattle, Washington, United States | full-time | [link](https://www.brex.com/careers/8907623002?gh_jid=8907623002) |
+|  2026-10-21 | Brex | Fraud Strategy Associate | Salt Lake City, Utah, United States | full-time | [link](https://www.brex.com/careers/8907553002?gh_jid=8907553002) |
 |  2026-10-21 | Plaid | Accounting Operations | Remote United States | full-time | [link](https://jobs.ashbyhq.com/plaid/2cbe8c44-76a0-4f29-9c45-2c09df556318) |
-|  2026-10-21 | Warner Bros Games | Associate Producer, CNN VOD Streaming | DC Washington 820 1st Street NE | full-time | [link](https://warnerbros.wd5.myworkdayjobs.com/en-US/global/job/DC-Washington-820-1st-Street-NE/Associate-Producer--CNN-VOD-Streaming_R000105826) |
-|  2026-10-21 | Warner Bros Games | Commercial Electrician | GA Atlanta 1050 Techwood Drive NW | full-time | [link](https://warnerbros.wd5.myworkdayjobs.com/en-US/global/job/GA-Atlanta-1050-Techwood-Drive-NW/Commercial-Electrician_R000097134) |
-|  2026-10-21 | Warner Bros Games | Lead Electrician | GA Atlanta 1050 Techwood Drive NW | full-time | [link](https://warnerbros.wd5.myworkdayjobs.com/en-US/global/job/GA-Atlanta-1050-Techwood-Drive-NW/Lead-Electrician_R000106344) |
-|  2026-10-21 | Warner Bros Games | News Desk Producer, CNN | DC Washington 820 1st Street NE | full-time | [link](https://warnerbros.wd5.myworkdayjobs.com/en-US/global/job/DC-Washington-820-1st-Street-NE/News-Desk-Producer--CNN_R000107699) |
-|  2026-10-21 | Warner Bros Games | Producer, CNN en Español | FL Miami 6505 Blue Lagoon Dri | full-time | [link](https://warnerbros.wd5.myworkdayjobs.com/en-US/global/job/FL-Miami-6505-Blue-Lagoon-Dri/Producer--CNN-en-Espaol_R000104977) |
-|  2026-10-21 | Warner Bros Games | Publicist-CNN Morning Programming | NY New York 30 Hudson Yards | full-time | [link](https://warnerbros.wd5.myworkdayjobs.com/en-US/global/job/NY-New-York-30-Hudson-Yards/Publicist-CNN-Morning-Programming_R000108961) |
-|  2026-10-21 | Warner Bros Games | Remote Operations Center Specialist (Live Sports & Entertainment) | GA Atlanta 1050 Techwood Drive NW | full-time | [link](https://warnerbros.wd5.myworkdayjobs.com/en-US/global/job/GA-Atlanta-1050-Techwood-Drive-NW/Remote-Operations-Center-Specialist_R000108691-1) |
-|  2026-10-21 | Warner Bros Games | Supervisor, Global Field Engineering (News & Sports Live Production & Broadcast) | GA Atlanta 1050 Techwood Drive NW | full-time | [link](https://warnerbros.wd5.myworkdayjobs.com/en-US/global/job/GA-Atlanta-1050-Techwood-Drive-NW/Supervisor--Global-Field-Engineering_R000108938) |
 |  2026-10-26 | Verkada | IT Engineer | San Mateo, CA United States | full-time | [link](https://job-boards.greenhouse.io/verkada/jobs/5275159007) |
 |  2026-10-26 | Anduril | Digital Tools Engineer, Manufacturing (WMS) | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5009195007?gh_jid=5009195007) |
 |  2026-10-26 | Anduril | Ground Loads Engineer, Air Vehicles | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5275351007?gh_jid=5275351007) |
 |  2026-10-26 | Anduril | Materials and Process Engineer, Air Dominance and Strike  | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5275994007?gh_jid=5275994007) |
-|  2026-10-20 | Sony Pictures Animation |  Service Operations Analyst- Intermediate | Los Angeles, California, United States | full-time | [link](https://job-boards.greenhouse.io/sonypicturesanimation/jobs/8039218003) |
-|  2026-10-20 | Pinterest | Lead Client Partner (tvScientific) | New York, NY, US; Chicago, IL, US | full-time | [link](https://www.pinterestcareers.com/jobs/?gh_jid=8129668) |
 |  2026-10-20 | Anthropic | Corporate Development, Deal Lead | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5459016008) |
 |  2026-10-20 | Datadog | Learning Technology Specialist | New York, New York, USA | full-time | [link](https://careers.datadoghq.com/detail/8282537/?gh_jid=8282537) |
+|  2026-10-20 | Sony Pictures Animation |  Service Operations Analyst- Intermediate | Los Angeles, California, United States | full-time | [link](https://job-boards.greenhouse.io/sonypicturesanimation/jobs/8039218003) |
+|  2026-10-20 | Pinterest | Lead Client Partner (tvScientific) | New York, NY, US; Chicago, IL, US | full-time | [link](https://www.pinterestcareers.com/jobs/?gh_jid=8129668) |
 |  2026-10-20 | OpenAI | Business Development Lead, Life Sciences | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/f42d2e1e-8c2d-47cf-bd29-4b459c06ae1a) |
-|  2026-11-12 | LaunchDarkly | Sales Commissions Analyst | Remote - US | full-time | [link](https://job-boards.greenhouse.io/launchdarkly/jobs/8202742003) |
+|  2026-10-19 | Anthropic | 3P Revenue Accounting & Reporting | San Francisco, CA / Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5456619008) |
+|  2026-10-19 | Databricks | Technical Enablement Specialist  - Field Engineering Onboarding | United States | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8824168002) |
+|  2026-10-19 | Cloudflare | Associate, Strategic Finance & Investor Relations | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8287256?gh_jid=8287256) |
+|  2026-10-19 | Plaid | Commercial Lead, Banking and Wealth  | New York City Office | full-time | [link](https://jobs.ashbyhq.com/plaid/cf3f2740-a2ef-4512-8607-2895930680a3) |
+|  2026-10-19 | Plaid | Executive Operations Leader | San Francisco HQ | full-time | [link](https://jobs.ashbyhq.com/plaid/c7395637-aa6b-43c0-8204-f0381f9b04be) |
+|  2026-10-19 | Plaid | New Business Leader | New York City Office | full-time | [link](https://jobs.ashbyhq.com/plaid/9c326166-b051-4a11-ba29-61788b8d72e1) |
+|  2026-10-19 | Plaid | New Business Associate - Inbound | New York City Office | full-time | [link](https://jobs.ashbyhq.com/plaid/e446e2ba-87bd-4eda-8b49-3fed3cd29245) |
+|  2026-10-19 | OpenAI | Compensation Programs & Operations Lead | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/d1e4178d-8eb6-4727-9601-e230cb96eeee) |
 |  2026-11-12 | Gusto | Expansion AE, Gusto Pro  | Atlanta, GA - Hybrid; Denver, CO - Hybrid | full-time | [link](https://job-boards.greenhouse.io/gusto/jobs/8374008) |
-|  2026-11-12 | Box | Value Delivery Partner, Sourcing and Operations | United States | full-time | [link](https://job-boards.greenhouse.io/boxinc/jobs/8384478) |
+|  2026-11-12 | LaunchDarkly | Sales Commissions Analyst | Remote - US | full-time | [link](https://job-boards.greenhouse.io/launchdarkly/jobs/8202742003) |
 |  2026-11-12 | Fivetran | Enterprise Demand Generation Lead — North America | USA - New York (dbt) | full-time | [link](https://www.fivetran.com/careers/job?gh_jid=8202850003) |
 |  2026-11-12 | Fivetran | Enterprise Demand Generation Lead — North America | USA - Philadelphia (dbt) | full-time | [link](https://www.fivetran.com/careers/job?gh_jid=8202852003) |
+|  2026-11-12 | Box | Value Delivery Partner, Sourcing and Operations | United States | full-time | [link](https://job-boards.greenhouse.io/boxinc/jobs/8384478) |
 |  2026-11-12 | xAI | IT Services Technician | Palo Alto, CA | full-time | [link](https://job-boards.greenhouse.io/xai/jobs/5277827007) |
 |  2026-11-12 | Krea | Finance Lead | San Francisco | full-time | [link](https://jobs.ashbyhq.com/krea/f754505c-9099-423a-881d-fc2a8be22740) |
 |  2026-11-12 | Elastic | Partner Marketing Program Specialist | United States | full-time | [link](https://jobs.elastic.co/jobs?gh_jid=8359526&gh_jid=8359526) |
@@ -5723,21 +5771,16 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-12 | Anduril | Master Scheduler | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5206032007?gh_jid=5206032007) |
 |  2026-11-12 | Anduril | Material Planner | Quonset, Rhode Island, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5293526007?gh_jid=5293526007) |
 |  2026-11-12 | Anduril | People Compliance Specialist | Ashville, Ohio, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5294126007?gh_jid=5294126007) |
+|  2026-11-12 | Anduril | SG&A Talent, Planning & Strategy Lead | Washington, District of Columbia, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5293783007?gh_jid=5293783007) |
 |  2026-11-12 | Anduril | SG&A Talent, Planning & Strategy Lead | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5289990007?gh_jid=5289990007) |
 |  2026-11-12 | Anduril | SG&A Talent, Planning & Strategy Lead | Seattle, Washington, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5293777007?gh_jid=5293777007) |
 |  2026-11-12 | Anduril | SG&A Talent, Planning & Strategy Lead | Boston, Massachusetts, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5293781007?gh_jid=5293781007) |
-|  2026-11-12 | Anduril | SG&A Talent, Planning & Strategy Lead | Washington, District of Columbia, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5293783007?gh_jid=5293783007) |
 |  2026-11-12 | Anduril | Strategic Finance Analyst, Mission Systems | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5293495007?gh_jid=5293495007) |
 |  2026-11-12 | Crusoe | Apprentice Electrician | Brighton, CO - US | full-time | [link](https://jobs.ashbyhq.com/Crusoe/68bb0f3b-7c12-4efd-b6b7-9e6877ebda1d) |
-|  🆕 2026-11-12 | Micron | CMOS Device Integration and modeling lead - MTS | Boise, ID - Main Site | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/CMOS-Device-Integration-and-modeling-lead---MTS_JR116881) |
-|  2026-10-19 | Anthropic | 3P Revenue Accounting & Reporting | San Francisco, CA / Seattle, WA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5456619008) |
-|  2026-10-19 | Cloudflare | Associate, Strategic Finance & Investor Relations | Hybrid | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8287256?gh_jid=8287256) |
-|  2026-10-19 | Databricks | Technical Enablement Specialist  - Field Engineering Onboarding | United States | full-time | [link](https://databricks.com/company/careers/open-positions/job?gh_jid=8824168002) |
-|  2026-10-19 | Plaid | Commercial Lead, Banking and Wealth  | New York City Office | full-time | [link](https://jobs.ashbyhq.com/plaid/cf3f2740-a2ef-4512-8607-2895930680a3) |
-|  2026-10-19 | Plaid | Executive Operations Leader | San Francisco HQ | full-time | [link](https://jobs.ashbyhq.com/plaid/c7395637-aa6b-43c0-8204-f0381f9b04be) |
-|  2026-10-19 | Plaid | New Business Leader | New York City Office | full-time | [link](https://jobs.ashbyhq.com/plaid/9c326166-b051-4a11-ba29-61788b8d72e1) |
-|  2026-10-19 | Plaid | New Business Associate - Inbound | New York City Office | full-time | [link](https://jobs.ashbyhq.com/plaid/e446e2ba-87bd-4eda-8b49-3fed3cd29245) |
-|  2026-10-19 | OpenAI | Compensation Programs & Operations Lead | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/d1e4178d-8eb6-4727-9601-e230cb96eeee) |
+|  2026-11-12 | Micron | Fab Equipment Technician | Manassas, VA -  Fab 6 | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Manassas-VA----Fab-6/Fab-Equipment-Technician_JR113044) |
+|  2026-11-12 | Salesforce | Legal Operations Analyst | Indiana - Indianapolis | full-time | [link](https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/job/Indiana---Indianapolis/Legal-Operations-Analyst_JR367647-1) |
+|  2026-11-12 | Salesforce | Business Operations Coordinator | California - San Francisco | full-time | [link](https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/job/California---San-Francisco/REWS-Business-Operations-Analyst_JR366798) |
+|  2026-11-12 | Sony | Licensing Associate, Hardlines (Peanuts Worldwide) | New York | full-time | [link](https://sonyglobal.wd1.myworkdayjobs.com/en-US/SonyGlobalCareers/job/New-York/Licensing-Associate--Hardlines--Peanuts-Worldwide-_JR-119681) |
 |  2026-10-17 | DoorDash | Associate, Strategy & Operations, Merchant Onboarding & Experience | New York, NY; San Francisco, CA; Los Angeles, CA; Chicago, IL; Washington, D.C.; Austin, TX; Denver, CO - Remote | full-time | [link](https://job-boards.greenhouse.io/doordashusa/jobs/8289516) |
 |  2026-10-23 | xAI | Operations Engineer, Supercompute - Memphis |  Southaven, MS; Memphis, TN | full-time | [link](https://job-boards.greenhouse.io/xai/jobs/5273689007) |
 |  2026-10-23 | Cerebras | Power Manufacturing Test Development Engineer | Sunnyvale, CA | full-time | [link](https://jobs.ashbyhq.com/cerebras/146bea1f-9442-4c9b-8ec1-cb3c8abc84ba) |
@@ -5747,35 +5790,22 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-23 | SpaceX | Telecommunications Engineer | Cape Canaveral, FL | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8913325002?gh_jid=8913325002) |
 |  2026-10-23 | Anduril | Lead Manufacturing Engineer, Space  | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5273715007?gh_jid=5273715007) |
 |  2026-10-23 | Anduril | MRB Analysis Engineer, Fury | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5266501007?gh_jid=5266501007) |
-|  2026-10-16 | Anthropic | Tabletop Exercise Lead, The Anthropic Institute | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5456016008) |
 |  2026-10-16 | Stripe | Indirect Tax (VAT/GST) Advisory Consultant | SEA, SF, NYC | full-time | [link](https://stripe.com/jobs/search?gh_jid=8282721) |
+|  2026-10-16 | Anthropic | Tabletop Exercise Lead, The Anthropic Institute | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5456016008) |
 |  2026-10-16 | Ramp | Chief Compliance Officer, Ramp Advisory LLC | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/abd1360f-bd9d-4649-ac02-9af2a437ff98) |
-|  2026-10-16 | Palantir | Operations Analyst - US Government Security | Washington, D.C. | full-time | [link](https://jobs.lever.co/palantir/a468565d-8502-4baf-8788-b7ffe233b725) |
 |  2026-10-16 | OpenAI | B2B Ecosystem Lead, Partner Growth | New York City | full-time | [link](https://jobs.ashbyhq.com/openai/6e9ac42a-c42a-46e0-98fe-ba00c9cb5455) |
+|  2026-10-16 | Palantir | Operations Analyst - US Government Security | Washington, D.C. | full-time | [link](https://jobs.lever.co/palantir/a468565d-8502-4baf-8788-b7ffe233b725) |
+|  2026-10-16 | Tencent | Tech Reporter | US-California-Palo Alto | full-time | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-California-Palo-Alto/Tech-Reporter_R108162-1) |
 |  2026-11-11 | Waymo | Fleet Operations Partner Relationship Specialist, Americas | Mountain View, CA, USA | full-time | [link](https://careers.withwaymo.com/jobs?gh_jid=8348399) |
 |  2026-11-11 | Lovable | Order to Cash Lead | New York City | full-time | [link](https://jobs.ashbyhq.com/lovable/72581692-c29f-4938-a73f-92c42911f2f6) |
 |  2026-11-11 | Mercor | Finance GTM Associate | San Francisco | full-time | [link](https://jobs.ashbyhq.com/mercor/13f1572d-bd7c-449f-b42e-d7ae6f40ca2e) |
 |  2026-11-11 | Mercor | Legal GTM Associate | San Francisco | full-time | [link](https://jobs.ashbyhq.com/mercor/41a02c09-9cac-4c96-a1b9-3335f5e45463) |
 |  2026-11-11 | Mercor | Client Services Lead, Legal | San Francisco | full-time | [link](https://jobs.ashbyhq.com/mercor/d3a1db4b-4e92-419b-88d8-30ad029e979f) |
 |  2026-11-11 | SpaceX | Development Lead | Cape Canaveral, FL | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8938110002?gh_jid=8938110002) |
+|  2026-11-11 | SpaceX | Development Lead | College Station, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8938108002?gh_jid=8938108002) |
 |  2026-11-11 | SpaceX | Development Lead | Bastrop, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8938082002?gh_jid=8938082002) |
 |  2026-11-11 | SpaceX | Development Lead | Starbase, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8938107002?gh_jid=8938107002) |
-|  2026-11-11 | SpaceX | Development Lead | College Station, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8938108002?gh_jid=8938108002) |
 |  2026-11-11 | Anduril | Radar Integrations Lead | Broomfield, Colorado, United States; Fort Collins, Colorado, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5291839007?gh_jid=5291839007) |
-|  2026-11-11 | Salesforce | Legal Operations Analyst | Indiana - Indianapolis | full-time | [link](https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/job/Indiana---Indianapolis/Legal-Operations-Analyst_JR367647-1) |
-|  2026-11-11 | Salesforce | Business Operations Coordinator | California - San Francisco | full-time | [link](https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/job/California---San-Francisco/REWS-Business-Operations-Analyst_JR366798) |
-|  🆕 2026-11-11 | Micron | Fab Equipment Technician | Manassas, VA -  Fab 6 | full-time | [link](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Manassas-VA----Fab-6/Fab-Equipment-Technician_JR113044) |
-|  2026-11-11 | Sony | Licensing Associate, Hardlines (Peanuts Worldwide) | New York | full-time | [link](https://sonyglobal.wd1.myworkdayjobs.com/en-US/SonyGlobalCareers/job/New-York/Licensing-Associate--Hardlines--Peanuts-Worldwide-_JR-119681) |
-|  2026-10-15 | Asana | Business Value Consultant | San Francisco | full-time | [link](https://www.asana.com/jobs/apply/8282374?gh_jid=8282374) |
-|  2026-10-15 | Asana | Corporate Strategy and Planning Lead | San Francisco | full-time | [link](https://www.asana.com/jobs/apply/8244205?gh_jid=8244205) |
-|  2026-10-15 | Anthropic | Risk & Insurance Specialist | San Francisco, CA | full-time | [link](https://job-boards.greenhouse.io/anthropic/jobs/5432425008) |
-|  2026-10-15 | PlayStation (SIE) | Localization Audio Specialist – Spanish Commentary | United States, San Diego, CA | full-time | [link](https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal/jobs/6223716004) |
-|  2026-10-15 | Cloudflare | IT Operations Specialist I | In-Office | full-time | [link](https://boards.greenhouse.io/cloudflare/jobs/8281074?gh_jid=8281074) |
-|  2026-10-15 | Ramp | People Programs Lead | New York, NY (HQ) | full-time | [link](https://jobs.ashbyhq.com/ramp/d7c117f8-45e4-4212-8bc5-233ff60c7038) |
-|  2026-10-15 | Ramp | Analyst, Deal Operations | San Francisco, CA | full-time | [link](https://jobs.ashbyhq.com/ramp/7e531974-caac-46a2-804e-c6c3140bfda4) |
-|  2026-10-15 | OpenAI | Experiential Producer | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/a73cfbfc-aeed-4bad-b57d-79fd30dcd9c8) |
-|  2026-10-15 | OpenAI | IT Logistics Lead | San Francisco | full-time | [link](https://jobs.ashbyhq.com/openai/c364b3ea-4f31-4a1a-b419-6765e131dd07) |
-|  2026-10-15 | Tencent | Tech Reporter | US-California-Palo Alto | full-time | [link](https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/US-California-Palo-Alto/Tech-Reporter_R108162-1) |
 |  2026-10-22 | Normal Computing | Hardware Engineer, Performance Modeling | Mountain View | full-time | [link](https://jobs.ashbyhq.com/NormalComputing/4b75d4ea-84f7-4d04-83a2-4ab2dc42abc9) |
 |  2026-10-22 | Lovable | Analytics Engineer | Boston | full-time | [link](https://jobs.ashbyhq.com/lovable/d92292d5-a9f5-4637-9d86-77e95bf66970) |
 |  2026-10-22 | SpaceX | Construction Project Engineer, Civil  | Starbase, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8909953002?gh_jid=8909953002) |
@@ -5787,9 +5817,9 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-21 | Waymo | Product Safety Engineer | Mountain View CA USA; San Francisco CA USA | full-time | [link](https://careers.withwaymo.com/jobs?gh_jid=8227762) |
 |  2026-10-21 | SpaceX | Launch Operations Engineer (Starship) | Starbase, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8907760002?gh_jid=8907760002) |
 |  2026-10-21 | SpaceX | Lead Operations Engineer | McGregor, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8904638002?gh_jid=8904638002) |
-|  2026-10-21 | SpaceX | Lead Operations Engineer | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8904640002?gh_jid=8904640002) |
-|  2026-10-21 | SpaceX | Lead Operations Engineer | Redmond, WA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8904641002?gh_jid=8904641002) |
 |  2026-10-21 | SpaceX | Lead Operations Engineer | Bastrop, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8904642002?gh_jid=8904642002) |
+|  2026-10-21 | SpaceX | Lead Operations Engineer | Redmond, WA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8904641002?gh_jid=8904641002) |
+|  2026-10-21 | SpaceX | Lead Operations Engineer | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8904640002?gh_jid=8904640002) |
 |  2026-10-21 | SpaceX | Operations Engineer (Starshield Products) | Washington, DC | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8901184002?gh_jid=8901184002) |
 |  2026-10-21 | SpaceX | Operations Engineer (Starshield Products) | Palo Alto, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8901179002?gh_jid=8901179002) |
 |  2026-10-21 | Anduril | Manufacturing Engineer | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5194656007?gh_jid=5194656007) |
@@ -5802,12 +5832,12 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-20 | SpaceX | Propulsion Engineer (Dragon) | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8904025002?gh_jid=8904025002) |
 |  2026-10-20 | Anduril | Electrical Engineer | Quincy, Massachusetts, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5265435007?gh_jid=5265435007) |
 |  2026-10-20 | Anduril | Field Operations Engineer, Deployment Handling | Santa Ana, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5267917007?gh_jid=5267917007) |
-|  2026-11-10 | LaunchDarkly | Security Analyst - Governance, Risk, and Compliance | Remote - US | full-time | [link](https://job-boards.greenhouse.io/launchdarkly/jobs/8039312003) |
 |  2026-11-10 | Gusto | Future Opportunities: Franchise Sales | Atlanta, GA - Hybrid; Denver, CO - Hybrid | full-time | [link](https://job-boards.greenhouse.io/gusto/jobs/8373808) |
 |  2026-11-10 | Gusto | Lead CX Business Intelligence Analyst | Denver, CO - Hybrid; New York, NY - Hybrid | full-time | [link](https://job-boards.greenhouse.io/gusto/jobs/8263050) |
-|  2026-11-10 | Verkada | Sales Strategy and Operations / Channel Programs Specialist | San Mateo, CA United States | full-time | [link](https://job-boards.greenhouse.io/verkada/jobs/5291267007) |
+|  2026-11-10 | LaunchDarkly | Security Analyst - Governance, Risk, and Compliance | Remote - US | full-time | [link](https://job-boards.greenhouse.io/launchdarkly/jobs/8039312003) |
 |  2026-11-10 | Samsara | Electrical Engineering Co-Op | San Francisco - SF9 | full-time | [link](https://www.samsara.com/company/careers/roles/8226608?gh_jid=8226608) |
 |  2026-11-10 | Samsara | Enterprise Implementation Consultant - Public Sector | Phoenix, Arizona, United States | full-time | [link](https://www.samsara.com/company/careers/roles/8372624?gh_jid=8372624) |
+|  2026-11-10 | Verkada | Sales Strategy and Operations / Channel Programs Specialist | San Mateo, CA United States | full-time | [link](https://job-boards.greenhouse.io/verkada/jobs/5291267007) |
 |  2026-11-10 | Physical Intelligence | Fleet Inventory Specialist | San Francisco | full-time | [link](https://jobs.ashbyhq.com/physicalintelligence/bd8cf77a-0149-45e0-84fc-726fd02253ec) |
 |  2026-11-10 | Deepgram | New Media & Social Lead | USA - Remote | full-time | [link](https://jobs.ashbyhq.com/Deepgram/c4477ce6-29db-45e8-b2cd-01ff2292b4a8) |
 |  2026-11-10 | Cognition | Paid Social & Influencer Lead | New York City | full-time | [link](https://jobs.ashbyhq.com/cognition/03dc2f86-8811-4d33-a937-fe16dd26afcc) |
@@ -5855,14 +5885,7 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-16 | SpaceX | Propulsion Engineer (Raptor Final Assembly & Tube Shop) | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8895875002?gh_jid=8895875002) |
 |  2026-10-16 | Anduril | Electrical Hardware Engineer | Waltham, Massachusetts, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5267498007?gh_jid=5267498007) |
 |  2026-10-16 | Anduril | Sustainment Engineer, Fury | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5266500007?gh_jid=5266500007) |
-|  2026-10-15 | SpaceX | PECVD Process Engineer, Solar Cells (Starlink) | Bastrop, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8888684002?gh_jid=8888684002) |
-|  2026-10-15 | Anduril | Electromechanical Integration Engineer - Air Vehicles | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5266468007?gh_jid=5266468007) |
-|  2026-10-15 | Anduril | Systems Safety Engineer | Broomfield, Colorado, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5266886007?gh_jid=5266886007) |
-|  2026-10-15 | Anduril | Systems Safety Engineer | Mountain View, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5266897007?gh_jid=5266897007) |
-|  2026-10-15 | Anduril | Systems Safety Engineer | Washington, District of Columbia, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5266875007?gh_jid=5266875007) |
-|  2026-10-15 | Anduril | Systems Safety Engineer | Seattle, Washington, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5266894007?gh_jid=5266894007) |
-|  2026-10-15 | Anduril | Systems Safety Engineer | Huntsville, Alabama, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5266884007?gh_jid=5266884007) |
-|  2026-10-15 | Sony | Associate Field Service Engineer (Fixed Term – 12-month assignment) | Remote - Massachusetts | full-time | [link](https://sonyglobal.wd1.myworkdayjobs.com/en-US/SonyGlobalCareers/job/Remote---Massachusetts/Associate-Field-Service-Engineer--Fixed-Term---12-month-assignment-_JR-119652) |
+|  2026-10-16 | Sony | Associate Field Service Engineer (Fixed Term – 12-month assignment) | Remote - Massachusetts | full-time | [link](https://sonyglobal.wd1.myworkdayjobs.com/en-US/SonyGlobalCareers/job/Remote---Massachusetts/Associate-Field-Service-Engineer--Fixed-Term---12-month-assignment-_JR-119652) |
 |  2026-11-08 | SpaceX | Hardware Reliability Specialist (Starlink) | Bastrop, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8932696002?gh_jid=8932696002) |
 |  2026-11-08 | SpaceX | Hardware Reliability Technician (Starlink) | Bastrop, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8932471002?gh_jid=8932471002) |
 |  2026-11-08 | SpaceX | Supervisor, Hardware Reliability (Starlink) | Bastrop, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8932719002?gh_jid=8932719002) |
@@ -5871,13 +5894,13 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-07 | SpaceX | Inventory Specialist  | Vandenberg, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8893331002?gh_jid=8893331002) |
 |  2026-11-07 | SpaceX | Production Coordinator | Long Beach, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8934413002?gh_jid=8934413002) |
 |  2026-11-06 | Fivetran | Enterprise Demand Generation Lead — North America | Oakland, California, United States | full-time | [link](https://www.fivetran.com/careers/job?gh_jid=8198244003) |
-|  2026-11-06 | Fivetran | Enterprise Demand Generation Lead — North America | USA - Austin (dbt) | full-time | [link](https://www.fivetran.com/careers/job?gh_jid=8105142003) |
 |  2026-11-06 | Fivetran | Enterprise Demand Generation Lead — North America | Denver, Colorado, United States, AMER | full-time | [link](https://www.fivetran.com/careers/job?gh_jid=8198242003) |
-|  2026-11-06 | xAI | Events Lead | Los Angeles, CA | full-time | [link](https://job-boards.greenhouse.io/xai/jobs/5287988007) |
+|  2026-11-06 | Fivetran | Enterprise Demand Generation Lead — North America | USA - Austin (dbt) | full-time | [link](https://www.fivetran.com/careers/job?gh_jid=8105142003) |
 |  2026-11-06 | Samsara | Enterprise Implementation Consultant (East/Central) | Remote - US | full-time | [link](https://www.samsara.com/company/careers/roles/8359847?gh_jid=8359847) |
 |  2026-11-06 | Samsara | Enterprise Implementation Consultant - Public Sector | Remote - GA | full-time | [link](https://www.samsara.com/company/careers/roles/8360093?gh_jid=8360093) |
 |  2026-11-06 | Samsara | Enterprise Select Implementation Consultant (West) | Remote - US | full-time | [link](https://www.samsara.com/company/careers/roles/8359531?gh_jid=8359531) |
 |  2026-11-06 | Samsara | Strategic Implementation Consultant | Remote - US | full-time | [link](https://www.samsara.com/company/careers/roles/8359860?gh_jid=8359860) |
+|  2026-11-06 | xAI | Events Lead | Los Angeles, CA | full-time | [link](https://job-boards.greenhouse.io/xai/jobs/5287988007) |
 |  2026-11-06 | Waymo | People Experience Partner | Mountain View, CA, USA  | full-time | [link](https://careers.withwaymo.com/jobs?gh_jid=8350535) |
 |  2026-11-06 | Block (Square) | Ecosystem Partner Development Lead | Bay Area, CA, United States of America | full-time | [link](http://block.xyz/careers/jobs/5464688008?gh_jid=5464688008) |
 |  2026-11-06 | SpaceX | Automation & Controls Technician | Starbase, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8933907002?gh_jid=8933907002) |
@@ -5885,15 +5908,14 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-06 | SpaceX | IT Systems Administrator (Top Secret Clearance)   | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8932865002?gh_jid=8932865002) |
 |  2026-11-06 | SpaceX | Manufacturing Specialist (Optical Production) - Both Shifts | Redmond, WA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8931181002?gh_jid=8931181002) |
 |  2026-11-06 | SpaceX | Shipping Specialist (Logistics HT) - 1st Shift | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8934072002?gh_jid=8934072002) |
-|  2026-11-06 | Anduril | Communications Coordinator | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5286192007?gh_jid=5286192007) |
 |  2026-11-06 | Anduril | Growth Operations Associate | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5283843007?gh_jid=5283843007) |
 |  2026-11-06 | Anduril | Lead Quality Inspector, 2nd Shift | Santa Ana, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5272375007?gh_jid=5272375007) |
 |  2026-11-06 | Anduril | Production Scheduler | Ashville, Ohio, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5123744007?gh_jid=5123744007) |
 |  2026-11-06 | Anduril | Quality Inspector | Morrisville, North Carolina, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5286090007?gh_jid=5286090007) |
+|  2026-11-05 | Hasbro (WotC) | Account Analyst | Boston, Massachusetts, United States | full-time | [link](https://job-boards.greenhouse.io/hasbro/jobs/4471333009) |
 |  2026-11-05 | Netlify | Talent Partner | Remote | full-time | [link](https://job-boards.greenhouse.io/netlify/jobs/8919217002) |
 |  2026-11-05 | Carta | Procurement Operations Specialist | Sandy, UT | full-time | [link](https://job-boards.greenhouse.io/carta/jobs/8046183003) |
 |  2026-11-05 | Coursera | Benefits Analyst | United States | full-time | [link](https://job-boards.greenhouse.io/coursera/jobs/6235217004) |
-|  2026-11-05 | Hasbro (WotC) | Account Analyst | Boston, Massachusetts, United States | full-time | [link](https://job-boards.greenhouse.io/hasbro/jobs/4471333009) |
 |  2026-11-05 | Fivetran | Resident Solution Architect | USA - Philadelphia (dbt) | full-time | [link](https://www.fivetran.com/careers/job?gh_jid=8196171003) |
 |  2026-11-05 | SpaceX | Fiber Supervisor | College Station, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8932644002?gh_jid=8932644002) |
 |  2026-11-05 | SpaceX | Propulsion Technician (Raptor Flight) – 2nd Shift | Starbase, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8932356002?gh_jid=8932356002) |
@@ -5919,8 +5941,8 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-04 | SpaceX | Production Machinist (Starlink) - 1st Shift - Level 4/5 | Woodinville, WA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8929297002?gh_jid=8929297002) |
 |  2026-11-04 | SpaceX | Production Machinist (Starlink) - 2nd Shift - Level 4/5 | Woodinville, WA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8929326002?gh_jid=8929326002) |
 |  2026-11-04 | SpaceX | Quality Specialist (West Coast Launch & Recovery) - 1st Shift    | Long Beach, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8896192002?gh_jid=8896192002) |
-|  2026-11-04 | SpaceX | Sourcing Specialist (Starship)  | Westminster, MD | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8928714002?gh_jid=8928714002) |
 |  2026-11-04 | SpaceX | Sourcing Specialist (Starship)  | Cape Canaveral, FL | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8931060002?gh_jid=8931060002) |
+|  2026-11-04 | SpaceX | Sourcing Specialist (Starship)  | Westminster, MD | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8928714002?gh_jid=8928714002) |
 |  2026-11-04 | SpaceX | Supervisor, Quality Assurance (Starlink Aviation) | Woodinville, WA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8926096002?gh_jid=8926096002) |
 |  2026-11-04 | SpaceX | Test Specialist - Multiple Shifts (Components) - Level 4/5 | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8930375002?gh_jid=8930375002) |
 |  2026-11-04 | Anduril | Drafter, Counter Intrusion | Irvine, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5285306007?gh_jid=5285306007) |
@@ -5932,6 +5954,7 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-04 | Crusoe | Health, Safety, and Environmental (HSE) Specialist, Power Operations | Abilene, TX - US | full-time | [link](https://jobs.ashbyhq.com/Crusoe/6d1f8bc2-7ce2-4368-ac59-7b797418d20a) |
 |  2026-11-04 | Crusoe | People Science Consultant | Denver, CO - US | full-time | [link](https://jobs.ashbyhq.com/Crusoe/07a5c2e7-f4f0-4201-8942-db9bb69a6731) |
 |  2026-11-04 | Crusoe | People Science Consultant | San Francisco, CA - US | full-time | [link](https://jobs.ashbyhq.com/Crusoe/d3a40fbc-0fdb-495a-a8ce-5d1adaf8a795) |
+|  2026-11-04 | Sony | Logistics Analyst | San Diego | full-time | [link](https://sonyglobal.wd1.myworkdayjobs.com/en-US/SonyGlobalCareers/job/San-Diego/Logistics-Analyst_JR-119862-1) |
 |  2026-11-03 | That Game Company | Trust and Safety Analyst (Contract) | Remote - US | full-time | [link](https://jobs.ashbyhq.com/thatgamecompany/5e281df2-7981-4f1b-b43f-c69d02432a83) |
 |  2026-11-03 | Physical Intelligence | Deployment & Engagement Operations Lead | San Francisco | full-time | [link](https://jobs.ashbyhq.com/physicalintelligence/a7bfa681-3e71-42af-b72f-a9ec144434c6) |
 |  2026-11-03 | Baseten | Product Finance | San Francisco | full-time | [link](https://jobs.ashbyhq.com/baseten/58e7b9c2-04a6-474e-8061-ebf47d32b94d) |
@@ -5952,7 +5975,6 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-11-03 | Anduril |  Lead Production Technician, Missiles  | Santa Ana, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5283705007?gh_jid=5283705007) |
 |  2026-11-03 | Anduril | OT Support Operator | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5283010007?gh_jid=5283010007) |
 |  2026-11-03 | Anduril | Quality Inspector, Electrical  | Waltham, Massachusetts, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5283250007?gh_jid=5283250007) |
-|  2026-11-03 | Sony | Logistics Analyst | San Diego | full-time | [link](https://sonyglobal.wd1.myworkdayjobs.com/en-US/SonyGlobalCareers/job/San-Diego/Logistics-Analyst_JR-119862-1) |
 |  2026-11-02 | Baseten | Deal Strategy | San Francisco | full-time | [link](https://jobs.ashbyhq.com/baseten/bbf9fd7c-8666-4487-9a12-1539e08fe4e0) |
 |  2026-11-02 | SpaceX | Apprentice Weld Support Technician | McGregor, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8922265002?gh_jid=8922265002) |
 |  2026-11-02 | SpaceX | Assembly Technician (Starship)  | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8927729002?gh_jid=8927729002) |
@@ -5977,8 +5999,8 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-30 | SpaceX | Ironworker | Starbase, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8925825002?gh_jid=8925825002) |
 |  2026-10-30 | SpaceX | IT NOC Technician | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8925803002?gh_jid=8925803002) |
 |  2026-10-30 | SpaceX | IT Support Technician | McGregor, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8924774002?gh_jid=8924774002) |
-|  2026-10-30 | SpaceX | IT Windows Systems Administrator  | Bastrop, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8924702002?gh_jid=8924702002) |
 |  2026-10-30 | SpaceX | IT Windows Systems Administrator  | Starbase, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8924734002?gh_jid=8924734002) |
+|  2026-10-30 | SpaceX | IT Windows Systems Administrator  | Bastrop, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8924702002?gh_jid=8924702002) |
 |  2026-10-30 | SpaceX | Manufacturing Specialist, PCBA (Starlink) | Bastrop, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8917862002?gh_jid=8917862002) |
 |  2026-10-30 | SpaceX | Material Flow Technician - 1st Shift | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8924768002?gh_jid=8924768002) |
 |  2026-10-30 | SpaceX | Production Control Scheduler (Starship Launch Hardware)  | Cape Canaveral, FL | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8925801002?gh_jid=8925801002) |
@@ -6002,12 +6024,13 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-29 | SpaceX | Cook - Temporary (Bastrop) | Bastrop, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8919576002?gh_jid=8919576002) |
 |  2026-10-29 | SpaceX | Electromechanical Technician (Starshield) - 2nd Shift | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8922912002?gh_jid=8922912002) |
 |  2026-10-29 | SpaceX | IT Network Administrator | Memphis, TN | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8924408002?gh_jid=8924408002) |
+|  2026-10-29 | SpaceX | Laser Tracker Toolmaker (Starship Launch Hardware) | Cape Canaveral, FL | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8917517002?gh_jid=8917517002) |
 |  2026-10-29 | SpaceX | Starlink Enterprise Account Lead (Aviation) | Woodinville, WA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8924103002?gh_jid=8924103002) |
 |  2026-10-29 | SpaceX | Telecommunications Technician | Memphis, TN | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8924119002?gh_jid=8924119002) |
+|  2026-10-28 | Hasbro (WotC) | Retail Merchandiser Part Time- Oklahoma City (North) | Oklahoma | full-time | [link](https://job-boards.greenhouse.io/hasbro/jobs/4456589009) |
 |  2026-10-28 | Peloton | Peloton Expert (Full-Time) - Detroit Twelve Oaks | Novi, Michigan | full-time | [link](https://careers.onepeloton.com/en/all-jobs/?gh_jid=8328428) |
 |  2026-10-28 | Peloton | Peloton Expert (Full-Time) - San Francisco Valley Fair | Santa Clara, California | full-time | [link](https://careers.onepeloton.com/en/all-jobs/?gh_jid=8328426) |
 |  2026-10-28 | Peloton | Peloton Expert (Full-Time) - Tysons Corner | Tysons, Virginia | full-time | [link](https://careers.onepeloton.com/en/all-jobs/?gh_jid=8328338) |
-|  2026-10-28 | Hasbro (WotC) | Retail Merchandiser Part Time- Oklahoma City (North) | Oklahoma | full-time | [link](https://job-boards.greenhouse.io/hasbro/jobs/4456589009) |
 |  2026-10-28 | Verkada | MBA Full-Time Hire - Sales Strategy & Operations | San Mateo, CA United States | full-time | [link](https://job-boards.greenhouse.io/verkada/jobs/5275057007) |
 |  2026-10-28 | Verkada | MBA Full-Time Hire - Strategic Finance & Business Operations | San Mateo, CA United States | full-time | [link](https://job-boards.greenhouse.io/verkada/jobs/5275085007) |
 |  2026-10-28 | SpaceX | Avionics Development Technician (Starshield) | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8909110002?gh_jid=8909110002) |
@@ -6017,12 +6040,15 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-28 | SpaceX | Production Test Technician (Starlink) | Bastrop, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8909171002?gh_jid=8909171002) |
 |  2026-10-28 | SpaceX | Propulsion Technician (Raptor Test) - Night Shift | McGregor, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8922758002?gh_jid=8922758002) |
 |  2026-10-28 | SpaceX | Sourcing Specialist, Construction (Starship) | Starbase, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8910434002?gh_jid=8910434002) |
-|  2026-10-28 | SpaceX | Sourcing Specialist (Gas Turbine Power Sourcing) | Memphis, TN | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8920892002?gh_jid=8920892002) |
 |  2026-10-28 | SpaceX | Sourcing Specialist (Gas Turbine Power Sourcing) | Starbase, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8920862002?gh_jid=8920862002) |
+|  2026-10-28 | SpaceX | Sourcing Specialist (Gas Turbine Power Sourcing) | Memphis, TN | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8920892002?gh_jid=8920892002) |
 |  2026-10-28 | SpaceX | Sourcing Specialist (Gas Turbine Power Sourcing) | Cape Canaveral, FL | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8920888002?gh_jid=8920888002) |
 |  2026-10-28 | Anduril | Deployment Lead | Irvine, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5249532007?gh_jid=5249532007) |
 |  2026-10-28 | Anduril | Environmental Test Technician | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5275279007?gh_jid=5275279007) |
 |  2026-10-28 | Anduril | Manufacturing Specialist, EW | Irvine, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5278026007?gh_jid=5278026007) |
+|  2026-10-28 | Sony | CI Technical Sales | Remote - California | full-time | [link](https://sonyglobal.wd1.myworkdayjobs.com/en-US/SonyGlobalCareers/job/Remote---California/CI-Technical-Sales_JR-119756) |
+|  2026-10-28 | Sony | Business Planner | San Diego | full-time | [link](https://sonyglobal.wd1.myworkdayjobs.com/en-US/SonyGlobalCareers/job/San-Diego/Business-Planner_JR-119761-1) |
+|  2026-10-28 | Sony | Consumer Relations Specialist | San Diego | full-time | [link](https://sonyglobal.wd1.myworkdayjobs.com/en-US/SonyGlobalCareers/job/San-Diego/Consumer-Relations-Specialist_JR-119411) |
 |  2026-10-27 | Waymo | Remote Assistance Global Quality Lead | Phoenix, AZ, US | full-time | [link](https://careers.withwaymo.com/jobs?gh_jid=8281664) |
 |  2026-10-27 | SpaceX | Avionics Build Specialist (Starship) | Starbase, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8917528002?gh_jid=8917528002) |
 |  2026-10-27 | SpaceX | Fiber Supervisor | Starbase, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8919697002?gh_jid=8919697002) |
@@ -6037,15 +6063,13 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-27 | Anduril | Material Handler | McHenry, Mississippi, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5275036007?gh_jid=5275036007) |
 |  2026-10-27 | Anduril | Material Planner III, Air Dominance & Strike | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5213099007?gh_jid=5213099007) |
 |  2026-10-27 | Crusoe | Control Room Operator | Abilene, TX - US | full-time | [link](https://jobs.ashbyhq.com/Crusoe/69199044-a3c3-4e00-8aa8-fa0fc8e19ef5) |
-|  2026-10-27 | Sony | CI Technical Sales | Remote - California | full-time | [link](https://sonyglobal.wd1.myworkdayjobs.com/en-US/SonyGlobalCareers/job/Remote---California/CI-Technical-Sales_JR-119756) |
-|  2026-10-27 | Sony | Business Planner | San Diego | full-time | [link](https://sonyglobal.wd1.myworkdayjobs.com/en-US/SonyGlobalCareers/job/San-Diego/Business-Planner_JR-119761-1) |
-|  2026-10-27 | Sony | Consumer Relations Specialist | San Diego | full-time | [link](https://sonyglobal.wd1.myworkdayjobs.com/en-US/SonyGlobalCareers/job/San-Diego/Consumer-Relations-Specialist_JR-119411) |
-|  2026-10-26 | Samsara | Account Development Representative II - Atlanta | Atlanta, Georgia, United States | full-time | [link](https://www.samsara.com/company/careers/roles/8325352?gh_jid=8325352) |
 |  2026-10-26 | Samsara | Account Development Representative II - Atlanta | Remote - GA | full-time | [link](https://www.samsara.com/company/careers/roles/8325046?gh_jid=8325046) |
+|  2026-10-26 | Samsara | Account Development Representative II - Atlanta | Atlanta, Georgia, United States | full-time | [link](https://www.samsara.com/company/careers/roles/8325352?gh_jid=8325352) |
+|  2026-10-26 | Samsara | Account Development Representative II - Phoenix | Phoenix, Arizona, United States | full-time | [link](https://www.samsara.com/company/careers/roles/8325045?gh_jid=8325045) |
 |  2026-10-26 | Samsara | Account Development Representative II - Phoenix | Remote - AZ | full-time | [link](https://www.samsara.com/company/careers/roles/8325349?gh_jid=8325349) |
 |  2026-10-26 | Samsara | Enterprise Implementation Consultant - Public Sector | Remote - UT | full-time | [link](https://www.samsara.com/company/careers/roles/8304710?gh_jid=8304710) |
-|  2026-10-26 | Samsara | Specialist Seller, Enterprise Core (Tracking Label) | Remote - AZ; Remote - NY; Remote - TX | full-time | [link](https://www.samsara.com/company/careers/roles/8325407?gh_jid=8325407) |
 |  2026-10-26 | Samsara | Specialist Seller, Enterprise Core (Tracking Label) | Remote - CA; Remote - NC | full-time | [link](https://www.samsara.com/company/careers/roles/8325409?gh_jid=8325409) |
+|  2026-10-26 | Samsara | Specialist Seller, Enterprise Core (Tracking Label) | Remote - AZ; Remote - NY; Remote - TX | full-time | [link](https://www.samsara.com/company/careers/roles/8325407?gh_jid=8325407) |
 |  2026-10-26 | Elastic | Channel Account Representative - Enterprise East | United States | full-time | [link](https://jobs.elastic.co/jobs?gh_jid=8325182&gh_jid=8325182) |
 |  2026-10-26 | SpaceX | Automation & Controls Specialist, Launch Pad (Starship) | Starbase, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8916251002?gh_jid=8916251002) |
 |  2026-10-26 | SpaceX | Production Coordinator (Fleet Maintenance) | Starbase, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8917154002?gh_jid=8917154002) |
@@ -6064,6 +6088,7 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-24 | SpaceX | Sous Chef | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8908218002?gh_jid=8908218002) |
 |  2026-10-24 | Anduril | NDT Technician | McHenry, Mississippi, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5272426007?gh_jid=5272426007) |
 |  2026-10-24 | Anduril | Quality Specialist  | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5272416007?gh_jid=5272416007) |
+|  2026-10-24 | Sony | Associate, Legal Operations & Technology | New York | full-time | [link](https://sonyglobal.wd1.myworkdayjobs.com/en-US/SonyGlobalCareers/job/New-York/Paralegal-and-Contracts-Administrator_JR-119641) |
 |  2026-10-23 | Normal Computing | Events & Conferences Specialist | New York | full-time | [link](https://jobs.ashbyhq.com/NormalComputing/e7a5394a-886f-4cf3-804c-55b67a96ea4d) |
 |  2026-10-23 | Baseten | Global Equity Programs Lead | San Francisco | full-time | [link](https://jobs.ashbyhq.com/baseten/544aff7b-d88e-4e30-9a72-9d9c611c784e) |
 |  2026-10-23 | SpaceX | CNC Machinist (Raptor) - Level 4/5  | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8912189002?gh_jid=8912189002) |
@@ -6093,9 +6118,10 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-23 | Harvey |  CX Knowledge Specialist | Remote | full-time | [link](https://jobs.ashbyhq.com/harvey/5ed49bc7-8cbe-46c3-8372-3db733ad02fb) |
 |  2026-10-23 | Harvey | Social Strategist, X and Insights | New York | full-time | [link](https://jobs.ashbyhq.com/harvey/9429dc22-04a9-4704-a465-11e3b0f92416) |
 |  2026-10-23 | Harvey | Social Strategist, X and Insights | San Francisco | full-time | [link](https://jobs.ashbyhq.com/harvey/b10f6bee-a93a-4dd9-9eca-ccef79c5d01b) |
-|  2026-10-23 | Sony | Associate, Legal Operations & Technology | New York | full-time | [link](https://sonyglobal.wd1.myworkdayjobs.com/en-US/SonyGlobalCareers/job/New-York/Paralegal-and-Contracts-Administrator_JR-119641) |
-|  2026-10-22 | xAI | Supervisor, Fleet Maintenance - Memphis |  Southaven, MS; Memphis, TN | full-time | [link](https://job-boards.greenhouse.io/xai/jobs/5272326007) |
+|  2026-10-23 | Sony | Coordinator Global Copyright Administration Temp | Nashville | full-time | [link](https://sonyglobal.wd1.myworkdayjobs.com/en-US/SonyGlobalCareers/job/Nashville/Coordinator-Global-Copyright-Administration-Temp_JR-119803) |
+|  2026-10-23 | Sony | Coordinator, Creative Marketing – Film & TV (Strategic Partnerships) | NA / Hollywood N Orange Dr 37.5 | full-time | [link](https://sonyglobal.wd1.myworkdayjobs.com/en-US/SonyGlobalCareers/job/NA--Hollywood-N-Orange-Dr-375/Coordinator--Creative-Marketing---Film---TV--Licensing-_JR-119802) |
 |  2026-10-22 | Samsara | Contract and Billing Specialist | Remote - US | full-time | [link](https://www.samsara.com/company/careers/roles/8282082?gh_jid=8282082) |
+|  2026-10-22 | xAI | Supervisor, Fleet Maintenance - Memphis |  Southaven, MS; Memphis, TN | full-time | [link](https://job-boards.greenhouse.io/xai/jobs/5272326007) |
 |  2026-10-22 | Normal Computing | TPM Lead | Mountain View | full-time | [link](https://jobs.ashbyhq.com/NormalComputing/5e5759df-44c0-4675-930c-27ad2fd9eb4d) |
 |  2026-10-22 | Normal Computing | Memory Architect | Mountain View | full-time | [link](https://jobs.ashbyhq.com/NormalComputing/9a8d2cf9-8b1a-468e-89d1-8aaa0319f5ae) |
 |  2026-10-22 | Mercor | M&A Accounting and Integration Lead | San Francisco | full-time | [link](https://jobs.ashbyhq.com/mercor/3da4619d-0b3b-4849-8930-1a2efa410187) |
@@ -6114,8 +6140,6 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-22 | Sierra | Compensation Partner | San Francisco, CA | full-time | [link](https://jobs.ashbyhq.com/Sierra/607530ef-bb37-43b4-be77-20bdef7683ad) |
 |  2026-10-22 | Sierra | Onboarding Lead, Sales Enablement | San Francisco, CA | full-time | [link](https://jobs.ashbyhq.com/Sierra/18ee1234-4fd4-4e2e-8ccb-79448676978f) |
 |  2026-10-22 | Crusoe | Onboarding Operations Specialist (Contract) | San Francisco, CA - US | full-time | [link](https://jobs.ashbyhq.com/Crusoe/bd70c4f9-5b08-4aa8-92af-ac59967ea231) |
-|  2026-10-22 | Sony | Coordinator Global Copyright Administration Temp | Nashville | full-time | [link](https://sonyglobal.wd1.myworkdayjobs.com/en-US/SonyGlobalCareers/job/Nashville/Coordinator-Global-Copyright-Administration-Temp_JR-119803) |
-|  2026-10-22 | Sony | Coordinator, Creative Marketing – Film & TV (Strategic Partnerships) | NA / Hollywood N Orange Dr 37.5 | full-time | [link](https://sonyglobal.wd1.myworkdayjobs.com/en-US/SonyGlobalCareers/job/NA--Hollywood-N-Orange-Dr-375/Coordinator--Creative-Marketing---Film---TV--Licensing-_JR-119802) |
 |  2026-10-21 | 2K | Associate HRBP | Novato, California, United States | full-time | [link](https://job-boards.greenhouse.io/2k/jobs/8016285003) |
 |  2026-10-21 | Carta | Fund Controller - SBIC | Hamilton, NJ; Sandy, Utah; Seattle, Washington | full-time | [link](https://job-boards.greenhouse.io/carta/jobs/8039091003) |
 |  2026-10-21 | Peloton | Peloton Expert (Part-Time) - Detroit Twelve Oaks | Novi, Michigan | full-time | [link](https://careers.onepeloton.com/en/all-jobs/?gh_jid=8289878) |
@@ -6161,10 +6185,10 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-20 | Crusoe | Assembly Technician | Brighton, CO - US | full-time | [link](https://jobs.ashbyhq.com/Crusoe/6e872818-3bce-4931-8791-07c2d5d05dd4) |
 |  2026-10-20 | Crusoe | Travel Programs Specialist | New York, NY - US | full-time | [link](https://jobs.ashbyhq.com/Crusoe/a6a94635-e43a-4213-bd6c-1be896007726) |
 |  2026-10-20 | Crusoe | Travel Programs Specialist | Dallas, TX - US | full-time | [link](https://jobs.ashbyhq.com/Crusoe/1df489e7-3cef-4471-9515-a2d63243c882) |
-|  2026-10-19 | PlanetScale | Video Editor | Remote US  | full-time | [link](https://job-boards.greenhouse.io/planetscale/jobs/4458342009) |
-|  2026-10-19 | Peloton | Seasonal Peloton Expert (Part Time) - Nashville  | Nashville, Tennessee | full-time | [link](https://careers.onepeloton.com/en/all-jobs/?gh_jid=8289906) |
 |  2026-10-19 | Hasbro (WotC) | Retail Merchandiser Part Time - Framingham, MA Area | United States | full-time | [link](https://job-boards.greenhouse.io/hasbro/jobs/4439025009) |
 |  2026-10-19 | Hasbro (WotC) | Spring 2027 Global Planning & Logistics Co-op (Jan - July 2027) | Boston, Massachusetts, United States | full-time | [link](https://job-boards.greenhouse.io/hasbro/jobs/4456744009) |
+|  2026-10-19 | PlanetScale | Video Editor | Remote US  | full-time | [link](https://job-boards.greenhouse.io/planetscale/jobs/4458342009) |
+|  2026-10-19 | Peloton | Seasonal Peloton Expert (Part Time) - Nashville  | Nashville, Tennessee | full-time | [link](https://careers.onepeloton.com/en/all-jobs/?gh_jid=8289906) |
 |  2026-10-19 | xAI | Supervisor, Safety Operations (Child Safety) | Austin, TX | full-time | [link](https://job-boards.greenhouse.io/xai/jobs/5268262007) |
 |  2026-10-19 | Physical Intelligence | Environment Specialist | San Francisco | full-time | [link](https://jobs.ashbyhq.com/physicalintelligence/daa49953-755a-40dc-9959-7a2feff7f3bb) |
 |  2026-10-19 | Physical Intelligence | Environment Coordinator | San Francisco | full-time | [link](https://jobs.ashbyhq.com/physicalintelligence/2907bb5a-c750-4f0a-93d7-db59bcaff76f) |
@@ -6196,24 +6220,11 @@ _Last updated: 2026-11-14 23:07 UTC · 13954 active US roles (🆕 173 since las
 |  2026-10-16 | Anduril | Deployment & Training Lead, Army | Irvine, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5256897007?gh_jid=5256897007) |
 |  2026-10-16 | Anduril | Endurance System Lead | Santa Ana, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5249211007?gh_jid=5249211007) |
 |  2026-10-16 | Anduril | Manufacturing Specialist, Core Tech | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5267204007?gh_jid=5267204007) |
-|  2026-10-16 | Anduril | System Architect, Space Electronics | Boulder, Colorado, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5267605007?gh_jid=5267605007) |
 |  2026-10-16 | Anduril | System Architect, Space Electronics | Waltham, Massachusetts, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5267600007?gh_jid=5267600007) |
+|  2026-10-16 | Anduril | System Architect, Space Electronics | Boulder, Colorado, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5267605007?gh_jid=5267605007) |
 |  2026-10-16 | Anduril | Vehicle Energy Systems Lead | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5255916007?gh_jid=5255916007) |
-|  2026-10-15 | Peloton | Distribution Center Associate | Linden, New Jersey | full-time | [link](https://careers.onepeloton.com/en/all-jobs/?gh_jid=8203992) |
-|  2026-10-15 | Box | GTM Enablement Specialist | Chicago, Illinois, United States, New York, NY, United States, Redwood City, CA, United States, San Francisco, CA, United States | full-time | [link](https://job-boards.greenhouse.io/boxinc/jobs/8227257) |
-|  2026-10-15 | Physical Intelligence | Learning & Development Lead, Operations | San Francisco | full-time | [link](https://jobs.ashbyhq.com/physicalintelligence/c6dd5186-089c-4b70-bb88-f08d96541b0c) |
-|  2026-10-15 | Baseten | Partner Enablement Lead | San Francisco | full-time | [link](https://jobs.ashbyhq.com/baseten/e3677df5-97b8-4a90-8ed8-135742c675f6) |
-|  2026-10-15 | SpaceX | Critical Lift & Transport Technician (Launch)  | Vandenberg, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8758624002?gh_jid=8758624002) |
-|  2026-10-15 | SpaceX |  Integration Technician (Starship) - A&P | Starbase, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8892051002?gh_jid=8892051002) |
-|  2026-10-15 | SpaceX | Lead Production Technician, Solar Cells (Starlink) | Bastrop, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8883356002?gh_jid=8883356002) |
-|  2026-10-15 | SpaceX | Production Coordinator (Starship) | Starbase, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8892605002?gh_jid=8892605002) |
-|  2026-10-15 | SpaceX | Propulsion Technician (Raptor) - 2nd Shift  | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8893666002?gh_jid=8893666002) |
-|  2026-10-15 | SpaceX | Sourcing Specialist, Construction | Starbase, TX | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8885950002?gh_jid=8885950002) |
-|  2026-10-15 | SpaceX | Sourcing Specialist, Construction | Cape Canaveral, FL | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8886060002?gh_jid=8886060002) |
-|  2026-10-15 | SpaceX | TIG Welder, Combustion Devices (Raptor) - 2nd Shift  | Hawthorne, CA | full-time | [link](https://boards.greenhouse.io/spacex/jobs/8893683002?gh_jid=8893683002) |
-|  2026-10-15 | Anduril | Classified IT Asset & Procurement Administrator | Costa Mesa, California, United States | full-time | [link](https://boards.greenhouse.io/andurilindustries/jobs/5267150007?gh_jid=5267150007) |
-|  2026-10-15 | Sony | Payments Operations Analyst | San Diego | full-time | [link](https://sonyglobal.wd1.myworkdayjobs.com/en-US/SonyGlobalCareers/job/San-Diego/Payments-Operations-Analyst--Sony-Engagement-Platform-Services_JR-119398) |
-|  2026-10-15 | Sony | Legal Assistant | NA / NY New York-25 Madison 37.5 | full-time | [link](https://sonyglobal.wd1.myworkdayjobs.com/en-US/SonyGlobalCareers/job/NA--NY-New-York-25-Madison-375/Legal-Assistant_JR-119653) |
-|  2026-10-15 | Sony | Coordinator, Global Copyright | NA / Nashville 17th Ave 37.5 | full-time | [link](https://sonyglobal.wd1.myworkdayjobs.com/en-US/SonyGlobalCareers/job/NA--Nashville-17th-Ave-375/Coordinator--Global-Copyright_JR-119573) |
+|  2026-10-16 | Sony | Payments Operations Analyst | San Diego | full-time | [link](https://sonyglobal.wd1.myworkdayjobs.com/en-US/SonyGlobalCareers/job/San-Diego/Payments-Operations-Analyst--Sony-Engagement-Platform-Services_JR-119398) |
+|  2026-10-16 | Sony | Legal Assistant | NA / NY New York-25 Madison 37.5 | full-time | [link](https://sonyglobal.wd1.myworkdayjobs.com/en-US/SonyGlobalCareers/job/NA--NY-New-York-25-Madison-375/Legal-Assistant_JR-119653) |
+|  2026-10-16 | Sony | Coordinator, Global Copyright | NA / Nashville 17th Ave 37.5 | full-time | [link](https://sonyglobal.wd1.myworkdayjobs.com/en-US/SonyGlobalCareers/job/NA--Nashville-17th-Ave-375/Coordinator--Global-Copyright_JR-119573) |
 
-> ⚠️ Source issues this run: gh:Tripwire: 404 https://boards-api.greenhouse.io/v1/boards/tripwireinteractive/jobs; gh:Hex: 404 https://boards-api.greenhouse.io/v1/boards/hextechnologies/jobs; gh:Amplitude: 404 https://boards-api.greenhouse.io/v1/boards/amplitude/jobs; gh:Google DeepMind: 404 https://boards-api.greenhouse.io/v1/boards/deepmind/jobs; gh:Temporal: 404 https://boards-api.greenhouse.io/v1/boards/temporaltechnologies/jobs; gh:Marqeta: 404 https://boards-api.greenhouse.io/v1/boards/marqeta/jobs; gh:Magic Leap: 404 https://boards-api.greenhouse.io/v1/boards/magicleap/jobs; netflix: 429 netflix eightfold; ats:Bandai Namco: 0 rows (stale board or bad slug?); ats:Gearbox: 0 rows (stale board or bad slug?); ats:Remote: 0 rows (stale board or bad slug?); ats:Laika: 0 rows (stale board or bad slug?); ats:Khan Academy: 0 rows (stale board or bad slug?); ats:Calm: 0 rows (stale board or bad slug?); ats:Webflow: 0 rows (stale board or bad slug?); ats:Second Dinner: 0 rows (stale board or bad slug?); ats:Runway: 0 rows (stale board or bad slug?); ats:Illumination: 0 rows (stale board or bad slug?)
+> ⚠️ Source issues this run: gh:Tripwire: 404 https://boards-api.greenhouse.io/v1/boards/tripwireinteractive/jobs; gh:Amplitude: 404 https://boards-api.greenhouse.io/v1/boards/amplitude/jobs; gh:Temporal: 404 https://boards-api.greenhouse.io/v1/boards/temporaltechnologies/jobs; gh:Google DeepMind: 404 https://boards-api.greenhouse.io/v1/boards/deepmind/jobs; gh:Marqeta: 404 https://boards-api.greenhouse.io/v1/boards/marqeta/jobs; gh:Hex: 404 https://boards-api.greenhouse.io/v1/boards/hextechnologies/jobs; gh:Magic Leap: 404 https://boards-api.greenhouse.io/v1/boards/magicleap/jobs; microsoft: 429 microsoft pcsx (after retries); ats:Gearbox: 0 rows (stale board or bad slug?); ats:Bandai Namco: 0 rows (stale board or bad slug?); ats:Laika: 0 rows (stale board or bad slug?); ats:Remote: 0 rows (stale board or bad slug?); ats:Webflow: 0 rows (stale board or bad slug?); ats:Calm: 0 rows (stale board or bad slug?); ats:Khan Academy: 0 rows (stale board or bad slug?); ats:Second Dinner: 0 rows (stale board or bad slug?); ats:Runway: 0 rows (stale board or bad slug?); ats:Illumination: 0 rows (stale board or bad slug?)
