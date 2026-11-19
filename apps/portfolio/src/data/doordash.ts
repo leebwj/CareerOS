@@ -1,18 +1,8 @@
 // The DoorDash view of the portfolio (/doordash): AI work first, because the
 // posting asks for a case study of it, then the other design case studies.
 import alephThumb from "../assets/work/aleph-lab.png";
-import modeCards from "../assets/work/doordash/aleph-mode-cards.png";
-import homeBefore from "../assets/work/doordash/aleph-home-before.jpg";
-import homeAfter from "../assets/work/doordash/aleph-home-after.jpg";
-import speakingAfter from "../assets/work/doordash/aleph-speaking-after.jpg";
-import popupAfter from "../assets/work/doordash/aleph-popup-after.jpg";
-import finalHome from "../assets/work/doordash/final-home.png";
-import finalEnglish from "../assets/work/doordash/final-english.png";
-import finalAnnie from "../assets/work/doordash/final-annie.png";
-import finalStats from "../assets/work/doordash/final-stats.png";
-import finalSettings from "../assets/work/doordash/final-settings.png";
-import finalWords from "../assets/work/doordash/final-words.png";
 import { applyOverride, type PageOverride, type Step, type Study, type TailoredView } from "./tailored";
+import { alephDesign } from "./design";
 import { overrides as robloxOverrides, studies as robloxStudies } from "./roblox";
 import type { Project } from "./projects";
 
@@ -28,7 +18,7 @@ const aiStudies: Study[] = [
     role: "Engineering & design intern",
     team: "Y Combinator startup (F25), remote",
     line: "The app around Annie, an AI character who plays alongside kids, redesigned and rebuilt in React Native.",
-    blurb: "Aleph's app needed a full redesign that families would not have to relearn. Our designer and I worked out a 33-section Figma system, and I built it into the React Native app with Claude Code and the Figma MCP doing most of the typing and me deciding what stayed. The new structure went live to every user first, and the visual system followed in stages to 100%. I also gave Annie her voice in the interface: one message at a time on the home screen, and crash and error states a child can read, in English and Korean.",
+    blurb: "Aleph's app was getting a new structure and a new visual system, and families open it every day. Our designer and I worked out a 33-section Figma system, and I built it into the React Native app with Claude Code and the Figma MCP doing most of the typing and me deciding what stayed. The new structure went live to every user first, behind a kill switch I proposed, and the visual system followed. I also gave Annie her voice in the interface: one message at a time on the home screen, and crash and error states a child can read, in English and Korean.",
   },
   {
     slug: "wikipedia",
@@ -66,7 +56,7 @@ const steps: Step[] = [
   },
   {
     title: "Prototype in the medium it ships in",
-    body: "At Aleph the redesign went from Figma straight into the React Native app. Testing on a real phone changed the system: the brand green was tried at five strengths and kept at 55% because the rest failed contrast or stopped looking like the brand.",
+    body: "At Aleph the redesign went from Figma straight into the React Native app. Testing on a real phone changed the system: the light accents measured 1.9:1 and 1.6:1, and the brand green was tried at five strengths before 55% stayed.",
     link: { text: "Aleph Lab", slug: "aleph-lab" },
   },
   {
@@ -83,84 +73,14 @@ const steps: Step[] = [
 
 const why: string[] = [
   "I order from DoorDash regularly, mostly restaurant delivery around campus. What brought me to the design team is what it has been writing. How Designers at DoorDash Are Becoming Builders describes how I worked this summer: I worked out a Figma system with our designer and then built it into the production React Native app myself, instead of handing it off.",
-  "Dream Big, Start Small is also how that redesign shipped. The new structure went to every user first, behind one flag that could switch it off, and the visual system followed at 25, 50, and 100%. Each step was small enough to undo, which is what let it go out quickly.",
+  "Dream Big, Start Small is also how that redesign shipped. The new structure went to every user first, behind a kill switch I proposed, and the visual system came after it. Each release could be turned off on its own, so neither was a bet on the whole redesign at once.",
   "Two Teams, One Shift says that when building is fast, direction becomes the bottleneck. That matched what I saw. The AI tools I used wrote most of the code, and my job was deciding what to keep. The Aleph case study lists the calls I made against the tools, because that part does not show up in a screenshot.",
   "Your evals post asks who gets to decide what is good. My closest experience is small: four readers overruled the wording of my Wikipedia AI Chat because they expected full answers, and they were right. I would like to work on that question at DoorDash's scale.",
 ];
 
 const overrides: Record<string, PageOverride> = {
   ...robloxOverrides,
-  "aleph-lab": {
-    role: "Engineering & design intern",
-    drop: ["What I worked on"],
-    metrics: [
-      { value: "100%", label: "of users on the redesign" },
-      { value: "33", label: "design-system sections" },
-      { value: "16", label: "mode cards wired and checked" },
-    ],
-    tagline: "Designing and building the app around Annie, an AI character who plays alongside kids while they learn English.",
-    insert: [
-      { after: "Company", block: { type: "prose", label: "Problem", heading: "A redesign families should not have to relearn", body: [
-        "The app was getting a full redesign: a new structure and a 33-section Figma system that I worked out together with the team's designer. Families opened it every day, so the risk was a morning where nothing sat where they left it.",
-        "The team's plan was structure first, style second, because structure can ship in small pieces and a visual change cannot. I built both halves in React Native and proposed the flag that let either one be switched off.",
-      ] } },
-      { after: "Problem", block: { type: "list", label: "Structure", heading: "What moved, before any visual change", items: [
-        "Home went from one long column to a two-by-two grid.",
-        "A new Speaking tab took talking with Annie and word practice off the home screen.",
-        "Class length moved from Home into each game's description, and class settings merged into Settings.",
-        "All of it sat behind one flag, and it went live to every user before the new visual system was turned on. The visual system then followed at 25, 50, and 100%.",
-      ] } },
-      { after: "Structure", block: { type: "media", label: "Before and after", layout: "half", items: [
-        { src: homeBefore, alt: "Home before: hero, a time card, and a practice section in one column", caption: "Before: Home did three jobs at once, with the class-time card and the practice section stacked under the hero." },
-        { src: homeAfter, alt: "Home after: hero above a two-column grid of game modes", caption: "After the structure release: Home is only about classes, in a two-column grid." },
-      ] } },
-      { after: "Before and after", block: { type: "media", label: "Where things went", layout: "half", items: [
-        { src: speakingAfter, alt: "The new Speaking tab with call-with-Annie and word-practice cards", caption: "Talking with Annie and word practice moved off Home into their own Speaking tab." },
-        { src: popupAfter, alt: "A class popup with the time card inside it", caption: "Class length moved into each class popup, where the parent decides to start." },
-      ] } },
-      { after: "Where things went", block: { type: "media", label: "Final look", layout: "third", items: [
-        { src: finalHome, alt: "Home in the new visual system: Annie greets the child by name above a featured adventure and a grid of modes", caption: "Home: Annie greets the child by name and suggests one adventure, above the grid of modes." },
-        { src: finalEnglish, alt: "The English Training tab with a word-practice card and a phone-English card", caption: "English Training, the tab that took practice off Home: today's words first, then talking with Annie." },
-        { src: finalAnnie, alt: "Annie's tab showing her tier, her character, and time, words, and sessions together", caption: "Annie's own tab: her tier, and the time, words, and sessions the child has spent with her." },
-        { src: finalStats, alt: "The Stats tab with minutes spoken, words mastered, a weekly streak, and learning feedback", caption: "Stats for parents: minutes spoken, words mastered, the week's streak, and feedback from class." },
-        { src: finalSettings, alt: "Settings with word practice, Minecraft class with a subtitle preview, general, and notifications", caption: "Settings in one place, with a preview of how Annie's subtitles look during Minecraft class." },
-        { src: finalWords, alt: "A word-practice question asking for the Korean translation of an English word", caption: "Word practice: one English word, four answers in Korean." },
-      ] } },
-      { after: "Final look", block: { type: "list", label: "Decisions", heading: "Building the system, and where it changed on a phone", items: [
-        "Cyan is reserved for Annie's surfaces and cobalt for accents, so a child can tell the character from the app.",
-        "No gradients anywhere, so the system stays flat enough to build from tokens.",
-        "The brand green was tested live at 15, 35, 55, 65 and 100% strength. 55% stayed: the others failed WCAG contrast or stopped reading as the brand.",
-        "Played days on the calendar keep dark text, because white measured 2.21:1 against the fill.",
-        "The three bubble colors in the file failed white-text contrast on a real device, so two replaced them.",
-      ] } },
-      { after: "Decisions", block: { type: "media", label: "Mode cards", layout: "full", items: [
-        { src: modeCards, alt: "Sixteen game-mode cards with Korean titles and difficulty tags", caption: "The check sheet for the mode-card swap. The art is our designer's; I wired each card to its mode, checked all 16 pairings against the database, and wrote the uploader." },
-      ] } },
-      { after: "Mode cards", block: { type: "list", label: "Annie's voice", heading: "An AI character, in the interface", items: [
-        "Ten kinds of home-screen message from Annie, shown one at a time in a fixed priority, so she never talks over herself.",
-        "The child's name is kept out of every analytics event.",
-        "Before, a crash showed a white screen. Now it shows a branded recovery: \"Something went wrong. An unexpected error occurred. Restarting the app should fix it.\" In Korean: \"문제가 발생했어요. 예상치 못한 오류가 발생했어요. 앱을 다시 시작하면 해결돼요.\"",
-        "A failed class list reads \"Oops — couldn't load the classes. The connection hiccuped for a moment. A quick retry should fix it!\" instead of the raw error text.",
-      ] } },
-      { after: "Annie's voice", block: { type: "list", label: "AI in the process", heading: "How it was built", items: [
-        "Claude Code ran the builds and reviews, with the Figma MCP reading exact tokens from the file instead of eyeballed hex values.",
-        "Codex gave a second-model review before anything merged.",
-        "A skill checks every converted component against a fixture: no raw hex, and all type goes through the text variants.",
-        "A second skill drafts a new game mode's configuration and runs it through parse, lint and review until it comes back clean.",
-      ] } },
-      { after: "AI in the process", block: { type: "list", label: "Judgment", heading: "Where I overruled the tools", items: [
-        "Stand-in icons from a stock set, in place of the designer's glyphs: rejected on sight. The real vector paths are now pinned by a test.",
-        "A color remap on the settings icons when only a merge was asked for: reverted.",
-        "A divider that looked a little heavy: pinned to exactly two device pixels.",
-        "A duplicate section added on its own: reverted.",
-      ] } },
-      { after: "Judgment", block: { type: "list", label: "Also at Aleph", heading: "The engineering side of the same summer", items: [
-        "Packaged Annie as a versioned SDK so studios outside the company can build game modes on her, then wrote a full mode from the handover docs alone to prove it worked. It merged as a first-party mode.",
-        "Built the app's lifecycle notifications end to end: streak reminders, re-engagement and class-completion alerts, with back-off so one family never gets a pile of them, and a holdout group so the effect was measured.",
-        "Built an analysis tool on production data that showed a reported retention gain came from how it was measured, not from the product.",
-      ] } },
-    ],
-  },
+  "aleph-lab": alephDesign,
   "art-of-web": {
     insert: [
       { after: "Overview", block: { type: "prose", label: "AI workflow", heading: "Directing the build", body: [

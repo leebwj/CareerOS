@@ -8,11 +8,12 @@ import { Image } from "astro:assets";
 import { projects, experiences, catLabels, type CatId } from "../../data/projects";
 import { robloxView } from "../../data/roblox";
 import { doordashView } from "../../data/doordash";
+import { designView } from "../../data/design";
 
 // a company base renders the same study inside that view: its nav, back link,
 // prev/next and footer stay within the view instead of leading to the main
 // site, and the view's own blocks are added to the body
-const views = { "/roblox": robloxView, "/doordash": doordashView };
+const views = { "/roblox": robloxView, "/doordash": doordashView, "/design": designView };
 const { project: given, base = "" } = Astro.props as { project: (typeof projects)[number]; base?: "" | keyof typeof views };
 const view = base ? views[base] : null;
 const p = view ? view.apply(given) : given;

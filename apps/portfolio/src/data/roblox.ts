@@ -38,8 +38,8 @@ export const studies: Study[] = [
     thumb: alephThumb,
     role: "Engineering & design intern",
     team: "Y Combinator startup (F25), remote",
-    line: "The app around a set of Roblox-style game modes for children, redesigned end to end and shipped to every user.",
-    blurb: "A Y Combinator startup whose game modes for kids were designed to feel like Roblox games. On the design side I shipped an app-wide redesign that landed its information architecture first, so no family had to relearn the app, then rolled a 33-section visual system out in stages. I also built the Figma-to-React-Native pipeline the team hands off through, and wrote the AI character's voice in the interface in English and Korean for a reader who is a child.",
+    line: "The app around a set of Roblox-style game modes for children, redesigned with its designer and shipped to every user.",
+    blurb: "A Y Combinator startup whose game modes for kids were designed to feel like Roblox games. On the design side I shipped an app-wide redesign that landed its information architecture first, so no family had to relearn the app, then built a 33-section visual system into the app with its designer. I also built the Figma-to-React-Native pipeline the team hands off through, and wrote the AI character's voice in the interface in English and Korean for a reader who is a child.",
   },
 ];
 
@@ -65,8 +65,8 @@ export const steps: Step[] = [
     link: { text: "Wikipedia Redesign", slug: "wikipedia" },
   },
   {
-    title: "Ship in stages and read the data",
-    body: "At Aleph the new information architecture went live to everyone first, the visual system followed at 25, 50, then 100 percent, and segmenting trial data by platform afterwards surfaced a mobile onboarding drop-off nobody had seen.",
+    title: "Ship structure first, then read the data",
+    body: "At Aleph the new information architecture went live to everyone first, before any visual change, and segmenting trial data by platform afterwards surfaced a mobile onboarding drop-off nobody had seen.",
     link: { text: "Aleph Lab", slug: "aleph-lab" },
   },
 ];
@@ -129,10 +129,10 @@ export const overrides: Record<string, PageOverride> = {
     tagline: "Engineering and design at a Y Combinator startup building Annie, an AI character who plays alongside kids while they learn English.",
     insert: [
       { after: "Company", block: { type: "list", label: "Design", heading: "The design half of the summer", items: [
-        "Delivered a full rebrand users did not have to relearn: the information architecture shipped first, live to 100% of users, so the layout stayed familiar before the 33-section visual system followed, staged 25, 50, then 100% across real usage cycles",
-        "Cut the designer-to-engineer handoff out of the loop with a pipeline that turns Figma designs into React Native components as drawn, packaged so any engineer on the team can run it",
+        "Delivered a redesign users did not have to relearn: the information architecture shipped first, live to 100% of users, so the layout stayed familiar before the 33-section visual system followed",
+        "Cut the designer-to-engineer handoff out of the loop with a pipeline that turns Figma designs into React Native components, packaged so any engineer on the team can run it",
         "Gave the AI character a consistent voice in the interface: her message-bubble system across the home experience, plus a branded crash recovery and shared error states in warm, kid-appropriate English and Korean",
-        "Reset onboarding priorities by surfacing a mobile drop-off at roughly half the desktop activation rate in trial data nobody had segmented that way, which redirected where the team looked next",
+        "Segmented trial data by platform and surfaced a mobile drop-off at roughly half the desktop activation rate, a split nobody had looked at",
       ] } },
     ],
   },

@@ -1,0 +1,13 @@
+---
+// /design/work/[slug]: the case studies as read from the design view, so a
+// design application can link the Aleph design story without a company in the URL.
+import Work from "../../../retouch/pages/Work.astro";
+import { projects } from "../../../data/projects";
+
+export function getStaticPaths() {
+  return projects.map((p) => ({ params: { slug: p.slug }, props: { project: p } }));
+}
+const { project } = Astro.props;
+---
+
+<Work project={project} base="/design" />
