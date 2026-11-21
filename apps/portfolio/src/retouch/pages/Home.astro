@@ -202,7 +202,7 @@ const viewCfg = views.map((v) => ({ id: v.id, path: v.path, order: v.order, resu
             <ExperienceBriefs items={exp} />
           </div>
         </div>
-        <div id="card" class="about-card reveal scroll-mt-24"><ProfileCard /></div>
+        <div id="card" class="about-card reveal scroll-mt-24"><ProfileCard base={id === "design" ? "/design" : ""} /></div>
       </div>
     </section>
 
@@ -395,7 +395,7 @@ const viewCfg = views.map((v) => ({ id: v.id, path: v.path, order: v.order, resu
       if (!swap || !window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
       const def = swap.querySelector(".about-default");
       const briefs = [...swap.querySelectorAll("[data-brief]")];
-      const links = [...document.querySelectorAll(".about-card a[href^='/work/']")];
+      const links = [...document.querySelectorAll(".about-card a[href*='/work/']")];
       const slugOf = (a) => (a.getAttribute("href") || "").split("/work/")[1]?.replace(/\/$/, "") || "";
       let showT = null;
       const show = (slug) => {
